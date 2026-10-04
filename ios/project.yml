@@ -13,7 +13,8 @@ settings:
     SWIFT_APPROACHABLE_CONCURRENCY: YES
     MARKETING_VERSION: "0.1.0"
     CURRENT_PROJECT_VERSION: "1"
-    DEVELOPMENT_TEAM: ""
+    DEVELOPMENT_TEAM: 3NX95JSKNY
+    CODE_SIGN_STYLE: Automatic
     LOCALIZATION_PREFERS_STRING_CATALOGS: YES
     SWIFT_EMIT_LOC_STRINGS: YES
 targets:
@@ -40,7 +41,7 @@ targets:
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
       configs:
         Debug:
-          API_BASE_URL: "http:/$()/localhost:3100"
+          API_BASE_URL: "http:/$()/Oytuns-MacBook-Pro.local:3100"
         Release:
           API_BASE_URL: "https:/$()/api.dailyclassical.co"
     info:
@@ -51,6 +52,7 @@ targets:
         UIAppFonts: [Literata-Regular.ttf, Literata-Medium.ttf, Literata-SemiBold.ttf, Literata-Italic.ttf, Literata-MediumItalic.ttf]
         NSAppTransportSecurity:
           NSAllowsLocalNetworking: true
+        NSLocalNetworkUsageDescription: "Debug builds connect to the development server on this network."
   DailyClassicalTests:
     type: bundle.unit-test
     platform: iOS

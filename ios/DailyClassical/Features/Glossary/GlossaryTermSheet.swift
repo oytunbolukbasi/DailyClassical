@@ -58,7 +58,7 @@ struct PieceGlossarySheet: View {
                 ForEach(terms) { term in
                     VStack(alignment: .leading, spacing: 4) {
                         Text(verbatim: term.term).font(Typography.rowTitle).foregroundStyle(Palette.ink)
-                        RichTextView(source: term.definition, font: Typography.body15, lineHeight: 1.5, size: 15, color: Palette.ink2)
+                        RichTextView(source: term.definition, font: Typography.body15, lineHeight: 1.5, literataSize: nil, color: Palette.ink2)
                     }
                     .padding(.vertical, 13)
                     .frame(maxWidth: .infinity, alignment: .leading)

@@ -25,14 +25,15 @@ extension View {
             .tracking(-0.2)
             .listRowBackground(Palette.surface)
             .listRowSeparatorTint(Palette.rule)
-            .alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
+            // Separators start at the card edge (SPEC §3.12: no leading inset).
+            .alignmentGuide(.listRowSeparatorLeading) { _ in -16 }
     }
 
     /// A row that holds a large title above the groups: no card, aligned to the 24 pt page gutter.
     func listLargeTitleRow() -> some View {
         listRowBackground(Color.clear)
             .listRowSeparator(.hidden)
-            .listRowInsets(EdgeInsets(top: 8, leading: 8, bottom: 0, trailing: 8))
+            .listRowInsets(EdgeInsets(top: 11, leading: 8, bottom: 0, trailing: 8))
     }
 }
 
@@ -46,6 +47,7 @@ struct ListLargeTitle: View {
             title
                 .font(Typography.display)
                 .tracking(-0.34)
+                // No 1.1 line height here: a List row clips the descenders of a tightened line.
                 .foregroundStyle(Palette.ink)
                 .accessibilityAddTraits(.isHeader)
             subtitle?
@@ -67,6 +69,8 @@ struct SettingsHeader: View {
             .tracking(0.26)
             .textCase(.uppercase)
             .foregroundStyle(Palette.ink2)
+            // Tightest the system list allows: ≈9 pt above the card (SPEC §3.12: 7).
+            .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 3, trailing: 16))
     }
 }
 
@@ -79,7 +83,7 @@ struct SettingsFooter: View {
     var body: some View {
         text
             .font(Typography.meta13)
-            .lineHeight(1.45, size: 13)
+            .lineHeight(1.45)
             .foregroundStyle(Palette.ink3)
     }
 }

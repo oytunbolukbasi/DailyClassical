@@ -41,6 +41,10 @@ struct PieceContent: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     @State private var centerBlock: PieceBlock?
+    /// The listening stop nearest the reading line (centre of the area below the nav bar),
+    /// or nil while the reading line is outside a movement's stop list (SPEC §3.6).
+    @State private var currentStop: PieceBlock?
+    @State private var stopTracker = StopTracker()
     /// True once the "Movement I" header has scrolled under the nav bar (SPEC §3.8).
     @State private var docked = false
     @State private var showRecordings = false
@@ -66,6 +70,9 @@ struct PieceContent: View {
                 .scrollTargetLayout()
             }
             .scrollPosition(id: $centerBlock, anchor: .center)
+            .onScrollGeometryChange(for: CGFloat.self) { $0.containerSize.height } action: { _, height in
+                stopTracker.viewportHeight = height
+            }
             .scrollEdgeEffectStyle(.soft, for: .top)
             .ignoresSafeArea(edges: .top)
             .toolbar { toolbar(proxy: proxy) }
@@ -82,7 +89,7 @@ struct PieceContent: View {
         // The user reads along while the music plays: the screen must not dim or lock.
         .onAppear { UIApplication.shared.isIdleTimerDisabled = true }
         .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
-        .animation(reduceMotion ? nil : .easeOut(duration: 0.2), value: centerBlock)
+        .animation(reduceMotion ? nil : .easeOut(duration: 0.2), value: currentStop)
     }
 
     // MARK: Toolbar
@@ -95,7 +102,7 @@ struct PieceContent: View {
             }
             .sharedBackgroundVisibility(.hidden)  // the switcher is its own glass; never glass on glass
             ToolbarItem(placement: .topBarTrailing) {
-                Button { showPieceGlossary = true } label: { Icon("glossary-book", size: 22) }
+                Button { showPieceGlossary = true } label: { Icon("glossary-book", size: 22).foregroundStyle(Palette.glassInk) }
                     .accessibilityLabel(Text("piece.nav.glossary.accessibilityLabel"))
             }
         } else {
@@ -111,7 +118,7 @@ struct PieceContent: View {
             if piece.painting != nil {
                 ToolbarSpacer(.fixed, placement: .topBarTrailing)
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button { showArtwork = true } label: { Icon("expand", size: 22) }
+                    Button { showArtwork = true } label: { Icon("expand", size: 22).foregroundStyle(Palette.glassInk) }
                         .accessibilityLabel(Text("piece.nav.viewArtwork.accessibilityLabel"))
                 }
             }
@@ -172,7 +179,7 @@ struct PieceContent: View {
                     if m == 1 { docked = minY < 110 }
                 }
         case .summary(let m):
-            RichTextView(source: movements[m - 1].summary ?? "")
+            RichTextView(source: movements[m - 1].summary ?? "", color: readingColor(block, Palette.ink))
                 .padding(.top, 18).gutter()
         case .mainIdeas(let m): mainIdeas(movements[m - 1])
         case .stopsHeader: stopsHeader
@@ -180,6 +187,14 @@ struct PieceContent: View {
             let stops = movements[m - 1].stops
             ListeningStopRow(stop: stops[i], focus: focus(for: block), isLast: i == stops.count - 1)
                 .padding(.top, i == 0 ? 0 : 14).gutter()
+                .onGeometryChange(for: CGRect.self) { $0.frame(in: .scrollView) } action: { frame in
+                    stopTracker.frames[block] = frame
+                    updateCurrentStop()
+                }
+                .onDisappear {
+                    stopTracker.frames[block] = nil
+                    updateCurrentStop()
+                }
         case .notice(let m): notice(movements[m - 1])
         case .notes(let m): notes(movements[m - 1])
         case .threads: threads
@@ -188,10 +203,22 @@ struct PieceContent: View {
         }
     }
 
+    /// Reading focus: the stop nearest the reading line is current; the movement's other
+    /// stops and reading blocks before and after it fade (SPEC §3.6, §4.3).
     private func focus(for block: PieceBlock) -> ListeningStopRow.Focus {
-        guard !reduceMotion, let center = centerBlock, case .stop = center,
-              let c = blocks.firstIndex(of: center), let i = blocks.firstIndex(of: block) else { return .none }
+        guard !reduceMotion, let current = currentStop, current.movement == block.movement,
+              let c = blocks.firstIndex(of: current), let i = blocks.firstIndex(of: block) else { return .none }
         return i == c ? .current : (i < c ? .passed : .upcoming)
+    }
+
+    /// Prose colour for a reading block under the focus fade; glossary terms stay accent.
+    private func readingColor(_ block: PieceBlock, _ normal: Color) -> Color {
+        focus(for: block) == .none ? normal : Palette.ink3
+    }
+
+    private func updateCurrentStop() {
+        let next = stopTracker.stopNearestReadingLine()
+        if next != currentStop { currentStop = next }
     }
 
     private var bigPicture: some View {
@@ -201,10 +228,11 @@ struct PieceContent: View {
                 RichTextView(source: fact)
             }
             if let line = piece.document.bigPicture.inOneLine {
-                RichTextView(source: line, font: Typography.readingItalic, color: Palette.ink2).padding(.top, 4)
+                RichTextView(source: L10n.string("piece.bigPicture.inOneLine", code: piece.contentLocale) + " " + line, font: Typography.readingItalic, color: Palette.ink2).padding(.top, 4)
             }
         }
         .padding(.top, 22)
+        .frame(maxWidth: .infinity, alignment: .leading)  // hairline spans the column
         .hairlineTop()
         .padding(.top, 28)
         .gutter()
@@ -238,7 +266,7 @@ struct PieceContent: View {
             .card()
             if let reference = piece.referenceRecording {
                 Text("piece.movements.footnote \(reference.citation(fullConductorName: true))")
-                    .font(Typography.caption).lineHeight(1.45, size: 12).foregroundStyle(Palette.ink3)
+                    .font(Typography.caption).lineHeight(1.45).foregroundStyle(Palette.ink3)
             }
         }
         .padding(.top, 32)
@@ -256,12 +284,13 @@ struct PieceContent: View {
                 }
             }
             .frame(minHeight: 44)
-            Text(verbatim: m.displayHeading).font(Typography.titleM).lineHeight(1.25, size: 24).foregroundStyle(Palette.ink)
+            Text(verbatim: m.displayHeading).font(Typography.titleM).lineHeight(1.25, literata: 24).foregroundStyle(Palette.ink)
                 .padding(.top, 12)
                 .accessibilityAddTraits(.isHeader)
             Text(verbatim: m.metaLine(includeDuration: true)).font(Typography.meta13).foregroundStyle(Palette.ink2)
         }
         .padding(.top, m.index == 1 ? 0 : 28)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .hairlineTop(m.index == 1 ? 0 : 1)
         .padding(.top, m.index == 1 ? 40 : 44)
         .gutter()
@@ -272,9 +301,11 @@ struct PieceContent: View {
             SectionLabel("piece.section.mainIdeas")
             ForEach(Array(m.mainIdeas.enumerated()), id: \.offset) { i, idea in
                 VStack(alignment: .leading, spacing: 4) {
-                    if let name = idea.name { Text(verbatim: name).font(Typography.readingMedium).foregroundStyle(Palette.ink) }
-                    RichTextView(source: idea.description.capitalizedFirst(locale: piece.contentLocale), font: Typography.body15, lineHeight: 1.5, size: 15, color: Palette.ink2)
+                    if let name = idea.name { Text(verbatim: name).font(Typography.readingMedium).foregroundStyle(readingColor(.mainIdeas(m.index), Palette.ink)) }
+                    RichTextView(source: idea.description.capitalizedFirst(locale: piece.contentLocale), font: Typography.body15, lineHeight: 1.5, literataSize: nil,
+                                 color: readingColor(.mainIdeas(m.index), Palette.ink2))
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top, i == 0 ? 0 : 8)
                 .hairlineTop(i == 0 ? 0 : 1)
             }
@@ -288,7 +319,7 @@ struct PieceContent: View {
             SectionLabel("piece.section.listeningStops")
             if let reference = piece.referenceRecording {
                 Text("piece.listeningStops.note \(reference.citation())")
-                    .font(Typography.meta13).lineHeight(1.45, size: 13).foregroundStyle(Palette.ink2)
+                    .font(Typography.meta13).lineHeight(1.45).foregroundStyle(Palette.ink2)
             }
         }
         .padding(.top, 34)
@@ -302,7 +333,7 @@ struct PieceContent: View {
             ForEach(Array(m.notice.enumerated()), id: \.offset) { i, tip in
                 HStack(alignment: .firstTextBaseline, spacing: 8) {
                     Text(verbatim: "\(i + 1)").font(Typography.reading).foregroundStyle(Palette.accent).frame(width: 24, alignment: .leading)
-                    RichTextView(source: tip)
+                    RichTextView(source: tip, color: readingColor(.notice(m.index), Palette.ink))
                 }
             }
         }
@@ -315,7 +346,7 @@ struct PieceContent: View {
             ForEach(Array(m.notes.enumerated()), id: \.offset) { _, note in
                 VStack(alignment: .leading, spacing: 12) {
                     SectionLabel(verbatim: note.title)
-                    RichTextView(source: note.body)
+                    RichTextView(source: note.body, color: readingColor(.notes(m.index), Palette.ink))
                 }
             }
         }
@@ -335,6 +366,7 @@ struct PieceContent: View {
             }
         }
         .padding(.top, 28)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .hairlineTop()
         .padding(.top, 44)
         .gutter()
@@ -377,9 +409,10 @@ struct PieceContent: View {
                 Text("piece.sources.recording \([reference.label, reference.displayYear].compactMap { $0 }.joined(separator: ", "))")
             }
         }
-        .font(Typography.caption).lineHeight(1.5, size: 12).foregroundStyle(Palette.ink3)
+        .font(Typography.caption).lineHeight(1.5).foregroundStyle(Palette.ink3)
         .padding(.top, 24)
         .padding(.bottom, Spacing.floatingButtonClearance)
+        .frame(maxWidth: .infinity, alignment: .leading)
         .hairlineTop()
         .padding(.top, 40)
         .gutter()
@@ -400,7 +433,7 @@ private struct LeadInParagraph: View {
             rest[run.range].underlineStyle = Text.LineStyle(pattern: .dot, color: Palette.accent)
         }
         return Text(lead + rest)
-            .font(Typography.reading).lineHeight(1.6).foregroundStyle(Palette.ink)
+            .font(Typography.reading).lineHeight(1.6, literata: 17).foregroundStyle(Palette.ink)
             .fixedSize(horizontal: false, vertical: true)
     }
 }
@@ -426,10 +459,10 @@ struct PieceHeader: View {
             }
             VStack(alignment: .leading, spacing: 10) {
                 ComposerLink(name: piece.composer.name) { router.present(.composer(piece.composer)) }
-                Text(verbatim: piece.headerTitle).font(Typography.titleXL).lineHeight(1.15, size: 30).tracking(-0.3)
+                Text(verbatim: piece.headerTitle).font(Typography.titleXL).lineHeight(1.15, literata: 30).tracking(-0.3)
                     .foregroundStyle(Palette.ink).accessibilityAddTraits(.isHeader)
                 Text("piece.meta \(piece.yearText) \(piece.durationMin)").font(Typography.meta14).foregroundStyle(Palette.ink2)
-                Text(verbatim: piece.hook).font(Typography.hookL).lineHeight(1.45, size: 19).foregroundStyle(Palette.ink).padding(.top, 6)
+                Text(verbatim: piece.hook).font(Typography.hookL).lineHeight(1.45, literata: 19).foregroundStyle(Palette.ink).padding(.top, 6)
             }
             .padding(.top, 26)
             .gutter()
@@ -464,4 +497,25 @@ extension View {
 private extension String {
     /// Main-idea descriptions follow a colon in the source ("Theme 1, unrest: a short…").
     func capitalizedFirst(locale: String) -> String { prefix(1).uppercased(with: Locale(identifier: locale)) + dropFirst() }
+}
+
+/// Frames of the listening stops currently laid out, in scroll-view space. A plain class,
+/// so scroll-driven geometry updates don't re-render the page; only a change of the
+/// current stop does.
+private final class StopTracker {
+    var frames: [PieceBlock: CGRect] = [:]
+    var viewportHeight: CGFloat = 0
+    /// Top of the reading area: below the floating nav bar.
+    private let readingTop: CGFloat = 110
+
+    func stopNearestReadingLine() -> PieceBlock? {
+        guard viewportHeight > 0, !frames.isEmpty else { return nil }
+        let line = (readingTop + viewportHeight) / 2
+        // Only while the reading line is within (or between) the stops of one movement;
+        // reading the summary above the list must not fade it.
+        guard let nearest = frames.min(by: { abs($0.value.midY - line) < abs($1.value.midY - line) }) else { return nil }
+        let sameMovement = frames.filter { $0.key.movement == nearest.key.movement }.values
+        let top = sameMovement.map(\.minY).min() ?? 0, bottom = sameMovement.map(\.maxY).max() ?? 0
+        return (top - 14)...(bottom + 14) ~= line ? nearest.key : nil
+    }
 }

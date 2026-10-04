@@ -80,6 +80,11 @@
     "en": "The big picture",
     "tr": "Genel bakış"
   },
+  "piece.bigPicture.inOneLine": {
+    "en": "In one line:",
+    "tr": "Tek cümleyle:",
+    "comment": "Prefix before the one-line map of the movements at the end of The big picture"
+  },
   "piece.section.movements": {
     "en": "Movements",
     "tr": "Bölümler"

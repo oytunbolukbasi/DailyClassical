@@ -1,6 +1,6 @@
 # Which piece is "Today". Day 0 is `start`; the order repeats until new pieces are added.
 # db:seed writes the next `days` dates into daily_schedule; fixtures carry the same plan for the app.
-start: 2026-10-04
+start: 2026-10-05
 days: 365
 order:
   - tchaikovsky-symphony-6

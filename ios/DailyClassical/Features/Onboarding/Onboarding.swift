@@ -54,12 +54,12 @@ struct OnboardingIntroSheet: View {
                     Text("onboarding.1.title")
                         .font(Typography.titleXL)
                         .tracking(-0.3)
-                        .lineHeight(1.15, size: 30)
+                        .lineHeight(1.15, literata: 30)
                         .foregroundStyle(Palette.ink)
                         .accessibilityAddTraits(.isHeader)
                     Text("onboarding.1.body")
                         .font(Typography.body15)
-                        .lineHeight(1.5, size: 15)
+                        .lineHeight(1.5)
                         .foregroundStyle(Palette.ink2)
                 }
                 .fixedSize(horizontal: false, vertical: true)
@@ -72,11 +72,12 @@ struct OnboardingIntroSheet: View {
                     InlineLinkButton(sentence: { Text("auth.haveAccount \($0)") }, link: "onboarding.signIn", size: 14) {
                         showSignIn = true
                     }
+                    .padding(.vertical, -13)  // keep the 44 pt hit target out of the 16 pt rhythm
                 }
                 .padding(.top, 8)
             }
             .padding(.horizontal, 24)
-            .padding(.bottom, 12)
+            .padding(.bottom, 4)
             .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { height = $0 }
         }
         .scrollBounceBehavior(.basedOnSize)
@@ -106,6 +107,7 @@ struct OnboardingReminderScreen: View {
     var body: some View {
         VStack(spacing: 0) {
             ScrollView {
+              VStack(spacing: 0) {  // explicit: the implicit stack added ~12 pt above the card
                 VStack(alignment: .leading, spacing: 14) {
                     Text("onboarding.2.eyebrow")
                         .font(Typography.micro)
@@ -115,25 +117,27 @@ struct OnboardingReminderScreen: View {
                     Text("onboarding.2.title")
                         .font(Typography.titleXL)
                         .tracking(-0.3)
-                        .lineHeight(1.15, size: 30)
+                        .lineHeight(1.15, literata: 30)
                         .foregroundStyle(Palette.ink)
                         .accessibilityAddTraits(.isHeader)
                     Text("onboarding.2.body")
                         .font(Typography.body15)
-                        .lineHeight(1.5, size: 15)
+                        .lineHeight(1.5)
                         .foregroundStyle(Palette.ink2)
                 }
                 .fixedSize(horizontal: false, vertical: true)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 32)
-                .padding(.top, 92)   // 140 pt from the top of an 844 pt frame, minus the status bar
+                .padding(.top, 140)  // from the top of the screen, whatever the status bar height
 
                 TimeWheel(hour: $hour, minute: $minute)
                     .card(radius: Radius.groupedList)
                     .padding(.horizontal, 24)
                     .padding(.top, 40)
+              }
             }
             .scrollBounceBehavior(.basedOnSize)
+            .ignoresSafeArea(edges: .top)
 
             VStack(spacing: 16) {
                 PageDots(count: 2, current: 1)
@@ -152,10 +156,11 @@ struct OnboardingReminderScreen: View {
 
                 Button("onboarding.2.notNow", action: onFinish)
                     .buttonStyle(.dcTextLink)
+                    .padding(.vertical, -13)  // keep the 44 pt hit target out of the 16 pt rhythm
             }
             .padding(.horizontal, 24)
             .padding(.top, 16)
-            .padding(.bottom, 12)
+            .padding(.bottom, 8)
         }
         .background(Palette.background.ignoresSafeArea())
     }

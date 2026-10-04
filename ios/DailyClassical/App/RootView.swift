@@ -23,8 +23,12 @@ struct RootView: View {
                 SearchScreen()
             }
         }
-        .sheet(item: $router.sheet) { sheet in
+        .sheet(item: Binding(get: { router.sheet == .paywall ? nil : router.sheet }, set: { router.sheet = $0 })) { sheet in
             AppSheetView(sheet: sheet)
+        }
+        // The paywall is a full-height page with the painting under the status bar (SPEC §4.10).
+        .fullScreenCover(isPresented: Binding(get: { router.sheet == .paywall }, set: { if !$0 { router.sheet = nil } })) {
+            PaywallScreen()
         }
         .toast($router.toast)
         .onGlossaryTap { router.present(.glossaryTerm($0)) }
@@ -40,7 +44,7 @@ private struct AppSheetView: View {
     var body: some View {
         switch sheet {
         case .paywall:
-            PaywallScreen()
+            EmptyView()  // presented as a full-screen cover by RootView
         case .signInPrompt:
             SignInPromptSheet()
         case .auth(let flow):

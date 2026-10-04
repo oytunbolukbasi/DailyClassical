@@ -1,7 +1,7 @@
 import StoreKit
 import SwiftUI
 
-/// "More of this." (SPEC §4.10): solid page in a large sheet; only the close button is glass.
+/// "More of this." (SPEC §4.10): solid full-screen page; only the close button is glass.
 /// Two StoreKit 2 products: lifetime (preselected, Best value) and monthly.
 struct PaywallScreen: View {
     @Environment(EntitlementStore.self) private var entitlements
@@ -22,7 +22,7 @@ struct PaywallScreen: View {
 
                     Text("paywall.painting.caption")
                         .font(Typography.caption)
-                        .lineHeight(1.4, size: 12)
+                        .lineHeight(1.4)
                         .foregroundStyle(Palette.ink3)
                         .padding(.top, 10)
                         .padding(.horizontal, 24)
@@ -30,12 +30,13 @@ struct PaywallScreen: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("paywall.title")
                             .font(Typography.titleL)
+                            .lineHeight(1.15, literata: 28)
                             .tracking(-0.28)
                             .foregroundStyle(Palette.ink)
                             .accessibilityAddTraits(.isHeader)
                         Text("paywall.subtitle")
                             .font(Typography.body15)
-                            .lineHeight(1.5, size: 15)
+                            .lineHeight(1.5)
                             .foregroundStyle(Palette.ink2)
                     }
                     .padding(.top, 22)
@@ -62,9 +63,9 @@ struct PaywallScreen: View {
 
                     bottomBlock
                         .padding(.horizontal, 24)
-                        .padding(.bottom, 16)
+                        .padding(.bottom, 5)  // + home-indicator inset ≈ the 40 pt bottom padding (SPEC §4.10)
                 }
-                .frame(minHeight: geo.size.height, alignment: .top)
+                .frame(minHeight: geo.size.height + geo.safeAreaInsets.top, alignment: .top)  // the scroll view runs under the status bar
             }
             .scrollBounceBehavior(.basedOnSize)
             .ignoresSafeArea(edges: .top)
@@ -72,12 +73,9 @@ struct PaywallScreen: View {
         .background(Palette.background)
         .overlay(alignment: .topTrailing) {
             GlassIconButton(icon: "close", iconSize: 18, label: "common.close.accessibilityLabel") { dismiss() }
-                .padding(.top, 16)
+                .padding(.top, 4)  // top 58 on the 844 pt frame = 4 below its status bar; lines up with nav-row buttons
                 .padding(.trailing, 16)
         }
-        .presentationDetents([.large])
-        .presentationBackground(Palette.background)
-        .presentationDragIndicator(.hidden)
         .task { if entitlements.products.isEmpty { await entitlements.load() } }
         .onChange(of: entitlements.isPremium) { _, premium in
             if premium { dismiss() }
@@ -109,6 +107,7 @@ struct PaywallScreen: View {
                 Text("paywall.restore").font(.system(size: restoreSize))
             }
             .buttonStyle(.dcTextLink)
+            .padding(.vertical, -13)  // 44 pt hit target without the extra layout height
             .disabled(purchasing || restoring)
 
             HStack(spacing: 14) {
@@ -182,7 +181,7 @@ private struct BenefitLine: View {
             Icon("checkmark", size: 18).foregroundStyle(Palette.accent).padding(.top, 1)
             Text(key)
                 .font(Typography.body15)
-                .lineHeight(1.4, size: 15)
+                .lineHeight(1.4)
                 .foregroundStyle(Palette.ink)
                 .fixedSize(horizontal: false, vertical: true)
         }

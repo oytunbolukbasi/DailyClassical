@@ -4,6 +4,7 @@ import SwiftUI
 struct ArtworkViewer: View {
     let painting: Painting
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.locale) private var locale
     @State private var scale: CGFloat = 1
     @State private var lastScale: CGFloat = 1
     @State private var offset: CGSize = .zero
@@ -31,7 +32,8 @@ struct ArtworkViewer: View {
         }
         .overlay(alignment: .topTrailing) {
             GlassIconButton(icon: "close", iconSize: 18, tint: Palette.viewerInk, label: "common.close.accessibilityLabel") { dismiss() }
-                .padding(.trailing, 16).padding(.top, 8)
+                .shadow(color: .black.opacity(0.35), radius: 3, y: 2)  // G4 over the image
+                .padding(.trailing, 16).padding(.top, 4)  // as the paywall close (SPEC: top 58)
         }
         .overlay(alignment: .bottomLeading) { caption }
         .environment(\.colorScheme, .dark)
@@ -42,13 +44,22 @@ struct ArtworkViewer: View {
         VStack(alignment: .leading, spacing: 6) {
             Text(verbatim: painting.artist).font(Typography.literata(17, .medium)).foregroundStyle(Palette.viewerInk)
             Text(verbatim: "\(painting.title), \(painting.yearLabel)").font(Typography.literata(17).italic()).foregroundStyle(Palette.viewerInk2)
-            (Text(verbatim: [painting.medium, painting.collection].compactMap { $0 }.joined(separator: " · ") + " · ") + Text("artwork.publicDomain"))
-                .font(Typography.meta13).lineHeight(1.45, size: 13).foregroundStyle(Palette.viewerInk2)
+            Text(verbatim: details)
+                .font(Typography.meta13).lineHeight(1.45).foregroundStyle(Palette.viewerInk2)
         }
         .padding(.horizontal, 24)
         .padding(.bottom, 24)
         .opacity(scale > 1 ? 0 : 1)
         .allowsHitTesting(false)
+    }
+
+    /// "Oil on canvas · State Tretyakov Gallery, Moscow · Public domain" (rights only when public domain).
+    private var details: String {
+        var parts = [painting.medium, painting.collection].compactMap { $0 }
+        if painting.rightsStatus == "public_domain" {
+            parts.append(L10n.string("artwork.publicDomain", code: locale.language.languageCode?.identifier ?? "en"))
+        }
+        return parts.joined(separator: " · ")
     }
 
     private var zoom: some Gesture {

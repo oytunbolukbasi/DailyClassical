@@ -37,7 +37,7 @@ struct PaintingCaption: View {
             }
             Text(caption)
                 .font(Typography.caption)
-                .lineHeight(1.4, size: 12)
+                .lineHeight(1.4)
                 .foregroundStyle(Palette.ink3)
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -64,10 +64,11 @@ struct ComposerLink: View {
                     .frame(width: 8, height: 12).opacity(0.7)
             }
             .foregroundStyle(Palette.accent)
-            .padding(.vertical, 4)
+            .padding(.vertical, 4)  // taller hit target…
             .contentShape(.rect)
         }
         .buttonStyle(.plain)
+        .padding(.vertical, -4)  // …that doesn't push the layout
         .accessibilityHint(Text("common.composerLink.accessibilityHint"))
     }
 }
@@ -133,12 +134,12 @@ struct EmptyStateView<Action: View>: View {
     @ViewBuilder var action: () -> Action
 
     var body: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: icon == nil ? 10 : 12) {  // the search-empty variant (no icon) uses 10
             if let icon {
                 Icon(icon, size: 36).foregroundStyle(Palette.accent).padding(.bottom, 6)
             }
-            title.font(titleFont).foregroundStyle(Palette.ink)
-            message.font(Typography.body15).lineHeight(1.5, size: 15).foregroundStyle(Palette.ink2)
+            title.font(titleFont).lineHeight(1.2, literata: 24).foregroundStyle(Palette.ink)
+            message.font(Typography.body15).lineHeight(1.5).foregroundStyle(Palette.ink2)
             action().padding(.top, 14)
         }
         .multilineTextAlignment(.center)
@@ -174,14 +175,18 @@ struct SheetHeader: View {
     let title: Text
     var subtitle: Text? = nil
     var titleFont: Font = Typography.titleM
+    /// Title line height and design size: 24/1.2 in sheets, 30/1.15 on the auth sheets.
+    var titleLineHeight: CGFloat = 1.2
+    var titleSize: CGFloat = 24
     var subtitleFont: Font = Typography.meta13
     let close: () -> Void
 
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
             VStack(alignment: .leading, spacing: 4) {
-                title.font(titleFont).foregroundStyle(Palette.ink).accessibilityAddTraits(.isHeader)
-                subtitle?.font(subtitleFont).lineHeight(1.45, size: 13).foregroundStyle(Palette.ink2)
+                title.font(titleFont).lineHeight(titleLineHeight, literata: titleSize)
+                    .foregroundStyle(Palette.ink).accessibilityAddTraits(.isHeader)
+                subtitle?.font(subtitleFont).lineHeight(1.45).foregroundStyle(Palette.ink2)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             SheetCloseButton(action: close)
@@ -210,9 +215,11 @@ struct SheetCloseButton: View {
 /// Bottom fade (transparent → page colour) behind floating controls.
 struct BottomFade: View {
     var height: CGFloat = 150
+    /// Where the gradient reaches the solid page colour (60 % on most screens, 70 % on Library › Glossary).
+    var solidFrom: CGFloat = 0.6
 
     var body: some View {
-        LinearGradient(stops: [.init(color: Palette.background.opacity(0), location: 0), .init(color: Palette.background, location: 0.6)],
+        LinearGradient(stops: [.init(color: Palette.background.opacity(0), location: 0), .init(color: Palette.background, location: solidFrom)],
                        startPoint: .top, endPoint: .bottom)
             .frame(height: height)
             .allowsHitTesting(false)

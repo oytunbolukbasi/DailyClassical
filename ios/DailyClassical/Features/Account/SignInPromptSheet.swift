@@ -1,12 +1,14 @@
 import SwiftUI
 
-/// "Keep the pieces you love" (flow 07 frame 2): medium glass sheet shown when a guest taps
+/// "Keep the pieces you love" (flow 07 frame 2): content-height glass sheet shown when a guest taps
 /// the heart, or the guest Account row in Settings.
 struct SignInPromptSheet: View {
     @Environment(AppRouter.self) private var router
     @Environment(\.dismiss) private var dismiss
     /// Set when handing over to the auth sheet so the pending favourite survives.
     @State private var handingOver = false
+    /// The sheet hugs its content, as drawn (≈330 pt), rather than sitting at half height.
+    @State private var contentHeight: CGFloat = 0
 
     var body: some View {
         ScrollView {
@@ -15,12 +17,12 @@ struct SignInPromptSheet: View {
                     Text("favourites.prompt.title")
                         .font(Typography.titleL)
                         .tracking(-0.28)
-                        .lineHeight(1.15, size: 28)
+                        .lineHeight(1.15, literata: 28)
                         .foregroundStyle(Palette.ink)
                         .accessibilityAddTraits(.isHeader)
                     Text("favourites.prompt.body")
                         .font(Typography.body15)
-                        .lineHeight(1.5, size: 15)
+                        .lineHeight(1.5)
                         .foregroundStyle(Palette.ink2)
                 }
                 .fixedSize(horizontal: false, vertical: true)
@@ -33,14 +35,16 @@ struct SignInPromptSheet: View {
                         .buttonStyle(.dcSecondary)
                     Button("favourites.prompt.notNow") { dismiss() }
                         .buttonStyle(.dcTextLink)
+                        .padding(.vertical, -13)  // keep the 44 pt hit target out of the 12 pt rhythm
                 }
                 .padding(.top, 6)
             }
             .padding(.horizontal, 24)
-            .padding(.bottom, 12)
+            .padding(.bottom, 4)  // + the sheet's bottom inset ≈ the drawn 44 pt
+            .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { contentHeight = $0 }
         }
         .scrollBounceBehavior(.basedOnSize)
-        .presentationDetents([.medium])
+        .presentationDetents([contentHeight > 0 ? .height(contentHeight) : .medium])
         .presentationDragIndicator(.visible)
         .onDisappear {
             // Dismissed without signing in: forget the heart tap.

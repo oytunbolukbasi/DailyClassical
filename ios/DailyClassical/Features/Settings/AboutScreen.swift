@@ -52,7 +52,7 @@ struct AboutScreen: View {
             Text(title).foregroundStyle(Palette.ink)
             Text(detail)
                 .font(Typography.meta13)
-                .lineHeight(1.45, size: 13)
+                .lineHeight(1.45)
                 .foregroundStyle(Palette.ink2)
                 .fixedSize(horizontal: false, vertical: true)
         }

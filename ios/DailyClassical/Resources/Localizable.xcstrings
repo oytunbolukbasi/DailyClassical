@@ -2656,6 +2656,24 @@
         }
       }
     },
+    "piece.bigPicture.inOneLine": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In one line:"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tek cümleyle:"
+          }
+        }
+      },
+      "comment": "Prefix before the one-line map of the movements at the end of The big picture"
+    },
     "piece.listeningStops.note %@": {
       "extractionState": "manual",
       "localizations": {

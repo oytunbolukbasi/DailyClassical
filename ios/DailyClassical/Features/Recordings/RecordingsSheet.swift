@@ -14,7 +14,7 @@ struct RecordingsSheet: View {
                 VStack(spacing: 0) {
                     ForEach(recordings) { recording in row(recording) }
                 }
-                Text("recordings.note").font(Typography.microRegular).lineHeight(1.5, size: 11).foregroundStyle(Palette.ink3)
+                Text("recordings.note").font(Typography.microRegular).lineHeight(1.5).foregroundStyle(Palette.ink3)
             }
             .padding(.horizontal, 24)
             .padding(.top, 26)

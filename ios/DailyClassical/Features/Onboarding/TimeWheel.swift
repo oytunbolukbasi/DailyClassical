@@ -33,7 +33,8 @@ struct TimeWheel: View {
     private static let minutes = Array(stride(from: 0, to: 60, by: DailyReminder.minuteStep))
 
     var body: some View {
-        HStack(spacing: 8) {
+        // Two columns, no separator (SPEC §3.21); the system wheels draw their own bands.
+        HStack(spacing: 0) {
             Picker(selection: $hour) {
                 ForEach(0..<24, id: \.self) { h in
                     Text(verbatim: String(format: "%02d", h)).tag(h)
@@ -41,12 +42,8 @@ struct TimeWheel: View {
             } label: {
                 Text("reminder.picker.hour")
             }
-            .frame(width: 88)
+            .frame(width: 58)
             .clipped()
-
-            Text(verbatim: ":")
-                .foregroundStyle(Palette.ink3)
-                .accessibilityHidden(true)
 
             Picker(selection: $minute) {
                 ForEach(Self.minutes, id: \.self) { m in
@@ -55,7 +52,7 @@ struct TimeWheel: View {
             } label: {
                 Text("reminder.picker.minute")
             }
-            .frame(width: 88)
+            .frame(width: 58)
             .clipped()
         }
         .pickerStyle(.wheel)

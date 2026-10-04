@@ -91,7 +91,7 @@ struct AuthSheet: View {
             primaryButton("auth.create.cta") { await submitCreate() }
             Text("auth.legal")
                 .font(Typography.caption)
-                .lineHeight(1.5, size: 12)
+                .lineHeight(1.5)
                 .foregroundStyle(Palette.ink3)
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity)
@@ -175,7 +175,7 @@ struct AuthSheet: View {
     @ViewBuilder private func verifyEmail(_ address: String) -> some View {
         header("auth.verify.title", subtitle: nil)
         Text("auth.verify.subtitle \(address)")
-            .font(Typography.body15).lineHeight(1.5, size: 15)
+            .font(Typography.body15).lineHeight(1.5)
             .foregroundStyle(Palette.ink2)
             .padding(.top, -14)
         VerifyCodeView(
@@ -201,6 +201,8 @@ struct AuthSheet: View {
             title: Text(title),
             subtitle: subtitle.map { Text($0) },
             titleFont: Typography.titleXL,
+            titleLineHeight: 1.15,
+            titleSize: 30,
             close: { dismiss() }
         )
     }

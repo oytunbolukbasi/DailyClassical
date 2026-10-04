@@ -37,7 +37,8 @@ struct ListeningStopRow: View {
                 Circle().fill(Palette.accent.opacity(0.18)).frame(width: 16, height: 16)
             }
             if hollow {
-                Circle().strokeBorder(focus == .upcoming ? Palette.ink3 : Palette.accent, lineWidth: 1.5).frame(width: 8, height: 8)
+                Circle().strokeBorder(focus == .upcoming ? Palette.ink3 : Palette.accent, lineWidth: 1.5)
+                    .opacity(focus == .passed ? 0.4 : 1).frame(width: 8, height: 8)
             } else {
                 Circle().fill(Palette.accent).opacity(focus == .passed ? 0.4 : 1).frame(width: 8, height: 8)
             }
@@ -52,7 +53,7 @@ struct ListeningStopRow: View {
             timeLabel
             RichTextView(source: stop.hear, font: Typography.readingMedium, lineHeight: 1.4,
                          color: faded ? Palette.ink3 : Palette.ink, termColor: faded ? Palette.ink3 : Palette.accent)
-            RichTextView(source: stop.happening, font: Typography.body15, lineHeight: 1.45, size: 15,
+            RichTextView(source: stop.happening, font: Typography.body15, lineHeight: 1.45, literataSize: nil,
                          color: faded ? Palette.ink3 : Palette.ink2, termColor: faded ? Palette.ink3 : Palette.accent)
                 .opacity(faded ? 0.75 : 1)
         }

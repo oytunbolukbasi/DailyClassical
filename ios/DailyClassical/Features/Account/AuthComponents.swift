@@ -104,7 +104,7 @@ struct FormMessage: View {
     var body: some View {
         text
             .font(Typography.meta13)
-            .lineHeight(1.5, size: 13)
+            .lineHeight(1.5)
             .foregroundStyle(isError ? Palette.danger : Palette.ink3)
             .fixedSize(horizontal: false, vertical: true)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -188,7 +188,7 @@ struct CheckEmailContent: View {
                     .fixedSize(horizontal: false, vertical: true)
                 Text("auth.checkEmail.hint")
                     .font(Typography.meta13)
-                    .lineHeight(1.5, size: 13)
+                    .lineHeight(1.5)
                     .foregroundStyle(Palette.ink3)
                     .multilineTextAlignment(.center)
             }

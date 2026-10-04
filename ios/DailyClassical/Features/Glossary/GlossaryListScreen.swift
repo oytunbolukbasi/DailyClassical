@@ -42,15 +42,18 @@ struct GlossaryListScreen: View {
                 .padding(.horizontal, Spacing.pageGutter)
             }
             .scrollDismissesKeyboard(.immediately)
+            .overlay(alignment: .bottom) { BottomFade(solidFrom: 0.7).ignoresSafeArea(edges: .bottom) }  // SPEC §4.9
             .onScrollGeometryChange(for: Bool.self) { $0.contentOffset.y + $0.contentInsets.top > 48 } action: { _, away in
                 withAnimation(.easeOut(duration: 0.2)) { titleScrolledAway = away }
             }
-            .overlay(alignment: .trailing) {
+            .overlay(alignment: .topTrailing) {
+                // Fixed beside the search field (SPEC §4.9: right 6, top 230 on the 390 × 844 frame).
                 if sections.count > 1 {
                     IndexRail(letters: sections.map(\.letter)) { letter in
                         proxy.scrollTo(Self.anchorID(letter), anchor: .top)
                     }
                     .padding(.trailing, 2)
+                    .padding(.top, 128)
                 }
             }
         }
@@ -78,7 +81,7 @@ struct GlossaryListScreen: View {
                 .accessibilityAddTraits(.isHeader)
             Text("glossary.intro")
                 .font(Typography.body15)
-                .lineHeight(1.5, size: 15)
+                .lineHeight(1.5)
                 .foregroundStyle(Palette.ink2)
                 .fixedSize(horizontal: false, vertical: true)
             GlassSearchField(text: $query, prompt: Text("glossary.searchPlaceholder"), focused: $searchFocused)
@@ -155,7 +158,7 @@ nonisolated enum GlossaryIndex {
 }
 
 /// SPEC §3.12 glossary list row: 28 pt letter column (first term of a letter only),
-/// Literata term, one-line definition, chevron.
+/// Literata term, definition (up to two lines, SF 13/1.4), chevron.
 private struct GlossaryListRow: View {
     let letter: String?
     let term: GlossaryTerm
@@ -175,12 +178,13 @@ private struct GlossaryListRow: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text(verbatim: term.term)
                         .font(Typography.rowTitle)
-                        .lineHeight(1.3, size: 17)
+                        .lineHeight(1.3)
                         .foregroundStyle(Palette.ink)
                     Text(verbatim: RichText.plain(term.definition))
                         .font(Typography.meta13)
+                        .lineHeight(1.4)
                         .foregroundStyle(Palette.ink2)
-                        .lineLimit(1)
+                        .lineLimit(2)
                         .truncationMode(.tail)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)

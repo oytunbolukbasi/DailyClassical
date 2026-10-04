@@ -56,13 +56,12 @@ private struct TodayContent: View {
                     ComposerLink(name: piece.composer.name, font: Typography.composerLinkToday) {
                         router.present(.composer(piece.composer))
                     }
-                    .padding(.vertical, -4)
                     Text(verbatim: piece.headerTitle)
-                        .font(Typography.titleToday).lineHeight(1.2, size: 27).tracking(-0.27)
+                        .font(Typography.titleToday).lineHeight(1.2, literata: 27).tracking(-0.27)
                         .foregroundStyle(Palette.ink)
                         .accessibilityAddTraits(.isHeader)
                     Text(verbatim: piece.hook)
-                        .font(Typography.hookM).lineHeight(1.45).foregroundStyle(Palette.ink2)
+                        .font(Typography.hookM).lineHeight(1.45, literata: 17).foregroundStyle(Palette.ink2)
                     Text("today.meta \(piece.yearText) \(piece.durationMin) \(piece.movementCount)")
                         .font(Typography.meta13).foregroundStyle(Palette.ink2).padding(.top, 2)
                 }
@@ -127,8 +126,8 @@ private struct TodayOffline: View {
                 .overlay { Icon("offline", size: 32).foregroundStyle(Palette.ink3) }
             VStack(alignment: .leading, spacing: 12) {
                 SectionLabel("state.offline.date \(Date.now.formatted(Date.VerbatimFormatStyle(format: "\(weekday: .wide), \(day: .defaultDigits) \(month: .wide)", locale: locale, timeZone: .current, calendar: .current)))", color: Palette.accent)
-                Text("state.offline.title").font(Typography.titleM).foregroundStyle(Palette.ink)
-                Text("state.offline.body").font(Typography.body15).lineHeight(1.5, size: 15).foregroundStyle(Palette.ink2)
+                Text("state.offline.title").font(Typography.titleM).lineHeight(1.2, literata: 24).foregroundStyle(Palette.ink)
+                Text("state.offline.body").font(Typography.body15).lineHeight(1.5).foregroundStyle(Palette.ink2)
                 Button("state.retry") { Task { await content.retry() } }
                     .buttonStyle(SmallCapsuleButtonStyle())
                     .padding(.top, 6)

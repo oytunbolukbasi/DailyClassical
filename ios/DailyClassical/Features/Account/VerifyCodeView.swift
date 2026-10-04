@@ -75,7 +75,7 @@ struct VerifyCodeView: View {
             }
 
             Text("auth.verify.hint")
-                .font(Typography.meta13).lineHeight(1.5, size: 13)
+                .font(Typography.meta13).lineHeight(1.5)
                 .foregroundStyle(Palette.ink3)
 
             Spacer(minLength: 0)

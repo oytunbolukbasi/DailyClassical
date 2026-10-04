@@ -7,7 +7,8 @@ struct RichTextView: View {
     let source: String
     var font: Font = Typography.reading
     var lineHeight: CGFloat = 1.6
-    var size: CGFloat = 17
+    /// Design size when `font` is Literata (the reading styles); nil for SF fonts.
+    var literataSize: CGFloat? = 17
     var color: Color = Palette.ink
     var termColor: Color = Palette.accent
     @Environment(\.activeGlossaryTerm) private var activeTerm
@@ -15,7 +16,7 @@ struct RichTextView: View {
     var body: some View {
         Text(styled)
             .font(font)
-            .lineHeight(lineHeight, size: size)
+            .modifier(RichLineHeight(multiple: lineHeight, literataSize: literataSize))
             .foregroundStyle(color)
             .fixedSize(horizontal: false, vertical: true)
     }
@@ -30,6 +31,19 @@ struct RichTextView: View {
             }
         }
         return text
+    }
+}
+
+private struct RichLineHeight: ViewModifier {
+    let multiple: CGFloat
+    let literataSize: CGFloat?
+
+    func body(content: Content) -> some View {
+        if let literataSize {
+            content.lineHeight(multiple, literata: literataSize)
+        } else {
+            content.lineHeight(multiple)
+        }
     }
 }
 

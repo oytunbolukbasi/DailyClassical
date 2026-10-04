@@ -109,12 +109,13 @@ struct ChangePasswordScreen: View {
                     Text(sentTo == nil ? "account.changePassword.title" : "auth.checkEmail.title")
                         .font(Typography.titleXL)
                         .tracking(-0.3)
+                        .lineHeight(1.15, literata: 30)
                         .foregroundStyle(Palette.ink)
                         .accessibilityAddTraits(.isHeader)
                     if sentTo == nil, let email = session.email {
                         Text("account.changePassword.body \(Text(verbatim: email).fontWeight(.medium))")
                             .font(Typography.body15)
-                            .lineHeight(1.5, size: 15)
+                            .lineHeight(1.5)
                             .foregroundStyle(Palette.ink2)
                             .fixedSize(horizontal: false, vertical: true)
                     }

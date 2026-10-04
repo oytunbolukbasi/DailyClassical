@@ -74,7 +74,7 @@ private struct PremiumSearchView: View {
                 }
             }
             .padding(.horizontal, Spacing.pageGutter)
-            .padding(.top, 12)
+            .padding(.top, 22)  // SPEC §4.12: results 22 below the search row
             .padding(.bottom, 40)
         }
         .overlay {

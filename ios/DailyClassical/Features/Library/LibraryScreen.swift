@@ -31,6 +31,7 @@ struct LibraryScreen: View {
             .listStyle(.plain)
             .scrollContentBackground(.hidden)
             .background(Palette.background)
+            .overlay(alignment: .bottom) { BottomFade().ignoresSafeArea(edges: .bottom) }  // SPEC §4.11 item 3
             .environment(\.defaultMinListRowHeight, 0)
             .animation(.default, value: session.favourites.count)
             // The title is drawn in Literata in the content; it stays set so pushed
@@ -224,11 +225,12 @@ struct LibraryScreen: View {
                 }
                 Text("favourites.footer")
                     .font(Typography.meta13)
-                    .lineHeight(1.5, size: 13)
+                    .lineHeight(1.5)
                     .foregroundStyle(Palette.ink3)
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.top, 18)
                     .padding(.bottom, 24)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                     .hairlineTop()
                     .libraryRowChrome()
             }

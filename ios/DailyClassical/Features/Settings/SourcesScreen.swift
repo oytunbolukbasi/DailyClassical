@@ -54,7 +54,7 @@ struct SourcesScreen: View {
     private func creditLine(_ text: Text) -> some View {
         text
             .font(Typography.meta13)
-            .lineHeight(1.45, size: 13)
+            .lineHeight(1.45)
             .foregroundStyle(Palette.ink2)
             .fixedSize(horizontal: false, vertical: true)
             .padding(.vertical, 6)

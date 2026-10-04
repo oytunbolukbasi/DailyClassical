@@ -4,9 +4,6 @@ import UIKit
 /// Type ramp from SPEC.md §2.2 / §2.8. Literata (bundled variable font) for titles and
 /// reading; the system font for UI. Every style scales with Dynamic Type through `relativeTo:`.
 enum Typography {
-    static let literataLineRatio: CGFloat = UIFont(name: "Literata-Regular", size: 100).map { $0.lineHeight / 100 } ?? 1.2
-    static let systemLineRatio: CGFloat = UIFont.systemFont(ofSize: 100).lineHeight / 100
-
     static func literata(_ size: CGFloat, _ weight: Font.Weight = .regular, relativeTo style: Font.TextStyle = .body) -> Font {
         .custom("Literata", size: size, relativeTo: style).weight(weight)
     }
@@ -51,13 +48,44 @@ enum Typography {
 }
 
 extension View {
-    /// CSS line-height as a multiple of the font size (TEST).
-    func lineHeight(_ multiple: CGFloat, size: CGFloat = 17) -> some View {
+    /// CSS line-height as a multiple of the font size (17/1.6 → 27.2 pt lines), via the iOS 26
+    /// text line-height API. Unlike `lineSpacing`, it can also be *tighter* than the font's own
+    /// leading (Literata's natural line height is ≈1.3; titles at 1.15–1.25 need that), and it
+    /// splits the difference above and below each line as CSS does. The factor applies to the
+    /// Dynamic Type-scaled size, so it scales with the text.
+    func lineHeight(_ multiple: CGFloat) -> some View {
         lineHeight(.multiple(factor: multiple))
+    }
+
+    /// The same for Literata at design size `size`. For this font SwiftUI keeps the first
+    /// line's glyphs at the natural ascent and puts the whole line-height difference below,
+    /// where CSS splits it above and below; measured against the canvas, loose Literata text
+    /// (hooks 1.45, reading 1.6) sat 1–3 pt too high. Shifting the drawing by half the extra
+    /// leading fixes that without changing the layout. Scales with Dynamic Type.
+    func lineHeight(_ multiple: CGFloat, literata size: CGFloat) -> some View {
+        modifier(LiterataLineHeight(multiple: multiple, size: size))
     }
 
     /// Reading prose: Literata 17/1.6, ink.
     func readingStyle(color: Color = Palette.ink) -> some View {
-        font(Typography.reading).lineHeight(1.6).foregroundStyle(color)
+        font(Typography.reading).lineHeight(1.6, literata: 17).foregroundStyle(color)
     }
 }
+
+private struct LiterataLineHeight: ViewModifier {
+    /// Literata's natural line height as a multiple of its size (CSS "normal").
+    static let natural: CGFloat = 1.3
+    let multiple: CGFloat
+    @ScaledMetric private var shift: CGFloat
+
+    init(multiple: CGFloat, size: CGFloat) {
+        self.multiple = multiple
+        // Only looser-than-natural lines need it: tighter titles (1.1–1.25) already land on the canvas.
+        _shift = ScaledMetric(wrappedValue: max(0, multiple - Self.natural) * size / 2, relativeTo: .body)
+    }
+
+    func body(content: Content) -> some View {
+        content.lineHeight(.multiple(factor: multiple)).offset(y: shift)
+    }
+}
+

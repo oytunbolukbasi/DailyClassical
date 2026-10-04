@@ -58,6 +58,7 @@ struct ComposerSheet: View {
 
                     inDailyClassical
                         .padding(.top, 20)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .hairlineTop()
                         .padding(.top, 28)
                 }
@@ -103,7 +104,7 @@ struct ComposerSheet: View {
             Text(verbatim: name)
                 .font(Typography.titleXL)
                 .tracking(-0.3)
-                .lineHeight(1.15, size: 30)
+                .lineHeight(1.15, literata: 30)
                 .foregroundStyle(Palette.ink)
                 .fixedSize(horizontal: false, vertical: true)
                 .accessibilityAddTraits(.isHeader)
@@ -157,7 +158,7 @@ struct ComposerSheet: View {
                 .tracking(0.66)
                 .textCase(.uppercase)
                 .foregroundStyle(Palette.ink3)
-            RichTextView(source: fact.value, font: Typography.meta13, lineHeight: 1.4, size: 13, color: Palette.ink)
+            RichTextView(source: fact.value, font: Typography.meta13, lineHeight: 1.4, literataSize: nil, color: Palette.ink)
         }
         .frame(maxWidth: .infinity, alignment: .topLeading)
         .accessibilityElement(children: .combine)
@@ -182,7 +183,7 @@ struct ComposerSheet: View {
             }
             Text("composer.morePiecesNote")
                 .font(Typography.meta13)
-                .lineHeight(1.45, size: 13)
+                .lineHeight(1.45)
                 .foregroundStyle(Palette.ink3)
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -296,7 +297,7 @@ private struct ComposerPortraitCaption: View {
                 .accessibilityHidden(true)
             Text(caption)
                 .font(Typography.caption)
-                .lineHeight(1.4, size: 12)
+                .lineHeight(1.4)
                 .foregroundStyle(Palette.ink3)
                 .fixedSize(horizontal: false, vertical: true)
         }
