@@ -1,0 +1,142 @@
+# Painting image assets, keyed by piece id (same ids as the yaml blocks in content/<locale>/*.md).
+# Titles, years, collections and pairing notes stay in the markdown (they are translated);
+# this file holds the language-neutral image facts, read by backend/scripts/seed.ts and
+# backend/scripts/export-fixtures.ts.
+#
+# Fields
+#   image_url     Direct image URL. Wikimedia Commons Special:FilePath links resolve to the original
+#                 file; download it and serve our own CDN copy before launch. null = no usable image yet.
+#   source_url    The holding museum's object page.
+#   commons_page  The Wikimedia Commons file page (licence template, file history).
+#   width/height  Pixel size of the original Commons file (null when the research did not record it).
+#   medium        Medium as given by the museum.
+#   license       Licence of the image file (not of the artwork; all artworks here are public domain
+#                 by age, with the Malevich caveat noted in its rights_flag).
+#   credit_line   Text to show wherever the image is credited.
+#   rights_status public_domain | unverified | restricted (paintings.rights_status in the DB).
+#
+# Source: content/research/verification-1-5.md and verification-6-10.md (checked 2026-10-04).
+# NC-licensed images (e.g. the Staatliche Museen zu Berlin's own CC BY-NC-SA photos) are deliberately not used.
+
+mozart-symphony-40:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Claude-Joseph_Vernet_-_A_Shipwreck_in_Stormy_Seas_(Temp%C3%AAte)_-_c_1773_-_National_Gallery_UK.jpg
+  source_url: https://www.nationalgallery.org.uk/paintings/claude-joseph-vernet-a-shipwreck-in-stormy-seas
+  commons_page: https://commons.wikimedia.org/wiki/File:Claude-Joseph_Vernet_-_A_Shipwreck_in_Stormy_Seas_(Temp%C3%AAte)_-_c_1773_-_National_Gallery_UK.jpg
+  width: 6000
+  height: 4188
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Claude-Joseph Vernet, A Shipwreck in Stormy Seas, 1773. National Gallery, London (NG6601). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+
+beethoven-symphony-5:
+  # Yorck Project scan, 1536 px on the long side (exact size not recorded). No clean hi-res open scan was
+  # confirmed; Tate's own image licence was not checked. A 5168 × 2912 gallery photo exists
+  # (File:Turner,_Snow_Storm,_50507693753_ed88546d01_o.jpg) but may show the frame and lighting.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Mallord_William_Turner_081.jpg
+  source_url: https://www.tate.org.uk/art/artworks/turner-snow-storm-hannibal-and-his-army-crossing-the-alps-n00490
+  commons_page: https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_081.jpg
+  width: null
+  height: null
+  medium: null
+  license: Public domain (PD-Art, The Yorck Project)
+  credit_line: J. M. W. Turner, Snow Storm - Hannibal and his Army Crossing the Alps, exhibited 1812. Tate, London (N00490). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+
+beethoven-symphony-9:
+  # Public-domain gallery photo. A larger 3650 × 4633 file exists but is CC BY 4.0 (attribution needed):
+  # File:Hamburg,_Kunsthalle,_Philipp_Otto_Runge,_der_Morgen.jpg. Kunsthalle download licence not checked.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/1808_Runge_Der_Morgen_anagoria.JPG
+  source_url: https://online-sammlung.hamburger-kunsthalle.de/de/objekt/HK-1016/der-morgen-erste-fassung
+  commons_page: https://commons.wikimedia.org/wiki/File:1808_Runge_Der_Morgen_anagoria.JPG
+  width: 3485
+  height: 4405
+  medium: Oil on canvas
+  license: Public domain
+  credit_line: Philipp Otto Runge, Der Morgen (erste Fassung), 1808. Hamburger Kunsthalle (HK-1016). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+
+schubert-symphony-8:
+  # The SMB museum photo is CC BY-NC-SA, so it is not used. A CC0 5138 × 3499 alternative exists:
+  # File:Abtei_im_Eichwald-_(Caspar_David_Friedrich)-WUS03167.jpg
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Caspar_David_Friedrich_-_Abtei_im_Eichwald_-_Google_Art_Project.jpg
+  source_url: https://id.smb.museum/object/968249
+  commons_page: https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Abtei_im_Eichwald_-_Google_Art_Project.jpg
+  width: 4000
+  height: 2563
+  medium: Oil on canvas
+  license: Public domain (PD-Art, Google Art Project)
+  credit_line: Caspar David Friedrich, Abtei im Eichwald (The Abbey in the Oakwood), 1809–1810. Alte Nationalgalerie, Staatliche Museen zu Berlin (NG 8/85). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+
+berlioz-symphonie-fantastique:
+  # Very wide (≈ 3.1:1): plan the crop. Larger Yorck scan 5120 × 1600: File:Witches%27_Sabbath_by_Goya.jpg
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Francisco_de_Goya_y_Lucientes_-_Witches%27_Sabbath_(The_Great_He-Goat).jpg
+  source_url: https://www.museodelprado.es/en/the-collection/art-work/witches-sabbath-or-the-great-he-goat/09559184-cfeb-48fe-8acc-89b070b64d92
+  commons_page: https://commons.wikimedia.org/wiki/File:Francisco_de_Goya_y_Lucientes_-_Witches%27_Sabbath_(The_Great_He-Goat).jpg
+  width: 3051
+  height: 966
+  medium: Oil on mural, transferred to canvas
+  license: Public domain
+  credit_line: Francisco de Goya, Witches' Sabbath, or the Great He-Goat, 1820–1823. Museo Nacional del Prado, Madrid (P000761). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+
+brahms-symphony-4:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Arnold_B%C3%B6cklin_-_Die_Toteninsel_III_(Alte_Nationalgalerie,_Berlin).jpg
+  source_url: https://search.smb.museum/object/obj-967648
+  commons_page: https://commons.wikimedia.org/wiki/File:Arnold_B%C3%B6cklin_-_Die_Toteninsel_III_(Alte_Nationalgalerie,_Berlin).jpg
+  width: 4933
+  height: 2628
+  medium: Oil on wood
+  license: Public domain (PD-Art; Public Domain Mark 1.0 at SMB)
+  credit_line: Arnold Böcklin, Die Toteninsel (third version), 1883. Alte Nationalgalerie, Staatliche Museen zu Berlin (NG 2/80). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+
+tchaikovsky-symphony-6:
+  # The Tretyakov states no open licence. Smaller alternative 2000 × 1434: File:Levitan_nad_vech_pok28.jpg
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Isaac_Levitan_-_Au-dessus_du_repos_%C3%A9ternel.jpg
+  source_url: https://my.tretyakov.ru/app/masterpiece/9903
+  commons_page: https://commons.wikimedia.org/wiki/File:Isaac_Levitan_-_Au-dessus_du_repos_%C3%A9ternel.jpg
+  width: 2707
+  height: 1981
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Isaac Levitan, Above Eternal Peace, 1894. State Tretyakov Gallery, Moscow (inv. 1486). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+
+dvorak-symphony-9:
+  # SAAM record is reported as Smithsonian Open Access CC0 (seen in a search snippet only; si.edu returned 403).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Bierstadt_-_Among_the_Sierra_Nevada,_California_-_Google_Art_Project.jpg
+  source_url: https://americanart.si.edu/artwork/among-sierra-nevada-california-2059
+  commons_page: https://commons.wikimedia.org/wiki/File:Albert_Bierstadt_-_Among_the_Sierra_Nevada,_California_-_Google_Art_Project.jpg
+  width: 3993
+  height: 2387
+  medium: Oil on canvas
+  license: Public domain (PD-Art, Google Art Project); museum record Smithsonian Open Access CC0
+  credit_line: Albert Bierstadt, Among the Sierra Nevada, California, 1868. Smithsonian American Art Museum, Bequest of Helen Huntington Hull (1977.107.1). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+
+mahler-symphony-5:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Gustav_Klimt_-_Death_and_Life_-_Google_Art_Project.jpg
+  source_url: https://onlinecollection.leopoldmuseum.org/en/object/629-death-and-life/
+  commons_page: https://commons.wikimedia.org/wiki/File:Gustav_Klimt_-_Death_and_Life_-_Google_Art_Project.jpg
+  width: 4059
+  height: 3533
+  medium: Oil on canvas
+  license: Public domain (PD-Art, Google Art Project)
+  credit_line: Gustav Klimt, Death and Life, 1910/11, reworked 1912/13 and 1915/16. Leopold Museum, Vienna (Inv. 630). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+
+shostakovich-symphony-5:
+  # Low resolution only (1370 × 1800). Commons tag {{PD-Art|PD-old-auto|deathyear=1935}}, no US-specific tag.
+  # PD in EU/Turkey since 2006; small unverified US risk (see the rights_flag in the markdown).
+  # Larger gallery photos on Commons are user photos with their own licences; check before use.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9A%D0%B0%D0%B7%D0%B8%D0%BC%D0%B8%D1%80_%D0%9C%D0%B0%D0%BB%D0%B5%D0%B2%D0%B8%D1%87_%E2%80%94_%D0%92%D0%B0%D0%B6%D0%BA%D0%B5_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D1%87%D1%83%D1%82%D1%82%D1%8F.jpg
+  source_url: https://rusmuseumvrm.ru/data/collections/painting/19_20/malevich_k.s._slozhnoe_predchuvstvie_tors_v_zheltoy_rubashke._okolo_1932._zh-9477/?lang=en
+  commons_page: https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D0%B7%D0%B8%D0%BC%D0%B8%D1%80_%D0%9C%D0%B0%D0%BB%D0%B5%D0%B2%D0%B8%D1%87_%E2%80%94_%D0%92%D0%B0%D0%B6%D0%BA%D0%B5_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D1%87%D1%83%D1%82%D1%82%D1%8F.jpg
+  width: 1370
+  height: 1800
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto; artist d. 1935)
+  credit_line: Kazimir Malevich, Torso in a Yellow Shirt (Complicated Premonition), c. 1932. State Russian Museum, St Petersburg (Ж-9477). Image via Wikimedia Commons, public domain.
+  rights_status: unverified

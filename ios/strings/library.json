@@ -1,0 +1,165 @@
+{
+  "library.title": {
+    "en": "Library",
+    "tr": "Kitaplık"
+  },
+  "library.segment.all": {
+    "en": "All pieces",
+    "tr": "Tüm eserler"
+  },
+  "library.segment.favourites": {
+    "en": "Favourites",
+    "tr": "Favoriler"
+  },
+  "library.filter.composer": {
+    "en": "Composer",
+    "tr": "Besteci"
+  },
+  "library.filter.era": {
+    "en": "Era",
+    "tr": "Dönem"
+  },
+  "library.filter.glossary": {
+    "en": "Glossary",
+    "tr": "Sözlük"
+  },
+  "library.filter.allComposers": {
+    "en": "All composers",
+    "tr": "Tüm besteciler"
+  },
+  "library.filter.allEras": {
+    "en": "All eras",
+    "tr": "Tüm dönemler"
+  },
+  "library.filter.clear": {
+    "en": "Clear filters",
+    "tr": "Filtreleri temizle"
+  },
+  "library.filtered.empty.title": {
+    "en": "No pieces match yet",
+    "tr": "Henüz eşleşen eser yok"
+  },
+  "library.filtered.empty.body": {
+    "en": "We add one piece a day. Try another composer or era.",
+    "tr": "Her gün bir eser ekliyoruz. Başka bir besteci ya da dönem deneyin."
+  },
+  "library.row.meta %@ %@": {
+    "en": "%1$@ · %2$@",
+    "tr": "%1$@ · %2$@",
+    "comment": "Composer surname · year, e.g. Tchaikovsky · 1893"
+  },
+  "library.row.metaToday %@ %@": {
+    "en": "%1$@ · %2$@ · Today",
+    "tr": "%1$@ · %2$@ · Bugün",
+    "comment": "Today's piece in Library rows"
+  },
+  "library.row.locked.accessibilityHint": {
+    "en": "Opens Premium",
+    "tr": "Premium’u açar"
+  },
+  "library.offline.body": {
+    "en": "The library will appear as soon as you reconnect. Pieces you have opened before stay readable offline.",
+    "tr": "Bağlantı gelir gelmez kitaplık burada olacak. Daha önce açtığınız eserler çevrimdışı da okunabilir."
+  },
+  "favourites.row.savedToday": {
+    "en": "Saved today",
+    "tr": "Bugün kaydedildi"
+  },
+  "favourites.row.saved %@": {
+    "en": "Saved %@",
+    "tr": "%@ tarihinde kaydedildi",
+    "comment": "Date as d MMMM, e.g. Saved 28 September"
+  },
+  "favourites.footer": {
+    "en": "Swipe left to remove. Favourites are free; locked pieces stay locked until Premium.",
+    "tr": "Kaldırmak için sola kaydırın. Favoriler ücretsizdir; kilitli eserler Premium’a kadar kilitli kalır."
+  },
+  "favourites.empty.title": {
+    "en": "Nothing saved yet",
+    "tr": "Henüz kaydedilen yok"
+  },
+  "favourites.empty.body": {
+    "en": "Tap the heart on any piece to keep it here.",
+    "tr": "Bir eseri burada saklamak için kalbe dokunun."
+  },
+  "favourites.empty.body.guest": {
+    "en": "Tap the heart on any piece to keep it here. Sign in and your favourites follow you to every device.",
+    "tr": "Bir eseri burada saklamak için kalbe dokunun. Giriş yaptığınızda favorileriniz tüm cihazlarınızda sizinle olur."
+  },
+  "favourites.empty.guestCta": {
+    "en": "Sign in or create account",
+    "tr": "Giriş yap ya da hesap oluştur"
+  },
+  "favourites.remove": {
+    "en": "Remove",
+    "tr": "Kaldır"
+  },
+  "glossary.title": {
+    "en": "Glossary",
+    "tr": "Sözlük"
+  },
+  "glossary.intro": {
+    "en": "Every term that appears in a piece, explained for listeners. Tap one to read it in full.",
+    "tr": "Eserlerde geçen her terim, dinleyiciler için açıklandı. Tamamını okumak için birine dokunun."
+  },
+  "glossary.searchPlaceholder": {
+    "en": "Search terms",
+    "tr": "Terim ara"
+  },
+  "glossary.search.empty.body": {
+    "en": "Try a shorter word, or a term like “coda”.",
+    "tr": "Daha kısa bir kelime ya da “koda” gibi bir terim deneyin."
+  },
+  "glossary.index.accessibilityLabel": {
+    "en": "Alphabetical index",
+    "tr": "Alfabetik dizin"
+  },
+  "search.placeholder": {
+    "en": "Pieces, composers, terms",
+    "tr": "Eser, besteci, terim"
+  },
+  "search.clear.accessibilityLabel": {
+    "en": "Clear search",
+    "tr": "Aramayı temizle"
+  },
+  "search.group.pieces": {
+    "en": "Pieces",
+    "tr": "Eserler"
+  },
+  "search.group.composers": {
+    "en": "Composers",
+    "tr": "Besteciler"
+  },
+  "search.group.glossary": {
+    "en": "Glossary",
+    "tr": "Sözlük"
+  },
+  "search.recent": {
+    "en": "Recent",
+    "tr": "Son aramalar"
+  },
+  "search.recent.clear": {
+    "en": "Clear",
+    "tr": "Temizle"
+  },
+  "search.empty.title %@": {
+    "en": "Nothing for “%@” yet",
+    "tr": "“%@” için henüz bir şey yok"
+  },
+  "search.empty.body": {
+    "en": "We add one piece a day. Try a composer from the library, or a term like “coda”.",
+    "tr": "Her gün bir eser ekliyoruz. Kitaplıktan bir besteci ya da “koda” gibi bir terim deneyin."
+  },
+  "search.locked.title": {
+    "en": "Search is part of Premium",
+    "tr": "Arama Premium’a dahil"
+  },
+  "search.locked.body": {
+    "en": "Find any piece, composer or term in the library in a moment.",
+    "tr": "Kitaplıktaki her eseri, besteciyi ve terimi bir anda bulun."
+  },
+  "search.locked.cta": {
+    "en": "See Premium",
+    "tr": "Premium’u gör"
+  }
+}

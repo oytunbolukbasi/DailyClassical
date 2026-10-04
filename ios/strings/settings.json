@@ -1,0 +1,561 @@
+{
+  "settings.title": {
+    "en": "Settings",
+    "tr": "Ayarlar"
+  },
+  "settings.section.account": {
+    "en": "Account",
+    "tr": "Hesap"
+  },
+  "settings.account.signIn": {
+    "en": "Sign in",
+    "tr": "Giriş yap",
+    "comment": "Guest state of the Settings Account row"
+  },
+  "settings.section.reading": {
+    "en": "Reading",
+    "tr": "Okuma"
+  },
+  "settings.dailyReminder": {
+    "en": "Daily reminder",
+    "tr": "Günlük hatırlatma"
+  },
+  "settings.dailyReminder.off": {
+    "en": "Off",
+    "tr": "Kapalı"
+  },
+  "settings.theme": {
+    "en": "Theme",
+    "tr": "Tema"
+  },
+  "settings.theme.system": {
+    "en": "System",
+    "tr": "Sistem"
+  },
+  "settings.theme.light": {
+    "en": "Light",
+    "tr": "Açık"
+  },
+  "settings.theme.dark": {
+    "en": "Dark",
+    "tr": "Koyu"
+  },
+  "settings.textSize": {
+    "en": "Text size",
+    "tr": "Metin boyutu"
+  },
+  "settings.textSize.followsSystem": {
+    "en": "Follows system",
+    "tr": "Sistemi izler"
+  },
+  "settings.textSize.sample.label": {
+    "en": "Preview",
+    "tr": "Önizleme"
+  },
+  "settings.textSize.sample": {
+    "en": "A symphony that ends not in triumph but in silence. Reading text grows and shrinks with your iPhone’s text size.",
+    "tr": "Zaferle değil, sessizlikle biten bir senfoni. Okuma metni, iPhone’unuzun metin boyutuyla birlikte büyür ve küçülür."
+  },
+  "settings.textSize.footer": {
+    "en": "DailyClassical follows the text size you choose for your iPhone. To change it, go to Settings › Accessibility › Display & Text Size › Larger Text.",
+    "tr": "DailyClassical, iPhone’unuz için seçtiğiniz metin boyutunu izler. Değiştirmek için Ayarlar › Erişilebilirlik › Ekran ve Metin Boyutu › Daha Büyük Metin bölümüne gidin."
+  },
+  "settings.textSize.current": {
+    "en": "Current size",
+    "tr": "Geçerli boyut"
+  },
+  "settings.textSize.current.accessibility": {
+    "en": "Accessibility size",
+    "tr": "Erişilebilirlik boyutu"
+  },
+  "settings.language": {
+    "en": "Language",
+    "tr": "Dil"
+  },
+  "settings.language.system": {
+    "en": "System",
+    "tr": "Sistem",
+    "comment": "Follow the iPhone language"
+  },
+  "settings.language.footer": {
+    "en": "Changes the app and every guide right away. “System” follows your iPhone’s language.",
+    "tr": "Uygulamayı ve tüm rehberleri hemen değiştirir. “Sistem” seçeneği iPhone’unuzun dilini izler."
+  },
+  "settings.section.premium": {
+    "en": "Premium",
+    "tr": "Premium"
+  },
+  "settings.premium.row": {
+    "en": "DailyClassical Premium",
+    "tr": "DailyClassical Premium"
+  },
+  "settings.premium.status.free": {
+    "en": "Free",
+    "tr": "Ücretsiz"
+  },
+  "settings.premium.status.monthly": {
+    "en": "Monthly",
+    "tr": "Aylık"
+  },
+  "settings.premium.status.lifetime": {
+    "en": "Lifetime",
+    "tr": "Ömür boyu"
+  },
+  "settings.premium.manage.accessibilityHint": {
+    "en": "Manage your subscription",
+    "tr": "Aboneliğinizi yönetin"
+  },
+  "settings.restorePurchases": {
+    "en": "Restore purchases",
+    "tr": "Satın alımları geri yükle"
+  },
+  "settings.restore.restored": {
+    "en": "Premium restored",
+    "tr": "Premium geri yüklendi",
+    "comment": "Toast"
+  },
+  "settings.restore.none": {
+    "en": "No purchases to restore",
+    "tr": "Geri yüklenecek satın alım yok",
+    "comment": "Toast"
+  },
+  "settings.section.about": {
+    "en": "About",
+    "tr": "Hakkında"
+  },
+  "settings.about.credits": {
+    "en": "About and credits",
+    "tr": "Hakkında ve künye"
+  },
+  "settings.about.sources": {
+    "en": "Painting and recording sources",
+    "tr": "Tablo ve kayıt kaynakları"
+  },
+  "settings.reminder.footer": {
+    "en": "One quiet notification a day with today’s piece.",
+    "tr": "Her gün bugünün eseriyle ilgili tek bir sessiz bildirim."
+  },
+  "settings.reminder.denied": {
+    "en": "Notifications are turned off for DailyClassical. You can allow them in iOS Settings.",
+    "tr": "DailyClassical için bildirimler kapalı. iOS Ayarları’ndan izin verebilirsiniz."
+  },
+  "settings.reminder.openSettings": {
+    "en": "Open Settings",
+    "tr": "Ayarlar’ı aç"
+  },
+  "about.body": {
+    "en": "One symphony a day, with a guide you read while it plays. Each piece is paired with a painting, and every guide is written for listeners, not musicians.",
+    "tr": "Her gün bir senfoni ve çalarken okuyacağınız bir rehber. Her eser bir tabloyla eşleşir; rehberler müzisyenler için değil, dinleyiciler için yazılır."
+  },
+  "about.section.credits": {
+    "en": "Credits",
+    "tr": "Künye"
+  },
+  "about.credit.paintings": {
+    "en": "Paintings",
+    "tr": "Tablolar"
+  },
+  "about.credit.paintings.detail": {
+    "en": "Public-domain works, reproduced from Wikimedia Commons and museum collections.",
+    "tr": "Kamu malı eserler; Wikimedia Commons ve müze koleksiyonlarından alınmıştır."
+  },
+  "about.credit.recordings": {
+    "en": "Recording data",
+    "tr": "Kayıt bilgileri"
+  },
+  "about.credit.recordings.detail": {
+    "en": "Albums and links from Spotify. Listening-stop times follow each piece’s reference recording.",
+    "tr": "Albümler ve bağlantılar Spotify’dan. Dinleme durağı zamanları her eserin referans kaydına göredir."
+  },
+  "about.credit.typeface": {
+    "en": "Typeface",
+    "tr": "Yazı karakteri"
+  },
+  "about.credit.typeface.detail": {
+    "en": "Literata by TypeTogether, under the SIL Open Font License.",
+    "tr": "TypeTogether’ın tasarladığı Literata, SIL Open Font License ile."
+  },
+  "about.website": {
+    "en": "Website",
+    "tr": "Web sitesi"
+  },
+  "about.terms": {
+    "en": "Terms of Use",
+    "tr": "Kullanım Koşulları"
+  },
+  "about.privacy": {
+    "en": "Privacy Policy",
+    "tr": "Gizlilik Politikası"
+  },
+  "about.version": {
+    "en": "Version",
+    "tr": "Sürüm"
+  },
+  "sources.painting %@": {
+    "en": "Painting: %@",
+    "tr": "Tablo: %@",
+    "comment": "Painting credit: artist, title (italic), year, collection"
+  },
+  "sources.recording %@": {
+    "en": "Reference recording: %@",
+    "tr": "Referans kayıt: %@",
+    "comment": "Conductor, orchestra (label, year)"
+  },
+  "sources.footer": {
+    "en": "All paintings are in the public domain. Recording data comes from Spotify.",
+    "tr": "Tüm tablolar kamu malıdır. Kayıt bilgileri Spotify’dan alınmıştır."
+  },
+  "reminder.notification.title": {
+    "en": "Today’s piece is here",
+    "tr": "Bugünün eseri hazır",
+    "comment": "Daily local notification title"
+  },
+  "reminder.notification.body": {
+    "en": "A few quiet minutes with today’s symphony and its guide.",
+    "tr": "Bugünün senfonisi ve rehberiyle birkaç sakin dakika.",
+    "comment": "Daily local notification body"
+  },
+  "reminder.picker.hour": {
+    "en": "Hour",
+    "tr": "Saat"
+  },
+  "reminder.picker.minute": {
+    "en": "Minute",
+    "tr": "Dakika"
+  },
+  "onboarding.1.title": {
+    "en": "One symphony a day, with a guide you read while it plays.",
+    "tr": "Her gün bir senfoni, çalarken okuyacağınız bir rehberle."
+  },
+  "onboarding.1.body": {
+    "en": "Press play in Spotify, come back, and follow along. Today’s piece is already waiting behind this card.",
+    "tr": "Spotify’da çalmaya başlayın, buraya dönün ve takip edin. Bugünün eseri bu kartın arkasında sizi bekliyor."
+  },
+  "onboarding.continue": {
+    "en": "Continue",
+    "tr": "Devam"
+  },
+  "onboarding.signIn": {
+    "en": "Sign in",
+    "tr": "Giriş yap"
+  },
+  "onboarding.2.eyebrow": {
+    "en": "Last thing",
+    "tr": "Son bir şey",
+    "comment": "Rendered uppercase"
+  },
+  "onboarding.2.title": {
+    "en": "When should today’s piece arrive?",
+    "tr": "Bugünün eseri ne zaman gelsin?"
+  },
+  "onboarding.2.body": {
+    "en": "One quiet notification a day. Change it any time in Settings.",
+    "tr": "Günde tek bir sessiz bildirim. İstediğiniz zaman Ayarlar’dan değiştirebilirsiniz."
+  },
+  "onboarding.2.cta %@": {
+    "en": "Remind me at %@",
+    "tr": "Her gün %@ saatinde hatırlat",
+    "comment": "%@ = 24-hour time, e.g. 08:00"
+  },
+  "onboarding.2.notNow": {
+    "en": "Not now",
+    "tr": "Şimdi değil"
+  },
+  "favourites.prompt.title": {
+    "en": "Keep the pieces you love",
+    "tr": "Sevdiğiniz eserleri saklayın"
+  },
+  "favourites.prompt.body": {
+    "en": "Favourites live in your Library and follow you to any device. All it takes is an email address.",
+    "tr": "Favorileriniz Kitaplık’ta durur ve sizi her cihazda takip eder. Tek gereken bir e-posta adresi."
+  },
+  "favourites.prompt.createAccount": {
+    "en": "Create an account",
+    "tr": "Hesap oluştur"
+  },
+  "favourites.prompt.signIn": {
+    "en": "Sign in",
+    "tr": "Giriş yap"
+  },
+  "favourites.prompt.notNow": {
+    "en": "Not now",
+    "tr": "Şimdi değil"
+  },
+  "auth.haveAccount %@": {
+    "en": "Already have an account? %@",
+    "tr": "Hesabınız var mı? %@",
+    "comment": "%@ = accent link “Sign in”"
+  },
+  "auth.newHere %@": {
+    "en": "New here? %@",
+    "tr": "İlk kez mi geldiniz? %@",
+    "comment": "%@ = accent link “Create an account”"
+  },
+  "auth.signInLink": {
+    "en": "Sign in",
+    "tr": "Giriş yap"
+  },
+  "auth.createAccountLink": {
+    "en": "Create an account",
+    "tr": "Hesap oluştur"
+  },
+  "auth.create.title": {
+    "en": "Create an account",
+    "tr": "Hesap oluştur"
+  },
+  "auth.create.subtitle": {
+    "en": "One email, one password. No newsletter.",
+    "tr": "Bir e-posta, bir şifre. Bülten yok."
+  },
+  "auth.field.email": {
+    "en": "Email",
+    "tr": "E-posta"
+  },
+  "auth.field.password": {
+    "en": "Password",
+    "tr": "Şifre"
+  },
+  "auth.password.hint": {
+    "en": "At least 8 characters.",
+    "tr": "En az 8 karakter."
+  },
+  "auth.create.cta": {
+    "en": "Create account",
+    "tr": "Hesap oluştur"
+  },
+  "auth.legal": {
+    "en": "By continuing you agree to the [Terms](https://dailyclassical.co/terms) and [Privacy Policy](https://dailyclassical.co/privacy).",
+    "tr": "Devam ederek [Kullanım Koşulları](https://dailyclassical.co/terms) ve [Gizlilik Politikası](https://dailyclassical.co/privacy) metinlerini kabul etmiş olursunuz.",
+    "comment": "Markdown links; keep the URLs"
+  },
+  "auth.signIn.title": {
+    "en": "Sign in",
+    "tr": "Giriş yap"
+  },
+  "auth.signIn.subtitle": {
+    "en": "Welcome back.",
+    "tr": "Tekrar hoş geldiniz."
+  },
+  "auth.signIn.cta": {
+    "en": "Sign in",
+    "tr": "Giriş yap"
+  },
+  "auth.forgotPassword": {
+    "en": "Forgot password?",
+    "tr": "Şifrenizi mi unuttunuz?"
+  },
+  "auth.password.show.accessibilityLabel": {
+    "en": "Show password",
+    "tr": "Şifreyi göster"
+  },
+  "auth.password.hide.accessibilityLabel": {
+    "en": "Hide password",
+    "tr": "Şifreyi gizle"
+  },
+  "auth.reset.title": {
+    "en": "Reset password",
+    "tr": "Şifreyi sıfırla"
+  },
+  "auth.reset.subtitle": {
+    "en": "We will email you a link to choose a new one.",
+    "tr": "Yeni bir şifre seçmeniz için size e-postayla bir bağlantı göndereceğiz."
+  },
+  "auth.reset.cta": {
+    "en": "Send reset link",
+    "tr": "Sıfırlama bağlantısı gönder"
+  },
+  "auth.reset.backToSignIn": {
+    "en": "Back to sign in",
+    "tr": "Girişe dön"
+  },
+  "auth.checkEmail.title": {
+    "en": "Check your email",
+    "tr": "E-postanızı kontrol edin"
+  },
+  "auth.checkEmail.body %@": {
+    "en": "A reset link is on its way to %@. It expires in 30 minutes.",
+    "tr": "Sıfırlama bağlantısı %@ adresine gönderildi. Bağlantı 30 dakika geçerlidir.",
+    "comment": "%@ = email address, medium weight"
+  },
+  "auth.checkEmail.hint": {
+    "en": "Nothing there? Check spam, or send it again.",
+    "tr": "Gelmedi mi? İstenmeyen klasörüne bakın ya da yeniden gönderin."
+  },
+  "auth.checkEmail.openMail": {
+    "en": "Open Mail",
+    "tr": "Mail’i aç"
+  },
+  "auth.checkEmail.sendAgain": {
+    "en": "Send again",
+    "tr": "Yeniden gönder"
+  },
+  "auth.checkEmail.sendAgainIn %lld": {
+    "en": "Send again in %lld s",
+    "tr": "%lld sn sonra yeniden gönderebilirsiniz",
+    "comment": "Cooldown countdown in seconds"
+  },
+  "auth.error.invalidEmail": {
+    "en": "Enter a valid email address.",
+    "tr": "Geçerli bir e-posta adresi girin."
+  },
+  "auth.error.passwordTooShort": {
+    "en": "Use at least 8 characters.",
+    "tr": "En az 8 karakter kullanın."
+  },
+  "auth.error.wrongCredentials": {
+    "en": "Email or password is incorrect.",
+    "tr": "E-posta ya da şifre hatalı."
+  },
+  "auth.error.emailInUse": {
+    "en": "An account with this email already exists.",
+    "tr": "Bu e-postayla açılmış bir hesap zaten var."
+  },
+  "auth.error.offline": {
+    "en": "You’re offline. Check your connection and try again.",
+    "tr": "Çevrimdışısınız. Bağlantınızı kontrol edip tekrar deneyin."
+  },
+  "auth.error.tooManyAttempts": {
+    "en": "Too many attempts. Please wait a moment and try again.",
+    "tr": "Çok fazla deneme yapıldı. Lütfen biraz bekleyip tekrar deneyin."
+  },
+  "account.title": {
+    "en": "Account",
+    "tr": "Hesap"
+  },
+  "account.email": {
+    "en": "Email",
+    "tr": "E-posta"
+  },
+  "account.changePassword": {
+    "en": "Change password",
+    "tr": "Şifreyi değiştir"
+  },
+  "account.changePassword.title": {
+    "en": "Change password",
+    "tr": "Şifreyi değiştir"
+  },
+  "account.changePassword.body %@": {
+    "en": "We’ll email a link to %@ so you can choose a new password.",
+    "tr": "Yeni bir şifre seçebilmeniz için %@ adresine bir bağlantı göndereceğiz.",
+    "comment": "%@ = email address"
+  },
+  "account.signOut": {
+    "en": "Sign out",
+    "tr": "Çıkış yap"
+  },
+  "account.signOut.footer": {
+    "en": "You can sign back in any time. Favourites stay with your account.",
+    "tr": "İstediğiniz zaman yeniden giriş yapabilirsiniz. Favorileriniz hesabınızda kalır."
+  },
+  "account.delete": {
+    "en": "Delete account",
+    "tr": "Hesabı sil"
+  },
+  "account.delete.footer": {
+    "en": "Removes your account and favourites permanently. Premium purchases are tied to your Apple ID and are unaffected.",
+    "tr": "Hesabınızı ve favorilerinizi kalıcı olarak siler. Premium satın alımlarınız Apple Kimliğinize bağlıdır ve etkilenmez."
+  },
+  "account.delete.alert.title": {
+    "en": "Delete account?",
+    "tr": "Hesap silinsin mi?"
+  },
+  "account.delete.alert.message": {
+    "en": "Your account and favourites will be removed permanently. This cannot be undone.",
+    "tr": "Hesabınız ve favorileriniz kalıcı olarak silinecek. Bu işlem geri alınamaz."
+  },
+  "account.delete.alert.cancel": {
+    "en": "Cancel",
+    "tr": "Vazgeç"
+  },
+  "account.delete.alert.confirm": {
+    "en": "Delete",
+    "tr": "Sil"
+  },
+  "account.delete.error.title": {
+    "en": "Account not deleted",
+    "tr": "Hesap silinemedi"
+  },
+  "account.delete.error.offline": {
+    "en": "You’re offline. Try again when you reconnect.",
+    "tr": "Çevrimdışısınız. Bağlantı geri geldiğinde tekrar deneyin."
+  },
+  "account.delete.error.generic": {
+    "en": "Something went wrong. Please try again.",
+    "tr": "Bir şeyler ters gitti. Lütfen tekrar deneyin."
+  },
+  "account.delete.error.ok": {
+    "en": "OK",
+    "tr": "Tamam"
+  },
+  "paywall.painting.caption": {
+    "en": "Caspar David Friedrich, *Wanderer above the Sea of Fog*, c. 1818. Hamburger Kunsthalle.",
+    "tr": "Caspar David Friedrich, *Sis Denizi Üzerindeki Gezgin*, y. 1818. Hamburger Kunsthalle.",
+    "comment": "Markdown italics for the title"
+  },
+  "paywall.painting.accessibilityLabel": {
+    "en": "Painting: Wanderer above the Sea of Fog by Caspar David Friedrich",
+    "tr": "Tablo: Caspar David Friedrich, Sis Denizi Üzerindeki Gezgin"
+  },
+  "paywall.title": {
+    "en": "More of this.",
+    "tr": "Bundan daha fazlası."
+  },
+  "paywall.subtitle": {
+    "en": "Every symphony we have written about, whenever you want it.",
+    "tr": "Hakkında yazdığımız her senfoni, ne zaman isterseniz."
+  },
+  "paywall.benefit.library": {
+    "en": "The full library of past pieces",
+    "tr": "Geçmiş eserlerin tamamını içeren kitaplık"
+  },
+  "paywall.benefit.search": {
+    "en": "Search pieces, composers and terms",
+    "tr": "Eserlerde, bestecilerde ve terimlerde arama"
+  },
+  "paywall.plan.badge.bestValue": {
+    "en": "Best value",
+    "tr": "En avantajlı",
+    "comment": "Rendered uppercase"
+  },
+  "paywall.plan.lifetime.name": {
+    "en": "Lifetime",
+    "tr": "Ömür boyu"
+  },
+  "paywall.plan.lifetime.detail": {
+    "en": "One payment, forever",
+    "tr": "Tek ödeme, süresiz"
+  },
+  "paywall.plan.monthly.name": {
+    "en": "Monthly",
+    "tr": "Aylık"
+  },
+  "paywall.plan.monthly.detail": {
+    "en": "Per month, cancel any time",
+    "tr": "Aylık, istediğiniz zaman iptal"
+  },
+  "paywall.cta %@": {
+    "en": "Continue · %@",
+    "tr": "Devam · %@",
+    "comment": "%@ = StoreKit displayPrice of the selected plan"
+  },
+  "paywall.restore": {
+    "en": "Restore purchases",
+    "tr": "Satın alımları geri yükle"
+  },
+  "paywall.restore.none": {
+    "en": "No previous purchases were found for this Apple ID.",
+    "tr": "Bu Apple Kimliği için önceki bir satın alım bulunamadı."
+  },
+  "paywall.error.purchase": {
+    "en": "The purchase could not be completed. Please try again.",
+    "tr": "Satın alma tamamlanamadı. Lütfen tekrar deneyin."
+  },
+  "paywall.terms": {
+    "en": "Terms",
+    "tr": "Koşullar"
+  },
+  "paywall.privacy": {
+    "en": "Privacy",
+    "tr": "Gizlilik"
+  }
+}

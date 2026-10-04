@@ -1,0 +1,251 @@
+{
+  "tab.today": {
+    "en": "Today",
+    "tr": "Bugün"
+  },
+  "tab.library": {
+    "en": "Library",
+    "tr": "Kitaplık"
+  },
+  "tab.settings": {
+    "en": "Settings",
+    "tr": "Ayarlar"
+  },
+  "tab.search": {
+    "en": "Search",
+    "tr": "Ara"
+  },
+  "common.close.accessibilityLabel": {
+    "en": "Close",
+    "tr": "Kapat"
+  },
+  "common.back.accessibilityLabel": {
+    "en": "Back",
+    "tr": "Geri"
+  },
+  "common.composerLink.accessibilityHint": {
+    "en": "Opens composer details",
+    "tr": "Besteci ayrıntılarını açar"
+  },
+  "common.locked.accessibilityLabel": {
+    "en": "Premium",
+    "tr": "Premium"
+  },
+  "common.glossaryTerm.accessibilityHint": {
+    "en": "Opens definition",
+    "tr": "Tanımı açar"
+  },
+  "state.offline.date %@": {
+    "en": "%@",
+    "tr": "%@",
+    "comment": "Formatted date, e.g. Saturday, 4 October"
+  },
+  "state.offline.title": {
+    "en": "You’re offline",
+    "tr": "Çevrimdışısınız"
+  },
+  "state.offline.body": {
+    "en": "Today’s piece will appear as soon as you reconnect. Pieces you have opened before stay readable offline.",
+    "tr": "Bağlantı gelir gelmez bugünün eseri burada olacak. Daha önce açtığınız eserler çevrimdışı da okunabilir."
+  },
+  "state.retry": {
+    "en": "Try again",
+    "tr": "Tekrar dene"
+  },
+  "state.loading.accessibilityLabel": {
+    "en": "Loading",
+    "tr": "Yükleniyor"
+  },
+  "state.error.generic": {
+    "en": "Something went wrong.",
+    "tr": "Bir şeyler ters gitti."
+  },
+  "today.startListening": {
+    "en": "Start listening",
+    "tr": "Dinlemeye başla"
+  },
+  "today.meta %@ %lld %lld": {
+    "en": "%1$@ · About %2$lld minutes · %3$lld movements",
+    "tr": "%1$@ · Yaklaşık %2$lld dakika · %3$lld bölüm"
+  },
+  "today.painting.accessibilityLabel %@ %@": {
+    "en": "Painting: %1$@ by %2$@",
+    "tr": "Tablo: %2$@, %1$@"
+  },
+  "piece.meta %@ %lld": {
+    "en": "%1$@ · About %2$lld minutes",
+    "tr": "%1$@ · Yaklaşık %2$lld dakika"
+  },
+  "piece.section.bigPicture": {
+    "en": "The big picture",
+    "tr": "Genel bakış"
+  },
+  "piece.section.movements": {
+    "en": "Movements",
+    "tr": "Bölümler"
+  },
+  "piece.movements.footnote %@": {
+    "en": "Durations are from the reference recording: %@. Tap a row to jump to that movement.",
+    "tr": "Süreler referans kayda göredir: %@. Bir satıra dokunarak o bölüme geçebilirsiniz."
+  },
+  "piece.movement.label %@": {
+    "en": "Movement %@",
+    "tr": "%@. Bölüm"
+  },
+  "piece.section.mainIdeas": {
+    "en": "Main ideas",
+    "tr": "Ana fikirler"
+  },
+  "piece.section.listeningStops": {
+    "en": "Listening stops",
+    "tr": "Dinleme durakları"
+  },
+  "piece.listeningStops.note %@": {
+    "en": "Times are approximate and follow the reference recording: %@.",
+    "tr": "Zamanlar yaklaşıktır ve referans kayda göredir: %@."
+  },
+  "piece.stop.time.single %@": {
+    "en": "≈ %@",
+    "tr": "≈ %@"
+  },
+  "piece.stop.time.range %@ %@": {
+    "en": "≈ %1$@ to %2$@",
+    "tr": "≈ %1$@–%2$@"
+  },
+  "piece.section.thingsToNotice": {
+    "en": "Things to notice",
+    "tr": "Dikkat edilecekler"
+  },
+  "piece.section.threads": {
+    "en": "Threads that tie the piece together",
+    "tr": "Eseri bir arada tutan ipler"
+  },
+  "piece.section.recordings": {
+    "en": "Recommended recordings",
+    "tr": "Önerilen kayıtlar"
+  },
+  "piece.recordings.referenceSuffix %@": {
+    "en": "%@ · Reference recording",
+    "tr": "%@ · Referans kayıt"
+  },
+  "piece.section.sources": {
+    "en": "Sources and credits",
+    "tr": "Kaynaklar ve künye"
+  },
+  "piece.sources.painting": {
+    "en": "Painting",
+    "tr": "Tablo"
+  },
+  "piece.sources.publicDomain": {
+    "en": "Public domain.",
+    "tr": "Kamu malı."
+  },
+  "piece.sources.recording %@": {
+    "en": "Recording data: Spotify. Durations from %@.",
+    "tr": "Kayıt bilgisi: Spotify. Süreler: %@."
+  },
+  "piece.openInSpotify": {
+    "en": "Open in Spotify",
+    "tr": "Spotify’da aç"
+  },
+  "piece.nav.favourite.accessibilityLabel": {
+    "en": "Add to Favourites",
+    "tr": "Favorilere ekle"
+  },
+  "piece.nav.unfavourite.accessibilityLabel": {
+    "en": "Remove from Favourites",
+    "tr": "Favorilerden çıkar"
+  },
+  "piece.nav.viewArtwork.accessibilityLabel": {
+    "en": "View painting",
+    "tr": "Tabloyu görüntüle"
+  },
+  "piece.nav.glossary.accessibilityLabel": {
+    "en": "Glossary",
+    "tr": "Sözlük"
+  },
+  "piece.switcher.accessibilityLabel %@": {
+    "en": "Movement %@",
+    "tr": "%@. Bölüm"
+  },
+  "piece.stop.current.accessibilityValue": {
+    "en": "Current",
+    "tr": "Şu an"
+  },
+  "favourites.toast.saved": {
+    "en": "Saved to Favourites",
+    "tr": "Favorilere kaydedildi"
+  },
+  "favourites.toast.removed": {
+    "en": "Removed from Favourites",
+    "tr": "Favorilerden çıkarıldı"
+  },
+  "glossarySheet.seeAll": {
+    "en": "See all terms in Library ›",
+    "tr": "Tüm terimler Kitaplık’ta ›"
+  },
+  "recordings.title": {
+    "en": "Recordings",
+    "tr": "Kayıtlar"
+  },
+  "recordings.subtitle": {
+    "en": "Listening-stop times follow the first recording.",
+    "tr": "Dinleme durağı zamanları ilk kayda göredir."
+  },
+  "recordings.referenceBadge": {
+    "en": "Reference recording",
+    "tr": "Referans kayıt"
+  },
+  "recordings.openInSpotify": {
+    "en": "Open in Spotify",
+    "tr": "Spotify’da aç"
+  },
+  "recordings.unavailable": {
+    "en": "Not on Spotify",
+    "tr": "Spotify’da yok"
+  },
+  "recordings.note": {
+    "en": "Opens the album in Spotify. Times in the guide follow the reference recording.",
+    "tr": "Albümü Spotify’da açar. Rehberdeki zamanlar referans kayda göredir."
+  },
+  "composer.section.inApp": {
+    "en": "In DailyClassical",
+    "tr": "DailyClassical’da"
+  },
+  "composer.piece.today": {
+    "en": "Today",
+    "tr": "Bugün"
+  },
+  "composer.morePiecesNote": {
+    "en": "More pieces by this composer will appear here as they are published.",
+    "tr": "Bu bestecinin başka eserleri yayımlandıkça burada görünecek."
+  },
+  "composer.lifespan %@ %@": {
+    "en": "%1$@ – %2$@",
+    "tr": "%1$@ – %2$@"
+  },
+  "era.baroque": {
+    "en": "Baroque era",
+    "tr": "Barok dönem"
+  },
+  "era.classical": {
+    "en": "Classical era",
+    "tr": "Klasik dönem"
+  },
+  "era.romantic": {
+    "en": "Romantic era",
+    "tr": "Romantik dönem"
+  },
+  "era.late_romantic": {
+    "en": "Late Romantic era",
+    "tr": "Geç Romantik dönem"
+  },
+  "era.modern": {
+    "en": "20th century",
+    "tr": "20. yüzyıl"
+  },
+  "artwork.publicDomain": {
+    "en": "Public domain",
+    "tr": "Kamu malı"
+  }
+}

@@ -1,0 +1,373 @@
+# Language-neutral composer facts + display names per locale.
+# `match` is the exact `composer` value used in the piece yaml blocks.
+#
+# Composer sheet fields (SPEC §4.8), read by backend/scripts/seed.ts and export-fixtures.ts:
+#   nationality   {en, tr} adjective shown in the meta line ("Russian" / "Rus").
+#   facts         born / died / symphonies / best_known_for, each {en, tr}. Values may use *italics*.
+#   bio           {en, tr}: exactly three paragraphs separated by a blank line. `[[term]]` marks a
+#                 glossary term (EN key; TR uses `[[english key|türkçe yüzey]]`), *italics* for titles.
+#   portrait      null when no safely public-domain image exists (the app then omits the portrait).
+#     artist      string, or {en, tr} when it needs translating ("Unknown photographer").
+#     title/collection  {en, tr}; collection may be null.
+#     year        label string.
+#     image_url   Wikimedia Commons Special:FilePath link (resolves to the original file; serve our
+#                 own CDN copy before launch, as for paintings.yaml).
+#     source_url  The Commons file page (licence template, provenance).
+#     width/height  Pixel size of the original Commons file.
+#     license     Licence of the image file.
+#     focal_y     0–1, vertical object-position for the 300 pt cover crop (CSS semantics: the share
+#                 of the overflow cropped from the top), chosen so the face stays in frame.
+# Sources: content/research/composers-sources.md (checked 2026-10-04).
+
+- id: mozart
+  match: Wolfgang Amadeus Mozart
+  sort_name: Mozart, Wolfgang Amadeus
+  born: 1756
+  died: 1791
+  era: classical
+  names:
+    en: { name: Wolfgang Amadeus Mozart, short: Mozart }
+    tr: { name: Wolfgang Amadeus Mozart, short: Mozart }
+  nationality: { en: Austrian, tr: Avusturyalı }
+  facts:
+    born: { en: "27 January 1756, Salzburg", tr: "27 Ocak 1756, Salzburg" }
+    died: { en: "5 December 1791, Vienna", tr: "5 Aralık 1791, Viyana" }
+    symphonies: { en: "41 numbered", tr: "41 numaralı" }
+    best_known_for: { en: "Operas, piano concertos, *Requiem*", tr: "Operaları, piyano konçertoları, *Requiem*" }
+  bio:
+    en: |-
+      Mozart was born in Salzburg in 1756, the son of Leopold, a violinist and composer who was also a gifted teacher. Wolfgang was writing little pieces by the age of five, and as a child he toured the courts and concert halls of Europe with his father and his older sister, Nannerl, a brilliant keyboard player herself. Those years on the road filled his ears with every musical style of the day, from Italian opera to German counterpoint.
+
+      In 1781 he broke with his employer, the Archbishop of Salzburg, and settled in Vienna as a freelance musician, a rare and risky move at the time. He earned his living by teaching, playing his own piano concertos at subscription concerts and selling his music. The Vienna years brought *The Marriage of Figaro*, *Don Giovanni* and *The Magic Flute*, and his last three symphonies, all written within a few weeks in the summer of 1788.
+
+      He died in Vienna in December 1791, aged 35, with his *Requiem* unfinished; his pupil Franz Xaver Süssmayr completed it. What lasts is the feeling that nothing in his music is forced. Melodies that sound effortless turn out to be carefully built, and even the brightest pages can cloud over in a bar or two. That is why his music works on a first hearing and still rewards the hundredth.
+    tr: |-
+      Mozart 1756’da Salzburg’da doğdu. Babası Leopold hem kemancı ve besteciydi hem de çok iyi bir öğretmendi. Wolfgang beş yaşında küçük parçalar yazıyordu; çocukken babası ve kendisi de parlak bir klavye çalıcısı olan ablası Nannerl’le birlikte Avrupa’nın saraylarını ve konser salonlarını dolaştı. Yollarda geçen bu yıllar, kulağını İtalyan operasından Alman kontrpuanına kadar dönemin bütün müzik üsluplarıyla doldurdu.
+
+      1781’de işvereni Salzburg Başpiskoposu’yla yollarını ayırdı ve Viyana’ya yerleşip serbest çalışan bir müzisyen oldu; o dönem için hem nadir hem de riskli bir karardı bu. Geçimini ders vererek, abonman konserlerinde kendi piyano konçertolarını çalarak ve eserlerini satarak sağladı. Viyana yılları *Figaro’nun Düğünü*, *Don Giovanni* ve *Sihirli Flüt*’ü, bir de 1788 yazında birkaç hafta içinde yazdığı son üç senfonisini getirdi.
+
+      Aralık 1791’de, 35 yaşında Viyana’da öldü; *Requiem*’i yarım kalmıştı, eseri öğrencisi Franz Xaver Süssmayr tamamladı. Müziğinden geriye kalan duygu, hiçbir şeyin zorlanmadığıdır. Kendiliğinden doğmuş gibi duran melodiler aslında özenle kurulmuştur; en aydınlık sayfalar bile bir iki ölçü içinde gölgelenebilir. Bu yüzden Mozart ilk dinleyişte etkiler, yüzüncü dinleyişte de bir şeyler vermeyi sürdürür.
+  portrait:
+    artist: Barbara Krafft
+    title: { en: Portrait of Wolfgang Amadeus Mozart, tr: Wolfgang Amadeus Mozart’ın Portresi }
+    year: "1819"
+    collection: { en: "Gesellschaft der Musikfreunde, Vienna", tr: "Gesellschaft der Musikfreunde, Viyana" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Barbara_Krafft_-_Portr%C3%A4t_Wolfgang_Amadeus_Mozart_(1819).jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Barbara_Krafft_-_Portr%C3%A4t_Wolfgang_Amadeus_Mozart_(1819).jpg
+    width: 1447
+    height: 1784
+    license: Public domain (PD-Art, PD-old-100)
+    focal_y: 0.3
+
+- id: beethoven
+  match: Ludwig van Beethoven
+  sort_name: Beethoven, Ludwig van
+  born: 1770
+  died: 1827
+  era: classical
+  names:
+    en: { name: Ludwig van Beethoven, short: Beethoven }
+    tr: { name: Ludwig van Beethoven, short: Beethoven }
+  nationality: { en: German, tr: Alman }
+  facts:
+    born: { en: "December 1770, Bonn", tr: "Aralık 1770, Bonn" }
+    died: { en: "26 March 1827, Vienna", tr: "26 Mart 1827, Viyana" }
+    symphonies: { en: "Nine", tr: "Dokuz" }
+    best_known_for: { en: "Symphonies, piano sonatas, string quartets", tr: "Senfonileri, piyano sonatları, yaylı dörtlüleri" }
+  bio:
+    en: |-
+      Beethoven grew up in Bonn, in a family of court musicians. His father, a singer, pushed him hard as a child prodigy, and in his teens Ludwig was already playing in the court orchestra and helping to support the family. In 1792 he moved to Vienna to study with Haydn, and he soon made his name there as a ferocious pianist, famous above all for his improvising.
+
+      In his late twenties he began to lose his hearing. In 1802, in a letter to his brothers now known as the Heiligenstadt Testament, he admitted that he had thought of ending his life, and that only his art had held him back. What followed was a burst of bold, large-scale works, among them the *Eroica* and the Fifth Symphony. By his last years he was almost completely deaf, yet he kept composing, and wrote the Ninth Symphony and his late string quartets.
+
+      Beethoven died in Vienna in 1827, and a huge crowd followed his funeral procession. He changed what people expected music to do: a symphony could now be a personal statement, a struggle that ends in triumph, or a deep meditation. He stretched old forms such as [[sonata form]] until they could hold far more drama than before. Almost every composer who came after him, from Brahms to Mahler, worked in his shadow.
+    tr: |-
+      Beethoven, Bonn’da saray müzisyenlerinden oluşan bir ailede büyüdü. Şarkıcı olan babası onu bir harika çocuk olarak yetiştirmek için çok zorladı; Ludwig daha gençlik yıllarında saray orkestrasında çalıyor ve ailesinin geçimine katkıda bulunuyordu. 1792’de Haydn’la çalışmak için Viyana’ya gitti ve orada kısa sürede, en çok da doğaçlamalarıyla ünlü, ateşli bir piyanist olarak tanındı.
+
+      Yirmili yaşlarının sonunda işitmesini kaybetmeye başladı. 1802’de kardeşlerine yazdığı, bugün Heiligenstadt Vasiyeti olarak bilinen mektupta, canına kıymayı düşündüğünü ve onu yalnızca sanatının alıkoyduğunu itiraf etti. Ardından gelen yıllar, *Eroica* ve Beşinci Senfoni gibi cesur, büyük ölçekli eserlerle doldu. Son yıllarında neredeyse tamamen sağırdı; yine de bestelemeyi sürdürdü, Dokuzuncu Senfoni’yi ve son yaylı dörtlülerini yazdı.
+
+      Beethoven 1827’de Viyana’da öldü; cenaze alayını büyük bir kalabalık izledi. Müziğin neler yapabileceğine dair beklentileri değiştirdi: Artık bir senfoni kişisel bir açıklama, zaferle biten bir mücadele ya da derin bir düşünceye dalış olabilirdi. [[sonata form|Sonat formu]] gibi eski kalıpları, eskisinden çok daha fazla dram taşıyabilecekleri hâle gelene dek genişletti. Ondan sonra gelen bestecilerin neredeyse hepsi, Brahms’tan Mahler’e, onun gölgesinde çalıştı.
+  portrait:
+    artist: Joseph Karl Stieler
+    title: { en: Beethoven with the Manuscript of the Missa solemnis, tr: Missa solemnis’in Elyazmasıyla Beethoven }
+    year: "1820"
+    collection: { en: "Beethoven-Haus, Bonn", tr: "Beethoven-Haus, Bonn" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Karl_Stieler%27s_Beethoven_mit_dem_Manuskript_der_Missa_solemnis.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Joseph_Karl_Stieler%27s_Beethoven_mit_dem_Manuskript_der_Missa_solemnis.jpg
+    width: 4330
+    height: 5389
+    license: Public domain (PD-Art, PD-old-100)
+    focal_y: 0.2
+
+- id: schubert
+  match: Franz Schubert
+  sort_name: Schubert, Franz
+  born: 1797
+  died: 1828
+  era: romantic
+  names:
+    en: { name: Franz Schubert, short: Schubert }
+    tr: { name: Franz Schubert, short: Schubert }
+  nationality: { en: Austrian, tr: Avusturyalı }
+  facts:
+    born: { en: "31 January 1797, Vienna", tr: "31 Ocak 1797, Viyana" }
+    died: { en: "19 November 1828, Vienna", tr: "19 Kasım 1828, Viyana" }
+    symphonies: { en: "Seven complete, plus the *Unfinished*", tr: "Yedi tamamlanmış ve *Bitmemiş*" }
+    best_known_for: { en: "Songs, chamber music, piano music", tr: "Şarkıları, oda müziği, piyano eserleri" }
+  bio:
+    en: |-
+      Schubert was born in Vienna in 1797, the son of a schoolmaster. As a boy he sang in the choir of the imperial court chapel, which came with a place at a boarding school, where he played in the student orchestra and had lessons with Antonio Salieri. For a few years he taught at his father's school, but what he really did was write music, at an astonishing rate.
+
+      He never held an important post, and he was never famous in the way Beethoven was, though they lived in the same city. Instead he had a devoted circle of friends, who gathered for evenings of his music that came to be called Schubertiades. He wrote more than 600 songs, among them *Erlkönig*, composed when he was 18, and the song cycle *Winterreise* ("Winter Journey").
+
+      He fell seriously ill in his mid-twenties and died in 1828, aged just 31. Much of his greatest music, including the *Unfinished* Symphony and the *Great* C major Symphony, was only performed in public years after his death. His gift was melody, but also mood: in Schubert, a sudden change of key can feel like a cloud passing over the sun.
+    tr: |-
+      Schubert 1797’de Viyana’da, bir okul öğretmeninin oğlu olarak doğdu. Çocukken imparatorluk sarayının kilise korosunda şarkı söyledi; bu ona bir yatılı okulda yer kazandırdı. Orada öğrenci orkestrasında çaldı ve Antonio Salieri’den ders aldı. Birkaç yıl babasının okulunda öğretmenlik yaptı, ama asıl yaptığı şey müzik yazmaktı, hem de şaşırtıcı bir hızla.
+
+      Hiçbir zaman önemli bir görevde bulunmadı; aynı şehirde yaşadığı Beethoven kadar ünlü de olmadı. Bunun yerine çevresinde ona gönülden bağlı bir dost grubu vardı; müziğini dinlemek için bir araya geldikleri akşamlara Schubertiade dendi. Altı yüzden fazla şarkı yazdı; aralarında on sekiz yaşında bestelediği *Erlkönig* ve şarkı döngüsü *Kış Yolculuğu* (*Winterreise*) da var.
+
+      Yirmili yaşlarının ortasında ağır bir hastalığa yakalandı ve 1828’de, henüz 31 yaşındayken öldü. *Bitmemiş* Senfoni ve *Büyük* Do majör Senfoni de dahil en büyük eserlerinin çoğu, ancak ölümünden yıllar sonra halka seslendirildi. Yeteneği melodiydi, ama aynı zamanda ruh hâli: Schubert’te ani bir ton değişikliği, güneşin önünden geçen bir bulut gibi hissettirebilir.
+  portrait:
+    artist: Wilhelm August Rieder
+    title: { en: Portrait of Franz Schubert, tr: Franz Schubert’in Portresi }
+    year: "1875"
+    collection: { en: "Wien Museum, Vienna", tr: "Wien Museum, Viyana" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Franz_Schubert_by_Wilhelm_August_Rieder_1875_larger_version.png
+    source_url: https://commons.wikimedia.org/wiki/File:Franz_Schubert_by_Wilhelm_August_Rieder_1875_larger_version.png
+    width: 583
+    height: 710
+    license: Public domain (PD-Art, PD-old-100)
+    focal_y: 0.15
+
+- id: berlioz
+  match: Hector Berlioz
+  sort_name: Berlioz, Hector
+  born: 1803
+  died: 1869
+  era: romantic
+  names:
+    en: { name: Hector Berlioz, short: Berlioz }
+    tr: { name: Hector Berlioz, short: Berlioz }
+  nationality: { en: French, tr: Fransız }
+  facts:
+    born: { en: "11 December 1803, La Côte-Saint-André", tr: "11 Aralık 1803, La Côte-Saint-André" }
+    died: { en: "8 March 1869, Paris", tr: "8 Mart 1869, Paris" }
+    symphonies: { en: "Four, starting with the *Fantastique*", tr: "Dört; ilki *Fantastik*" }
+    best_known_for: { en: "*Symphonie fantastique*, *Les Troyens*", tr: "*Fantastik Senfoni*, *Truvalılar*" }
+  bio:
+    en: |-
+      Berlioz was born in 1803 in La Côte-Saint-André, a small town near Grenoble, where his father was a doctor. He was sent to Paris to study medicine, but he hated the dissecting room and spent his evenings at the opera instead. Against his family's wishes he gave up medicine for music and entered the Paris Conservatoire. Unusually for a composer, he never became a real pianist; his instruments were the flute and the guitar.
+
+      In 1827 he saw the Irish actress Harriet Smithson play Ophelia and Juliet, and fell obsessively in love with her. That passion poured into the *Symphonie fantastique* of 1830, a piece of [[programme music]] about an artist's love, his opium dreams and a nightmarish witches' sabbath, with the beloved represented by a returning melody, the [[idée fixe]]. He did eventually meet and marry Harriet, but the marriage was unhappy.
+
+      Berlioz thought in sound and colour, and his book on orchestration was studied by composers for generations. In France he was often misunderstood and made much of his living as a music critic, while audiences in Germany, Russia and England welcomed him as a conductor. His epic opera *Les Troyens* was never staged complete in his lifetime. He died in Paris in 1869.
+    tr: |-
+      Berlioz 1803’te, Grenoble yakınlarındaki küçük bir kasaba olan La Côte-Saint-André’da doğdu; babası doktordu. Tıp okumak için Paris’e gönderildi, ama kadavra salonundan nefret etti ve akşamlarını operada geçirdi. Ailesinin karşı çıkmasına rağmen tıbbı bırakıp müziğe yöneldi ve Paris Konservatuvarı’na girdi. Bir besteci için alışılmadık biçimde hiçbir zaman gerçek bir piyanist olmadı; çaldığı çalgılar flüt ve gitardı.
+
+      1827’de İrlandalı oyuncu Harriet Smithson’ı Ophelia ve Juliet rollerinde izledi ve ona takıntılı bir aşkla bağlandı. Bu tutku, 1830 tarihli *Fantastik Senfoni*’ye aktı: Bir sanatçının aşkını, afyonla gelen düşlerini ve kâbus gibi bir cadılar sabbatını anlatan bir [[programme music|programlı müzik]] eseri. Sevgili, eser boyunca geri dönen bir melodiyle, bir [[idée fixe|idée fixe]] ile temsil edilir. Berlioz sonunda Harriet’le tanışıp evlendi, ama evlilikleri mutsuz geçti.
+
+      Berlioz sesle ve renkle düşünürdü; orkestrasyon üzerine yazdığı kitap kuşaklar boyunca bestecilere yol gösterdi. Fransa’da çoğu zaman anlaşılmadı ve geçimini büyük ölçüde müzik eleştirmenliğiyle sağladı; Almanya, Rusya ve İngiltere’deki dinleyiciler ise onu orkestra şefi olarak bağırlarına bastı. Destansı operası *Truvalılar* (*Les Troyens*) hayattayken hiçbir zaman eksiksiz sahnelenmedi. 1869’da Paris’te öldü.
+  portrait:
+    artist: Gustave Courbet
+    title: { en: Portrait of Hector Berlioz, tr: Hector Berlioz’un Portresi }
+    year: "1850"
+    collection: { en: "Musée d’Orsay, Paris", tr: "Musée d’Orsay, Paris" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Gustave_Courbet_-_Portrait_of_Hector_Berlioz_-_WGA05492.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Gustave_Courbet_-_Portrait_of_Hector_Berlioz_-_WGA05492.jpg
+    width: 1000
+    height: 1238
+    license: Public domain (PD-Art, PD-old-100)
+    focal_y: 0.3
+
+- id: brahms
+  match: Johannes Brahms
+  sort_name: Brahms, Johannes
+  born: 1833
+  died: 1897
+  era: romantic
+  names:
+    en: { name: Johannes Brahms, short: Brahms }
+    tr: { name: Johannes Brahms, short: Brahms }
+  nationality: { en: German, tr: Alman }
+  facts:
+    born: { en: "7 May 1833, Hamburg", tr: "7 Mayıs 1833, Hamburg" }
+    died: { en: "3 April 1897, Vienna", tr: "3 Nisan 1897, Viyana" }
+    symphonies: { en: "Four", tr: "Dört" }
+    best_known_for: { en: "*A German Requiem*, Hungarian Dances", tr: "*Bir Alman Requiem’i*, Macar Dansları" }
+  bio:
+    en: |-
+      Brahms was born in Hamburg in 1833, the son of a double-bass player who scraped a living in the city's dance halls and theatres. Johannes was earning money at the piano while still a teenager. In 1853 he met Robert and Clara Schumann, and Robert, then one of the most respected composers in Germany, published an article hailing the twenty-year-old as the future of music.
+
+      Schumann's praise was both a gift and a burden. Brahms worked on his First Symphony for about twenty years, all too aware of Beethoven looking over his shoulder, and it was finally premiered in 1876, when he was 43. After Robert Schumann's death he remained devoted to Clara for the rest of her life, as friend and confidant; the exact nature of their bond is still debated.
+
+      He settled in Vienna in the 1860s and became one of the most admired figures in European music, writing four symphonies, *A German Requiem*, concertos, and a great deal of chamber music and songs. Brahms loved old forms such as the [[variation]] and the [[passacaglia]], and filled them with warm, autumnal feeling. He died in Vienna in 1897, less than a year after Clara.
+    tr: |-
+      Brahms 1833’te Hamburg’da doğdu; babası şehrin dans salonlarında ve tiyatrolarında kıt kanaat geçinen bir kontrbasçıydı. Johannes daha gençlik yıllarında piyano çalarak para kazanıyordu. 1853’te Robert ve Clara Schumann’la tanıştı; o sırada Almanya’nın en saygın bestecilerinden biri olan Robert, yirmi yaşındaki bu genci müziğin geleceği olarak selamlayan bir makale yayımladı.
+
+      Schumann’ın övgüsü hem bir armağan hem de bir yüktü. Brahms, Beethoven’ın gölgesini hep omzunda hissederek Birinci Senfonisi üzerinde yaklaşık yirmi yıl çalıştı; eser sonunda 1876’da, o 43 yaşındayken ilk kez seslendirildi. Robert Schumann’ın ölümünden sonra Clara’ya hayatının sonuna kadar bir dost ve sırdaş olarak bağlı kaldı; aralarındaki bağın tam olarak ne olduğu bugün hâlâ tartışılıyor.
+
+      1860’larda Viyana’ya yerleşti ve Avrupa müziğinin en saygın isimlerinden biri oldu: Dört senfoni, *Bir Alman Requiem’i*, konçertolar, çok sayıda oda müziği eseri ve şarkı yazdı. Brahms [[variation|varyasyon]] ve [[passacaglia|passacaglia]] gibi eski biçimleri severdi ve onları sıcak, sonbahar renkli bir duyguyla doldururdu. Clara’dan bir yıl bile geçmeden, 1897’de Viyana’da öldü.
+  portrait:
+    artist: C. Brasch
+    title: { en: Johannes Brahms, tr: Johannes Brahms }
+    year: "1889"
+    collection: null
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/JohannesBrahms.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:JohannesBrahms.jpg
+    width: 1462
+    height: 1914
+    license: Public domain (photograph published before 1931; PD-old-70)
+    focal_y: 0.2
+
+- id: tchaikovsky
+  match: Pyotr Ilyich Tchaikovsky
+  sort_name: Tchaikovsky, Pyotr Ilyich
+  born: 1840
+  died: 1893
+  era: late_romantic
+  names:
+    en: { name: Pyotr Ilyich Tchaikovsky, short: Tchaikovsky }
+    tr: { name: Pyotr İlyiç Çaykovski, short: Çaykovski }
+  nationality: { en: Russian, tr: Rus }
+  facts:
+    born: { en: "7 May 1840, Votkinsk", tr: "7 Mayıs 1840, Votkinsk" }
+    died: { en: "6 November 1893, St Petersburg", tr: "6 Kasım 1893, St. Petersburg" }
+    symphonies: { en: "Six, plus *Manfred*", tr: "Altı ve *Manfred*" }
+    best_known_for: { en: "Ballets, Piano Concerto No. 1", tr: "Baleleri, 1. Piyano Konçertosu" }
+  bio:
+    en: |-
+      Tchaikovsky was born in 1840 in Votkinsk, a factory town in the Urals where his father managed the ironworks. His family steered him towards a safe career: he trained in law and worked as a clerk at the Ministry of Justice in St Petersburg. In his early twenties he began to study music seriously, and he was among the first students of the new St Petersburg Conservatory.
+
+      In 1866 he moved to Moscow to teach harmony at the conservatory there. Success came gradually, with the First Piano Concerto, the ballet *Swan Lake* and the opera *Eugene Onegin*. A wealthy widow, Nadezhda von Meck, paid him an allowance for thirteen years that let him compose full time, on condition that they never meet. His brief marriage in 1877 was a disaster: Tchaikovsky was gay, at a time when that had to be hidden.
+
+      By the 1880s he was the first Russian composer whose music was celebrated internationally, and he conducted his work in Leipzig, London and New York, where he took part in the opening of Carnegie Hall in 1891. He died in St Petersburg in 1893, nine days after conducting the premiere of his Sixth Symphony, the *Pathétique*. The official cause was cholera, and it is still argued over.
+    tr: |-
+      Çaykovski 1840’ta, babasının demir fabrikasını yönettiği Urallardaki bir sanayi kasabası olan Votkinsk’te doğdu. Ailesi onu güvenli bir mesleğe yönlendirdi: Hukuk okudu ve St. Petersburg’da Adalet Bakanlığı’nda memur olarak çalıştı. Yirmili yaşlarının başında müziği ciddi biçimde çalışmaya başladı ve yeni kurulan St. Petersburg Konservatuvarı’nın ilk öğrencileri arasına katıldı.
+
+      1866’da oradaki konservatuvarda armoni öğretmek için Moskova’ya taşındı. Başarı yavaş yavaş geldi: Birinci Piyano Konçertosu, *Kuğu Gölü* balesi ve *Yevgeni Onegin* operası. Varlıklı bir dul olan Nadejda von Meck ona on üç yıl boyunca, tüm zamanını besteciliğe ayırmasını sağlayan bir maaş bağladı; tek koşul hiç yüz yüze görüşmemeleriydi. 1877’deki kısa evliliği bir felaketti: Çaykovski eşcinseldi ve bunu saklamak zorunda olduğu bir dönemde yaşıyordu.
+
+      1880’lerde müziği uluslararası ölçekte kutlanan ilk Rus besteci olmuştu; eserlerini Leipzig’de, Londra’da ve New York’ta yönetti, 1891’de Carnegie Hall’un açılışında da yer aldı. 1893’te, Altıncı Senfonisi *Patetik*’in ilk seslendirilişini yönettikten dokuz gün sonra St. Petersburg’da öldü. Resmî ölüm nedeni koleraydı; konu bugün hâlâ tartışılıyor.
+  portrait:
+    artist: Nikolai Kuznetsov
+    title: { en: Portrait of Tchaikovsky, tr: Çaykovski’nin Portresi }
+    year: "1893"
+    collection: { en: "State Tretyakov Gallery, Moscow", tr: "Devlet Tretyakov Galerisi, Moskova" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Portr%C3%A4t_des_Komponisten_Pjotr_I._Tschaikowski_(1840-1893).jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Portr%C3%A4t_des_Komponisten_Pjotr_I._Tschaikowski_(1840-1893).jpg
+    width: 1920
+    height: 2466
+    license: Public domain (PD-Art, PD-old-95, PD-US-expired)
+    focal_y: 0.18
+
+- id: dvorak
+  match: Antonín Dvořák
+  sort_name: Dvořák, Antonín
+  born: 1841
+  died: 1904
+  era: late_romantic
+  names:
+    en: { name: Antonín Dvořák, short: Dvořák }
+    tr: { name: Antonín Dvořák, short: Dvořák }
+  nationality: { en: Czech, tr: Çek }
+  facts:
+    born: { en: "8 September 1841, Nelahozeves", tr: "8 Eylül 1841, Nelahozeves" }
+    died: { en: "1 May 1904, Prague", tr: "1 Mayıs 1904, Prag" }
+    symphonies: { en: "Nine", tr: "Dokuz" }
+    best_known_for: { en: "*New World* Symphony, Slavonic Dances", tr: "*Yeni Dünya* Senfonisi, Slav Dansları" }
+  bio:
+    en: |-
+      Dvořák was born in 1841 in Nelahozeves, a village on the Vltava north of Prague, where his father was a butcher and innkeeper. He was expected to take over the family business, but music won. He studied at the organ school in Prague, then spent years playing the viola in a theatre orchestra, which for a time was conducted by Bedřich Smetana.
+
+      Recognition came in his thirties. Brahms sat on the jury that awarded him an Austrian state grant, and he recommended Dvořák to his own publisher, Simrock, who brought out the *Slavonic Dances* in 1878 to huge success. Dvořák's music, full of the dance rhythms and melodies of Bohemia and Moravia, made him famous across Europe, and especially in England, which he visited nine times.
+
+      In 1892 he went to New York as director of the National Conservatory of Music. There he wrote his Ninth Symphony, *From the New World*, and spent a summer among the Czech community of Spillville, Iowa. Homesick, he returned to Bohemia in 1895, later became director of the Prague Conservatory, and wrote his opera *Rusalka*. He died in Prague in 1904.
+    tr: |-
+      Dvořák 1841’de, Prag’ın kuzeyinde Vltava kıyısındaki Nelahozeves köyünde doğdu; babası kasap ve hancıydı. Aile işini devralması bekleniyordu, ama müzik ağır bastı. Prag’daki org okulunda okudu, ardından yıllarca bir tiyatro orkestrasında viyola çaldı; bu orkestrayı bir dönem Bedřich Smetana yönetti.
+
+      Tanınması otuzlu yaşlarında geldi. Brahms, ona Avusturya devlet bursu veren jüride yer aldı ve Dvořák’ı kendi yayıncısı Simrock’a önerdi; Simrock 1878’de *Slav Dansları*’nı yayımladı ve eser büyük bir başarı kazandı. Bohemya ve Moravya’nın dans ritimleri ve ezgileriyle dolu müziği onu Avrupa’da, özellikle de dokuz kez ziyaret ettiği İngiltere’de ünlü yaptı.
+
+      1892’de Ulusal Müzik Konservatuvarı’nın yöneticisi olarak New York’a gitti. Orada Dokuzuncu Senfonisi *Yeni Dünya’dan*’ı yazdı ve bir yazı Iowa’daki Spillville’de, Çek topluluğunun arasında geçirdi. Memleket hasretiyle 1895’te Bohemya’ya döndü, sonra Prag Konservatuvarı’nın yöneticisi oldu ve *Rusalka* operasını yazdı. 1904’te Prag’da öldü.
+  portrait:
+    artist: { en: Unknown photographer, tr: Fotoğrafçısı bilinmiyor }
+    title: { en: Antonín Dvořák, tr: Antonín Dvořák }
+    year: "1882"
+    collection: { en: "Bibliothèque nationale de France, Paris", tr: "Bibliothèque nationale de France, Paris" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Dvorak.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Dvorak.jpg
+    width: 2100
+    height: 2600
+    license: Public domain (anonymous photograph, 1882; PD-old-70, PD-US-expired)
+    focal_y: 0.2
+
+- id: mahler
+  match: Gustav Mahler
+  sort_name: Mahler, Gustav
+  born: 1860
+  died: 1911
+  era: late_romantic
+  names:
+    en: { name: Gustav Mahler, short: Mahler }
+    tr: { name: Gustav Mahler, short: Mahler }
+  nationality: { en: Austrian, tr: Avusturyalı }
+  facts:
+    born: { en: "7 July 1860, Kaliště", tr: "7 Temmuz 1860, Kaliště" }
+    died: { en: "18 May 1911, Vienna", tr: "18 Mayıs 1911, Viyana" }
+    symphonies: { en: "Nine, plus an unfinished Tenth", tr: "Dokuz ve yarım kalmış bir Onuncu" }
+    best_known_for: { en: "Symphonies, song cycles", tr: "Senfonileri, şarkı döngüleri" }
+  bio:
+    en: |-
+      Mahler was born in 1860 in Kaliště, a village in Bohemia, into a German-speaking Jewish family, and grew up in the nearby town of Jihlava. Many of his parents' fourteen children died young, and death and loss echo all through his music. As a boy he loved folk songs and the military bands of the local barracks, sounds that later found their way into his symphonies. At fifteen he entered the Vienna Conservatory, where he studied piano and composition.
+
+      He became one of the greatest conductors of his time. In 1897 he took charge of the Vienna Court Opera, having converted from Judaism to Catholicism shortly before, as the post effectively required. He was a fierce perfectionist, and his demand for fresh, meticulously rehearsed performances won him admirers and enemies in equal measure. For ten demanding years he transformed the company, and he composed in the summers, in small composing huts by lakes and in the mountains.
+
+      Mahler is said to have told Sibelius that a symphony must be like the world: it must embrace everything. His symphonies are vast, mixing folk songs, marches, birdsong and moments of deep stillness. After leaving Vienna he conducted in New York, at the Metropolitan Opera and the New York Philharmonic. He died in Vienna in 1911, aged 50, leaving his Tenth Symphony unfinished.
+    tr: |-
+      Mahler 1860’ta Bohemya’daki Kaliště köyünde, Almanca konuşan Yahudi bir ailede doğdu ve yakındaki Jihlava kasabasında büyüdü. Anne babasının on dört çocuğundan birçoğu küçük yaşta öldü; ölüm ve kayıp, müziğinin her yerinde yankılanır. Çocukken halk şarkılarına ve yakındaki kışlanın bandosuna bayılırdı; bu sesler sonradan senfonilerine de girdi. On beş yaşında Viyana Konservatuvarı’na girdi ve orada piyano ve kompozisyon okudu.
+
+      Döneminin en büyük orkestra şeflerinden biri oldu. 1897’de Viyana Saray Operası’nın başına geçti; bu görev neredeyse bunu şart koştuğu için kısa süre önce Yahudilikten Katolikliğe geçmişti. Tutkulu bir mükemmeliyetçiydi; titizlikle çalışılmış, taze yorumlarda ısrar etmesi ona hem hayranlar hem de düşmanlar kazandırdı. Operanın çehresini değiştirdiği on yorucu yıl boyunca beste yapmaya ancak yazları, göl kıyılarında ve dağlarda kurduğu küçük çalışma kulübelerinde vakit bulabildi.
+
+      Mahler’in Sibelius’a, bir senfoninin dünya gibi olması, her şeyi kucaklaması gerektiğini söylediği anlatılır. Senfonileri devasa yapılardır; halk şarkılarını, marşları, kuş seslerini ve derin bir durgunluk anlarını bir araya getirir. Viyana’dan ayrıldıktan sonra New York’ta Metropolitan Operası’nda ve New York Filarmoni’de şeflik yaptı. 1911’de, 50 yaşında Viyana’da öldü; Onuncu Senfonisi yarım kaldı.
+  portrait:
+    artist: Akseli Gallen-Kallela
+    title: { en: Portrait of Gustav Mahler, tr: Gustav Mahler’in Portresi }
+    year: "1907"
+    collection: { en: "Serlachius Museums, Mänttä", tr: "Serlachius Müzeleri, Mänttä" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Akseli_Gallen-Kallela_-_Portrait_of_Gustav_Mahler_-_G%C3%B6sta_Serlachius_Fine_Arts_Foundation.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Akseli_Gallen-Kallela_-_Portrait_of_Gustav_Mahler_-_G%C3%B6sta_Serlachius_Fine_Arts_Foundation.jpg
+    width: 1312
+    height: 2000
+    license: Public domain (PD-Art, PD-old-80)
+    focal_y: 0.45
+
+- id: shostakovich
+  match: Dmitri Shostakovich
+  sort_name: Shostakovich, Dmitri
+  born: 1906
+  died: 1975
+  era: modern
+  names:
+    en: { name: Dmitri Shostakovich, short: Shostakovich }
+    tr: { name: Dmitri Şostakoviç, short: Şostakoviç }
+  nationality: { en: Russian, tr: Rus }
+  facts:
+    born: { en: "25 September 1906, St Petersburg", tr: "25 Eylül 1906, St. Petersburg" }
+    died: { en: "9 August 1975, Moscow", tr: "9 Ağustos 1975, Moskova" }
+    symphonies: { en: "Fifteen", tr: "On beş" }
+    best_known_for: { en: "Symphonies, string quartets", tr: "Senfonileri, yaylı dörtlüleri" }
+  bio:
+    en: |-
+      Shostakovich was born in St Petersburg in 1906. After his father died, the teenager helped support the family by playing the piano in cinemas, accompanying silent films. He studied at the Petrograd Conservatory, and his First Symphony, written as a graduation piece when he was 19, made him famous almost overnight; within a few years it was being played in Berlin and in the United States.
+
+      His life was bound up with Soviet politics. In 1936 the Communist Party newspaper *Pravda* attacked his opera *Lady Macbeth of the Mtsensk District* as "muddle instead of music", a dangerous charge at the height of Stalin's purges. He answered in 1937 with his Fifth Symphony, which was greeted with a long ovation. In 1948 he was denounced again, and for years he kept some of his most personal works in a drawer.
+
+      During the Second World War his Seventh Symphony, the *Leningrad*, became a symbol of resistance; in 1942 it was even performed in the besieged city itself. He wrote fifteen symphonies and fifteen string quartets, music that can be savagely ironic one moment and desolate the next. People still argue about what his music was trying to say, which may be part of its power. He died in Moscow in 1975.
+    tr: |-
+      Şostakoviç 1906’da St. Petersburg’da doğdu. Babası öldükten sonra, daha gençken sinemalarda sessiz filmlere piyano eşliği yaparak ailesinin geçimine katkıda bulundu. Petrograd Konservatuvarı’nda okudu; on dokuz yaşında mezuniyet eseri olarak yazdığı Birinci Senfoni onu neredeyse bir gecede ünlü yaptı ve birkaç yıl içinde Berlin’de ve Amerika’da da çalındı.
+
+      Hayatı Sovyet siyasetiyle iç içe geçti. 1936’da Komünist Parti’nin gazetesi *Pravda*, *Mtsensk İlçesinin Lady Macbeth’i* operasını “müzik yerine karmaşa” diye yerden yere vurdu; Stalin’in büyük temizliğinin tam ortasında bu tehlikeli bir suçlamaydı. Şostakoviç 1937’de Beşinci Senfonisi’yle yanıt verdi ve eser uzun bir alkışla karşılandı. 1948’de yeniden kınandı ve yıllarca en kişisel eserlerinden bazılarını çekmecede sakladı.
+
+      İkinci Dünya Savaşı sırasında Yedinci Senfonisi, *Leningrad*, direnişin simgesi oldu; 1942’de kuşatma altındaki şehrin kendisinde bile seslendirildi. On beş senfoni ve on beş yaylı dörtlü yazdı: bir an acımasızca alaycı, bir sonraki an ıssız bir müzik. Müziğinin ne söylemek istediği bugün hâlâ tartışılıyor; belki de gücünün bir parçası buradan geliyor. 1975’te Moskova’da öldü.
+  # No safely public-domain portrait: Soviet-era photos are mostly still protected in the US (URAA),
+  # the Deutsche Fotothek photo is CC BY-SA 3.0 de, and the PD-claimed US newspaper scans are doubtful.
+  # See content/research/composers-sources.md.
+  portrait: null

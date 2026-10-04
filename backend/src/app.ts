@@ -1,0 +1,29 @@
+import { Hono } from "hono";
+import { HTTPException } from "hono/http-exception";
+import { logger } from "hono/logger";
+import { secureHeaders } from "hono/secure-headers";
+import { sql } from "./db/client.js";
+import { account } from "./routes/account.js";
+import { content } from "./routes/content.js";
+import { resetPage } from "./routes/reset-page.js";
+
+export const app = new Hono();
+
+app.use("*", logger(), secureHeaders());
+
+app.get("/health", async (c) => {
+  await sql`select 1`;
+  return c.json({ ok: true });
+});
+
+app.route("/v1", content);
+app.route("/v1", account);
+// Target of the password reset email (no website yet); outside /v1 because it is a web page.
+app.route("/", resetPage);
+
+app.notFound((c) => c.json({ error: "not_found" }, 404));
+app.onError((err, c) => {
+  if (err instanceof HTTPException) return c.json({ error: err.message }, err.status);
+  console.error(err);
+  return c.json({ error: "internal" }, 500);
+});

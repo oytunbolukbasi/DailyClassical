@@ -1,0 +1,99 @@
+{
+  "appPolicies" : {
+    "eula" : "",
+    "policies" : [
+      {
+        "locale" : "en_US",
+        "policyText" : "",
+        "policyURL" : "https://dailyclassical.co/privacy"
+      }
+    ]
+  },
+  "identifier" : "6E4B1D2A-7C3F-4D8E-9A51-2B0F8C3D1E01",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "600",
+      "familyShareable" : false,
+      "internalID" : "6743000001",
+      "localizations" : [
+        {
+          "description" : "The full library and Search, forever.",
+          "displayName" : "Premium Lifetime",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "Tüm kitaplık ve arama, süresiz.",
+          "displayName" : "Ömür Boyu Premium",
+          "locale" : "tr"
+        }
+      ],
+      "productID" : "co.dailyclassical.premium.lifetime",
+      "referenceName" : "Premium Lifetime",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6743000000",
+    "_failTransactionsEnabled" : false,
+    "_locale" : "tr",
+    "_storefront" : "TUR",
+    "_storeKitErrors" : [
+
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21600001",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "Premium",
+          "locale" : "en_US"
+        }
+      ],
+      "name" : "Premium",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "150",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6743000002",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "The full library and Search, billed monthly.",
+              "displayName" : "Premium Monthly",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "Tüm kitaplık ve arama, aylık ödeme.",
+              "displayName" : "Aylık Premium",
+              "locale" : "tr"
+            }
+          ],
+          "productID" : "co.dailyclassical.premium.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Premium Monthly",
+          "subscriptionGroupID" : "21600001",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

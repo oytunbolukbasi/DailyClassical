@@ -1,0 +1,27 @@
+{
+  "composer.fact.born": {
+    "en": "Born",
+    "tr": "Doğum",
+    "comment": "Composer sheet facts card label (shown uppercase)."
+  },
+  "composer.fact.died": {
+    "en": "Died",
+    "tr": "Ölüm",
+    "comment": "Composer sheet facts card label (shown uppercase)."
+  },
+  "composer.fact.symphonies": {
+    "en": "Symphonies",
+    "tr": "Senfoniler",
+    "comment": "Composer sheet facts card label (shown uppercase)."
+  },
+  "composer.fact.bestKnownFor": {
+    "en": "Best known for",
+    "tr": "En bilinen eserleri",
+    "comment": "Composer sheet facts card label (shown uppercase)."
+  },
+  "composer.portrait.accessibilityLabel %@": {
+    "en": "Portrait of %@",
+    "tr": "%@ portresi",
+    "comment": "VoiceOver label for the composer portrait; the argument is the composer's name."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "auth.verify.title": {"en": "Confirm your email", "tr": "E-postanızı doğrulayın"},
+  "auth.verify.subtitle %@": {"en": "We sent a 6-digit code to %@.", "tr": "%@ adresine 6 haneli bir kod gönderdik."},
+  "auth.verify.cta": {"en": "Confirm", "tr": "Doğrula"},
+  "auth.verify.resend": {"en": "Send a new code", "tr": "Yeni kod gönder"},
+  "auth.verify.resendIn %lld": {"en": "Send a new code in %lld s", "tr": "%lld sn sonra yeni kod"},
+  "auth.verify.hint": {"en": "The code expires in 10 minutes. Nothing there? Check your spam folder.", "tr": "Kod 10 dakika geçerlidir. Gelmediyse spam klasörünüze bakın."},
+  "auth.verify.changeEmail": {"en": "Use a different email", "tr": "Başka bir e-posta kullan"},
+  "auth.verify.field.accessibilityLabel": {"en": "6-digit code", "tr": "6 haneli kod"},
+  "auth.error.invalidCode": {"en": "That code doesn’t match. Try again.", "tr": "Kod eşleşmedi. Tekrar deneyin."},
+  "auth.error.codeExpired": {"en": "This code has expired. Send a new one.", "tr": "Kodun süresi doldu. Yeni bir kod isteyin."},
+  "auth.error.codeTooManyAttempts": {"en": "Too many tries. Send a new code.", "tr": "Çok fazla deneme yapıldı. Yeni bir kod isteyin."}
+}

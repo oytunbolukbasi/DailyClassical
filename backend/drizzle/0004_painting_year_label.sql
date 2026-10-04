@@ -1,0 +1,1 @@
+ALTER TABLE "painting_localizations" ADD COLUMN "year_label" text;
