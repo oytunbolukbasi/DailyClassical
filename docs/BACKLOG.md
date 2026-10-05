@@ -10,7 +10,7 @@ Open work after the scaffold (state on 5 Oct 2026). Owner in brackets.
 - Search: stray line removed, idle hint, recent searches persist; Settings: "Text size" row removed; Library: Glossary chip beside All / Favourites.
 
 ## Test data to reset before launch
-- `content/schedule.yaml` starts on 2026-10-01 so past days can be swiped; set `start` to launch day and re-run `npm run db:seed && npm run fixtures`.
+- `content/schedule.yaml` starts on 2026-09-27 so all ten pieces are published for content review; set `start` to launch day (Tchaikovsky 6 first) and re-run `npm run db:seed && npm run fixtures`.
 
 ## Next up (engineering)
 1. [Claude] Dark mode + Reduce Transparency visual pass against the canvas (every screen is drawn dark in `design/DailyClassical2.html`).

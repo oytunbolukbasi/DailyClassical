@@ -3,19 +3,20 @@
 # A piece is published on its latest scheduled day up to the reader's today; the Library lists only
 # published pieces and Today pages back through past days.
 #
-# TEST DATA: `start` is set four days before launch (2026-10-05) so 1–4 Oct show four past pieces
-# while 5 Oct is still Tchaikovsky 6 (fifth in the order). Reset `start` to the launch day and put
-# tchaikovsky-symphony-6 first again before release, then re-run db:seed and `npm run fixtures`.
-start: 2026-10-01
+# TEST DATA (content review): `start` is 2026-09-27 so all ten pieces are published by 6 Oct and
+# show in the Library, with Tchaikovsky 6 (last in the order) as Today on 6 Oct. Before release,
+# set `start` to the launch day with tchaikovsky-symphony-6 first, then re-run db:seed and
+# `npm run fixtures`.
+start: 2026-09-27
 days: 365
 order:
   - mozart-symphony-40
   - beethoven-symphony-5
   - dvorak-symphony-9
   - schubert-symphony-8
-  - tchaikovsky-symphony-6
   - brahms-symphony-4
   - berlioz-symphonie-fantastique
   - beethoven-symphony-9
   - mahler-symphony-5
   - shostakovich-symphony-5
+  - tchaikovsky-symphony-6
