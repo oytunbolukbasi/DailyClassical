@@ -1,8 +1,8 @@
 import SwiftUI
 
-/// Library tab (SPEC §4.11, §4.23–4.25): Literata large title, All pieces / Favourites,
-/// Composer / Era / Glossary chips, solid rows. Free users see every past piece with a
-/// small lock; tapping one opens the paywall.
+/// Library tab (SPEC §4.11, §4.23–4.25): Literata large title, All pieces / Favourites with
+/// the Glossary chip on the same row, Composer / Era chips, solid rows. Free users see every
+/// published piece with a small lock; tapping one opens the paywall.
 struct LibraryScreen: View {
     enum Segment: Hashable { case all, favourites }
 
@@ -53,6 +53,22 @@ struct LibraryScreen: View {
                 .foregroundStyle(Palette.ink)
                 .accessibilityAddTraits(.isHeader)
                 .padding(.trailing, Spacing.pageGutter)
+            // Glossary sits on the segmented control's row, right-aligned to the gutter, as its own
+            // glass shape. Where the labelled chip doesn't fit (narrow phones, long translations)
+            // it becomes an icon-only glass circle.
+            ViewThatFits(in: .horizontal) {
+                segmentRow(glossary: GlassChip(title: Text("library.filter.glossary"), leadingIcon: "glossary-book"))
+                segmentRow(glossary: glossaryIconButton)
+            }
+            .padding(.trailing, Spacing.pageGutter)
+            if segment == .all {
+                filterChips
+            }
+        }
+    }
+
+    private func segmentRow(glossary: some View) -> some View {
+        HStack(spacing: 8) {
             GlassSegmented(
                 segments: [
                     .init(value: Segment.all, label: Text("library.segment.all"), accessibilityLabel: nil),
@@ -60,10 +76,22 @@ struct LibraryScreen: View {
                 ],
                 selection: $segment.animation(.easeOut(duration: 0.2))
             )
-            if segment == .all {
-                filterChips
-            }
+            .fixedSize()
+            Spacer(minLength: 0)
+            // A button, not a NavigationLink: in a List row a link would get a disclosure chevron.
+            Button { router.libraryPath.append(GlossaryListRoute()) } label: { glossary }
+                .buttonStyle(.plain)
+                .accessibilityLabel(Text("library.filter.glossary"))
+                .fixedSize()
         }
+    }
+
+    private var glossaryIconButton: some View {
+        Icon("glossary-book", size: 18)
+            .foregroundStyle(Palette.glassInk)
+            .frame(width: 40, height: 40)
+            .contentShape(.circle)
+            .glassEffect(.regular.interactive(), in: .circle)
     }
 
     private var filterChips: some View {
@@ -72,10 +100,6 @@ struct LibraryScreen: View {
                 HStack(spacing: 8) {
                     composerMenu
                     eraMenu
-                    NavigationLink(value: GlossaryListRoute()) {
-                        GlassChip(title: Text("library.filter.glossary"), leadingIcon: "glossary-book")
-                    }
-                    .buttonStyle(.plain)
                 }
                 .padding(.trailing, Spacing.pageGutter)
                 .padding(.vertical, 2)

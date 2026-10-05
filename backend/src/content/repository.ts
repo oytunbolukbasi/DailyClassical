@@ -1,4 +1,6 @@
-import { and, asc, eq, inArray } from "drizzle-orm";
+import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import { and, asc, eq, inArray, lte } from "drizzle-orm";
 import type { DB } from "../db/client.js";
 import {
   composerLocalizations,
@@ -16,8 +18,55 @@ import {
   type Locale,
 } from "../db/schema.js";
 import { DEFAULT_LOCALE, pick } from "../lib/locale.js";
+import { publishDates, type ScheduledDay } from "./schedule.js";
 
 const localesFor = (locale: Locale) => [...new Set([locale, DEFAULT_LOCALE])];
+
+/**
+ * Attribution of a freely licensed (non-PD) image, from the manifest (content/composers.yaml
+ * `credit_line` / `license_url`): `creditLine` is the text the licence requires, shown after the caption.
+ */
+export function imageCredit(key: string, imageUrl: string | null, locale: string) {
+  const e = imageManifest.images[key];
+  const ok = e && e.source === imageUrl;
+  return {
+    creditLine: (ok && (e.credit?.[locale] ?? e.credit?.[DEFAULT_LOCALE])) || null,
+    licenseUrl: (ok && e.licenseUrl) || null,
+  };
+}
+
+/** backend/public/images/manifest.json, written by scripts/optimize-images.ts (`npm run images`). */
+export type ImageManifestFile = { path: string; width: number; height: number; bytes: number; hash: string };
+export type ImageManifestEntry = {
+  source: string; color: string; hero: ImageManifestFile; thumb: ImageManifestFile;
+  /** Required attribution per locale and licence deed, for freely licensed (non-PD) images. */
+  credit?: Record<string, string>; licenseUrl?: string;
+};
+export type ImageManifest = { version: 1; images: Record<string, ImageManifestEntry> };
+
+const imageManifest: ImageManifest = (() => {
+  try {
+    return JSON.parse(readFileSync(fileURLToPath(new URL("../../public/images/manifest.json", import.meta.url)), "utf8"));
+  } catch {
+    return { version: 1, images: {} };
+  }
+})();
+/** Our optimized copies: served by this API at /images (or a CDN via ASSETS_BASE_URL); `?v=` busts the immutable cache. */
+const imagesBase = (process.env.ASSETS_BASE_URL ?? `${process.env.PUBLIC_API_URL ?? "https://api.dailyclassical.co"}/images`).replace(/\/$/, "");
+const imageFileUrl = (f: ImageManifestFile) => `${imagesBase}/${f.path}?v=${f.hash}`;
+
+/**
+ * Image fields of a painting (`paintings/<pieceId>`) or portrait (`composers/<composerId>`):
+ * hero + thumb URLs, the hero's pixel size and an average colour for the placeholder. Falls back to
+ * the stored original (Commons) URL and size when the image has not been optimized yet.
+ */
+export function imageFields(key: string, fallback: { imageUrl: string | null; width: number | null; height: number | null }) {
+  const e = imageManifest.images[key];
+  if (!e || e.source !== fallback.imageUrl) {
+    return { imageUrl: fallback.imageUrl, thumbUrl: fallback.imageUrl, width: fallback.width, height: fallback.height, placeholderColor: null };
+  }
+  return { imageUrl: imageFileUrl(e.hero), thumbUrl: imageFileUrl(e.thumb), width: e.hero.width, height: e.hero.height, placeholderColor: e.color };
+}
 
 export function spotifyUrl(albumId: string | null) {
   return albumId ? `https://open.spotify.com/album/${albumId}` : null;
@@ -67,10 +116,8 @@ export async function listPieces(db: DB, locale: Locale, ids?: string[]) {
         collection: paintingL.collection,
         pairingNote: paintingL.pairingNote,
         medium: painting.medium,
-        imageUrl: painting.imageUrl,
+        ...imageFields(`paintings/${p.id}`, painting),
         sourceUrl: painting.sourceUrl,
-        width: painting.width,
-        height: painting.height,
         rightsStatus: painting.rightsStatus,
       } : null,
     }];
@@ -120,6 +167,30 @@ export async function pieceIdForDay(db: DB, day: string): Promise<string | null>
   return all[dayNumber % all.length]!.id;
 }
 
+/**
+ * Days up to and including `until` (the reader's today), oldest first. The last entry is always
+ * `until` itself, so a day missing from daily_schedule still pages to the rotation's piece.
+ */
+export async function scheduleUntil(db: DB, until: string): Promise<ScheduledDay[]> {
+  const rows = await db.select({ day: dailySchedule.day, pieceId: dailySchedule.pieceId })
+    .from(dailySchedule).where(lte(dailySchedule.day, until)).orderBy(asc(dailySchedule.day));
+  if (rows.at(-1)?.day !== until) {
+    const id = await pieceIdForDay(db, until);
+    if (id) rows.push({ day: until, pieceId: id });
+  }
+  return rows;
+}
+
+/** Published pieces (scheduled on or before `today`) with their publish date, newest first. */
+export async function listPublishedPieces(db: DB, locale: Locale, today: string) {
+  const dates = publishDates(await scheduleUntil(db, today), today);
+  if (dates.size === 0) return [];
+  const list = await listPieces(db, locale, [...dates.keys()]);
+  return list
+    .map((p) => ({ ...p, publishDate: dates.get(p.id)! }))
+    .sort((a, b) => b.publishDate.localeCompare(a.publishDate));
+}
+
 export async function listGlossary(db: DB, locale: Locale) {
   const rows = await db.select().from(glossaryLocalizations).where(inArray(glossaryLocalizations.locale, localesFor(locale)));
   const ids = [...new Set(rows.map((r) => r.termId))];
@@ -144,7 +215,7 @@ export async function listComposers(db: DB, locale: Locale) {
         name: l?.name, shortName: l?.shortName,
         // Each field group falls back to English on its own, so a partial translation never blanks the sheet.
         nationality: l?.nationality ?? en?.nationality, facts: l?.facts ?? en?.facts, bio: l?.bio ?? en?.bio,
-        portraitCaption: l?.portraitCaption ?? en?.portraitCaption,
+        portraitCaption: l?.portraitCaption ?? en?.portraitCaption, locale,
       });
     })
     .sort((a, b) => a.shortName.localeCompare(b.shortName, locale));
@@ -157,6 +228,7 @@ export function composerResponse(c: {
   id: string; sortName: string; birthYear: number | null; deathYear: number | null; era: string | null;
   portrait: ComposerPortraitAsset | null; name?: string | null; shortName?: string | null;
   nationality?: string | null; facts?: ComposerFacts | null; bio?: string | null; portraitCaption?: ComposerPortraitCaption | null;
+  locale?: string;
 }) {
   const facts = composerFactKeys.flatMap((label) => {
     const value = c.facts?.[label];
@@ -176,8 +248,9 @@ export function composerResponse(c: {
     bio: c.bio ?? null,
     portrait: p && caption
       ? {
-          imageUrl: p.imageUrl, sourceUrl: p.sourceUrl, width: p.width, height: p.height, focalY: p.focalY,
+          ...imageFields(`composers/${c.id}`, p), sourceUrl: p.sourceUrl, focalY: p.focalY,
           artist: caption.artist, title: caption.title, year: p.year, collection: caption.collection, license: p.license,
+          ...imageCredit(`composers/${c.id}`, p.imageUrl, c.locale ?? DEFAULT_LOCALE),
         }
       : null,
   };

@@ -32,6 +32,13 @@ struct RootView: View {
         }
         .toast($router.toast)
         .onGlossaryTap { router.present(.glossaryTerm($0)) }
+        // Widget taps: dailyclassical://piece/<id> opens that piece on the Today tab.
+        .onOpenURL { url in
+            guard url.scheme == "dailyclassical", url.host() == "piece", let id = url.pathComponents.dropFirst().first else { return }
+            router.sheet = nil
+            router.tab = .today
+            router.todayPath = NavigationPath([PieceRoute(id: id)])
+        }
         // Step 1 is a card over the live Today screen, step 2 the reminder (Features/Onboarding).
         .onboarding(isComplete: $hasCompletedOnboarding)
     }

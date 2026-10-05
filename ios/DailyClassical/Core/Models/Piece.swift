@@ -44,6 +44,9 @@ nonisolated struct PieceSummary: Codable, Hashable, Identifiable, Sendable {
     let movementCount: Int
     let hook: String
     let painting: Painting?
+    /// "YYYY-MM-DD": the piece's latest scheduled day up to the reader's today. Absent from older
+    /// API responses; ContentStore fills it for bundled content.
+    var publishDate: String?
 }
 
 nonisolated struct Recording: Codable, Hashable, Identifiable, Sendable {

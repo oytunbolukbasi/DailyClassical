@@ -40,34 +40,6 @@
     "en": "Dark",
     "tr": "Koyu"
   },
-  "settings.textSize": {
-    "en": "Text size",
-    "tr": "Metin boyutu"
-  },
-  "settings.textSize.followsSystem": {
-    "en": "Follows system",
-    "tr": "Sistemi izler"
-  },
-  "settings.textSize.sample.label": {
-    "en": "Preview",
-    "tr": "Önizleme"
-  },
-  "settings.textSize.sample": {
-    "en": "A symphony that ends not in triumph but in silence. Reading text grows and shrinks with your iPhone’s text size.",
-    "tr": "Zaferle değil, sessizlikle biten bir senfoni. Okuma metni, iPhone’unuzun metin boyutuyla birlikte büyür ve küçülür."
-  },
-  "settings.textSize.footer": {
-    "en": "DailyClassical follows the text size you choose for your iPhone. To change it, go to Settings › Accessibility › Display & Text Size › Larger Text.",
-    "tr": "DailyClassical, iPhone’unuz için seçtiğiniz metin boyutunu izler. Değiştirmek için Ayarlar › Erişilebilirlik › Ekran ve Metin Boyutu › Daha Büyük Metin bölümüne gidin."
-  },
-  "settings.textSize.current": {
-    "en": "Current size",
-    "tr": "Geçerli boyut"
-  },
-  "settings.textSize.current.accessibility": {
-    "en": "Accessibility size",
-    "tr": "Erişilebilirlik boyutu"
-  },
   "settings.language": {
     "en": "Language",
     "tr": "Dil"

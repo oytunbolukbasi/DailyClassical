@@ -1,0 +1,21 @@
+{
+  "today.previousDay": {
+    "en": "Previous day",
+    "tr": "Önceki gün",
+    "comment": "VoiceOver action on Today: show the piece of the day before"
+  },
+  "today.nextDay": {
+    "en": "Next day",
+    "tr": "Sonraki gün",
+    "comment": "VoiceOver action on Today: show the piece of the following day (never past today)"
+  },
+  "today.day.offline.body": {
+    "en": "This day’s piece will appear as soon as you reconnect.",
+    "tr": "Bu günün eseri bağlantı gelir gelmez burada olacak."
+  },
+  "search.idle.hint": {
+    "en": "Search pieces, composers and glossary terms.",
+    "tr": "Eserlerde, bestecilerde ve sözlük terimlerinde arayın.",
+    "comment": "Search tab, idle with no recent searches"
+  }
+}

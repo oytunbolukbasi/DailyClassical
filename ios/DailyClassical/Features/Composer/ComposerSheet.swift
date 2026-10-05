@@ -191,7 +191,7 @@ struct ComposerSheet: View {
 
     private func row(_ piece: PieceSummary) -> some View {
         HStack(spacing: 12) {
-            PaintingImage(url: piece.painting?.imageUrl)
+            PaintingImage(url: piece.painting?.imageUrl, variant: .thumb)
                 .frame(width: 44, height: 44)
                 .clipShape(.rect(cornerRadius: Radius.thumbS))
             VStack(alignment: .leading, spacing: 2) {
@@ -231,55 +231,13 @@ private struct GlossaryLink: Identifiable {
     let id: String
 }
 
-/// The portrait as a CSS `object-fit: cover; object-position: 50% <focalY>` crop, over the
-/// stripe placeholder. Commons originals are requested at 1200 px wide (≈ 3× a phone width).
+/// The portrait as a CSS `object-fit: cover; object-position: 50% <focalY>` crop, over its average
+/// colour: our optimized copy (bundled, or from the API's /images), never the Commons original.
 private struct ComposerPortraitImage: View {
     let portrait: Composer.Portrait
 
     var body: some View {
-        GeometryReader { geo in
-            let frame = geo.size
-            StripePlaceholder()
-                .overlay(alignment: .topLeading) {
-                    AsyncImage(url: Self.sized(portrait.imageUrl), transaction: Transaction(animation: .easeOut(duration: 0.25))) { phase in
-                        if let image = phase.image {
-                            if let aspect = portrait.aspectRatio, aspect > 0 {
-                                let crop = Self.crop(frame: frame, aspect: aspect, focalY: portrait.focalY ?? 0.5)
-                                image.resizable()
-                                    .frame(width: crop.size.width, height: crop.size.height)
-                                    .offset(x: crop.origin.x, y: crop.origin.y)
-                            } else {
-                                image.resizable().scaledToFill()
-                                    .frame(width: frame.width, height: frame.height, alignment: .top)
-                            }
-                        }
-                    }
-                }
-                .frame(width: frame.width, height: frame.height)
-                .clipped()
-        }
-    }
-
-    /// Drawn size and offset of a cover-fitted image of `aspect` (w/h) in `frame`.
-    private static func crop(frame: CGSize, aspect: CGFloat, focalY: Double) -> CGRect {
-        guard frame.width > 0, frame.height > 0 else { return .zero }
-        if aspect < frame.width / frame.height {
-            let height = frame.width / aspect
-            let y = -(height - frame.height) * CGFloat(min(max(focalY, 0), 1))
-            return CGRect(x: 0, y: y, width: frame.width, height: height)
-        } else {
-            let width = frame.height * aspect
-            return CGRect(x: -(width - frame.width) / 2, y: 0, width: width, height: frame.height)
-        }
-    }
-
-    /// Asks Wikimedia for a scaled rendition instead of the (sometimes 20+ MP) original.
-    private static func sized(_ url: URL?) -> URL? {
-        guard let url, url.host() == "commons.wikimedia.org", url.path().contains("Special:FilePath"),
-              var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return url }
-        if components.queryItems?.contains(where: { $0.name == "width" }) == true { return url }
-        components.queryItems = (components.queryItems ?? []) + [URLQueryItem(name: "width", value: "1200")]
-        return components.url ?? url
+        PaintingImage(url: portrait.imageUrl, focus: UnitPoint(x: 0.5, y: portrait.focalY ?? 0.5))
     }
 }
 
@@ -287,6 +245,7 @@ private struct ComposerPortraitImage: View {
 /// SF 12/1.4 `ink3` with the 14 × 1 pt dash (SPEC §3.10).
 private struct ComposerPortraitCaption: View {
     let portrait: Composer.Portrait
+    @Environment(\.locale) private var locale
 
     var body: some View {
         HStack(alignment: .firstTextBaseline, spacing: 8) {
@@ -310,6 +269,11 @@ private struct ComposerPortraitCaption: View {
         if let year = portrait.year, !year.isEmpty { result += AttributedString(", \(year)") }
         result += AttributedString(".")
         if let collection = portrait.collection, !collection.isEmpty { result += AttributedString(" \(collection).") }
+        // Freely licensed (non-PD) portraits carry the attribution their licence requires.
+        if !(portrait.license ?? "").hasPrefix("Public domain"),
+           let credit = ImagePipeline.shared.credit(for: portrait.imageUrl, language: locale.language.languageCode?.identifier ?? "en") {
+            result += AttributedString(" \(credit).")
+        }
         return result
     }
 }

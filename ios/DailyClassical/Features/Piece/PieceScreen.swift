@@ -40,43 +40,81 @@ struct PieceContent: View {
     @Environment(\.openURL) private var openURL
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
-    @State private var centerBlock: PieceBlock?
+    /// Single source of truth for programmatic scrolling (movement jumps).
+    @State private var position = ScrollPosition(edge: .top)
+    @State private var tracker = PieceScrollTracker()
+    /// The movement under the reading line (SPEC §3.8).
+    @State private var trackedMovement = 1
+    /// The movement just tapped in the switcher or the movements table. Shown as selected
+    /// at once and held through the jump, until the user scrolls again.
+    @State private var jumpTarget: Int?
+    @State private var jumpID = 0
     /// The listening stop nearest the reading line (centre of the area below the nav bar),
     /// or nil while the reading line is outside a movement's stop list (SPEC §3.6).
     @State private var currentStop: PieceBlock?
-    @State private var stopTracker = StopTracker()
     /// True once the "Movement I" header has scrolled under the nav bar (SPEC §3.8).
     @State private var docked = false
     @State private var showRecordings = false
     @State private var showArtwork = false
     @State private var showPieceGlossary = false
 
+    private static let contentSpace = "pieceContent"
+
     private var blocks: [PieceBlock] { PieceBlock.blocks(for: piece.document) }
     private var movements: [Movement] { piece.document.movements }
 
-    private var centerIndex: Int? { centerBlock.flatMap { blocks.firstIndex(of: $0) } }
-    private var firstMovementIndex: Int { blocks.firstIndex(of: .movementHeader(1)) ?? blocks.count }
     private var inMovements: Bool { docked }
-    private var currentMovement: Int { centerBlock?.movement ?? lastMovementBefore(centerIndex) }
+    private var currentMovement: Int { jumpTarget ?? trackedMovement }
 
     var body: some View {
-        ScrollViewReader { proxy in
-            ScrollView {
-                LazyVStack(alignment: .leading, spacing: 0) {
-                    ForEach(blocks) { block in
-                        view(for: block, proxy: proxy).id(block)
-                    }
+        ScrollView {
+            // Not lazy: a lazy stack only estimates the height of blocks it hasn't built, so
+            // a jump to a far movement landed on a guessed offset and the content height
+            // then collapsed under it (to the top of the page, or somewhere else). A piece
+            // is at most ~70 blocks of text, which lays out once; every frame is then exact.
+            VStack(alignment: .leading, spacing: 0) {
+                ForEach(blocks) { block in
+                    view(for: block)
+                        .onGeometryChange(for: CGRect.self) { $0.frame(in: .named(Self.contentSpace)) } action: { frame in
+                            tracker.blockFrames[block] = frame
+                            syncTracking()
+                        }
                 }
-                .scrollTargetLayout()
             }
-            .scrollPosition(id: $centerBlock, anchor: .center)
-            .onScrollGeometryChange(for: CGFloat.self) { $0.containerSize.height } action: { _, height in
-                stopTracker.viewportHeight = height
-            }
-            .scrollEdgeEffectStyle(.soft, for: .top)
-            .ignoresSafeArea(edges: .top)
-            .toolbar { toolbar(proxy: proxy) }
+            .coordinateSpace(.named(Self.contentSpace))
         }
+        .scrollPosition($position)
+        .onChange(of: blocks) { _, blocks in tracker.keep(Set(blocks)) }  // a reload in another language
+        .onScrollGeometryChange(for: ScrollMetrics.self) { ScrollMetrics($0) } action: { _, metrics in
+            tracker.offset = metrics.offset
+            tracker.minOffset = metrics.minOffset
+            tracker.maxOffset = metrics.maxOffset
+            tracker.viewportHeight = metrics.viewportHeight
+            syncTracking()
+        }
+        .onScrollPhaseChange { _, phase in
+            tracker.phase = phase
+            if phase == .interacting {
+                // The user took over: drop the jump and follow the reading position again.
+                tracker.isProgrammaticScroll = false
+                jumpTarget = nil
+                syncTracking()
+            } else if phase == .idle {
+                finishJump(jumpID)
+            }
+        }
+        .scrollEdgeEffectStyle(.soft, for: .top)
+        .ignoresSafeArea(edges: .top)
+        .background {
+            // The scroll view runs under the status bar, so the safe-area top it covers is
+            // the bottom of the nav bar.
+            Color.clear.onGeometryChange(for: CGFloat.self) { $0.safeAreaInsets.top } action: { top in
+                guard top > 0 else { return }
+                tracker.navBottom = top
+                syncTracking()
+            }
+        }
+        .toolbar { toolbar }
         .navigationBarTitleDisplayMode(.inline)
         .overlay(alignment: .bottom) { floatingSpotify }
         .onGlossaryTap { router.present(.glossaryTerm($0)) }
@@ -95,10 +133,10 @@ struct PieceContent: View {
     // MARK: Toolbar
 
     @ToolbarContentBuilder
-    private func toolbar(proxy: ScrollViewProxy) -> some ToolbarContent {
+    private var toolbar: some ToolbarContent {
         if inMovements {
             ToolbarItem(placement: .principal) {
-                MovementSwitcher(movements: movements, current: currentMovement) { jump(to: $0, proxy: proxy) }
+                MovementSwitcher(movements: movements, current: currentMovement) { jump(to: $0) }
             }
             .sharedBackgroundVisibility(.hidden)  // the switcher is its own glass; never glass on glass
             ToolbarItem(placement: .topBarTrailing) {
@@ -138,15 +176,58 @@ struct PieceContent: View {
         router.toast = on ? "favourites.toast.saved" : "favourites.toast.removed"
     }
 
-    private func jump(to movement: Int, proxy: ScrollViewProxy) {
-        withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.35)) {
-            proxy.scrollTo(PieceBlock.movementHeader(movement), anchor: .top)
+    // MARK: Scroll tracking and jumps
+
+    /// Copies the tracker's derived values into state, only when they change.
+    private func syncTracking() {
+        let isDocked = tracker.isDocked
+        if isDocked != docked { docked = isDocked }
+        guard !tracker.isProgrammaticScroll else { return }
+        let movement = tracker.movementAtReadingLine
+        if movement != trackedMovement { trackedMovement = movement }
+        if jumpTarget == movement { jumpTarget = nil }
+        let stop = tracker.stopNearestReadingLine()
+        if stop != currentStop { currentStop = stop }
+    }
+
+    /// Scrolls `movement`'s header to just below the nav bar. The tapped numeral is selected
+    /// at once; tracking is suppressed until the scroll settles.
+    private func jump(to movement: Int) {
+        jumpID += 1
+        jumpTarget = movement
+        tracker.isProgrammaticScroll = true
+        tracker.jumpAttempts = 0
+        scroll(toMovement: movement, jump: jumpID)
+    }
+
+    private func scroll(toMovement movement: Int, jump id: Int) {
+        guard let y = tracker.offset(forMovement: movement) else { return finishJump(id, force: true) }
+        tracker.jumpAttempts += 1
+        if reduceMotion || abs(y - tracker.offset) < 40 {
+            position.scrollTo(y: y)
+        } else {
+            withAnimation(.easeInOut(duration: 0.45)) { position.scrollTo(y: y) }
+        }
+        // The scroll phase reports the end of an animated scroll (`.animating` → `.idle`);
+        // this check covers a scroll that never started (a non-animated one, or a write the
+        // scroll view dropped).
+        Task {
+            try? await Task.sleep(for: .milliseconds(350))
+            finishJump(id)
         }
     }
 
-    private func lastMovementBefore(_ index: Int?) -> Int {
-        guard let index else { return 1 }
-        return blocks[..<min(index, blocks.count)].last(where: { $0.movement != nil })?.movement ?? 1
+    /// Ends a jump once the scroll has settled on the header. If it hasn't, scrolls again
+    /// (a write can be lost while the scroll view is still settling the previous one).
+    private func finishJump(_ id: Int, force: Bool = false) {
+        guard id == jumpID, tracker.isProgrammaticScroll else { return }
+        if !force, tracker.phase != .idle { return }  // still moving; the phase change calls back
+        if !force, let movement = jumpTarget, let y = tracker.offset(forMovement: movement),
+           abs(y - tracker.offset) > 1, tracker.jumpAttempts < 4 {
+            return scroll(toMovement: movement, jump: id)
+        }
+        tracker.isProgrammaticScroll = false
+        syncTracking()
     }
 
     // MARK: Floating primary
@@ -168,16 +249,12 @@ struct PieceContent: View {
     // MARK: Blocks
 
     @ViewBuilder
-    private func view(for block: PieceBlock, proxy: ScrollViewProxy) -> some View {
+    private func view(for block: PieceBlock) -> some View {
         switch block {
         case .header: PieceHeader(piece: piece)
         case .bigPicture: bigPicture
-        case .movementsTable: movementsTable(proxy: proxy)
-        case .movementHeader(let m):
-            movementHeader(movements[m - 1], proxy: proxy)
-                .onGeometryChange(for: CGFloat.self) { $0.frame(in: .global).minY } action: { minY in
-                    if m == 1 { docked = minY < 110 }
-                }
+        case .movementsTable: movementsTable
+        case .movementHeader(let m): movementHeader(movements[m - 1])
         case .summary(let m):
             RichTextView(source: movements[m - 1].summary ?? "", color: readingColor(block, Palette.ink))
                 .padding(.top, 18).gutter()
@@ -187,14 +264,6 @@ struct PieceContent: View {
             let stops = movements[m - 1].stops
             ListeningStopRow(stop: stops[i], focus: focus(for: block), isLast: i == stops.count - 1)
                 .padding(.top, i == 0 ? 0 : 14).gutter()
-                .onGeometryChange(for: CGRect.self) { $0.frame(in: .scrollView) } action: { frame in
-                    stopTracker.frames[block] = frame
-                    updateCurrentStop()
-                }
-                .onDisappear {
-                    stopTracker.frames[block] = nil
-                    updateCurrentStop()
-                }
         case .notice(let m): notice(movements[m - 1])
         case .notes(let m): notes(movements[m - 1])
         case .threads: threads
@@ -216,11 +285,6 @@ struct PieceContent: View {
         focus(for: block) == .none ? normal : Palette.ink3
     }
 
-    private func updateCurrentStop() {
-        let next = stopTracker.stopNearestReadingLine()
-        if next != currentStop { currentStop = next }
-    }
-
     private var bigPicture: some View {
         VStack(alignment: .leading, spacing: 14) {
             SectionLabel("piece.section.bigPicture")
@@ -238,12 +302,12 @@ struct PieceContent: View {
         .gutter()
     }
 
-    private func movementsTable(proxy: ScrollViewProxy) -> some View {
+    private var movementsTable: some View {
         VStack(alignment: .leading, spacing: 12) {
             SectionLabel("piece.section.movements")
             VStack(spacing: 0) {
                 ForEach(movements) { m in
-                    Button { jump(to: m.index, proxy: proxy) } label: {
+                    Button { jump(to: m.index) } label: {
                         HStack(alignment: .firstTextBaseline, spacing: 12) {
                             Text(verbatim: m.numeral).font(Typography.rowTitleS).foregroundStyle(Palette.accent).frame(width: 28, alignment: .leading)
                             VStack(alignment: .leading, spacing: 3) {
@@ -273,13 +337,13 @@ struct PieceContent: View {
         .gutter()
     }
 
-    private func movementHeader(_ m: Movement, proxy: ScrollViewProxy) -> some View {
+    private func movementHeader(_ m: Movement) -> some View {
         VStack(alignment: .leading, spacing: 6) {
             HStack {
                 SectionLabel("piece.movement.label \(m.numeral)")
                 Spacer()
                 if m.index == 1 {
-                    MovementSwitcher(movements: movements, current: inMovements ? currentMovement : 1, segmentWidth: 40) { jump(to: $0, proxy: proxy) }
+                    MovementSwitcher(movements: movements, current: jumpTarget ?? (inMovements ? trackedMovement : 1), segmentWidth: 40) { jump(to: $0) }
                         .opacity(inMovements ? 0 : 1)
                 }
             }
@@ -292,6 +356,9 @@ struct PieceContent: View {
         .padding(.top, m.index == 1 ? 0 : 28)
         .frame(maxWidth: .infinity, alignment: .leading)
         .hairlineTop(m.index == 1 ? 0 : 1)
+        .onGeometryChange(for: CGFloat.self) { $0.frame(in: .named(Self.contentSpace)).minY } action: { top in
+            tracker.headerTops[m.index] = top  // jumps align this edge under the nav bar
+        }
         .padding(.top, m.index == 1 ? 40 : 44)
         .gutter()
     }
@@ -499,23 +566,18 @@ private extension String {
     func capitalizedFirst(locale: String) -> String { prefix(1).uppercased(with: Locale(identifier: locale)) + dropFirst() }
 }
 
-/// Frames of the listening stops currently laid out, in scroll-view space. A plain class,
-/// so scroll-driven geometry updates don't re-render the page; only a change of the
-/// current stop does.
-private final class StopTracker {
-    var frames: [PieceBlock: CGRect] = [:]
-    var viewportHeight: CGFloat = 0
-    /// Top of the reading area: below the floating nav bar.
-    private let readingTop: CGFloat = 110
+/// The scroll values the page tracks, read from `ScrollGeometry`. A plain value
+/// (`nonisolated`), so reading it never depends on which thread SwiftUI runs the transform on.
+nonisolated private struct ScrollMetrics: Equatable {
+    var offset: CGFloat
+    var minOffset: CGFloat
+    var maxOffset: CGFloat
+    var viewportHeight: CGFloat
 
-    func stopNearestReadingLine() -> PieceBlock? {
-        guard viewportHeight > 0, !frames.isEmpty else { return nil }
-        let line = (readingTop + viewportHeight) / 2
-        // Only while the reading line is within (or between) the stops of one movement;
-        // reading the summary above the list must not fade it.
-        guard let nearest = frames.min(by: { abs($0.value.midY - line) < abs($1.value.midY - line) }) else { return nil }
-        let sameMovement = frames.filter { $0.key.movement == nearest.key.movement }.values
-        let top = sameMovement.map(\.minY).min() ?? 0, bottom = sameMovement.map(\.maxY).max() ?? 0
-        return (top - 14)...(bottom + 14) ~= line ? nearest.key : nil
+    init(_ geometry: ScrollGeometry) {
+        offset = geometry.contentOffset.y
+        minOffset = -geometry.contentInsets.top
+        maxOffset = geometry.contentSize.height + geometry.contentInsets.bottom - geometry.containerSize.height
+        viewportHeight = geometry.containerSize.height
     }
 }

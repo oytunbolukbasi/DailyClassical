@@ -1,0 +1,126 @@
+import Foundation
+import ImageIO
+import UIKit
+
+/// What a widget shows for one day. Read from the same bundled fixtures and schedule the app
+/// uses (Resources/Fixtures/<lang>/pieces.json + schedule.json), so widgets work offline and
+/// always agree with the app's Today.
+struct WidgetPiece: Hashable {
+    let id: String
+    let composerName: String
+    let composerShortName: String
+    let title: String
+    let hook: String
+    let year: Int
+    let durationMin: Int
+    let movementCount: Int
+    let paintingArtist: String?
+    let paintingTitle: String?
+}
+
+enum WidgetData {
+    /// Shared with the app (LanguageSettings writes `appLanguage` there too).
+    static let appGroup = "group.co.dailyclassical"
+
+    /// The app's language choice ("system" | "en" | "tr"), resolved like AppLanguage does.
+    static var languageCode: String {
+        let stored = UserDefaults(suiteName: appGroup)?.string(forKey: "appLanguage") ?? "system"
+        if stored == "en" || stored == "tr" { return stored }
+        return Locale.preferredLanguages
+            .compactMap { Locale(identifier: $0).language.languageCode?.identifier }
+            .first { ["en", "tr"].contains($0) } ?? "en"
+    }
+
+    private struct Schedule: Decodable { let order: [String]; let days: [String: String] }
+    private struct Summary: Decodable {
+        struct Composer: Decodable { let name: String; let shortName: String }
+        struct Painting: Decodable { let artist: String; let title: String }
+        let id: String
+        let composer: Composer
+        let title: String
+        let hook: String
+        let year: Int
+        let durationMin: Int
+        let movementCount: Int
+        let painting: Painting?
+    }
+
+    private static func load<T: Decodable>(_ type: T.Type, _ name: String, _ lang: String) -> T? {
+        let url = Bundle.main.url(forResource: name, withExtension: "json", subdirectory: "Fixtures/\(lang)")
+            ?? Bundle.main.url(forResource: name, withExtension: "json", subdirectory: "Fixtures/en")
+        guard let url, let data = try? Data(contentsOf: url) else { return nil }
+        return try? JSONDecoder().decode(T.self, from: data)
+    }
+
+    static func dayKey(_ date: Date) -> String {
+        date.formatted(Date.ISO8601FormatStyle(timeZone: .current).year().month().day())
+    }
+
+    /// The scheduled piece for `date` in the current language.
+    static func piece(on date: Date) -> WidgetPiece? {
+        let lang = languageCode
+        guard let schedule = load(Schedule.self, "schedule", lang),
+              let pieces = load([Summary].self, "pieces", lang) else { return nil }
+        let id = schedule.days[dayKey(date)] ?? schedule.order.first
+        guard let s = pieces.first(where: { $0.id == id }) else { return nil }
+        return WidgetPiece(
+            id: s.id, composerName: s.composer.name, composerShortName: s.composer.shortName,
+            title: s.title, hook: s.hook, year: s.year, durationMin: s.durationMin,
+            movementCount: s.movementCount, paintingArtist: s.painting?.artist, paintingTitle: s.painting?.title
+        )
+    }
+
+    /// Bundled artwork, downsampled to the widget's pixel size (widgets have a tight memory budget).
+    static func painting(for id: String, maxPixel: CGFloat) -> UIImage? {
+        let names = ["\(id)-hero", "\(id)-thumb", id]
+        let dirs = ["Artwork/paintings", "Artwork", nil] as [String?]
+        for name in names {
+            for dir in dirs {
+                if let url = Bundle.main.url(forResource: name, withExtension: "jpg", subdirectory: dir) {
+                    return downsample(url, maxPixel: maxPixel)
+                }
+            }
+        }
+        return nil
+    }
+
+    private static func downsample(_ url: URL, maxPixel: CGFloat) -> UIImage? {
+        guard let source = CGImageSourceCreateWithURL(url as CFURL, nil) else { return nil }
+        let options: [CFString: Any] = [
+            kCGImageSourceCreateThumbnailFromImageAlways: true,
+            kCGImageSourceCreateThumbnailWithTransform: true,
+            kCGImageSourceThumbnailMaxPixelSize: maxPixel,
+        ]
+        guard let cg = CGImageSourceCreateThumbnailAtIndex(source, 0, options as CFDictionary) else { return nil }
+        return UIImage(cgImage: cg)
+    }
+}
+
+extension WidgetData {
+    private struct PieceDoc: Decodable {
+        struct Doc: Decodable { struct BP: Decodable { let inOneLine: String? }; let bigPicture: BP }
+        let document: Doc
+    }
+
+    /// "Struggle and longing (I), …" without markup, for the large widget's second sentence.
+    static func inOneLine(for id: String) -> String? {
+        guard let raw = load(PieceDoc.self, "piece-\(id)", languageCode)?.document.bigPicture.inOneLine else { return nil }
+        let plain = raw.replacingOccurrences(of: #"\[\[[^|\]]+\|([^\]]+)\]\]"#, with: "$1", options: .regularExpression)
+            .replacingOccurrences(of: "*", with: "")
+            .replacingOccurrences(of: #"\s*\([IVX]+\)"#, with: "", options: .regularExpression)  // "(I)" markers read as noise here
+            .trimmingCharacters(in: .whitespaces)
+        return plain.prefix(1).uppercased(with: Locale(identifier: languageCode)) + plain.dropFirst()
+    }
+}
+
+extension WidgetPiece {
+    /// "Symphony No. 6 in B minor, “Pathétique”" → "Symphony No. 6, “Pathétique”";
+    /// "Si minör 6. Senfoni, “Patetik”" → "6. Senfoni, “Patetik”". Small and medium sizes use it.
+    var shortTitle: String {
+        let en = #" in [A-G](-flat|-sharp)? (major|minor)"#
+        let tr = #"^(Do|Re|Mi|Fa|Sol|La|Si)( bemol| diyez)? (majör|minör) "#
+        return title
+            .replacingOccurrences(of: en, with: "", options: .regularExpression)
+            .replacingOccurrences(of: tr, with: "", options: .regularExpression)
+    }
+}

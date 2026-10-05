@@ -1,3 +1,5 @@
+import { fileURLToPath } from "node:url";
+import { serveStatic } from "@hono/node-server/serve-static";
 import { Hono } from "hono";
 import { HTTPException } from "hono/http-exception";
 import { logger } from "hono/logger";
@@ -15,6 +17,12 @@ app.get("/health", async (c) => {
   await sql`select 1`;
   return c.json({ ok: true });
 });
+
+// Optimized painting/portrait JPEGs (scripts/optimize-images.ts). URLs carry ?v=<hash>, so they never change.
+app.use("/images/*", async (c, next) => {
+  await next();
+  if ((c.res.status === 200 || c.res.status === 206) && c.req.path.endsWith(".jpg")) c.res.headers.set("Cache-Control", "public, max-age=31536000, immutable");
+}, serveStatic({ root: fileURLToPath(new URL("../public", import.meta.url)) }));
 
 app.route("/v1", content);
 app.route("/v1", account);

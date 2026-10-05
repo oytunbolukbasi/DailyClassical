@@ -155,13 +155,12 @@ private struct PaywallPainting: View {
             let imageHeight = max(geo.size.height, geo.size.width / Self.aspect)
             StripePlaceholder()
                 .overlay(alignment: .top) {
-                    AsyncImage(url: Self.url, transaction: Transaction(animation: .easeOut(duration: 0.25))) { phase in
-                        if let image = phase.image {
-                            image.resizable()
-                                .frame(width: geo.size.width, height: imageHeight)
-                                .offset(y: -(imageHeight - geo.size.height) * Self.focusY)
-                        }
-                    }
+                    // Disk-cached after the first load (ImagePipeline), so the paywall opens instantly next time.
+                    CachedImage(url: Self.url) { image in
+                        Image(uiImage: image).resizable()
+                            .frame(width: geo.size.width, height: imageHeight)
+                            .offset(y: -(imageHeight - geo.size.height) * Self.focusY)
+                    } placeholder: { Color.clear }
                 }
                 .clipped()
         }

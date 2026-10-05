@@ -16,6 +16,7 @@
     "db:migrate": "tsx --env-file-if-exists=.env scripts/migrate.ts",
     "db:seed": "tsx --env-file-if-exists=.env scripts/seed.ts && tsx --env-file-if-exists=.env scripts/seed-schedule.ts",
     "fixtures": "tsx scripts/export-fixtures.ts && tsx scripts/export-schedule.ts",
+    "images": "tsx scripts/optimize-images.ts",
     "emails:preview": "tsx scripts/preview-emails.ts",
     "test-user": "tsx --env-file-if-exists=.env scripts/create-test-user.ts"
   },

@@ -21,3 +21,22 @@ export function expandSchedule(s: Schedule): { day: string; pieceId: string }[] 
     pieceId: s.order[i % s.order.length]!,
   }));
 }
+
+export interface ScheduledDay {
+  day: string;
+  pieceId: string;
+}
+
+/**
+ * Publish date per piece: its latest scheduled day on or before `today` (YYYY-MM-DD, the
+ * reader's calendar day). Pieces scheduled only in the future are absent, i.e. unpublished.
+ */
+export function publishDates(days: readonly ScheduledDay[], today: string): Map<string, string> {
+  const dates = new Map<string, string>();
+  for (const { day, pieceId } of days) {
+    if (day > today) continue;
+    const current = dates.get(pieceId);
+    if (!current || day > current) dates.set(pieceId, day);
+  }
+  return dates;
+}

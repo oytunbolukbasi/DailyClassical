@@ -64,9 +64,14 @@ Q1151 (Berlioz), Q7294 (Brahms), Q7315 (Tchaikovsky), Q7298 (Dvořák), Q7304 (M
 ## Shostakovich
 - Facts: https://en.wikipedia.org/wiki/Dmitri_Shostakovich · https://www.britannica.com/biography/Dmitri-Shostakovich · https://www.wikidata.org/wiki/Q80135
 - Cinema pianist after his father's death (1922). First Symphony premiered 1926 (aged 19); Bruno Walter (Berlin) and Stokowski (Philadelphia) soon took it up. *Pravda* editorial "Muddle Instead of Music", January 1936. Fifth Symphony 1937. Zhdanov decree 1948. Leningrad performance of the Seventh, 9 August 1942. Fifteen symphonies, fifteen string quartets.
-- Portrait: **null.** Candidates checked and rejected:
-  - File:Dmitri_Shostakovich_credit_Deutsche_Fotothek_adjusted.jpg — CC BY-SA 3.0 de (Roger & Renate Rössing, 1950). Free but not PD (attribution + share-alike). Best fallback if a CC BY-SA image is acceptable.
-  - File:Dmitry_Shostakovich_1940.jpg — CC BY 4.0 (Moscow Main Archive), not PD.
+- Portrait (added 2026-10-05): Leonid Dorensky, *Composer D. D. Shostakovich*, photograph, 1940, Moscow Main Archive (Главархив Москвы), published on mos.ru.
+  https://commons.wikimedia.org/wiki/File:Dmitry_Shostakovich_1940.jpg — 1600 × 1045 (landscape; 1045 px short side, good B/W print scan), **CC BY 4.0** (Commons template {{mos.ru|year=1940}}; source https://www.mos.ru/news/item/130209073/).
+  Commons extmetadata (checked 2026-10-05): Artist "Главархив Москвы / Леонид Доренский", Attribution "Mos.ru", LicenseShortName "CC BY 4.0", LicenseUrl https://creativecommons.org/licenses/by/4.0, AttributionRequired true.
+  - Why this one: no safely public-domain photo exists (see the rejected list below). Among the free ones it is CC BY (attribution only, no share-alike), so the app's cover crop and our resized copies raise no share-alike question; the CC BY-SA 3.0 de Fotothek photo would have been the fallback had this one been under ~900 px on the short side.
+  - Attribution shown after the composer-sheet caption (`credit_line` in composers.yaml): EN "Photo: Leonid Dorensky / Moscow Main Archive (mos.ru), CC BY 4.0", TR "Fotoğraf: Leonid Dorenski / Moskova Ana Arşivi (mos.ru), CC BY 4.0". The API/fixtures also carry `license` and `licenseUrl` so the app can link to the deed.
+  - Our copies are resized only (1600 × 1045 hero is the original size; 392 × 256 thumb); the on-screen 300 pt crop is display-only.
+- Other candidates checked and rejected:
+  - File:Dmitri_Shostakovich_credit_Deutsche_Fotothek_adjusted.jpg — CC BY-SA 3.0 de (Roger & Renate Rössing, 1950), 2146 × 2995. Free but share-alike. Fallback if the 1940 photo is ever withdrawn.
   - File:Shoskakovich_D.D.jpg (Vechernyaya Moskva, 1950) — PD in Russia only; URAA-restored in the US.
   - File:Dmitri-Shostakovich-1958.jpg (Holger Eklund, Finland 1958) — PD in Finland, but likely URAA-restored in the US; 360 × 540.
   - File:Dmitri_Shostakovich_June_1973.jpg (Chicago Tribune) and File:Rodzinski_shostakovich1_carnegie.jpg (1941 newspaper ad) — PD claims rest on missing notices and are doubtful; both are low-resolution scans.

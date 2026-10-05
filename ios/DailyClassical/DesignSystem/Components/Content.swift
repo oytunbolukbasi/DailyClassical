@@ -95,22 +95,54 @@ struct StripePlaceholder: View {
     }
 }
 
-/// A painting filling its frame (`cover`) with a focal point, over the stripe placeholder.
+/// A painting (or portrait) filling its frame: `.fill` is CSS `object-fit: cover` with `focus` as
+/// `object-position` (the share of the overflow cropped from the leading/top edge), `.fit` is
+/// centered. Shows the image's average colour (or the stripes, for unknown images) until it is
+/// decoded, then fades in. Use `variant: .thumb` for thumbnails of 64 pt and smaller.
 struct PaintingImage: View {
     let url: URL?
     var focus: UnitPoint = .center
     var contentMode: ContentMode = .fill
+    var variant: ImageVariant = .hero
 
     var body: some View {
-        StripePlaceholder()
+        placeholder
             .overlay {
-                AsyncImage(url: url, transaction: Transaction(animation: .easeOut(duration: 0.25))) { phase in
-                    if let image = phase.image {
-                        image.resizable().aspectRatio(contentMode: contentMode)
+                GeometryReader { geo in
+                    CachedImage(url: url, variant: variant) { image in
+                        let rect = Self.rect(for: image.size, in: geo.size, focus: focus, mode: contentMode)
+                        Image(uiImage: image)
+                            .resizable()
+                            .frame(width: rect.width, height: rect.height)
+                            .offset(x: rect.minX, y: rect.minY)
+                    } placeholder: {
+                        Color.clear
                     }
+                    .frame(width: geo.size.width, height: geo.size.height, alignment: .topLeading)
                 }
             }
             .clipped()
+    }
+
+    @ViewBuilder private var placeholder: some View {
+        if let color = ImagePipeline.shared.placeholderColor(for: url) {
+            color.accessibilityHidden(true)
+        } else {
+            StripePlaceholder()
+        }
+    }
+
+    /// Where an image of `size` is drawn inside `frame`.
+    static func rect(for size: CGSize, in frame: CGSize, focus: UnitPoint, mode: ContentMode) -> CGRect {
+        guard size.width > 0, size.height > 0, frame.width > 0, frame.height > 0 else { return CGRect(origin: .zero, size: frame) }
+        let scale = mode == .fill
+            ? max(frame.width / size.width, frame.height / size.height)
+            : min(frame.width / size.width, frame.height / size.height)
+        let drawn = CGSize(width: size.width * scale, height: size.height * scale)
+        let fx = mode == .fill ? min(max(focus.x, 0), 1) : 0.5
+        let fy = mode == .fill ? min(max(focus.y, 0), 1) : 0.5
+        return CGRect(x: (frame.width - drawn.width) * fx, y: (frame.height - drawn.height) * fy,
+                      width: drawn.width, height: drawn.height)
     }
 }
 

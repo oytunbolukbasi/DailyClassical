@@ -1,0 +1,5 @@
+{
+  "widget.name": {"en": "Today’s piece", "tr": "Günün eseri"},
+  "widget.description": {"en": "Today’s symphony and its painting.", "tr": "Günün senfonisi ve tablosu."},
+  "widget.today %@": {"en": "Today · %@", "tr": "Bugün · %@"}
+}

@@ -7,7 +7,7 @@ struct PieceThumbnail: View {
     var radius: CGFloat = Radius.thumbM
 
     var body: some View {
-        PaintingImage(url: url)
+        PaintingImage(url: url, variant: .thumb)
             .frame(width: size, height: size)
             .clipShape(.rect(cornerRadius: radius, style: .continuous))
             .accessibilityHidden(true)

@@ -13,13 +13,9 @@ struct ArtworkViewer: View {
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
-            AsyncImage(url: painting.imageUrl) { phase in
-                if let image = phase.image {
-                    image.resizable().aspectRatio(contentMode: .fit)
-                } else {
-                    ProgressView().tint(Palette.viewerInk2)
-                }
-            }
+            // Bundled/cached hero via ImagePipeline: instant for launch content, works offline.
+            CachedImage(url: painting.imageUrl) { Image(uiImage: $0).resizable().aspectRatio(contentMode: .fit) }
+                placeholder: { ProgressView().tint(Palette.viewerInk2) }
             .scaleEffect(scale)
             .offset(offset)
             .gesture(zoom.simultaneously(with: pan))

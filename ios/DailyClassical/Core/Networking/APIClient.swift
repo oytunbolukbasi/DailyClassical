@@ -30,15 +30,28 @@ nonisolated struct APIClient: Sendable {
 
     // MARK: Content
 
+    /// "YYYY-MM-DD" for the user's calendar day containing `date`.
+    static func day(_ date: Date = .now) -> String {
+        date.formatted(Date.ISO8601FormatStyle(timeZone: .current).year().month().day())
+    }
+
     func today(date: Date = .now, language: String) async throws -> TodayResponse {
-        let day = date.formatted(Date.ISO8601FormatStyle(timeZone: .current).year().month().day())  // the user's calendar day
+        let day = Self.day(date)
         return try await get("v1/today", query: ["date": day], language: language, cacheKey: "today-\(day)")
     }
 
-    func pieces(language: String) async throws -> [PieceSummary] {
+    /// Pieces published on or before `day`, newest first, each with its `publishDate`.
+    func pieces(day: String, language: String) async throws -> [PieceSummary] {
         struct R: Decodable { let pieces: [PieceSummary] }
-        let r: R = try await get("v1/pieces", language: language, cacheKey: "pieces")
+        let r: R = try await get("v1/pieces", query: ["date": day], language: language, cacheKey: "pieces")
         return r.pieces
+    }
+
+    /// Scheduled days up to and including `until`, oldest first.
+    func schedule(until day: String, language: String) async throws -> [ScheduledDay] {
+        struct R: Decodable { let days: [ScheduledDay] }
+        let r: R = try await get("v1/schedule", query: ["until": day], language: language, cacheKey: "schedule")
+        return r.days
     }
 
     func piece(id: String, language: String) async throws -> Piece {

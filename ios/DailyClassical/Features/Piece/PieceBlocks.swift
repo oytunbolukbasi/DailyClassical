@@ -1,9 +1,12 @@
 import Foundation
 
-/// The piece page flattened into one list of blocks, so a single lazy stack can report
-/// which block sits at the centre of the screen (reading focus, current movement) and
-/// jump to any movement.
-enum PieceBlock: Hashable, Identifiable {
+/// The piece page flattened into one list of blocks, so a single stack can track where
+/// each block sits (reading focus, current movement) and jump to any movement.
+///
+/// `nonisolated`: a plain value. Under the project's default MainActor isolation its
+/// `Hashable` conformance would otherwise be main-actor-isolated, and the runtime traps
+/// (as with the colour providers) if SwiftUI ever hashes or compares an id off the main thread.
+nonisolated enum PieceBlock: Hashable, Identifiable, Sendable {
     case header
     case bigPicture
     case movementsTable

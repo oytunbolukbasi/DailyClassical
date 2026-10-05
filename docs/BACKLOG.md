@@ -2,6 +2,16 @@
 
 Open work after the scaffold (state on 5 Oct 2026). Owner in brackets.
 
+## Done on 5–6 Oct 2026 (device feedback)
+- Widgets (small / medium / large, light, dark, tinted) built to the approved canvas design; offline, refresh at midnight, follow the app language, tap opens the piece.
+- Today: layout A (painting fills the screen, text anchored above the tab bar, 30 pt title); swipe between published days.
+- Piece page: movement switcher and Movements table jump reliably; fast-scroll crash fixed (Palette colour provider ran on SwiftUI's async render thread).
+- Images: optimized (70 MB → 5.4 MB), bundled, disk-cached, thumbnails in lists; Shostakovich portrait (CC BY 4.0, credited).
+- Search: stray line removed, idle hint, recent searches persist; Settings: "Text size" row removed; Library: Glossary chip beside All / Favourites.
+
+## Test data to reset before launch
+- `content/schedule.yaml` starts on 2026-10-01 so past days can be swiped; set `start` to launch day and re-run `npm run db:seed && npm run fixtures`.
+
 ## Next up (engineering)
 1. [Claude] Dark mode + Reduce Transparency visual pass against the canvas (every screen is drawn dark in `design/DailyClassical2.html`).
 2. [Claude] Signed-in screens visual pass: Favourites list, Account, premium Search results. Needs a reachable API (Railway domain or local `npm run dev`).

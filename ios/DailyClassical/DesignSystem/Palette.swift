@@ -3,7 +3,12 @@ import UIKit
 
 /// Colour tokens from design/SPEC.md §2.1. Paper in light, ink in dark; umber is the
 /// single accent and is reserved for text, links, glossary terms and the saved heart.
-enum Palette {
+///
+/// `nonisolated`: SwiftUI resolves colours on its async render thread while scrolling fast.
+/// Under the project's default MainActor isolation the trait-provider closure would be
+/// main-actor-bound, and Swift's runtime isolation check traps (EXC_BREAKPOINT) when the
+/// render thread calls it. The closure only reads the trait collection, so it is thread-safe.
+nonisolated enum Palette {
     static let background = dynamic(0xF5F2EC, 0x111010)          // --bg
     static let surface = dynamic(0xFFFFFF, 0x1C1A18)             // --surface: cards, grouped lists
     static let ink = dynamic(0x1E1B17, 0xF0EBE3)                 // --ink
@@ -24,13 +29,13 @@ enum Palette {
     static let viewerInk2 = Color(red: 0xB3 / 255, green: 0xAB / 255, blue: 0xA1 / 255)
 
     private static func dynamic(_ light: UInt32, _ dark: UInt32, alpha: CGFloat = 1) -> Color {
-        Color(uiColor: UIColor { traits in
+        Color(uiColor: UIColor { @Sendable traits in
             UIColor(hex: traits.userInterfaceStyle == .dark ? dark : light, alpha: alpha)
         })
     }
 }
 
-private extension UIColor {
+nonisolated private extension UIColor {
     convenience init(hex: UInt32, alpha: CGFloat) {
         self.init(
             red: CGFloat((hex >> 16) & 0xFF) / 255,

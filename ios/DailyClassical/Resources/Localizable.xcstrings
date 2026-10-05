@@ -3373,6 +3373,24 @@
         }
       }
     },
+    "search.idle.hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search pieces, composers and glossary terms."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eserlerde, bestecilerde ve sözlük terimlerinde arayın."
+          }
+        }
+      },
+      "comment": "Search tab, idle with no recent searches"
+    },
     "search.locked.body": {
       "extractionState": "manual",
       "localizations": {
@@ -3870,125 +3888,6 @@
         }
       }
     },
-    "settings.textSize": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Text size"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Metin boyutu"
-          }
-        }
-      }
-    },
-    "settings.textSize.current": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Current size"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Geçerli boyut"
-          }
-        }
-      }
-    },
-    "settings.textSize.current.accessibility": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Accessibility size"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Erişilebilirlik boyutu"
-          }
-        }
-      }
-    },
-    "settings.textSize.followsSystem": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Follows system"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Sistemi izler"
-          }
-        }
-      }
-    },
-    "settings.textSize.footer": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DailyClassical follows the text size you choose for your iPhone. To change it, go to Settings › Accessibility › Display & Text Size › Larger Text."
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "DailyClassical, iPhone’unuz için seçtiğiniz metin boyutunu izler. Değiştirmek için Ayarlar › Erişilebilirlik › Ekran ve Metin Boyutu › Daha Büyük Metin bölümüne gidin."
-          }
-        }
-      }
-    },
-    "settings.textSize.sample": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "A symphony that ends not in triumph but in silence. Reading text grows and shrinks with your iPhone’s text size."
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Zaferle değil, sessizlikle biten bir senfoni. Okuma metni, iPhone’unuzun metin boyutuyla birlikte büyür ve küçülür."
-          }
-        }
-      }
-    },
-    "settings.textSize.sample.label": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Preview"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Önizleme"
-          }
-        }
-      }
-    },
     "settings.theme": {
       "extractionState": "manual",
       "localizations": {
@@ -4298,6 +4197,23 @@
         }
       }
     },
+    "today.day.offline.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This day’s piece will appear as soon as you reconnect."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu günün eseri bağlantı gelir gelmez burada olacak."
+          }
+        }
+      }
+    },
     "today.meta %@ %lld %lld": {
       "extractionState": "manual",
       "localizations": {
@@ -4314,6 +4230,24 @@
           }
         }
       }
+    },
+    "today.nextDay": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next day"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sonraki gün"
+          }
+        }
+      },
+      "comment": "VoiceOver action on Today: show the piece of the following day (never past today)"
     },
     "today.painting.accessibilityLabel %@ %@": {
       "extractionState": "manual",
@@ -4332,6 +4266,24 @@
         }
       }
     },
+    "today.previousDay": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Previous day"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Önceki gün"
+          }
+        }
+      },
+      "comment": "VoiceOver action on Today: show the piece of the day before"
+    },
     "today.startListening": {
       "extractionState": "manual",
       "localizations": {
@@ -4345,6 +4297,57 @@
           "stringUnit": {
             "state": "translated",
             "value": "Dinlemeye başla"
+          }
+        }
+      }
+    },
+    "widget.description": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today’s symphony and its painting."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Günün senfonisi ve tablosu."
+          }
+        }
+      }
+    },
+    "widget.name": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today’s piece"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Günün eseri"
+          }
+        }
+      }
+    },
+    "widget.today %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today · %@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugün · %@"
           }
         }
       }

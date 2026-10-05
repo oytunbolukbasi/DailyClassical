@@ -15,8 +15,12 @@
 #     source_url  The Commons file page (licence template, provenance).
 #     width/height  Pixel size of the original Commons file.
 #     license     Licence of the image file.
+#     license_url Licence deed URL; set for freely licensed (non-PD) images.
+#     credit_line {en, tr}: required attribution text for non-PD images; the app shows it after the caption.
 #     focal_y     0–1, vertical object-position for the 300 pt cover crop (CSS semantics: the share
 #                 of the overflow cropped from the top), chosen so the face stays in frame.
+#     hero/thumb, placeholder_color  Written by `npm run images` (backend/): our optimized copies in
+#                 backend/public/images/composers/<id>-hero|thumb.jpg and the image's average colour.
 # Sources: content/research/composers-sources.md (checked 2026-10-04).
 
 - id: mozart
@@ -58,6 +62,9 @@
     height: 1784
     license: Public domain (PD-Art, PD-old-100)
     focal_y: 0.3
+    hero: { width: 1080, height: 1332, bytes: 150938 }
+    thumb: { width: 256, height: 316, bytes: 15709 }
+    placeholder_color: "#5d4028"
 
 - id: beethoven
   match: Ludwig van Beethoven
@@ -98,6 +105,9 @@
     height: 5389
     license: Public domain (PD-Art, PD-old-100)
     focal_y: 0.2
+    hero: { width: 1080, height: 1344, bytes: 268007 }
+    thumb: { width: 256, height: 319, bytes: 22283 }
+    placeholder_color: "#2e2821"
 
 - id: schubert
   match: Franz Schubert
@@ -138,6 +148,9 @@
     height: 710
     license: Public domain (PD-Art, PD-old-100)
     focal_y: 0.15
+    hero: { width: 583, height: 710, bytes: 47899 }
+    thumb: { width: 256, height: 312, bytes: 18345 }
+    placeholder_color: "#5e4237"
 
 - id: berlioz
   match: Hector Berlioz
@@ -178,6 +191,9 @@
     height: 1238
     license: Public domain (PD-Art, PD-old-100)
     focal_y: 0.3
+    hero: { width: 1000, height: 1238, bytes: 248283 }
+    thumb: { width: 256, height: 317, bytes: 24499 }
+    placeholder_color: "#22241f"
 
 - id: brahms
   match: Johannes Brahms
@@ -218,6 +234,9 @@
     height: 1914
     license: Public domain (photograph published before 1931; PD-old-70)
     focal_y: 0.2
+    hero: { width: 1080, height: 1414, bytes: 263304 }
+    thumb: { width: 256, height: 335, bytes: 20068 }
+    placeholder_color: "#787878"
 
 - id: tchaikovsky
   match: Pyotr Ilyich Tchaikovsky
@@ -258,6 +277,9 @@
     height: 2466
     license: Public domain (PD-Art, PD-old-95, PD-US-expired)
     focal_y: 0.18
+    hero: { width: 1080, height: 1387, bytes: 187835 }
+    thumb: { width: 256, height: 329, bytes: 20018 }
+    placeholder_color: "#252623"
 
 - id: dvorak
   match: Antonín Dvořák
@@ -298,6 +320,9 @@
     height: 2600
     license: Public domain (anonymous photograph, 1882; PD-old-70, PD-US-expired)
     focal_y: 0.2
+    hero: { width: 1080, height: 1337, bytes: 486468 }
+    thumb: { width: 256, height: 317, bytes: 22057 }
+    placeholder_color: "#b5b5b5"
 
 - id: mahler
   match: Gustav Mahler
@@ -338,6 +363,9 @@
     height: 2000
     license: Public domain (PD-Art, PD-old-80)
     focal_y: 0.45
+    hero: { width: 1080, height: 1646, bytes: 437705 }
+    thumb: { width: 256, height: 390, bytes: 35916 }
+    placeholder_color: "#744f3a"
 
 - id: shostakovich
   match: Dmitri Shostakovich
@@ -367,7 +395,22 @@
       Hayatı Sovyet siyasetiyle iç içe geçti. 1936’da Komünist Parti’nin gazetesi *Pravda*, *Mtsensk İlçesinin Lady Macbeth’i* operasını “müzik yerine karmaşa” diye yerden yere vurdu; Stalin’in büyük temizliğinin tam ortasında bu tehlikeli bir suçlamaydı. Şostakoviç 1937’de Beşinci Senfonisi’yle yanıt verdi ve eser uzun bir alkışla karşılandı. 1948’de yeniden kınandı ve yıllarca en kişisel eserlerinden bazılarını çekmecede sakladı.
 
       İkinci Dünya Savaşı sırasında Yedinci Senfonisi, *Leningrad*, direnişin simgesi oldu; 1942’de kuşatma altındaki şehrin kendisinde bile seslendirildi. On beş senfoni ve on beş yaylı dörtlü yazdı: bir an acımasızca alaycı, bir sonraki an ıssız bir müzik. Müziğinin ne söylemek istediği bugün hâlâ tartışılıyor; belki de gücünün bir parçası buradan geliyor. 1975’te Moskova’da öldü.
-  # No safely public-domain portrait: Soviet-era photos are mostly still protected in the US (URAA),
-  # the Deutsche Fotothek photo is CC BY-SA 3.0 de, and the PD-claimed US newspaper scans are doubtful.
-  # See content/research/composers-sources.md.
-  portrait: null
+  # No safely public-domain portrait exists (Soviet-era photos are mostly still protected in the US
+  # under the URAA), so this is a freely licensed one: CC BY 4.0, attribution only (no share-alike),
+  # credited via credit_line wherever it is shown. See content/research/composers-sources.md.
+  portrait:
+    artist: { en: Leonid Dorensky, tr: Leonid Dorenski }
+    title: { en: Composer D. D. Shostakovich, tr: Besteci D. D. Şostakoviç }
+    year: "1940"
+    collection: null
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Dmitry_Shostakovich_1940.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Dmitry_Shostakovich_1940.jpg
+    width: 1600
+    height: 1045
+    license: CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0/
+    credit_line: { en: "Photo: Leonid Dorensky / Moscow Main Archive (mos.ru), CC BY 4.0", tr: "Fotoğraf: Leonid Dorenski / Moskova Ana Arşivi (mos.ru), CC BY 4.0" }
+    focal_y: 0.3
+    hero: { width: 1600, height: 1045, bytes: 303991 }
+    thumb: { width: 392, height: 256, bytes: 30560 }
+    placeholder_color: "#737373"

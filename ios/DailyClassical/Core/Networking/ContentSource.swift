@@ -5,14 +5,18 @@ import Foundation
 /// running the app before the API is deployed.
 struct ContentSource: Sendable {
     var today: @Sendable (_ language: String) async throws -> Piece
-    var pieces: @Sendable (_ language: String) async throws -> [PieceSummary]
+    /// Pieces published on or before `day` (YYYY-MM-DD), each with its `publishDate`.
+    var pieces: @Sendable (_ language: String, _ day: String) async throws -> [PieceSummary]
+    /// Scheduled days up to and including `day`, oldest first.
+    var schedule: @Sendable (_ language: String, _ day: String) async throws -> [ScheduledDay]
     var piece: @Sendable (_ id: String, _ language: String) async throws -> Piece
     var glossary: @Sendable (_ language: String) async throws -> [GlossaryTerm]
     var composers: @Sendable (_ language: String) async throws -> [Composer]
 
     static let api = ContentSource(
         today: { try await APIClient.shared.today(language: $0).piece },
-        pieces: { try await APIClient.shared.pieces(language: $0) },
+        pieces: { try await APIClient.shared.pieces(day: $1, language: $0) },
+        schedule: { try await APIClient.shared.schedule(until: $1, language: $0) },
         piece: { try await APIClient.shared.piece(id: $0, language: $1) },
         glossary: { try await APIClient.shared.glossary(language: $0) },
         composers: { try await APIClient.shared.composers(language: $0) }
@@ -22,11 +26,27 @@ struct ContentSource: Sendable {
         today: { language in
             // Same plan as the API's daily_schedule (content/schedule.yaml).
             let schedule = try Fixtures.load(Fixtures.Schedule.self, "schedule", language)
-            let day = Date.now.formatted(Date.ISO8601FormatStyle(timeZone: .current).year().month().day())
-            let id = schedule.days[day] ?? schedule.order[0]
+            let id = schedule.days[APIClient.day()] ?? schedule.order[0]
             return try Fixtures.load(Piece.self, "piece-\(id)", language)
         },
-        pieces: { try Fixtures.load([PieceSummary].self, "pieces", $0) },
+        pieces: { language, day in
+            // Publish date = each piece's latest scheduled day up to `day`, as the API computes it.
+            let schedule = try Fixtures.load(Fixtures.Schedule.self, "schedule", language)
+            var dates: [String: String] = [:]
+            for (date, id) in schedule.days where date <= day && date > (dates[id] ?? "") { dates[id] = date }
+            return try Fixtures.load([PieceSummary].self, "pieces", language).compactMap { piece in
+                guard let date = dates[piece.id] else { return nil }
+                var piece = piece
+                piece.publishDate = date
+                return piece
+            }
+        },
+        schedule: { language, day in
+            let schedule = try Fixtures.load(Fixtures.Schedule.self, "schedule", language)
+            return schedule.days.filter { $0.key <= day }
+                .map { ScheduledDay(day: $0.key, pieceId: $0.value) }
+                .sorted { $0.day < $1.day }
+        },
         piece: { try Fixtures.load(Piece.self, "piece-\($0)", $1) },
         glossary: { try Fixtures.load([GlossaryTerm].self, "glossary", $0) },
         composers: { try Fixtures.load([Composer].self, "composers", $0) }
@@ -39,6 +59,13 @@ struct ContentSource: Sendable {
         .api
         #endif
     }
+}
+
+/// One day of the published plan: Today pages back through these.
+nonisolated struct ScheduledDay: Codable, Hashable, Sendable {
+    /// "YYYY-MM-DD" in the reader's calendar.
+    let day: String
+    let pieceId: String
 }
 
 nonisolated enum Fixtures {

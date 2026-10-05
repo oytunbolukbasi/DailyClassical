@@ -14,6 +14,9 @@
 #                 by age, with the Malevich caveat noted in its rights_flag).
 #   credit_line   Text to show wherever the image is credited.
 #   rights_status public_domain | unverified | restricted (paintings.rights_status in the DB).
+#   hero / thumb  Written by `npm run images` (backend/): pixel size + bytes of our optimized JPEG copies
+#                 (backend/public/images/paintings/<id>-hero|thumb.jpg, served at /images, bundled in the app).
+#   placeholder_color  Average colour of the image (also by `npm run images`), shown while it loads.
 #
 # Source: content/research/verification-1-5.md and verification-6-10.md (checked 2026-10-04).
 # NC-licensed images (e.g. the Staatliche Museen zu Berlin's own CC BY-NC-SA photos) are deliberately not used.
@@ -28,6 +31,9 @@ mozart-symphony-40:
   license: Public domain (PD-Art)
   credit_line: Claude-Joseph Vernet, A Shipwreck in Stormy Seas, 1773. National Gallery, London (NG6601). Image via Wikimedia Commons, public domain.
   rights_status: public_domain
+  hero: { width: 1547, height: 1080, bytes: 222149 }
+  thumb: { width: 367, height: 256, bytes: 24976 }
+  placeholder_color: "#2f2a22"
 
 beethoven-symphony-5:
   # Yorck Project scan, 1536 px on the long side (exact size not recorded). No clean hi-res open scan was
@@ -36,12 +42,15 @@ beethoven-symphony-5:
   image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Mallord_William_Turner_081.jpg
   source_url: https://www.tate.org.uk/art/artworks/turner-snow-storm-hannibal-and-his-army-crossing-the-alps-n00490
   commons_page: https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_081.jpg
-  width: null
-  height: null
+  width: 1536
+  height: 942
   medium: null
   license: Public domain (PD-Art, The Yorck Project)
   credit_line: J. M. W. Turner, Snow Storm - Hannibal and his Army Crossing the Alps, exhibited 1812. Tate, London (N00490). Image via Wikimedia Commons, public domain.
   rights_status: public_domain
+  hero: { width: 1536, height: 942, bytes: 218966 }
+  thumb: { width: 417, height: 256, bytes: 29931 }
+  placeholder_color: "#7c7868"
 
 beethoven-symphony-9:
   # Public-domain gallery photo. A larger 3650 × 4633 file exists but is CC BY 4.0 (attribution needed):
@@ -55,6 +64,9 @@ beethoven-symphony-9:
   license: Public domain
   credit_line: Philipp Otto Runge, Der Morgen (erste Fassung), 1808. Hamburger Kunsthalle (HK-1016). Image via Wikimedia Commons, public domain.
   rights_status: public_domain
+  hero: { width: 1080, height: 1365, bytes: 227951 }
+  thumb: { width: 256, height: 324, bytes: 31198 }
+  placeholder_color: "#80736b"
 
 schubert-symphony-8:
   # The SMB museum photo is CC BY-NC-SA, so it is not used. A CC0 5138 × 3499 alternative exists:
@@ -68,6 +80,9 @@ schubert-symphony-8:
   license: Public domain (PD-Art, Google Art Project)
   credit_line: Caspar David Friedrich, Abtei im Eichwald (The Abbey in the Oakwood), 1809–1810. Alte Nationalgalerie, Staatliche Museen zu Berlin (NG 8/85). Image via Wikimedia Commons, public domain.
   rights_status: public_domain
+  hero: { width: 1686, height: 1080, bytes: 248554 }
+  thumb: { width: 400, height: 256, bytes: 21396 }
+  placeholder_color: "#5f5449"
 
 berlioz-symphonie-fantastique:
   # Very wide (≈ 3.1:1): plan the crop. Larger Yorck scan 5120 × 1600: File:Witches%27_Sabbath_by_Goya.jpg
@@ -80,6 +95,9 @@ berlioz-symphonie-fantastique:
   license: Public domain
   credit_line: Francisco de Goya, Witches' Sabbath, or the Great He-Goat, 1820–1823. Museo Nacional del Prado, Madrid (P000761). Image via Wikimedia Commons, public domain.
   rights_status: public_domain
+  hero: { width: 1800, height: 570, bytes: 223408 }
+  thumb: { width: 640, height: 203, bytes: 46776 }
+  placeholder_color: "#413421"
 
 brahms-symphony-4:
   image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Arnold_B%C3%B6cklin_-_Die_Toteninsel_III_(Alte_Nationalgalerie,_Berlin).jpg
@@ -91,6 +109,9 @@ brahms-symphony-4:
   license: Public domain (PD-Art; Public Domain Mark 1.0 at SMB)
   credit_line: Arnold Böcklin, Die Toteninsel (third version), 1883. Alte Nationalgalerie, Staatliche Museen zu Berlin (NG 2/80). Image via Wikimedia Commons, public domain.
   rights_status: public_domain
+  hero: { width: 1800, height: 959, bytes: 250658 }
+  thumb: { width: 481, height: 256, bytes: 34230 }
+  placeholder_color: "#655e5d"
 
 tchaikovsky-symphony-6:
   # The Tretyakov states no open licence. Smaller alternative 2000 × 1434: File:Levitan_nad_vech_pok28.jpg
@@ -103,6 +124,9 @@ tchaikovsky-symphony-6:
   license: Public domain (PD-Art)
   credit_line: Isaac Levitan, Above Eternal Peace, 1894. State Tretyakov Gallery, Moscow (inv. 1486). Image via Wikimedia Commons, public domain.
   rights_status: public_domain
+  hero: { width: 1476, height: 1080, bytes: 309572 }
+  thumb: { width: 350, height: 256, bytes: 23257 }
+  placeholder_color: "#797d63"
 
 dvorak-symphony-9:
   # SAAM record is reported as Smithsonian Open Access CC0 (seen in a search snippet only; si.edu returned 403).
@@ -115,6 +139,9 @@ dvorak-symphony-9:
   license: Public domain (PD-Art, Google Art Project); museum record Smithsonian Open Access CC0
   credit_line: Albert Bierstadt, Among the Sierra Nevada, California, 1868. Smithsonian American Art Museum, Bequest of Helen Huntington Hull (1977.107.1). Image via Wikimedia Commons, public domain.
   rights_status: public_domain
+  hero: { width: 1800, height: 1076, bytes: 306188 }
+  thumb: { width: 428, height: 256, bytes: 29368 }
+  placeholder_color: "#78665a"
 
 mahler-symphony-5:
   image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Gustav_Klimt_-_Death_and_Life_-_Google_Art_Project.jpg
@@ -126,6 +153,9 @@ mahler-symphony-5:
   license: Public domain (PD-Art, Google Art Project)
   credit_line: Gustav Klimt, Death and Life, 1910/11, reworked 1912/13 and 1915/16. Leopold Museum, Vienna (Inv. 630). Image via Wikimedia Commons, public domain.
   rights_status: public_domain
+  hero: { width: 1241, height: 1080, bytes: 301510 }
+  thumb: { width: 294, height: 256, bytes: 34007 }
+  placeholder_color: "#5f5c57"
 
 shostakovich-symphony-5:
   # Low resolution only (1370 × 1800). Commons tag {{PD-Art|PD-old-auto|deathyear=1935}}, no US-specific tag.
@@ -140,3 +170,6 @@ shostakovich-symphony-5:
   license: Public domain (PD-Art, PD-old-auto; artist d. 1935)
   credit_line: Kazimir Malevich, Torso in a Yellow Shirt (Complicated Premonition), c. 1932. State Russian Museum, St Petersburg (Ж-9477). Image via Wikimedia Commons, public domain.
   rights_status: unverified
+  hero: { width: 1080, height: 1419, bytes: 220348 }
+  thumb: { width: 256, height: 336, bytes: 19537 }
+  placeholder_color: "#717a77"

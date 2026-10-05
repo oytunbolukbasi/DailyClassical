@@ -46,11 +46,6 @@ struct SettingsScreen: View {
                     }
                     .settingsRow()
 
-                    NavigationLink { TextSizeScreen() } label: {
-                        SettingsValueRow("settings.textSize", value: Text("settings.textSize.followsSystem"))
-                    }
-                    .settingsRow()
-
                     NavigationLink {
                         OptionPickerScreen(
                             title: Text("settings.language"),

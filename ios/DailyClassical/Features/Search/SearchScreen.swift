@@ -73,6 +73,9 @@ private struct PremiumSearchView: View {
                     if !results.terms.isEmpty { glossarySection(results.terms, q) }
                 }
             }
+            // Full width even when empty: otherwise the scroll view hugs the 48 pt of padding and
+            // paints a stray band of page colour across the white screen.
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, Spacing.pageGutter)
             .padding(.top, 22)  // SPEC §4.12: results 22 below the search row
             .padding(.bottom, 40)
@@ -87,7 +90,9 @@ private struct PremiumSearchView: View {
         }
         .scrollDismissesKeyboard(.interactively)
         .background(Palette.background)
-        .searchable(text: $query, prompt: Text("search.placeholder"))
+        // Always-visible field at the top (SPEC §4.12 draws it there); it never hides on scroll.
+        .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: Text("search.placeholder"))
+        .searchPresentationToolbarBehavior(.avoidHidingContent)
         .autocorrectionDisabled()
         .onSubmit(of: .search) { remember(q) }
     }
@@ -95,7 +100,13 @@ private struct PremiumSearchView: View {
     // MARK: Sections
 
     @ViewBuilder private var recentSection: some View {
-        if !recents.isEmpty {
+        if recents.isEmpty {
+            Text("search.idle.hint")
+                .font(Typography.body15)
+                .lineHeight(1.5)
+                .foregroundStyle(Palette.ink3)
+                .fixedSize(horizontal: false, vertical: true)
+        } else {
             VStack(alignment: .leading, spacing: 8) {
                 HStack(alignment: .firstTextBaseline) {
                     SectionLabel("search.recent")

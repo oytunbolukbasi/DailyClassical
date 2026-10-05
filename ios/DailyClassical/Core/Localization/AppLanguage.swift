@@ -1,5 +1,6 @@
 import Foundation
 import Observation
+import WidgetKit
 
 /// The app ships in English and Turkish. The user can follow the system language or
 /// pin one in Settings; the choice drives both UI strings (via `\.locale`) and the
@@ -40,11 +41,19 @@ final class LanguageSettings {
     private static let key = "appLanguage"
 
     var language: AppLanguage {
-        didSet { UserDefaults.standard.set(language.rawValue, forKey: Self.key) }
+        didSet {
+            UserDefaults.standard.set(language.rawValue, forKey: Self.key)
+            // Widgets read the choice from the shared App Group and redraw in the new language.
+            UserDefaults(suiteName: Self.appGroup)?.set(language.rawValue, forKey: Self.key)
+            WidgetCenter.shared.reloadAllTimelines()
+        }
     }
+
+    static let appGroup = "group.co.dailyclassical"
 
     init() {
         language = UserDefaults.standard.string(forKey: Self.key).flatMap(AppLanguage.init(rawValue:)) ?? .system
+        UserDefaults(suiteName: Self.appGroup)?.set(language.rawValue, forKey: Self.key)
     }
 
     var code: String { language.resolvedCode }

@@ -3,7 +3,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parse as parseYaml } from "yaml";
 import { normalizeRich, slugify } from "../src/content/parse.js";
-import { composerResponse } from "../src/content/repository.js";
+import { composerResponse, imageFields } from "../src/content/repository.js";
 import type { PaintingAsset, ParsedContent, RecordingMeta } from "../src/content/types.js";
 
 /**
@@ -65,8 +65,8 @@ for (const locale of ["en", "tr"]) {
       painting: {
         artist: base.painting.artist, title: m.painting.title, yearLabel: m.painting.year,
         collection: m.painting.collection, pairingNote: m.painting.pairingNote, medium: asset.medium ?? null,
-        imageUrl: asset.image_url ?? null, sourceUrl: asset.source_url ?? null,
-        width: asset.width ?? null, height: asset.height ?? null,
+        ...imageFields(`paintings/${base.id}`, { imageUrl: asset.image_url ?? null, width: asset.width ?? null, height: asset.height ?? null }),
+        sourceUrl: asset.source_url ?? null,
         rightsStatus: asset.rights_status ?? (base.painting.rightsFlag ? "unverified" : "public_domain"),
       },
     };
@@ -94,6 +94,7 @@ for (const locale of ["en", "tr"]) {
         : null,
       bio: bio ? normalizeRich(bio) : null,
       portraitCaption: p && artist && title ? { artist, title, collection: loc(p.collection, locale) } : null,
+      locale,
     });
   }).sort((a, b) => a.shortName.localeCompare(b.shortName, locale))));
 
