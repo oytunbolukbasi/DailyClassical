@@ -17,7 +17,19 @@ final class EntitlementStore {
     private(set) var activePlan: Plan?
     /// Complimentary Premium on the signed-in account (set from SessionStore).
     var accountPremium = false
-    var isPremium: Bool { activePlan != nil || accountPremium }
+    var isPremium: Bool { activePlan != nil || accountPremium || Self.debugUnlock }
+
+    /// Debug builds unlock Premium so content can be reviewed on a device without an account
+    /// or a server. Turn off to test the free experience:
+    ///   xcrun simctl spawn booted defaults write co.dailyclassical.app debugPremium -bool NO
+    /// Release builds never take this path.
+    static var debugUnlock: Bool {
+        #if DEBUG
+        UserDefaults.standard.object(forKey: "debugPremium") as? Bool ?? true
+        #else
+        false
+        #endif
+    }
 
     @ObservationIgnored private var updates: Task<Void, Never>?
 
