@@ -1,4 +1,5 @@
 import SwiftUI
+import WidgetKit
 
 @main
 struct DailyClassicalApp: App {
@@ -24,6 +25,8 @@ struct DailyClassicalApp: App {
                 .tint(Palette.accent)
                 .task(id: language.code) { await content.reload(language: language.code) }
                 .task {
+                    // Widgets read bundled content; refresh them whenever the app (and its content) changes.
+                    WidgetCenter.shared.reloadAllTimelines()
                     await session.refreshAccount()
                     await session.refreshFavourites()
                 }

@@ -84,8 +84,17 @@ struct TodayWidgetView: View {
 
     // MARK: Parts
 
+    /// Pixel budget per family on 3× screens: the widget's width/height in points × 3.
+    private var maxPixel: CGFloat {
+        switch family {
+        case .systemSmall: 520
+        case .systemMedium: 620
+        default: 1100
+        }
+    }
+
     @ViewBuilder private var painting: some View {
-        if let image = entry.image {
+        if let url = entry.imageURL, let image = WidgetData.painting(at: url, maxPixel: maxPixel) {
             Image(uiImage: image)
                 .resizable()
                 .widgetAccentedRenderingMode(.desaturated)

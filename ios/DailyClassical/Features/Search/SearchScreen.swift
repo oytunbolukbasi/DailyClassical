@@ -91,7 +91,9 @@ private struct PremiumSearchView: View {
         .scrollDismissesKeyboard(.interactively)
         .background(Palette.background)
         // Always-visible field at the top (SPEC §4.12 draws it there); it never hides on scroll.
-        .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: Text("search.placeholder"))
+        // Default placement: in a Tab(role: .search) iOS 26 puts the field at the bottom, where the
+        // search tab button was, always visible. (.navigationBarDrawer forced it to the top on device.)
+        .searchable(text: $query, prompt: Text("search.placeholder"))
         .searchPresentationToolbarBehavior(.avoidHidingContent)
         .autocorrectionDisabled()
         .onSubmit(of: .search) { remember(q) }

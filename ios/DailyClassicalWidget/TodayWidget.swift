@@ -4,7 +4,8 @@ import WidgetKit
 struct TodayEntry: TimelineEntry {
     let date: Date
     let piece: WidgetPiece?
-    let image: UIImage?
+    /// Bundled artwork file; decoded by the view at render time (see WidgetData.painting).
+    let imageURL: URL?
     let inOneLine: String?
     let language: String
 }
@@ -16,12 +17,13 @@ struct TodayProvider: TimelineProvider {
         completion(entry(for: .now, family: context.family))
     }
 
-    /// Today now, then one entry per midnight for the next week (the schedule is local data).
+    /// Today now, then one entry per midnight for the next three days (the schedule is local
+    /// data, and the app also asks WidgetKit to reload whenever it opens).
     func getTimeline(in context: Context, completion: @escaping (Timeline<TodayEntry>) -> Void) {
         let calendar = Calendar.current
         let start = calendar.startOfDay(for: .now)
         var entries = [entry(for: .now, family: context.family)]
-        for offset in 1...7 {
+        for offset in 1...3 {
             if let day = calendar.date(byAdding: .day, value: offset, to: start) {
                 entries.append(entry(for: day, family: context.family))
             }
@@ -31,12 +33,10 @@ struct TodayProvider: TimelineProvider {
 
     private func entry(for date: Date, family: WidgetFamily) -> TodayEntry {
         let piece = WidgetData.piece(on: date)
-        // Pixel budget per family (3× screens); keeps memory far below the widget limit.
-        let maxPixel: CGFloat = family == .systemSmall ? 520 : (family == .systemMedium ? 520 : 1100)
         return TodayEntry(
             date: date,
             piece: piece,
-            image: piece.flatMap { WidgetData.painting(for: $0.id, maxPixel: maxPixel) },
+            imageURL: piece.flatMap { WidgetData.paintingURL(for: $0.id, large: family == .systemLarge) },
             inOneLine: family == .systemLarge ? piece.flatMap { WidgetData.inOneLine(for: $0.id) } : nil,
             language: WidgetData.languageCode
         )

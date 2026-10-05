@@ -70,21 +70,25 @@ enum WidgetData {
         )
     }
 
-    /// Bundled artwork, downsampled to the widget's pixel size (widgets have a tight memory budget).
-    static func painting(for id: String, maxPixel: CGFloat) -> UIImage? {
-        let names = ["\(id)-hero", "\(id)-thumb", id]
-        let dirs = ["Artwork/paintings", "Artwork", nil] as [String?]
+    /// Bundled artwork file for a piece: the small `thumb` derivative is plenty for small and
+    /// medium widgets; only the large one uses `hero`.
+    static func paintingURL(for id: String, large: Bool) -> URL? {
+        let names = large ? ["\(id)-hero", "\(id)-thumb"] : ["\(id)-thumb", "\(id)-hero"]
         for name in names {
-            for dir in dirs {
-                if let url = Bundle.main.url(forResource: name, withExtension: "jpg", subdirectory: dir) {
-                    return downsample(url, maxPixel: maxPixel)
-                }
+            if let url = Bundle.main.url(forResource: name, withExtension: "jpg", subdirectory: "Artwork/paintings") {
+                return url
             }
         }
         return nil
     }
 
-    private static func downsample(_ url: URL, maxPixel: CGFloat) -> UIImage? {
+    /// Decodes straight to the widget's pixel size. Called while a view renders, never stored in
+    /// timeline entries: widget extensions get ~30 MB on device, and holding a week of decoded
+    /// paintings exceeded it (the system silently kills the extension and the widget stays blank;
+    /// the simulator has no such limit).
+    static func painting(at url: URL, maxPixel: CGFloat) -> UIImage? { downsample(url, maxPixel: maxPixel) }
+
+    static func downsample(_ url: URL, maxPixel: CGFloat) -> UIImage? {
         guard let source = CGImageSourceCreateWithURL(url as CFURL, nil) else { return nil }
         let options: [CFString: Any] = [
             kCGImageSourceCreateThumbnailFromImageAlways: true,
