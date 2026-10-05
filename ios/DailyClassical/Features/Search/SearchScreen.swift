@@ -57,8 +57,13 @@ private struct PremiumSearchView: View {
     @Environment(EntitlementStore.self) private var entitlements
     @Environment(AppRouter.self) private var router
 
-    @State private var query = ""
     @State private var recents = RecentSearches.load()
+
+    /// The field is owned by the TabView (RootView); this screen reads and sets its text.
+    private var query: String {
+        get { router.searchQuery }
+        nonmutating set { router.searchQuery = newValue }
+    }
 
     var body: some View {
         let q = TextMatch.normalized(query)
@@ -90,11 +95,7 @@ private struct PremiumSearchView: View {
         }
         .scrollDismissesKeyboard(.interactively)
         .background(Palette.background)
-        // Always-visible field at the top (SPEC §4.12 draws it there); it never hides on scroll.
-        // Default placement: in a Tab(role: .search) iOS 26 puts the field at the bottom, where the
-        // search tab button was, always visible. (.navigationBarDrawer forced it to the top on device.)
-        .searchable(text: $query, prompt: Text("search.placeholder"))
-        .searchPresentationToolbarBehavior(.avoidHidingContent)
+        // The search field itself is attached to the TabView (RootView).
         .autocorrectionDisabled()
         .onSubmit(of: .search) { remember(q) }
     }

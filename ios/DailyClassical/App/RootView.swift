@@ -23,6 +23,11 @@ struct RootView: View {
                 SearchScreen()
             }
         }
+        // Search lives on the TabView itself: selecting the search tab morphs the tab bar into the
+        // bottom search field (Apple's iOS 26 pattern). Attached to the tab's content instead, iOS
+        // may place the field at the top of the screen (it did on iPhone 16 Pro Max, iOS 27.0.1).
+        .searchable(text: $router.searchQuery, prompt: Text("search.placeholder"))
+        .tabViewSearchActivation(.searchTabSelection)
         .sheet(item: Binding(get: { router.sheet == .paywall ? nil : router.sheet }, set: { router.sheet = $0 })) { sheet in
             AppSheetView(sheet: sheet)
         }

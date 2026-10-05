@@ -25,6 +25,9 @@ final class AppRouter {
     enum AuthFlow: String, Equatable { case createAccount, signIn }
 
     var tab: AppTab = .today
+    /// The Search tab's query. The field is attached to the TabView (see RootView) so iOS 26+
+    /// turns the search tab into the bottom search field on every device.
+    var searchQuery = ""
     /// Navigation stacks of the Today and Library tabs, so any screen can push a piece.
     var todayPath = NavigationPath()
     var libraryPath = NavigationPath()
