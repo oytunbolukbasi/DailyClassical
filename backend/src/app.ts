@@ -18,10 +18,13 @@ app.get("/health", async (c) => {
   return c.json({ ok: true });
 });
 
-// Optimized painting/portrait JPEGs (scripts/optimize-images.ts). URLs carry ?v=<hash>, so they never change.
+// Optimized painting/portrait HEICs (scripts/optimize-images.ts). URLs carry ?v=<hash>, so they never change.
 app.use("/images/*", async (c, next) => {
   await next();
-  if ((c.res.status === 200 || c.res.status === 206) && c.req.path.endsWith(".jpg")) c.res.headers.set("Cache-Control", "public, max-age=31536000, immutable");
+  if ((c.res.status === 200 || c.res.status === 206) && /\.(heic|jpg)$/.test(c.req.path)) {
+    c.res.headers.set("Cache-Control", "public, max-age=31536000, immutable");
+    if (c.req.path.endsWith(".heic")) c.res.headers.set("Content-Type", "image/heic");  // not in hono's mime table
+  }
 }, serveStatic({ root: fileURLToPath(new URL("../public", import.meta.url)) }));
 
 app.route("/v1", content);

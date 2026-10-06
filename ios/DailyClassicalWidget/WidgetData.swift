@@ -70,16 +70,11 @@ enum WidgetData {
         )
     }
 
-    /// Bundled artwork file for a piece: the small `thumb` derivative is plenty for small and
-    /// medium widgets; only the large one uses `hero`.
+    /// The widget's own artwork (`npm run images:widget`): one JPEG per painting, long side ≤ 1100 px.
+    /// JPEG decodes at reduced size, so even the large widget stays far below the extension's memory
+    /// limit; the app's HEIC heroes aren't bundled into the widget at all.
     static func paintingURL(for id: String, large: Bool) -> URL? {
-        let names = large ? ["\(id)-hero", "\(id)-thumb"] : ["\(id)-thumb", "\(id)-hero"]
-        for name in names {
-            if let url = Bundle.main.url(forResource: name, withExtension: "jpg", subdirectory: "Artwork/paintings") {
-                return url
-            }
-        }
-        return nil
+        Bundle.main.url(forResource: id, withExtension: "jpg", subdirectory: "Artwork")
     }
 
     /// Decodes straight to the widget's pixel size. Called while a view renders, never stored in

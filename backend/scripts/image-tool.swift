@@ -1,10 +1,10 @@
 // Image derivative tool for scripts/optimize-images.ts (macOS only: ImageIO + CoreGraphics).
 //
-//   image-tool <input> <out.jpg>:<short>:<long>:<quality> [<out2.jpg>:<short>:<long>:<quality> …]
+//   image-tool <input> <out.heic>:<short>:<long>:<quality> [<out2.heic>:<short>:<long>:<quality> …]
 //
 // For each spec, scales the input so its short side is at most <short> px and its long side at most
-// <long> px (never upscaling), converts to sRGB, and writes a metadata-free baseline JPEG at
-// <quality> (0–1). Prints one JSON line: {"width","height","color","outputs":[{"width","height","bytes"}]}
+// <long> px (0 = no limit on that side; never upscaling), converts to sRGB, and writes a metadata-free
+// HEIC (or JPEG, by the output's extension) at <quality> (0–1). Prints one JSON line: {"width","height","color","outputs":[{"width","height","bytes"}]}
 // where width/height are the original's pixel size and color is the image's average colour (#rrggbb).
 import CoreGraphics
 import Foundation
@@ -59,13 +59,14 @@ for spec in args.dropFirst() {
     let parts = spec.split(separator: ":").map(String.init)
     guard parts.count == 4, let short = Double(parts[1]), let long = Double(parts[2]), let quality = Double(parts[3])
     else { fail("bad spec \(spec)") }
-    let scale = min(1, short / min(w, h), long / max(w, h))
+    let scale = min(1, short > 0 ? short / min(w, h) : 1, long > 0 ? long / max(w, h) : 1)
     let tw = max(1, Int((w * scale).rounded())), th = max(1, Int((h * scale).rounded()))
     let scaled = render(upright, width: tw, height: th)
     if tw * th < smallest.width * smallest.height { smallest = scaled }
 
     let url = URL(fileURLWithPath: parts[0])
-    guard let dest = CGImageDestinationCreateWithURL(url as CFURL, UTType.jpeg.identifier as CFString, 1, nil)
+    let type: UTType = url.pathExtension.lowercased() == "heic" ? .heic : .jpeg
+    guard let dest = CGImageDestinationCreateWithURL(url as CFURL, type.identifier as CFString, 1, nil)
     else { fail("cannot write \(parts[0])") }
     // Only the compression option: no EXIF/IPTC/XMP/GPS is carried over from the original.
     CGImageDestinationAddImage(dest, scaled, [kCGImageDestinationLossyCompressionQuality: quality] as CFDictionary)

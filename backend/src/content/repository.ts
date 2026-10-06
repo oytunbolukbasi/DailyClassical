@@ -38,17 +38,19 @@ export function imageCredit(key: string, imageUrl: string | null, locale: string
 /** backend/public/images/manifest.json, written by scripts/optimize-images.ts (`npm run images`). */
 export type ImageManifestFile = { path: string; width: number; height: number; bytes: number; hash: string };
 export type ImageManifestEntry = {
-  source: string; color: string; hero: ImageManifestFile; thumb: ImageManifestFile;
+  source: string; color: string;
+  /** Bundled in the app + served: hero (short ≤ 1800 px), thumb (short ≤ 300 px). Served only: full (long ≤ 4000 px). */
+  hero: ImageManifestFile; thumb: ImageManifestFile; full: ImageManifestFile;
   /** Required attribution per locale and licence deed, for freely licensed (non-PD) images. */
   credit?: Record<string, string>; licenseUrl?: string;
 };
-export type ImageManifest = { version: 1; images: Record<string, ImageManifestEntry> };
+export type ImageManifest = { version: 2; images: Record<string, ImageManifestEntry> };
 
 const imageManifest: ImageManifest = (() => {
   try {
     return JSON.parse(readFileSync(fileURLToPath(new URL("../../public/images/manifest.json", import.meta.url)), "utf8"));
   } catch {
-    return { version: 1, images: {} };
+    return { version: 2, images: {} };
   }
 })();
 /** Our optimized copies: served by this API at /images (or a CDN via ASSETS_BASE_URL); `?v=` busts the immutable cache. */
@@ -57,15 +59,18 @@ const imageFileUrl = (f: ImageManifestFile) => `${imagesBase}/${f.path}?v=${f.ha
 
 /**
  * Image fields of a painting (`paintings/<pieceId>`) or portrait (`composers/<composerId>`):
- * hero + thumb URLs, the hero's pixel size and an average colour for the placeholder. Falls back to
+ * hero + thumb + full (zoom) URLs, the hero's pixel size and an average colour for the placeholder. Falls back to
  * the stored original (Commons) URL and size when the image has not been optimized yet.
  */
 export function imageFields(key: string, fallback: { imageUrl: string | null; width: number | null; height: number | null }) {
   const e = imageManifest.images[key];
   if (!e || e.source !== fallback.imageUrl) {
-    return { imageUrl: fallback.imageUrl, thumbUrl: fallback.imageUrl, width: fallback.width, height: fallback.height, placeholderColor: null };
+    return { imageUrl: fallback.imageUrl, thumbUrl: fallback.imageUrl, fullUrl: fallback.imageUrl, width: fallback.width, height: fallback.height, placeholderColor: null };
   }
-  return { imageUrl: imageFileUrl(e.hero), thumbUrl: imageFileUrl(e.thumb), width: e.hero.width, height: e.hero.height, placeholderColor: e.color };
+  return {
+    imageUrl: imageFileUrl(e.hero), thumbUrl: imageFileUrl(e.thumb), fullUrl: e.full ? imageFileUrl(e.full) : imageFileUrl(e.hero),
+    width: e.hero.width, height: e.hero.height, placeholderColor: e.color,
+  };
 }
 
 export function spotifyUrl(albumId: string | null) {

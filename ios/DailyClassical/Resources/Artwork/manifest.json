@@ -1,351 +1,484 @@
 {
-  "version": 1,
+  "version": 2,
   "images": {
-    "paintings/mozart-symphony-40": {
-      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Claude-Joseph_Vernet_-_A_Shipwreck_in_Stormy_Seas_(Temp%C3%AAte)_-_c_1773_-_National_Gallery_UK.jpg",
-      "color": "#2f2a22",
-      "hero": {
-        "path": "paintings/mozart-symphony-40-hero.jpg",
-        "width": 1547,
-        "height": 1080,
-        "bytes": 222149,
-        "hash": "abe3ae0044"
-      },
-      "thumb": {
-        "path": "paintings/mozart-symphony-40-thumb.jpg",
-        "width": 367,
-        "height": 256,
-        "bytes": 24976,
-        "hash": "9e6eed82a1"
-      }
-    },
-    "paintings/beethoven-symphony-5": {
-      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Mallord_William_Turner_081.jpg",
-      "color": "#7c7868",
-      "hero": {
-        "path": "paintings/beethoven-symphony-5-hero.jpg",
-        "width": 1536,
-        "height": 942,
-        "bytes": 218966,
-        "hash": "72d35f78be"
-      },
-      "thumb": {
-        "path": "paintings/beethoven-symphony-5-thumb.jpg",
-        "width": 417,
-        "height": 256,
-        "bytes": 29931,
-        "hash": "4a43cd9458"
-      }
-    },
-    "paintings/beethoven-symphony-9": {
-      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/1808_Runge_Der_Morgen_anagoria.JPG",
-      "color": "#80736b",
-      "hero": {
-        "path": "paintings/beethoven-symphony-9-hero.jpg",
-        "width": 1080,
-        "height": 1365,
-        "bytes": 227951,
-        "hash": "e6305d51ac"
-      },
-      "thumb": {
-        "path": "paintings/beethoven-symphony-9-thumb.jpg",
-        "width": 256,
-        "height": 324,
-        "bytes": 31198,
-        "hash": "b6d28da7db"
-      }
-    },
-    "paintings/schubert-symphony-8": {
-      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Caspar_David_Friedrich_-_Abtei_im_Eichwald_-_Google_Art_Project.jpg",
-      "color": "#5f5449",
-      "hero": {
-        "path": "paintings/schubert-symphony-8-hero.jpg",
-        "width": 1686,
-        "height": 1080,
-        "bytes": 248554,
-        "hash": "9bb912c053"
-      },
-      "thumb": {
-        "path": "paintings/schubert-symphony-8-thumb.jpg",
-        "width": 400,
-        "height": 256,
-        "bytes": 21396,
-        "hash": "8b21c041dd"
-      }
-    },
-    "paintings/berlioz-symphonie-fantastique": {
-      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Francisco_de_Goya_y_Lucientes_-_Witches%27_Sabbath_(The_Great_He-Goat).jpg",
-      "color": "#413421",
-      "hero": {
-        "path": "paintings/berlioz-symphonie-fantastique-hero.jpg",
-        "width": 1800,
-        "height": 570,
-        "bytes": 223408,
-        "hash": "adc25b4ddc"
-      },
-      "thumb": {
-        "path": "paintings/berlioz-symphonie-fantastique-thumb.jpg",
-        "width": 640,
-        "height": 203,
-        "bytes": 46776,
-        "hash": "0440b4e651"
-      }
-    },
-    "paintings/brahms-symphony-4": {
-      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Arnold_B%C3%B6cklin_-_Die_Toteninsel_III_(Alte_Nationalgalerie,_Berlin).jpg",
-      "color": "#655e5d",
-      "hero": {
-        "path": "paintings/brahms-symphony-4-hero.jpg",
-        "width": 1800,
-        "height": 959,
-        "bytes": 250658,
-        "hash": "e1eb186c9a"
-      },
-      "thumb": {
-        "path": "paintings/brahms-symphony-4-thumb.jpg",
-        "width": 481,
-        "height": 256,
-        "bytes": 34230,
-        "hash": "ed8aa12c23"
-      }
-    },
-    "paintings/tchaikovsky-symphony-6": {
-      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Isaac_Levitan_-_Au-dessus_du_repos_%C3%A9ternel.jpg",
-      "color": "#797d63",
-      "hero": {
-        "path": "paintings/tchaikovsky-symphony-6-hero.jpg",
-        "width": 1476,
-        "height": 1080,
-        "bytes": 309572,
-        "hash": "8f89ed6e48"
-      },
-      "thumb": {
-        "path": "paintings/tchaikovsky-symphony-6-thumb.jpg",
-        "width": 350,
-        "height": 256,
-        "bytes": 23257,
-        "hash": "01509f6d84"
-      }
-    },
-    "paintings/dvorak-symphony-9": {
-      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Bierstadt_-_Among_the_Sierra_Nevada,_California_-_Google_Art_Project.jpg",
-      "color": "#78665a",
-      "hero": {
-        "path": "paintings/dvorak-symphony-9-hero.jpg",
-        "width": 1800,
-        "height": 1076,
-        "bytes": 306188,
-        "hash": "cfa6500b8d"
-      },
-      "thumb": {
-        "path": "paintings/dvorak-symphony-9-thumb.jpg",
-        "width": 428,
-        "height": 256,
-        "bytes": 29368,
-        "hash": "4021caba5a"
-      }
-    },
-    "paintings/mahler-symphony-5": {
-      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Gustav_Klimt_-_Death_and_Life_-_Google_Art_Project.jpg",
-      "color": "#5f5c57",
-      "hero": {
-        "path": "paintings/mahler-symphony-5-hero.jpg",
-        "width": 1241,
-        "height": 1080,
-        "bytes": 301510,
-        "hash": "4853a0ac34"
-      },
-      "thumb": {
-        "path": "paintings/mahler-symphony-5-thumb.jpg",
-        "width": 294,
-        "height": 256,
-        "bytes": 34007,
-        "hash": "e309f0ec2c"
-      }
-    },
-    "paintings/shostakovich-symphony-5": {
-      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9A%D0%B0%D0%B7%D0%B8%D0%BC%D0%B8%D1%80_%D0%9C%D0%B0%D0%BB%D0%B5%D0%B2%D0%B8%D1%87_%E2%80%94_%D0%92%D0%B0%D0%B6%D0%BA%D0%B5_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D1%87%D1%83%D1%82%D1%82%D1%8F.jpg",
-      "color": "#717a77",
-      "hero": {
-        "path": "paintings/shostakovich-symphony-5-hero.jpg",
-        "width": 1080,
-        "height": 1419,
-        "bytes": 220348,
-        "hash": "f30e629b0d"
-      },
-      "thumb": {
-        "path": "paintings/shostakovich-symphony-5-thumb.jpg",
-        "width": 256,
-        "height": 336,
-        "bytes": 19537,
-        "hash": "fd9b591164"
-      }
-    },
-    "composers/mozart": {
-      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Barbara_Krafft_-_Portr%C3%A4t_Wolfgang_Amadeus_Mozart_(1819).jpg",
-      "color": "#5d4028",
-      "hero": {
-        "path": "composers/mozart-hero.jpg",
-        "width": 1080,
-        "height": 1332,
-        "bytes": 150938,
-        "hash": "815e779a78"
-      },
-      "thumb": {
-        "path": "composers/mozart-thumb.jpg",
-        "width": 256,
-        "height": 316,
-        "bytes": 15709,
-        "hash": "ce421218ea"
-      }
-    },
     "composers/beethoven": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Karl_Stieler%27s_Beethoven_mit_dem_Manuskript_der_Missa_solemnis.jpg",
-      "color": "#2e2821",
+      "color": "#2d2821",
       "hero": {
-        "path": "composers/beethoven-hero.jpg",
-        "width": 1080,
-        "height": 1344,
-        "bytes": 268007,
-        "hash": "c06b279cff"
+        "path": "composers/beethoven-hero.heic",
+        "width": 1800,
+        "height": 2240,
+        "bytes": 1012971,
+        "hash": "a129978287"
       },
       "thumb": {
-        "path": "composers/beethoven-thumb.jpg",
-        "width": 256,
-        "height": 319,
-        "bytes": 22283,
-        "hash": "dcf41868e2"
-      }
-    },
-    "composers/schubert": {
-      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Franz_Schubert_by_Wilhelm_August_Rieder_1875_larger_version.png",
-      "color": "#5e4237",
-      "hero": {
-        "path": "composers/schubert-hero.jpg",
-        "width": 583,
-        "height": 710,
-        "bytes": 47899,
-        "hash": "12502fed5b"
+        "path": "composers/beethoven-thumb.heic",
+        "width": 300,
+        "height": 373,
+        "bytes": 18213,
+        "hash": "795b11b1e7"
       },
-      "thumb": {
-        "path": "composers/schubert-thumb.jpg",
-        "width": 256,
-        "height": 312,
-        "bytes": 18345,
-        "hash": "385b66377b"
+      "full": {
+        "path": "composers/beethoven-full.heic",
+        "width": 3214,
+        "height": 4000,
+        "bytes": 4006572,
+        "hash": "2a5961e020"
       }
     },
     "composers/berlioz": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Gustave_Courbet_-_Portrait_of_Hector_Berlioz_-_WGA05492.jpg",
       "color": "#22241f",
       "hero": {
-        "path": "composers/berlioz-hero.jpg",
+        "path": "composers/berlioz-hero.heic",
         "width": 1000,
         "height": 1238,
-        "bytes": 248283,
-        "hash": "59270846b3"
+        "bytes": 234294,
+        "hash": "e6b9f864b8"
       },
       "thumb": {
-        "path": "composers/berlioz-thumb.jpg",
-        "width": 256,
-        "height": 317,
-        "bytes": 24499,
-        "hash": "95cdd0448c"
+        "path": "composers/berlioz-thumb.heic",
+        "width": 300,
+        "height": 371,
+        "bytes": 24750,
+        "hash": "5a6c00c821"
+      },
+      "full": {
+        "path": "composers/berlioz-full.heic",
+        "width": 1000,
+        "height": 1238,
+        "bytes": 246368,
+        "hash": "2da9457179"
       }
     },
     "composers/brahms": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/JohannesBrahms.jpg",
-      "color": "#787878",
+      "color": "#777877",
       "hero": {
-        "path": "composers/brahms-hero.jpg",
-        "width": 1080,
-        "height": 1414,
-        "bytes": 263304,
-        "hash": "491ba0b52f"
+        "path": "composers/brahms-hero.heic",
+        "width": 1462,
+        "height": 1914,
+        "bytes": 405120,
+        "hash": "309fc59cda"
       },
       "thumb": {
-        "path": "composers/brahms-thumb.jpg",
-        "width": 256,
-        "height": 335,
-        "bytes": 20068,
-        "hash": "5206283b41"
-      }
-    },
-    "composers/tchaikovsky": {
-      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Portr%C3%A4t_des_Komponisten_Pjotr_I._Tschaikowski_(1840-1893).jpg",
-      "color": "#252623",
-      "hero": {
-        "path": "composers/tchaikovsky-hero.jpg",
-        "width": 1080,
-        "height": 1387,
-        "bytes": 187835,
-        "hash": "f3b6435055"
+        "path": "composers/brahms-thumb.heic",
+        "width": 300,
+        "height": 393,
+        "bytes": 16039,
+        "hash": "4998dfc061"
       },
-      "thumb": {
-        "path": "composers/tchaikovsky-thumb.jpg",
-        "width": 256,
-        "height": 329,
-        "bytes": 20018,
-        "hash": "1c16d977b1"
+      "full": {
+        "path": "composers/brahms-full.heic",
+        "width": 1462,
+        "height": 1914,
+        "bytes": 444884,
+        "hash": "db0fe073c5"
       }
     },
     "composers/dvorak": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Dvorak.jpg",
       "color": "#b5b5b5",
       "hero": {
-        "path": "composers/dvorak-hero.jpg",
-        "width": 1080,
-        "height": 1337,
-        "bytes": 486468,
-        "hash": "6b2785e1cf"
+        "path": "composers/dvorak-hero.heic",
+        "width": 1800,
+        "height": 2229,
+        "bytes": 782813,
+        "hash": "b620e96a48"
       },
       "thumb": {
-        "path": "composers/dvorak-thumb.jpg",
-        "width": 256,
-        "height": 317,
-        "bytes": 22057,
-        "hash": "5b7c86e085"
+        "path": "composers/dvorak-thumb.heic",
+        "width": 300,
+        "height": 371,
+        "bytes": 20884,
+        "hash": "df357d4557"
+      },
+      "full": {
+        "path": "composers/dvorak-full.heic",
+        "width": 2100,
+        "height": 2600,
+        "bytes": 1189301,
+        "hash": "dde377275b"
       }
     },
     "composers/mahler": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Akseli_Gallen-Kallela_-_Portrait_of_Gustav_Mahler_-_G%C3%B6sta_Serlachius_Fine_Arts_Foundation.jpg",
-      "color": "#744f3a",
+      "color": "#74503a",
       "hero": {
-        "path": "composers/mahler-hero.jpg",
-        "width": 1080,
-        "height": 1646,
-        "bytes": 437705,
-        "hash": "0ae9179de6"
+        "path": "composers/mahler-hero.heic",
+        "width": 1312,
+        "height": 2000,
+        "bytes": 609386,
+        "hash": "1752b1df93"
       },
       "thumb": {
-        "path": "composers/mahler-thumb.jpg",
-        "width": 256,
-        "height": 390,
-        "bytes": 35916,
-        "hash": "4c4f9fb3e0"
+        "path": "composers/mahler-thumb.heic",
+        "width": 300,
+        "height": 457,
+        "bytes": 33324,
+        "hash": "3657d31e72"
+      },
+      "full": {
+        "path": "composers/mahler-full.heic",
+        "width": 1312,
+        "height": 2000,
+        "bytes": 654796,
+        "hash": "19485da75d"
+      }
+    },
+    "composers/mozart": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Barbara_Krafft_-_Portr%C3%A4t_Wolfgang_Amadeus_Mozart_(1819).jpg",
+      "color": "#5d3f28",
+      "hero": {
+        "path": "composers/mozart-hero.heic",
+        "width": 1447,
+        "height": 1784,
+        "bytes": 227877,
+        "hash": "c61d7d03c9"
+      },
+      "thumb": {
+        "path": "composers/mozart-thumb.heic",
+        "width": 300,
+        "height": 370,
+        "bytes": 10398,
+        "hash": "33f0073bd5"
+      },
+      "full": {
+        "path": "composers/mozart-full.heic",
+        "width": 1447,
+        "height": 1784,
+        "bytes": 256015,
+        "hash": "1eb3ce4f2a"
+      }
+    },
+    "composers/schubert": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Franz_Schubert_by_Wilhelm_August_Rieder_1875_larger_version.png",
+      "color": "#5e4137",
+      "hero": {
+        "path": "composers/schubert-hero.heic",
+        "width": 583,
+        "height": 710,
+        "bytes": 39724,
+        "hash": "ac544c559f"
+      },
+      "thumb": {
+        "path": "composers/schubert-thumb.heic",
+        "width": 300,
+        "height": 365,
+        "bytes": 13724,
+        "hash": "d2214de553"
+      },
+      "full": {
+        "path": "composers/schubert-full.heic",
+        "width": 583,
+        "height": 710,
+        "bytes": 44582,
+        "hash": "14b95aa0fa"
       }
     },
     "composers/shostakovich": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Dmitry_Shostakovich_1940.jpg",
-      "color": "#737373",
+      "color": "#747474",
       "credit": {
         "en": "Photo: Leonid Dorensky / Moscow Main Archive (mos.ru), CC BY 4.0",
         "tr": "Fotoğraf: Leonid Dorenski / Moskova Ana Arşivi (mos.ru), CC BY 4.0"
       },
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "hero": {
-        "path": "composers/shostakovich-hero.jpg",
+        "path": "composers/shostakovich-hero.heic",
         "width": 1600,
         "height": 1045,
-        "bytes": 303991,
-        "hash": "d12354de38"
+        "bytes": 264090,
+        "hash": "96dda94aa6"
       },
       "thumb": {
-        "path": "composers/shostakovich-thumb.jpg",
-        "width": 392,
-        "height": 256,
-        "bytes": 30560,
-        "hash": "44cbfd0210"
+        "path": "composers/shostakovich-thumb.heic",
+        "width": 459,
+        "height": 300,
+        "bytes": 27217,
+        "hash": "251a1fafe1"
+      },
+      "full": {
+        "path": "composers/shostakovich-full.heic",
+        "width": 1600,
+        "height": 1045,
+        "bytes": 281356,
+        "hash": "95518ca629"
+      }
+    },
+    "composers/tchaikovsky": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Portr%C3%A4t_des_Komponisten_Pjotr_I._Tschaikowski_(1840-1893).jpg",
+      "color": "#252623",
+      "hero": {
+        "path": "composers/tchaikovsky-hero.heic",
+        "width": 1800,
+        "height": 2312,
+        "bytes": 285355,
+        "hash": "81e03ae5fd"
+      },
+      "thumb": {
+        "path": "composers/tchaikovsky-thumb.heic",
+        "width": 300,
+        "height": 385,
+        "bytes": 15344,
+        "hash": "e2f6c0c8d5"
+      },
+      "full": {
+        "path": "composers/tchaikovsky-full.heic",
+        "width": 1920,
+        "height": 2466,
+        "bytes": 341197,
+        "hash": "5e911beabb"
+      }
+    },
+    "paintings/beethoven-symphony-5": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Turner,_Snow_Storm,_50508403226_b272cf84c3_o.jpg",
+      "color": "#7e7a69",
+      "hero": {
+        "path": "paintings/beethoven-symphony-5-hero.heic",
+        "width": 2955,
+        "height": 1800,
+        "bytes": 816457,
+        "hash": "e037bd1d2f"
+      },
+      "thumb": {
+        "path": "paintings/beethoven-symphony-5-thumb.heic",
+        "width": 493,
+        "height": 300,
+        "bytes": 17126,
+        "hash": "c8d05fbffc"
+      },
+      "full": {
+        "path": "paintings/beethoven-symphony-5-full.heic",
+        "width": 4000,
+        "height": 2436,
+        "bytes": 1540345,
+        "hash": "27f4648ad0"
+      }
+    },
+    "paintings/beethoven-symphony-9": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/1808_Runge_Der_Morgen_anagoria.JPG",
+      "color": "#81736c",
+      "hero": {
+        "path": "paintings/beethoven-symphony-9-hero.heic",
+        "width": 1800,
+        "height": 2275,
+        "bytes": 505060,
+        "hash": "f211aea592"
+      },
+      "thumb": {
+        "path": "paintings/beethoven-symphony-9-thumb.heic",
+        "width": 300,
+        "height": 379,
+        "bytes": 25070,
+        "hash": "1c42bdcc71"
+      },
+      "full": {
+        "path": "paintings/beethoven-symphony-9-full.heic",
+        "width": 3165,
+        "height": 4000,
+        "bytes": 1566970,
+        "hash": "c2d05917af"
+      }
+    },
+    "paintings/berlioz-symphonie-fantastique": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Francisco_de_Goya_y_Lucientes_-_Witches%27_Sabbath_(The_Great_He-Goat).jpg",
+      "color": "#413421",
+      "hero": {
+        "path": "paintings/berlioz-symphonie-fantastique-hero.heic",
+        "width": 3051,
+        "height": 966,
+        "bytes": 593626,
+        "hash": "7dca77cab1"
+      },
+      "thumb": {
+        "path": "paintings/berlioz-symphonie-fantastique-thumb.heic",
+        "width": 720,
+        "height": 228,
+        "bytes": 34835,
+        "hash": "92acb83829"
+      },
+      "full": {
+        "path": "paintings/berlioz-symphonie-fantastique-full.heic",
+        "width": 3051,
+        "height": 966,
+        "bytes": 667178,
+        "hash": "8afd1cb5a1"
+      }
+    },
+    "paintings/brahms-symphony-4": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Arnold_B%C3%B6cklin_-_Die_Toteninsel_III_(Alte_Nationalgalerie,_Berlin).jpg",
+      "color": "#655e5e",
+      "hero": {
+        "path": "paintings/brahms-symphony-4-hero.heic",
+        "width": 3379,
+        "height": 1800,
+        "bytes": 798952,
+        "hash": "1b05cb831f"
+      },
+      "thumb": {
+        "path": "paintings/brahms-symphony-4-thumb.heic",
+        "width": 563,
+        "height": 300,
+        "bytes": 25376,
+        "hash": "cfe1eeafc6"
+      },
+      "full": {
+        "path": "paintings/brahms-symphony-4-full.heic",
+        "width": 4000,
+        "height": 2131,
+        "bytes": 1173877,
+        "hash": "4ed7b58502"
+      }
+    },
+    "paintings/dvorak-symphony-9": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Bierstadt_-_Among_the_Sierra_Nevada,_California_-_Google_Art_Project.jpg",
+      "color": "#766559",
+      "hero": {
+        "path": "paintings/dvorak-symphony-9-hero.heic",
+        "width": 3011,
+        "height": 1800,
+        "bytes": 963450,
+        "hash": "c66809daab"
+      },
+      "thumb": {
+        "path": "paintings/dvorak-symphony-9-thumb.heic",
+        "width": 502,
+        "height": 300,
+        "bytes": 25914,
+        "hash": "b7e1af99b0"
+      },
+      "full": {
+        "path": "paintings/dvorak-symphony-9-full.heic",
+        "width": 3993,
+        "height": 2387,
+        "bytes": 1519636,
+        "hash": "4804ef5a1a"
+      }
+    },
+    "paintings/mahler-symphony-5": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Gustav_Klimt_-_Death_and_Life_-_Google_Art_Project.jpg",
+      "color": "#605c57",
+      "hero": {
+        "path": "paintings/mahler-symphony-5-hero.heic",
+        "width": 2068,
+        "height": 1800,
+        "bytes": 857464,
+        "hash": "b72c540128"
+      },
+      "thumb": {
+        "path": "paintings/mahler-symphony-5-thumb.heic",
+        "width": 345,
+        "height": 300,
+        "bytes": 32263,
+        "hash": "e3aa9a9496"
+      },
+      "full": {
+        "path": "paintings/mahler-symphony-5-full.heic",
+        "width": 4000,
+        "height": 3482,
+        "bytes": 3274737,
+        "hash": "6ec9cad351"
+      }
+    },
+    "paintings/mozart-symphony-40": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Claude-Joseph_Vernet_-_A_Shipwreck_in_Stormy_Seas_(Temp%C3%AAte)_-_c_1773_-_National_Gallery_UK.jpg",
+      "color": "#2e2a22",
+      "hero": {
+        "path": "paintings/mozart-symphony-40-hero.heic",
+        "width": 2579,
+        "height": 1800,
+        "bytes": 804011,
+        "hash": "3773063afa"
+      },
+      "thumb": {
+        "path": "paintings/mozart-symphony-40-thumb.heic",
+        "width": 430,
+        "height": 300,
+        "bytes": 21078,
+        "hash": "4005d567a2"
+      },
+      "full": {
+        "path": "paintings/mozart-symphony-40-full.heic",
+        "width": 4000,
+        "height": 2792,
+        "bytes": 2664083,
+        "hash": "698177de74"
+      }
+    },
+    "paintings/schubert-symphony-8": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Caspar_David_Friedrich_-_Abtei_im_Eichwald_-_Google_Art_Project.jpg",
+      "color": "#5e5449",
+      "hero": {
+        "path": "paintings/schubert-symphony-8-hero.heic",
+        "width": 2809,
+        "height": 1800,
+        "bytes": 896342,
+        "hash": "de25de5cca"
+      },
+      "thumb": {
+        "path": "paintings/schubert-symphony-8-thumb.heic",
+        "width": 468,
+        "height": 300,
+        "bytes": 17497,
+        "hash": "8c20bc9924"
+      },
+      "full": {
+        "path": "paintings/schubert-symphony-8-full.heic",
+        "width": 4000,
+        "height": 2563,
+        "bytes": 1547975,
+        "hash": "104e7e3f51"
+      }
+    },
+    "paintings/shostakovich-symphony-5": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9A%D0%B0%D0%B7%D0%B8%D0%BC%D0%B8%D1%80_%D0%9C%D0%B0%D0%BB%D0%B5%D0%B2%D0%B8%D1%87_%E2%80%94_%D0%92%D0%B0%D0%B6%D0%BA%D0%B5_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D1%87%D1%83%D1%82%D1%82%D1%8F.jpg",
+      "color": "#717a77",
+      "hero": {
+        "path": "paintings/shostakovich-symphony-5-hero.heic",
+        "width": 1370,
+        "height": 1800,
+        "bytes": 676649,
+        "hash": "a141db2271"
+      },
+      "thumb": {
+        "path": "paintings/shostakovich-symphony-5-thumb.heic",
+        "width": 300,
+        "height": 394,
+        "bytes": 12799,
+        "hash": "110e0480a6"
+      },
+      "full": {
+        "path": "paintings/shostakovich-symphony-5-full.heic",
+        "width": 1370,
+        "height": 1800,
+        "bytes": 752973,
+        "hash": "f7f3dab015"
+      }
+    },
+    "paintings/tchaikovsky-symphony-6": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Isaac_Levitan_-_Au-dessus_du_repos_%C3%A9ternel.jpg",
+      "color": "#797d62",
+      "hero": {
+        "path": "paintings/tchaikovsky-symphony-6-hero.heic",
+        "width": 2460,
+        "height": 1800,
+        "bytes": 721382,
+        "hash": "e86db379aa"
+      },
+      "thumb": {
+        "path": "paintings/tchaikovsky-symphony-6-thumb.heic",
+        "width": 410,
+        "height": 300,
+        "bytes": 18539,
+        "hash": "7e2eff54de"
+      },
+      "full": {
+        "path": "paintings/tchaikovsky-symphony-6-full.heic",
+        "width": 2707,
+        "height": 1981,
+        "bytes": 811217,
+        "hash": "6b1aedc3af"
       }
     }
   }

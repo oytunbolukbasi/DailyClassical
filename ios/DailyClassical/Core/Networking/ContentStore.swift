@@ -1,5 +1,6 @@
 import Observation
 import SwiftUI
+import UIKit
 
 enum Loadable<Value> {
     case idle, loading, loaded(Value), failed(APIError)
@@ -43,8 +44,14 @@ final class ContentStore {
         async let c = Result { try await source.composers(language) }
         today = Self.loadable(await t)
         let todayPiece = today.value
+        if let painting = todayPiece?.painting {
+            ImagePipeline.shared.register([painting.artwork])
+            Self.prefetchTodayPainting(painting)
+        }
         switch Self.loadable(await l) {
-        case .loaded(let pieces): library = .loaded(Self.published(pieces, today: todayPiece, day: day))
+        case .loaded(let pieces):
+            ImagePipeline.shared.register(pieces.map { $0.painting?.artwork })
+            library = .loaded(Self.published(pieces, today: todayPiece, day: day))
         case let other: library = other
         }
         // Without the schedule (offline, nothing cached) Today still shows today's page.
@@ -54,6 +61,7 @@ final class ContentStore {
             glossary = Dictionary(terms.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
         }
         if case .success(let list) = await c {
+            ImagePipeline.shared.register(list.map { $0.portrait?.artwork })
             composers = Dictionary(list.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
         }
     }
@@ -76,8 +84,20 @@ final class ContentStore {
         if let p = cachedPiece(id: id) { return p }
         let language = language
         let p = try await source.piece(id, language)
+        ImagePipeline.shared.register([p.painting?.artwork])
         if language == self.language { pieceCache[id] = p }
         return p
+    }
+
+    /// Decodes today's hero at launch, at about the Today painting's size (full width × ~2/3 of the
+    /// screen: the painting fills what the text block leaves), so Today's first frame has it. Rounded
+    /// up a little: a larger decode also serves the slightly smaller real frame (ImagePipeline).
+    private static func prefetchTodayPainting(_ painting: Painting) {
+        let screen = UIApplication.shared.connectedScenes.compactMap { ($0 as? UIWindowScene)?.screen }.first
+        let bounds = screen?.bounds.size ?? CGSize(width: 440, height: 956)
+        ImagePipeline.shared.prefetch([painting.imageUrl], variant: .hero,
+                                      size: CGSize(width: bounds.width, height: bounds.height * 0.68),
+                                      scale: screen?.scale ?? 3, contentMode: .fill)
     }
 
     /// A piece already loaded in the current language, for showing a page without a skeleton.

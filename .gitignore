@@ -22,3 +22,4 @@ content/build/
 
 # Downloaded image originals + compiled image tool (npm run images); derivatives are committed
 content/images/.originals/
+content/images/.staging/

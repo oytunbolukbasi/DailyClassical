@@ -19,8 +19,9 @@
 #     credit_line {en, tr}: required attribution text for non-PD images; the app shows it after the caption.
 #     focal_y     0–1, vertical object-position for the 300 pt cover crop (CSS semantics: the share
 #                 of the overflow cropped from the top), chosen so the face stays in frame.
-#     hero/thumb, placeholder_color  Written by `npm run images` (backend/): our optimized copies in
-#                 backend/public/images/composers/<id>-hero|thumb.jpg and the image's average colour.
+#     hero/thumb/full, placeholder_color  Written by `npm run images` (backend/): our optimized HEIC copies in
+#                 backend/public/images/composers/<id>-hero|thumb|full.heic and the image's average colour.
+#                 After changing one image_url: `npm run images -- --only <composer id>` then `npm run fixtures`.
 # Sources: content/research/composers-sources.md (checked 2026-10-04).
 
 - id: mozart
@@ -62,9 +63,10 @@
     height: 1784
     license: Public domain (PD-Art, PD-old-100)
     focal_y: 0.3
-    hero: { width: 1080, height: 1332, bytes: 150938 }
-    thumb: { width: 256, height: 316, bytes: 15709 }
-    placeholder_color: "#5d4028"
+    hero: { width: 1447, height: 1784, bytes: 227877 }
+    thumb: { width: 300, height: 370, bytes: 10398 }
+    placeholder_color: "#5d3f28"
+    full: { width: 1447, height: 1784, bytes: 256015 }
 
 - id: beethoven
   match: Ludwig van Beethoven
@@ -105,9 +107,10 @@
     height: 5389
     license: Public domain (PD-Art, PD-old-100)
     focal_y: 0.2
-    hero: { width: 1080, height: 1344, bytes: 268007 }
-    thumb: { width: 256, height: 319, bytes: 22283 }
-    placeholder_color: "#2e2821"
+    hero: { width: 1800, height: 2240, bytes: 1012971 }
+    thumb: { width: 300, height: 373, bytes: 18213 }
+    placeholder_color: "#2d2821"
+    full: { width: 3214, height: 4000, bytes: 4006572 }
 
 - id: schubert
   match: Franz Schubert
@@ -148,9 +151,10 @@
     height: 710
     license: Public domain (PD-Art, PD-old-100)
     focal_y: 0.15
-    hero: { width: 583, height: 710, bytes: 47899 }
-    thumb: { width: 256, height: 312, bytes: 18345 }
-    placeholder_color: "#5e4237"
+    hero: { width: 583, height: 710, bytes: 39724 }
+    thumb: { width: 300, height: 365, bytes: 13724 }
+    placeholder_color: "#5e4137"
+    full: { width: 583, height: 710, bytes: 44582 }
 
 - id: berlioz
   match: Hector Berlioz
@@ -191,9 +195,10 @@
     height: 1238
     license: Public domain (PD-Art, PD-old-100)
     focal_y: 0.3
-    hero: { width: 1000, height: 1238, bytes: 248283 }
-    thumb: { width: 256, height: 317, bytes: 24499 }
+    hero: { width: 1000, height: 1238, bytes: 234294 }
+    thumb: { width: 300, height: 371, bytes: 24750 }
     placeholder_color: "#22241f"
+    full: { width: 1000, height: 1238, bytes: 246368 }
 
 - id: brahms
   match: Johannes Brahms
@@ -234,9 +239,10 @@
     height: 1914
     license: Public domain (photograph published before 1931; PD-old-70)
     focal_y: 0.2
-    hero: { width: 1080, height: 1414, bytes: 263304 }
-    thumb: { width: 256, height: 335, bytes: 20068 }
-    placeholder_color: "#787878"
+    hero: { width: 1462, height: 1914, bytes: 405120 }
+    thumb: { width: 300, height: 393, bytes: 16039 }
+    placeholder_color: "#777877"
+    full: { width: 1462, height: 1914, bytes: 444884 }
 
 - id: tchaikovsky
   match: Pyotr Ilyich Tchaikovsky
@@ -277,9 +283,10 @@
     height: 2466
     license: Public domain (PD-Art, PD-old-95, PD-US-expired)
     focal_y: 0.18
-    hero: { width: 1080, height: 1387, bytes: 187835 }
-    thumb: { width: 256, height: 329, bytes: 20018 }
+    hero: { width: 1800, height: 2312, bytes: 285355 }
+    thumb: { width: 300, height: 385, bytes: 15344 }
     placeholder_color: "#252623"
+    full: { width: 1920, height: 2466, bytes: 341197 }
 
 - id: dvorak
   match: Antonín Dvořák
@@ -320,9 +327,10 @@
     height: 2600
     license: Public domain (anonymous photograph, 1882; PD-old-70, PD-US-expired)
     focal_y: 0.2
-    hero: { width: 1080, height: 1337, bytes: 486468 }
-    thumb: { width: 256, height: 317, bytes: 22057 }
+    hero: { width: 1800, height: 2229, bytes: 782813 }
+    thumb: { width: 300, height: 371, bytes: 20884 }
     placeholder_color: "#b5b5b5"
+    full: { width: 2100, height: 2600, bytes: 1189301 }
 
 - id: mahler
   match: Gustav Mahler
@@ -363,9 +371,10 @@
     height: 2000
     license: Public domain (PD-Art, PD-old-80)
     focal_y: 0.45
-    hero: { width: 1080, height: 1646, bytes: 437705 }
-    thumb: { width: 256, height: 390, bytes: 35916 }
-    placeholder_color: "#744f3a"
+    hero: { width: 1312, height: 2000, bytes: 609386 }
+    thumb: { width: 300, height: 457, bytes: 33324 }
+    placeholder_color: "#74503a"
+    full: { width: 1312, height: 2000, bytes: 654796 }
 
 - id: shostakovich
   match: Dmitri Shostakovich
@@ -411,6 +420,7 @@
     license_url: https://creativecommons.org/licenses/by/4.0/
     credit_line: { en: "Photo: Leonid Dorensky / Moscow Main Archive (mos.ru), CC BY 4.0", tr: "Fotoğraf: Leonid Dorenski / Moskova Ana Arşivi (mos.ru), CC BY 4.0" }
     focal_y: 0.3
-    hero: { width: 1600, height: 1045, bytes: 303991 }
-    thumb: { width: 392, height: 256, bytes: 30560 }
-    placeholder_color: "#737373"
+    hero: { width: 1600, height: 1045, bytes: 264090 }
+    thumb: { width: 459, height: 300, bytes: 27217 }
+    placeholder_color: "#747474"
+    full: { width: 1600, height: 1045, bytes: 281356 }

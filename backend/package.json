@@ -18,7 +18,8 @@
     "fixtures": "tsx scripts/export-fixtures.ts && tsx scripts/export-schedule.ts",
     "images": "tsx scripts/optimize-images.ts",
     "emails:preview": "tsx scripts/preview-emails.ts",
-    "test-user": "tsx --env-file-if-exists=.env scripts/create-test-user.ts"
+    "test-user": "tsx --env-file-if-exists=.env scripts/create-test-user.ts",
+    "images:widget": "tsx scripts/widget-images.ts"
   },
   "dependencies": {
     "@hono/node-server": "^2.1.3",

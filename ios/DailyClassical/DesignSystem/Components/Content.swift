@@ -98,18 +98,20 @@ struct StripePlaceholder: View {
 /// A painting (or portrait) filling its frame: `.fill` is CSS `object-fit: cover` with `focus` as
 /// `object-position` (the share of the overflow cropped from the leading/top edge), `.fit` is
 /// centered. Shows the image's average colour (or the stripes, for unknown images) until it is
-/// decoded, then fades in. Use `variant: .thumb` for thumbnails of 64 pt and smaller.
+/// decoded, then fades in. Use `variant: .thumb` for thumbnails of 64 pt and smaller. The image is
+/// decoded at the pixel size of its frame (ImagePipeline), not at a fixed maximum.
 struct PaintingImage: View {
     let url: URL?
     var focus: UnitPoint = .center
     var contentMode: ContentMode = .fill
     var variant: ImageVariant = .hero
+    @Environment(\.displayScale) private var displayScale
 
     var body: some View {
         placeholder
             .overlay {
                 GeometryReader { geo in
-                    CachedImage(url: url, variant: variant) { image in
+                    CachedImage(url: url, variant: variant, size: geo.size, scale: displayScale, contentMode: contentMode) { image in
                         let rect = Self.rect(for: image.size, in: geo.size, focus: focus, mode: contentMode)
                         Image(uiImage: image)
                             .resizable()

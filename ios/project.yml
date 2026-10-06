@@ -73,13 +73,16 @@ targets:
     platform: iOS
     sources:
       - path: DailyClassicalWidget
+        excludes:
+          - Artwork
       - path: DailyClassical/DesignSystem/Palette.swift
       - path: DailyClassical/Resources/Localizable.xcstrings
       - path: DailyClassical/Resources/Fonts
       - path: DailyClassical/Resources/Fixtures
         type: folder
         buildPhase: resources
-      - path: DailyClassical/Resources/Artwork
+      # Widget-only JPEGs (npm run images:widget), not the app's 11 MB HEIC Artwork folder.
+      - path: DailyClassicalWidget/Artwork
         type: folder
         buildPhase: resources
     settings:

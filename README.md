@@ -47,6 +47,8 @@ Useful scripts (in `backend/`):
 | `npm run content:build` | Parse + validate EN/TR markdown into `content/build/*.json` |
 | `npm run db:seed` | Load content, composers and `content/schedule.yaml` (which piece is Today) |
 | `npm run fixtures` | Regenerate the app's bundled offline/preview data |
+| `npm run images [-- --only <id>]` | Download originals (cached, git-ignored) and write HEIC `hero` / `thumb` (bundled + served) and `full` (served, for zoom) |
+| `npm run images:widget` | Widget-only JPEGs (≤ 1100 px) from the heroes; run after `images` |
 | `npm run emails:preview` | Render every email (EN/TR) to `design/emails/` |
 | `npm run test-user -- <email> [--free]` | Create a verified test account (Premium unless `--free`); password goes to the git-ignored `backend/test-accounts.local.md` |
 

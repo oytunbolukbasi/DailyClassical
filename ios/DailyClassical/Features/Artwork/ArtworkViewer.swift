@@ -9,13 +9,32 @@ struct ArtworkViewer: View {
     @State private var lastScale: CGFloat = 1
     @State private var offset: CGSize = .zero
     @State private var lastOffset: CGSize = .zero
+    /// The `full` rendition (long side ≤ 4000 px) for zooming: downloaded (then disk-cached) while the
+    /// hero is already on screen, and held only here — released when the viewer closes.
+    @State private var full: UIImage?
+    @Environment(\.displayScale) private var displayScale
 
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
-            // Bundled/cached hero via ImagePipeline: instant for launch content, works offline.
-            CachedImage(url: painting.imageUrl) { Image(uiImage: $0).resizable().aspectRatio(contentMode: .fit) }
-                placeholder: { ProgressView().tint(Palette.viewerInk2) }
+            GeometryReader { geo in
+                ZStack {
+                    // Bundled/cached hero via ImagePipeline: instant for launch content, works offline.
+                    CachedImage(url: painting.imageUrl, size: geo.size, scale: displayScale, contentMode: .fit,
+                                artwork: painting.artwork) { Image(uiImage: $0).resizable().aspectRatio(contentMode: .fit) }
+                        placeholder: { ProgressView().tint(Palette.viewerInk2) }
+                    // Same fit frame and aspect as the hero underneath, so the swap is invisible except in detail.
+                    if let full {
+                        Image(uiImage: full).resizable().aspectRatio(contentMode: .fit)
+                    }
+                }
+                .frame(width: geo.size.width, height: geo.size.height)
+            }
+            .task(id: painting.imageUrl) {
+                guard let request = ImagePipeline.shared.request(for: painting.imageUrl, variant: .full, artwork: painting.artwork),
+                      let image = await ImagePipeline.shared.image(for: request), !Task.isCancelled else { return }
+                full = image
+            }
             .scaleEffect(scale)
             .offset(offset)
             .gesture(zoom.simultaneously(with: pan))

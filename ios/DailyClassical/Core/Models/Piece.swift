@@ -15,11 +15,47 @@ nonisolated struct Painting: Codable, Hashable, Sendable {
     let collection: String
     let pairingNote: String?
     let medium: String?
+    /// `hero` rendition (short side ≤ 1800 px); `thumbUrl` (≤ 300 px) for lists, `fullUrl` (≤ 4000 px)
+    /// for the artwork viewer's zoom. Older responses only carry `imageUrl` (ImagePipeline then derives
+    /// the others from the bundled manifest).
     let imageUrl: URL?
+    var thumbUrl: URL? = nil
+    var fullUrl: URL? = nil
+    /// Average colour "#rrggbb", shown while the image loads.
+    var placeholderColor: String? = nil
+    /// Attribution a freely licensed (non-PD) image requires, and its licence deed.
+    var creditLine: String? = nil
+    var licenseUrl: URL? = nil
     let sourceUrl: URL?
     let width: Int?
     let height: Int?
     let rightsStatus: String
+
+    private enum CodingKeys: String, CodingKey {
+        case artist, title, yearLabel, collection, pairingNote, medium, imageUrl, thumbUrl, fullUrl,
+             placeholderColor, creditLine, licenseUrl, sourceUrl, width, height, rightsStatus
+    }
+
+    init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        artist = try c.decode(String.self, forKey: .artist)
+        title = try c.decode(String.self, forKey: .title)
+        yearLabel = try c.decode(String.self, forKey: .yearLabel)
+        collection = try c.decode(String.self, forKey: .collection)
+        pairingNote = try c.decodeIfPresent(String.self, forKey: .pairingNote)
+        medium = try c.decodeIfPresent(String.self, forKey: .medium)
+        imageUrl = try c.decodeIfPresent(URL.self, forKey: .imageUrl)
+        // Image extras are optional and decode-tolerant: a malformed one never drops the painting.
+        thumbUrl = try? c.decodeIfPresent(URL.self, forKey: .thumbUrl)
+        fullUrl = try? c.decodeIfPresent(URL.self, forKey: .fullUrl)
+        placeholderColor = try? c.decodeIfPresent(String.self, forKey: .placeholderColor)
+        creditLine = try? c.decodeIfPresent(String.self, forKey: .creditLine)
+        licenseUrl = try? c.decodeIfPresent(URL.self, forKey: .licenseUrl)
+        sourceUrl = try c.decodeIfPresent(URL.self, forKey: .sourceUrl)
+        width = try c.decodeIfPresent(Int.self, forKey: .width)
+        height = try c.decodeIfPresent(Int.self, forKey: .height)
+        rightsStatus = try c.decode(String.self, forKey: .rightsStatus)
+    }
 
     var aspectRatio: CGFloat? {
         guard let width, let height, height > 0 else { return nil }
@@ -106,7 +142,15 @@ nonisolated struct Composer: Codable, Hashable, Identifiable, Sendable {
     }
 
     struct Portrait: Codable, Hashable, Sendable {
+        /// `hero` rendition; `thumbUrl` / `fullUrl` / `placeholderColor` as for `Painting`.
         let imageUrl: URL?
+        var thumbUrl: URL? = nil
+        var fullUrl: URL? = nil
+        var placeholderColor: String? = nil
+        /// Attribution the licence requires (in the response's language) and the licence deed, for
+        /// freely licensed (non-PD) portraits.
+        var creditLine: String? = nil
+        var licenseUrl: URL? = nil
         let sourceUrl: URL?
         let width: Int?
         let height: Int?
@@ -117,6 +161,30 @@ nonisolated struct Composer: Codable, Hashable, Identifiable, Sendable {
         let year: String?
         let collection: String?
         let license: String?
+
+        private enum CodingKeys: String, CodingKey {
+            case imageUrl, thumbUrl, fullUrl, placeholderColor, creditLine, licenseUrl, sourceUrl, width, height,
+                 focalY, artist, title, year, collection, license
+        }
+
+        init(from decoder: Decoder) throws {
+            let c = try decoder.container(keyedBy: CodingKeys.self)
+            imageUrl = try c.decodeIfPresent(URL.self, forKey: .imageUrl)
+            thumbUrl = try? c.decodeIfPresent(URL.self, forKey: .thumbUrl)
+            fullUrl = try? c.decodeIfPresent(URL.self, forKey: .fullUrl)
+            placeholderColor = try? c.decodeIfPresent(String.self, forKey: .placeholderColor)
+            creditLine = try? c.decodeIfPresent(String.self, forKey: .creditLine)
+            licenseUrl = try? c.decodeIfPresent(URL.self, forKey: .licenseUrl)
+            sourceUrl = try c.decodeIfPresent(URL.self, forKey: .sourceUrl)
+            width = try c.decodeIfPresent(Int.self, forKey: .width)
+            height = try c.decodeIfPresent(Int.self, forKey: .height)
+            focalY = try c.decodeIfPresent(Double.self, forKey: .focalY)
+            artist = try c.decode(String.self, forKey: .artist)
+            title = try c.decode(String.self, forKey: .title)
+            year = try c.decodeIfPresent(String.self, forKey: .year)
+            collection = try c.decodeIfPresent(String.self, forKey: .collection)
+            license = try c.decodeIfPresent(String.self, forKey: .license)
+        }
 
         var aspectRatio: CGFloat? {
             guard let width, let height, height > 0 else { return nil }
