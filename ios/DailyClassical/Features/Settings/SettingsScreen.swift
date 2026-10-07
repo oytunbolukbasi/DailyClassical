@@ -123,6 +123,10 @@ struct SettingsScreen: View {
 
     @ViewBuilder private var premiumRow: some View {
         switch entitlements.activePlan {
+        case nil where entitlements.accountPremium:
+            // Premium granted on the account (comp), not bought through the App Store.
+            SettingsValueRow("settings.premium.row", value: Text("settings.premium.status.account"))
+                .settingsRow()
         case nil:
             Button { router.present(.paywall) } label: {
                 SettingsValueRow("settings.premium.row", value: Text("settings.premium.status.free"), showsChevron: true)

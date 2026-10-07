@@ -56,6 +56,9 @@ struct AccountScreen: View {
         }
         .settingsList()
         .navigationTitle(Text("account.title"))
+        // Inline + no title: the Literata title is drawn in the list. Without .inline the stack's
+        // large-title mode survives and iOS 27 draws a second, system "Account" above it.
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar(removing: .title)
         // Drawn without the tab bar (SPEC §7.15): a pushed detail.
         .toolbarVisibility(.hidden, for: .tabBar)
@@ -152,6 +155,9 @@ struct ChangePasswordScreen: View {
         }
         .background(Palette.background)
         .navigationTitle(Text("account.changePassword.title"))
+        // Inline + no title: the Literata title is drawn in the list. Without .inline the stack's
+        // large-title mode survives and iOS 27 draws a second, system "Account" above it.
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar(removing: .title)
         .toolbarVisibility(.hidden, for: .tabBar)
     }

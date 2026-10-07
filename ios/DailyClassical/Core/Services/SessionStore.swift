@@ -20,6 +20,13 @@ final class SessionStore {
         self.api = api
         token = Keychain.get("token")
         email = UserDefaults.standard.string(forKey: "accountEmail")
+        #if DEBUG
+        // Screen checks in the simulator: DC_SESSION_TOKEN=<jwt> (from POST /v1/auth/login with a
+        // test account) starts the app signed in, without typing credentials into the UI.
+        if let injected = ProcessInfo.processInfo.environment["DC_SESSION_TOKEN"], !injected.isEmpty {
+            token = injected
+        }
+        #endif
     }
 
     func isFavourite(_ pieceId: String) -> Bool { favourites[pieceId] != nil }

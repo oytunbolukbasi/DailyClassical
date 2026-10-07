@@ -73,6 +73,11 @@
     "en": "Lifetime",
     "tr": "Ömür boyu"
   },
+  "settings.premium.status.account": {
+    "en": "Active",
+    "tr": "Etkin",
+    "comment": "Premium granted on the account (not an App Store purchase)."
+  },
   "settings.premium.manage.accessibilityHint": {
     "en": "Manage your subscription",
     "tr": "Aboneliğinizi yönetin"

@@ -3920,6 +3920,24 @@
         }
       }
     },
+    "settings.premium.status.account": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Active"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etkin"
+          }
+        }
+      },
+      "comment": "Premium granted on the account (not an App Store purchase)."
+    },
     "settings.premium.status.free": {
       "extractionState": "manual",
       "localizations": {
