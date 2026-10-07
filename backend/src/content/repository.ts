@@ -39,8 +39,11 @@ export function imageCredit(key: string, imageUrl: string | null, locale: string
 export type ImageManifestFile = { path: string; width: number; height: number; bytes: number; hash: string };
 export type ImageManifestEntry = {
   source: string; color: string;
-  /** Bundled in the app + served: hero (short ≤ 1800 px), thumb (short ≤ 300 px). Served only: full (long ≤ 4000 px). */
-  hero: ImageManifestFile; thumb: ImageManifestFile; full: ImageManifestFile;
+  /**
+   * Bundled in the app + served: hero (short ≤ 1800 px), thumb (short ≤ 300 px). Served only: full
+   * (long ≤ 4000 px); app images (content/app-images.yaml, e.g. `paywall/…`) have none.
+   */
+  hero: ImageManifestFile; thumb: ImageManifestFile; full?: ImageManifestFile;
   /** Required attribution per locale and licence deed, for freely licensed (non-PD) images. */
   credit?: Record<string, string>; licenseUrl?: string;
 };

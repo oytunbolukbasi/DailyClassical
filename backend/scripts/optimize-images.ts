@@ -10,8 +10,8 @@ import type { ImageManifest, ImageManifestEntry } from "../src/content/repositor
  * `npm run images` — painting + composer portrait derivatives (macOS: uses scripts/image-tool.swift).
  *
  * 1. Downloads each vetted original (content/paintings.yaml `image_url`, content/composers.yaml
- *    `portrait.image_url`) ONCE into content/images/.originals/ (git-ignored; re-fetched only when the
- *    yaml URL changes or with --refresh).
+ *    `portrait.image_url`, content/app-images.yaml `image_url`) ONCE into content/images/.originals/
+ *    (git-ignored; re-fetched only when the yaml URL changes or with --refresh).
  * 2. Writes three sRGB, metadata-free HEICs per image (never upscaled beyond the original):
  *      hero   short side ≤ 1800 px, long side ≤ 3600 px, q 0.75  Today / piece header / portrait at 3×
  *                                                                (cover-cropped into a ~430×580 pt frame)
@@ -20,7 +20,8 @@ import type { ImageManifest, ImageManifestEntry } from "../src/content/repositor
  *    to backend/public/images/<kind>/<id>-<variant>.heic (served by the API at /images/…, immutable,
  *    URLs carry ?v=<hash>). hero + thumb are also copied into ios/DailyClassical/Resources/Artwork/
  *    (bundled, so first launch is instant and offline); `full` is NOT bundled — the app downloads it on
- *    demand and keeps it in its disk cache.
+ *    demand and keeps it in its disk cache. App images (app-images.yaml: the paywall painting) get
+ *    hero + thumb only, under their own kind (`paywall/<id>`).
  * 3. Writes manifest.json next to both copies (pixel sizes, bytes, content hash, average colour) and
  *    records the same facts in the yaml (`hero`, `thumb`, `full`, `placeholder_color`).
  * 4. Deletes derivatives no manifest entry points at (e.g. the old .jpg files), in both places.
@@ -47,7 +48,8 @@ import type { ImageManifest, ImageManifestEntry } from "../src/content/repositor
  *     npm run fixtures                   # always afterwards, so the fixtures carry the new ?v= URLs
  *
  * `--only` may be repeated or comma-separated; `paintings/<id>` / `composers/<id>` picks one kind when a
- * piece and a composer share an id. Every other image keeps its files and manifest entry untouched.
+ * piece and a composer share an id; app images are named by their key (`paywall/friedrich-wanderer`).
+ * Every other image keeps its files and manifest entry untouched.
  */
 const here = dirname(fileURLToPath(import.meta.url));
 const repo = join(here, "../..");
@@ -76,7 +78,8 @@ if (argv.includes("--only") && only.size === 0) throw new Error("--only needs an
 const USER_AGENT = "DailyClassical-image-pipeline/1.0 (https://dailyclassical.co)";
 
 type Credit = { credit?: Record<string, string>; licenseUrl?: string };
-type Job = { kind: "paintings" | "composers"; id: string; url: string; doc: Document; path: (string | number)[] } & Credit;
+/** `kind`: "paintings", "composers", or an app image's kind ("paywall"). `variants`: what to make (default all). */
+type Job = { kind: string; id: string; url: string; doc: Document; path: (string | number)[]; variants?: Variant[] } & Credit;
 
 const load = (file: string) => {
   const path = join(contentDir, file);
@@ -84,6 +87,7 @@ const load = (file: string) => {
 };
 const paintings = load("paintings.yaml");
 const composers = load("composers.yaml");
+const appImages = load("app-images.yaml");
 
 const jobs: Job[] = [];
 for (const [id, v] of Object.entries(paintings.doc.toJS() as Record<string, { image_url?: string | null }>)) {
@@ -97,6 +101,12 @@ type Portrait = { image_url?: string | null; credit_line?: string | Record<strin
   const credit = typeof p.credit_line === "string" ? { en: p.credit_line } : (p.credit_line ?? undefined);
   jobs.push({ kind: "composers", id: c.id, url: p.image_url, doc: composers.doc, path: [i, "portrait"], credit, licenseUrl: p.license_url ?? undefined });
 });
+// Bundled in the app and drawn at most full-width: no `full` zoom copy.
+for (const [key, v] of Object.entries((appImages.doc.toJS() ?? {}) as Record<string, { image_url?: string | null }>)) {
+  const [kind, id, ...rest] = key.split("/");
+  if (!kind || !id || rest.length || kind === "paintings" || kind === "composers") throw new Error(`app-images.yaml: key "${key}" must be <kind>/<id>`);
+  if (v?.image_url) jobs.push({ kind, id, url: v.image_url, doc: appImages.doc, path: [key], variants: ["hero", "thumb"] });
+}
 
 const selected = (job: Job) => only.size === 0 || only.has(job.id) || only.has(`${job.kind}/${job.id}`);
 const todo = jobs.filter(selected);
@@ -162,13 +172,14 @@ let originalBytes = 0;
 for (const job of todo) {
   const src = await original(job);
   originalBytes += statSync(src).size;
-  const files = variants.map((v) => `${job.kind}/${job.id}-${v}.${EXT}`);
+  const made = job.variants ?? variants;
+  const files = made.map((v) => `${job.kind}/${job.id}-${v}.${EXT}`);
   mkdirSync(join(publicDir, job.kind), { recursive: true });
-  const specs = variants.map((v, i) => `${join(publicDir, files[i]!)}:${VARIANTS[v].short}:${VARIANTS[v].long}:${VARIANTS[v].quality}`);
+  const specs = made.map((v, i) => `${join(publicDir, files[i]!)}:${VARIANTS[v].short}:${VARIANTS[v].long}:${VARIANTS[v].quality}`);
   const result = JSON.parse(execFileSync(toolBinary, [src, ...specs], { encoding: "utf8" })) as ToolResult;
 
   const entry = { source: job.url, color: result.color, ...(job.credit && { credit: job.credit }), ...(job.licenseUrl && { licenseUrl: job.licenseUrl }) } as ImageManifestEntry;
-  variants.forEach((v, i) => {
+  made.forEach((v, i) => {
     const out = result.outputs[i]!;
     const hash = createHash("sha256").update(readFileSync(join(publicDir, files[i]!))).digest("hex").slice(0, 10);
     entry[v] = { path: files[i]!, width: out.width, height: out.height, bytes: out.bytes, hash };
@@ -179,14 +190,14 @@ for (const job of todo) {
   const { doc, path } = job;
   if (doc.getIn([...path, "width"]) == null) doc.setIn([...path, "width"], result.width);
   if (doc.getIn([...path, "height"]) == null) doc.setIn([...path, "height"], result.height);
-  for (const v of variants) {
-    const node = doc.createNode({ width: entry[v].width, height: entry[v].height, bytes: entry[v].bytes });
+  for (const v of made) {
+    const node = doc.createNode({ width: entry[v]!.width, height: entry[v]!.height, bytes: entry[v]!.bytes });
     if (isMap(node)) node.flow = true;
     doc.setIn([...path, v], node);
   }
   doc.setIn([...path, "placeholder_color"], result.color);
   console.log(`✓ ${job.kind}/${job.id}: ${result.width}×${result.height} → ` +
-    variants.map((v) => `${v} ${entry[v].width}×${entry[v].height} ${kb(entry[v].bytes)}`).join(", ") + `, ${result.color}`);
+    made.map((v) => `${v} ${entry[v]!.width}×${entry[v]!.height} ${kb(entry[v]!.bytes)}`).join(", ") + `, ${result.color}`);
 }
 
 // Stable key order, so a partial run does not reshuffle the manifest diff.
@@ -194,25 +205,29 @@ manifest.images = Object.fromEntries(Object.entries(manifest.images).sort(([a], 
 writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
 writeFileSync(paintings.path, paintings.doc.toString({ lineWidth: 0 }));
 writeFileSync(composers.path, composers.doc.toString({ lineWidth: 0 }));
+writeFileSync(appImages.path, appImages.doc.toString({ lineWidth: 0 }));
 
 // Bundle copy for the app (folder reference Resources/Artwork in ios/project.yml): bundled variants only.
 for (const key of Object.keys(manifest.images)) {
   if (only.size > 0 && !todo.some((j) => `${j.kind}/${j.id}` === key)) continue;
   const entry = manifest.images[key]!;
   for (const v of variants.filter((v) => VARIANTS[v].bundled)) {
-    const dest = join(bundleDir, entry[v].path);
+    const file = entry[v];
+    if (!file) continue;
+    const dest = join(bundleDir, file.path);
     mkdirSync(dirname(dest), { recursive: true });
-    copyFileSync(join(publicDir, entry[v].path), dest);
+    copyFileSync(join(publicDir, file.path), dest);
   }
 }
 copyFileSync(manifestPath, join(bundleDir, "manifest.json"));
 
 // Remove every derivative the manifest no longer points at (old .jpg renditions, removed images, `full` in the bundle).
 const keep = (root: string, bundled: boolean) => new Set(Object.values(manifest.images)
-  .flatMap((e) => variants.filter((v) => !bundled || VARIANTS[v].bundled).map((v) => join(root, e[v].path))));
+  .flatMap((e) => variants.filter((v) => (!bundled || VARIANTS[v].bundled) && e[v]).map((v) => join(root, e[v]!.path))));
+const kinds = [...new Set(["paintings", "composers", ...jobs.map((j) => j.kind)])];
 for (const [root, bundled] of [[publicDir, false], [bundleDir, true]] as const) {
   const wanted = keep(root, bundled);
-  for (const kind of ["paintings", "composers"]) {
+  for (const kind of kinds) {
     const dir = join(root, kind);
     if (!existsSync(dir)) continue;
     for (const f of readdirSync(dir)) {
@@ -225,7 +240,7 @@ for (const [root, bundled] of [[publicDir, false], [bundleDir, true]] as const) 
 // --- report ---------------------------------------------------------------------------------------
 function kb(n: number) { return `${Math.round(n / 1024)} KB`; }
 const all = Object.values(manifest.images);
-const sum = (v: Variant) => all.reduce((s, e) => s + e[v].bytes, 0);
+const sum = (v: Variant) => all.reduce((s, e) => s + (e[v]?.bytes ?? 0), 0);
 const mb = (n: number) => `${(n / 1e6).toFixed(2)} MB`;
 console.log(
   `\n${all.length} images${only.size ? ` (${todo.length} regenerated)` : ""}.` +

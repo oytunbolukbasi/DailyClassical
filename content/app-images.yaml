@@ -1,0 +1,23 @@
+# Images the app shows outside pieces and composers, keyed `<kind>/<id>` (the manifest key and
+# the file path: backend/public/images/<kind>/<id>-hero|thumb.heic). Same pipeline and fields as
+# paintings.yaml, but only hero + thumb are made (no zoom copy) and both are bundled in the app.
+# The app finds the bundled copy by `image_url` (ImagePipeline matches the manifest `source`),
+# so the URL in the app must stay equal to `image_url` here.
+# After changing one: `npm run images -- --only <kind>/<id>` (backend/).
+#
+# Captions and credits live in the app strings (e.g. `paywall.painting.caption`).
+
+paywall/friedrich-wanderer:
+  # Paywall (SPEC §4.10): Caspar David Friedrich, Wanderer above the Sea of Fog, c. 1818. Hamburger Kunsthalle.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg
+  source_url: https://online-sammlung.hamburger-kunsthalle.de/de/objekt/HK-5161
+  commons_page: https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg
+  width: 2327
+  height: 2980
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Caspar David Friedrich, Wanderer above the Sea of Fog, c. 1818. Hamburger Kunsthalle. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2305, bytes: 557080 }
+  thumb: { width: 300, height: 384, bytes: 14223 }
+  placeholder_color: "#848792"
