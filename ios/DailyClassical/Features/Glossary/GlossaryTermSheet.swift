@@ -30,7 +30,8 @@ struct GlossaryTermSheet: View {
         .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { height = $0 }
         .presentationDetents([.height(height)])
         .presentationDragIndicator(.visible)
-        .presentationBackgroundInteraction(.enabled(upThrough: .height(height)))
+        // Background interaction stays off: a tap outside always dismisses the sheet. With it on,
+        // an accidental tap on another term behind the sheet presented a second, broken sheet.
     }
 }
 
