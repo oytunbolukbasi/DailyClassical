@@ -1,6 +1,7 @@
 import {
   boolean,
   date,
+  index,
   integer,
   jsonb,
   pgEnum,
@@ -215,3 +216,19 @@ export const passwordResetTokens = pgTable("password_reset_tokens", {
   usedAt: timestamp("used_at", { withTimezone: true }),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
+
+/**
+ * Fixed-window request counters for the auth endpoints (src/lib/rate-limit.ts). One row per
+ * action + subject; the key carries only a hash of the IP or email. Rows past expires_at are
+ * stale and get deleted opportunistically.
+ */
+export const rateLimits = pgTable(
+  "rate_limit",
+  {
+    key: text("key").primaryKey(), // "login:ip_email:<sha256 prefix>"
+    windowStart: timestamp("window_start", { withTimezone: true }).notNull(),
+    count: integer("count").notNull(),
+    expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+  },
+  (t) => [index("rate_limit_expires_at_idx").on(t.expiresAt)],
+);

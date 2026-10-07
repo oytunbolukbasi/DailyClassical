@@ -7,6 +7,7 @@ import { emailVerificationCodes, favourites, type Locale, locales, passwordReset
 import { type AuthVars, hashPassword, issueToken, requireUser, verifyPassword } from "../lib/auth.js";
 import { sendPasswordResetEmail, sendVerificationCodeEmail, sendWelcomeEmail } from "../lib/email.js";
 import { requestLocale } from "../lib/locale.js";
+import { enforceRateLimit } from "../lib/rate-limit.js";
 import { generateResetToken, hashResetToken, resetTokenExpiry } from "../lib/reset-token.js";
 import { checkCode, CODE_TTL_MS, generateCode, hashCode, RESEND_COOLDOWN_MS } from "../lib/verification-code.js";
 
@@ -53,6 +54,7 @@ async function issueVerificationCode(user: Pick<UserRow, "id" | "email" | "local
  */
 account.post("/auth/register", async (c) => {
   const { email, password } = await body(c.req.raw, credentials);
+  await enforceRateLimit(c, "register", email);
   const locale = requestLocale(c);
   const passwordHash = await hashPassword(password);
   const [existing] = await db.select().from(users).where(eq(users.email, email));
@@ -66,6 +68,7 @@ account.post("/auth/register", async (c) => {
 
 account.post("/auth/verify", async (c) => {
   const { email, code } = await body(c.req.raw, z.object({ email: credentials.shape.email, code: z.string().regex(/^\d{6}$/) }));
+  await enforceRateLimit(c, "verify");
   const [user] = await db.select().from(users).where(eq(users.email, email));
   const [row] = user ? await db.select().from(emailVerificationCodes).where(eq(emailVerificationCodes.userId, user.id)) : [];
   if (!user || !row) throw new HTTPException(400, { message: "invalid_code" });
@@ -82,9 +85,10 @@ account.post("/auth/verify", async (c) => {
   return c.json({ token: await issueToken(user.id), user: userPayload(verified!) });
 });
 
-/** Always 204 (no account enumeration); throttled per user by RESEND_COOLDOWN_MS. */
+/** Always 204 (no account enumeration); throttled per user by RESEND_COOLDOWN_MS and by AUTH_RATE_LIMITS.resend. */
 account.post("/auth/verify/resend", async (c) => {
   const { email } = await body(c.req.raw, z.object({ email: credentials.shape.email }));
+  await enforceRateLimit(c, "resend", email);
   const [user] = await db.select().from(users).where(eq(users.email, email));
   if (user && !user.emailVerifiedAt) await issueVerificationCode(user, requestLocale(c));
   return c.body(null, 204);
@@ -92,6 +96,7 @@ account.post("/auth/verify/resend", async (c) => {
 
 account.post("/auth/login", async (c) => {
   const { email, password } = await body(c.req.raw, credentials);
+  await enforceRateLimit(c, "login", email);
   const [user] = await db.select().from(users).where(eq(users.email, email));
   if (!user || !(await verifyPassword(password, user.passwordHash))) {
     throw new HTTPException(401, { message: "invalid_credentials" });
@@ -116,6 +121,7 @@ const storedLocale = (value: string, fallback: Locale): Locale =>
  */
 account.post("/auth/password-reset", async (c) => {
   const { email } = await body(c.req.raw, z.object({ email: credentials.shape.email }));
+  await enforceRateLimit(c, "passwordReset", email);
   const locale = requestLocale(c);
   const [user] = await db
     .select({ id: users.id, email: users.email, locale: users.locale })
@@ -138,6 +144,7 @@ account.post("/auth/password-reset/confirm", async (c) => {
     c.req.raw,
     z.object({ token: z.string().min(16).max(200), password: credentials.shape.password }),
   );
+  await enforceRateLimit(c, "passwordResetConfirm");
   const passwordHash = await hashPassword(password);
   const ok = await db.transaction(async (tx) => {
     const [claimed] = await tx

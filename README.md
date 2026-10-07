@@ -45,6 +45,7 @@ Endpoints (all content endpoints take `?locale=en|tr` or `Accept-Language`):
 `POST /v1/auth/password-reset`, `POST /v1/auth/password-reset/confirm`, `GET /reset-password` (web page),
 `GET|DELETE /v1/me`, `GET /v1/favourites`, `PUT|DELETE /v1/favourites/:pieceId`,
 `GET /v1/widget?date=&days=` (Home Screen widget feed), `GET /v1/config` (update prompts).
+The `/v1/auth/*` POSTs are rate limited per client IP and per email (429 `rate_limited` with `Retry-After`; limits in `backend/src/lib/rate-limit.ts`, counters in the `rate_limit` table).
 
 Useful scripts (in `backend/`):
 

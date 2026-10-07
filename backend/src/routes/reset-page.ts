@@ -23,6 +23,7 @@ const copy = {
     mismatch: "The passwords do not match.",
     generic: "Something went wrong. Please try again.",
     offline: "No connection. Check your internet and try again.",
+    rateLimited: "Too many attempts. Please wait a moment and try again.",
     doneTitle: "Password changed",
     doneBody: "You can now sign in to DailyClassical with your new password. Other devices have been signed out.",
     expiredTitle: "This link has expired",
@@ -39,6 +40,7 @@ const copy = {
     mismatch: "Şifreler eşleşmiyor.",
     generic: "Bir şeyler ters gitti. Lütfen tekrar deneyin.",
     offline: "Bağlantı yok. İnternetinizi kontrol edip tekrar deneyin.",
+    rateLimited: "Çok fazla deneme yaptınız. Lütfen biraz sonra tekrar deneyin.",
     doneTitle: "Şifreniz değişti",
     doneBody: "Artık yeni şifrenizle DailyClassical’a giriş yapabilirsiniz. Diğer cihazlardaki oturumlar kapatıldı.",
     expiredTitle: "Bu bağlantının süresi doldu",
@@ -50,7 +52,7 @@ const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 
 export function renderResetPage(locale: Locale, state: "form" | "expired"): string {
   const t = copy[locale];
-  const messages = JSON.stringify({ tooShort: t.tooShort, mismatch: t.mismatch, generic: t.generic, offline: t.offline }).replace(/</g, "\\u003c");
+  const messages = JSON.stringify({ tooShort: t.tooShort, mismatch: t.mismatch, generic: t.generic, offline: t.offline, rateLimited: t.rateLimited }).replace(/</g, "\\u003c");
   return `<!doctype html>
 <html lang="${locale}">
 <head>
@@ -129,6 +131,7 @@ button:disabled{opacity:.5;cursor:default}
       if (res.status === 204) return show("done-state");
       return res.json().catch(function () { return {}; }).then(function (body) {
         if (body && body.error === "invalid_or_expired_token") return show("expired-state");
+        if (res.status === 429) return error(M.rateLimited);
         error(M.generic);
       });
     }).catch(function () { error(M.offline); }).finally(function () { btn.disabled = false; });
