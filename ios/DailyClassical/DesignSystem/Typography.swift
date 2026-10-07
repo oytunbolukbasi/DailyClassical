@@ -34,9 +34,9 @@ enum Typography {
     static let composerLinkToday = Font.system(.subheadline, weight: .medium)
     static let body15 = Font.subheadline                                       // 15
     static let navPill = Font.system(.subheadline, weight: .medium)
-    static let meta14 = Font.system(size: 14, weight: .regular).leading(.standard)
-    static let chip = Font.system(size: 14, weight: .medium)
-    static let buttonS = Font.system(size: 14, weight: .semibold)
+    static let meta14 = system(14, relativeTo: .subheadline).leading(.standard) // piece meta line, durations
+    static let chip = system(14, .medium, relativeTo: .subheadline)            // chips, segments, toast
+    static let buttonS = system(14, .semibold, relativeTo: .subheadline)
     static let meta13 = Font.footnote                                          // 13
     static let planName = Font.system(.footnote, weight: .semibold)
     static let caption = Font.caption                                          // 12
@@ -44,7 +44,30 @@ enum Typography {
     static let stopTime = Font.system(.caption, weight: .semibold)
     static let micro = Font.system(.caption2, weight: .semibold)               // 11/600 uppercase labels
     static let microRegular = Font.caption2
-    static let tabLabel = Font.system(size: 10, weight: .medium)
+    static let tabLabel = system(10, .medium, relativeTo: .caption2)
+
+    /// SF at a design size between two text styles (14 pt, 10 pt): exactly `size` at the default
+    /// text size, scaling with Dynamic Type like `style` (`size / style's default size`).
+    static func system(_ size: CGFloat, _ weight: Font.Weight = .regular, relativeTo style: Font.TextStyle) -> Font {
+        Font.system(style, weight: weight).scaled(by: size / defaultSize(of: style))
+    }
+
+    /// Point sizes of the text styles at the default (Large) content size.
+    private static func defaultSize(of style: Font.TextStyle) -> CGFloat {
+        switch style {
+        case .largeTitle: 34
+        case .title: 28
+        case .title2: 22
+        case .title3: 20
+        case .headline, .body: 17
+        case .callout: 16
+        case .subheadline: 15
+        case .footnote: 13
+        case .caption: 12
+        case .caption2: 11
+        default: 17
+        }
+    }
 }
 
 extension View {
