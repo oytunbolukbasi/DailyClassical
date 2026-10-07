@@ -70,9 +70,7 @@ struct SourcesScreen: View {
 
     /// "Teodor Currentzis, musicAeterna (Sony Classical, 2017)."
     private func recordingCredit(_ r: Recording) -> String {
-        let year = r.releaseYear.map(String.init) ?? r.recordedYear
-        let meta = [r.label, year].compactMap { $0 }.joined(separator: ", ")
-        return meta.isEmpty ? "\(r.conductor), \(r.orchestra)." : "\(r.conductor), \(r.orchestra) (\(meta))."
+        r.citation(fullNames: true) + "."
     }
 
     /// Summaries carry the painting; the reference recording comes from each piece's detail.

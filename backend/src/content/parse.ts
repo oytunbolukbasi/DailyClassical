@@ -8,13 +8,16 @@ import type {
   ParsedContent,
   ParsedPiece,
   PieceMeta,
+  PieceForm,
   RecordingMeta,
   Soloist,
   Thread,
 } from "./types.js";
+import { PIECE_FORMS } from "./types.js";
 
 /**
- * Parser for the launch-content markdown (content/<locale>/*.md).
+ * Parser for the content markdown (content/<locale>/pieces/*.md + glossary.md, see
+ * content/CONTENT_GUIDE.md). A `## ` section holding a yaml block is a piece.
  * The English and Turkish files share one structure; only the fixed
  * labels differ, so every label is matched against both languages.
  */
@@ -164,8 +167,8 @@ function toSoloist(v: unknown): Soloist {
 function toRecording(r: Record<string, unknown>): RecordingMeta {
   const release = r.release_year;
   return {
-    conductor: String(r.conductor),
-    orchestra: String(r.orchestra),
+    conductor: optString(r.conductor),
+    orchestra: optString(r.orchestra),
     soloists: Array.isArray(r.soloists) ? r.soloists.map(toSoloist) : [],
     chorus: optString(r.chorus),
     label: optString(r.label),
@@ -180,10 +183,14 @@ function toRecording(r: Record<string, unknown>): RecordingMeta {
 
 function parseMeta(yamlText: string): PieceMeta {
   const y = parseYaml(yamlText) as Record<string, any>;
+  if (!PIECE_FORMS.includes(y.form)) {
+    throw new Error(`${y.id}: form "${y.form}" is not one of ${PIECE_FORMS.join(", ")}`);
+  }
   return {
     id: y.id,
     composer: y.composer,
     composerDisplay: y.composer_display ?? null,
+    form: y.form as PieceForm,
     title: smartQuotes(String(y.title)),
     catalogue: y.catalogue ?? null,
     key: y.key ?? null,
@@ -338,10 +345,10 @@ function parseGlossary(block: Block): GlossaryEntry[] {
 export function parseContent(markdown: string, locale: string): ParsedContent {
   const lines = markdown.replace(/\r\n/g, "\n").split("\n");
   const pieces: ParsedPiece[] = [];
-  let glossary: GlossaryEntry[] = [];
+  const glossary: GlossaryEntry[] = [];
   for (const block of splitBlocks(lines, "## ")) {
-    if (/^\d+\.\s/.test(block.heading)) pieces.push(parsePiece(block));
-    else if (is(block.heading, LABELS.glossary)) glossary = parseGlossary(block);
+    if (is(block.heading, LABELS.glossary)) glossary.push(...parseGlossary(block));
+    else if (block.lines.some((l) => l.trim() === "```yaml")) pieces.push(parsePiece(block));
   }
   return { locale, pieces, glossary };
 }
@@ -365,6 +372,10 @@ export function validateContent(c: ParsedContent): string[] {
     ];
     for (const ref of texts.flatMap(glossaryRefs)) {
       if (!ids.has(ref)) problems.push(`${c.locale}/${meta.id}: glossary term "${ref}" is not defined`);
+    }
+    const rec = meta.referenceRecording;
+    if (!rec.conductor && !rec.orchestra && rec.soloists.length === 0) {
+      problems.push(`${c.locale}/${meta.id}: the reference recording names no performers`);
     }
     for (const m of document.movements) {
       if (m.stops.length === 0) problems.push(`${c.locale}/${meta.id}: movement ${m.numeral} has no listening stops`);

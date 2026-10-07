@@ -63,8 +63,27 @@ nonisolated struct Painting: Codable, Hashable, Sendable {
     }
 }
 
+/// Decoding is tolerant: an era or form added on the server after this build shipped becomes
+/// `.other` instead of failing the whole Library response (content ships without app updates).
 nonisolated enum Era: String, Codable, CaseIterable, Sendable {
-    case baroque, classical, romantic, lateRomantic = "late_romantic", modern
+    case baroque, classical, romantic, lateRomantic = "late_romantic", modern, other
+
+    init(from decoder: Decoder) throws {
+        self = Era(rawValue: try decoder.singleValueContainer().decode(String.self)) ?? .other
+    }
+}
+
+/// The work's form (backend `PIECE_FORMS`); drives the Library's form filter.
+nonisolated enum PieceForm: String, Codable, CaseIterable, Sendable {
+    case symphony
+    case pianoConcerto = "piano-concerto", violinConcerto = "violin-concerto", celloConcerto = "cello-concerto"
+    case concerto
+    case pianoSonata = "piano-sonata", sonata
+    case stringQuartet = "string-quartet", chamber, orchestral, choral, other
+
+    init(from decoder: Decoder) throws {
+        self = PieceForm(rawValue: try decoder.singleValueContainer().decode(String.self)) ?? .other
+    }
 }
 
 nonisolated struct PieceSummary: Codable, Hashable, Identifiable, Sendable {
@@ -76,6 +95,8 @@ nonisolated struct PieceSummary: Codable, Hashable, Identifiable, Sendable {
     let keyLabel: String?
     let year: Int
     let era: Era
+    /// Absent from older API responses (all symphonies then); see `kind`.
+    var form: PieceForm?
     let durationMin: Int
     let movementCount: Int
     let hook: String
@@ -91,8 +112,9 @@ nonisolated struct Recording: Codable, Hashable, Identifiable, Sendable {
 
     let id: String
     let role: Role
-    let conductor: String
-    let orchestra: String
+    /// Nil for solo and chamber recordings (a sonata's pianist is a soloist).
+    let conductor: String?
+    let orchestra: String?
     let soloists: [Soloist]
     let chorus: String?
     let label: String?
@@ -118,6 +140,10 @@ nonisolated struct Piece: Codable, Hashable, Identifiable, Sendable {
     let recordings: [Recording]
 
     var referenceRecording: Recording? { recordings.first { $0.role == .reference } }
+}
+
+extension PieceSummary {
+    var kind: PieceForm { form ?? .symphony }
 }
 
 nonisolated struct TodayResponse: Codable, Sendable {

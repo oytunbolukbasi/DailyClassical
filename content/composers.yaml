@@ -376,6 +376,51 @@
     placeholder_color: "#74503a"
     full: { width: 1312, height: 2000, bytes: 654796 }
 
+- id: rachmaninoff
+  match: Sergei Rachmaninoff
+  sort_name: Rachmaninoff, Sergei
+  born: 1873
+  died: 1943
+  era: late_romantic
+  names:
+    en: { name: Sergei Rachmaninoff, short: Rachmaninoff }
+    tr: { name: Sergey Rahmaninov, short: Rahmaninov }
+  nationality: { en: Russian, tr: Rus }
+  facts:
+    born: { en: "1 April 1873, Novgorod Governorate", tr: "1 Nisan 1873, Novgorod Guberniyası" }
+    died: { en: "28 March 1943, Beverly Hills", tr: "28 Mart 1943, Beverly Hills" }
+    symphonies: { en: "Three", tr: "Üç" }
+    best_known_for: { en: "Piano Concertos Nos. 2 and 3, *Rhapsody on a Theme of Paganini*", tr: "2. ve 3. Piyano Konçertoları, *Paganini Rapsodisi*" }
+  bio:
+    en: |-
+      Rachmaninoff was born in 1873 into a landowning family in the Novgorod region of north-west Russia. His father’s debts cost the family its estates, and in 1882 they moved to a small flat in St Petersburg. After two unsettled years at the conservatory there, at twelve he was sent to Moscow to live with Nikolai Zverev, a strict piano teacher who took in a few pupils as boarders. He graduated from the Moscow Conservatory in 1892 with the Great Gold Medal. His student opera *Aleko* won Tchaikovsky’s praise, and his Prelude in C-sharp minor soon made his name far beyond Russia.
+
+      In 1897 the premiere of his First Symphony was a disaster, and for three years he wrote almost nothing. Treatment with the physician Nikolai Dahl helped him back to work, and the Second Piano Concerto (1901), dedicated to Dahl, became his most popular piece. The years that followed were full: in 1902 he married his cousin Natalia Satina, he conducted at the Bolshoi Theatre, he spent three winters in Dresden, where he wrote his Second Symphony, and in 1909 he toured America with his Third Piano Concerto, written for that tour.
+
+      The Russian Revolution ended that life. In December 1917 he left Russia with his family and never returned. To support them he became a touring pianist, one of the greatest of his time, and settled in the United States. He composed much less, partly in a villa he built on Lake Lucerne, where he wrote the *Rhapsody on a Theme of Paganini* (1934). His last work was the *Symphonic Dances* (1940). He died in Beverly Hills on 28 March 1943, four days before his seventieth birthday.
+    tr: |-
+      Rahmaninov 1873’te, Rusya’nın kuzeybatısındaki Novgorod bölgesinde toprak sahibi bir ailede doğdu. Babasının borçları yüzünden aile mülklerini kaybetti ve 1882’de St. Petersburg’da küçük bir daireye taşındı. Oradaki konservatuvarda geçen iki huzursuz yılın ardından, on iki yaşında Moskova’ya, birkaç öğrencisini evinde yatılı olarak barındıran sert bir piyano öğretmeni olan Nikolay Zverev’in yanına gönderildi. 1892’de Moskova Konservatuvarı’ndan Büyük Altın Madalya ile mezun oldu. Öğrenciyken yazdığı *Aleko* operası Çaykovski’nin övgüsünü kazandı; Do diyez minör Prelüdü de kısa sürede adını Rusya’nın çok ötesine taşıdı.
+
+      1897’de Birinci Senfonisi’nin ilk seslendirilişi tam bir felaketti ve besteci üç yıl boyunca neredeyse hiçbir şey yazamadı. Doktor Nikolay Dal’ın tedavisi onu yeniden çalışmaya döndürdü; Dal’a ithaf ettiği İkinci Piyano Konçertosu (1901) en sevilen eseri oldu. Ardından dolu yıllar geldi: 1902’de kuzeni Natalya Satina ile evlendi, Bolşoy Tiyatrosu’nda şeflik yaptı, İkinci Senfonisi’ni yazdığı Dresden’de üç kış geçirdi ve 1909’da bu turne için yazdığı Üçüncü Piyano Konçertosu’yla Amerika’yı dolaştı.
+
+      Rus Devrimi bu hayata son verdi. Aralık 1917’de ailesiyle birlikte Rusya’dan ayrıldı ve bir daha geri dönmedi. Ailesinin geçimini sağlamak için turne yapan bir piyanist oldu, döneminin en büyüklerinden biri olarak Amerika Birleşik Devletleri’ne yerleşti. Çok daha az beste yaptı; bunların bir kısmını Luzern Gölü kıyısında yaptırdığı villada yazdı, *Paganini Teması Üzerine Rapsodi* (1934) de orada doğdu. Son eseri *Senfonik Danslar* (1940) oldu. 28 Mart 1943’te, yetmişinci doğum gününden dört gün önce Beverly Hills’te öldü.
+  portrait:
+    artist: { en: Bain News Service, tr: Bain News Service }
+    title: { en: Sergei Rachmaninoff, tr: Sergey Rahmaninov }
+    # LOC does not date the negative; "c. 1920" is an estimate (taken in the US, after Nov 1918). See the research note.
+    year: "c. 1920"
+    collection: { en: "Library of Congress, Washington, D.C.", tr: "Kongre Kütüphanesi, Washington" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Sergei_Rachmaninoff_LOC_30160_cropped.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Sergei_Rachmaninoff_LOC_30160_cropped.jpg
+    width: 2480
+    height: 3062
+    license: Public domain (PD-Bain, PD-old; Library of Congress, no known restrictions)
+    focal_y: 0.15
+    hero: { width: 1800, height: 2222, bytes: 504513 }
+    thumb: { width: 300, height: 370, bytes: 18901 }
+    full: { width: 2480, height: 3062, bytes: 924809 }
+    placeholder_color: "#5e5e5e"
+
 - id: shostakovich
   match: Dmitri Shostakovich
   sort_name: Shostakovich, Dmitri

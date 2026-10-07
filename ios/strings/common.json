@@ -252,5 +252,9 @@
   "artwork.publicDomain": {
     "en": "Public domain",
     "tr": "Kamu malı"
+  },
+  "era.other": {
+    "en": "Other",
+    "tr": "Diğer"
   }
 }

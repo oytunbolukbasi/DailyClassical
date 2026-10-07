@@ -1,11 +1,14 @@
 # Yapılacaklar
 
-Son güncelleme: 6 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
-
-## Devam eden
-- **[Claude] Arama alanının konumu (iOS 27):** Arama alanı artık sekme yapısına (TabView) bağlı. Ara sekmesi seçilince tab bar alttaki arama alanına dönüşüyor (Apple'ın iOS 26 yöntemi). iOS 27 simülatöründe ve telefonda doğrulanacak.
+Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
 
 ## Sıradaki işler (kod)
+0. **[Claude] İçerik güncelleme servisi: uygulama sürümü çıkmadan yeni içerik.** 1.0'a girmesi gerekenler en üstte.
+   - **Mevcut durum:** Release build içeriği API'den alıyor ve internetsiz açılış için diske önbelleğe alıyor. Yeni eserlerin tabloları sunucudan iniyor. Tür ve dönem alanları bilinmeyen değerlere dayanıklı (eski sürüm yeni bir türü "diğer" olarak gösterir).
+   - **Widget (1.0 için şart):** Widget şu an uygulamaya gömülü veriyi ve tabloları okuyor, sonradan eklenen eserleri göremez. Uygulama önümüzdeki günlerin kartlarını (başlık, besteci, küçük tablo JPEG'i) App Group'a yazacak; widget önce oradan, yoksa gömülü veriden okuyacak.
+   - **Yayın hattı:** İçerik `main`'e girince bir GitHub Action `content:build` ve `db:seed` çalıştıracak (production `DATABASE_URL` GitHub secret olarak). Görseller `backend/public/images` içinde, Railway deploy'uyla gidiyor. Ne zaman yayına gireceği `schedule.yaml` ile belirleniyor, yani içerik günler önceden gönderilebilir.
+   - **Eski sürümlere dayanıklılık (1.0 için şart):** Kalan enum alanları (kayıt rolü vb.) aynı şekilde toleranslı yapılacak. Bir `/v1/config` uç noktasıyla en düşük uygulama sürümü ve "güncelleme önerisi" bilgisi verilecek.
+   - **Kontrol:** Release build'de uçak modu, yeni eser ekleyip seed etme ve widget senaryoları denenecek.
 1. **[Claude] Koyu mod ve "Şeffaflığı Azalt" turu:** Her ekranı tasarımdaki koyu karelerle karşılaştırmak. Canvas'ta her ekran koyu temada da çizili (`design/DailyClassical2.html`).
 2. **[Claude] Giriş yapılmış ekranlar turu:** Favoriler listesi, Hesap sayfası, premium kullanıcıyla Arama sonuçları. Erişilebilir bir API gerekiyor: Railway domaini ya da lokal `npm run dev`.
 3. **[Claude] Denetimdeki küçük maddeler (`design/AUDIT.md`):**
@@ -20,7 +23,7 @@ Son güncelleme: 6 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 9. **[Claude + Oytun] Widget'ın renklendirilmiş (tinted) modu:** Cihazda ana ekran stili "Renklendirilmiş" ve "Şeffaf" iken widget'ların görünümü kontrol edilecek.
 
 ## İçerik kararları
-10. **[Oytun] Dinleme duraklarını yeniden zamanlamak:** Ölçülen sürelerin taslaktan farklı çıktığı bölümler var. Liste `content/research/retime-needed.md` dosyasında:
+10. **[Oytun] Dinleme duraklarını yeniden zamanlamak:** Ölçülen sürelerin taslaktan farklı çıktığı bölümler var. 4 yeni eserin bütün durakları da tahmini (kulakla zamanlanmadı). Liste `content/research/retime-needed.md` dosyasında:
     - Şostakoviç III (Largo): +2:40.
     - Mozart 40 I–II ve Schubert 8 I–II: ±25–45 sn.
     - Beethoven 9 finali Spotify'da iki parçaya bölünmüş.
@@ -43,6 +46,17 @@ Son güncelleme: 6 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 ## Yayından önce sıfırlanacak test verisi
 - **Takvim:** `content/schedule.yaml` içerik kontrolü için 27 Eylül 2026'dan başlıyor, böylece 10 eserin hepsi Kitaplık'ta görünüyor. Yayından önce `start` yayın gününe çekilecek ve sıra Çaykovski 6 ile başlayacak. Ardından `npm run db:seed && npm run fixtures` çalıştırılacak.
 - **Debug premium:** Debug build'lerde premium varsayılan olarak açık (`EntitlementStore.debugUnlock`). Release build'leri etkilemiyor, sıfırlanması gerekmiyor.
+
+## Tamamlananlar (7 Ekim 2026, eser türleri ve yeni içerik)
+- **Senfoni dışı eserler:** Her eserin bir türü var: senfoni, piyano/keman/viyolonsel konçertosu, piyano sonatı, yaylı dörtlü, oda müziği, orkestra eseri, koro eseri.
+  - Kitaplık'ta Besteci ve Dönem'in önünde **Tür** filtresi var. Katalogda iki tür olunca görünüyor.
+  - Konçerto ve sonat kayıtlarında solist başta yazılıyor. Sonat kayıtlarında şef ve orkestra alanı yok.
+  - Veritabanına `pieces.form` eklendi (migration 0007). Kayıtlarda şef ve orkestra artık zorunlu değil.
+- **Metinler:** "Her gün bir senfoni" gibi ifadeler "Her gün bir klasik eser" oldu. Hatırlatma, ödeme ekranı, widget açıklaması ve Hakkında "eser" diyor.
+- **İçerik yapısı:** Her eser kendi dosyasında (`content/<dil>/pieces/<id>.md`). Sözlük ayrı dosyada (`glossary.md`).
+- **İçerik rehberi:** `content/CONTENT_GUIDE.md`, sonraki yazarlar ve ajanlar için. İçinde format, üslup, türe özel yaklaşımlar, kayıt ve tablo doğrulama, Türkçe kuralları ve yayın kontrol listesi var.
+- **4 yeni eser (EN + TR, kaynak notlarıyla):** Rahmaninov 2. Piyano Konçertosu, Mozart 23. Piyano Konçertosu, Beethoven 3. Piyano Konçertosu, Beethoven 8. Piyano Sonatı "Patetik". Referans kayıtlar senin favorilerin. 6 yeni sözlük terimi var. Rahmaninov'un besteci sayfası eklendi.
+- **Ana ekran:** Yukarı çekince eser parmak kalkınca açılıyor (mesafe ya da fiske). Detaydan dönünce tab bar geri geliyor. Eser sayfası ilk karede hazır.
 
 ## Tamamlananlar (6 Ekim 2026, görsel kalitesi)
 - Görseller HEIC oldu: ana görsel kısa kenar 1800 px (ana ekranın 1290×1750 px alanını karşılıyor), küçük görsel 300 px, zoom için 4000 px "tam" boy (sunucudan, önbellekli).

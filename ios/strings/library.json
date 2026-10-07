@@ -161,5 +161,61 @@
   "search.locked.cta": {
     "en": "See Premium",
     "tr": "Premium’u gör"
+  },
+  "library.filter.form": {
+    "en": "Form",
+    "tr": "Tür"
+  },
+  "library.filter.allForms": {
+    "en": "All forms",
+    "tr": "Tüm türler"
+  },
+  "form.symphony": {
+    "en": "Symphonies",
+    "tr": "Senfoniler"
+  },
+  "form.piano-concerto": {
+    "en": "Piano concertos",
+    "tr": "Piyano konçertoları"
+  },
+  "form.violin-concerto": {
+    "en": "Violin concertos",
+    "tr": "Keman konçertoları"
+  },
+  "form.cello-concerto": {
+    "en": "Cello concertos",
+    "tr": "Viyolonsel konçertoları"
+  },
+  "form.concerto": {
+    "en": "Other concertos",
+    "tr": "Diğer konçertolar"
+  },
+  "form.piano-sonata": {
+    "en": "Piano sonatas",
+    "tr": "Piyano sonatları"
+  },
+  "form.sonata": {
+    "en": "Other sonatas",
+    "tr": "Diğer sonatlar"
+  },
+  "form.string-quartet": {
+    "en": "String quartets",
+    "tr": "Yaylı dörtlüler"
+  },
+  "form.chamber": {
+    "en": "Chamber music",
+    "tr": "Oda müziği"
+  },
+  "form.orchestral": {
+    "en": "Orchestral works",
+    "tr": "Orkestra eserleri"
+  },
+  "form.choral": {
+    "en": "Choral works",
+    "tr": "Koro eserleri"
+  },
+  "form.other": {
+    "en": "Other works",
+    "tr": "Diğer eserler"
   }
 }

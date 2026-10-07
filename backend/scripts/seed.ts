@@ -96,7 +96,7 @@ await db.transaction(async (tx) => {
     if (!composer) throw new Error(`No composers.yaml entry for "${meta.composer}"`);
     const base = {
       composerId: composer.id, catalogue: meta.catalogue, year: meta.year, durationMin: meta.durationMin,
-      movementCount: meta.movementCount, era: composer.era, isPublished: true, updatedAt: new Date(),
+      movementCount: meta.movementCount, form: meta.form, era: composer.era, isPublished: true, updatedAt: new Date(),
     };
     await tx.insert(s.pieces).values({ id: meta.id, ...base }).onConflictDoUpdate({ target: s.pieces.id, set: base });
 

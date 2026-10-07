@@ -1,4 +1,4 @@
-# Painting image assets, keyed by piece id (same ids as the yaml blocks in content/<locale>/*.md).
+# Painting image assets, keyed by piece id (same ids as the yaml blocks in content/<locale>/pieces/<id>.md).
 # Titles, years, collections and pairing notes stay in the markdown (they are translated);
 # this file holds the language-neutral image facts, read by backend/scripts/seed.ts and
 # backend/scripts/export-fixtures.ts.
@@ -187,3 +187,73 @@ shostakovich-symphony-5:
   thumb: { width: 300, height: 394, bytes: 12799 }
   placeholder_color: "#717a77"
   full: { width: 1370, height: 1800, bytes: 752973 }
+
+mozart-piano-concerto-23:
+  # Portrait format (3235 × 4226, ≈ 0.77:1): plan the hero crop. A CC BY 3.0 gallery photo (3096 × 3912) also exists:
+  # File:Thomas gainsborough, mr e mrs william hallett (la passeggiata mattutina), 1785, 01.jpg (attribution needed; not used).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Gainsborough_-_Mr_and_Mrs_William_Hallett_(%27The_Morning_Walk%27)_-_WGA8418.jpg
+  source_url: https://www.nationalgallery.org.uk/paintings/thomas-gainsborough-mr-and-mrs-william-hallett-the-morning-walk
+  commons_page: https://commons.wikimedia.org/wiki/File:Thomas_Gainsborough_-_Mr_and_Mrs_William_Hallett_(%27The_Morning_Walk%27)_-_WGA8418.jpg
+  width: 3235
+  height: 4226
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100-1923)
+  credit_line: Thomas Gainsborough, Mr and Mrs William Hallett ('The Morning Walk'), 1785. National Gallery, London (NG6209). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2351, bytes: 733139 }
+  thumb: { width: 300, height: 392, bytes: 18088 }
+  full: { width: 3062, height: 4000, bytes: 2103823 }
+  placeholder_color: "#575451"
+
+beethoven-piano-concerto-3:
+  # Commons licence: {{Licensed-PD-Art|PD-old-auto-1923|cc-by-sa-4.0|deathyear=1812}} (painting PD; photo also
+  # CC BY-SA 4.0). The Belvedere's current object page says downloads are for private/scientific use only, which
+  # conflicts with that release; faithful photos of PD 2D art are unprotected in the EU (DSM art. 14) and the US.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Martin_von_Molitor_-_Landschaft_mit_Hammerwerk_-_9694_-_%C3%96sterreichische_Galerie_Belvedere.jpg
+  source_url: https://sammlung.belvedere.at/objects/11978/landschaft-mit-hammerwerk
+  commons_page: https://commons.wikimedia.org/wiki/File:Martin_von_Molitor_-_Landschaft_mit_Hammerwerk_-_9694_-_%C3%96sterreichische_Galerie_Belvedere.jpg
+  width: 3508
+  height: 2679
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-1923); photograph also CC BY-SA 4.0 (Belvedere)
+  credit_line: Martin von Molitor, Landscape with Hammer Mill (Landschaft mit Hammerwerk), c. 1800. Belvedere, Vienna (Inv. 9694). Image via Wikimedia Commons, public domain (photo Belvedere, CC BY-SA 4.0).
+  rights_status: public_domain
+  hero: { width: 2357, height: 1800, bytes: 1560812 }
+  thumb: { width: 393, height: 300, bytes: 20936 }
+  full: { width: 3508, height: 2679, bytes: 3868356 }
+  placeholder_color: "#696856"
+
+beethoven-piano-sonata-8:
+  # The Met's own Open Access primary image (CC0), mirrored on Commons at the same size.
+  # Larger Commons files "The Death of Socrates MET 31.45 1.jpg / 2.jpg" are frame details, not the painting.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/The_Death_of_Socrates_MET_DP-13139-001.jpg
+  source_url: https://www.metmuseum.org/art/collection/search/436105
+  commons_page: https://commons.wikimedia.org/wiki/File:The_Death_of_Socrates_MET_DP-13139-001.jpg
+  width: 4000
+  height: 2663
+  medium: Oil on canvas
+  license: Public domain (CC0, The Met Open Access)
+  credit_line: Jacques-Louis David, The Death of Socrates, 1787. The Metropolitan Museum of Art, New York, Catharine Lorillard Wolfe Collection, Wolfe Fund, 1931 (31.45). Image via The Met Open Access, public domain.
+  rights_status: public_domain
+  hero: { width: 2704, height: 1800, bytes: 397050 }
+  thumb: { width: 451, height: 300, bytes: 16873 }
+  full: { width: 4000, height: 2663, bytes: 1040367 }
+  placeholder_color: "#2f2519"
+
+rachmaninoff-piano-concerto-2:
+  # Modest resolution (2000 × 1403); Commons gives a LiveJournal scan as the source, clean and unframed.
+  # Larger gallery photo 4032 × 3024 is CC BY-SA 4.0 with frame and wall visible:
+  # File:The_Lake_by_Isaac_Levitan_in_the_State_Russian_Museum_IMG_4838.jpg. The Russian Museum offers no open download.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Levitan_ozero28.JPG
+  source_url: https://rusmuseumvrm.ru/data/collections/painting/19_20/zh_4262/index.php?lang=en
+  commons_page: https://commons.wikimedia.org/wiki/File:Levitan_ozero28.JPG
+  width: 2000
+  height: 1403
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-expired; artist d. 1900)
+  credit_line: Isaac Levitan, Lake (Lake. Russia), 1899–1900. State Russian Museum, St Petersburg (Ж-4262). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2000, height: 1403, bytes: 603839 }
+  thumb: { width: 428, height: 300, bytes: 26597 }
+  full: { width: 2000, height: 1403, bytes: 638627 }
+  placeholder_color: "#7e8d8f"

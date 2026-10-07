@@ -333,7 +333,7 @@ struct PieceContent: View {
             }
             .card()
             if let reference = piece.referenceRecording {
-                Text("piece.movements.footnote \(reference.citation(fullConductorName: true))")
+                Text("piece.movements.footnote \(reference.citation(fullNames: true))")
                     .font(Typography.caption).lineHeight(1.45).foregroundStyle(Palette.ink3)
             }
         }

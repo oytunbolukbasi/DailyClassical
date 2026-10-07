@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Library tab (SPEC §4.11, §4.23–4.25): Literata large title, All pieces / Favourites with
-/// the Glossary chip on the same row, Composer / Era chips, solid rows. Free users see every
+/// the Glossary chip on the same row, Form / Composer / Era chips, solid rows. Free users see every
 /// published piece with a small lock; tapping one opens the paywall.
 struct LibraryScreen: View {
     enum Segment: Hashable { case all, favourites }
@@ -12,6 +12,7 @@ struct LibraryScreen: View {
     @Environment(AppRouter.self) private var router
 
     @State private var segment: Segment = .all
+    @State private var formFilter: PieceForm?
     @State private var composerFilter: String?
     @State private var eraFilter: Era?
 
@@ -98,6 +99,7 @@ struct LibraryScreen: View {
         ScrollView(.horizontal) {
             GlassEffectContainer(spacing: 0) {  // 0: separate chips never merge into one shape
                 HStack(spacing: 8) {
+                    if availableForms.count > 1 { formMenu }
                     composerMenu
                     eraMenu
                 }
@@ -107,6 +109,27 @@ struct LibraryScreen: View {
         }
         .scrollIndicators(.hidden)
         .scrollClipDisabled()
+    }
+
+    private var formMenu: some View {
+        Menu {
+            Picker(selection: $formFilter) {
+                Text("library.filter.allForms").tag(PieceForm?.none)
+                ForEach(availableForms, id: \.self) { form in
+                    Text(form.titleKey).tag(PieceForm?.some(form))
+                }
+            } label: { EmptyView() }
+                .pickerStyle(.inline)
+        } label: {
+            GlassChip(title: formChipTitle, showsDisclosure: true)
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(Text("library.filter.form"))
+        .accessibilityValue(formChipTitle)
+    }
+
+    private var formChipTitle: Text {
+        if let formFilter { Text(formFilter.titleKey) } else { Text("library.filter.form") }
     }
 
     private var composerMenu: some View {
@@ -171,7 +194,7 @@ struct LibraryScreen: View {
                                message: Text("library.filtered.empty.body"),
                                titleFont: Typography.titleS) {
                     Button("library.filter.clear") {
-                        withAnimation { composerFilter = nil; eraFilter = nil }
+                        withAnimation { formFilter = nil; composerFilter = nil; eraFilter = nil }
                     }
                     .buttonStyle(SmallCapsuleButtonStyle())
                 }
@@ -272,7 +295,9 @@ struct LibraryScreen: View {
 
     private var filteredPieces: [PieceSummary] {
         orderedPieces.filter { piece in
-            (composerFilter == nil || piece.composer.id == composerFilter) && (eraFilter == nil || piece.era == eraFilter)
+            (formFilter == nil || piece.kind == formFilter)
+                && (composerFilter == nil || piece.composer.id == composerFilter)
+                && (eraFilter == nil || piece.era == eraFilter)
         }
     }
 
@@ -281,6 +306,12 @@ struct LibraryScreen: View {
         let refs = (content.library.value ?? []).map(\.composer).filter { seen.insert($0.id).inserted }
         let locale = Locale(identifier: content.language)
         return refs.sorted { $0.shortName.compare($1.shortName, locale: locale) == .orderedAscending }
+    }
+
+    /// Forms present in the published catalogue, in a fixed order; the chip shows from two forms on.
+    private var availableForms: [PieceForm] {
+        let present = Set((content.library.value ?? []).map(\.kind))
+        return PieceForm.allCases.filter(present.contains)
     }
 
     private var availableEras: [Era] {
@@ -314,6 +345,11 @@ struct LibraryScreen: View {
 extension Era {
     /// "Romantic era", "20th century" (keys in common.json).
     var titleKey: LocalizedStringKey { LocalizedStringKey("era." + rawValue) }  // not interpolated: that would look up "era.%@"
+}
+
+extension PieceForm {
+    /// "Piano concertos", "Piyano konçertoları" (keys in library.json).
+    var titleKey: LocalizedStringKey { LocalizedStringKey("form." + rawValue) }  // not interpolated (see Era)
 }
 
 private extension View {

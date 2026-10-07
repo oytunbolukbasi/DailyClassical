@@ -75,3 +75,31 @@ Q1151 (Berlioz), Q7294 (Brahms), Q7315 (Tchaikovsky), Q7298 (Dvořák), Q7304 (M
   - File:Shoskakovich_D.D.jpg (Vechernyaya Moskva, 1950) — PD in Russia only; URAA-restored in the US.
   - File:Dmitri-Shostakovich-1958.jpg (Holger Eklund, Finland 1958) — PD in Finland, but likely URAA-restored in the US; 360 × 540.
   - File:Dmitri_Shostakovich_June_1973.jpg (Chicago Tribune) and File:Rodzinski_shostakovich1_carnegie.jpg (1941 newspaper ad) — PD claims rest on missing notices and are doubtful; both are low-resolution scans.
+
+
+## Sergei Rachmaninoff (added 2026-10-07)
+
+| Fact | Source URL | Status |
+| --- | --- | --- |
+| Born 1 April 1873 [O.S. 20 March], Semyonovo estate, Novgorod Governorate (he himself later named Oneg; sources disagree, so the sheet says only "Novgorod Governorate") | https://en.wikipedia.org/wiki/Sergei_Rachmaninoff | OK |
+| Father's debts: the last estate (Oneg) auctioned in 1882; family moved to St Petersburg; studied at the St Petersburg Conservatory from 1883 | same | OK |
+| Moved in with Nikolai Zverev in Moscow in autumn 1885 (aged 12) and stayed almost four years | same | OK |
+| Graduated Moscow Conservatory 1892 with the Great Gold Medal; *Aleko* (graduation opera) praised by Tchaikovsky; Prelude in C-sharp minor (1892) | same | OK |
+| Married Natalia Satina, his cousin, 1902 | same | OK |
+| Conductor at the Bolshoi Theatre 1904–1906; Dresden 1906–1909; Second Symphony | same | OK |
+| First US tour 1909–10; Third Concerto written for it | same | OK |
+| Left Russia 22 Dec 1917, never returned; arrived New York 12 Nov 1918; career as a concert pianist | same | OK |
+| Villa Senar on Lake Lucerne (summers 1932–39); *Rhapsody on a Theme of Paganini* 1934; *Symphonic Dances* 1940 (last work) | same | OK |
+| Died 28 March 1943, Beverly Hills (melanoma), four days before his 70th birthday | same | OK |
+| Three symphonies, four piano concertos | same | OK |
+
+**Portrait.** Bain News Service photograph, Library of Congress, George Grantham Bain Collection (id `ggbain.30160`), restored and cropped on Commons, a Commons Featured Picture.
+
+| Field | Value | Source URL | Status |
+| --- | --- | --- | --- |
+| File | File:Sergei_Rachmaninoff_LOC_30160_cropped.jpg, 2480 × 3062 px | https://commons.wikimedia.org/wiki/File:Sergei_Rachmaninoff_LOC_30160_cropped.jpg | OK |
+| Licence | {{PD-Bain}} + {{PD-old}}; LOC: no known restrictions on publication | same ; http://hdl.loc.gov/loc.pnp/ggbain.30160 | OK |
+| Date | Not recorded by LOC or Commons. The sheet says "c. 1920": an estimate from the Bain (New York) source and his apparent age, after he settled in the US in Nov 1918 | – | ESTIMATED, flag if a date label is not acceptable |
+| focal_y | 0.15 (face at about 20 % from the top of the cropped file) | visual check of the thumbnail | OK |
+
+Rejected: File:Sergei_Rachmaninoff_LOC_33968.jpg (2500 × 3824, PD-Bain) is dated "1900" on Commons, which is clearly wrong (it shows him in middle age on a ship's deck); not used because of the bad date.

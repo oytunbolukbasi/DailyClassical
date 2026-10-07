@@ -8,13 +8,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "One symphony a day, with a guide you read while it plays. Each piece is paired with a painting, and every guide is written for listeners, not musicians."
+            "value": "One classical work a day, with a guide you read while it plays. Each piece is paired with a painting, and every guide is written for listeners, not musicians."
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Her gün bir senfoni ve çalarken okuyacağınız bir rehber. Her eser bir tabloyla eşleşir; rehberler müzisyenler için değil, dinleyiciler için yazılır."
+            "value": "Her gün bir klasik eser ve çalarken okuyacağınız bir rehber. Her eser bir tabloyla eşleşir; rehberler müzisyenler için değil, dinleyiciler için yazılır."
           }
         }
       }
@@ -1577,6 +1577,23 @@
         }
       }
     },
+    "era.other": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diğer"
+          }
+        }
+      }
+    },
     "era.romantic": {
       "extractionState": "manual",
       "localizations": {
@@ -1850,6 +1867,210 @@
         }
       }
     },
+    "form.cello-concerto": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cello concertos"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Viyolonsel konçertoları"
+          }
+        }
+      }
+    },
+    "form.chamber": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chamber music"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oda müziği"
+          }
+        }
+      }
+    },
+    "form.choral": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choral works"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Koro eserleri"
+          }
+        }
+      }
+    },
+    "form.concerto": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other concertos"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diğer konçertolar"
+          }
+        }
+      }
+    },
+    "form.orchestral": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Orchestral works"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Orkestra eserleri"
+          }
+        }
+      }
+    },
+    "form.other": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other works"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diğer eserler"
+          }
+        }
+      }
+    },
+    "form.piano-concerto": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Piano concertos"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Piyano konçertoları"
+          }
+        }
+      }
+    },
+    "form.piano-sonata": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Piano sonatas"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Piyano sonatları"
+          }
+        }
+      }
+    },
+    "form.sonata": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other sonatas"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diğer sonatlar"
+          }
+        }
+      }
+    },
+    "form.string-quartet": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "String quartets"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yaylı dörtlüler"
+          }
+        }
+      }
+    },
+    "form.symphony": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Symphonies"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Senfoniler"
+          }
+        }
+      }
+    },
+    "form.violin-concerto": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Violin concertos"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keman konçertoları"
+          }
+        }
+      }
+    },
     "glossary.index.accessibilityLabel": {
       "extractionState": "manual",
       "localizations": {
@@ -1986,6 +2207,23 @@
         }
       }
     },
+    "library.filter.allForms": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All forms"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tüm türler"
+          }
+        }
+      }
+    },
     "library.filter.clear": {
       "extractionState": "manual",
       "localizations": {
@@ -2033,6 +2271,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "Dönem"
+          }
+        }
+      }
+    },
+    "library.filter.form": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Form"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tür"
           }
         }
       }
@@ -2232,13 +2487,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "One symphony a day, with a guide you read while it plays."
+            "value": "One classical work a day, with a guide you read while it plays."
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Her gün bir senfoni, çalarken okuyacağınız bir rehberle."
+            "value": "Her gün bir klasik eser, çalarken okuyacağınız bir rehberle."
           }
         }
       }
@@ -2611,13 +2866,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Every symphony we have written about, whenever you want it."
+            "value": "Every piece we have written about, whenever you want it."
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Hakkında yazdığımız her senfoni, ne zaman isterseniz."
+            "value": "Hakkında yazdığımız her eser, ne zaman isterseniz."
           }
         }
       }
@@ -3207,13 +3462,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "A few quiet minutes with today’s symphony and its guide."
+            "value": "A few quiet minutes with today’s piece and its guide."
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Bugünün senfonisi ve rehberiyle birkaç sakin dakika."
+            "value": "Bugünün eseri ve rehberiyle birkaç sakin dakika."
           }
         }
       },
@@ -4307,13 +4562,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Today’s symphony and its painting."
+            "value": "Today’s piece and its painting."
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Günün senfonisi ve tablosu."
+            "value": "Günün eseri ve tablosu."
           }
         }
       }

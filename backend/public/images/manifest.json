@@ -151,6 +151,31 @@
         "hash": "1eb3ce4f2a"
       }
     },
+    "composers/rachmaninoff": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Sergei_Rachmaninoff_LOC_30160_cropped.jpg",
+      "color": "#5e5e5e",
+      "hero": {
+        "path": "composers/rachmaninoff-hero.heic",
+        "width": 1800,
+        "height": 2222,
+        "bytes": 504513,
+        "hash": "10f5e5d0d0"
+      },
+      "thumb": {
+        "path": "composers/rachmaninoff-thumb.heic",
+        "width": 300,
+        "height": 370,
+        "bytes": 18901,
+        "hash": "68b52feb0b"
+      },
+      "full": {
+        "path": "composers/rachmaninoff-full.heic",
+        "width": 2480,
+        "height": 3062,
+        "bytes": 924809,
+        "hash": "8665efcf65"
+      }
+    },
     "composers/schubert": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Franz_Schubert_by_Wilhelm_August_Rieder_1875_larger_version.png",
       "color": "#5e4137",
@@ -229,6 +254,56 @@
         "height": 2466,
         "bytes": 341197,
         "hash": "5e911beabb"
+      }
+    },
+    "paintings/beethoven-piano-concerto-3": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Martin_von_Molitor_-_Landschaft_mit_Hammerwerk_-_9694_-_%C3%96sterreichische_Galerie_Belvedere.jpg",
+      "color": "#696856",
+      "hero": {
+        "path": "paintings/beethoven-piano-concerto-3-hero.heic",
+        "width": 2357,
+        "height": 1800,
+        "bytes": 1560812,
+        "hash": "dbfe23bbf9"
+      },
+      "thumb": {
+        "path": "paintings/beethoven-piano-concerto-3-thumb.heic",
+        "width": 393,
+        "height": 300,
+        "bytes": 20936,
+        "hash": "6c7c3dbaf6"
+      },
+      "full": {
+        "path": "paintings/beethoven-piano-concerto-3-full.heic",
+        "width": 3508,
+        "height": 2679,
+        "bytes": 3868356,
+        "hash": "13f206fc6a"
+      }
+    },
+    "paintings/beethoven-piano-sonata-8": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Death_of_Socrates_MET_DP-13139-001.jpg",
+      "color": "#2f2519",
+      "hero": {
+        "path": "paintings/beethoven-piano-sonata-8-hero.heic",
+        "width": 2704,
+        "height": 1800,
+        "bytes": 397050,
+        "hash": "ac958e96c3"
+      },
+      "thumb": {
+        "path": "paintings/beethoven-piano-sonata-8-thumb.heic",
+        "width": 451,
+        "height": 300,
+        "bytes": 16873,
+        "hash": "cc87d11519"
+      },
+      "full": {
+        "path": "paintings/beethoven-piano-sonata-8-full.heic",
+        "width": 4000,
+        "height": 2663,
+        "bytes": 1040367,
+        "hash": "4f1c52521f"
       }
     },
     "paintings/beethoven-symphony-5": {
@@ -381,6 +456,31 @@
         "hash": "6ec9cad351"
       }
     },
+    "paintings/mozart-piano-concerto-23": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Gainsborough_-_Mr_and_Mrs_William_Hallett_(%27The_Morning_Walk%27)_-_WGA8418.jpg",
+      "color": "#575451",
+      "hero": {
+        "path": "paintings/mozart-piano-concerto-23-hero.heic",
+        "width": 1800,
+        "height": 2351,
+        "bytes": 733139,
+        "hash": "841242b286"
+      },
+      "thumb": {
+        "path": "paintings/mozart-piano-concerto-23-thumb.heic",
+        "width": 300,
+        "height": 392,
+        "bytes": 18088,
+        "hash": "fcd18d9430"
+      },
+      "full": {
+        "path": "paintings/mozart-piano-concerto-23-full.heic",
+        "width": 3062,
+        "height": 4000,
+        "bytes": 2103823,
+        "hash": "d02cedf52e"
+      }
+    },
     "paintings/mozart-symphony-40": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Claude-Joseph_Vernet_-_A_Shipwreck_in_Stormy_Seas_(Temp%C3%AAte)_-_c_1773_-_National_Gallery_UK.jpg",
       "color": "#2e2a22",
@@ -404,6 +504,31 @@
         "height": 2792,
         "bytes": 2664083,
         "hash": "698177de74"
+      }
+    },
+    "paintings/rachmaninoff-piano-concerto-2": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Levitan_ozero28.JPG",
+      "color": "#7e8d8f",
+      "hero": {
+        "path": "paintings/rachmaninoff-piano-concerto-2-hero.heic",
+        "width": 2000,
+        "height": 1403,
+        "bytes": 603839,
+        "hash": "05ecef2c17"
+      },
+      "thumb": {
+        "path": "paintings/rachmaninoff-piano-concerto-2-thumb.heic",
+        "width": 428,
+        "height": 300,
+        "bytes": 26597,
+        "hash": "fd2b2d1453"
+      },
+      "full": {
+        "path": "paintings/rachmaninoff-piano-concerto-2-full.heic",
+        "width": 2000,
+        "height": 1403,
+        "bytes": 638627,
+        "hash": "fa67ca27b6"
       }
     },
     "paintings/schubert-symphony-8": {

@@ -31,8 +31,8 @@ struct RecordingsSheet: View {
                     Text("recordings.referenceBadge").font(Typography.micro).tracking(0.88).textCase(.uppercase).foregroundStyle(Palette.accent)
                 }
                 Text(verbatim: r.performers).font(Typography.readingMedium).lineHeight(1.3).foregroundStyle(Palette.ink)
-                if !r.soloists.isEmpty || r.chorus != nil {
-                    Text(verbatim: (r.soloists.map(\.name) + [r.chorus].compactMap { $0 }).joined(separator: ", "))
+                if !r.otherSoloists.isEmpty || r.chorus != nil {
+                    Text(verbatim: (r.otherSoloists.map(\.name) + [r.chorus].compactMap { $0 }).joined(separator: ", "))
                         .font(Typography.meta13).foregroundStyle(Palette.ink2)
                 }
                 Text(verbatim: r.labelAndYear).font(Typography.meta13).foregroundStyle(Palette.ink2)

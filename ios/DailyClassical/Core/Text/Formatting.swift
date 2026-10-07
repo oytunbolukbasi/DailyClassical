@@ -13,14 +13,24 @@ nonisolated enum Formatting {
 }
 
 extension Recording {
-    /// "Teodor Currentzis, musicAeterna"
-    var performers: String { "\(conductor), \(orchestra)" }
+    /// Named before the conductor: a concerto's soloist, a sonata's player. A symphony's vocal
+    /// quartet (Beethoven 9) stays in the credits line instead.
+    var leadSoloists: [Soloist] { soloists.count <= 2 ? soloists : [] }
+    var otherSoloists: [Soloist] { soloists.count <= 2 ? [] : soloists }
+
+    /// "Teodor Currentzis, musicAeterna"; "Sviatoslav Richter, Stanisław Wisłocki, Warsaw Philharmonic"
+    var performers: String {
+        (leadSoloists.map(\.name) + [conductor, orchestra].compactMap { $0 }).joined(separator: ", ")
+    }
 
     var displayYear: String? { releaseYear.map(String.init) ?? recordedYear }
 
     /// "Currentzis, musicAeterna (Sony Classical, 2017)" — used in stop and duration notes.
-    func citation(fullConductorName: Bool = false) -> String {
-        let who = "\(fullConductorName ? conductor : Formatting.surname(conductor)), \(orchestra)"
+    /// People are cited by surname unless `fullNames`; the orchestra always in full.
+    func citation(fullNames: Bool = false) -> String {
+        let name = { (n: String) in fullNames ? n : Formatting.surname(n) }
+        let who = (leadSoloists.map { name($0.name) } + [conductor.map(name), orchestra].compactMap { $0 })
+            .joined(separator: ", ")
         let meta = [label, displayYear].compactMap { $0 }.joined(separator: ", ")
         return meta.isEmpty ? who : "\(who) (\(meta))"
     }

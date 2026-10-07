@@ -58,10 +58,18 @@ export interface Thread {
   body: Rich;
 }
 
+/** Musical form; drives the Library filter. Adding one also needs iOS `PieceForm` + strings. */
+export const PIECE_FORMS = [
+  "symphony", "piano-concerto", "violin-concerto", "cello-concerto", "concerto",
+  "piano-sonata", "sonata", "string-quartet", "chamber", "orchestral", "choral",
+] as const;
+export type PieceForm = (typeof PIECE_FORMS)[number];
+
 export interface PieceMeta {
   id: string;
   composer: string;
   composerDisplay: string | null;
+  form: PieceForm;
   title: string;
   catalogue: string | null;
   key: string | null;
@@ -80,8 +88,9 @@ export interface Soloist {
 }
 
 export interface RecordingMeta {
-  conductor: string;
-  orchestra: string;
+  /** Null for solo and chamber recordings (soloists only, or the ensemble as `orchestra`). */
+  conductor: string | null;
+  orchestra: string | null;
   soloists: Soloist[];
   chorus: string | null;
   label: string | null;

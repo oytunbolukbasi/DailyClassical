@@ -116,8 +116,8 @@
     "tr": "Ayarlar’ı aç"
   },
   "about.body": {
-    "en": "One symphony a day, with a guide you read while it plays. Each piece is paired with a painting, and every guide is written for listeners, not musicians.",
-    "tr": "Her gün bir senfoni ve çalarken okuyacağınız bir rehber. Her eser bir tabloyla eşleşir; rehberler müzisyenler için değil, dinleyiciler için yazılır."
+    "en": "One classical work a day, with a guide you read while it plays. Each piece is paired with a painting, and every guide is written for listeners, not musicians.",
+    "tr": "Her gün bir klasik eser ve çalarken okuyacağınız bir rehber. Her eser bir tabloyla eşleşir; rehberler müzisyenler için değil, dinleyiciler için yazılır."
   },
   "about.section.credits": {
     "en": "Credits",
@@ -183,8 +183,8 @@
     "comment": "Daily local notification title"
   },
   "reminder.notification.body": {
-    "en": "A few quiet minutes with today’s symphony and its guide.",
-    "tr": "Bugünün senfonisi ve rehberiyle birkaç sakin dakika.",
+    "en": "A few quiet minutes with today’s piece and its guide.",
+    "tr": "Bugünün eseri ve rehberiyle birkaç sakin dakika.",
     "comment": "Daily local notification body"
   },
   "reminder.picker.hour": {
@@ -196,8 +196,8 @@
     "tr": "Dakika"
   },
   "onboarding.1.title": {
-    "en": "One symphony a day, with a guide you read while it plays.",
-    "tr": "Her gün bir senfoni, çalarken okuyacağınız bir rehberle."
+    "en": "One classical work a day, with a guide you read while it plays.",
+    "tr": "Her gün bir klasik eser, çalarken okuyacağınız bir rehberle."
   },
   "onboarding.1.body": {
     "en": "Press play in Spotify, come back, and follow along. Today’s piece is already waiting behind this card.",
@@ -473,8 +473,8 @@
     "tr": "Bundan daha fazlası."
   },
   "paywall.subtitle": {
-    "en": "Every symphony we have written about, whenever you want it.",
-    "tr": "Hakkında yazdığımız her senfoni, ne zaman isterseniz."
+    "en": "Every piece we have written about, whenever you want it.",
+    "tr": "Hakkında yazdığımız her eser, ne zaman isterseniz."
   },
   "paywall.benefit.library": {
     "en": "The full library of past pieces",

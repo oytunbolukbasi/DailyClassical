@@ -39,7 +39,7 @@ private struct OnboardingModifier: ViewModifier {
 
 // MARK: - Step 1 of 2
 
-/// "One symphony a day…" card over today's piece. Content-sized, cannot be swiped away.
+/// "One classical work a day…" card over today's piece. Content-sized, cannot be swiped away.
 struct OnboardingIntroSheet: View {
     let onContinue: () -> Void
 

@@ -111,6 +111,7 @@ export async function listPieces(db: DB, locale: Locale, ids?: string[]) {
       keyLabel: l.keyLabel,
       year: p.year,
       era: p.era,
+      form: p.form,
       durationMin: p.durationMin,
       movementCount: p.movementCount,
       hook: l.hook,

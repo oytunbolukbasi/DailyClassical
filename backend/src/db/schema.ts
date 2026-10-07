@@ -74,6 +74,7 @@ export const pieces = pgTable("pieces", {
   year: smallint("year").notNull(),
   durationMin: smallint("duration_min").notNull(),
   movementCount: smallint("movement_count").notNull(),
+  form: text("form").notNull().default("symphony"), // PIECE_FORMS in src/content/types.ts
   era: era("era").notNull(),
   isPublished: boolean("is_published").notNull().default(false),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
@@ -100,8 +101,8 @@ export const recordings = pgTable("recordings", {
   pieceId: text("piece_id").notNull().references(() => pieces.id, { onDelete: "cascade" }),
   role: recordingRole("role").notNull(),
   sortOrder: smallint("sort_order").notNull().default(0),
-  conductor: text("conductor").notNull(),
-  orchestra: text("orchestra").notNull(),
+  conductor: text("conductor"), // null for solo / chamber recordings
+  orchestra: text("orchestra"),
   soloists: jsonb("soloists").$type<{ name: string; role: string }[]>(),
   chorus: text("chorus"),
   label: text("label"),

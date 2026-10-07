@@ -60,7 +60,7 @@ for (const locale of ["en", "tr"]) {
     const summary = {
       id: base.id, contentLocale: content.pieces.includes(local) ? locale : "en",
       composer: { id: composer.id, name: names.name, shortName: names.short },
-      title: m.title, catalogue: base.catalogue, keyLabel: m.key, year: base.year, era: composer.era,
+      title: m.title, catalogue: base.catalogue, keyLabel: m.key, year: base.year, era: composer.era, form: base.form,
       durationMin: base.durationMin, movementCount: base.movementCount, hook: m.hook,
       painting: {
         artist: base.painting.artist, title: m.painting.title, yearLabel: m.painting.year,
