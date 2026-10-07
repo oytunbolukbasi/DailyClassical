@@ -76,6 +76,7 @@ private struct TodayPager: View {
             .defaultScrollAnchor(.trailing)
             .scrollIndicators(.hidden)
             .scrollBounceBehavior(.basedOnSize, axes: .horizontal)
+            .scrollEdgeEffectHidden(true, for: .top)  // see TodayContent: no band over the painting
             .ignoresSafeArea(edges: .vertical)
         }
         .onAppear { if position == nil { position = days.last?.day } }
@@ -209,6 +210,9 @@ private struct TodayContent: View {
             }
         }
         .contentMargins(.bottom, metrics.bottom, for: .scrollContent)
+        // The painting runs under the status bar (SPEC §4.1, in the Reduce Transparency frame too);
+        // with Reduce Transparency on, the system's top edge effect would become an opaque band.
+        .scrollEdgeEffectHidden(true, for: .top)
         // Always rubber-bands vertically (even when the page fits) so pulling up can open the piece.
         .scrollBounceBehavior(.always, axes: .vertical)
         .onScrollGeometryChange(for: CGFloat.self) { geo in
