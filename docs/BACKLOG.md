@@ -3,13 +3,9 @@
 Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
 
 ## Sıradaki işler (kod)
-1. **[Claude] Koyu mod ve giriş yapılmış ekran turunun kalanı:** Renk tokenları, Ayarlar, Kitaplık, Ana ekran, Eser sayfası ve Hesap kontrol edildi (aşağıda Tamamlananlar). Kalanlar: "Şeffaflığı Azalt" ayarı, Favoriler listesi (giriş yapılmış), premium Arama sonuçları, Sözlük ve Kayıtlar sheet'leri. Mac'in belleği (8 GB) iki simülatörü aynı anda kaldırmadığı için yarıda kaldı.
-3. **[Claude] Denetimdeki küçük maddeler (`design/AUDIT.md`):**
-   - Sözlük listesi için kısa tanım (`short`) alanı. Şu an tanımın ilk satırı kırpılıyor.
-   - Kaynaklar ekranı eserleri tek tek, sırayla yüklüyor. Toplu yüklenmeli.
-   - `Typography.swift` içinde Dynamic Type ile büyümeyen 4 sabit boyut var (meta satırı, çipler, segment kontrolü, toast).
-5. **[Claude] Paywall görselini gömmek:** Friedrich tablosu hâlâ Wikimedia'dan çekiliyor (ilk açılıştan sonra önbellekte). Görsel hattına eklenip uygulamaya gömülmeli.
-6. **[Claude] Yerel ağ izni metninin Türkçesi:** `NSLocalNetworkUsageDescription` yalnızca İngilizce. Sadece debug build'lerde görünüyor.
+1. **[Claude] Koyu modda Sözlük, Kayıtlar ve Besteci sheet'lerine bakmak:** Ana ekranlar, Hesap, Favoriler, premium Arama ve "Şeffaflığı Azalt" kontrol edildi. Bu üç sheet'e koyu modda ayrıca bakılmadı.
+2. **[Claude] Denetimin (`design/AUDIT.md`) kalan küçük maddeleri:** Kısa tanım, toplu yükleme ve Dynamic Type yapıldı. Kalan P2 maddeleri (ör. eser görüntüleyicide zoom'un sınırlandırılması, Today'in yayın tarihini göstermesi) tek tek gözden geçirilecek.
+3. **[Claude] Rahmaninov tablosu:** Levitan'ın *Göl* tablosunun açık lisanslı en iyi görüntüsü 2000×1403 piksel. Diğer tablolardan biraz daha yumuşak görünüyor ve Levitan, Çaykovski 6'nın da ressamı. Daha yüksek çözünürlüklü bir alternatif aranabilir (senin onayınla).
 7. **[Claude] Debug build'i Railway'e bağlamak:** Railway'in herkese açık domaini olunca debug build Mac'teki lokal API yerine oraya bağlanacak.
 8. **[Claude + Oytun] VoiceOver'ı cihazda denemek:** Kod tarafı tamam: günler arası geçiş eylemleri, bölüm düğmesi etiketleri, okunur durak zamanları, sözlük terimi ipucu. Cihazda VoiceOver açıkken bir kez gezinmek gerekiyor.
 9. **[Claude + Oytun] Widget'ın renklendirilmiş (tinted) modu:** Cihazda ana ekran stili "Renklendirilmiş" ve "Şeffaf" iken widget'ların görünümü kontrol edilecek.
@@ -44,6 +40,16 @@ Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 ## Yayından önce sıfırlanacak test verisi
 - **Takvim:** `content/schedule.yaml` içerik kontrolü için 27 Eylül 2026'dan başlıyor, böylece 10 eserin hepsi Kitaplık'ta görünüyor. Yayından önce `start` yayın gününe çekilecek ve sıra Çaykovski 6 ile başlayacak. Ardından `npm run db:seed && npm run fixtures` çalıştırılacak.
 - **Debug premium:** Debug build'lerde premium varsayılan olarak açık (`EntitlementStore.debugUnlock`). Release build'leri etkilemiyor, sıfırlanması gerekmiyor.
+
+## Tamamlananlar (7 Ekim 2026, plan maddeleri, ikinci kısım)
+- **Hata: favoriler sunucudan hiç yüklenmiyordu.** API tarihleri milisaniyeli gönderiyor, uygulama bunları okuyamıyordu ve hata sessizce yutuluyordu. Favoriler listesi yalnızca o oturumda kalbe basılanları gösteriyordu. Düzeltildi, test eklendi.
+- **Sözlük kısa tanımları:** 40 terimin hepsine iki dilde tek satırlık kısa tanım yazıldı. Kitaplık › Sözlük listesi ve Arama'da bu tanım görünüyor; tam tanım sheet'te. Migration 0009 production'a uygulandı.
+- **Kaynaklar ekranı:** Eserler sırayla değil, aynı anda 4'erli yükleniyor.
+- **Dynamic Type:** Meta satırı, çipler, segmentler ve toast artık sistem yazı boyutuyla büyüyor. Varsayılan boyuttaki görünüm aynı.
+- **Paywall tablosu:** Friedrich tablosu uygulamaya gömüldü, artık Wikimedia'dan çekilmiyor.
+- **Yerel ağ izni metni:** Türkçesi eklendi.
+- **"Şeffaflığı Azalt":** Bu ayar açıkken ana ekranda tablonun üstünde oluşan düz bant kaldırıldı.
+- **Fontlar git'e eklendi:** `.gitignore`'daki `fonts/` kuralı Literata fontlarını da dışarıda bırakıyordu, repo temiz bir kopyadan derlenemiyordu.
 
 ## Tamamlananlar (7 Ekim 2026, plan maddeleri)
 - **İstek sınırlama:** Altı giriş uç noktasının hepsinde IP ve e-posta başına sınır var (ör. giriş: 15 dakikada IP+e-posta başına 10 deneme). Sınır aşılınca 429 dönüyor ve uygulama "Çok fazla deneme" mesajı gösteriyor. Sayaçlar Postgres'te tutuluyor (migration 0008, production'a uygulandı).
