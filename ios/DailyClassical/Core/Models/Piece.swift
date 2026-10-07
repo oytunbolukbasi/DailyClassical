@@ -161,7 +161,14 @@ nonisolated struct TodayResponse: Codable, Sendable {
 nonisolated struct GlossaryTerm: Codable, Hashable, Identifiable, Sendable {
     let id: String
     let term: String
+    /// One line for the glossary list and search results (SPEC §4.9). Absent from older API
+    /// responses; rows then fall back to the definition.
+    var short: String?
+    /// The full text (1–2 sentences, rich text), shown in the term sheet.
     let definition: String
+
+    /// The list/search sub-line: `short`, else the definition as plain text.
+    var summary: String { RichText.plain(short ?? definition) }
 }
 
 /// Composer sheet content (SPEC §4.8). Everything past the names is optional, and a malformed

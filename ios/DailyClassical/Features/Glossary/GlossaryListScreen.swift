@@ -120,7 +120,8 @@ struct GlossaryListScreen: View {
         let locale = Locale(identifier: content.language)
         let q = TextMatch.normalized(query)
         let terms = content.sortedGlossary.filter { term in
-            q.isEmpty || TextMatch.matches(term.term, q, locale: locale) || TextMatch.matches(RichText.plain(term.definition), q, locale: locale)
+            q.isEmpty || TextMatch.matches(term.term, q, locale: locale) || TextMatch.matches(term.summary, q, locale: locale)
+                || TextMatch.matches(RichText.plain(term.definition), q, locale: locale)
         }
         var result: [LetterSection] = []
         for term in terms {
@@ -158,12 +159,14 @@ nonisolated enum GlossaryIndex {
 }
 
 /// SPEC §3.12 glossary list row: 28 pt letter column (first term of a letter only),
-/// Literata term, definition (up to two lines, SF 13/1.4), chevron.
+/// Literata term, the one-line `short` (SF 13/1.4; the definition for older content), chevron.
+/// At accessibility text sizes the line may wrap rather than cut off after a word or two.
 private struct GlossaryListRow: View {
     let letter: String?
     let term: GlossaryTerm
     let action: () -> Void
     @ScaledMetric(relativeTo: .subheadline) private var letterColumn: CGFloat = 28
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     var body: some View {
         Button(action: action) {
@@ -180,11 +183,11 @@ private struct GlossaryListRow: View {
                         .font(Typography.rowTitle)
                         .lineHeight(1.3)
                         .foregroundStyle(Palette.ink)
-                    Text(verbatim: RichText.plain(term.definition))
+                    Text(verbatim: term.summary)
                         .font(Typography.meta13)
                         .lineHeight(1.4)
                         .foregroundStyle(Palette.ink2)
-                        .lineLimit(2)
+                        .lineLimit(dynamicTypeSize.isAccessibilitySize ? 3 : 1)
                         .truncationMode(.tail)
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)

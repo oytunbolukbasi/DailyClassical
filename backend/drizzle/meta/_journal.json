@@ -57,6 +57,13 @@
       "when": 1791393437358,
       "tag": "0007_piece_form",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1791396320272,
+      "tag": "0008_glossary_short",
+      "breakpoints": true
     }
   ]
 }

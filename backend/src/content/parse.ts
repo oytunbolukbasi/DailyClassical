@@ -27,6 +27,9 @@ const LABELS = {
   movements: ["Movements", "Bölümler"],
   threads: ["Threads", "Bağlayan ipler"],
   glossary: ["Glossary", "Sözlük"],
+  glossaryTerm: ["Terim"],
+  glossaryShort: ["Short", "Kısa"],
+  glossaryDefinition: ["Definition", "Tanım"],
   summary: ["Summary", "Özet"],
   mainIdeas: ["Main ideas", "Ana fikirler"],
   stops: ["Listening stops", "Dinleme durakları"],
@@ -332,13 +335,29 @@ function parsePiece(block: Block): ParsedPiece {
   return { meta, document: { bigPicture: { facts, inOneLine }, movements: list, threads } };
 }
 
+/**
+ * EN `| Term | Short | Definition |`, TR `| Key | Terim | Kısa | Tanım |`; the first column is always
+ * the English key. Columns are found by their header, so the older tables without a short column
+ * (EN `| Term | Definition |`, TR `| Key | Terim | Tanım |`) still parse, with `short: null`.
+ */
 function parseGlossary(block: Block): GlossaryEntry[] {
   const start = block.lines.findIndex((l) => l.trim().startsWith("|"));
   const { header, rows } = readTable(block.lines, start);
-  const threeCol = header.length === 3; // Turkish: Key | Terim | Tanım
+  const column = (labels: string[]) => header.findIndex((h) => is(h, labels));
+  const shortCol = column(LABELS.glossaryShort);
+  const definitionCol = column(LABELS.glossaryDefinition) >= 0 ? column(LABELS.glossaryDefinition) : header.length - 1;
+  // The translated term (TR only); English shows the key itself.
+  const termCol = column(LABELS.glossaryTerm) >= 0 ? column(LABELS.glossaryTerm) : -1;
   return rows.map((r) => {
     const key = r[0]!;
-    return { id: slugify(key), key, term: smartQuotes(threeCol ? r[1]! : key), definition: smartQuotes(threeCol ? r[2]! : r[1]!) };
+    const short = shortCol >= 0 ? (r[shortCol] ?? "").trim() : "";
+    return {
+      id: slugify(key),
+      key,
+      term: smartQuotes(termCol >= 0 ? r[termCol]! : key),
+      short: short ? smartQuotes(short) : null,
+      definition: smartQuotes(r[definitionCol]!),
+    };
   });
 }
 
@@ -353,10 +372,13 @@ export function parseContent(markdown: string, locale: string): ParsedContent {
   return { locale, pieces, glossary };
 }
 
-/** Problems that should block publishing: missing glossary terms, empty movements. */
+/** Problems that should block publishing: missing glossary terms or short lines, empty movements. */
 export function validateContent(c: ParsedContent): string[] {
   const problems: string[] = [];
   const ids = new Set(c.glossary.map((g) => g.id));
+  for (const g of c.glossary) {
+    if (!g.short) problems.push(`${c.locale}/glossary: "${g.key}" has no short line`);
+  }
   for (const { meta, document } of c.pieces) {
     const texts = [
       ...document.bigPicture.facts,

@@ -99,7 +99,7 @@ for (const locale of ["en", "tr"]) {
   }).sort((a, b) => a.shortName.localeCompare(b.shortName, locale))));
 
   const glossary = (content.glossary.length ? content.glossary : en.glossary)
-    .map((g) => ({ id: g.id || slugify(g.key), term: g.term, definition: g.definition }))
+    .map((g) => ({ id: g.id || slugify(g.key), term: g.term, short: g.short ?? null, definition: g.definition }))
     .sort((a, b) => a.term.localeCompare(b.term, locale));
   writeFileSync(join(dir, "glossary.json"), JSON.stringify(glossary));
   console.log(`✓ fixtures/${locale}: ${summaries.length} pieces, ${glossary.length} terms`);

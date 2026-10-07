@@ -61,3 +61,29 @@ test("typographic quotes", async () => {
   assert.equal(smartQuotes(`Symphony No. 6, "Pathétique"`), "Symphony No. 6, “Pathétique”");
   assert.equal(smartQuotes(`Viyana'da "O Freunde"`), "Viyana’da “O Freunde”");
 });
+
+test("every glossary term has a one-line short in both languages", () => {
+  for (const locale of ["en", "tr"]) {
+    const c = parseContent(readLocaleMarkdown(contentRoot, locale)!, locale);
+    assert.ok(c.glossary.length >= 40);
+    for (const g of c.glossary) {
+      assert.ok(g.short, `${locale}/${g.id}: no short`);
+      assert.ok(g.short.length <= 64, `${locale}/${g.id}: short is ${g.short.length} characters`);
+      assert.ok(g.short.length < g.definition.length, `${locale}/${g.id}: short is not shorter than the definition`);
+    }
+  }
+  const tr = parseContent(readLocaleMarkdown(contentRoot, "tr")!, "tr");
+  const coda = tr.glossary.find((g) => g.id === "coda")!;
+  assert.deepEqual([coda.term, coda.short], ["Koda", "Bir bölümü toparlayan kapanış kısmı"]);
+});
+
+test("glossary tables without a short column still parse", () => {
+  const en = parseContent(["## Glossary", "", "| Term | Definition |", "| --- | --- |", "| Coda | A closing section. |"].join("\n"), "en");
+  assert.deepEqual(en.glossary, [{ id: "coda", key: "Coda", term: "Coda", short: null, definition: "A closing section." }]);
+  const tr = parseContent(["## Sözlük", "", "| Key | Terim | Tanım |", "| --- | --- | --- |", "| Coda | Koda | Kapanış kısmı. |"].join("\n"), "tr");
+  assert.deepEqual(tr.glossary, [{ id: "coda", key: "Coda", term: "Koda", short: null, definition: "Kapanış kısmı." }]);
+  assert.deepEqual(validateContent(tr), [`tr/glossary: "Coda" has no short line`]);
+  const current = parseContent(["## Sözlük", "", "| Key | Terim | Kısa | Tanım |", "| --- | --- | --- | --- |", "| Coda | Koda | Kapanış | Kapanış kısmı. |"].join("\n"), "tr");
+  assert.equal(current.glossary[0]!.short, "Kapanış");
+  assert.equal(current.glossary[0]!.definition, "Kapanış kısmı.");
+});

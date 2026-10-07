@@ -1,0 +1,1 @@
+ALTER TABLE "glossary_localizations" ADD COLUMN "short" text;

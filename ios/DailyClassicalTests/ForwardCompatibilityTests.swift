@@ -46,6 +46,24 @@ struct ForwardCompatibilityTests {
         #expect(r.role == .alternative)  // unknown role
         #expect(r.performers == "Sviatoslav Richter, Stanisław Wisłocki, Warsaw Philharmonic Orchestra")
     }
+
+    @Test func glossaryTermWithoutShortFallsBackToTheDefinition() throws {
+        let old = #"{"id":"coda","term":"Coda","definition":"A closing section added to the end of a *movement*."}"#
+        let t = try JSONDecoder().decode(GlossaryTerm.self, from: Data(old.utf8))
+        #expect(t.short == nil)
+        #expect(t.summary == "A closing section added to the end of a movement.")
+
+        let current = #"{"id":"coda","term":"Coda","short":"The closing section that rounds off a movement","definition":"A closing section."}"#
+        #expect(try JSONDecoder().decode(GlossaryTerm.self, from: Data(current.utf8)).summary == "The closing section that rounds off a movement")
+    }
+
+    @Test func bundledGlossaryHasAShortForEveryTerm() throws {
+        for language in ["en", "tr"] {
+            let terms = try Fixtures.load([GlossaryTerm].self, "glossary", language)
+            #expect(!terms.isEmpty)
+            #expect(terms.allSatisfy { $0.short?.isEmpty == false })
+        }
+    }
 }
 
 struct AppVersionTests {

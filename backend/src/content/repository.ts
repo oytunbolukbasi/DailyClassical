@@ -260,7 +260,7 @@ export async function listGlossary(db: DB, locale: Locale) {
   const ids = [...new Set(rows.map((r) => r.termId))];
   return ids
     .map((id) => pick(rows.filter((r) => r.termId === id), locale)!)
-    .map((r) => ({ id: r.termId, term: r.term, definition: r.definition }))
+    .map((r) => ({ id: r.termId, term: r.term, short: r.short, definition: r.definition }))
     .sort((a, b) => a.term.localeCompare(b.term, locale));
 }
 
