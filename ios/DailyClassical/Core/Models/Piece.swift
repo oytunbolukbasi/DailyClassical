@@ -107,7 +107,14 @@ nonisolated struct PieceSummary: Codable, Hashable, Identifiable, Sendable {
 }
 
 nonisolated struct Recording: Codable, Hashable, Identifiable, Sendable {
-    enum Role: String, Codable, Sendable { case reference, alternative }
+    enum Role: String, Codable, Sendable {
+        case reference, alternative
+
+        /// A role added later on the server reads as an alternative recording.
+        init(from decoder: Decoder) throws {
+            self = Role(rawValue: try decoder.singleValueContainer().decode(String.self)) ?? .alternative
+        }
+    }
     struct Soloist: Codable, Hashable, Sendable { let name: String; let role: String }
 
     let id: String

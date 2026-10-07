@@ -6,6 +6,7 @@ import { logger } from "hono/logger";
 import { secureHeaders } from "hono/secure-headers";
 import { sql } from "./db/client.js";
 import { account } from "./routes/account.js";
+import { config } from "./routes/config.js";
 import { content } from "./routes/content.js";
 import { resetPage } from "./routes/reset-page.js";
 
@@ -27,6 +28,7 @@ app.use("/images/*", async (c, next) => {
   }
 }, serveStatic({ root: fileURLToPath(new URL("../public", import.meta.url)) }));
 
+app.route("/v1", config);
 app.route("/v1", content);
 app.route("/v1", account);
 // Target of the password reset email (no website yet); outside /v1 because it is a web page.

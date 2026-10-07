@@ -52,11 +52,14 @@ struct ContentSource: Sendable {
         composers: { try Fixtures.load([Composer].self, "composers", $0) }
     )
 
-    static var `default`: ContentSource {
+    static var `default`: ContentSource { isAPI ? .api : .bundled }
+
+    /// Release builds read the API; debug builds use bundled fixtures unless DC_USE_API=1.
+    static var isAPI: Bool {
         #if DEBUG
-        ProcessInfo.processInfo.environment["DC_USE_API"] == "1" ? .api : .bundled
+        ProcessInfo.processInfo.environment["DC_USE_API"] == "1"
         #else
-        .api
+        true
         #endif
     }
 }

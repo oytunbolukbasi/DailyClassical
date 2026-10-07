@@ -3,12 +3,6 @@
 Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
 
 ## Sıradaki işler (kod)
-0. **[Claude] İçerik güncelleme servisi: uygulama sürümü çıkmadan yeni içerik.** 1.0'a girmesi gerekenler en üstte.
-   - **Mevcut durum:** Release build içeriği API'den alıyor ve internetsiz açılış için diske önbelleğe alıyor. Yeni eserlerin tabloları sunucudan iniyor. Tür ve dönem alanları bilinmeyen değerlere dayanıklı (eski sürüm yeni bir türü "diğer" olarak gösterir).
-   - **Widget (1.0 için şart):** Widget şu an uygulamaya gömülü veriyi ve tabloları okuyor, sonradan eklenen eserleri göremez. Uygulama önümüzdeki günlerin kartlarını (başlık, besteci, küçük tablo JPEG'i) App Group'a yazacak; widget önce oradan, yoksa gömülü veriden okuyacak.
-   - **Yayın hattı:** İçerik `main`'e girince bir GitHub Action `content:build` ve `db:seed` çalıştıracak (production `DATABASE_URL` GitHub secret olarak). Görseller `backend/public/images` içinde, Railway deploy'uyla gidiyor. Ne zaman yayına gireceği `schedule.yaml` ile belirleniyor, yani içerik günler önceden gönderilebilir.
-   - **Eski sürümlere dayanıklılık (1.0 için şart):** Kalan enum alanları (kayıt rolü vb.) aynı şekilde toleranslı yapılacak. Bir `/v1/config` uç noktasıyla en düşük uygulama sürümü ve "güncelleme önerisi" bilgisi verilecek.
-   - **Kontrol:** Release build'de uçak modu, yeni eser ekleyip seed etme ve widget senaryoları denenecek.
 1. **[Claude] Koyu mod ve "Şeffaflığı Azalt" turu:** Her ekranı tasarımdaki koyu karelerle karşılaştırmak. Canvas'ta her ekran koyu temada da çizili (`design/DailyClassical2.html`).
 2. **[Claude] Giriş yapılmış ekranlar turu:** Favoriler listesi, Hesap sayfası, premium kullanıcıyla Arama sonuçları. Erişilebilir bir API gerekiyor: Railway domaini ya da lokal `npm run dev`.
 3. **[Claude] Denetimdeki küçük maddeler (`design/AUDIT.md`):**
@@ -21,6 +15,11 @@ Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 7. **[Claude] Debug build'i Railway'e bağlamak:** Railway'in herkese açık domaini olunca debug build Mac'teki lokal API yerine oraya bağlanacak.
 8. **[Claude] Erişilebilirlik kontrolü:** VoiceOver ile günler arası geçiş ("Önceki gün / Sonraki gün"), bölüm geçişi ve sözlük terimleri.
 9. **[Claude + Oytun] Widget'ın renklendirilmiş (tinted) modu:** Cihazda ana ekran stili "Renklendirilmiş" ve "Şeffaf" iken widget'ların görünümü kontrol edilecek.
+
+## İçerik güncelleme servisi: senden beklenenler
+- **[Oytun] GitHub secret:** Repo ayarlarında (Settings → Secrets and variables → Actions) `DATABASE_URL_UNPOOLED` secret'ını ekle (Neon'un direct bağlantı adresi). Eklenene kadar Action içeriği yalnızca doğrular, yayınlamaz.
+- **[Oytun] App Store linki:** Uygulama App Store'da olunca Railway'e `APP_STORE_URL` ekle. Güncelleme istemek için `LATEST_APP_VERSION` (bir kez önerir) ya da `MIN_APP_VERSION` (zorunlu ekran) kullanılır. Normalde ikisi de boş kalır.
+- **[Oytun + Claude] Cihazda widget denemesi:** Release/TestFlight build'inde ana ekrana widget ekle; gece yarısı geçince yeni günün eserine geçtiğini ve uygulama açılmadan yeni eserleri gösterdiğini kontrol et.
 
 ## İçerik kararları
 10. **[Oytun] Dinleme duraklarını yeniden zamanlamak:** Ölçülen sürelerin taslaktan farklı çıktığı bölümler var. 4 yeni eserin bütün durakları da tahmini (kulakla zamanlanmadı). Liste `content/research/retime-needed.md` dosyasında:
@@ -46,6 +45,13 @@ Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 ## Yayından önce sıfırlanacak test verisi
 - **Takvim:** `content/schedule.yaml` içerik kontrolü için 27 Eylül 2026'dan başlıyor, böylece 10 eserin hepsi Kitaplık'ta görünüyor. Yayından önce `start` yayın gününe çekilecek ve sıra Çaykovski 6 ile başlayacak. Ardından `npm run db:seed && npm run fixtures` çalıştırılacak.
 - **Debug premium:** Debug build'lerde premium varsayılan olarak açık (`EntitlementStore.debugUnlock`). Release build'leri etkilemiyor, sıfırlanması gerekmiyor.
+
+## Tamamlananlar (7 Ekim 2026, içerik güncelleme servisi)
+- **Yayın hattı:** İçerik `main`'e girince `content-publish` GitHub Action'ı içeriği doğrular, migration'ları çalıştırır ve production veritabanına seed eder. Görseller Railway deploy'uyla gider. Eser, `schedule.yaml`'daki gününde kendiliğinden yayına girer. Uygulama sürümü gerekmez.
+- **Widget:** Kendi akışını (`GET /v1/widget`, bugün ve sonraki 3 gün) sunucudan çekiyor ve görselleri App Group'ta önbelleğe alıyor. Uygulama açılmadan gece yarısı yeni güne geçiyor, sonradan eklenen eserleri gösteriyor. İnternet yoksa önbellek, o da yoksa gömülü veri kullanılıyor.
+- **Eski sürümlere dayanıklılık:** Bilinmeyen tür, dönem ve kayıt rolü "diğer" olarak okunuyor. Listelerde çözümlenemeyen bir öğe atlanıyor, listenin geri kalanı gösteriliyor. Birim testleri var.
+- **Güncelleme istemi:** `GET /v1/config` ile en düşük ve en güncel sürüm bilgisi veriliyor. Eski sürümde ya bir kez "Yeni sürüm var" uyarısı ya da zorunlu güncelleme ekranı çıkıyor. Railway değişkenleriyle yönetiliyor.
+- **İçerik rehberi ve README:** Yayın akışı belgelendi.
 
 ## Tamamlananlar (7 Ekim 2026, eser türleri ve yeni içerik)
 - **Senfoni dışı eserler:** Her eserin bir türü var: senfoni, piyano/keman/viyolonsel konçertosu, piyano sonatı, yaylı dörtlü, oda müziği, orkestra eseri, koro eseri.

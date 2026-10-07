@@ -25,7 +25,10 @@ struct DailyClassicalApp: App {
                 .tint(Palette.accent)
                 .task(id: language.code) { await content.reload(language: language.code) }
                 .task {
-                    // Widgets read bundled content; refresh them whenever the app (and its content) changes.
+                    // The widget fetches its own feed only when this build reads the API (debug builds
+                    // default to bundled fixtures), so app and widget show the same plan.
+                    UserDefaults(suiteName: "group.co.dailyclassical")?.set(ContentSource.isAPI, forKey: "contentFromAPI")
+                    // Refresh widgets whenever the app (and its content) changes.
                     WidgetCenter.shared.reloadAllTimelines()
                     await session.refreshAccount()
                     await session.refreshFavourites()

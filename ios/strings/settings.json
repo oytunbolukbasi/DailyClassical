@@ -529,5 +529,29 @@
   "paywall.privacy": {
     "en": "Privacy",
     "tr": "Gizlilik"
+  },
+  "update.available.title": {
+    "en": "A new version is available",
+    "tr": "Yeni bir sürüm var"
+  },
+  "update.available.body": {
+    "en": "Update DailyClassical from the App Store to get the latest improvements.",
+    "tr": "Son iyileştirmeler için DailyClassical’ı App Store’dan güncelleyin."
+  },
+  "update.available.later": {
+    "en": "Not now",
+    "tr": "Şimdi değil"
+  },
+  "update.action": {
+    "en": "Update",
+    "tr": "Güncelle"
+  },
+  "update.required.title": {
+    "en": "Please update DailyClassical",
+    "tr": "Lütfen DailyClassical’ı güncelleyin"
+  },
+  "update.required.body": {
+    "en": "This version can no longer show today’s piece. The update is free and takes a moment.",
+    "tr": "Bu sürüm artık günün eserini gösteremiyor. Güncelleme ücretsiz ve bir dakikanızı alır."
   }
 }

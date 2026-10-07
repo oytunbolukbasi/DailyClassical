@@ -23,6 +23,10 @@ content/<locale>/pieces/*.md + glossary.md ──content:build──▶ content/
 - Listening-stop times are stored in seconds per movement of the reference recording; the app formats them per language.
 - Every locale falls back to English for anything not yet translated.
 
+### Publishing new content (no app release)
+
+Merging content to `main` publishes it: `.github/workflows/content-publish.yml` validates the content and seeds the production database (repository secret `DATABASE_URL_UNPOOLED`), and Railway deploys new images from `backend/public/images`. Pieces go live on their day in `content/schedule.yaml`. The app reads everything from the API; the widget fetches its own feed (`GET /v1/widget`), so new pieces reach it too. Older builds tolerate new forms and eras, and `GET /v1/config` (`MIN_APP_VERSION`, `LATEST_APP_VERSION`, `APP_STORE_URL` on Railway) can ask users to update when a server change truly needs it.
+
 ## Backend
 
 ```bash
@@ -39,7 +43,8 @@ Endpoints (all content endpoints take `?locale=en|tr` or `Accept-Language`):
 `GET /v1/today?date=YYYY-MM-DD`, `GET /v1/pieces`, `GET /v1/pieces/:id`, `GET /v1/glossary`, `GET /v1/composers`,
 `POST /v1/auth/register` (202, emails a 6-digit code), `POST /v1/auth/verify`, `POST /v1/auth/verify/resend`, `POST /v1/auth/login` (403 `email_not_verified` until confirmed),
 `POST /v1/auth/password-reset`, `POST /v1/auth/password-reset/confirm`, `GET /reset-password` (web page),
-`GET|DELETE /v1/me`, `GET /v1/favourites`, `PUT|DELETE /v1/favourites/:pieceId`.
+`GET|DELETE /v1/me`, `GET /v1/favourites`, `PUT|DELETE /v1/favourites/:pieceId`,
+`GET /v1/widget?date=&days=` (Home Screen widget feed), `GET /v1/config` (update prompts).
 
 Useful scripts (in `backend/`):
 

@@ -4,8 +4,26 @@
     {
       "name": "design-canvas",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "/Users/oytunbolukbasi/DailyClassical/design"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8765",
+        "--directory",
+        "/Users/oytunbolukbasi/DailyClassical/design"
+      ],
       "port": 8765
+    },
+    {
+      "name": "api",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "/Users/oytunbolukbasi/DailyClassical/backend",
+        "run",
+        "dev"
+      ],
+      "port": 3101,
+      "autoPort": true
     }
   ]
 }

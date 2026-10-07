@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { HTTPException } from "hono/http-exception";
 import { z } from "zod";
-import { getPiece, listComposers, listGlossary, listPublishedPieces, pieceIdForDay, scheduleUntil } from "../content/repository.js";
+import { getPiece, listComposers, listGlossary, listPublishedPieces, pieceIdForDay, scheduleUntil, widgetDays } from "../content/repository.js";
 import { db } from "../db/client.js";
 import { requestLocale } from "../lib/locale.js";
 
@@ -37,6 +37,15 @@ content.get("/pieces", async (c) =>
 
 /** Past days up to and including `until`, oldest first: [{ day, pieceId }]. Today pages back through these. */
 content.get("/schedule", async (c) => c.json({ days: await scheduleUntil(db, clientDay(c.req.query("until"))) }));
+
+/**
+ * Home Screen widget feed: today (`date`) and the next `days - 1` days (default 4, at most 7), so the
+ * widget can show pieces published after the app shipped and roll over at midnight on its own.
+ */
+content.get("/widget", async (c) => {
+  const count = Math.min(7, Math.max(1, Number(c.req.query("days")) || 4));
+  return c.json({ days: await widgetDays(db, requestLocale(c), clientDay(c.req.query("date")), count) });
+});
 
 content.get("/pieces/:id", async (c) => {
   const piece = await getPiece(db, c.req.param("id"), requestLocale(c));

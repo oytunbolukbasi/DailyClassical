@@ -1,4 +1,4 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { and, asc, eq, inArray, lte } from "drizzle-orm";
 import type { DB } from "../db/client.js";
@@ -71,6 +71,18 @@ export function imageFields(key: string, fallback: { imageUrl: string | null; wi
     imageUrl: imageFileUrl(e.hero), thumbUrl: imageFileUrl(e.thumb), fullUrl: e.full ? imageFileUrl(e.full) : imageFileUrl(e.hero),
     width: e.hero.width, height: e.hero.height, placeholderColor: e.color,
   };
+}
+
+const widgetImagesDir = fileURLToPath(new URL("../../public/images/widget/", import.meta.url));
+
+/**
+ * The widget's own JPEG (long side ≤ 1100 px, `npm run images:widget`), versioned by the hero's hash
+ * so a replaced painting busts the widget's cache too. Null until the file has been generated.
+ */
+export function widgetImageUrl(pieceId: string) {
+  const e = imageManifest.images[`paintings/${pieceId}`];
+  if (!e || !existsSync(`${widgetImagesDir}${pieceId}.jpg`)) return null;
+  return `${imagesBase}/widget/${pieceId}.jpg?v=${e.hero.hash}`;
 }
 
 export function spotifyUrl(albumId: string | null) {
@@ -195,6 +207,52 @@ export async function listPublishedPieces(db: DB, locale: Locale, today: string)
   return list
     .map((p) => ({ ...p, publishDate: dates.get(p.id)! }))
     .sort((a, b) => b.publishDate.localeCompare(a.publishDate));
+}
+
+/** "2026-10-07" + 2 → "2026-10-09" (calendar arithmetic in UTC, no time-zone drift). */
+export function addDays(day: string, n: number) {
+  const d = new Date(`${day}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + n);
+  return d.toISOString().slice(0, 10);
+}
+
+/**
+ * What the Home Screen widget shows on `count` days from `from` (the reader's today): the scheduled
+ * piece for each day, its painting's widget image and the "in one line" map. Future days are
+ * included so the widget can roll over at midnight without the app being opened; content published
+ * after the app shipped reaches the widget this way.
+ */
+export async function widgetDays(db: DB, locale: Locale, from: string, count: number) {
+  const days = Array.from({ length: count }, (_, i) => addDays(from, i));
+  const ids = await Promise.all(days.map((d) => pieceIdForDay(db, d)));
+  const unique = [...new Set(ids.filter((id): id is string => id !== null))];
+  if (unique.length === 0) return [];
+  const [summaries, docRows] = await Promise.all([
+    listPieces(db, locale, unique),
+    db.select({ pieceId: pieceLocalizations.pieceId, locale: pieceLocalizations.locale, document: pieceLocalizations.document })
+      .from(pieceLocalizations)
+      .where(and(inArray(pieceLocalizations.pieceId, unique), inArray(pieceLocalizations.locale, localesFor(locale)))),
+  ]);
+  return days.flatMap((day, i) => {
+    const s = summaries.find((p) => p.id === ids[i]);
+    if (!s) return [];
+    const doc = pick(docRows.filter((r) => r.pieceId === s.id), locale);
+    return [{
+      day,
+      piece: {
+        id: s.id,
+        composer: { name: s.composer.name, shortName: s.composer.shortName },
+        title: s.title,
+        hook: s.hook,
+        year: s.year,
+        durationMin: s.durationMin,
+        movementCount: s.movementCount,
+        painting: s.painting ? { artist: s.painting.artist, title: s.painting.title } : null,
+        inOneLine: doc?.document.bigPicture.inOneLine ?? null,
+        widgetImageUrl: widgetImageUrl(s.id),
+      },
+    }];
+  });
 }
 
 export async function listGlossary(db: DB, locale: Locale) {

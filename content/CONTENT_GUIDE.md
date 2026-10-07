@@ -234,10 +234,14 @@ From `backend/`:
 1. `npm run content:build` – must print no `!` warnings (undefined glossary terms, empty movements).
 2. Add the painting to `content/paintings.yaml`, then `npm run images -- --only <id>` and
    `npm run images:widget` (new composer: `npm run images -- --only <composer id>`).
-3. `npm run db:seed && npm run fixtures` (the app bundles the fixtures).
-4. Add the id to `content/schedule.yaml` when it should go live.
-5. Open the piece in the app in both languages: every glossary term opens, the movement switcher
-   jumps correctly, the Spotify button opens the album.
+3. Add the id to `content/schedule.yaml` on the day it should go live.
+4. `npm run db:seed` against a dev database (or `DC_USE_API=1` with the local API) and open the
+   piece in the app in both languages: every glossary term opens, the movement switcher jumps
+   correctly, the Spotify button opens the album.
+5. Merge to `main`. **That publishes it**: the `content-publish` GitHub Action rebuilds the
+   content and seeds the production database, and Railway deploys the new images. No app release
+   is needed; the app and the widget read new pieces from the API on their scheduled day.
+   (`npm run fixtures` only refreshes the offline copy bundled with the next app build.)
 
 ## 10. App copy
 

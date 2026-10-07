@@ -1,0 +1,46 @@
+# Publishes content without an app release: when content reaches main, the guides, glossary,
+# composers, paintings and schedule are written to the production database. The app and the
+# widget read them from the API; new images in backend/public/images ship with the Railway
+# deploy of the same push. A piece goes live on its scheduled day (content/schedule.yaml), so
+# content can be merged days ahead.
+#
+# Needs the repository secret DATABASE_URL_UNPOOLED (Neon direct connection; the pooled
+# DATABASE_URL also works). Without it the job only validates and skips publishing.
+name: content-publish
+on:
+  push:
+    branches: [main]
+    paths: ["content/**", "backend/public/images/**", "backend/scripts/seed*.ts", "backend/src/content/**", "backend/drizzle/**"]
+  workflow_dispatch:
+concurrency:
+  group: content-publish
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: production
+    defaults:
+      run:
+        working-directory: backend
+    env:
+      DATABASE_URL_UNPOOLED: ${{ secrets.DATABASE_URL_UNPOOLED }}
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+      - run: npm ci
+      - run: npm test
+      # Fails on undefined glossary terms or movements without listening stops.
+      - run: npm run content:build
+      - name: Check for a database secret
+        id: db
+        run: |
+          if [ -n "$DATABASE_URL_UNPOOLED$DATABASE_URL" ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "::notice::No database secret; content validated but not published."; fi
+      - if: steps.db.outputs.ok == 'true'
+        run: npm run db:migrate
+      - if: steps.db.outputs.ok == 'true'
+        run: npm run db:seed

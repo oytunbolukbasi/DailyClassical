@@ -2,9 +2,9 @@ import Foundation
 import ImageIO
 import UIKit
 
-/// What a widget shows for one day. Read from the same bundled fixtures and schedule the app
-/// uses (Resources/Fixtures/<lang>/pieces.json + schedule.json), so widgets work offline and
-/// always agree with the app's Today.
+/// What a widget shows for one day: from the widget's feed (WidgetFeed, content published after
+/// this build) or, failing that, the fixtures bundled with the app (Resources/Fixtures/<lang>/
+/// pieces.json + schedule.json), so widgets always work offline.
 struct WidgetPiece: Hashable {
     let id: String
     let composerName: String
@@ -56,7 +56,22 @@ enum WidgetData {
         date.formatted(Date.ISO8601FormatStyle(timeZone: .current).year().month().day())
     }
 
-    /// The scheduled piece for `date` in the current language.
+    /// One day's widget content: the feed's entry when it has that day, else the bundled plan.
+    static func day(_ date: Date, feed: WidgetFeed?, large: Bool) -> (piece: WidgetPiece, imageURL: URL?, inOneLine: String?)? {
+        if let p = feed?.day(dayKey(date))?.piece {
+            let piece = WidgetPiece(
+                id: p.id, composerName: p.composer.name, composerShortName: p.composer.shortName,
+                title: p.title, hook: p.hook, year: p.year, durationMin: p.durationMin,
+                movementCount: p.movementCount, paintingArtist: p.painting?.artist, paintingTitle: p.painting?.title
+            )
+            let downloaded = WidgetFeed.imageFile(for: p).flatMap { FileManager.default.fileExists(atPath: $0.path) ? $0 : nil }
+            return (piece, downloaded ?? paintingURL(for: p.id, large: large), large ? p.inOneLine.map(plainLine) : nil)
+        }
+        guard let piece = piece(on: date) else { return nil }
+        return (piece, paintingURL(for: piece.id, large: large), large ? inOneLine(for: piece.id) : nil)
+    }
+
+    /// The bundled plan's piece for `date` in the current language.
     static func piece(on date: Date) -> WidgetPiece? {
         let lang = languageCode
         guard let schedule = load(Schedule.self, "schedule", lang),
@@ -104,6 +119,10 @@ extension WidgetData {
     /// "Struggle and longing (I), …" without markup, for the large widget's second sentence.
     static func inOneLine(for id: String) -> String? {
         guard let raw = load(PieceDoc.self, "piece-\(id)", languageCode)?.document.bigPicture.inOneLine else { return nil }
+        return plainLine(raw)
+    }
+
+    static func plainLine(_ raw: String) -> String {
         let plain = raw.replacingOccurrences(of: #"\[\[[^|\]]+\|([^\]]+)\]\]"#, with: "$1", options: .regularExpression)
             .replacingOccurrences(of: "*", with: "")
             .replacingOccurrences(of: #"\s*\([IVX]+\)"#, with: "", options: .regularExpression)  // "(I)" markers read as noise here

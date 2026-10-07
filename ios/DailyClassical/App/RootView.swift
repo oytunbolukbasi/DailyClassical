@@ -46,6 +46,7 @@ struct RootView: View {
         }
         // Step 1 is a card over the live Today screen, step 2 the reminder (Features/Onboarding).
         .onboarding(isComplete: $hasCompletedOnboarding)
+        .updateCheck()
     }
 }
 

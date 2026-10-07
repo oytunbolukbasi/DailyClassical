@@ -42,16 +42,16 @@ nonisolated struct APIClient: Sendable {
 
     /// Pieces published on or before `day`, newest first, each with its `publishDate`.
     func pieces(day: String, language: String) async throws -> [PieceSummary] {
-        struct R: Decodable { let pieces: [PieceSummary] }
+        struct R: Decodable { let pieces: LossyList<PieceSummary> }
         let r: R = try await get("v1/pieces", query: ["date": day], language: language, cacheKey: "pieces")
-        return r.pieces
+        return r.pieces.elements
     }
 
     /// Scheduled days up to and including `until`, oldest first.
     func schedule(until day: String, language: String) async throws -> [ScheduledDay] {
-        struct R: Decodable { let days: [ScheduledDay] }
+        struct R: Decodable { let days: LossyList<ScheduledDay> }
         let r: R = try await get("v1/schedule", query: ["until": day], language: language, cacheKey: "schedule")
-        return r.days
+        return r.days.elements
     }
 
     func piece(id: String, language: String) async throws -> Piece {
@@ -59,15 +59,20 @@ nonisolated struct APIClient: Sendable {
     }
 
     func glossary(language: String) async throws -> [GlossaryTerm] {
-        struct R: Decodable { let terms: [GlossaryTerm] }
+        struct R: Decodable { let terms: LossyList<GlossaryTerm> }
         let r: R = try await get("v1/glossary", language: language, cacheKey: "glossary")
-        return r.terms
+        return r.terms.elements
     }
 
     func composers(language: String) async throws -> [Composer] {
-        struct R: Decodable { let composers: [Composer] }
+        struct R: Decodable { let composers: LossyList<Composer> }
         let r: R = try await get("v1/composers", language: language, cacheKey: "composers")
-        return r.composers
+        return r.composers.elements
+    }
+
+    /// Remote app configuration (update prompts). See backend/src/routes/config.ts.
+    func config() async throws -> AppConfig {
+        try await get("v1/config", language: "en", cacheKey: "config")
     }
 
     // MARK: Plumbing
