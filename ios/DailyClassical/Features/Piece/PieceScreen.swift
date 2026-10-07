@@ -9,10 +9,14 @@ struct PieceScreen: View {
 
     var body: some View {
         Group {
-            switch piece {
-            case .loaded(let p): PieceContent(piece: p)
-            case .failed: offline
-            case .idle, .loading: PieceSkeleton()
+            // A cached piece (Today's, or one already opened) renders on the first frame, so
+            // the zoom transition never swaps a skeleton for the page halfway through.
+            if let p = piece.value ?? content.cachedPiece(id: id) {
+                PieceContent(piece: p)
+            } else if case .failed = piece {
+                offline
+            } else {
+                PieceSkeleton()
             }
         }
         .background(Palette.background)

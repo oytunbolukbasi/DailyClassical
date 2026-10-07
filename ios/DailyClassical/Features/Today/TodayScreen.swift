@@ -22,6 +22,9 @@ struct TodayScreen: View {
             }
             .background(Palette.background)
             .toolbarVisibility(.hidden, for: .navigationBar)
+            // The piece page hides the tab bar, but popping back through the zoom transition
+            // doesn't bring it back on its own: the root sets it from the stack's depth.
+            .toolbarVisibility(router.todayPath.isEmpty ? .visible : .hidden, for: .tabBar)
             .navigationDestination(for: PieceRoute.self) { route in
                 PieceScreen(id: route.id).navigationTransition(.zoom(sourceID: route.id, in: zoom))
             }
@@ -136,14 +139,16 @@ private struct TodayContent: View {
     @Environment(\.todayZoomNamespace) private var zoom
     @State private var showArtwork = false
     @State private var textHeight: CGFloat = 0
-    /// Scrolling the page up from its top opens the piece, once per drag (re-armed when it settles).
-    @State private var pullArmed = true
-    @State private var pullOpened = 0
-    @State private var isDragging = false
+    /// Pulling the page up from its top opens the piece when the finger lifts (far enough, or a
+    /// flick). Nothing happens mid-drag, so the page follows the finger and the zoom starts clean.
     @State private var scrollOffset: CGFloat = 0
     @State private var dragStartOffset: CGFloat = 0
+    @State private var pullingFromTop = false
+    @State private var pull: CGFloat = 0
 
-    private let pullThreshold: CGFloat = 40
+    private let pullThreshold: CGFloat = 48   // a slow drag past this opens on release
+    private let flickVelocity: CGFloat = 0.3  // or a flick upwards; UIKit's unit, points per ms
+    private var pullReady: Bool { pull > pullThreshold }
 
     private let textTopGap: CGFloat = 44     // painting's lower edge → caption
     private let textBottomGap: CGFloat = 30  // meta line → top of the tab bar
@@ -172,6 +177,9 @@ private struct TodayContent: View {
                     }
                     .overlay(alignment: .bottom) {
                         PrimaryGlassButton(title: "today.startListening") { startListening() }
+                            // Grows a little as the page is pulled: releasing opens the piece.
+                            .scaleEffect(1 + 0.06 * min(pull / pullThreshold, 1))
+                            .animation(.spring(duration: 0.25), value: pullReady)
                             .offset(y: 27)
                     }
                     .zIndex(1)
@@ -208,20 +216,24 @@ private struct TodayContent: View {
             geo.contentOffset.y + geo.contentInsets.top
         } action: { _, offset in
             scrollOffset = offset
-            // A drag that starts at the top and moves the page up opens the piece right away:
-            // the Today page is a cover, and scrolling it reads as "show me more".
-            if isDragging, pullArmed, dragStartOffset < 12, offset - dragStartOffset > pullThreshold {
-                pullArmed = false
-                pullOpened += 1
-                startListening()
+            if pullingFromTop { pull = max(0, offset - dragStartOffset) }
+        }
+        .onScrollPhaseChange { old, new, context in
+            if new == .interacting {
+                dragStartOffset = scrollOffset
+                pullingFromTop = scrollOffset < 12
+                pull = 0
+            } else if old == .interacting {
+                // The Today page is a cover: pulling it up reads as "show me more".
+                let upward = context.velocity.map { $0.dy } ?? 0
+                if pullingFromTop, pullReady || upward > flickVelocity {
+                    startListening()
+                }
+                pullingFromTop = false
+                pull = 0
             }
         }
-        .onScrollPhaseChange { _, phase in
-            isDragging = phase == .interacting
-            if isDragging { dragStartOffset = scrollOffset }
-            if phase == .idle { pullArmed = true }
-        }
-        .sensoryFeedback(.impact(weight: .light), trigger: pullOpened)
+        .sensoryFeedback(.impact(weight: .light), trigger: pullReady) { _, ready in ready }
         .fullScreenCover(isPresented: $showArtwork) {
             if let painting = piece.painting { ArtworkViewer(painting: painting) }
         }
