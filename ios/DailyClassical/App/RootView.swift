@@ -11,18 +11,21 @@ struct RootView: View {
         // System TabView: Liquid Glass tab bar with Search as the separate trailing glass circle.
         TabView(selection: $router.tab) {
             Tab("tab.today", image: "tab-today", value: AppTab.today) {
-                TodayScreen()
+                TodayScreen().tint(Palette.accent)
             }
             Tab("tab.library", image: "tab-library", value: AppTab.library) {
-                LibraryScreen()
+                LibraryScreen().tint(Palette.accent)
             }
             Tab("tab.settings", image: "tab-settings", value: AppTab.settings) {
-                SettingsScreen()
+                SettingsScreen().tint(Palette.accent)
             }
             Tab("tab.search", image: "search", value: AppTab.search, role: .search) {
-                SearchScreen()
+                SearchScreen().tint(Palette.accent)
             }
         }
+        // The selected tab is glass-ink, never umber (SPEC §3.15: icons are always glass-ink). The
+        // tint is scoped to the tab bar: each tab's content above restores the app's accent.
+        .tint(Palette.glassInk)
         // Search lives on the TabView itself: selecting the search tab morphs the tab bar into the
         // bottom search field (Apple's iOS 26 pattern). Attached to the tab's content instead, iOS
         // may place the field at the top of the screen (it did on iPhone 16 Pro Max, iOS 27.0.1).

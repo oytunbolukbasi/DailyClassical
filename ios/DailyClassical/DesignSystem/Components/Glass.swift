@@ -41,7 +41,7 @@ struct PrimaryGlassButton: View {
         .buttonStyle(.plain)
         // Frosted glass with a neutral page-colour fill: the label must stay legible over any
         // painting (dark skies included). Neutral, never the accent: elevation says "primary".
-        .glassEffect(.regular.tint(Palette.background.opacity(0.55)).interactive(), in: .capsule)
+        .glassEffect(.regular.tint(Palette.primaryGlassTint).interactive(), in: .capsule)
         .shadow(color: .black.opacity(0.08), radius: 1.5, y: 1)
         .shadow(color: .black.opacity(0.10), radius: 10, y: 8)
     }

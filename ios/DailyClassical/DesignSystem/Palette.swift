@@ -24,6 +24,15 @@ nonisolated enum Palette {
     static let stripeA = dynamic(0xDDD7CE, 0x262320)             // --stripe bands
     static let stripeB = dynamic(0xE8E3DB, 0x1C1A18)
 
+    /// Fill of the primary clear-glass button (G2). Light: the page colour, frosted (legible over
+    /// any painting). Dark: SPEC G2 keeps a light glass in dark mode with cream text, drawn as a
+    /// warm mid-grey so the label stays legible over bright skies too.
+    static let primaryGlassTint = Color(uiColor: UIColor { @Sendable traits in
+        traits.userInterfaceStyle == .dark
+            ? UIColor(hex: 0x4A4642, alpha: 0.62)
+            : UIColor(hex: 0xF5F2EC, alpha: 0.55)
+    })
+
     /// Artwork viewer: always black with the dark ink values.
     static let viewerInk = Color(red: 0xF0 / 255, green: 0xEB / 255, blue: 0xE3 / 255)
     static let viewerInk2 = Color(red: 0xB3 / 255, green: 0xAB / 255, blue: 0xA1 / 255)
