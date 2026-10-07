@@ -22,9 +22,8 @@ jobs:
     defaults:
       run:
         working-directory: backend
-    env:
-      DATABASE_URL_UNPOOLED: ${{ secrets.DATABASE_URL_UNPOOLED }}
-      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+    # The database secrets go only to the steps that need them: tests must run without one
+    # (an unset secret arrives as an empty string, which the env schema rejects).
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -38,9 +37,16 @@ jobs:
       - run: npm run content:build
       - name: Check for a database secret
         id: db
+        env:
+          DATABASE_URL_UNPOOLED: ${{ secrets.DATABASE_URL_UNPOOLED }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
           if [ -n "$DATABASE_URL_UNPOOLED$DATABASE_URL" ]; then echo "ok=true" >> "$GITHUB_OUTPUT"; else echo "::notice::No database secret; content validated but not published."; fi
       - if: steps.db.outputs.ok == 'true'
         run: npm run db:migrate
+        env:
+          DATABASE_URL_UNPOOLED: ${{ secrets.DATABASE_URL_UNPOOLED || secrets.DATABASE_URL }}
       - if: steps.db.outputs.ok == 'true'
         run: npm run db:seed
+        env:
+          DATABASE_URL_UNPOOLED: ${{ secrets.DATABASE_URL_UNPOOLED || secrets.DATABASE_URL }}
