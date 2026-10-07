@@ -22,9 +22,17 @@ nonisolated struct APIClient: Sendable {
         cache: ResponseCache()
     )
 
-    private static let decoder: JSONDecoder = {
+    static let decoder: JSONDecoder = {
         let d = JSONDecoder()
-        d.dateDecodingStrategy = .iso8601
+        // The API sends JavaScript ISO dates with milliseconds ("2026-10-07T18:48:07.758Z"), which
+        // `.iso8601` rejects; accept both forms.
+        d.dateDecodingStrategy = .custom { decoder in
+            let c = try decoder.singleValueContainer()
+            let s = try c.decode(String.self)
+            if let date = try? Date(s, strategy: .iso8601.year().month().day().time(includingFractionalSeconds: true)) { return date }
+            if let date = try? Date(s, strategy: .iso8601) { return date }
+            throw DecodingError.dataCorruptedError(in: c, debugDescription: "Not an ISO 8601 date: \(s)")
+        }
         return d
     }()
 

@@ -74,3 +74,13 @@ struct AppVersionTests {
         #expect(!AppVersion.isOlder("2.0", than: "1.9.9"))
     }
 }
+
+struct DateDecodingTests {
+    private struct Row: Decodable { let createdAt: Date }
+
+    @Test func acceptsMillisecondsAndPlainSeconds() throws {
+        let withMillis = try APIClient.decoder.decode(Row.self, from: Data(#"{"createdAt":"2026-10-07T18:48:07.758Z"}"#.utf8))
+        let plain = try APIClient.decoder.decode(Row.self, from: Data(#"{"createdAt":"2026-10-07T18:48:07Z"}"#.utf8))
+        #expect(abs(withMillis.createdAt.timeIntervalSince(plain.createdAt) - 0.758) < 0.001)
+    }
+}
