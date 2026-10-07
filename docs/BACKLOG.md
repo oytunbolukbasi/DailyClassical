@@ -3,17 +3,15 @@
 Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
 
 ## Sıradaki işler (kod)
-1. **[Claude] Koyu mod ve "Şeffaflığı Azalt" turu:** Her ekranı tasarımdaki koyu karelerle karşılaştırmak. Canvas'ta her ekran koyu temada da çizili (`design/DailyClassical2.html`).
-2. **[Claude] Giriş yapılmış ekranlar turu:** Favoriler listesi, Hesap sayfası, premium kullanıcıyla Arama sonuçları. Erişilebilir bir API gerekiyor: Railway domaini ya da lokal `npm run dev`.
+1. **[Claude] Koyu mod ve giriş yapılmış ekran turunun kalanı:** Renk tokenları, Ayarlar, Kitaplık, Ana ekran, Eser sayfası ve Hesap kontrol edildi (aşağıda Tamamlananlar). Kalanlar: "Şeffaflığı Azalt" ayarı, Favoriler listesi (giriş yapılmış), premium Arama sonuçları, Sözlük ve Kayıtlar sheet'leri. Mac'in belleği (8 GB) iki simülatörü aynı anda kaldırmadığı için yarıda kaldı.
 3. **[Claude] Denetimdeki küçük maddeler (`design/AUDIT.md`):**
    - Sözlük listesi için kısa tanım (`short`) alanı. Şu an tanımın ilk satırı kırpılıyor.
    - Kaynaklar ekranı eserleri tek tek, sırayla yüklüyor. Toplu yüklenmeli.
    - `Typography.swift` içinde Dynamic Type ile büyümeyen 4 sabit boyut var (meta satırı, çipler, segment kontrolü, toast).
-4. **[Claude] Giriş uç noktalarında istek sınırlama (rate limiting):** `/v1/auth/login`, `/register`, `/verify`, `/verify/resend`, `/password-reset`. Yayından önce şart.
 5. **[Claude] Paywall görselini gömmek:** Friedrich tablosu hâlâ Wikimedia'dan çekiliyor (ilk açılıştan sonra önbellekte). Görsel hattına eklenip uygulamaya gömülmeli.
 6. **[Claude] Yerel ağ izni metninin Türkçesi:** `NSLocalNetworkUsageDescription` yalnızca İngilizce. Sadece debug build'lerde görünüyor.
 7. **[Claude] Debug build'i Railway'e bağlamak:** Railway'in herkese açık domaini olunca debug build Mac'teki lokal API yerine oraya bağlanacak.
-8. **[Claude] Erişilebilirlik kontrolü:** VoiceOver ile günler arası geçiş ("Önceki gün / Sonraki gün"), bölüm geçişi ve sözlük terimleri.
+8. **[Claude + Oytun] VoiceOver'ı cihazda denemek:** Kod tarafı tamam: günler arası geçiş eylemleri, bölüm düğmesi etiketleri, okunur durak zamanları, sözlük terimi ipucu. Cihazda VoiceOver açıkken bir kez gezinmek gerekiyor.
 9. **[Claude + Oytun] Widget'ın renklendirilmiş (tinted) modu:** Cihazda ana ekran stili "Renklendirilmiş" ve "Şeffaf" iken widget'ların görünümü kontrol edilecek.
 
 ## İçerik güncelleme servisi: senden beklenenler
@@ -34,7 +32,8 @@ Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 ## Altyapı
 15. **[Oytun] Sırları yenilemek:** Neon şifresi, Resend API anahtarı ve production `JWT_SECRET` bu sohbette açık geçti. Yenilenip Railway değişkenlerine ve lokal `backend/.env` dosyasına işlenmeli.
 16. **[Oytun] `api.dailyclassical.co` domainini Railway'e bağlamak:** Railway'de Custom Domain eklenecek, DNS'e CNAME kaydı girilecek. Cloudflare kullanılıyorsa proxy kapalı olmalı. Şifre sıfırlama linkleri ve TestFlight/Release sürümü buna bağlı.
-17. **[Claude] Neon'da `dev` branch'i:** Lokal geliştirme ayrı bir branch'e bağlanmalı, testler production verisine dokunmamalı.
+17. **[Oytun] Neon'da `dev` branch'i:** Neon panelinde production'dan bir `dev` branch'i aç ve bağlantı adresini lokal `backend/.env` dosyasına yaz (ya da bana ver). Şu an lokal geliştirme ve seed doğrudan production veritabanına gidiyor. Bilgisayarda Neon CLI ya da API anahtarı olmadığı için bunu ben açamadım.
+17a. **[Oytun] Railway bölgesi:** Neon `us-east-2` (Ohio) bölgesinde. Railway servisi de ABD doğu bölgesinde olmalı. Aksi halde her istek okyanus aşırı birkaç sorgu yapıyor (Türkiye'den lokal ölçüm: `/v1/today` ilk istekte 4 saniye). Sunucuya 1 dakikalık önbellek eklendi, tekrar eden istekler artık anında dönüyor.
 18. **[Oytun] Kullanım koşulları ve gizlilik sayfaları:** `dailyclassical.co/terms` ve `/privacy`. App Store bunları istiyor.
 19. **[Oytun + Claude] App Store Connect hazırlığı:**
     - Uygulama kaydı (`co.dailyclassical.app`).
@@ -45,6 +44,15 @@ Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 ## Yayından önce sıfırlanacak test verisi
 - **Takvim:** `content/schedule.yaml` içerik kontrolü için 27 Eylül 2026'dan başlıyor, böylece 10 eserin hepsi Kitaplık'ta görünüyor. Yayından önce `start` yayın gününe çekilecek ve sıra Çaykovski 6 ile başlayacak. Ardından `npm run db:seed && npm run fixtures` çalıştırılacak.
 - **Debug premium:** Debug build'lerde premium varsayılan olarak açık (`EntitlementStore.debugUnlock`). Release build'leri etkilemiyor, sıfırlanması gerekmiyor.
+
+## Tamamlananlar (7 Ekim 2026, plan maddeleri)
+- **İstek sınırlama:** Altı giriş uç noktasının hepsinde IP ve e-posta başına sınır var (ör. giriş: 15 dakikada IP+e-posta başına 10 deneme). Sınır aşılınca 429 dönüyor ve uygulama "Çok fazla deneme" mesajı gösteriyor. Sayaçlar Postgres'te tutuluyor (migration 0008, production'a uygulandı).
+- **Koyu mod:** Renk tokenları tasarımla birebir aynı. Seçili sekme artık vurgu rengi değil, tasarımdaki gibi mürekkep rengi. Birincil cam buton ("Start listening", "Open in Spotify") koyu modda tasarımdaki gibi açık camda krem yazıyla görünüyor.
+- **Giriş yapılmış ekranlar:**
+  - Hesaba tanımlı (hediye) premium Ayarlar'da "Free" görünüp paywall açıyordu. Artık "Etkin" yazıyor.
+  - Hesap ve Şifre değiştir ekranlarında iOS 27'nin çizdiği ikinci, sistem başlığı kaldırıldı.
+- **VoiceOver:** Durak zamanları "yaklaşık 4 dakika 30 saniye" olarak okunuyor. Sözlük terimi içeren paragraflar terimin nasıl açılacağını söylüyor.
+- **API hızı:** İçerik sorguları sunucuda 1 dakika önbellekte tutuluyor.
 
 ## Tamamlananlar (7 Ekim 2026, içerik güncelleme servisi)
 - **Yayın hattı:** İçerik `main`'e girince `content-publish` GitHub Action'ı içeriği doğrular, migration'ları çalıştırır ve production veritabanına seed eder. Görseller Railway deploy'uyla gider. Eser, `schedule.yaml`'daki gününde kendiliğinden yayına girer. Uygulama sürümü gerekmez.
