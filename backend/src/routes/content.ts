@@ -4,6 +4,10 @@ import { z } from "zod";
 import { getPiece, listComposers, listGlossary, listPublishedPieces, pieceIdForDay, scheduleUntil, widgetDays } from "../content/repository.js";
 import { db } from "../db/client.js";
 import { requestLocale } from "../lib/locale.js";
+import { memo } from "../lib/memo.js";
+
+/** Content queries are cached in-process for a minute (lib/memo.ts). */
+const TTL = 60_000;
 
 export const content = new Hono();
 
@@ -25,18 +29,24 @@ const clientDay = (value: string | undefined) => {
 /** The client sends its own calendar date so "today" follows the user's time zone. */
 content.get("/today", async (c) => {
   const d = clientDay(c.req.query("date"));
-  const id = await pieceIdForDay(db, d);
-  const piece = id ? await getPiece(db, id, requestLocale(c)) : null;
+  const locale = requestLocale(c);
+  const id = await memo(`day:${d}`, TTL, () => pieceIdForDay(db, d));
+  const piece = id ? await memo(`piece:${id}:${locale}`, TTL, () => getPiece(db, id, locale)) : null;
   if (!piece) throw new HTTPException(404, { message: "no_piece" });
   return c.json({ date: d, piece });
 });
 
 /** Published pieces only (scheduled on or before `date`), newest first, each with its `publishDate`. */
-content.get("/pieces", async (c) =>
-  c.json({ pieces: await listPublishedPieces(db, requestLocale(c), clientDay(c.req.query("date"))) }));
+content.get("/pieces", async (c) => {
+  const locale = requestLocale(c), d = clientDay(c.req.query("date"));
+  return c.json({ pieces: await memo(`published:${d}:${locale}`, TTL, () => listPublishedPieces(db, locale, d)) });
+});
 
 /** Past days up to and including `until`, oldest first: [{ day, pieceId }]. Today pages back through these. */
-content.get("/schedule", async (c) => c.json({ days: await scheduleUntil(db, clientDay(c.req.query("until"))) }));
+content.get("/schedule", async (c) => {
+  const until = clientDay(c.req.query("until"));
+  return c.json({ days: await memo(`schedule:${until}`, TTL, () => scheduleUntil(db, until)) });
+});
 
 /**
  * Home Screen widget feed: today (`date`) and the next `days - 1` days (default 4, at most 7), so the
@@ -44,15 +54,23 @@ content.get("/schedule", async (c) => c.json({ days: await scheduleUntil(db, cli
  */
 content.get("/widget", async (c) => {
   const count = Math.min(7, Math.max(1, Number(c.req.query("days")) || 4));
-  return c.json({ days: await widgetDays(db, requestLocale(c), clientDay(c.req.query("date")), count) });
+  const locale = requestLocale(c), d = clientDay(c.req.query("date"));
+  return c.json({ days: await memo(`widget:${d}:${count}:${locale}`, TTL, () => widgetDays(db, locale, d, count)) });
 });
 
 content.get("/pieces/:id", async (c) => {
-  const piece = await getPiece(db, c.req.param("id"), requestLocale(c));
+  const id = c.req.param("id"), locale = requestLocale(c);
+  const piece = await memo(`piece:${id}:${locale}`, TTL, () => getPiece(db, id, locale));
   if (!piece) throw new HTTPException(404, { message: "not_found" });
   return c.json(piece);
 });
 
-content.get("/glossary", async (c) => c.json({ terms: await listGlossary(db, requestLocale(c)) }));
+content.get("/glossary", async (c) => {
+  const locale = requestLocale(c);
+  return c.json({ terms: await memo(`glossary:${locale}`, TTL, () => listGlossary(db, locale)) });
+});
 
-content.get("/composers", async (c) => c.json({ composers: await listComposers(db, requestLocale(c)) }));
+content.get("/composers", async (c) => {
+  const locale = requestLocale(c);
+  return c.json({ composers: await memo(`composers:${locale}`, TTL, () => listComposers(db, locale)) });
+});
