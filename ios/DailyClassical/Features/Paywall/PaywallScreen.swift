@@ -145,28 +145,17 @@ struct PaywallScreen: View {
 }
 
 /// Caspar David Friedrich, Wanderer above the Sea of Fog (public domain), cropped at 50 % / 30 %.
-private struct PaywallPainting: View {
-    static let url = URL(string: "https://commons.wikimedia.org/wiki/Special:FilePath/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg?width=1200")
-    private static let aspect: CGFloat = 0.785   // width / height of the original
-    private static let focusY: CGFloat = 0.3
+/// Bundled: `paywall/friedrich-wanderer` in content/app-images.yaml (`npm run images`) gives the
+/// HEIC hero and placeholder colour; ImagePipeline finds it by this URL (the yaml `image_url`, the
+/// manifest `source`) and only falls back to downloading the Commons original.
+struct PaywallPainting: View {
+    static let url = URL(string: "https://commons.wikimedia.org/wiki/Special:FilePath/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg")
 
     var body: some View {
-        GeometryReader { geo in
-            let imageHeight = max(geo.size.height, geo.size.width / Self.aspect)
-            StripePlaceholder()
-                .overlay(alignment: .top) {
-                    // Disk-cached after the first load (ImagePipeline), so the paywall opens instantly next time.
-                    CachedImage(url: Self.url) { image in
-                        Image(uiImage: image).resizable()
-                            .frame(width: geo.size.width, height: imageHeight)
-                            .offset(y: -(imageHeight - geo.size.height) * Self.focusY)
-                    } placeholder: { Color.clear }
-                }
-                .clipped()
-        }
-        .accessibilityElement()
-        .accessibilityLabel(Text("paywall.painting.accessibilityLabel"))
-        .accessibilityAddTraits(.isImage)
+        PaintingImage(url: Self.url, focus: UnitPoint(x: 0.5, y: 0.3))
+            .accessibilityElement()
+            .accessibilityLabel(Text("paywall.painting.accessibilityLabel"))
+            .accessibilityAddTraits(.isImage)
     }
 }
 

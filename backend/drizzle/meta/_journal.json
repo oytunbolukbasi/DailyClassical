@@ -64,6 +64,13 @@
       "when": 1791396285308,
       "tag": "0008_rate_limit",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1791398506077,
+      "tag": "0009_glossary_short",
+      "breakpoints": true
     }
   ]
 }

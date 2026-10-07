@@ -154,6 +154,7 @@ export const glossaryLocalizations = pgTable(
     termId: text("term_id").notNull().references(() => glossaryTerms.id, { onDelete: "cascade" }),
     locale: text("locale").notNull(),
     term: text("term").notNull(),
+    short: text("short"), // one line for the glossary list and search results; null when the content has none
     definition: text("definition").notNull(),
   },
   (t) => [primaryKey({ columns: [t.termId, t.locale] })],

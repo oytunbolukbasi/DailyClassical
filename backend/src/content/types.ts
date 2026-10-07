@@ -135,6 +135,8 @@ export interface GlossaryEntry {
   id: string;
   key: string; // original English key
   term: string;
+  /** One line for the glossary list and search results; null in tables without a Short column. */
+  short: string | null;
   definition: string;
 }
 

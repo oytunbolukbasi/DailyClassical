@@ -47,7 +47,8 @@ struct PrimaryGlassButton: View {
     }
 }
 
-/// Neutral-glass capsule with segments (Library All/Favourites, movement switcher).
+/// Neutral-glass capsule with segments (Library All/Favourites, movement switcher). `height` is
+/// the default-size height; with larger Dynamic Type the segments grow to fit their labels.
 struct GlassSegmented<Value: Hashable>: View {
     struct Segment: Identifiable {
         let value: Value
@@ -72,7 +73,9 @@ struct GlassSegmented<Value: Hashable>: View {
                         .font(isSelected ? selectedFont : font)
                         .foregroundStyle(isSelected ? Palette.background : Palette.glassInk)
                         .padding(.horizontal, segmentWidth == nil ? 16 : 0)
+                        .padding(.vertical, 4)
                         .frame(width: segmentWidth)
+                        .frame(minHeight: height - 8)
                         .frame(maxHeight: .infinity)
                         .background { if isSelected { Capsule().fill(Palette.glassInk) } }
                         .opacity(isSelected ? 1 : 0.75)
@@ -83,8 +86,8 @@ struct GlassSegmented<Value: Hashable>: View {
                 .accessibilityAddTraits(isSelected ? .isSelected : [])
             }
         }
+        .fixedSize(horizontal: false, vertical: true)  // every segment as tall as the tallest
         .padding(4)
-        .frame(height: height)
         .glassEffect(.regular, in: .capsule)
     }
 }
@@ -103,7 +106,8 @@ struct GlassChip: View {
         }
         .foregroundStyle(Palette.glassInk)
         .padding(.horizontal, 14)
-        .frame(height: 36)
+        .padding(.vertical, 6)
+        .frame(minHeight: 36)  // 36 at the default text size; grows with Dynamic Type
         .glassEffect(.regular.interactive(), in: .capsule)
     }
 }
@@ -115,10 +119,13 @@ struct Toast: View {
     var body: some View {
         Text(message)
             .font(Typography.chip)
+            .multilineTextAlignment(.center)
             .foregroundStyle(Palette.glassInk)
             .padding(.horizontal, 18)
-            .frame(height: 40)
+            .padding(.vertical, 8)
+            .frame(minHeight: 40)  // 40 at the default text size; grows with Dynamic Type
             .glassEffect(.regular, in: .capsule)
+            .padding(.horizontal, 16)
     }
 }
 

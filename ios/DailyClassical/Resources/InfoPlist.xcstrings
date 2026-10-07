@@ -1,0 +1,24 @@
+{
+  "sourceLanguage": "en",
+  "version": "1.0",
+  "strings": {
+    "NSLocalNetworkUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debug builds connect to the development server on this network."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Debug derlemeleri bu ağdaki geliştirme sunucusuna bağlanır."
+          }
+        }
+      },
+      "comment": "Local network permission prompt (Info.plist). Only debug builds ask; release builds use the public API."
+    }
+  }
+}

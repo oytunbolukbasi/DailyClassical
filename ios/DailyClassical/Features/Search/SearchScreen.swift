@@ -228,7 +228,7 @@ private struct SearchResults {
             .sorted { $0.shortName.compare($1.shortName, locale: locale) == .orderedAscending }
 
         let matchingTerms = content.sortedGlossary.filter { has($0.term) }
-        let definitionOnly = content.sortedGlossary.filter { !has($0.term) && has(RichText.plain($0.definition)) }
+        let definitionOnly = content.sortedGlossary.filter { !has($0.term) && (has($0.summary) || has(RichText.plain($0.definition))) }
         terms = matchingTerms + definitionOnly
     }
 }
@@ -307,12 +307,13 @@ private struct SearchComposerRow: View {
     }
 }
 
-/// SPEC §3.12 search result (glossary): Literata 15 term, one-line definition.
+/// SPEC §3.12 search result (glossary): Literata 15 term, the one-line `short` (or the definition).
 private struct SearchGlossaryRow: View {
     let term: GlossaryTerm
     let query: String
     let locale: Locale
     let action: () -> Void
+    @Environment(\.dynamicTypeSize) private var dynamicTypeSize
 
     var body: some View {
         Button(action: action) {
@@ -320,10 +321,10 @@ private struct SearchGlossaryRow: View {
                 Text(TextMatch.highlighted(term.term, query, locale: locale, color: Palette.accent))
                     .font(Typography.rowTitleXS)
                     .foregroundStyle(Palette.ink)
-                Text(TextMatch.highlighted(RichText.plain(term.definition), query, locale: locale, color: Palette.accent))
+                Text(TextMatch.highlighted(term.summary, query, locale: locale, color: Palette.accent))
                     .font(Typography.meta13)
                     .foregroundStyle(Palette.ink2)
-                    .lineLimit(1)
+                    .lineLimit(dynamicTypeSize.isAccessibilitySize ? 3 : 1)  // as in the Glossary list
                     .truncationMode(.tail)
             }
             .frame(maxWidth: .infinity, alignment: .leading)

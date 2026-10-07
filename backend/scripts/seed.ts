@@ -86,8 +86,9 @@ await db.transaction(async (tx) => {
   for (const content of [en, ...translations]) {
     for (const g of content.glossary) {
       await tx.insert(s.glossaryTerms).values({ id: g.id }).onConflictDoNothing();
-      await tx.insert(s.glossaryLocalizations).values({ termId: g.id, locale: content.locale, term: g.term, definition: g.definition })
-        .onConflictDoUpdate({ target: [s.glossaryLocalizations.termId, s.glossaryLocalizations.locale], set: { term: g.term, definition: g.definition } });
+      const short = g.short ?? null; // content built before the Short column has none
+      await tx.insert(s.glossaryLocalizations).values({ termId: g.id, locale: content.locale, term: g.term, short, definition: g.definition })
+        .onConflictDoUpdate({ target: [s.glossaryLocalizations.termId, s.glossaryLocalizations.locale], set: { term: g.term, short, definition: g.definition } });
     }
   }
 

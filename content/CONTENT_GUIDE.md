@@ -202,8 +202,12 @@ painting:
   always the English term, the surface is the Turkish word as it appears in the sentence
   (with its suffix: `[[cadenza|kadansı]]`).
 - Reuse existing terms first (`content/en/glossary.md`). A new term gets a row in **both**
-  glossary files: EN `| Term | Definition |`, TR `| Key | Terim | Tanım |`. One or two sentences,
-  written for a pop-over, no circular definitions.
+  glossary files: EN `| Term | Short | Definition |`, TR `| Key | Terim | Kısa | Tanım |`.
+- **Short** (TR **Kısa**): one line for the Glossary list and Search results, at most about 60
+  characters. A phrase, not a sentence: no full stop, and it does not repeat the term
+  ("Coda": "The closing section that rounds off a movement"). `content:build` warns when it is missing.
+- **Definition** (TR **Tanım**): one or two sentences, written for the pop-over (the term sheet),
+  no circular definitions.
 - Mark a term once or twice per piece where it helps, not every time it appears.
 
 ## 7. Turkish

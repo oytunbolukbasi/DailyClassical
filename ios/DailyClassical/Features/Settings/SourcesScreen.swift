@@ -74,15 +74,26 @@ struct SourcesScreen: View {
     }
 
     /// Summaries carry the painting; the reference recording comes from each piece's detail.
+    /// Loads a few pieces at a time (ContentStore caches each one) and shows every credit as soon
+    /// as its piece arrives. Leaving the screen cancels the rest.
     private func loadRecordings() async {
         guard let pieces = content.library.value else { return }
-        for piece in pieces where recordings[piece.id] == nil {
-            guard !Task.isCancelled else { return }
-            if let recording = try? await content.piece(id: piece.id).referenceRecording {
-                recordings[piece.id] = recording
+        var pending = pieces.map(\.id).filter { recordings[$0] == nil }.makeIterator()
+        let content = content
+        await withTaskGroup(of: (String, Recording?).self) { group in
+            func startNext() {
+                guard let id = pending.next() else { return }
+                group.addTask { (id, try? await content.piece(id: id).referenceRecording) }
+            }
+            for _ in 0..<Self.concurrentLoads { startNext() }
+            for await (id, recording) in group {
+                if let recording { recordings[id] = recording }
+                if !Task.isCancelled { startNext() }
             }
         }
     }
+
+    private static let concurrentLoads = 4
 }
 
 #Preview {

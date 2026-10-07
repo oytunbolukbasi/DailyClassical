@@ -59,6 +59,8 @@ targets:
         UIAppFonts: [Literata-Regular.ttf, Literata-Medium.ttf, Literata-SemiBold.ttf, Literata-Italic.ttf, Literata-MediumItalic.ttf]
         NSAppTransportSecurity:
           NSAllowsLocalNetworking: true
+        # Translated in Resources/InfoPlist.xcstrings (from strings/infoplist.json; build-strings.py),
+        # which the DailyClassical source folder adds to the app's resources.
         NSLocalNetworkUsageDescription: "Debug builds connect to the development server on this network."
         # Widget taps open dailyclassical://piece/<id>
         CFBundleURLTypes:

@@ -12,7 +12,7 @@ node_modules/
 !.env.example
 
 # Font downloads (the app bundles its own copies in ios/DailyClassical/Resources/Fonts)
-fonts/
+/fonts/
 
 # Local test credentials
 *.local.md
@@ -23,3 +23,6 @@ content/build/
 # Downloaded image originals + compiled image tool (npm run images); derivatives are committed
 content/images/.originals/
 content/images/.staging/
+
+# Agent worktrees
+.claude/worktrees/

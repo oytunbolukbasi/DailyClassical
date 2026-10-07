@@ -1,0 +1,7 @@
+{
+  "NSLocalNetworkUsageDescription": {
+    "en": "Debug builds connect to the development server on this network.",
+    "tr": "Debug derlemeleri bu ağdaki geliştirme sunucusuna bağlanır.",
+    "comment": "Local network permission prompt (Info.plist). Only debug builds ask; release builds use the public API."
+  }
+}

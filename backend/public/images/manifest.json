@@ -605,6 +605,24 @@
         "bytes": 811217,
         "hash": "6b1aedc3af"
       }
+    },
+    "paywall/friedrich-wanderer": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg",
+      "color": "#848792",
+      "hero": {
+        "path": "paywall/friedrich-wanderer-hero.heic",
+        "width": 1800,
+        "height": 2305,
+        "bytes": 557080,
+        "hash": "9a86dffd28"
+      },
+      "thumb": {
+        "path": "paywall/friedrich-wanderer-thumb.heic",
+        "width": 300,
+        "height": 384,
+        "bytes": 14223,
+        "hash": "0ad540e666"
+      }
     }
   }
 }

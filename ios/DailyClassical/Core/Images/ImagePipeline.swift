@@ -21,7 +21,8 @@ nonisolated enum ImageVariant: String, Sendable {
 }
 
 /// `Resources/Artwork/manifest.json`, written by `npm run images` in backend/
-/// (backend/scripts/optimize-images.ts). Keys are `paintings/<pieceId>` and `composers/<composerId>`.
+/// (backend/scripts/optimize-images.ts). Keys are `paintings/<pieceId>`, `composers/<composerId>` and
+/// app images such as `paywall/friedrich-wanderer` (content/app-images.yaml; hero + thumb only).
 nonisolated struct ArtworkManifest: Decodable, Sendable {
     struct File: Decodable, Sendable {
         let path: String

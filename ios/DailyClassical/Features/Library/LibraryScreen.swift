@@ -56,10 +56,15 @@ struct LibraryScreen: View {
                 .padding(.trailing, Spacing.pageGutter)
             // Glossary sits on the segmented control's row, right-aligned to the gutter, as its own
             // glass shape. Where the labelled chip doesn't fit (narrow phones, long translations)
-            // it becomes an icon-only glass circle.
+            // it becomes an icon-only glass circle; at the largest text sizes the segment labels
+            // shrink to fit (never break mid-word) and the circle moves below them.
             ViewThatFits(in: .horizontal) {
                 segmentRow(glossary: GlassChip(title: Text("library.filter.glossary"), leadingIcon: "glossary-book"))
                 segmentRow(glossary: glossaryIconButton)
+                VStack(alignment: .leading, spacing: 8) {
+                    segmentedControl.lineLimit(1).minimumScaleFactor(0.5)
+                    glossaryButton(glossaryIconButton)
+                }
             }
             .padding(.trailing, Spacing.pageGutter)
             if segment == .all {
@@ -70,21 +75,28 @@ struct LibraryScreen: View {
 
     private func segmentRow(glossary: some View) -> some View {
         HStack(spacing: 8) {
-            GlassSegmented(
-                segments: [
-                    .init(value: Segment.all, label: Text("library.segment.all"), accessibilityLabel: nil),
-                    .init(value: Segment.favourites, label: Text("library.segment.favourites"), accessibilityLabel: nil),
-                ],
-                selection: $segment.animation(.easeOut(duration: 0.2))
-            )
-            .fixedSize()
+            segmentedControl.fixedSize()
             Spacer(minLength: 0)
-            // A button, not a NavigationLink: in a List row a link would get a disclosure chevron.
-            Button { router.libraryPath.append(GlossaryListRoute()) } label: { glossary }
-                .buttonStyle(.plain)
-                .accessibilityLabel(Text("library.filter.glossary"))
-                .fixedSize()
+            glossaryButton(glossary)
         }
+    }
+
+    private var segmentedControl: some View {
+        GlassSegmented(
+            segments: [
+                .init(value: Segment.all, label: Text("library.segment.all"), accessibilityLabel: nil),
+                .init(value: Segment.favourites, label: Text("library.segment.favourites"), accessibilityLabel: nil),
+            ],
+            selection: $segment.animation(.easeOut(duration: 0.2))
+        )
+    }
+
+    private func glossaryButton(_ label: some View) -> some View {
+        // A button, not a NavigationLink: in a List row a link would get a disclosure chevron.
+        Button { router.libraryPath.append(GlossaryListRoute()) } label: { label }
+            .buttonStyle(.plain)
+            .accessibilityLabel(Text("library.filter.glossary"))
+            .fixedSize()
     }
 
     private var glossaryIconButton: some View {
