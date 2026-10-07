@@ -35,6 +35,10 @@
     "en": "Opens definition",
     "tr": "Tanımı açar"
   },
+  "common.glossaryTerm.paragraph.accessibilityHint": {
+    "en": "Contains glossary terms. Use the Links rotor to open a definition.",
+    "tr": "Sözlük terimleri içerir. Bir tanımı açmak için Bağlantılar rotorunu kullanın."
+  },
   "state.offline.date %@": {
     "en": "%@",
     "tr": "%@",
@@ -116,6 +120,14 @@
   "piece.stop.time.range %@ %@": {
     "en": "≈ %1$@ to %2$@",
     "tr": "≈ %1$@–%2$@"
+  },
+  "piece.stop.time.single.accessibilityLabel %@": {
+    "en": "About %@",
+    "tr": "Yaklaşık %@"
+  },
+  "piece.stop.time.range.accessibilityLabel %@ %@": {
+    "en": "From about %1$@ to %2$@",
+    "tr": "Yaklaşık %1$@ ile %2$@ arası"
   },
   "piece.section.thingsToNotice": {
     "en": "Things to notice",

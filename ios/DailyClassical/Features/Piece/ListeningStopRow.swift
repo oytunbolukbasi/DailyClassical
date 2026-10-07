@@ -9,6 +9,7 @@ struct ListeningStopRow: View {
     let stop: ListeningStop
     var focus: Focus = .none
     var isLast = false
+    @Environment(\.locale) private var locale
 
     var body: some View {
         HStack(alignment: .top, spacing: 14) {
@@ -76,11 +77,22 @@ struct ListeningStopRow: View {
             .font(Typography.stopTime)
             .tracking(0.48)
             .foregroundStyle(faded ? Palette.ink3 : Palette.accent)
+            // VoiceOver would read "≈ 4:30" as "almost equal to four thirty".
+            .accessibilityLabel(spokenTime(start: start, end: stop.endSec))
             if let label = stop.label {
                 Text(verbatim: label).font(Typography.noTimeLabel).foregroundStyle(Palette.ink2)
             }
         } else {
             Text(verbatim: stop.label ?? "").font(Typography.noTimeLabel).foregroundStyle(faded ? Palette.ink3 : Palette.ink2)
         }
+    }
+
+    /// "About 4 minutes, 30 seconds" / "From about 9 minutes, 30 seconds to 10 minutes, 30 seconds".
+    private func spokenTime(start: Int, end: Int?) -> Text {
+        let spoken = { (seconds: Int) in
+            Duration.seconds(seconds).formatted(.units(allowed: [.hours, .minutes, .seconds], width: .wide).locale(locale))
+        }
+        if let end { return Text("piece.stop.time.range.accessibilityLabel \(spoken(start)) \(spoken(end))") }
+        return Text("piece.stop.time.single.accessibilityLabel \(spoken(start))")
     }
 }

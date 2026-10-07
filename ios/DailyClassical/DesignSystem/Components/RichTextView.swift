@@ -19,6 +19,8 @@ struct RichTextView: View {
             .modifier(RichLineHeight(multiple: lineHeight, literataSize: literataSize))
             .foregroundStyle(color)
             .fixedSize(horizontal: false, vertical: true)
+            // Terms are links (VoiceOver's Links rotor); say so once per paragraph that has any.
+            .accessibilityHint(source.contains("[[") ? Text("common.glossaryTerm.paragraph.accessibilityHint") : Text(verbatim: ""))
     }
 
     private var styled: AttributedString {

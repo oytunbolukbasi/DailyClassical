@@ -1334,6 +1334,23 @@
         }
       }
     },
+    "common.glossaryTerm.paragraph.accessibilityHint": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contains glossary terms. Use the Links rotor to open a definition."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sözlük terimleri içerir. Bir tanımı açmak için Bağlantılar rotorunu kullanın."
+          }
+        }
+      }
+    },
     "common.locked.accessibilityLabel": {
       "extractionState": "manual",
       "localizations": {
@@ -3320,6 +3337,23 @@
         }
       }
     },
+    "piece.stop.time.range.accessibilityLabel %@ %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "From about %1$@ to %2$@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yaklaşık %1$@ ile %2$@ arası"
+          }
+        }
+      }
+    },
     "piece.stop.time.single %@": {
       "extractionState": "manual",
       "localizations": {
@@ -3333,6 +3367,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "≈ %@"
+          }
+        }
+      }
+    },
+    "piece.stop.time.single.accessibilityLabel %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "About %@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yaklaşık %@"
           }
         }
       }
