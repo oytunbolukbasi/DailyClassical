@@ -3,7 +3,6 @@
 Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
 
 ## Sıradaki işler (kod)
-3. **[Oytun] Karşılama akışının 4. sayfası (3 gün ücretsiz deneme):** Kodda hazır; yalnızca Apple Kimliği denemeye hak kazanıyorsa ve kullanıcı Premium değilse çıkıyor. Kalsın mı, kaldırılsın mı kararı bekleniyor.
 8. **[Claude + Oytun] VoiceOver'ı cihazda denemek:** Kod tarafı tamam: günler arası geçiş eylemleri, bölüm düğmesi etiketleri, okunur durak zamanları, sözlük terimi ipucu. Cihazda VoiceOver açıkken bir kez gezinmek gerekiyor.
 9. **[Claude + Oytun] Widget'ın renklendirilmiş (tinted) modu:** Cihazda ana ekran stili "Renklendirilmiş" ve "Şeffaf" iken widget'ların görünümü kontrol edilecek.
 
@@ -41,7 +40,7 @@ Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 ## Tamamlananlar (8 Ekim 2026, karşılama akışı)
 - Claude Design §09 uygulandı: tablolu dört kart (Vernet, Levitan, Friedrich *Deniz Kıyısındaki Keşiş*, Gezgin) ve ardından hatırlatıcı. Yatay kaydırma, sağ üstte cam "Geç" (hatırlatıcıya atlar), 1. sayfada "Zaten hesabınız var mı? Giriş yapın".
 - 2. kartta gerçek bir "şu an" dinleme durağı kartı, 3. kartta sözlük sheet'i parçası tablonun alt kenarına taşıyor.
-- 4. kart (deneme) yalnızca deneme hakkı varken görünüyor; "Bugünün eseriyle devam et" deneme butonu kadar erişilebilir. Yenileme satırı App Review için uzun metinle (24 saat kuralı) kaldı.
+- 4. kart (deneme) kalıyor (Oytun'un kararı); yalnızca deneme hakkı varken ve kullanıcı Premium değilken görünüyor; "Bugünün eseriyle devam et" deneme butonu kadar erişilebilir. Yenileme satırı App Review için uzun metinle (24 saat kuralı) kaldı.
 - Koyu mod ve en büyük erişilebilirlik yazı boyutu kontrol edildi: önce tablo küçülüyor, metin kaydırılıyor, hiçbir şey kesilmiyor.
 - Debug: simülatörde `-debugTrialDays 3` deneme kartını StoreKit yapılandırması olmadan gösteriyor; `-debugPremium NO` artık launch argümanından da doğru okunuyor.
 
