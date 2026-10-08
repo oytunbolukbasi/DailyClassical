@@ -51,6 +51,7 @@ struct ReminderSettingsScreen: View {
         .settingsList()
         .navigationTitle(Text("settings.dailyReminder"))
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarVisibility(.hidden, for: .tabBar)  // every pushed Settings detail, as Account (SPEC §7.15)
         .animation(.easeOut(duration: 0.2), value: enabled)
         .task(id: [enabled ? 1 : 0, hour, minute]) {
             // Skip the first pass so simply opening the screen never prompts or reschedules.

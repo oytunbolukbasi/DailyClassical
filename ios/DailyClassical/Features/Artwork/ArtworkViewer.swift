@@ -29,19 +29,22 @@ struct ArtworkViewer: View {
                     }
                 }
                 .frame(width: geo.size.width, height: geo.size.height)
+                .scaleEffect(scale)
+                .offset(offset)
+                // Gestures sit on an untransformed frame, so tap locations are in screen space.
+                .frame(width: geo.size.width, height: geo.size.height)
+                .contentShape(.rect)
+                .gesture(zoom(in: geo.size).simultaneously(with: pan(in: geo.size)))
+                .onTapGesture(count: 2) { location in
+                    withAnimation(.easeOut(duration: 0.25)) {
+                        if scale > 1 { reset() } else { zoom(to: 2.5, at: location, in: geo.size) }
+                    }
+                }
             }
             .task(id: painting.imageUrl) {
                 guard let request = ImagePipeline.shared.request(for: painting.imageUrl, variant: .full, artwork: painting.artwork),
                       let image = await ImagePipeline.shared.image(for: request), !Task.isCancelled else { return }
                 full = image
-            }
-            .scaleEffect(scale)
-            .offset(offset)
-            .gesture(zoom.simultaneously(with: pan))
-            .onTapGesture(count: 2) {
-                withAnimation(.easeOut(duration: 0.25)) {
-                    if scale > 1 { reset() } else { scale = 2.5; lastScale = 2.5 }
-                }
             }
             .accessibilityLabel(Text("today.painting.accessibilityLabel \(painting.title) \(painting.artist)"))
         }
@@ -77,22 +80,54 @@ struct ArtworkViewer: View {
         return parts.joined(separator: " · ")
     }
 
-    private var zoom: some Gesture {
+    private func zoom(in size: CGSize) -> some Gesture {
         MagnifyGesture()
-            .onChanged { scale = max(1, min(lastScale * $0.magnification, 6)) }
+            .onChanged {
+                scale = max(1, min(lastScale * $0.magnification, 6))
+                offset = clamped(offset, in: size)  // zooming out pulls the image back on screen
+            }
             .onEnded { _ in
                 lastScale = scale
+                lastOffset = offset
                 if scale <= 1 { withAnimation(.easeOut(duration: 0.2)) { reset() } }
             }
     }
 
-    private var pan: some Gesture {
+    private func pan(in size: CGSize) -> some Gesture {
         DragGesture()
             .onChanged { v in
                 guard scale > 1 else { return }
-                offset = CGSize(width: lastOffset.width + v.translation.width, height: lastOffset.height + v.translation.height)
+                offset = clamped(CGSize(width: lastOffset.width + v.translation.width,
+                                        height: lastOffset.height + v.translation.height), in: size)
             }
             .onEnded { _ in lastOffset = offset }
+    }
+
+    /// Zooms to `newScale` keeping the painting point under `location` where it is.
+    private func zoom(to newScale: CGFloat, at location: CGPoint, in size: CGSize) {
+        let dx = location.x - size.width / 2, dy = location.y - size.height / 2
+        scale = newScale; lastScale = newScale
+        offset = clamped(CGSize(width: dx * (1 - newScale), height: dy * (1 - newScale)), in: size)
+        lastOffset = offset
+    }
+
+    /// Keeps the zoomed painting covering the screen: it can pan until its edge meets the screen's
+    /// edge, and not along an axis where it is still narrower than the screen.
+    private func clamped(_ offset: CGSize, in size: CGSize) -> CGSize {
+        let fitted = fittedSize(in: size)
+        let maxX = max(0, (fitted.width * scale - size.width) / 2)
+        let maxY = max(0, (fitted.height * scale - size.height) / 2)
+        return CGSize(width: min(max(offset.width, -maxX), maxX), height: min(max(offset.height, -maxY), maxY))
+    }
+
+    /// The painting's aspect-fit size on screen (the whole screen when its size is unknown).
+    private func fittedSize(in size: CGSize) -> CGSize {
+        let aspect = full.map { $0.size.width / max($0.size.height, 1) }
+            ?? painting.width.flatMap { w in painting.height.map { CGFloat(w) / CGFloat(max($0, 1)) } }
+        guard let aspect, aspect > 0, size.height > 0 else { return size }
+        return aspect > size.width / size.height
+            ? CGSize(width: size.width, height: size.width / aspect)
+            : CGSize(width: size.height * aspect, height: size.height)
     }
 
     private func reset() {

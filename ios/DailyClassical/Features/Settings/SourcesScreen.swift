@@ -13,7 +13,7 @@ struct SourcesScreen: View {
                 ForEach(pieces) { piece in
                     Section {
                         if let painting = piece.painting {
-                            creditLine(Text("sources.painting \(paintingCredit(painting))"))
+                            creditLine(Text("sources.painting \(painting.credit)"))
                         }
                         if let recording = recordings[piece.id] {
                             creditLine(Text("sources.recording \(recordingCredit(recording))"))
@@ -48,6 +48,7 @@ struct SourcesScreen: View {
         .settingsList()
         .navigationTitle(Text("settings.about.sources"))
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarVisibility(.hidden, for: .tabBar)  // every pushed Settings detail, as Account (SPEC §7.15)
         .task(id: "\(content.language)-\(content.library.value?.count ?? 0)") { await loadRecordings() }
     }
 
@@ -59,13 +60,6 @@ struct SourcesScreen: View {
             .fixedSize(horizontal: false, vertical: true)
             .padding(.vertical, 6)
             .settingsRow()
-    }
-
-    /// "Isaac Levitan, *Above the Eternal Peace*, 1894. State Tretyakov Gallery, Moscow."
-    private func paintingCredit(_ p: Painting) -> AttributedString {
-        var title = AttributedString(p.title)
-        title.inlinePresentationIntent = .emphasized
-        return AttributedString("\(p.artist), ") + title + AttributedString(", \(p.yearLabel). \(p.collection).")
     }
 
     /// "Teodor Currentzis, musicAeterna (Sony Classical, 2017)."

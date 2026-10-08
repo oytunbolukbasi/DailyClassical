@@ -169,5 +169,6 @@ struct OptionPickerScreen<Value: Hashable>: View {
         .settingsList()
         .navigationTitle(title)
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarVisibility(.hidden, for: .tabBar)  // every pushed Settings detail, as Account (SPEC §7.15)
     }
 }

@@ -17,6 +17,9 @@ struct SearchScreen: View {
             .background(Palette.background)
             .navigationTitle(Text("tab.search"))
             .navigationBarTitleDisplayMode(.inline)
+            // The design draws no title on Search (SPEC §4.12); the bar keeps its height, so the
+            // results still start 22 below it.
+            .toolbar(removing: .title)
         }
     }
 }
