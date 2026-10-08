@@ -13,8 +13,8 @@ struct PieceScreen: View {
             // the zoom transition never swaps a skeleton for the page halfway through.
             if let p = piece.value ?? content.cachedPiece(id: id) {
                 PieceContent(piece: p)
-            } else if case .failed = piece {
-                offline
+            } else if case .failed(let error) = piece {
+                failed(error)
             } else {
                 PieceSkeleton()
             }
@@ -29,9 +29,12 @@ struct PieceScreen: View {
         do { piece = .loaded(try await content.piece(id: id)) } catch { piece = .failed(error as? APIError ?? .offline) }
     }
 
-    private var offline: some View {
-        EmptyStateView(icon: "offline", title: Text("state.offline.title"), message: Text("state.offline.body")) {
-            Button("state.retry") { Task { await load() } }.buttonStyle(SmallCapsuleButtonStyle())
+    /// "You're offline" only for a real connection failure; anything else gets the generic message.
+    private func failed(_ error: APIError) -> some View {
+        EmptyStateView(icon: error.isOffline ? "offline" : nil,
+                       title: error.isOffline ? Text("state.offline.title") : Text("state.error.generic"),
+                       message: error.isOffline ? Text("state.offline.body") : Text("state.error.body")) {
+            Button("state.retry") { Task { await load() } }.buttonStyle(.retry)
         }
     }
 }
@@ -401,10 +404,13 @@ struct PieceContent: View {
     private func notice(_ m: Movement) -> some View {
         VStack(alignment: .leading, spacing: 12) {
             SectionLabel("piece.section.thingsToNotice")
-            ForEach(Array(m.notice.enumerated()), id: \.offset) { i, tip in
-                HStack(alignment: .firstTextBaseline, spacing: 8) {
-                    Text(verbatim: "\(i + 1)").font(Typography.reading).foregroundStyle(Palette.accent).frame(width: 24, alignment: .leading)
-                    RichTextView(source: tip, color: readingColor(.notice(m.index), Palette.ink))
+            // 12 below the label, 10 between items (SPEC §4.4 row 11).
+            VStack(alignment: .leading, spacing: 10) {
+                ForEach(Array(m.notice.enumerated()), id: \.offset) { i, tip in
+                    HStack(alignment: .firstTextBaseline, spacing: 8) {
+                        Text(verbatim: "\(i + 1)").font(Typography.reading).foregroundStyle(Palette.accent).frame(width: 24, alignment: .leading)
+                        RichTextView(source: tip, color: readingColor(.notice(m.index), Palette.ink))
+                    }
                 }
             }
         }
@@ -472,9 +478,11 @@ struct PieceContent: View {
         VStack(alignment: .leading, spacing: 8) {
             SectionLabel("piece.section.sources").padding(.bottom, 4)
             if let p = piece.painting {
-                Text("piece.sources.painting") + Text(verbatim: ": \(p.artist), ") + Text(verbatim: p.title).italic()
-                    + Text(verbatim: ", \(p.yearLabel). \(p.collection). ")
-                    + (p.rightsStatus == "public_domain" ? Text("piece.sources.publicDomain") : Text(verbatim: ""))
+                if p.rightsStatus == "public_domain" {
+                    Text("piece.sources.painting.publicDomain \(p.credit)")
+                } else {
+                    Text("piece.sources.painting \(p.credit)")
+                }
             }
             if let reference = piece.referenceRecording {
                 Text("piece.sources.recording \([reference.label, reference.displayYear].compactMap { $0 }.joined(separator: ", "))")
@@ -494,6 +502,7 @@ struct PieceContent: View {
 private struct LeadInParagraph: View {
     let title: String
     let text: String
+    @Environment(\.activeGlossaryTerm) private var activeTerm
 
     var body: some View {
         var lead = AttributedString("\(title). ")
@@ -502,6 +511,9 @@ private struct LeadInParagraph: View {
         for run in rest.runs where run.link != nil {
             rest[run.range].foregroundColor = Palette.accent
             rest[run.range].underlineStyle = Text.LineStyle(pattern: .dot, color: Palette.accent)
+            if let activeTerm, run.link.flatMap(RichText.glossaryID) == activeTerm {
+                rest[run.range].backgroundColor = Palette.accent.opacity(0.14)  // its sheet is open
+            }
         }
         return Text(lead + rest)
             .font(Typography.reading).lineHeight(1.6, literata: 17).foregroundStyle(Palette.ink)

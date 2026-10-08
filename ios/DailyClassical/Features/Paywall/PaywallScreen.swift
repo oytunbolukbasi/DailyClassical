@@ -214,7 +214,7 @@ private struct PlanCard: View {
             .overlay(alignment: .topLeading) {
                 if showsBadge {
                     Text("paywall.plan.badge.bestValue")
-                        .font(.system(size: 10, weight: .semibold))
+                        .font(Typography.system(10, .semibold, relativeTo: .caption2))
                         .tracking(0.6)
                         .textCase(.uppercase)
                         .foregroundStyle(Palette.onTint)

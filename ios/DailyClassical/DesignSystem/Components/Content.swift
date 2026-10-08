@@ -35,18 +35,21 @@ struct PaintingCaption: View {
             if withDash {
                 Rectangle().fill(Palette.ink3).frame(width: 14, height: 1).alignmentGuide(.firstTextBaseline) { _ in -1 }
             }
-            Text(caption)
+            Text(painting.credit)
                 .font(Typography.caption)
                 .lineHeight(1.4)
                 .foregroundStyle(Palette.ink3)
                 .fixedSize(horizontal: false, vertical: true)
         }
     }
+}
 
-    private var caption: AttributedString {
-        var title = AttributedString(painting.title)
-        title.inlinePresentationIntent = .emphasized
-        return AttributedString("\(painting.artist), ") + title + AttributedString(", \(painting.yearLabel). \(painting.collection).")
+extension Painting {
+    /// "Isaac Levitan, *Above Eternal Peace*, 1894. State Tretyakov Gallery, Moscow." (title in italics)
+    var credit: AttributedString {
+        var italicTitle = AttributedString(title)
+        italicTitle.inlinePresentationIntent = .emphasized
+        return AttributedString("\(artist), ") + italicTitle + AttributedString(", \(yearLabel). \(collection).")
     }
 }
 
@@ -148,13 +151,14 @@ struct PaintingImage: View {
     }
 }
 
-/// Flat skeleton bars (`skel`) for loading states.
+/// Flat skeleton bars (`skel`) for loading states: radius height/2, at most 8 (SPEC §3.24).
 struct SkeletonBar: View {
     var width: CGFloat? = nil
     var height: CGFloat
 
     var body: some View {
-        Capsule().fill(Palette.skeleton).frame(width: width, height: height)
+        RoundedRectangle(cornerRadius: min(height / 2, 8), style: .continuous)
+            .fill(Palette.skeleton).frame(width: width, height: height)
             .frame(maxWidth: width == nil ? .infinity : nil, alignment: .leading)
     }
 }
@@ -200,7 +204,7 @@ struct PageDots: View {
             }
         }
         .accessibilityElement()
-        .accessibilityValue(Text("\(current + 1) / \(count)"))
+        .accessibilityValue(Text("onboarding.page \(current + 1) \(count)"))
     }
 }
 
@@ -212,7 +216,9 @@ struct SheetHeader: View {
     /// Title line height and design size: 24/1.2 in sheets, 30/1.15 on the auth sheets.
     var titleLineHeight: CGFloat = 1.2
     var titleSize: CGFloat = 24
+    /// Subtitle style: SF 13/1.45 in content sheets (recordings), 15/1.5 on the auth sheets.
     var subtitleFont: Font = Typography.meta13
+    var subtitleLineHeight: CGFloat = 1.45
     let close: () -> Void
 
     var body: some View {
@@ -220,7 +226,7 @@ struct SheetHeader: View {
             VStack(alignment: .leading, spacing: 4) {
                 title.font(titleFont).lineHeight(titleLineHeight, literata: titleSize)
                     .foregroundStyle(Palette.ink).accessibilityAddTraits(.isHeader)
-                subtitle?.font(subtitleFont).lineHeight(1.45).foregroundStyle(Palette.ink2)
+                subtitle?.font(subtitleFont).lineHeight(subtitleLineHeight).foregroundStyle(Palette.ink2)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             SheetCloseButton(action: close)

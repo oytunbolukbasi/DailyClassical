@@ -238,6 +238,11 @@
     "en": "Not now",
     "tr": "Şimdi değil"
   },
+  "onboarding.page %lld %lld": {
+    "en": "Page %1$lld of %2$lld",
+    "tr": "Sayfa %1$lld / %2$lld",
+    "comment": "VoiceOver value of the onboarding page dots"
+  },
   "favourites.prompt.title": {
     "en": "Keep the pieces you love",
     "tr": "Sevdiğiniz eserleri saklayın"
@@ -368,7 +373,7 @@
   },
   "auth.checkEmail.sendAgainIn %lld": {
     "en": "Send again in %lld s",
-    "tr": "%lld sn sonra yeniden gönderebilirsiniz",
+    "tr": "Yeniden gönder (%lld sn)",
     "comment": "Cooldown countdown in seconds"
   },
   "auth.error.invalidEmail": {
@@ -508,7 +513,7 @@
   },
   "paywall.plan.monthly.detail": {
     "en": "Per month, cancel any time",
-    "tr": "Aylık, istediğiniz zaman iptal"
+    "tr": "Her ay, istediğiniz zaman iptal edin"
   },
   "paywall.cta %@": {
     "en": "Continue · %@",

@@ -227,10 +227,6 @@ struct ComposerSheet: View {
 }
 
 /// Identifiable wrapper so a glossary term can stack its sheet on top of the composer sheet.
-private struct GlossaryLink: Identifiable {
-    let id: String
-}
-
 /// The portrait as a CSS `object-fit: cover; object-position: 50% <focalY>` crop, over its average
 /// colour: our optimized copy (bundled, or from the API's /images), never the Commons original.
 private struct ComposerPortraitImage: View {

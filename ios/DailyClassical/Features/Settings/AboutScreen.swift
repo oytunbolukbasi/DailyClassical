@@ -48,6 +48,7 @@ struct AboutScreen: View {
         .opensOwnPagesInApp()
         .navigationTitle(Text("settings.about.credits"))
         .navigationBarTitleDisplayMode(.inline)
+        .toolbarVisibility(.hidden, for: .tabBar)  // every pushed Settings detail, as Account (SPEC §7.15)
     }
 
     private func creditRow(_ title: LocalizedStringKey, detail: LocalizedStringKey) -> some View {

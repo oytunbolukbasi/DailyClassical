@@ -162,25 +162,29 @@ struct LibrarySkeletonRow: View {
     }
 }
 
-/// Library could not load and nothing is cached.
+/// Library could not load and nothing is cached ("You're offline"), or another error (the
+/// generic message, no cloud-off icon).
 struct LibraryOfflineView: View {
+    let error: APIError
     let retry: () -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Icon("offline", size: 32).foregroundStyle(Palette.ink3).padding(.bottom, 4)
-            Text("state.offline.title")
+            if error.isOffline {
+                Icon("offline", size: 32).foregroundStyle(Palette.ink3).padding(.bottom, 4)
+            }
+            (error.isOffline ? Text("state.offline.title") : Text("state.error.generic"))
                 .font(Typography.titleM)
                 .lineHeight(1.2, literata: 24)
                 .foregroundStyle(Palette.ink)
                 .accessibilityAddTraits(.isHeader)
-            Text("library.offline.body")
+            (error.isOffline ? Text("library.offline.body") : Text("state.error.body"))
                 .font(Typography.body15)
                 .lineHeight(1.5)
                 .foregroundStyle(Palette.ink2)
                 .fixedSize(horizontal: false, vertical: true)
             Button("state.retry", action: retry)
-                .buttonStyle(SmallCapsuleButtonStyle())
+                .buttonStyle(.retry)
                 .padding(.top, 6)
         }
         .frame(maxWidth: .infinity, alignment: .leading)

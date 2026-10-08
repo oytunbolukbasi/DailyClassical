@@ -58,6 +58,8 @@ struct GlossaryListScreen: View {
             }
         }
         .background(Palette.background)
+        .onAppear { router.glossaryListVisible = true }  // "See all terms" then just closes the sheet
+        .onDisappear { router.glossaryListVisible = false }
         .navigationTitle(Text("glossary.title"))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -91,10 +93,9 @@ struct GlossaryListScreen: View {
     }
 
     @ViewBuilder private var loadingOrOffline: some View {
-        switch content.library {
-        case .failed:
-            LibraryOfflineView { Task { await content.retry() } }
-        default:
+        if let error = content.glossaryError {
+            LibraryOfflineView(error: error) { Task { await content.retry() } }
+        } else {
             VStack(spacing: 0) {
                 ForEach(0..<8, id: \.self) { _ in
                     VStack(alignment: .leading, spacing: 8) {
@@ -220,7 +221,7 @@ private struct IndexRail: View {
             ForEach(letters, id: \.self) { letter in
                 Button { jump(letter) } label: {
                     Text(verbatim: letter)
-                        .font(.system(size: 10, weight: .semibold))
+                        .font(Typography.system(10, .semibold, relativeTo: .caption2))  // scales like its row height
                         .foregroundStyle(Palette.accent)
                         .frame(width: 22, height: letterHeight)
                         .contentShape(.rect)
