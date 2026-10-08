@@ -11,3 +11,9 @@ for lang in ${=LANGS:-en tr}; do
       --screenshot="$PWD/out/$lang/0$n.png" "file://$PWD/frame.html?lang=$lang&n=$n" 2>/dev/null
   done
 done
+
+# App Store Connect's "iPhone with Dynamic Island (medium display)" slot takes 6.3" (1206×2622).
+for lang in ${=LANGS:-en tr}; do
+  mkdir -p out-6.3/$lang
+  for f in out/$lang/*.png; do sips -z 2622 1206 "$f" --out out-6.3/$lang/${f:t} >/dev/null; done
+done
