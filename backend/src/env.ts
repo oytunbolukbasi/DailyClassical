@@ -21,6 +21,16 @@ const schema = z.object({
    */
   MIN_APP_VERSION: z.string().regex(/^\d+(\.\d+){0,2}$/).optional(),
   LATEST_APP_VERSION: z.string().regex(/^\d+(\.\d+){0,2}$/).optional(),
+  /** Sign in with Apple: identity tokens must be issued for this bundle id. */
+  APPLE_BUNDLE_ID: z.string().default("co.dailyclassical.app"),
+  /**
+   * Sign in with Apple key (Apple Developer › Keys), used to revoke the Apple link when an account
+   * is deleted (App Store Review 5.1.1(v)). Optional: without it sign-in works, revocation is skipped.
+   * APPLE_PRIVATE_KEY is the .p8 file's contents (newlines may be written as \n).
+   */
+  APPLE_TEAM_ID: z.string().optional(),
+  APPLE_KEY_ID: z.string().optional(),
+  APPLE_PRIVATE_KEY: z.string().optional().transform((v) => v?.replace(/\\n/g, "\n").trim() || undefined),
   /** App Store page, opened by the update prompts. */
   APP_STORE_URL: z.string().url().optional(),
 }).superRefine((e, ctx) => {

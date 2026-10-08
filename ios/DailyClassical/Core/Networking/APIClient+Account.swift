@@ -5,13 +5,16 @@ nonisolated struct AccountUser: Decodable, Sendable {
     let email: String
     /// Complimentary Premium granted to this account (testers, press).
     let premium: Bool
+    /// Linked to Sign in with Apple.
+    let apple: Bool
 
-    enum CodingKeys: String, CodingKey { case id, email, premium }
+    enum CodingKeys: String, CodingKey { case id, email, premium, apple }
     init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
         id = try c.decode(String.self, forKey: .id)
         email = try c.decode(String.self, forKey: .email)
         premium = try c.decodeIfPresent(Bool.self, forKey: .premium) ?? false
+        apple = try c.decodeIfPresent(Bool.self, forKey: .apple) ?? false
     }
 }
 
@@ -52,6 +55,14 @@ extension APIClient {
 
     func login(email: String, password: String, language: String) async throws -> AuthResponse {
         try await send("v1/auth/login", method: "POST", body: ["email": email, "password": password], language: language)
+    }
+
+    /// Sign up or sign in with Apple: the identity token proves the user; the one-time code lets the
+    /// server revoke the Apple link if the account is deleted.
+    func signInWithApple(identityToken: String, authorizationCode: String?, language: String) async throws -> AuthResponse {
+        var body = ["identityToken": identityToken]
+        if let authorizationCode { body["authorizationCode"] = authorizationCode }
+        return try await send("v1/auth/apple", method: "POST", body: body, language: language)
     }
 
     func requestPasswordReset(email: String, language: String) async throws {

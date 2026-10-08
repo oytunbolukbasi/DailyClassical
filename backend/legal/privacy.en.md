@@ -26,6 +26,8 @@ Your settings (language, theme, daily reminder time) and the pieces you have ope
 - your favourite pieces and when you saved them;
 - whether Premium has been granted to your account by us (for example to testers).
 
+**Sign in with Apple.** If you continue with Apple, Apple tells us a stable identifier for your Apple ID in this app and your email address, which Apple has verified. You can choose to hide your email; we then receive a private relay address from Apple that forwards to you. We also keep a token Apple issues so that we can disconnect DailyClassical from your Apple ID when you delete your account. We do not receive your name, your password or anything else from your Apple ID.
+
 To confirm your email address or reset your password we send you a short code or a link. These are stored only in hashed form and expire after 10 and 30 minutes.
 
 **Protection against abuse.** To stop automated sign-in and sign-up attempts, our server counts recent attempts per IP address and per email address. These counters are stored only as one-way hashes and are deleted after at most one hour.

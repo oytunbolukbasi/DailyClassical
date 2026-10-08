@@ -66,6 +66,11 @@ struct AuthSheet: View {
     @ViewBuilder private var createAccount: some View {
         header("auth.create.title", subtitle: "auth.create.subtitle")
 
+        VStack(spacing: 18) {
+            AppleSignInButton(onSignedIn: finishSignedIn) { error = $0 }
+            AuthDivider()
+        }
+
         VStack(alignment: .leading, spacing: 14) {
             FormCard {
                 FormRow("auth.field.email") {
@@ -106,6 +111,11 @@ struct AuthSheet: View {
 
     @ViewBuilder private var signIn: some View {
         header("auth.signIn.title", subtitle: "auth.signIn.subtitle")
+
+        VStack(spacing: 18) {
+            AppleSignInButton(onSignedIn: finishSignedIn) { error = $0 }
+            AuthDivider()
+        }
 
         VStack(alignment: .leading, spacing: 14) {
             FormCard {

@@ -558,5 +558,21 @@
   "update.required.body": {
     "en": "This version can no longer show today’s piece. The update is free and takes a moment.",
     "tr": "Bu sürüm artık günün eserini gösteremiyor. Güncelleme ücretsiz ve bir dakikanızı alır."
+  },
+  "auth.or": {
+    "en": "or",
+    "tr": "ya da"
+  },
+  "auth.apple.error.failed": {
+    "en": "Signing in with Apple didn’t work. Please try again.",
+    "tr": "Apple ile giriş yapılamadı. Lütfen tekrar deneyin."
+  },
+  "auth.apple.error.otherAppleID": {
+    "en": "This email is already linked to a different Apple ID.",
+    "tr": "Bu e-posta adresi başka bir Apple Kimliği’ne bağlı."
+  },
+  "auth.apple.error.noEmail": {
+    "en": "Apple didn’t share an email address. Please try again, or sign up with your email.",
+    "tr": "Apple bir e-posta adresi paylaşmadı. Lütfen tekrar deneyin ya da e-postanızla kaydolun."
   }
 }

@@ -4,7 +4,9 @@ import SwiftUI
 /// the heart, or the guest Account row in Settings.
 struct SignInPromptSheet: View {
     @Environment(AppRouter.self) private var router
+    @Environment(SessionStore.self) private var session
     @Environment(\.dismiss) private var dismiss
+    @State private var appleError: LocalizedStringKey?
     /// Set when handing over to the auth sheet so the pending favourite survives.
     @State private var handingOver = false
     /// The sheet hugs its content, as drawn (≈330 pt), rather than sitting at half height.
@@ -29,6 +31,9 @@ struct SignInPromptSheet: View {
                 .padding(.top, 30)
 
                 VStack(spacing: 12) {
+                    // One tap: signs up or in and saves the heart that brought the guest here.
+                    AppleSignInButton(onSignedIn: finishWithApple) { appleError = $0 }
+                    if let appleError { FormMessage(text: Text(appleError), isError: true) }
                     Button { handOver(.createAccount) } label: { Text("favourites.prompt.createAccount") }
                         .buttonStyle(.dcPrimary)
                     Button { handOver(.signIn) } label: { Text("favourites.prompt.signIn") }
@@ -50,6 +55,15 @@ struct SignInPromptSheet: View {
             // Dismissed without signing in: forget the heart tap.
             if !handingOver { router.pendingFavourite = nil }
         }
+    }
+
+    private func finishWithApple() async {
+        if let pending = router.pendingFavourite {
+            router.pendingFavourite = nil
+            await session.setFavourite(pending, true)
+            router.toast = "favourites.toast.saved"
+        }
+        dismiss()
     }
 
     private func handOver(_ flow: AppRouter.AuthFlow) {

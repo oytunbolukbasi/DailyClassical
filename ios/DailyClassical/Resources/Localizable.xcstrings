@@ -513,6 +513,57 @@
         }
       }
     },
+    "auth.apple.error.failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signing in with Apple didn’t work. Please try again."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple ile giriş yapılamadı. Lütfen tekrar deneyin."
+          }
+        }
+      }
+    },
+    "auth.apple.error.noEmail": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple didn’t share an email address. Please try again, or sign up with your email."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple bir e-posta adresi paylaşmadı. Lütfen tekrar deneyin ya da e-postanızla kaydolun."
+          }
+        }
+      }
+    },
+    "auth.apple.error.otherAppleID": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This email is already linked to a different Apple ID."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu e-posta adresi başka bir Apple Kimliği’ne bağlı."
+          }
+        }
+      }
+    },
     "auth.checkEmail.body %@": {
       "extractionState": "manual",
       "localizations": {
@@ -942,6 +993,23 @@
         }
       },
       "comment": "%@ = accent link “Create an account”"
+    },
+    "auth.or": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "or"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ya da"
+          }
+        }
+      }
     },
     "auth.password.hide.accessibilityLabel": {
       "extractionState": "manual",

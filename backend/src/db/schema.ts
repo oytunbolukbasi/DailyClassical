@@ -171,7 +171,8 @@ export const dailySchedule = pgTable("daily_schedule", {
 export const users = pgTable("users", {
   id: uuid("id").primaryKey().defaultRandom(),
   email: text("email").notNull().unique(), // stored lower-cased
-  passwordHash: text("password_hash").notNull(),
+  /** Null for accounts created with Sign in with Apple (they can add one via password reset). */
+  passwordHash: text("password_hash"),
   locale: text("locale").notNull().default("en"),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   /** Set on password reset; tokens issued before it are rejected (signs out other devices). */
@@ -183,6 +184,10 @@ export const users = pgTable("users", {
    * only adds access for this account. Null = none; a far-future date = lifetime.
    */
   compPremiumUntil: timestamp("comp_premium_until", { withTimezone: true }),
+  /** Sign in with Apple: the stable user id (`sub`) Apple issues for this app. */
+  appleSub: text("apple_sub").unique(),
+  /** Apple refresh token, kept only to revoke the Apple link when the account is deleted. */
+  appleRefreshToken: text("apple_refresh_token"),
 });
 
 /** One live sign-up code per user; only its hash is stored. */

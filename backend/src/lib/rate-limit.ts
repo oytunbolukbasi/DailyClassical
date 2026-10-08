@@ -58,6 +58,10 @@ export const AUTH_RATE_LIMITS = {
     { scope: "email", limit: 5, windowMs: HOUR },
     { scope: "ip", limit: 20, windowMs: HOUR },
   ],
+  apple: [
+    // Each call verifies a token Apple signed; this only bounds CPU and token replay.
+    { scope: "ip", limit: 30, windowMs: 15 * MINUTE },
+  ],
   passwordResetConfirm: [
     // Tokens are 256-bit, so this is about scrypt CPU rather than guessing.
     { scope: "ip", limit: 20, windowMs: 15 * MINUTE },

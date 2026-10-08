@@ -3,12 +3,7 @@
 Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
 
 ## Sıradaki işler (kod)
-0. **[Claude + Oytun] Apple ile kayıt ve giriş (Sign in with Apple):**
-   - **Uygulama:** Kayıt ve giriş ekranlarına Apple'ın standart "Apple ile devam et" butonu. Butonun yeri ve görünümü tasarımda yok; önce Claude Design'da hesap ekranlarına bir kare eklenecek (Apple'ın kurallarına göre buton e-posta seçeneğinin üstünde ve en az onun kadar belirgin olmalı).
-   - **Sunucu:** `POST /v1/auth/apple`. Apple'ın kimlik token'ı Apple'ın açık anahtarlarıyla doğrulanacak (`aud` = `co.dailyclassical.app`). `users` tablosuna `apple_sub` eklenecek. E-posta Apple'dan doğrulanmış geldiği için kod adımı yok; "e-postamı gizle" seçilirse Apple'ın aktarma adresi saklanacak. Aynı doğrulanmış e-postayla bir hesap zaten varsa ikisi birleştirilecek. Bu hesaplarda şifre olmayacak (şifre değiştir satırı gizlenecek).
-   - **Hesap silme:** Apple, hesap silinirken Apple token'ının iptal edilmesini şart koşuyor. Bunun için Apple Developer'da bir "Sign in with Apple" anahtarı (.p8) gerekiyor.
-   - **Senden:** Apple Developer'da App ID için "Sign in with Apple" yeteneğini açmak (otomatik imzalama çoğunlukla açar), anahtarı oluşturup Railway'e eklemek. Adımları o sırada anlatacağım.
-   - Gizlilik metnine Apple ile girişte hangi bilgilerin alındığı eklenecek.
+0. **[Oytun] Apple ile giriş için anahtar (hesap silmede Apple bağlantısını iptal etmek için):** Apple Developer › Certificates, IDs & Profiles › Keys › "+" › "Sign in with Apple"i işaretle, App ID olarak `co.dailyclassical.app`'i seç, kaydet ve `.p8` dosyasını indir. Railway'e üç değişken ekle: `APPLE_TEAM_ID` = `3NX95JSKNY`, `APPLE_KEY_ID` = anahtarın Key ID'si, `APPLE_PRIVATE_KEY` = `.p8` dosyasının içeriği. Bunlar olmadan giriş çalışıyor, yalnızca hesap silinirken Apple bağlantısı iptal edilmiyor (App Store incelemesi bunu istiyor).
 1. **[Claude] Koyu modda Sözlük, Kayıtlar ve Besteci sheet'lerine bakmak:** Ana ekranlar, Hesap, Favoriler, premium Arama ve "Şeffaflığı Azalt" kontrol edildi. Bu üç sheet'e koyu modda ayrıca bakılmadı.
 2. **[Claude] Denetimin (`design/AUDIT.md`) kalan küçük maddeleri:** Kısa tanım, toplu yükleme ve Dynamic Type yapıldı. Kalan P2 maddeleri (ör. eser görüntüleyicide zoom'un sınırlandırılması, Today'in yayın tarihini göstermesi) tek tek gözden geçirilecek.
 3. **[Claude] Rahmaninov tablosu:** Levitan'ın *Göl* tablosunun açık lisanslı en iyi görüntüsü 2000×1403 piksel. Diğer tablolardan biraz daha yumuşak görünüyor ve Levitan, Çaykovski 6'nın da ressamı. Daha yüksek çözünürlüklü bir alternatif aranabilir (senin onayınla).
@@ -40,6 +35,14 @@ Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 ## Yayından önce sıfırlanacak test verisi
 - **Takvim:** `content/schedule.yaml` içerik kontrolü için 27 Eylül 2026'dan başlıyor, böylece 10 eserin hepsi Kitaplık'ta görünüyor. Yayından önce `start` yayın gününe çekilecek ve sıra Çaykovski 6 ile başlayacak. Ardından `npm run db:seed && npm run fixtures` çalıştırılacak.
 - **Debug premium:** Debug build'lerde premium varsayılan olarak açık (`EntitlementStore.debugUnlock`). Release build'leri etkilemiyor, sıfırlanması gerekmiyor.
+
+## Tamamlananlar (8 Ekim 2026, Apple ile giriş)
+- Karşılama sheet'inde ("Sevdiğin eserleri sakla") ve kayıt/giriş ekranlarında Apple'ın "Apple ile devam et" butonu. Tek dokunuşla kayıt ya da giriş; e-posta Apple'dan doğrulanmış geldiği için kod adımı yok.
+- Sunucu `POST /v1/auth/apple`: Apple'ın kimlik token'ını Apple'ın anahtarlarıyla doğruluyor. Hesap Apple kimliğiyle bulunuyor; ilk girişte aynı doğrulanmış e-postalı hesap varsa birleştiriliyor, yoksa yeni hesap açılıyor. Doğrulanmamış bir e-posta hesabıyla birleştirilirse o hesabın şifresi siliniyor (başkası adına açılmış hesabın ele geçirilmesini önlemek için).
+- Apple hesaplarında şifre yok; istenirse "Şifreyi değiştir" (e-postayla sıfırlama) ile eklenebiliyor.
+- Hesap silinince Apple bağlantısı iptal ediliyor (anahtar Railway'e eklenince).
+- Migration 0010. Gizlilik metnine Apple ile giriş eklendi.
+- Not: Telefondaki "Ömür boyu" premium, Xcode'un yerel StoreKit test ortamında yapılmış bir test satın almasından geliyor; hesaba bağlı değil (satın almalar Apple Kimliği'ne bağlıdır). Uygulama silinince temizlenir.
 
 ## Tamamlananlar (8 Ekim 2026, Neon dev branch'i)
 - Lokal `backend/.env` artık Neon'un `dev` branch'ine bağlı. Production'dan ayrı olduğu doğrulandı: dev'e yazılan bir test işareti production API'de görünmedi. Lokal migration, seed ve test hesapları artık gerçek kullanıcı verisine dokunmuyor.

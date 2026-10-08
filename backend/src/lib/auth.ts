@@ -18,7 +18,8 @@ export async function hashPassword(password: string): Promise<string> {
   return `scrypt$${salt.toString("base64")}$${key.toString("base64")}`;
 }
 
-export async function verifyPassword(password: string, stored: string): Promise<boolean> {
+export async function verifyPassword(password: string, stored: string | null): Promise<boolean> {
+  if (!stored) return false;  // Sign in with Apple account without a password
   const [algo, saltB64, keyB64] = stored.split("$");
   if (algo !== "scrypt" || !saltB64 || !keyB64) return false;
   const expected = Buffer.from(keyB64, "base64");

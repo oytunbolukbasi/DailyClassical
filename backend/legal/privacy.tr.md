@@ -26,6 +26,8 @@ Ayarlarınız (dil, tema, günlük hatırlatıcı saati) ve açtığınız eserl
 - favori eserleriniz ve onları ne zaman kaydettiğiniz;
 - hesabınıza tarafımızdan Premium tanımlanıp tanımlanmadığı (örneğin test kullanıcılarına).
 
+**Apple ile giriş.** Apple ile devam ederseniz Apple, bu uygulama için Apple Kimliğinize ait değişmeyen bir tanımlayıcıyı ve doğruladığı e-posta adresinizi bize iletir. E-postanızı gizlemeyi seçebilirsiniz; bu durumda Apple’dan size yönlendirilen özel bir aktarma adresi alırız. Hesabınızı sildiğinizde DailyClassical’ın Apple Kimliğinizle bağlantısını kesebilmek için Apple’ın verdiği bir token’ı da saklarız. Adınızı, şifrenizi ya da Apple Kimliğinizden başka bir bilgiyi almayız.
+
 E-posta adresinizi doğrulamak ya da şifrenizi sıfırlamak için size kısa bir kod veya bağlantı göndeririz. Bunlar yalnızca özet biçiminde saklanır; 10 ve 30 dakika sonra geçersiz olur.
 
 **Kötüye kullanıma karşı koruma.** Otomatik giriş ve kayıt denemelerini durdurmak için sunucumuz son denemeleri IP adresi ve e-posta adresi başına sayar. Bu sayaçlar yalnızca tek yönlü özet olarak saklanır ve en geç bir saat sonra silinir.

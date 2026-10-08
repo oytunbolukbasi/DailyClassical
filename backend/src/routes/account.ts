@@ -4,6 +4,7 @@ import { HTTPException } from "hono/http-exception";
 import { z } from "zod";
 import { db } from "../db/client.js";
 import { emailVerificationCodes, favourites, type Locale, locales, passwordResetTokens, pieces, users } from "../db/schema.js";
+import { exchangeAppleCode, revokeAppleToken, verifyAppleIdentityToken } from "../lib/apple.js";
 import { type AuthVars, hashPassword, issueToken, requireUser, verifyPassword } from "../lib/auth.js";
 import { sendPasswordResetEmail, sendVerificationCodeEmail, sendWelcomeEmail } from "../lib/email.js";
 import { requestLocale } from "../lib/locale.js";
@@ -27,8 +28,13 @@ async function body<T extends z.ZodTypeAny>(req: Request, schema: T): Promise<z.
 type UserRow = typeof users.$inferSelect;
 
 /** What the app needs about the signed-in account. */
-function userPayload(u: Pick<UserRow, "id" | "email" | "compPremiumUntil">) {
-  return { id: u.id, email: u.email, premium: !!u.compPremiumUntil && u.compPremiumUntil.getTime() > Date.now() };
+function userPayload(u: Pick<UserRow, "id" | "email" | "compPremiumUntil" | "appleSub">) {
+  return {
+    id: u.id,
+    email: u.email,
+    premium: !!u.compPremiumUntil && u.compPremiumUntil.getTime() > Date.now(),
+    apple: !!u.appleSub,
+  };
 }
 
 /**
@@ -109,6 +115,58 @@ account.post("/auth/login", async (c) => {
   return c.json({ token: await issueToken(user.id), user: userPayload(user) });
 });
 
+// ---- Sign in with Apple ----
+
+/**
+ * One call for both sign-up and sign-in. The account is found by Apple's stable `sub`; the first
+ * time, by the verified email Apple gives (an existing email account is linked), else created.
+ * Apple has verified the address, so there is no code step. Linking to an account that was never
+ * verified also clears its password: whoever registered it without proving the address must not
+ * keep a way in once the real owner arrives through Apple.
+ */
+account.post("/auth/apple", async (c) => {
+  const { identityToken, authorizationCode } = await body(
+    c.req.raw,
+    z.object({ identityToken: z.string().min(20).max(8000), authorizationCode: z.string().max(2000).optional() }),
+  );
+  await enforceRateLimit(c, "apple");
+  const apple = await verifyAppleIdentityToken(identityToken).catch(() => {
+    throw new HTTPException(401, { message: "invalid_apple_token" });
+  });
+  const locale = requestLocale(c);
+
+  let [user] = await db.select().from(users).where(eq(users.appleSub, apple.sub));
+  let created = false;
+  if (!user) {
+    if (!apple.email || !apple.emailVerified) throw new HTTPException(400, { message: "apple_email_missing" });
+    const [existing] = await db.select().from(users).where(eq(users.email, apple.email));
+    if (existing?.appleSub) throw new HTTPException(409, { message: "email_linked_to_other_apple_id" });
+    if (existing) {
+      [user] = await db.update(users).set({
+        appleSub: apple.sub,
+        emailVerifiedAt: existing.emailVerifiedAt ?? new Date(),
+        ...(existing.emailVerifiedAt ? {} : { passwordHash: null, passwordChangedAt: new Date() }),
+      }).where(eq(users.id, existing.id)).returning();
+      await db.delete(emailVerificationCodes).where(eq(emailVerificationCodes.userId, existing.id));
+    } else {
+      [user] = await db.insert(users).values({
+        email: apple.email, passwordHash: null, locale, emailVerifiedAt: new Date(), appleSub: apple.sub,
+      }).returning();
+      created = true;
+    }
+  }
+  if (authorizationCode) {
+    const refreshToken = await exchangeAppleCode(authorizationCode);
+    if (refreshToken) {
+      [user] = await db.update(users).set({ appleRefreshToken: refreshToken }).where(eq(users.id, user!.id)).returning();
+    }
+  }
+  if (created) {
+    void sendWelcomeEmail(user!.email, locale).catch((err) => console.error("welcome email failed", err));
+  }
+  return c.json({ token: await issueToken(user!.id), user: userPayload(user!) });
+});
+
 // ---- Password reset ----
 
 const storedLocale = (value: string, fallback: Locale): Locale =>
@@ -174,6 +232,8 @@ account.get("/me", requireUser, async (c) => {
 
 /** App Store Review 5.1.1(v): accounts must be deletable in-app. */
 account.delete("/me", requireUser, async (c) => {
+  const [user] = await db.select({ appleRefreshToken: users.appleRefreshToken }).from(users).where(eq(users.id, c.get("userId")));
+  if (user?.appleRefreshToken) await revokeAppleToken(user.appleRefreshToken);
   await db.delete(users).where(eq(users.id, c.get("userId")));
   return c.body(null, 204);
 });

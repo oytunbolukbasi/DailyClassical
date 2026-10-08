@@ -71,6 +71,13 @@
       "when": 1791398506077,
       "tag": "0009_glossary_short",
       "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1791424169506,
+      "tag": "0010_sign_in_with_apple",
+      "breakpoints": true
     }
   ]
 }

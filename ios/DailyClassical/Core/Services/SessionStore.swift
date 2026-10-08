@@ -66,6 +66,11 @@ final class SessionStore {
         await refreshFavourites()
     }
 
+    func signInWithApple(identityToken: String, authorizationCode: String?, language: String) async throws {
+        apply(try await api.signInWithApple(identityToken: identityToken, authorizationCode: authorizationCode, language: language))
+        await refreshFavourites()
+    }
+
     func requestPasswordReset(email: String, language: String) async throws {
         try await api.requestPasswordReset(email: email, language: language)
     }
