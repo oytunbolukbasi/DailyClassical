@@ -3,7 +3,6 @@
 Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
 
 ## Sıradaki işler (kod)
-0. **[Oytun] Apple ile giriş için anahtar (hesap silmede Apple bağlantısını iptal etmek için):** Apple Developer › Certificates, IDs & Profiles › Keys › "+" › "Sign in with Apple"i işaretle, App ID olarak `co.dailyclassical.app`'i seç, kaydet ve `.p8` dosyasını indir. Railway'e üç değişken ekle: `APPLE_TEAM_ID` = `3NX95JSKNY`, `APPLE_KEY_ID` = anahtarın Key ID'si, `APPLE_PRIVATE_KEY` = `.p8` dosyasının içeriği. Bunlar olmadan giriş çalışıyor, yalnızca hesap silinirken Apple bağlantısı iptal edilmiyor (App Store incelemesi bunu istiyor).
 1. **[Claude] Koyu modda Sözlük, Kayıtlar ve Besteci sheet'lerine bakmak:** Ana ekranlar, Hesap, Favoriler, premium Arama ve "Şeffaflığı Azalt" kontrol edildi. Bu üç sheet'e koyu modda ayrıca bakılmadı.
 2. **[Claude] Denetimin (`design/AUDIT.md`) kalan küçük maddeleri:** Kısa tanım, toplu yükleme ve Dynamic Type yapıldı. Kalan P2 maddeleri (ör. eser görüntüleyicide zoom'un sınırlandırılması, Today'in yayın tarihini göstermesi) tek tek gözden geçirilecek.
 3. **[Claude] Rahmaninov tablosu:** Levitan'ın *Göl* tablosunun açık lisanslı en iyi görüntüsü 2000×1403 piksel. Diğer tablolardan biraz daha yumuşak görünüyor ve Levitan, Çaykovski 6'nın da ressamı. Daha yüksek çözünürlüklü bir alternatif aranabilir (senin onayınla).
@@ -40,7 +39,7 @@ Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 - Karşılama sheet'inde ("Sevdiğin eserleri sakla") ve kayıt/giriş ekranlarında Apple'ın "Apple ile devam et" butonu. Tek dokunuşla kayıt ya da giriş; e-posta Apple'dan doğrulanmış geldiği için kod adımı yok.
 - Sunucu `POST /v1/auth/apple`: Apple'ın kimlik token'ını Apple'ın anahtarlarıyla doğruluyor. Hesap Apple kimliğiyle bulunuyor; ilk girişte aynı doğrulanmış e-postalı hesap varsa birleştiriliyor, yoksa yeni hesap açılıyor. Doğrulanmamış bir e-posta hesabıyla birleştirilirse o hesabın şifresi siliniyor (başkası adına açılmış hesabın ele geçirilmesini önlemek için).
 - Apple hesaplarında şifre yok; istenirse "Şifreyi değiştir" (e-postayla sıfırlama) ile eklenebiliyor.
-- Hesap silinince Apple bağlantısı iptal ediliyor (anahtar Railway'e eklenince).
+- Hesap silinince Apple bağlantısı iptal ediliyor. Anahtar Railway'de; gerçek bir girişte Apple kabul etti (`/health` → `lastExchange: ok`).
 - Migration 0010. Gizlilik metnine Apple ile giriş eklendi.
 - Not: Telefondaki "Ömür boyu" premium, Xcode'un yerel StoreKit test ortamında yapılmış bir test satın almasından geliyor; hesaba bağlı değil (satın almalar Apple Kimliği'ne bağlıdır). Uygulama silinince temizlenir.
 
