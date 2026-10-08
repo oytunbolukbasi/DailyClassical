@@ -24,9 +24,8 @@ Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 14. **[Oytun] Türkçe içeriğin ve arayüz metinlerinin native okuması:** Çeviriler ve arayüz metinleri (onboarding butonu, "kadans/kadenza" gibi terimler).
 
 ## Altyapı
-15. **[Oytun] Sırları yenilemek:** Neon şifresi, Resend API anahtarı ve production `JWT_SECRET` bu sohbette açık geçti. Yenilenip Railway değişkenlerine ve lokal `backend/.env` dosyasına işlenmeli.
+- **[Oytun] Yasal metinlerin hukuki okuması:** Kullanım koşulları ve gizlilik metinleri iyi niyetli taslaklar; yayından önce bir avukatın ya da KVKK danışmanının bakması önerilir. Özellikle şirket/şahıs bilgisi (veri sorumlusu adı ve adresi) eklenmeli; şu an yalnızca `hello@dailyclassical.co` var ve bu adresin e-posta alabildiğinden emin ol.
 17. **[Oytun] Neon'da `dev` branch'i:** Neon panelinde production'dan bir `dev` branch'i aç ve bağlantı adresini lokal `backend/.env` dosyasına yaz (ya da bana ver). Şu an lokal geliştirme ve seed doğrudan production veritabanına gidiyor. Bilgisayarda Neon CLI ya da API anahtarı olmadığı için bunu ben açamadım.
-18. **[Oytun] Kullanım koşulları ve gizlilik sayfaları:** `dailyclassical.co/terms` ve `/privacy`. App Store bunları istiyor.
 19. **[Oytun + Claude] App Store Connect hazırlığı:**
     - Uygulama kaydı (`co.dailyclassical.app`).
     - Uygulama içi satın alma ürünleri: `co.dailyclassical.premium.lifetime` ve `co.dailyclassical.premium.monthly`.
@@ -36,6 +35,12 @@ Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 ## Yayından önce sıfırlanacak test verisi
 - **Takvim:** `content/schedule.yaml` içerik kontrolü için 27 Eylül 2026'dan başlıyor, böylece 10 eserin hepsi Kitaplık'ta görünüyor. Yayından önce `start` yayın gününe çekilecek ve sıra Çaykovski 6 ile başlayacak. Ardından `npm run db:seed && npm run fixtures` çalıştırılacak.
 - **Debug premium:** Debug build'lerde premium varsayılan olarak açık (`EntitlementStore.debugUnlock`). Release build'leri etkilemiyor, sıfırlanması gerekmiyor.
+
+## Tamamlananlar (8 Ekim 2026, yasal sayfalar)
+- **Kullanım Koşulları ve Gizlilik Politikası** (EN + TR): `api.dailyclassical.co/terms` ve `/privacy`. Metinler `backend/legal/*.md` içinde. Gizlilik metni uygulamanın gerçekte işlediği verilere göre yazıldı: hesap bilgileri, özetlenmiş kodlar, Apple satın almaları, Railway/Neon/Resend, takip yok.
+- Uygulama bu sayfaları Hakkında, paywall ve kayıt ekranından uygulama içi tarayıcıda, kendi dilinde açıyor. Web sitesi kurulunca adresler `dailyclassical.co`'ya taşınacak.
+- **Sırlar yenilendi** (Neon, Resend, JWT).
+- **Hata:** Çıkış yapınca hesaba bağlı premium bayrağı cihazda kalabiliyordu. Artık oturum yoksa sıfırlanıyor.
 
 ## Tamamlananlar (8 Ekim 2026, production)
 - **Domain:** `api.dailyclassical.co` Railway'e bağlı. SSL var, tüm uç noktalar ve şifre sıfırlama sayfası yanıt veriyor.

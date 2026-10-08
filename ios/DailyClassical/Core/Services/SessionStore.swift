@@ -27,6 +27,9 @@ final class SessionStore {
             token = injected
         }
         #endif
+        // Account Premium belongs to a session: without one (signed out, or the Keychain token is
+        // gone) a stale flag must not unlock anything.
+        if token == nil { accountPremium = false }
     }
 
     func isFavourite(_ pieceId: String) -> Bool { favourites[pieceId] != nil }
