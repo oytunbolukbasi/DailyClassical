@@ -31,8 +31,6 @@ final class AppRouter {
     /// Navigation stacks of the Today and Library tabs, so any screen can push a piece.
     var todayPath = NavigationPath()
     var libraryPath = NavigationPath()
-    /// Tabs whose tab bar a piece page is hiding (PieceTabBarHider); read by each stack's root.
-    var tabBarHidden: Set<AppTab> = []
     var sheet: Sheet?
     var toast: LocalizedStringResource?
     /// Piece to save once the guest finishes signing in from the heart.

@@ -7,8 +7,6 @@ import SwiftUI
 struct TodayScreen: View {
     @Environment(ContentStore.self) private var content
     @Environment(AppRouter.self) private var router
-    /// The painting zooms into the piece page (Start listening, or pulling the page up).
-    @Namespace private var zoom
 
     var body: some View {
         @Bindable var router = router
@@ -22,18 +20,14 @@ struct TodayScreen: View {
             }
             .background(Palette.background)
             .toolbarVisibility(.hidden, for: .navigationBar)
-            // Hidden while a piece is on screen; shown as soon as a back swipe starts (PieceTabBarHider).
-            .toolbarVisibility(router.tabBarHidden.contains(.today) ? .hidden : .visible, for: .tabBar)
             .navigationDestination(for: PieceRoute.self) { route in
-                PieceScreen(id: route.id).navigationTransition(.zoom(sourceID: route.id, in: zoom))
+                // A standard push and pop. The zoom from the painting looked good going in, but its
+                // way back (shrinking onto the painting, glass and tab bar settling afterwards) never
+                // felt finished; coming back is an ordinary "back" now.
+                PieceScreen(id: route.id)
             }
         }
-        .environment(\.todayZoomNamespace, zoom)
     }
-}
-
-extension EnvironmentValues {
-    @Entry var todayZoomNamespace: Namespace.ID? = nil
 }
 
 /// The screen's safe-area frame, measured once by the pager: pages ignore the safe area so the
@@ -136,7 +130,6 @@ private struct TodayContent: View {
     @Environment(ContentStore.self) private var content
     @Environment(EntitlementStore.self) private var entitlements
     @Environment(AppRouter.self) private var router
-    @Environment(\.todayZoomNamespace) private var zoom
     @State private var showArtwork = false
     /// Starts from the last measurement for this piece and width: the page is rebuilt when it comes
     /// back from the piece, and a first frame laid out without the text height drew the painting
@@ -156,7 +149,7 @@ private struct TodayContent: View {
         _textHeight = State(initialValue: Self.measuredTextHeights["\(piece.id)/\(piece.contentLocale)/\(Int(metrics.height))"] ?? 0)
     }
     /// Pulling the page up from its top opens the piece when the finger lifts (far enough, or a
-    /// flick). Nothing happens mid-drag, so the page follows the finger and the zoom starts clean.
+    /// flick). Nothing happens mid-drag, so the page follows the finger and the push starts clean.
     @State private var scrollOffset: CGFloat = 0
     @State private var dragStartOffset: CGFloat = 0
     @State private var pullingFromTop = false
@@ -181,18 +174,6 @@ private struct TodayContent: View {
                 PaintingImage(url: piece.painting?.imageUrl)
                     .frame(height: paintingHeight)
                     .frame(maxWidth: .infinity)
-                    // The zoom's anchor is an invisible frame over the painting, below the status
-                    // bar: the system clips a source to the safe area and hides it while zooming,
-                    // so anchoring on the painting itself left a pale band around it at the end of
-                    // a back swipe, then the painting jumped into place. This way the painting
-                    // stays put and the page shrinks onto it.
-                    .overlay(alignment: .bottom) {
-                        // Not .clear: an empty view gave the zoom no frame to land on.
-                        Rectangle().fill(Color.black.opacity(0.001))
-                            .frame(height: max(0, paintingHeight - metrics.top))
-                            .modifier(ZoomSource(id: piece.id, namespace: zoom))
-                            .allowsHitTesting(false)
-                    }
                     .contentShape(.rect)
                     .onTapGesture { if piece.painting != nil { showArtwork = true } }
                     .accessibilityLabel(paintingLabel)
@@ -406,18 +387,4 @@ private struct TodayOffline: View {
         .environment(EntitlementStore())
         .environment(LanguageSettings())
         .task { await content.reload(language: "en") }
-}
-
-/// Marks the Today painting as the zoom transition's source (when a namespace is available).
-private struct ZoomSource: ViewModifier {
-    let id: String
-    let namespace: Namespace.ID?
-
-    func body(content: Content) -> some View {
-        if let namespace {
-            content.matchedTransitionSource(id: id, in: namespace)
-        } else {
-            content
-        }
-    }
 }
