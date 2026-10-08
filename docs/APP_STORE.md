@@ -43,6 +43,10 @@ Son güncelleme: 8 Ekim 2026. Sırayla ilerle; her adımın sonunda bana haber v
 
 Her ürün için **Review Screenshot** istenir: `design/app-store/review/premium-lifetime.png` (ömür boyu seçili) ve `premium-monthly.png` (aylık + deneme seçili), İngilizce, 1320×2868.
 
+İki ayrı görsel alanı var, karıştırma:
+- **Review Information › Screenshot** (zorunlu, yalnızca inceleme ekibi görür): `design/app-store/review/premium-*.png`.
+- **App Store Promotion › Promotional Image** (isteğe bağlı, 1024×1024, mağazada ürün olarak görünür): `design/app-store/promo/premium-lifetime-1024.png` (Gezgin) ve `premium-monthly-1024.png` (Vernet). Yazı ve ikon yok, yalnızca tablo.
+
 ## 3. RevenueCat [Oytun]
 
 1. [app.revenuecat.com](https://app.revenuecat.com) › yeni proje: **DailyClassical**.
