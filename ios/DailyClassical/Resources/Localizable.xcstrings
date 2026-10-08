@@ -663,7 +663,7 @@
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld sn sonra yeniden gönderebilirsiniz"
+            "value": "Yeniden gönder (%lld sn)"
           }
         }
       },
@@ -1352,23 +1352,6 @@
         }
       }
     },
-    "common.back.accessibilityLabel": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Back"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Geri"
-          }
-        }
-      }
-    },
     "common.close.accessibilityLabel": {
       "extractionState": "manual",
       "localizations": {
@@ -1777,7 +1760,7 @@
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Henüz kaydedilen yok"
+            "value": "Henüz kaydettiğiniz bir eser yok"
           }
         }
       }
@@ -2203,7 +2186,7 @@
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Eserlerde geçen her terim, dinleyiciler için açıklandı. Tamamını okumak için birine dokunun."
+            "value": "Eserlerde geçen her terim, dinleyiciler için açıklanıyor. Tamamını okumak için birine dokunun."
           }
         }
       }
@@ -2705,6 +2688,24 @@
         }
       }
     },
+    "onboarding.page %lld %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Page %1$lld of %2$lld"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sayfa %1$lld / %2$lld"
+          }
+        }
+      },
+      "comment": "VoiceOver value of the onboarding page dots"
+    },
     "onboarding.signIn": {
       "extractionState": "manual",
       "localizations": {
@@ -2890,7 +2891,7 @@
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Aylık, istediğiniz zaman iptal"
+            "value": "Her ay, istediğiniz zaman iptal edin"
           }
         }
       }
@@ -3055,7 +3056,29 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ · About %2$lld minutes"
+            "value": "%1$@ · About %2$#@minutes@"
+          },
+          "substitutions": {
+            "minutes": {
+              "argNum": 2,
+              "formatSpecifier": "lld",
+              "variations": {
+                "plural": {
+                  "one": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg minute"
+                    }
+                  },
+                  "other": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg minutes"
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "tr": {
@@ -3338,39 +3361,41 @@
         }
       }
     },
-    "piece.sources.painting": {
+    "piece.sources.painting %@": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Painting"
+            "value": "Painting: %@"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tablo"
+            "value": "Tablo: %@"
           }
         }
-      }
+      },
+      "comment": "Piece page sources line: artist, title (italic), year. Collection."
     },
-    "piece.sources.publicDomain": {
+    "piece.sources.painting.publicDomain %@": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Public domain."
+            "value": "Painting: %@ Public domain."
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kamu malı."
+            "value": "Tablo: %@ Kamu malı."
           }
         }
-      }
+      },
+      "comment": "As piece.sources.painting, for a public-domain painting"
     },
     "piece.sources.recording %@": {
       "extractionState": "manual",
@@ -3401,7 +3426,7 @@
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Şu an"
+            "value": "Şu anki durak"
           }
         }
       }
@@ -4436,6 +4461,23 @@
       },
       "comment": "Conductor, orchestra (label, year)"
     },
+    "state.error.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Please try again in a moment."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lütfen birazdan tekrar deneyin."
+          }
+        }
+      }
+    },
     "state.error.generic": {
       "extractionState": "manual",
       "localizations": {
@@ -4630,7 +4672,49 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ · About %2$lld minutes · %3$lld movements"
+            "value": "%1$@ · About %2$#@minutes@ · %3$#@movements@"
+          },
+          "substitutions": {
+            "minutes": {
+              "argNum": 2,
+              "formatSpecifier": "lld",
+              "variations": {
+                "plural": {
+                  "one": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg minute"
+                    }
+                  },
+                  "other": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg minutes"
+                    }
+                  }
+                }
+              }
+            },
+            "movements": {
+              "argNum": 3,
+              "formatSpecifier": "lld",
+              "variations": {
+                "plural": {
+                  "one": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg movement"
+                    }
+                  },
+                  "other": {
+                    "stringUnit": {
+                      "state": "translated",
+                      "value": "%arg movements"
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "tr": {

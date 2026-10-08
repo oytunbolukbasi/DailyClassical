@@ -19,10 +19,6 @@
     "en": "Close",
     "tr": "Kapat"
   },
-  "common.back.accessibilityLabel": {
-    "en": "Back",
-    "tr": "Geri"
-  },
   "common.composerLink.accessibilityHint": {
     "en": "Opens composer details",
     "tr": "Besteci ayrıntılarını açar"
@@ -64,21 +60,50 @@
     "en": "Something went wrong.",
     "tr": "Bir şeyler ters gitti."
   },
+  "state.error.body": {
+    "en": "Please try again in a moment.",
+    "tr": "Lütfen birazdan tekrar deneyin."
+  },
   "today.startListening": {
     "en": "Start listening",
     "tr": "Dinlemeye başla"
   },
   "today.meta %@ %lld %lld": {
-    "en": "%1$@ · About %2$lld minutes · %3$lld movements",
-    "tr": "%1$@ · Yaklaşık %2$lld dakika · %3$lld bölüm"
+    "en": "%1$@ · About %2$#@minutes@ · %3$#@movements@",
+    "tr": "%1$@ · Yaklaşık %2$lld dakika · %3$lld bölüm",
+    "plurals": {
+      "minutes": {
+        "arg": 2,
+        "en": {
+          "one": "%arg minute",
+          "other": "%arg minutes"
+        }
+      },
+      "movements": {
+        "arg": 3,
+        "en": {
+          "one": "%arg movement",
+          "other": "%arg movements"
+        }
+      }
+    }
   },
   "today.painting.accessibilityLabel %@ %@": {
     "en": "Painting: %1$@ by %2$@",
     "tr": "Tablo: %2$@, %1$@"
   },
   "piece.meta %@ %lld": {
-    "en": "%1$@ · About %2$lld minutes",
-    "tr": "%1$@ · Yaklaşık %2$lld dakika"
+    "en": "%1$@ · About %2$#@minutes@",
+    "tr": "%1$@ · Yaklaşık %2$lld dakika",
+    "plurals": {
+      "minutes": {
+        "arg": 2,
+        "en": {
+          "one": "%arg minute",
+          "other": "%arg minutes"
+        }
+      }
+    }
   },
   "piece.section.bigPicture": {
     "en": "The big picture",
@@ -149,13 +174,15 @@
     "en": "Sources and credits",
     "tr": "Kaynaklar ve künye"
   },
-  "piece.sources.painting": {
-    "en": "Painting",
-    "tr": "Tablo"
+  "piece.sources.painting %@": {
+    "en": "Painting: %@",
+    "tr": "Tablo: %@",
+    "comment": "Piece page sources line: artist, title (italic), year. Collection."
   },
-  "piece.sources.publicDomain": {
-    "en": "Public domain.",
-    "tr": "Kamu malı."
+  "piece.sources.painting.publicDomain %@": {
+    "en": "Painting: %@ Public domain.",
+    "tr": "Tablo: %@ Kamu malı.",
+    "comment": "As piece.sources.painting, for a public-domain painting"
   },
   "piece.sources.recording %@": {
     "en": "Recording data: Spotify. Durations from %@.",
@@ -187,7 +214,7 @@
   },
   "piece.stop.current.accessibilityValue": {
     "en": "Current",
-    "tr": "Şu an"
+    "tr": "Şu anki durak"
   },
   "favourites.toast.saved": {
     "en": "Saved to Favourites",

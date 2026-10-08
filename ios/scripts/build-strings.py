@@ -5,6 +5,10 @@ Each JSON file maps a key to {"en": "...", "tr": "...", "comment": "optional"}.
 Format specifiers follow String Catalog rules (%@, %lld). Run after editing strings:
     python3 ios/scripts/build-strings.py
 Every key must have both languages; the script fails otherwise so TR never lags EN.
+Counts that need a singular ("1 minute") reference a plural variable in the value, %N$#@name@,
+and define it under "plurals": {"name": {"arg": N, "en": {"one": "%arg minute", "other": "%arg
+minutes"}}}. A language without its own rules (Turkish nouns stay singular after a number) just
+writes %N$lld in its value.
 strings/infoplist.json holds Info.plist keys (permission prompts) and goes to
 DailyClassical/Resources/InfoPlist.xcstrings instead; its English values must match ios/project.yml.
 """
@@ -29,12 +33,34 @@ def read(files):
     return merged
 
 
+def localization(key, v, lang):
+    unit = {"stringUnit": {"state": "translated", "value": v[lang]}}
+    substitutions = {}
+    for name, plural in v.get("plurals", {}).items():
+        referenced = f"#@{name}@" in v[lang]
+        if referenced != (lang in plural):
+            sys.exit(f"{key} [{lang}]: plural '{name}' must be both referenced and defined, or neither")
+        if not referenced:
+            continue
+        if "other" not in plural[lang]:
+            sys.exit(f"{key} [{lang}]: plural '{name}' needs an 'other' form")
+        substitutions[name] = {
+            "argNum": plural["arg"],
+            "formatSpecifier": plural.get("format", "lld"),
+            "variations": {"plural": {
+                form: {"stringUnit": {"state": "translated", "value": text}} for form, text in plural[lang].items()}},
+        }
+    if substitutions:
+        unit["substitutions"] = substitutions
+    return unit
+
+
 def write(merged, name):
     catalog = {"sourceLanguage": "en", "version": "1.0", "strings": {}}
     for key in sorted(merged):
         v = merged[key]
         entry = {"extractionState": "manual", "localizations": {
-            lang: {"stringUnit": {"state": "translated", "value": v[lang]}} for lang in ("en", "tr")}}
+            lang: localization(key, v, lang) for lang in ("en", "tr")}}
         if v.get("comment"):
             entry["comment"] = v["comment"]
         catalog["strings"][key] = entry

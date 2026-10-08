@@ -76,7 +76,7 @@
   },
   "favourites.empty.title": {
     "en": "Nothing saved yet",
-    "tr": "Henüz kaydedilen yok"
+    "tr": "Henüz kaydettiğiniz bir eser yok"
   },
   "favourites.empty.body": {
     "en": "Tap the heart on any piece to keep it here.",
@@ -100,7 +100,7 @@
   },
   "glossary.intro": {
     "en": "Every term that appears in a piece, explained for listeners. Tap one to read it in full.",
-    "tr": "Eserlerde geçen her terim, dinleyiciler için açıklandı. Tamamını okumak için birine dokunun."
+    "tr": "Eserlerde geçen her terim, dinleyiciler için açıklanıyor. Tamamını okumak için birine dokunun."
   },
   "glossary.searchPlaceholder": {
     "en": "Search terms",
