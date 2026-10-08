@@ -76,9 +76,11 @@ Her ürün için **Review Screenshot** istenir: `design/app-store/review/premium
    *Key ID:* RevenueCat iki anahtar için de yalnızca `.p8` dosyasını ve Issuer ID'yi istiyor; bir alan Key ID sorarsa, App Store Connect'te anahtarın satırındaki **Key ID** sütununda (ve dosya adında, `…_XXXXXXXXXX.p8`) yazar. App-Specific Shared Secret gerekmiyor (SDK StoreKit 2 kullanıyor).
 3. **Products**: iki ürünü içe aktar (`…premium.lifetime`, `…premium.monthly`).
 4. **Product catalog › Entitlements** › **New entitlement**: Identifier **`premium`** (kod bu adı arıyor, küçük harf), Display Name `Premium` › **Add**. Entitlement'a girip **Attach** ile iki ürünü de bağla.
-5. **Offerings** › **default** offering (Current olarak işaretli) › iki paket:
-   - **Lifetime** paketi → `co.dailyclassical.premium.lifetime`
-   - **Monthly** paketi → `co.dailyclassical.premium.monthly`
+5. **Product catalog › Offerings** › **New offering**: Identifier `default`, Display name `Premium`. **Tek** offering, içinde **iki paket** (her ürüne ayrı offering değil):
+   - **Add package** › `$rc_lifetime` (Lifetime) → `co.dailyclassical.premium.lifetime`
+   - **Add package** › `$rc_monthly` (Monthly) → `co.dailyclassical.premium.monthly`
+
+   Sonra listede `default` satırında **⋯** › **Make current** (yanında tik görünür). Uygulama yalnızca current offering'i okuyor; paketleri içlerindeki ürün kimliğinden tanıyor.
 6. **API Keys** › bu uygulamanın **Public app-specific API key**'ini (`appl_` ile başlar) bana ver. Bu anahtar herkese açık, uygulamaya gömülür; gizli değil. **Secret key'i verme.**
 
 Anahtar gelince ben `project.yml` içindeki `REVENUECAT_API_KEY` ayarına yazacağım; uygulama o andan itibaren satın almaları RevenueCat üzerinden yapacak. Anahtar yokken uygulama doğrudan StoreKit 2 kullanıyor (yerel test).
