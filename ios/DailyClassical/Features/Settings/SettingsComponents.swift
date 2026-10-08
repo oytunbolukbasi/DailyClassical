@@ -1,10 +1,12 @@
 import SwiftUI
 
 /// Public web pages linked from the paywall, auth legal line and About. Terms and Privacy are served
-/// by the API (backend/src/routes/legal.ts) in the app's language until the website exists.
+/// by the backend (backend/src/routes/legal.ts) on the website's domain, in the app's language.
 enum AppLinks {
-    static let website = URL(string: "https://dailyclassical.co")!
-    private static let pagesHost = "api.dailyclassical.co"
+    static let website = URL(string: "https://www.dailyclassical.co")!
+    private static let pagesHost = "www.dailyclassical.co"
+    /// Builds before 1.0.0 (2) linked the API host, which serves the same pages.
+    private static let ownHosts: Set<String> = [pagesHost, "api.dailyclassical.co"]
 
     static func terms(_ locale: Locale) -> URL { page("terms", locale) }
     static func privacy(_ locale: Locale) -> URL { page("privacy", locale) }
@@ -16,7 +18,7 @@ enum AppLinks {
 
     /// Terms and Privacy, opened in the in-app browser (opensOwnPagesInApp).
     static func isOwnPage(_ url: URL) -> Bool {
-        url.host() == pagesHost && ["/terms", "/privacy"].contains(url.path())
+        url.host().map(ownHosts.contains) == true && ["/terms", "/privacy", "/support"].contains(url.path())
     }
 }
 
