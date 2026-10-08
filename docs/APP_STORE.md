@@ -180,7 +180,7 @@ Zorunlu boyut: 6.9" (1320×2868). Taslak set hazır (EN + TR, 6'şar görüntü)
 
 ## 9. TestFlight ve gönderim [Claude + Oytun]
 
-**Hazır (8 Ekim 2026):** Sürüm 1.0.0 (build 1); `ITSAppUsesNonExemptEncryption = NO` (yalnızca HTTPS, her yüklemede şifreleme sorusu çıkmaz); gizlilik manifestleri (`Resources/PrivacyInfo.xcprivacy`, widget'ta ayrıca; App Privacy etiketleriyle aynı). Archive Xcode Organizer'da görünür.
+**Hazır (8 Ekim 2026):** Sürüm 1.0.0 (build 1); `ITSAppUsesNonExemptEncryption = NO` (yalnızca HTTPS, her yüklemede şifreleme sorusu çıkmaz); gizlilik manifestleri (`Resources/PrivacyInfo.xcprivacy`, widget'ta ayrıca; App Privacy etiketleriyle aynı). Archive Xcode Organizer'da görünür. **1.0.0 (1) App Store Connect'e yüklendi (8 Ekim 2026, 23:48).** Bir sonraki yüklemede build 2.
 
 1. **Yükleme:** `cd ios && xcodebuild -exportArchive -archivePath "<archive>" -exportOptionsPlist ExportOptions.plist -exportPath build/export -allowProvisioningUpdates` (Xcode'daki hesapla App Store Connect'e yükler). Ya da Xcode › Window › Organizer › **Distribute App** › App Store Connect › Upload. Sonraki yüklemelerde `CURRENT_PROJECT_VERSION` bir artırılır.
 2. App Store Connect › TestFlight: build işlenince (10–30 dk) iç testçilere (Internal Testing) açılır; telefonda TestFlight uygulamasından kurulur. TestFlight'ta satın almalar yine sandbox'tır, para çekilmez.
