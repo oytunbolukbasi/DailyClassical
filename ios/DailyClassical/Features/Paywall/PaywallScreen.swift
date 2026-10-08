@@ -2,13 +2,14 @@ import StoreKit
 import SwiftUI
 
 /// "More of this." (SPEC §4.10): solid full-screen page; only the close button is glass.
-/// Two products (EntitlementStore: RevenueCat or StoreKit 2): lifetime (preselected, Best value) and monthly.
+/// Two products (EntitlementStore: RevenueCat or StoreKit 2): lifetime (Best value) and monthly
+/// (preselected; carries the free trial while the Apple ID can take it).
 struct PaywallScreen: View {
     @Environment(EntitlementStore.self) private var entitlements
     @Environment(\.dismiss) private var dismiss
     @Environment(\.locale) private var locale
 
-    @State private var plan: EntitlementStore.Plan = .lifetime
+    @State private var plan: EntitlementStore.Plan = .monthly
     @State private var purchasing = false
     @State private var restoring = false
     @State private var message: LocalizedStringKey?

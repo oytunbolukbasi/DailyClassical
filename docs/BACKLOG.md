@@ -40,6 +40,7 @@ Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 ## Tamamlananlar (8 Ekim 2026, karşılama akışı)
 - Claude Design §09 uygulandı: tablolu dört kart (Vernet, Levitan, Friedrich *Deniz Kıyısındaki Keşiş*, Gezgin) ve ardından hatırlatıcı. Yatay kaydırma, sağ üstte cam "Geç" (hatırlatıcıya atlar), 1. sayfada "Zaten hesabınız var mı? Giriş yapın".
 - 2. kartta gerçek bir "şu an" dinleme durağı kartı, 3. kartta sözlük sheet'i parçası tablonun alt kenarına taşıyor.
+- Paywall'da aylık plan (3 gün ücretsiz denemeyle) önceden seçili geliyor (Oytun'un kararı); "En avantajlı" rozeti ömür boyunda kalıyor.
 - 4. kart (deneme) kalıyor (Oytun'un kararı); yalnızca deneme hakkı varken ve kullanıcı Premium değilken görünüyor; "Bugünün eseriyle devam et" deneme butonu kadar erişilebilir. Yenileme satırı App Review için uzun metinle (24 saat kuralı) kaldı.
 - Koyu mod ve en büyük erişilebilirlik yazı boyutu kontrol edildi: önce tablo küçülüyor, metin kaydırılıyor, hiçbir şey kesilmiyor.
 - Debug: simülatörde `-debugTrialDays 3` deneme kartını StoreKit yapılandırması olmadan gösteriyor; `-debugPremium NO` artık launch argümanından da doğru okunuyor.
