@@ -39,6 +39,7 @@ struct LibraryScreen: View {
             // screens show "‹ Library" in their back button.
             .navigationTitle(Text("library.title"))
             .toolbar(.hidden, for: .navigationBar)
+            .toolbarVisibility(router.tabBarHidden.contains(.library) ? .hidden : .visible, for: .tabBar)
             .navigationDestination(for: PieceRoute.self) { PieceScreen(id: $0.id) }
             .navigationDestination(for: GlossaryListRoute.self) { _ in GlossaryListScreen() }
         }

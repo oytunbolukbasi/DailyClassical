@@ -5,6 +5,7 @@ struct PieceScreen: View {
     let id: String
     @Environment(ContentStore.self) private var content
     @Environment(LanguageSettings.self) private var language
+    @Environment(AppRouter.self) private var router
     @State private var piece: Loadable<Piece> = .idle
 
     var body: some View {
@@ -20,7 +21,9 @@ struct PieceScreen: View {
             }
         }
         .background(Palette.background)
-        .toolbarVisibility(.hidden, for: .tabBar)
+        // The tab bar is hidden by the stack's root, from UIKit's appearance callbacks: see
+        // PieceTabBarHider for why not `.toolbarVisibility(.hidden, for: .tabBar)` here.
+        .background { PieceTabBarHider(router: router) }
         .task(id: language.code) { await load() }
     }
 

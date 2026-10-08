@@ -9,9 +9,6 @@ struct TodayScreen: View {
     @Environment(AppRouter.self) private var router
     /// The painting zooms into the piece page (Start listening, or pulling the page up).
     @Namespace private var zoom
-    /// The piece page hides the tab bar. Shown again the moment Today starts to reappear (the
-    /// start of a back swipe, not its end), hidden the moment a piece is pushed.
-    @State private var tabBarVisible = true
 
     var body: some View {
         @Bindable var router = router
@@ -25,24 +22,13 @@ struct TodayScreen: View {
             }
             .background(Palette.background)
             .toolbarVisibility(.hidden, for: .navigationBar)
-            // Driven by Today's own appearance rather than the stack's depth: the path only empties
-            // once a back swipe has finished, which brought the tab bar in a beat too late.
-            .toolbarVisibility(tabBarVisible ? .visible : .hidden, for: .tabBar)
-            .onAppear { setTabBar(true) }  // also fires as a back swipe begins
-            .onDisappear { if !router.todayPath.isEmpty { setTabBar(false) } }  // a cancelled swipe
-            .onChange(of: router.todayPath.count) { old, new in
-                if new > old { setTabBar(false) } else if new == 0 { setTabBar(true) }
-            }
+            // Hidden while a piece is on screen; shown as soon as a back swipe starts (PieceTabBarHider).
+            .toolbarVisibility(router.tabBarHidden.contains(.today) ? .hidden : .visible, for: .tabBar)
             .navigationDestination(for: PieceRoute.self) { route in
                 PieceScreen(id: route.id).navigationTransition(.zoom(sourceID: route.id, in: zoom))
             }
         }
         .environment(\.todayZoomNamespace, zoom)
-    }
-
-    private func setTabBar(_ visible: Bool) {
-        guard tabBarVisible != visible else { return }
-        withAnimation(.easeOut(duration: 0.25)) { tabBarVisible = visible }
     }
 }
 
