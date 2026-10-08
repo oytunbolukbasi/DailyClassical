@@ -46,10 +46,30 @@ Her ürün için **Review Screenshot** istenir: `design/app-store/review/premium
 ## 3. RevenueCat [Oytun]
 
 1. [app.revenuecat.com](https://app.revenuecat.com) › yeni proje: **DailyClassical**.
-2. **Apps** › **+ App** › **App Store**:
-   - Bundle ID: `co.dailyclassical.app`
-   - **In-App Purchase Key**: App Store Connect › Users and Access › Integrations › **In-App Purchase** › **+** ile bir anahtar oluştur, `.p8` dosyasını, Key ID'yi ve Issuer ID'yi RevenueCat'e yükle. (Apple ile girişte kullandığın anahtardan farklı bir anahtar.)
-   - **App Store Connect API Key** (önerilir, ürünleri otomatik çeker): Users and Access › Integrations › **App Store Connect API** › **Team Keys** › **+**, rol **App Manager**; `.p8` + Key ID + Issuer ID'yi RevenueCat'e ver.
+2. **Apps** › **+ App** › **App Store**: Bundle ID `co.dailyclassical.app`. Uygulama oluşunca ayarlarında üç sekme dolduracağız (2a–2c).
+
+   **2a. In-App Purchase Key (zorunlu).** RevenueCat satın almaları Apple'dan bu anahtarla doğruluyor.
+   1. App Store Connect › **Users and Access** › üstte **Integrations** sekmesi › soldan **In-App Purchase**.
+   2. **Generate In-App Purchase Key** (daha önce anahtar varsa **Active** başlığının yanındaki **+**). Ad: `RevenueCat`.
+   3. Listede yeni anahtarın satırında **Download API Key** › `SubscriptionKey_XXXXXXXXXX.p8` iner. **Yalnızca bir kez indirilebilir**; güvenli bir yerde sakla (git'e koyma, bana da gönderme).
+   4. Aynı sayfanın üstündeki **Issuer ID**'yi kopyala (UUID biçiminde). Görünmüyorsa önce 2b'deki API anahtarını oluştur; Issuer ID ikisinde aynıdır.
+   5. RevenueCat › proje menüsünde **Apps** › DailyClassical (App Store) › **In-app purchase key configuration** sekmesi › `.p8` dosyasını yükle (adını değiştirme), **Issuer ID** alanına yapıştır › **Save changes**.
+   6. Dosyanın altında **Valid credentials** ve bütün izinlerin yanında tik görmelisin. **Save changes** gri kalıyorsa sayfadaki diğer bölümlerde boş zorunlu alan vardır; hepsini açıp kontrol et.
+
+   Bu, Apple ile giriş için oluşturduğun anahtardan (Certificates, Identifiers & Profiles › Keys) **farklı** bir anahtar; onu kullanma.
+
+   **2b. App Store Connect API Key (önerilir).** RevenueCat ürünleri ve fiyatları App Store Connect'ten kendisi çeker, raporları doldurur.
+   1. **Users and Access** › **Integrations** › soldan **App Store Connect API** › **Team Keys** › **Generate API Key** (ya da **+**).
+   2. Ad: `RevenueCat`, Access: **App Manager** › **Generate**.
+   3. Satırda **Download** › `AuthKey_XXXXXXXXXX.p8` (yine tek sefer). Issuer ID tablonun üstünde, 2a'dakiyle aynı.
+   4. **Vendor number:** App Store Connect ana sayfa › **Payments and Financial Reports** › sol üstte yazan numara. (Paid Apps sözleşmesi tamamlanınca görünür.)
+   5. RevenueCat › aynı uygulama › **App Store Connect API** sekmesi › `.p8` yükle, **Issuer ID** ve **Vendor number**'ı gir › **Save changes**.
+
+   **2c. App Store Server Notifications (önerilir).** İptal, yenileme, iade gibi olaylar RevenueCat'e anında düşer.
+   1. RevenueCat › aynı uygulama › **Apple Server to Server notification settings** bölümündeki URL'yi kopyala.
+   2. App Store Connect › **Apps** › DailyClassical › **App Information** › **App Store Server Notifications** › **Production Server URL** ve **Sandbox Server URL** alanlarına aynı URL'yi yapıştır, sürüm **Version 2** › **Save**.
+
+   *Key ID:* RevenueCat iki anahtar için de yalnızca `.p8` dosyasını ve Issuer ID'yi istiyor; bir alan Key ID sorarsa, App Store Connect'te anahtarın satırındaki **Key ID** sütununda (ve dosya adında, `…_XXXXXXXXXX.p8`) yazar. App-Specific Shared Secret gerekmiyor (SDK StoreKit 2 kullanıyor).
 3. **Products**: iki ürünü içe aktar (`…premium.lifetime`, `…premium.monthly`).
 4. **Entitlements** › **+**: identifier **`premium`** (kod bu adı arıyor). İki ürünü de bu yetkiye bağla.
 5. **Offerings** › **default** offering (Current olarak işaretli) › iki paket:
