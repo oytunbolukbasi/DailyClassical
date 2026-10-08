@@ -507,28 +507,28 @@
       }
     },
     "paintings/rachmaninoff-piano-concerto-2": {
-      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Levitan_ozero28.JPG",
-      "color": "#7e8d8f",
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Red_Sunset_on_the_Dnieper_MET_DT2557.jpg",
+      "color": "#6f340b",
       "hero": {
         "path": "paintings/rachmaninoff-piano-concerto-2-hero.heic",
-        "width": 2000,
-        "height": 1403,
-        "bytes": 603839,
-        "hash": "05ecef2c17"
+        "width": 2546,
+        "height": 1800,
+        "bytes": 370149,
+        "hash": "ebae1acc15"
       },
       "thumb": {
         "path": "paintings/rachmaninoff-piano-concerto-2-thumb.heic",
-        "width": 428,
+        "width": 424,
         "height": 300,
-        "bytes": 26597,
-        "hash": "fd2b2d1453"
+        "bytes": 8139,
+        "hash": "99aa1340d5"
       },
       "full": {
         "path": "paintings/rachmaninoff-piano-concerto-2-full.heic",
-        "width": 2000,
-        "height": 1403,
-        "bytes": 638627,
-        "hash": "fa67ca27b6"
+        "width": 3675,
+        "height": 2598,
+        "bytes": 966863,
+        "hash": "22d5f6107d"
       }
     },
     "paintings/schubert-symphony-8": {

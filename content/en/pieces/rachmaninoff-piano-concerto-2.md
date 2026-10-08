@@ -49,11 +49,11 @@ also_recommended:
     year: 1972
     spotify_url: https://open.spotify.com/album/3LTVA25MzhU8ZR4evxxGMR
 painting:
-  artist: Isaac Levitan
-  title: Lake. Russia
-  year: 1899–1900
-  collection: State Russian Museum, St Petersburg
-  pairing_note: Levitan's last large canvas, painted in the same months Rachmaninoff found his way back to composing, a wide and bright Russian summer.
+  artist: Arkhyp Kuindzhi
+  title: Red Sunset
+  year: 1905–8
+  collection: The Metropolitan Museum of Art, New York
+  pairing_note: A red evening light breaking over a dark river, painted a few years after the concerto; the same turn from gloom to glow that the music makes.
 ```
 
 ### The big picture

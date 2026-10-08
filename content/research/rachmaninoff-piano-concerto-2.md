@@ -157,3 +157,19 @@ Reference: Richter / Wisłocki, Spotify `44eOy7bLDpoOZx5A9a1GEJ`. Add these rows
 
 Rejected: File:Sergei_Rachmaninoff_LOC_33968.jpg (2500 × 3824, PD-Bain) is dated "1900" on Commons, which is clearly wrong (it shows him in middle age on a ship's deck); not used because of the bad date.
 
+
+
+## 7. Painting replaced (2026-10-08)
+
+Levitan's *Lake. Russia* was replaced, with the product owner's approval, because its only open
+image is a 2000 × 1403 scan and Levitan already pairs with Tchaikovsky 6.
+
+| Field | Value | Source | Status |
+| --- | --- | --- | --- |
+| Artist | Arkhyp Kuindzhi (Arkhip Ivanovich Kuindzhi), Ukrainian, born Mariupol 1841, died St Petersburg 1910 | Met collection API, object 436833 | VERIFIED |
+| Title | *Red Sunset* (the Met added "on the Dnepr" on acquisition; it now uses "Red Sunset") | same; https://en.wikipedia.org/wiki/Red_Sunset_on_the_Dnipro | VERIFIED |
+| Date | 1905–8 | Met | VERIFIED |
+| Medium, size | Oil on canvas, 134.6 × 188 cm | Met | VERIFIED |
+| Collection | The Metropolitan Museum of Art, New York, Rogers Fund, 1974, accession 1974.100 | Met | VERIFIED |
+| Image | Met Open Access DT2557, 3811 × 2764, CC0 (isPublicDomain: true); same file on Commons: File:Red_Sunset_on_the_Dnieper_MET_DT2557.jpg | https://www.metmuseum.org/art/collection/search/436833 | VERIFIED |
+| Pairing | No historical link to the concerto is claimed; painted a few years later, chosen for the mood (red light breaking over a dark river) | – | – |

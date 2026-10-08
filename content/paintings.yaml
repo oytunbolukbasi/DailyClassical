@@ -241,19 +241,22 @@ beethoven-piano-sonata-8:
   placeholder_color: "#2f2519"
 
 rachmaninoff-piano-concerto-2:
-  # Modest resolution (2000 × 1403); Commons gives a LiveJournal scan as the source, clean and unframed.
-  # Larger gallery photo 4032 × 3024 is CC BY-SA 4.0 with frame and wall visible:
-  # File:The_Lake_by_Isaac_Levitan_in_the_State_Russian_Museum_IMG_4838.jpg. The Russian Museum offers no open download.
-  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Levitan_ozero28.JPG
-  source_url: https://rusmuseumvrm.ru/data/collections/painting/19_20/zh_4262/index.php?lang=en
-  commons_page: https://commons.wikimedia.org/wiki/File:Levitan_ozero28.JPG
-  width: 2000
-  height: 1403
+  # The Met's own Open Access photograph (CC0), mirrored on Commons at the same size. Replaced
+  # Levitan's "Lake. Russia" (2000 px scan only) on 2026-10-08. Met title "Red Sunset"; the
+  # "on the Dnieper/Dnipro" in some titles was added later.
+  # Master in the originals cache is CROPPED (the photo shows the black backdrop and the canvas's
+  # tacking edges): rachmaninoff-piano-concerto-2.source.jpg cropped to 3675 × 2598 at offset 70,80
+  # (`sips -c 2598 3675 --cropOffset 80 70`). Do not pass --refresh for this id.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Red_Sunset_on_the_Dnieper_MET_DT2557.jpg
+  source_url: https://www.metmuseum.org/art/collection/search/436833
+  commons_page: https://commons.wikimedia.org/wiki/File:Red_Sunset_on_the_Dnieper_MET_DT2557.jpg
+  width: 3811
+  height: 2764
   medium: Oil on canvas
-  license: Public domain (PD-Art, PD-old-auto-expired; artist d. 1900)
-  credit_line: Isaac Levitan, Lake (Lake. Russia), 1899–1900. State Russian Museum, St Petersburg (Ж-4262). Image via Wikimedia Commons, public domain.
+  license: Public domain (CC0, The Met Open Access)
+  credit_line: Arkhyp Kuindzhi, Red Sunset, 1905–8. The Metropolitan Museum of Art, New York, Rogers Fund, 1974 (1974.100). Image via The Met Open Access, public domain.
   rights_status: public_domain
-  hero: { width: 2000, height: 1403, bytes: 603839 }
-  thumb: { width: 428, height: 300, bytes: 26597 }
-  full: { width: 2000, height: 1403, bytes: 638627 }
-  placeholder_color: "#7e8d8f"
+  hero: { width: 2546, height: 1800, bytes: 370149 }
+  thumb: { width: 424, height: 300, bytes: 8139 }
+  full: { width: 3675, height: 2598, bytes: 966863 }
+  placeholder_color: "#6f340b"

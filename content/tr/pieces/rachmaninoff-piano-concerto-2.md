@@ -50,11 +50,11 @@ also_recommended:
     year: 1972
     spotify_url: https://open.spotify.com/album/3LTVA25MzhU8ZR4evxxGMR
 painting:
-  artist: Isaac Levitan
-  title: Göl. Rusya
-  year: 1899–1900
-  collection: Devlet Rus Müzesi, St. Petersburg
-  pairing_note: Levitan'ın son büyük tablosu, Rahmaninov'un yeniden beste yapmaya başladığı aylarda boyandı; geniş ve aydınlık bir Rus yazı.
+  artist: Arkhyp Kuindzhi
+  title: Kızıl Gün Batımı
+  year: 1905–8
+  collection: Metropolitan Sanat Müzesi, New York
+  pairing_note: Karanlık bir nehrin üstünde kızıl bir akşam ışığı, konçertodan birkaç yıl sonra boyandı; müziğin kasvetten ışığa dönüşünün aynısı.
 ```
 
 ### Genel bakış
