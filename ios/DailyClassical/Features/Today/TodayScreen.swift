@@ -16,7 +16,7 @@ struct TodayScreen: View {
             Group {
                 switch content.today {
                 case .loaded(let piece): TodayPager(todayPiece: piece)
-                case .failed: TodayOffline()
+                case .failed(let error): TodayOffline(error: error)
                 case .idle, .loading: TodaySkeleton()
                 }
             }
@@ -97,14 +97,14 @@ private struct TodayDayPage: View {
 
     @Environment(ContentStore.self) private var content
     @State private var loaded: Piece?
-    @State private var failed = false
+    @State private var failure: APIError?
 
     var body: some View {
         Group {
             if let piece = loaded ?? content.cachedPiece(id: day.pieceId) {
                 TodayContent(piece: piece, date: day.date, metrics: metrics, previous: previous, next: next)
-            } else if failed {
-                TodayDayOffline(date: day.date, previous: previous, next: next) { Task { await load() } }
+            } else if let failure {
+                TodayDayOffline(date: day.date, error: failure, previous: previous, next: next) { Task { await load() } }
                     .padding(.top, metrics.top)
             } else {
                 PieceSkeleton()
@@ -115,11 +115,11 @@ private struct TodayDayPage: View {
 
     private func load() async {
         if let cached = content.cachedPiece(id: day.pieceId) { loaded = cached; return }
-        failed = false
+        failure = nil
         do {
             loaded = try await content.piece(id: day.pieceId)
         } catch {
-            failed = true
+            failure = error as? APIError ?? .offline
         }
     }
 }
@@ -257,9 +257,10 @@ private struct TodayContent: View {
     }
 }
 
-/// An earlier day whose piece could not load (offline and not cached).
+/// An earlier day whose piece could not load (offline and not cached, or another error).
 private struct TodayDayOffline: View {
     let date: Date
+    let error: APIError
     let previous: (() -> Void)?
     let next: (() -> Void)?
     let retry: () -> Void
@@ -267,8 +268,10 @@ private struct TodayDayOffline: View {
     var body: some View {
         VStack(spacing: 18) {
             DateChip(date: date).dayNavigation(previous: previous, next: next)
-            EmptyStateView(icon: "offline", title: Text("state.offline.title"), message: Text("today.day.offline.body")) {
-                Button("state.retry", action: retry).buttonStyle(SmallCapsuleButtonStyle())
+            EmptyStateView(icon: error.isOffline ? "offline" : nil,
+                           title: error.isOffline ? Text("state.offline.title") : Text("state.error.generic"),
+                           message: error.isOffline ? Text("today.day.offline.body") : Text("state.error.body")) {
+                Button("state.retry", action: retry).buttonStyle(.retry)
             }
         }
         .padding(.top, 11)
@@ -330,27 +333,37 @@ private struct TodaySkeleton: View {
     }
 }
 
-/// Offline with nothing cached (SPEC §4.26).
+/// Offline with nothing cached (SPEC §4.26). Any other failure (a server error, an unreadable
+/// response) shows the same block with the generic message and no cloud-off icon.
 private struct TodayOffline: View {
+    let error: APIError
     @Environment(ContentStore.self) private var content
     @Environment(\.locale) private var locale
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            StripePlaceholder()
-                .frame(height: 300)
-                .overlay { Icon("offline", size: 32).foregroundStyle(Palette.ink3) }
-            VStack(alignment: .leading, spacing: 12) {
-                SectionLabel("state.offline.date \(Date.now.formatted(Date.VerbatimFormatStyle(format: "\(weekday: .wide), \(day: .defaultDigits) \(month: .wide)", locale: locale, timeZone: .current, calendar: .current)))", color: Palette.accent)
-                Text("state.offline.title").font(Typography.titleM).lineHeight(1.2, literata: 24).foregroundStyle(Palette.ink)
-                Text("state.offline.body").font(Typography.body15).lineHeight(1.5).foregroundStyle(Palette.ink2)
-                Button("state.retry") { Task { await content.retry() } }
-                    .buttonStyle(SmallCapsuleButtonStyle())
-                    .padding(.top, 6)
+        // Scrolls at the largest text sizes; at the default size it fits and stays put.
+        ScrollView {
+            VStack(alignment: .leading, spacing: 0) {
+                StripePlaceholder()
+                    .frame(height: 300)
+                    .overlay { if error.isOffline { Icon("offline", size: 32).foregroundStyle(Palette.ink3) } }
+                VStack(alignment: .leading, spacing: 12) {
+                    SectionLabel("state.offline.date \(Date.now.formatted(Date.VerbatimFormatStyle(format: "\(weekday: .wide), \(day: .defaultDigits) \(month: .wide)", locale: locale, timeZone: .current, calendar: .current)))", color: Palette.accent)
+                    (error.isOffline ? Text("state.offline.title") : Text("state.error.generic"))
+                        .font(Typography.titleM).lineHeight(1.2, literata: 24).foregroundStyle(Palette.ink)
+                        .accessibilityAddTraits(.isHeader)
+                    (error.isOffline ? Text("state.offline.body") : Text("state.error.body"))
+                        .font(Typography.body15).lineHeight(1.5).foregroundStyle(Palette.ink2)
+                    Button("state.retry") { Task { await content.retry() } }
+                        .buttonStyle(.retry)
+                        .padding(.top, 6)
+                }
+                .padding(.horizontal, 24).padding(.vertical, 30)
             }
-            .padding(.horizontal, 24).padding(.vertical, 30)
-            Spacer()
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
+        .scrollBounceBehavior(.basedOnSize)
+        .scrollEdgeEffectHidden(true, for: .top)  // the stripes run under the status bar, as the painting does
         .ignoresSafeArea(edges: .top)
     }
 }

@@ -196,8 +196,8 @@ struct LibraryScreen: View {
         switch content.library {
         case .idle, .loading:
             skeleton
-        case .failed:
-            LibraryOfflineView { Task { await content.retry() } }
+        case .failed(let error):
+            LibraryOfflineView(error: error) { Task { await content.retry() } }
                 .libraryRowChrome()
         case .loaded:
             let pieces = filteredPieces
@@ -264,8 +264,8 @@ struct LibraryScreen: View {
             switch content.library {
             case .idle, .loading:
                 skeleton
-            case .failed where favouritePieces.isEmpty:
-                LibraryOfflineView { Task { await content.retry() } }
+            case .failed(let error) where favouritePieces.isEmpty:
+                LibraryOfflineView(error: error) { Task { await content.retry() } }
                     .libraryRowChrome()
             default:
                 ForEach(favouritePieces, id: \.piece.id) { item in

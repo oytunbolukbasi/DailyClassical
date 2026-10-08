@@ -21,12 +21,14 @@ struct DCButtonStyle: ButtonStyle {
 /// 40 pt capsule ("Open in Spotify" in the recordings sheet, "Try again").
 struct SmallCapsuleButtonStyle: ButtonStyle {
     var prominent = false
+    /// 16 by default; "Try again" in the offline block uses 18 (SPEC §3.25).
+    var horizontalPadding: CGFloat = 16
 
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(Typography.buttonS)
             .foregroundStyle(prominent ? Palette.onTint : Palette.ink)
-            .padding(.horizontal, 16)
+            .padding(.horizontal, horizontalPadding)
             .frame(minHeight: 40)
             .background(prominent ? AnyShapeStyle(Palette.tint) : AnyShapeStyle(Palette.ink.opacity(0.08)), in: .capsule)
             .opacity(configuration.isPressed ? 0.8 : 1)
@@ -49,6 +51,11 @@ struct TextLinkButtonStyle: ButtonStyle {
 extension ButtonStyle where Self == DCButtonStyle {
     static var dcPrimary: DCButtonStyle { DCButtonStyle(kind: .primary) }
     static var dcSecondary: DCButtonStyle { DCButtonStyle(kind: .secondary) }
+}
+
+extension ButtonStyle where Self == SmallCapsuleButtonStyle {
+    /// "Try again" in the offline and error blocks.
+    static var retry: SmallCapsuleButtonStyle { SmallCapsuleButtonStyle(horizontalPadding: 18) }
 }
 
 extension ButtonStyle where Self == TextLinkButtonStyle {

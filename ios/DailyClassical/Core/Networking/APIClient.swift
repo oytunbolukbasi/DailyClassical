@@ -6,6 +6,10 @@ nonisolated enum APIError: Error, Equatable {
     case notFound
     case server(status: Int, code: String?)
     case decoding
+
+    /// No connection and nothing cached: the only failure that says "You're offline". Server
+    /// and decoding errors show the generic message instead (SPEC §4.26).
+    var isOffline: Bool { self == .offline }
 }
 
 /// Thin async client for the DailyClassical API. Content requests carry the active
