@@ -1,11 +1,14 @@
 # Yapılacaklar
 
-Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
+Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
 
 ## Sıradaki işler (kod)
-1. **[Claude] Koyu modda Sözlük, Kayıtlar ve Besteci sheet'lerine bakmak:** Ana ekranlar, Hesap, Favoriler, premium Arama ve "Şeffaflığı Azalt" kontrol edildi. Bu üç sheet'e koyu modda ayrıca bakılmadı.
-2. **[Claude] Denetimin (`design/AUDIT.md`) kalan küçük maddeleri:** Kısa tanım, toplu yükleme ve Dynamic Type yapıldı. Kalan P2 maddeleri (ör. eser görüntüleyicide zoom'un sınırlandırılması, Today'in yayın tarihini göstermesi) tek tek gözden geçirilecek.
-3. **[Claude] Rahmaninov tablosu:** Levitan'ın *Göl* tablosunun açık lisanslı en iyi görüntüsü 2000×1403 piksel. Diğer tablolardan biraz daha yumuşak görünüyor ve Levitan, Çaykovski 6'nın da ressamı. Daha yüksek çözünürlüklü bir alternatif aranabilir (senin onayınla).
+1. **[Oytun] Denetimde karar bekleyen maddeler (`design/AUDIT.md`, "Open" olanlar):**
+   - P2-5: III. ve IV. bölümlerden önceki ayırıcı çizgi (tasarımda yalnızca II'de var; şu an hepsinde aynı).
+   - P2-7: "Spotify'da aç" butonu son bölümden sonra (kayıtlar, kaynaklar) geri gelsin mi?
+   - P2-33: "Kunsthalle Hamburg" mı "Hamburger Kunsthalle" mı?
+   - P2-36: `paywall.title` ve "y. 1818" gibi Türkçe ifadeler (native okumayla birlikte).
+   - P2-21 (e-posta değiştirme) API gerektiriyor; P2-9 (sözlük terimine 44 pt dokunma alanı) özel bir metin bileşeni gerektiriyor.
 8. **[Claude + Oytun] VoiceOver'ı cihazda denemek:** Kod tarafı tamam: günler arası geçiş eylemleri, bölüm düğmesi etiketleri, okunur durak zamanları, sözlük terimi ipucu. Cihazda VoiceOver açıkken bir kez gezinmek gerekiyor.
 9. **[Claude + Oytun] Widget'ın renklendirilmiş (tinted) modu:** Cihazda ana ekran stili "Renklendirilmiş" ve "Şeffaf" iken widget'ların görünümü kontrol edilecek.
 
@@ -34,6 +37,17 @@ Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 ## Yayından önce sıfırlanacak test verisi
 - **Takvim:** `content/schedule.yaml` içerik kontrolü için 27 Eylül 2026'dan başlıyor, böylece 10 eserin hepsi Kitaplık'ta görünüyor. Yayından önce `start` yayın gününe çekilecek ve sıra Çaykovski 6 ile başlayacak. Ardından `npm run db:seed && npm run fixtures` çalıştırılacak.
 - **Debug premium:** Debug build'lerde premium varsayılan olarak açık (`EntitlementStore.debugUnlock`). Release build'leri etkilemiyor, sıfırlanması gerekmiyor.
+
+## Tamamlananlar (8 Ekim 2026, denetim ve tablo)
+- **Denetim (`design/AUDIT.md`):** 43 maddenin hepsi kontrol edildi; 23'ü bu turda düzeltildi, 13'ü zaten düzeltilmişti. Öne çıkanlar:
+  - Eser görüntüleyicide çift dokunuş dokunulan noktaya yakınlaştırıyor, kaydırma tablonun dışına taşmıyor.
+  - Gerçek bağlantı hatası dışındaki hatalar artık "Çevrimdışısınız" değil, "Bir şeyler ters gitti" gösteriyor (Bugün, eser, Kitaplık, Sözlük).
+  - Ayarlar alt sayfalarının hepsinde tab bar gizli (Hesap'taki gibi); geri dönünce geliyor.
+  - Sözlük terimi bir sheet içinden de açılıyor; Kitaplık'tan açılan eserde "Tüm terimler" artık eser sayfasını kaybettirmiyor.
+  - Kaynaklar satırı çevrilebilir tek cümle; İngilizcede "1 minute / 1 movement" tekil-çoğul doğru.
+  - Arama'da gereksiz başlık kaldırıldı; kayıt/giriş alt başlıkları tasarımdaki boyutta.
+- **Koyu mod:** Sözlük, Kayıtlar ve Besteci sheet'leri, eser sayfası, Ayarlar alt sayfaları ve Arama koyu modda kontrol edildi.
+- **Rahmaninov 2 tablosu:** Kuindzhi, *Kızıl Gün Batımı* (1905–8), Metropolitan Sanat Müzesi; Met'in CC0 fotoğrafı, tuval kenarlarından kırpıldı (3675 px).
 
 ## Tamamlananlar (8 Ekim 2026, Apple ile giriş)
 - Karşılama sheet'inde ("Sevdiğin eserleri sakla") ve kayıt/giriş ekranlarında Apple'ın "Apple ile devam et" butonu. Tek dokunuşla kayıt ya da giriş; e-posta Apple'dan doğrulanmış geldiği için kod adımı yok.
