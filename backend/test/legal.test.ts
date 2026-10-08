@@ -10,10 +10,12 @@ test("markdown subset: headings, lists, bold, links; HTML in the source is escap
   assert.match(html, /<ul><li>one<\/li><li>two<\/li><\/ul>/);
   assert.match(html, /<h2>Next<\/h2>/);
   assert.doesNotMatch(renderMarkdown("[x](javascript:alert(1))"), /href=/);
+  assert.match(renderMarkdown("[t](/terms?locale=en)"), /<a href="\/terms\?locale=en">t<\/a>/);
+  assert.doesNotMatch(renderMarkdown("[x](//evil.example)"), /href=/);
 });
 
 test("legal pages exist in both languages with the same sections", () => {
-  for (const page of ["terms", "privacy"]) {
+  for (const page of ["terms", "privacy", "support"]) {
     const sections = (locale: string) =>
       readFileSync(new URL(`../legal/${page}.${locale}.md`, import.meta.url), "utf8").match(/^## /gm)?.length;
     assert.ok(sections("en")! > 5);
@@ -28,4 +30,6 @@ test("the legal routes serve both pages in the requested language", async () => 
   assert.match(await tr.text(), /<h1>Gizlilik Politikası<\/h1>/);
   const en = await legal.request("/terms", { headers: { "Accept-Language": "en-GB" } });
   assert.match(await en.text(), /<h1>Terms of Use<\/h1>/);
+  const support = await legal.request("/support?locale=tr");
+  assert.match(await support.text(), /<h1>Destek<\/h1>[\s\S]*hello@dailyclassical\.co/);
 });

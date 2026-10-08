@@ -16,6 +16,9 @@ Son güncelleme: 8 Ekim 2026. Sırayla ilerle; her adımın sonunda bana haber v
    - Content Rights: "Does not contain, show, or access third-party content" değil; tablolar kamu malı, kayıtlar Spotify'a bağlantı. **"Yes, it contains third-party content and I have the rights"** seçilmeli (kamu malı tablolar + bağlantılar).
    - Age Rating anketi: her şey "None" → **4+**.
    - Privacy Policy URL: `https://api.dailyclassical.co/privacy`
+   - **Support URL** (sürüm sayfası, zorunlu): `https://api.dailyclassical.co/support` (iletişim, Premium geri yükleme, iptal, iade, hesap; EN/TR, `backend/legal/support.*.md`). Türkçe sayfada `https://api.dailyclassical.co/support?locale=tr`.
+   - **Marketing URL** (isteğe bağlı): web sitesi kurulana kadar boş.
+   - **Copyright:** `2026 <hak sahibi>` (© işareti App Store Connect'te eklenmiyor; satıcı adınla aynı olması yeterli).
 3. **Agreements, Tax, and Banking** (Business bölümü): **Paid Apps** sözleşmesini imzala, banka ve vergi bilgilerini gir. Bu tamamlanmadan uygulama içi satın almalar sandbox'ta bile ürün döndürmez.
 
 ## 2. App Store Connect: uygulama içi satın almalar [Oytun]

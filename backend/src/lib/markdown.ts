@@ -8,7 +8,7 @@ const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 function inline(text: string): string {
   return esc(text)
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-    .replace(/\[([^\]]+)\]\(((?:https?:\/\/|mailto:)[^)\s]+)\)/g, '<a href="$2">$1</a>');
+    .replace(/\[([^\]]+)\]\(((?:https?:\/\/|mailto:|\/(?!\/))[^)\s]+)\)/g, '<a href="$2">$1</a>');
 }
 
 export function renderMarkdown(source: string): string {

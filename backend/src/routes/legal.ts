@@ -6,13 +6,14 @@ import { requestLocale } from "../lib/locale.js";
 import { renderMarkdown } from "../lib/markdown.js";
 
 /**
- * GET /terms and /privacy (?locale=tr, else Accept-Language): the Terms of Use and Privacy Policy,
- * written in backend/legal/<page>.<locale>.md. The app opens them in an in-app browser; App Store
- * Connect links to /privacy. They move to dailyclassical.co when the website exists.
+ * GET /terms, /privacy and /support (?locale=tr, else Accept-Language): the Terms of Use, Privacy
+ * Policy and support page, written in backend/legal/<page>.<locale>.md. The app opens them in an
+ * in-app browser; App Store Connect links to /privacy (privacy URL) and /support (support URL).
+ * They move to dailyclassical.co when the website exists.
  */
 export const legal = new Hono();
 
-const pages = ["terms", "privacy"] as const;
+const pages = ["terms", "privacy", "support"] as const;
 type Page = (typeof pages)[number];
 
 const read = (page: Page, locale: Locale) =>
