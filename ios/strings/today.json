@@ -17,5 +17,9 @@
     "en": "Search pieces, composers and glossary terms.",
     "tr": "Eserlerde, bestecilerde ve sözlük terimlerinde arayın.",
     "comment": "Search tab, idle with no recent searches"
+  },
+  "today.listenWithPremium": {
+    "en": "Listen with Premium",
+    "tr": "Premium ile dinle"
   }
 }

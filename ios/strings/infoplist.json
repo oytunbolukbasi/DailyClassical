@@ -3,5 +3,10 @@
     "en": "Debug builds connect to the development server on this network.",
     "tr": "Debug derlemeleri bu ağdaki geliştirme sunucusuna bağlanır.",
     "comment": "Local network permission prompt (Info.plist). Only debug builds ask; release builds use the public API."
+  },
+  "NSPhotoLibraryAddUsageDescription": {
+    "en": "Saves the painting you choose as a wallpaper to your photos.",
+    "tr": "Seçtiğiniz tabloyu duvar kâğıdı olarak fotoğraflarınıza kaydeder.",
+    "comment": "Photo library add-only permission (Info.plist)."
   }
 }

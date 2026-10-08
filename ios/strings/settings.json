@@ -596,5 +596,49 @@
     "en": "Continue with Apple",
     "tr": "Apple ile Devam Et",
     "comment": "Apple's approved Sign in with Apple title; keep Apple's exact wording and casing."
+  },
+  "paywall.benefit.catchUp": {
+    "en": "Catch up on the days you missed",
+    "tr": "Kaçırdığınız günleri yakalayın"
+  },
+  "paywall.benefit.wallpaper": {
+    "en": "Each day's painting as a wallpaper",
+    "tr": "Günün tablosu duvar kâğıdı olarak"
+  },
+  "wallpaper.button.accessibilityLabel": {
+    "en": "Save as wallpaper",
+    "tr": "Duvar kâğıdı olarak kaydet"
+  },
+  "wallpaper.title": {
+    "en": "Wallpaper",
+    "tr": "Duvar kâğıdı"
+  },
+  "wallpaper.hint": {
+    "en": "Drag the painting to choose what fills your screen.",
+    "tr": "Ekranınızı dolduracak kısmı seçmek için tabloyu sürükleyin."
+  },
+  "wallpaper.preview.accessibilityLabel": {
+    "en": "Wallpaper preview. Drag to move the painting.",
+    "tr": "Duvar kâğıdı önizlemesi. Tabloyu kaydırmak için sürükleyin."
+  },
+  "wallpaper.save": {
+    "en": "Save to Photos",
+    "tr": "Fotoğraflar’a kaydet"
+  },
+  "wallpaper.saved": {
+    "en": "Saved",
+    "tr": "Kaydedildi"
+  },
+  "wallpaper.saved.hint": {
+    "en": "Set it in Settings › Wallpaper, or press and hold the Lock Screen.",
+    "tr": "Ayarlar › Duvar Kâğıdı’ndan ya da Kilit Ekranı’na basılı tutarak ayarlayabilirsiniz."
+  },
+  "wallpaper.error.denied": {
+    "en": "DailyClassical can’t add to Photos. Allow it in Settings › Privacy & Security › Photos.",
+    "tr": "DailyClassical Fotoğraflar’a ekleyemiyor. Ayarlar › Gizlilik ve Güvenlik › Fotoğraflar’dan izin verin."
+  },
+  "wallpaper.error.failed": {
+    "en": "The wallpaper couldn’t be saved. Please try again.",
+    "tr": "Duvar kâğıdı kaydedilemedi. Lütfen tekrar deneyin."
   }
 }

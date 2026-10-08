@@ -26,6 +26,7 @@ All files use `stroke="currentColor"`, so they take the foreground colour of the
 | `checkmark.svg` | check | 24 | 2 (1.75 in the sheet) | round / round | 18, stroke `accent` | Paywall benefit list |
 | `reminder.svg` | reminder | 24 | 1.75 | round / round | — | **Sheet only.** Daily reminder (bell); suggested for Settings › Daily reminder or onboarding |
 | `share.svg` | share | 24 | 1.75 | round / round | — | **Sheet only.** No share action is placed on any screen |
+| `wallpaper.svg` | wallpaper | 24 | 1.75 | round / round | — | Added in the app (8 Oct 2026), same grid and stroke: artwork viewer › save the painting as a wallpaper (Premium) |
 | `offline.svg` | offline | 24 | 1.75 (1.5 at 32 pt on screen) | round / round | 32, `ink3` | Today · offline state, centred on the striped image area |
 | `info.svg` | info | 24 | 1.75 | round / round | — | **Sheet only.** Suggested for About and credits |
 | `heart.svg` | heart | 24 | 1.75 | round / round | 26 in a 44 pt glass button; 36 `accent` in the Favourites empty states | Favourite (not saved); empty-state illustration |

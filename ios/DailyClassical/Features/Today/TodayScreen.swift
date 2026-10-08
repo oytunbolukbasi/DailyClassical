@@ -184,7 +184,9 @@ private struct TodayContent: View {
                             .padding(.top, metrics.top + 11)
                     }
                     .overlay(alignment: .bottom) {
-                        PrimaryGlassButton(title: "today.startListening") { startListening() }
+                        // A past day is Premium ("catch up on the days you missed"); today is always free.
+                        PrimaryGlassButton(title: isLocked ? "today.listenWithPremium" : "today.startListening",
+                                           locked: isLocked) { startListening() }
                             // Grows a little as the page is pulled: releasing opens the piece.
                             .scaleEffect(1 + 0.06 * min(pull / pullThreshold, 1))
                             .animation(.spring(duration: 0.25), value: pullReady)
@@ -252,6 +254,8 @@ private struct TodayContent: View {
             if let painting = piece.painting { ArtworkViewer(painting: painting) }
         }
     }
+
+    private var isLocked: Bool { content.isLocked(piece.id, premium: entitlements.isPremium) }
 
     private func startListening() {
         if content.isLocked(piece.id, premium: entitlements.isPremium) {

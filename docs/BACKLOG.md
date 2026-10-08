@@ -3,8 +3,6 @@
 Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
 
 ## Sıradaki işler (kod)
-1. **[Claude] Premium faydası: kaçırılan günler.** Ücretsiz kullanıcı yalnızca bugünün eserini açabiliyor; Premium kullanıcı Bugün ekranında geriye kaydırarak son günlerin eserlerine de geçebiliyor (kitaplıktan bağımsız, "kaçırdığın günleri yakala" olarak anlatılır). Ödeme ekranına fayda satırı eklenecek.
-2. **[Claude] Premium faydası: tablo duvar kâğıdı.** Günün tablosunu telefon ekranı oranında (ör. 1320×2868) kırpılmış, yüksek çözünürlüklü duvar kâğıdı olarak Fotoğraflar'a kaydetme ya da paylaşma; eser sayfasında ve tablo görüntüleyicide bir düğme. Kırpma noktası tablonun odak noktasına göre. Ödeme ekranına fayda satırı.
 3. **[Oytun + Claude] Karşılama akışı:** Brief `design/ONBOARDING_BRIEF.md`; Claude Design'da tasarlanınca uygulamaya geçirilecek.
 8. **[Claude + Oytun] VoiceOver'ı cihazda denemek:** Kod tarafı tamam: günler arası geçiş eylemleri, bölüm düğmesi etiketleri, okunur durak zamanları, sözlük terimi ipucu. Cihazda VoiceOver açıkken bir kez gezinmek gerekiyor.
 9. **[Claude + Oytun] Widget'ın renklendirilmiş (tinted) modu:** Cihazda ana ekran stili "Renklendirilmiş" ve "Şeffaf" iken widget'ların görünümü kontrol edilecek.
@@ -30,6 +28,11 @@ Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 ## Yayından önce sıfırlanacak test verisi
 - **Takvim:** `content/schedule.yaml` içerik kontrolü için 27 Eylül 2026'dan başlıyor, böylece 10 eserin hepsi Kitaplık'ta görünüyor. Yayından önce `start` yayın gününe çekilecek ve sıra Çaykovski 6 ile başlayacak. Ardından `npm run db:seed && npm run fixtures` çalıştırılacak.
 - **Debug premium:** Debug build'lerde premium varsayılan olarak açık (`EntitlementStore.debugUnlock`). Release build'leri etkilemiyor, sıfırlanması gerekmiyor.
+
+## Tamamlananlar (8 Ekim 2026, Premium faydaları)
+- **Kaçırılan günler:** Bugün ekranında geçmiş günlere kaydırmak herkese açık; ücretsiz kullanıcıda geçmiş günün butonu kilitli "Premium ile dinle" oluyor ve ödeme ekranını açıyor. Bugünün eseri her zaman ücretsiz.
+- **Tablo duvar kâğıdı:** Tablo görüntüleyicide sol üstte yeni bir cam buton (yeni "wallpaper" ikonu, tasarım setine eklendi). Premium kullanıcıda telefon ekranı biçiminde bir önizleme açılıyor; tablo sürüklenerek kırpılıyor ve ekran çözünürlüğünde (büyütmeden) Fotoğraflar'a kaydediliyor. Yalnızca "fotoğraf ekleme" izni isteniyor. Ücretsiz kullanıcıya ödeme ekranı.
+- Ödeme ekranında dört fayda satırı: kitaplık, kaçırılan günler, arama, duvar kâğıdı.
 
 ## Tamamlananlar (8 Ekim 2026, fiyat ve deneme)
 - Ömür boyu ₺699,99, aylık ₺129,99. Aylık abonelikte 3 günlük ücretsiz deneme (App Store "introductory offer"). Ödeme ekranında aylık seçiliyken düğme "3 gün ücretsiz dene" oluyor ve altında App Store'un istediği yenileme açıklaması çıkıyor; yalnızca denemeye hak kazanan Apple Kimlikleri için.

@@ -2723,6 +2723,23 @@
         }
       }
     },
+    "paywall.benefit.catchUp": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Catch up on the days you missed"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaçırdığınız günleri yakalayın"
+          }
+        }
+      }
+    },
     "paywall.benefit.library": {
       "extractionState": "manual",
       "localizations": {
@@ -2753,6 +2770,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "Eserlerde, bestecilerde ve terimlerde arama"
+          }
+        }
+      }
+    },
+    "paywall.benefit.wallpaper": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Each day's painting as a wallpaper"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Günün tablosu duvar kâğıdı olarak"
           }
         }
       }
@@ -4717,6 +4751,23 @@
         }
       }
     },
+    "today.listenWithPremium": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Listen with Premium"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Premium ile dinle"
+          }
+        }
+      }
+    },
     "today.meta %@ %lld %lld": {
       "extractionState": "manual",
       "localizations": {
@@ -4944,6 +4995,159 @@
           "stringUnit": {
             "state": "translated",
             "value": "Lütfen DailyClassical’ı güncelleyin"
+          }
+        }
+      }
+    },
+    "wallpaper.button.accessibilityLabel": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save as wallpaper"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duvar kâğıdı olarak kaydet"
+          }
+        }
+      }
+    },
+    "wallpaper.error.denied": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DailyClassical can’t add to Photos. Allow it in Settings › Privacy & Security › Photos."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DailyClassical Fotoğraflar’a ekleyemiyor. Ayarlar › Gizlilik ve Güvenlik › Fotoğraflar’dan izin verin."
+          }
+        }
+      }
+    },
+    "wallpaper.error.failed": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The wallpaper couldn’t be saved. Please try again."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duvar kâğıdı kaydedilemedi. Lütfen tekrar deneyin."
+          }
+        }
+      }
+    },
+    "wallpaper.hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drag the painting to choose what fills your screen."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ekranınızı dolduracak kısmı seçmek için tabloyu sürükleyin."
+          }
+        }
+      }
+    },
+    "wallpaper.preview.accessibilityLabel": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wallpaper preview. Drag to move the painting."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duvar kâğıdı önizlemesi. Tabloyu kaydırmak için sürükleyin."
+          }
+        }
+      }
+    },
+    "wallpaper.save": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save to Photos"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fotoğraflar’a kaydet"
+          }
+        }
+      }
+    },
+    "wallpaper.saved": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saved"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaydedildi"
+          }
+        }
+      }
+    },
+    "wallpaper.saved.hint": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set it in Settings › Wallpaper, or press and hold the Lock Screen."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayarlar › Duvar Kâğıdı’ndan ya da Kilit Ekranı’na basılı tutarak ayarlayabilirsiniz."
+          }
+        }
+      }
+    },
+    "wallpaper.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wallpaper"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duvar kâğıdı"
           }
         }
       }

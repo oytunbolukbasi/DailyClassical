@@ -45,7 +45,9 @@ struct PaywallScreen: View {
 
                     VStack(alignment: .leading, spacing: 10) {
                         BenefitLine("paywall.benefit.library")
+                        BenefitLine("paywall.benefit.catchUp")
                         BenefitLine("paywall.benefit.search")
+                        BenefitLine("paywall.benefit.wallpaper")
                     }
                     .padding(.top, 18)
                     .padding(.horizontal, 24)

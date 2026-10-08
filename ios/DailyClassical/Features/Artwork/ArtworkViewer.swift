@@ -5,6 +5,9 @@ struct ArtworkViewer: View {
     let painting: Painting
     @Environment(\.dismiss) private var dismiss
     @Environment(\.locale) private var locale
+    @Environment(EntitlementStore.self) private var entitlements
+    @State private var showWallpaper = false
+    @State private var showPaywall = false
     @State private var scale: CGFloat = 1
     @State private var lastScale: CGFloat = 1
     @State private var offset: CGSize = .zero
@@ -53,7 +56,22 @@ struct ArtworkViewer: View {
                 .shadow(color: .black.opacity(0.35), radius: 3, y: 2)  // G4 over the image
                 .padding(.trailing, 16).padding(.top, 4)  // as the paywall close (SPEC: top 58)
         }
+        .overlay(alignment: .topLeading) {
+            // Premium: the painting as a wallpaper; free readers see the paywall first.
+            GlassIconButton(icon: "wallpaper", iconSize: 20, tint: Palette.viewerInk, label: "wallpaper.button.accessibilityLabel") {
+                if entitlements.isPremium { showWallpaper = true } else { showPaywall = true }
+            }
+            .shadow(color: .black.opacity(0.35), radius: 3, y: 2)
+            .padding(.leading, 16).padding(.top, 4)
+            .opacity(scale > 1 ? 0 : 1)
+        }
         .overlay(alignment: .bottomLeading) { caption }
+        .sheet(isPresented: $showWallpaper) {
+            WallpaperSheet(painting: painting, preloaded: full)
+                .presentationDetents([.large])
+                .presentationBackground(.black)
+        }
+        .fullScreenCover(isPresented: $showPaywall) { PaywallScreen() }
         .environment(\.colorScheme, .dark)
         .statusBarHidden()
     }

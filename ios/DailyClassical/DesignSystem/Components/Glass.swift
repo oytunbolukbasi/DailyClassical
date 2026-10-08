@@ -26,11 +26,16 @@ struct GlassIconButton: View {
 /// Reduce Transparency fallback.
 struct PrimaryGlassButton: View {
     let title: LocalizedStringKey
+    /// A small lock before the label: the action needs Premium.
+    var locked = false
     let action: () -> Void
 
     var body: some View {
         Button(action: action) {
-            Text(title)
+            HStack(spacing: 8) {
+                if locked { Icon("lock", size: 16).accessibilityHidden(true) }
+                Text(title)
+            }
                 .font(Typography.button)
                 .tracking(-0.2)
                 .foregroundStyle(Palette.glassInk)
@@ -47,6 +52,7 @@ struct PrimaryGlassButton: View {
         .glassEffectTransition(.identity)
         .shadow(color: .black.opacity(0.08), radius: 1.5, y: 1)
         .shadow(color: .black.opacity(0.10), radius: 10, y: 8)
+        .accessibilityValue(locked ? Text("common.locked.accessibilityLabel") : Text(verbatim: ""))
     }
 }
 
