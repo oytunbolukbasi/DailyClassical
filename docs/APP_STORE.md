@@ -88,7 +88,7 @@ Her ürün için **Review Screenshot** istenir: `design/app-store/review/premium
 ## 4. Sandbox testi [Oytun + Claude]
 
 1. App Store Connect › Users and Access › **Sandbox** › bir test hesabı oluştur (gerçek Apple Kimliğinden farklı bir e-posta).
-2. Telefonda Ayarlar › App Store › en altta **Sandbox Account** ile o hesaba gir.
+2. Telefonda **Ayarlar › Geliştirici › Sandbox Apple Hesabı** ile o hesaba gir (yeni iOS sürümlerinde App Store ayarlarında değil). Daha kolayı: Xcode'dan kurulan build'de satın almaya basınca **[Environment: Sandbox]** yazan giriş penceresi açılır, test hesabıyla orada gir.
 3. Ben anahtarla bir Release build kuracağım; paywall'da gerçek fiyatlar görünmeli. Satın al, Ayarlar'da "Ömür boyu"/"Aylık" görünmeli, RevenueCat panelinde işlem düşmeli. Silip yeniden kurduktan sonra **Satın alımları geri yükle** çalışmalı.
 
 ## 5. Mağaza sayfası metinleri (taslak) [Oytun onayı]
