@@ -53,7 +53,8 @@ struct PaywallScreen: View {
                     HStack(spacing: 10) {
                         PlanCard(name: "paywall.plan.lifetime.name", price: price(.lifetime), detail: "paywall.plan.lifetime.detail",
                                  isSelected: plan == .lifetime, showsBadge: true) { plan = .lifetime }
-                        PlanCard(name: "paywall.plan.monthly.name", price: price(.monthly), detail: "paywall.plan.monthly.detail",
+                        PlanCard(name: "paywall.plan.monthly.name", price: price(.monthly),
+                                 detail: entitlements.trialDays.map { "paywall.plan.monthly.trialDetail \($0)" } ?? "paywall.plan.monthly.detail",
                                  isSelected: plan == .monthly, showsBadge: false) { plan = .monthly }
                     }
                     .fixedSize(horizontal: false, vertical: true)
@@ -95,12 +96,23 @@ struct PaywallScreen: View {
                 Task { await buy() }
             } label: {
                 ZStack {
-                    Text("paywall.cta \(price(plan))").opacity(purchasing ? 0 : 1)
+                    ctaTitle.opacity(purchasing ? 0 : 1)
                     if purchasing { ProgressView().tint(Palette.onTint) }
                 }
             }
             .buttonStyle(.dcPrimary)
             .disabled(purchasing || restoring || !entitlements.isAvailable(plan))
+
+            // App Review 3.1.2: the trial's length, what is billed after it, and how to avoid
+            // that, next to the button that starts it.
+            if plan == .monthly, let days = entitlements.trialDays {
+                Text("paywall.trial.terms \(days) \(price(.monthly))")
+                    .font(Typography.caption)
+                    .lineHeight(1.45)
+                    .foregroundStyle(Palette.ink3)
+                    .multilineTextAlignment(.center)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
 
             Button {
                 Task { await restore() }
@@ -121,7 +133,15 @@ struct PaywallScreen: View {
         }
     }
 
-    /// The store's localized price ("₺600"), or a dash until products load.
+    private var ctaTitle: Text {
+        if plan == .monthly, let days = entitlements.trialDays {
+            Text("paywall.cta.trial \(days)")
+        } else {
+            Text("paywall.cta \(price(plan))")
+        }
+    }
+
+    /// The store's localized price ("₺699,99"), or a dash until products load.
     private func price(_ plan: EntitlementStore.Plan) -> String {
         entitlements.prices[plan] ?? "—"
     }

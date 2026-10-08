@@ -22,8 +22,11 @@ final class EntitlementStore {
     /// The RevenueCat entitlement both products unlock.
     static let entitlementID = "premium"
 
-    /// Localized price per plan ("₺600,00"); empty until products load.
+    /// Localized price per plan ("₺699,99"); empty until products load.
     private(set) var prices: [Plan: String] = [:]
+    /// Days of the monthly plan's free trial, when this Apple ID can still take it (App Store
+    /// introductory offer, 3 days); nil otherwise.
+    private(set) var trialDays: Int?
     private(set) var activePlan: Plan?
     /// Complimentary Premium on the signed-in account (set from SessionStore).
     var accountPremium = false
@@ -85,13 +88,32 @@ final class EntitlementStore {
                 packages[plan] = package
                 prices[plan] = package.storeProduct.localizedPriceString
             }
+            if let product = packages[.monthly]?.storeProduct,
+               let intro = product.introductoryDiscount, intro.paymentMode == .freeTrial,
+               await Purchases.shared.checkTrialOrIntroDiscountEligibility(product: product) == .eligible {
+                trialDays = Self.days(intro.subscriptionPeriod.value, unit: intro.subscriptionPeriod.unit)
+            } else {
+                trialDays = nil
+            }
         } else {
-            if let list = try? await Product.products(for: Array(Self.productIDs.values)) {
-                for product in list {
-                    guard let plan = Self.plan(for: product.id) else { continue }
-                    storeKitProducts[plan] = product
-                    prices[plan] = product.displayPrice
-                }
+            // The first request after launch can come back empty (StoreKit still starting up);
+            // one short retry instead of a paywall with dashes.
+            var list = (try? await Product.products(for: Array(Self.productIDs.values))) ?? []
+            if list.isEmpty {
+                try? await Task.sleep(for: .milliseconds(800))
+                list = (try? await Product.products(for: Array(Self.productIDs.values))) ?? []
+            }
+            for product in list {
+                guard let plan = Self.plan(for: product.id) else { continue }
+                storeKitProducts[plan] = product
+                prices[plan] = product.displayPrice
+            }
+            if let subscription = storeKitProducts[.monthly]?.subscription,
+               let intro = subscription.introductoryOffer, intro.paymentMode == .freeTrial,
+               await subscription.isEligibleForIntroOffer {
+                trialDays = intro.period.value * Self.daysPerUnit(intro.period.unit)
+            } else {
+                trialDays = nil
             }
             await refresh()
         }
@@ -108,6 +130,7 @@ final class EntitlementStore {
             let result = try await Purchases.shared.purchase(package: package)
             if result.userCancelled { return false }
             apply(result.customerInfo)
+            if plan == .monthly { trialDays = nil }
             return isPremium
         }
         guard let product = storeKitProducts[plan] else { return false }
@@ -166,6 +189,26 @@ final class EntitlementStore {
             return
         }
         activePlan = Self.plan(for: entitlement.productIdentifier) ?? .lifetime
+    }
+
+    private static func days(_ value: Int, unit: RevenueCat.SubscriptionPeriod.Unit) -> Int {
+        switch unit {
+        case .day: value
+        case .week: value * 7
+        case .month: value * 30
+        case .year: value * 365
+        @unknown default: value
+        }
+    }
+
+    private static func daysPerUnit(_ unit: Product.SubscriptionPeriod.Unit) -> Int {
+        switch unit {
+        case .day: 1
+        case .week: 7
+        case .month: 30
+        case .year: 365
+        @unknown default: 1
+        }
     }
 
     private static func plan(for productID: String) -> Plan? {

@@ -24,7 +24,7 @@ Hesabınızı istediğiniz zaman uygulamadan silebilirsiniz (Ayarlar › Hesap �
 
 Premium, Apple’ın App Store’u üzerinden satılır ve Apple’ın koşullarına ve ödeme işlemlerine tabidir. Fiyatlar, satın almadan önce uygulamada gösterilir.
 
-- **Aylık abonelik:** Geçerli dönemin bitiminden en az 24 saat önce iptal edilmediği sürece her ay gösterilen fiyattan otomatik olarak yenilenir. Ödeme Apple Kimliğinizden alınır. Aboneliği Apple Kimliği ayarlarınızdan yönetebilir ya da iptal edebilirsiniz; iptal bir sonraki yenilemeyi durdurur, erişiminiz ödediğiniz dönemin sonuna kadar sürer.
+- **Aylık abonelik:** Ücretsiz bir deneme süresiyle (3 gün) başlayabilir; deneme bitmeden en az 24 saat önce iptal etmezseniz abonelik başlar ve ücretlendirilir. Geçerli dönemin bitiminden en az 24 saat önce iptal edilmediği sürece her ay gösterilen fiyattan otomatik olarak yenilenir. Ödeme Apple Kimliğinizden alınır. Aboneliği Apple Kimliği ayarlarınızdan yönetebilir ya da iptal edebilirsiniz; iptal bir sonraki yenilemeyi durdurur, erişiminiz ödediğiniz dönemin sonuna kadar sürer.
 - **Ömür boyu:** Premium’u abonelik olmadan açan tek seferlik bir satın almadır.
 - **İadeler** Apple tarafından, Apple’ın politikalarına göre yapılır. App Store satın almaları için iadeyi biz yapamayız.
 - Ayarlar’daki **Satın alımları geri yükle**, aynı Apple Kimliği ile giriş yapılmış bir cihazda Premium’u yeniden etkinleştirir.

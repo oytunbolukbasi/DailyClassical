@@ -2775,6 +2775,23 @@
       },
       "comment": "%@ = StoreKit displayPrice of the selected plan"
     },
+    "paywall.cta.trial %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start %lld-day free trial"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld gün ücretsiz dene"
+          }
+        }
+      }
+    },
     "paywall.error.purchase": {
       "extractionState": "manual",
       "localizations": {
@@ -2913,6 +2930,23 @@
         }
       }
     },
+    "paywall.plan.monthly.trialDetail %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld days free, then monthly. Cancel anytime"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld gün ücretsiz, sonra aylık. İstediğiniz zaman iptal edin"
+          }
+        }
+      }
+    },
     "paywall.privacy": {
       "extractionState": "manual",
       "localizations": {
@@ -3011,6 +3045,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "Bundan daha fazlası."
+          }
+        }
+      }
+    },
+    "paywall.trial.terms %lld %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld days free, then %2$@ a month. Renews automatically unless cancelled at least 24 hours before the trial ends; manage it in your Apple ID settings."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld gün ücretsiz, ardından aylık %2$@. Deneme bitmeden en az 24 saat önce iptal edilmezse otomatik yenilenir; Apple Kimliği ayarlarınızdan yönetebilirsiniz."
           }
         }
       }

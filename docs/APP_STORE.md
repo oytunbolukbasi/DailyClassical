@@ -26,7 +26,7 @@ Son güncelleme: 8 Ekim 2026. Sırayla ilerle; her adımın sonunda bana haber v
 - In-App Purchases › **+** › Non-Consumable
 - Reference Name: `Premium Lifetime`
 - Product ID: `co.dailyclassical.premium.lifetime`
-- Price: (kararını bekliyorum; yerel test dosyasında ₺600)
+- Price: **₺699,99** (Türkiye). Diğer ülkeler için App Store'un önerdiği eşdeğer fiyatları kabul et.
 - Localization (EN): Display Name `Premium, lifetime` · Description `The full library and search, forever.`
 - Localization (TR): Display Name `Premium, ömür boyu` · Description `Kütüphanenin tamamı ve arama, süresiz.`
 
@@ -35,7 +35,8 @@ Son güncelleme: 8 Ekim 2026. Sırayla ilerle; her adımın sonunda bana haber v
 - Reference Name: `Premium Monthly`
 - Product ID: `co.dailyclassical.premium.monthly`
 - Duration: 1 Month
-- Price: (kararını bekliyorum; yerel test dosyasında ₺150)
+- Price: **₺129,99/ay** (Türkiye), diğer ülkeler App Store'un eşdeğeri.
+- **Introductory Offer** (ücretsiz deneme): aboneliğin sayfasında **Subscription Prices** › **Introductory Offers** › **+** › tüm ülkeler, başlangıç bugünden, bitiş yok, tür **Free**, süre **3 Days**. Uygulama denemeyi App Store'dan okuyor; ödeme ekranında "3 gün ücretsiz dene" ve yasal açıklama yalnızca kullanıcı denemeye hak kazanıyorsa görünüyor (her Apple Kimliği bir kez).
 - Localization (EN): `Premium, monthly` · `The full library and search, renewed monthly.`
 - Localization (TR): `Premium, aylık` · `Kütüphanenin tamamı ve arama, her ay yenilenir.`
 - Grubun kendisine de yerelleştirme ekle (EN `DailyClassical Premium`, TR `DailyClassical Premium`).
@@ -86,7 +87,7 @@ Anahtar gelince ben `project.yml` içindeki `REVENUECAT_API_KEY` ayarına yazaca
   • English and Türkçe
   • Home Screen widgets
 
-  Premium unlocks the full library of past pieces and search across pieces, composers and terms. Choose a one-time lifetime purchase or a monthly subscription.
+  Premium unlocks the full library of past pieces and search across pieces, composers and terms. Choose a one-time lifetime purchase, or a monthly subscription that starts with a 3-day free trial.
 
   Terms: https://api.dailyclassical.co/terms · Privacy: https://api.dailyclassical.co/privacy
 - **Keywords (100):** classical,music,symphony,concerto,listening guide,orchestra,composer,piano,beethoven,mozart
@@ -111,7 +112,7 @@ Anahtar gelince ben `project.yml` içindeki `REVENUECAT_API_KEY` ayarına yazaca
   • Türkçe ve İngilizce
   • Ana ekran widget'ları
 
-  Premium, geçmiş eserlerin tamamını içeren kütüphaneyi ve eserlerde, bestecilerde, terimlerde aramayı açar. Tek seferlik ömür boyu satın alma ya da aylık abonelik arasında seçim yapabilirsiniz.
+  Premium, geçmiş eserlerin tamamını içeren kütüphaneyi ve eserlerde, bestecilerde, terimlerde aramayı açar. Tek seferlik ömür boyu satın alma ya da 3 gün ücretsiz denemeyle başlayan aylık abonelik arasında seçim yapabilirsiniz.
 
   Koşullar: https://api.dailyclassical.co/terms · Gizlilik: https://api.dailyclassical.co/privacy
 - **Anahtar kelimeler (100):** klasik müzik,senfoni,konçerto,dinleme rehberi,orkestra,besteci,piyano,beethoven,mozart
@@ -133,7 +134,7 @@ Hesapsız kullanımda hiçbir şey toplanmıyor, ama etiketler en geniş durumu 
 - **Sign-in required:** Hayır, ama hesap özelliklerini denemek için bir test hesabı verilmeli: `premium-test@dailyclassical.co` (şifre git'e girmeyen `backend/test-accounts.local.md` dosyasında). Bu hesapta hediye Premium var; inceleme ekibi kilitli içeriği satın almadan görebilir.
 - **Notes (EN, öneri):**
 
-  DailyClassical shows one classical work a day with a listening guide. Today's piece is free; Premium (one non-consumable and one monthly subscription) unlocks past pieces and search. The demo account has complimentary Premium for review. Recordings open in Spotify; we do not stream audio. Paintings are public domain; sources are listed in Settings › Painting and recording sources. Accounts can be deleted in Settings › Account › Delete account; Sign in with Apple accounts are revoked with Apple on deletion.
+  DailyClassical shows one classical work a day with a listening guide. Today's piece is free; Premium (one non-consumable, and one monthly subscription with a 3-day free trial) unlocks past pieces and search. The demo account has complimentary Premium for review. Recordings open in Spotify; we do not stream audio. Paintings are public domain; sources are listed in Settings › Painting and recording sources. Accounts can be deleted in Settings › Account › Delete account; Sign in with Apple accounts are revoked with Apple on deletion.
 
 - **Contact:** ad, telefon ve e-posta (senin bilgilerin).
 

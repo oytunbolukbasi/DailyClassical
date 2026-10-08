@@ -24,7 +24,7 @@ You can delete your account at any time in the app (Settings › Account › Del
 
 Premium is sold through Apple’s App Store and is subject to Apple’s terms and payment processing. Prices are shown in the app before you buy.
 
-- **Monthly subscription:** renews automatically each month at the price shown, unless you cancel at least 24 hours before the end of the current period. Payment is charged to your Apple ID. You can manage or cancel the subscription in your Apple ID settings; cancelling stops the next renewal, and access continues until the end of the period you have paid for.
+- **Monthly subscription:** may start with a free trial (3 days); if you don’t cancel at least 24 hours before the trial ends, the subscription begins and is charged. It renews automatically each month at the price shown, unless you cancel at least 24 hours before the end of the current period. Payment is charged to your Apple ID. You can manage or cancel the subscription in your Apple ID settings; cancelling stops the next renewal, and access continues until the end of the period you have paid for.
 - **Lifetime:** a one-time purchase that unlocks Premium without a subscription.
 - **Refunds** are handled by Apple under its policies. We cannot issue refunds for App Store purchases ourselves.
 - **Restore purchases** in Settings re-activates Premium on a device signed in with the same Apple ID.
