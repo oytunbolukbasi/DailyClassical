@@ -134,7 +134,7 @@ Hesapsız kullanımda hiçbir şey toplanmıyor, ama etiketler en geniş durumu 
 - **Sign-in required:** Hayır, ama hesap özelliklerini denemek için bir test hesabı verilmeli: `premium-test@dailyclassical.co` (şifre git'e girmeyen `backend/test-accounts.local.md` dosyasında). Bu hesapta hediye Premium var; inceleme ekibi kilitli içeriği satın almadan görebilir.
 - **Notes (EN, öneri):**
 
-  DailyClassical shows one classical work a day with a listening guide. Today's piece is free; Premium (one non-consumable, and one monthly subscription with a 3-day free trial) unlocks past pieces and search. The demo account has complimentary Premium for review. Recordings open in Spotify; we do not stream audio. Paintings are public domain; sources are listed in Settings › Painting and recording sources. Accounts can be deleted in Settings › Account › Delete account; Sign in with Apple accounts are revoked with Apple on deletion.
+  DailyClassical shows one classical work a day with a listening guide. Today's piece is free; Premium (one non-consumable, and one monthly subscription with a 3-day free trial) unlocks past pieces, search, and each day's painting as a wallpaper (saved to Photos with add-only access). The demo account has complimentary Premium for review. Recordings open in Spotify; we do not stream audio. Paintings are public domain; sources are listed in Settings › Painting and recording sources. Accounts can be deleted in Settings › Account › Delete account; Sign in with Apple accounts are revoked with Apple on deletion.
 
 - **Contact:** ad, telefon ve e-posta (senin bilgilerin).
 
