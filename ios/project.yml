@@ -17,10 +17,12 @@ settings:
     CODE_SIGN_STYLE: Automatic
     LOCALIZATION_PREFERS_STRING_CATALOGS: YES
     SWIFT_EMIT_LOC_STRINGS: YES
-  # Read by the app (APIClient) and the widget (its own feed, GET /v1/widget).
+  # Read by the app (APIClient) and the widget (its own feed, GET /v1/widget). Debug builds talk to
+  # production too (sign-in, favourites; content only with DC_USE_API=1). For a local server, build
+  # with API_BASE_URL=http://localhost:3101 (simulator) on the xcodebuild command line.
   configs:
     Debug:
-      API_BASE_URL: "http:/$()/Oytuns-MacBook-Pro.local:3100"
+      API_BASE_URL: "https:/$()/api.dailyclassical.co"
     Release:
       API_BASE_URL: "https:/$()/api.dailyclassical.co"
 targets:

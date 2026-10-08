@@ -6,12 +6,10 @@ Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 1. **[Claude] Koyu modda Sözlük, Kayıtlar ve Besteci sheet'lerine bakmak:** Ana ekranlar, Hesap, Favoriler, premium Arama ve "Şeffaflığı Azalt" kontrol edildi. Bu üç sheet'e koyu modda ayrıca bakılmadı.
 2. **[Claude] Denetimin (`design/AUDIT.md`) kalan küçük maddeleri:** Kısa tanım, toplu yükleme ve Dynamic Type yapıldı. Kalan P2 maddeleri (ör. eser görüntüleyicide zoom'un sınırlandırılması, Today'in yayın tarihini göstermesi) tek tek gözden geçirilecek.
 3. **[Claude] Rahmaninov tablosu:** Levitan'ın *Göl* tablosunun açık lisanslı en iyi görüntüsü 2000×1403 piksel. Diğer tablolardan biraz daha yumuşak görünüyor ve Levitan, Çaykovski 6'nın da ressamı. Daha yüksek çözünürlüklü bir alternatif aranabilir (senin onayınla).
-7. **[Claude] Debug build'i Railway'e bağlamak:** Railway'in herkese açık domaini olunca debug build Mac'teki lokal API yerine oraya bağlanacak.
 8. **[Claude + Oytun] VoiceOver'ı cihazda denemek:** Kod tarafı tamam: günler arası geçiş eylemleri, bölüm düğmesi etiketleri, okunur durak zamanları, sözlük terimi ipucu. Cihazda VoiceOver açıkken bir kez gezinmek gerekiyor.
 9. **[Claude + Oytun] Widget'ın renklendirilmiş (tinted) modu:** Cihazda ana ekran stili "Renklendirilmiş" ve "Şeffaf" iken widget'ların görünümü kontrol edilecek.
 
 ## İçerik güncelleme servisi: senden beklenenler
-- **[Oytun] GitHub secret:** Repo ayarlarında (Settings → Secrets and variables → Actions) `DATABASE_URL_UNPOOLED` secret'ını ekle (Neon'un direct bağlantı adresi). Eklenene kadar Action içeriği yalnızca doğrular, yayınlamaz.
 - **[Oytun] App Store linki:** Uygulama App Store'da olunca Railway'e `APP_STORE_URL` ekle. Güncelleme istemek için `LATEST_APP_VERSION` (bir kez önerir) ya da `MIN_APP_VERSION` (zorunlu ekran) kullanılır. Normalde ikisi de boş kalır.
 - **[Oytun + Claude] Cihazda widget denemesi:** Release/TestFlight build'inde ana ekrana widget ekle; gece yarısı geçince yeni günün eserine geçtiğini ve uygulama açılmadan yeni eserleri gösterdiğini kontrol et.
 
@@ -27,9 +25,7 @@ Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 
 ## Altyapı
 15. **[Oytun] Sırları yenilemek:** Neon şifresi, Resend API anahtarı ve production `JWT_SECRET` bu sohbette açık geçti. Yenilenip Railway değişkenlerine ve lokal `backend/.env` dosyasına işlenmeli.
-16. **[Oytun] `api.dailyclassical.co` domainini Railway'e bağlamak:** Railway'de Custom Domain eklenecek, DNS'e CNAME kaydı girilecek. Cloudflare kullanılıyorsa proxy kapalı olmalı. Şifre sıfırlama linkleri ve TestFlight/Release sürümü buna bağlı.
 17. **[Oytun] Neon'da `dev` branch'i:** Neon panelinde production'dan bir `dev` branch'i aç ve bağlantı adresini lokal `backend/.env` dosyasına yaz (ya da bana ver). Şu an lokal geliştirme ve seed doğrudan production veritabanına gidiyor. Bilgisayarda Neon CLI ya da API anahtarı olmadığı için bunu ben açamadım.
-17a. **[Oytun] Railway bölgesi:** Neon `us-east-2` (Ohio) bölgesinde. Railway servisi de ABD doğu bölgesinde olmalı. Aksi halde her istek okyanus aşırı birkaç sorgu yapıyor (Türkiye'den lokal ölçüm: `/v1/today` ilk istekte 4 saniye). Sunucuya 1 dakikalık önbellek eklendi, tekrar eden istekler artık anında dönüyor.
 18. **[Oytun] Kullanım koşulları ve gizlilik sayfaları:** `dailyclassical.co/terms` ve `/privacy`. App Store bunları istiyor.
 19. **[Oytun + Claude] App Store Connect hazırlığı:**
     - Uygulama kaydı (`co.dailyclassical.app`).
@@ -40,6 +36,13 @@ Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 ## Yayından önce sıfırlanacak test verisi
 - **Takvim:** `content/schedule.yaml` içerik kontrolü için 27 Eylül 2026'dan başlıyor, böylece 10 eserin hepsi Kitaplık'ta görünüyor. Yayından önce `start` yayın gününe çekilecek ve sıra Çaykovski 6 ile başlayacak. Ardından `npm run db:seed && npm run fixtures` çalıştırılacak.
 - **Debug premium:** Debug build'lerde premium varsayılan olarak açık (`EntitlementStore.debugUnlock`). Release build'leri etkilemiyor, sıfırlanması gerekmiyor.
+
+## Tamamlananlar (8 Ekim 2026, production)
+- **Domain:** `api.dailyclassical.co` Railway'e bağlı. SSL var, tüm uç noktalar ve şifre sıfırlama sayfası yanıt veriyor.
+- **Railway bölgesi:** ABD doğu (Neon ile aynı bölge). Türkiye'den tekrar eden istekler yaklaşık 0,4 saniye.
+- **Yayın hattı:** GitHub secret eklendi. `content-publish` iş akışı elle çalıştırıldı: migration'lar uygulandı, 14 eser production'a yüklendi.
+- **Debug build:** Artık Mac'teki sunucuya değil production'a bağlanıyor (giriş, favoriler). İçerik yine gömülü veriden geliyor, `DC_USE_API=1` ile API'den.
+- **Telefona Release build kuruldu:** Production'a bağlı. App Store Connect'te ürünler henüz olmadığı için paywall fiyat gösteremez.
 
 ## Tamamlananlar (7 Ekim 2026, plan maddeleri, ikinci kısım)
 - **Hata: favoriler sunucudan hiç yüklenmiyordu.** API tarihleri milisaniyeli gönderiyor, uygulama bunları okuyamıyordu ve hata sessizce yutuluyordu. Favoriler listesi yalnızca o oturumda kalbe basılanları gösteriyordu. Düzeltildi, test eklendi.
