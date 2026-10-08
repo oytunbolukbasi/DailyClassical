@@ -6,15 +6,17 @@ import { requestLocale } from "../lib/locale.js";
 import { renderMarkdown } from "../lib/markdown.js";
 
 /**
- * GET /terms, /privacy and /support (?locale=tr, else Accept-Language): the Terms of Use, Privacy
- * Policy and support page, written in backend/legal/<page>.<locale>.md. The app opens them in an
+ * GET /, /terms, /privacy and /support (?locale=tr, else Accept-Language): a placeholder home page,
+ * the Terms of Use, Privacy Policy and support page, written in backend/legal/<page>.<locale>.md. The app opens them in an
  * in-app browser; App Store Connect links to /privacy (privacy URL) and /support (support URL).
- * They move to dailyclassical.co when the website exists.
+ * Served on dailyclassical.co (and api.dailyclassical.co, which the app still links to).
  */
 export const legal = new Hono();
 
-const pages = ["terms", "privacy", "support"] as const;
+const pages = ["home", "terms", "privacy", "support"] as const;
 type Page = (typeof pages)[number];
+/** The home page (a placeholder until the website) lives at the root. */
+const path = (page: Page) => (page === "home" ? "/" : `/${page}`);
 
 const read = (page: Page, locale: Locale) =>
   readFileSync(fileURLToPath(new URL(`../../legal/${page}.${locale}.md`, import.meta.url)), "utf8");
@@ -26,14 +28,15 @@ const other: Record<Locale, { locale: Locale; label: string }> = {
 
 export function renderLegalPage(page: Page, locale: Locale, markdown: string): string {
   const body = renderMarkdown(markdown);
-  const title = markdown.match(/^#\s+(.*)$/m)?.[1] ?? "DailyClassical";
+  const heading = markdown.match(/^#\s+(.*)$/m)?.[1];
+  const title = page === "home" || !heading ? "DailyClassical" : `${heading} · DailyClassical`;
   const switchTo = other[locale];
   return `<!doctype html>
 <html lang="${locale}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${title} · DailyClassical</title>
+<title>${title}</title>
 <style>
 :root{--bg:#F5F2EC;--surface:#FFFFFF;--ink:#1E1B17;--ink2:#5E5852;--ink3:#8A837B;--rule:rgba(30,27,23,.12);--accent:#6B4A2B;color-scheme:light dark}
 @media (prefers-color-scheme:dark){:root{--bg:#111010;--surface:#1C1A18;--ink:#F0EBE3;--ink2:#B3ABA1;--ink3:#7D766E;--rule:rgba(240,235,227,.12);--accent:#D4AE84}}
@@ -56,7 +59,7 @@ a{color:var(--accent);text-decoration-thickness:.5px;text-underline-offset:2px}
 </head>
 <body>
 <main>
-<div class="top"><span class="brand" lang="en">DailyClassical</span><a href="/${page}?locale=${switchTo.locale}" hreflang="${switchTo.locale}">${switchTo.label}</a></div>
+<div class="top"><span class="brand" lang="en">DailyClassical</span><a href="${path(page)}?locale=${switchTo.locale}" hreflang="${switchTo.locale}">${switchTo.label}</a></div>
 ${body}
 </main>
 </body>
@@ -69,7 +72,7 @@ const rendered = Object.fromEntries(
 );
 
 for (const page of pages) {
-  legal.get(`/${page}`, (c) => {
+  legal.get(path(page), (c) => {
     c.header("Cache-Control", "public, max-age=3600");
     return c.html(rendered[`${page}.${requestLocale(c)}`]!);
   });

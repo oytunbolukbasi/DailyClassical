@@ -15,8 +15,9 @@ Son güncelleme: 8 Ekim 2026. Sırayla ilerle; her adımın sonunda bana haber v
    - Category: Primary **Music**, Secondary **Education**
    - Content Rights: "Does not contain, show, or access third-party content" değil; tablolar kamu malı, kayıtlar Spotify'a bağlantı. **"Yes, it contains third-party content and I have the rights"** seçilmeli (kamu malı tablolar + bağlantılar).
    - Age Rating anketi: her şey "None" → **4+**.
-   - Privacy Policy URL: `https://api.dailyclassical.co/privacy`
-   - **Support URL** (sürüm sayfası, zorunlu): `https://api.dailyclassical.co/support` (iletişim, Premium geri yükleme, iptal, iade, hesap; EN/TR, `backend/legal/support.*.md`). Türkçe sayfada `https://api.dailyclassical.co/support?locale=tr`.
+   - Privacy Policy URL: `https://www.dailyclassical.co/privacy` (alan adı bağlanana kadar `https://api.dailyclassical.co/privacy` da çalışır)
+   - **Support URL** (sürüm sayfası, zorunlu): `https://www.dailyclassical.co/support` (iletişim, Premium geri yükleme, iptal, iade, hesap; EN/TR, `backend/legal/support.*.md`). Türkçe sayfada `…/support?locale=tr`. Önce aşağıdaki "Ana alan adı" adımı yapılmalı.
+   - **Ana alan adı (dailyclassical.co):** Aynı Railway servisi `/` (geçici ana sayfa), `/support`, `/privacy`, `/terms` sayfalarını sunar. Railway › servis › **Settings › Networking › Custom Domain** › `www.dailyclassical.co` ekle; Railway'in verdiği CNAME hedefini GoDaddy › DNS'te `www` CNAME kaydına yaz (park kaydını değiştir). Kök alan adı (`dailyclassical.co`) için GoDaddy › **Forwarding** › `https://www.dailyclassical.co` (301, kalıcı). GoDaddy kökte CNAME desteklemediği için kök doğrudan Railway'e bağlanamaz.
    - **Marketing URL** (isteğe bağlı): web sitesi kurulana kadar boş.
    - **Copyright:** `2026 <hak sahibi>` (© işareti App Store Connect'te eklenmiyor; satıcı adınla aynı olması yeterli).
 3. **Agreements, Tax, and Banking** (Business bölümü): **Paid Apps** sözleşmesini imzala, banka ve vergi bilgilerini gir. Bu tamamlanmadan uygulama içi satın almalar sandbox'ta bile ürün döndürmez.
