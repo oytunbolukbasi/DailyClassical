@@ -513,6 +513,24 @@
         }
       }
     },
+    "auth.apple.continue": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continue with Apple"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple ile Devam Et"
+          }
+        }
+      },
+      "comment": "Apple's approved Sign in with Apple title; keep Apple's exact wording and casing."
+    },
     "auth.apple.error.failed": {
       "extractionState": "manual",
       "localizations": {

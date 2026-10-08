@@ -1,9 +1,12 @@
 import AuthenticationServices
 import SwiftUI
+import UIKit
 
-/// "Continue with Apple" (Apple's own button, black on paper, white in dark mode), at the size of
-/// our solid buttons. One button for both sign-up and sign-in: the server creates the account the
-/// first time and links an existing one with the same verified email.
+/// "Continue with Apple" at the size of our solid buttons: black on paper, white in dark mode.
+/// Drawn by us (Apple's HIG allows custom buttons with the Apple logo and its approved titles)
+/// because the system button takes its title from the device language, not the in-app one.
+/// One button for both sign-up and sign-in: the server creates the account the first time and
+/// links an existing one with the same verified email.
 struct AppleSignInButton: View {
     /// Called once the session exists (save the pending favourite, close the sheet).
     let onSignedIn: () async -> Void
@@ -13,19 +16,28 @@ struct AppleSignInButton: View {
     @Environment(LanguageSettings.self) private var language
     @Environment(\.colorScheme) private var colorScheme
     @State private var busy = false
+    @State private var authorizer = AppleAuthorizer()
 
     var body: some View {
-        SignInWithAppleButton(.continue) { request in
-            request.requestedScopes = [.email]
-        } onCompletion: { result in
-            Task { await handle(result) }
+        let ink: Color = colorScheme == .dark ? .black : .white
+        Button {
+            Task { await handle(await authorizer.authorize()) }
+        } label: {
+            ZStack {
+                HStack(spacing: 6) {
+                    Image(systemName: "apple.logo").font(.system(size: 18, weight: .medium)).offset(y: -1)
+                    Text("auth.apple.continue").font(Typography.button).tracking(-0.2)
+                }
+                .opacity(busy ? 0 : 1)
+                if busy { ProgressView().tint(ink) }
+            }
+            .foregroundStyle(ink)
+            .frame(maxWidth: .infinity, minHeight: 52)
+            .background(colorScheme == .dark ? Color.white : Color.black, in: .capsule)
+            .contentShape(.capsule)
         }
-        .signInWithAppleButtonStyle(colorScheme == .dark ? .white : .black)
-        .frame(height: 52)
-        .clipShape(.capsule)
+        .buttonStyle(.plain)
         .disabled(busy)
-        .opacity(busy ? 0.5 : 1)
-        .overlay { if busy { ProgressView().tint(colorScheme == .dark ? .black : .white) } }
     }
 
     private func handle(_ result: Result<ASAuthorization, Error>) async {
@@ -68,5 +80,44 @@ struct AuthDivider: View {
             Rectangle().fill(Palette.rule).frame(height: 0.5)
         }
         .accessibilityHidden(true)
+    }
+}
+
+/// Runs Apple's authorization sheet and hands back its result (ASAuthorizationController is
+/// delegate based).
+@MainActor
+private final class AppleAuthorizer: NSObject, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
+    private var continuation: CheckedContinuation<Result<ASAuthorization, Error>, Never>?
+
+    func authorize() async -> Result<ASAuthorization, Error> {
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        request.requestedScopes = [.email]
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = self
+        controller.presentationContextProvider = self
+        return await withCheckedContinuation { continuation in
+            self.continuation = continuation
+            controller.performRequests()
+        }
+    }
+
+    nonisolated func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        MainActor.assumeIsolated { finish(.success(authorization)) }
+    }
+
+    nonisolated func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        MainActor.assumeIsolated { finish(.failure(error)) }
+    }
+
+    nonisolated func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        MainActor.assumeIsolated {
+            let scenes = UIApplication.shared.connectedScenes.compactMap { $0 as? UIWindowScene }
+            return scenes.flatMap(\.windows).first { $0.isKeyWindow } ?? ASPresentationAnchor()
+        }
+    }
+
+    private func finish(_ result: Result<ASAuthorization, Error>) {
+        continuation?.resume(returning: result)
+        continuation = nil
     }
 }

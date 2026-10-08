@@ -574,5 +574,10 @@
   "auth.apple.error.noEmail": {
     "en": "Apple didn’t share an email address. Please try again, or sign up with your email.",
     "tr": "Apple bir e-posta adresi paylaşmadı. Lütfen tekrar deneyin ya da e-postanızla kaydolun."
+  },
+  "auth.apple.continue": {
+    "en": "Continue with Apple",
+    "tr": "Apple ile Devam Et",
+    "comment": "Apple's approved Sign in with Apple title; keep Apple's exact wording and casing."
   }
 }
