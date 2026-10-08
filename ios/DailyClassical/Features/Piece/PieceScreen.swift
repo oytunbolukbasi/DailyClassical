@@ -134,6 +134,17 @@ struct PieceContent: View {
         }
         // The user reads along while the music plays: the screen must not dim or lock.
         .onAppear { UIApplication.shared.isIdleTimerDisabled = true }
+        #if DEBUG
+        .task {
+            guard ScreenshotScene.piece == piece.id else { return }
+            // Twice: the first write can land before every block has been measured.
+            for _ in 0..<2 {
+                try? await Task.sleep(for: .seconds(2))
+                if let y = ScreenshotScene.scroll { position.scrollTo(y: y) }
+            }
+            if ScreenshotScene.artwork { showArtwork = true }
+        }
+        #endif
         .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
         .animation(reduceMotion ? nil : .easeOut(duration: 0.2), value: currentStop)
     }

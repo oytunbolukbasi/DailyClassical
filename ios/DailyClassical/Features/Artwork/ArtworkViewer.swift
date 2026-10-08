@@ -72,6 +72,13 @@ struct ArtworkViewer: View {
                 .presentationBackground(.black)
         }
         .fullScreenCover(isPresented: $showPaywall) { PaywallScreen() }
+        #if DEBUG
+        .task {
+            guard ScreenshotScene.wallpaper else { return }
+            try? await Task.sleep(for: .seconds(1))
+            showWallpaper = true
+        }
+        #endif
         .environment(\.colorScheme, .dark)
         .statusBarHidden()
     }

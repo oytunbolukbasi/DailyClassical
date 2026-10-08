@@ -140,7 +140,11 @@ Hesapsız kullanımda hiçbir şey toplanmıyor, ama etiketler en geniş durumu 
 
 ## 8. Ekran görüntüleri [Claude, Oytun onayı]
 
-Zorunlu boyut: 6.9" (iPhone 16 Pro Max / 17 Pro Max, 1320×2868). 3–6 görüntü önerisi: Bugün, eser sayfası (dinleme durakları), sözlük terimi, Kitaplık, besteci kartı, widget. Görüntüleri simülatörden ben alırım; üstüne başlık yazısı istersen Claude Design'da birlikte hazırlarız.
+Zorunlu boyut: 6.9" (1320×2868). Taslak set hazır (EN + TR, 6'şar görüntü): `design/app-store/out/<dil>/01–06.png`, genel bakış `design/app-store/contact-sheet.png`. Sıra: Bugün, dinleme durakları, sözlük, Kitaplık, besteci, duvar kâğıdı (Premium).
+
+- Ham ekranlar: `ios/scripts/app-store-shots.sh <simülatör-udid>` (Debug build; `App/ScreenshotScene.swift` launch argümanlarıyla her ekranı doğrudan açar). `design/app-store/raw/` git'e girmez.
+- Çerçeve: `design/app-store/frame.html` (başlıklar ve metinler burada), `design/app-store/render.sh` ile 1320×2868 PNG.
+- İçerik değişince (ör. yayın günü takvimi) iki komutla yeniden üretilir.
 
 ## 9. TestFlight ve gönderim [Claude + Oytun]
 

@@ -1,0 +1,87 @@
+<!doctype html>
+<!-- One App Store screenshot (1320×2868, 6.9"): frame.html?lang=en&n=1. Rendered by render.sh. -->
+<html>
+<head>
+<meta charset="utf-8">
+<title>App Store frame</title>
+<style>
+  @font-face { font-family: Literata; font-weight: 500; src: url("../../ios/DailyClassical/Resources/Fonts/Literata-Medium.ttf"); }
+  @font-face { font-family: Literata; font-weight: 400; src: url("../../ios/DailyClassical/Resources/Fonts/Literata-Regular.ttf"); }
+
+  :root {
+    /* App tokens (design/SPEC.md §1) */
+    --bg: #F5F2EC; --ink: #1E1B17; --ink2: #5E5852; --accent: #6B4A2B; --bezel: #1E1B17;
+  }
+  .dark { --bg: #111010; --ink: #F0EBE3; --ink2: #B3ABA1; --accent: #D4AE84; --bezel: #2A2724; }
+
+  html, body { margin: 0; width: 1320px; height: 2868px; overflow: hidden; }
+  body { background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; position: relative; }
+
+  .copy { position: absolute; left: 112px; right: 112px; top: 200px; }
+  .label {
+    font: 600 30px/1 -apple-system, "SF Pro Text", sans-serif; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 34px;
+  }
+  h1 {
+    font: 500 112px/1.08 Literata, serif; letter-spacing: -0.012em; margin: 0;
+    text-wrap: balance;
+  }
+  p {
+    font: 400 42px/1.42 -apple-system, "SF Pro Text", sans-serif; color: var(--ink2);
+    margin: 30px 0 0; max-width: 1000px; text-wrap: pretty;
+  }
+
+  /* The phone: the screenshot inside a slim bezel, bleeding off the bottom edge. */
+  .phone {
+    position: absolute; left: 50%; transform: translateX(-50%);
+    top: 830px; width: 1010px; padding: 16px; border-radius: 150px;
+    background: var(--bezel);
+    box-shadow: 0 60px 120px rgba(30, 27, 23, 0.22), 0 18px 40px rgba(30, 27, 23, 0.14);
+  }
+  .dark .phone { box-shadow: 0 60px 140px rgba(0, 0, 0, 0.6), inset 0 0 0 2px rgba(255,255,255,0.06); }
+  .phone img { display: block; width: 100%; border-radius: 134px; }
+</style>
+</head>
+<body>
+  <div class="copy">
+    <div class="label" id="label"></div>
+    <h1 id="title"></h1>
+    <p id="body"></p>
+  </div>
+  <div class="phone"><img id="shot" alt=""></div>
+
+<script>
+const FRAMES = [
+  { file: "01-today",
+    en: { label: "Every day", title: "One classical work a day.", body: "Chosen for today, with a painting from the same world." },
+    tr: { label: "Her gün", title: "Her gün bir klasik eser.", body: "Bugün için seçildi; aynı dünyadan bir tabloyla." } },
+  { file: "02-piece",
+    en: { label: "Listening guide", title: "Press play, then follow along.", body: "What to listen for, minute by minute, timed to a great recording." },
+    tr: { label: "Dinleme rehberi", title: "Çalmaya başlayın, sonra takip edin.", body: "Neyi dinleyeceğiniz, dakika dakika, zamansız bir kayda göre." } },
+  { file: "03-glossary",
+    en: { label: "No jargon", title: "Written for listeners.", body: "Tap a musical term for a short, plain explanation." },
+    tr: { label: "Terim yok", title: "Dinleyiciler için yazıldı.", body: "Bir müzik terimine dokunun, kısa ve sade bir açıklama açılsın." } },
+  { file: "04-library",
+    en: { label: "Library", title: "A library that grows every day.", body: "Symphonies, concertos and sonatas, each with its painting." },
+    tr: { label: "Kitaplık", title: "Her gün büyüyen bir kitaplık.", body: "Senfoniler, konçertolar, sonatlar; her biri kendi tablosuyla." } },
+  { file: "05-composer",
+    en: { label: "Composers", title: "Meet the person behind the music.", body: "A short life, the key facts and every piece in the app." },
+    tr: { label: "Besteciler", title: "Müziğin ardındaki insan.", body: "Kısa bir hayat hikâyesi, temel bilgiler ve uygulamadaki eserleri." } },
+  { file: "06-wallpaper", dark: true,
+    en: { label: "Premium", title: "Each day’s painting as a wallpaper.", body: "Frame it for your screen and save it to Photos." },
+    tr: { label: "Premium", title: "Günün tablosu duvar kâğıdı olarak.", body: "Ekranınıza göre yerleştirin, Fotoğraflar’a kaydedin." } },
+];
+
+const q = new URLSearchParams(location.search);
+const lang = q.get("lang") || "en";
+const f = FRAMES[(parseInt(q.get("n"), 10) || 1) - 1];
+const t = f[lang];
+document.documentElement.lang = lang;
+if (f.dark) document.body.classList.add("dark");
+document.getElementById("label").textContent = t.label;
+document.getElementById("title").textContent = t.title;
+document.getElementById("body").textContent = t.body;
+document.getElementById("shot").src = `raw/${lang}/${f.file}.png`;
+</script>
+</body>
+</html>
