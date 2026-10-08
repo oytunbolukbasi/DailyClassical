@@ -89,6 +89,8 @@ Her ürün için **Review Screenshot** istenir: `design/app-store/review/premium
 
 1. App Store Connect › Users and Access › **Sandbox** › bir test hesabı oluştur (gerçek Apple Kimliğinden farklı bir e-posta).
 2. Telefonda **Ayarlar › Geliştirici › Sandbox Apple Hesabı** ile o hesaba gir (yeni iOS sürümlerinde App Store ayarlarında değil). Daha kolayı: Xcode'dan kurulan build'de satın almaya basınca **[Environment: Sandbox]** yazan giriş penceresi açılır, test hesabıyla orada gir.
+**Durum (8 Ekim 2026):** Cihazda sandbox hesabıyla aylık abonelik (3 gün deneme) satın alındı, Ayarlar'da "Aylık" görünüyor. Kalan: RevenueCat Customers'ta işlemin görünmesi, silip kurduktan sonra geri yükleme.
+
 3. Ben anahtarla bir Release build kuracağım; paywall'da gerçek fiyatlar görünmeli. Satın al, Ayarlar'da "Ömür boyu"/"Aylık" görünmeli, RevenueCat panelinde işlem düşmeli. Silip yeniden kurduktan sonra **Satın alımları geri yükle** çalışmalı.
 
 ## 5. Mağaza sayfası metinleri (taslak) [Oytun onayı]
