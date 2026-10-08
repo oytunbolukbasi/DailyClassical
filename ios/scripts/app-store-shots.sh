@@ -38,3 +38,10 @@ for lang in $LANGS; do
   shot $lang 05-composer  24 -shotSheet composer:tchaikovsky
   shot $lang 06-wallpaper 34 -shotPiece rachmaninoff-piano-concerto-2 -shotArtwork YES -shotWallpaper YES
 done
+
+# In-app purchase review screenshots (App Store Connect › each product › Review Screenshot), English.
+shot en review-monthly  30 -debugPremium NO -debugTrialDays 3 -shotSheet paywall
+shot en review-lifetime 30 -debugPremium NO -debugTrialDays 3 -shotSheet paywall -shotPlan lifetime
+mkdir -p $ROOT/design/app-store/review
+cp $OUT/en/review-monthly.png $ROOT/design/app-store/review/premium-monthly.png
+cp $OUT/en/review-lifetime.png $ROOT/design/app-store/review/premium-lifetime.png

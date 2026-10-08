@@ -94,6 +94,7 @@ final class EntitlementStore {
         guard days > 0 else { return }
         trialDays = days
         if prices[.monthly] == nil { prices[.monthly] = "₺129,99" }
+        if prices[.lifetime] == nil { prices[.lifetime] = "₺699,99" }
     }
 
     /// Re-reads the products after the test preview is switched on or off.

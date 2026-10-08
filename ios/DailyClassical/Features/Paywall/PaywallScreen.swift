@@ -82,6 +82,9 @@ struct PaywallScreen: View {
                 .padding(.trailing, 16)
         }
         .task { if entitlements.prices.isEmpty { await entitlements.load() } }
+        #if DEBUG
+        .task { if ScreenshotScene.plan == "lifetime" { plan = .lifetime } }
+        #endif
         .onChange(of: entitlements.isPremium) { _, premium in
             if premium { dismiss() }
         }

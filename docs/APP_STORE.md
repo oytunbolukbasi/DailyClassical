@@ -41,7 +41,7 @@ Son güncelleme: 8 Ekim 2026. Sırayla ilerle; her adımın sonunda bana haber v
 - Localization (TR): `Premium, aylık` · `Kütüphanenin tamamı ve arama, her ay yenilenir.`
 - Grubun kendisine de yerelleştirme ekle (EN `DailyClassical Premium`, TR `DailyClassical Premium`).
 
-Her ürün için **Review Screenshot** istenir: paywall ekranının bir görüntüsü yeterli (ben hazırlayabilirim).
+Her ürün için **Review Screenshot** istenir: `design/app-store/review/premium-lifetime.png` (ömür boyu seçili) ve `premium-monthly.png` (aylık + deneme seçili), İngilizce, 1320×2868.
 
 ## 3. RevenueCat [Oytun]
 

@@ -10,6 +10,7 @@ import SwiftUI
 ///     -shotSheet glossary:<term>    a router sheet (also composer:<id>, paywall)
 ///     -shotArtwork YES              the piece's artwork viewer
 ///     -shotWallpaper YES            …and its wallpaper sheet
+///     -shotPlan lifetime            the paywall's selected plan (with -debugTrialDays 3 for prices)
 ///
 /// Debug builds only.
 enum ScreenshotScene {
@@ -21,6 +22,7 @@ enum ScreenshotScene {
     static var sheet: String? { defaults.string(forKey: "shotSheet") }
     static var artwork: Bool { defaults.bool(forKey: "shotArtwork") }
     static var wallpaper: Bool { defaults.bool(forKey: "shotWallpaper") }
+    static var plan: String? { defaults.string(forKey: "shotPlan") }
 
     /// Applied once, after the first screen has loaded.
     @MainActor static func apply(to router: AppRouter) async {
