@@ -45,8 +45,8 @@ struct PaywallScreen: View {
 
                     VStack(alignment: .leading, spacing: 10) {
                         BenefitLine("paywall.benefit.library")
-                        BenefitLine("paywall.benefit.catchUp")
                         BenefitLine("paywall.benefit.search")
+                        BenefitLine("paywall.benefit.catchUp")
                         BenefitLine("paywall.benefit.wallpaper")
                     }
                     .padding(.top, 18)
@@ -184,7 +184,7 @@ struct PaywallPainting: View {
 }
 
 /// Accent checkmark + SF 15/1.4 ink (SPEC §3.14).
-private struct BenefitLine: View {
+struct BenefitLine: View {
     let key: LocalizedStringKey
     init(_ key: LocalizedStringKey) { self.key = key }
 

@@ -2550,40 +2550,6 @@
         }
       }
     },
-    "onboarding.1.body": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Press play in Spotify, come back, and follow along. Today’s piece is already waiting behind this card."
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Spotify’da çalmaya başlayın, buraya dönün ve takip edin. Bugünün eseri bu kartın arkasında sizi bekliyor."
-          }
-        }
-      }
-    },
-    "onboarding.1.title": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "One classical work a day, with a guide you read while it plays."
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Her gün bir klasik eser, çalarken okuyacağınız bir rehberle."
-          }
-        }
-      }
-    },
     "onboarding.2.body": {
       "extractionState": "manual",
       "localizations": {
@@ -2619,24 +2585,6 @@
       },
       "comment": "%@ = 24-hour time, e.g. 08:00"
     },
-    "onboarding.2.eyebrow": {
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Last thing"
-          }
-        },
-        "tr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Son bir şey"
-          }
-        }
-      },
-      "comment": "Rendered uppercase"
-    },
     "onboarding.2.notNow": {
       "extractionState": "manual",
       "localizations": {
@@ -2671,6 +2619,60 @@
         }
       }
     },
+    "onboarding.caption.levitan": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Isaac Levitan, *Above the Eternal Peace*, 1894. State Tretyakov Gallery, Moscow."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Isaac Levitan, *Ebedî Huzurun Üzerinde*, 1894. Devlet Tretyakov Galerisi, Moskova."
+          }
+        }
+      },
+      "comment": "Markdown italics for the title"
+    },
+    "onboarding.caption.monk": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caspar David Friedrich, *The Monk by the Sea*, 1808–10. Alte Nationalgalerie, Berlin."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caspar David Friedrich, *Deniz Kıyısındaki Keşiş*, 1808–10. Alte Nationalgalerie, Berlin."
+          }
+        }
+      },
+      "comment": "Markdown italics for the title"
+    },
+    "onboarding.caption.vernet": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Claude-Joseph Vernet, *A Shipwreck in Stormy Seas*, 1773. National Gallery, London."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Claude-Joseph Vernet, *Fırtınalı Denizde Bir Gemi Kazası*, 1773. Ulusal Galeri, Londra."
+          }
+        }
+      },
+      "comment": "Markdown italics for the title"
+    },
     "onboarding.continue": {
       "extractionState": "manual",
       "localizations": {
@@ -2684,6 +2686,194 @@
           "stringUnit": {
             "state": "translated",
             "value": "Devam"
+          }
+        }
+      }
+    },
+    "onboarding.follow.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The guide tells you what to listen for, minute by minute, timed to a great recording that opens in Spotify."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rehber neyi dinlemeniz gerektiğini dakika dakika anlatır; Spotify’da açılan usta bir kayda göre zamanlanmıştır."
+          }
+        }
+      }
+    },
+    "onboarding.follow.stop.happening": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Theme 2. The signature tune of the symphony"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "2. tema. Senfoninin imza ezgisi"
+          }
+        }
+      }
+    },
+    "onboarding.follow.stop.hear": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Everything calms; a wide, singing melody on muted strings"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Her şey sakinleşir; sürdinli yaylılarda geniş, şarkı gibi bir melodi"
+          }
+        }
+      }
+    },
+    "onboarding.follow.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Press play, then follow along."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çalmaya başlayın, sonra takip edin."
+          }
+        }
+      }
+    },
+    "onboarding.haveAccount %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Already have an account? %@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zaten hesabınız var mı? %@"
+          }
+        }
+      },
+      "comment": "%@ = accent link “Sign in”"
+    },
+    "onboarding.idea.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A symphony, a concerto or a sonata, chosen for today, with a painting from the same world."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugün için seçilmiş bir senfoni, konçerto ya da sonat; aynı dünyadan bir tabloyla."
+          }
+        }
+      }
+    },
+    "onboarding.idea.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "One classical work a day."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Her gün bir klasik eser."
+          }
+        }
+      }
+    },
+    "onboarding.listeners.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "When a musical term comes up, tap it for a short, plain explanation."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bir müzik terimi geçtiğinde dokunun, kısa ve sade bir açıklama açılsın."
+          }
+        }
+      }
+    },
+    "onboarding.listeners.definition": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The themes come back, this time in the home key."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temalar geri gelir, bu kez ana tonda."
+          }
+        }
+      }
+    },
+    "onboarding.listeners.term": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recapitulation"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yeniden serim"
+          }
+        }
+      }
+    },
+    "onboarding.listeners.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Written for listeners."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dinleyiciler için yazıldı."
           }
         }
       }
@@ -2718,7 +2908,92 @@
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Giriş yap"
+            "value": "Giriş yapın"
+          }
+        }
+      }
+    },
+    "onboarding.skip": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skip"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geç"
+          }
+        }
+      }
+    },
+    "onboarding.trial.benefit.library": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The full library of past pieces"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geçmiş eserlerin tamamı"
+          }
+        }
+      }
+    },
+    "onboarding.trial.benefit.search": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search pieces, composers and terms"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eser, besteci ve terim arama"
+          }
+        }
+      }
+    },
+    "onboarding.trial.continueToday": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continue with today’s piece"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugünün eseriyle devam et"
+          }
+        }
+      }
+    },
+    "onboarding.trial.title %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The whole library, free for %lld days."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kütüphanenin tamamı, %lld gün ücretsiz."
           }
         }
       }

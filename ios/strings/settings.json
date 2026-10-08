@@ -200,26 +200,18 @@
     "en": "Minute",
     "tr": "Dakika"
   },
-  "onboarding.1.title": {
-    "en": "One classical work a day, with a guide you read while it plays.",
-    "tr": "Her gün bir klasik eser, çalarken okuyacağınız bir rehberle."
-  },
-  "onboarding.1.body": {
-    "en": "Press play in Spotify, come back, and follow along. Today’s piece is already waiting behind this card.",
-    "tr": "Spotify’da çalmaya başlayın, buraya dönün ve takip edin. Bugünün eseri bu kartın arkasında sizi bekliyor."
-  },
   "onboarding.continue": {
     "en": "Continue",
     "tr": "Devam"
   },
   "onboarding.signIn": {
     "en": "Sign in",
-    "tr": "Giriş yap"
+    "tr": "Giriş yapın"
   },
-  "onboarding.2.eyebrow": {
-    "en": "Last thing",
-    "tr": "Son bir şey",
-    "comment": "Rendered uppercase"
+  "onboarding.haveAccount %@": {
+    "en": "Already have an account? %@",
+    "tr": "Zaten hesabınız var mı? %@",
+    "comment": "%@ = accent link “Sign in”"
   },
   "onboarding.2.title": {
     "en": "When should today’s piece arrive?",
@@ -640,5 +632,80 @@
   "wallpaper.error.failed": {
     "en": "The wallpaper couldn’t be saved. Please try again.",
     "tr": "Duvar kâğıdı kaydedilemedi. Lütfen tekrar deneyin."
+  },
+  "onboarding.skip": {
+    "en": "Skip",
+    "tr": "Geç"
+  },
+  "onboarding.idea.title": {
+    "en": "One classical work a day.",
+    "tr": "Her gün bir klasik eser."
+  },
+  "onboarding.idea.body": {
+    "en": "A symphony, a concerto or a sonata, chosen for today, with a painting from the same world.",
+    "tr": "Bugün için seçilmiş bir senfoni, konçerto ya da sonat; aynı dünyadan bir tabloyla."
+  },
+  "onboarding.follow.title": {
+    "en": "Press play, then follow along.",
+    "tr": "Çalmaya başlayın, sonra takip edin."
+  },
+  "onboarding.follow.body": {
+    "en": "The guide tells you what to listen for, minute by minute, timed to a great recording that opens in Spotify.",
+    "tr": "Rehber neyi dinlemeniz gerektiğini dakika dakika anlatır; Spotify’da açılan usta bir kayda göre zamanlanmıştır."
+  },
+  "onboarding.follow.stop.hear": {
+    "en": "Everything calms; a wide, singing melody on muted strings",
+    "tr": "Her şey sakinleşir; sürdinli yaylılarda geniş, şarkı gibi bir melodi"
+  },
+  "onboarding.follow.stop.happening": {
+    "en": "Theme 2. The signature tune of the symphony",
+    "tr": "2. tema. Senfoninin imza ezgisi"
+  },
+  "onboarding.listeners.title": {
+    "en": "Written for listeners.",
+    "tr": "Dinleyiciler için yazıldı."
+  },
+  "onboarding.listeners.body": {
+    "en": "When a musical term comes up, tap it for a short, plain explanation.",
+    "tr": "Bir müzik terimi geçtiğinde dokunun, kısa ve sade bir açıklama açılsın."
+  },
+  "onboarding.listeners.term": {
+    "en": "Recapitulation",
+    "tr": "Yeniden serim"
+  },
+  "onboarding.listeners.definition": {
+    "en": "The themes come back, this time in the home key.",
+    "tr": "Temalar geri gelir, bu kez ana tonda."
+  },
+  "onboarding.trial.title %lld": {
+    "en": "The whole library, free for %lld days.",
+    "tr": "Kütüphanenin tamamı, %lld gün ücretsiz."
+  },
+  "onboarding.trial.benefit.library": {
+    "en": "The full library of past pieces",
+    "tr": "Geçmiş eserlerin tamamı"
+  },
+  "onboarding.trial.benefit.search": {
+    "en": "Search pieces, composers and terms",
+    "tr": "Eser, besteci ve terim arama"
+  },
+  "onboarding.trial.continueToday": {
+    "en": "Continue with today’s piece",
+    "tr": "Bugünün eseriyle devam et"
+  },
+  "onboarding.caption.vernet": {
+    "en": "Claude-Joseph Vernet, *A Shipwreck in Stormy Seas*, 1773. National Gallery, London.",
+    "tr": "Claude-Joseph Vernet, *Fırtınalı Denizde Bir Gemi Kazası*, 1773. Ulusal Galeri, Londra.",
+    "comment": "Markdown italics for the title"
+  },
+  "onboarding.caption.levitan": {
+    "en": "Isaac Levitan, *Above the Eternal Peace*, 1894. State Tretyakov Gallery, Moscow.",
+    "tr": "Isaac Levitan, *Ebedî Huzurun Üzerinde*, 1894. Devlet Tretyakov Galerisi, Moskova.",
+    "comment": "Markdown italics for the title"
+  },
+  "onboarding.caption.monk": {
+    "en": "Caspar David Friedrich, *The Monk by the Sea*, 1808–10. Alte Nationalgalerie, Berlin.",
+    "tr": "Caspar David Friedrich, *Deniz Kıyısındaki Keşiş*, 1808–10. Alte Nationalgalerie, Berlin.",
+    "comment": "Markdown italics for the title"
   }
 }

@@ -38,7 +38,8 @@ final class EntitlementStore {
     /// Release builds never take this path.
     static var debugUnlock: Bool {
         #if DEBUG
-        UserDefaults.standard.object(forKey: "debugPremium") as? Bool ?? true
+        // bool(forKey:) also reads the "NO" string a `-debugPremium NO` launch argument sets.
+        UserDefaults.standard.object(forKey: "debugPremium") == nil || UserDefaults.standard.bool(forKey: "debugPremium")
         #else
         false
         #endif
@@ -75,7 +76,21 @@ final class EntitlementStore {
                 }
             }
         }
-        Task { await load() }
+        Task {
+            await load()
+            applyDebugTrial()
+        }
+    }
+
+    /// Debug builds launched outside Xcode have no StoreKit configuration, so the trial card in
+    /// the welcome flow never shows. `-debugTrialDays 3` fakes an eligible trial for design review.
+    private func applyDebugTrial() {
+        #if DEBUG
+        let days = UserDefaults.standard.integer(forKey: "debugTrialDays")
+        guard days > 0 else { return }
+        trialDays = days
+        if prices[.monthly] == nil { prices[.monthly] = "₺129,99" }
+        #endif
     }
 
     // MARK: Products

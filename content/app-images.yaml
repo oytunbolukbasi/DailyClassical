@@ -21,3 +21,19 @@ paywall/friedrich-wanderer:
   hero: { width: 1800, height: 2305, bytes: 557080 }
   thumb: { width: 300, height: 384, bytes: 14223 }
   placeholder_color: "#848792"
+
+onboarding/friedrich-monk:
+  # Welcome flow page 3 (design §09): Caspar David Friedrich, The Monk by the Sea, 1808–10. Alte Nationalgalerie, Berlin.
+  # Google Art Project scan on Commons (PD-Art); the museum's own photos are CC BY-NC-SA and are not used.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Caspar_David_Friedrich_-_Der_M%C3%B6nch_am_Meer_-_Google_Art_Project.jpg
+  source_url: https://id.smb.museum/object/967093
+  commons_page: https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Der_M%C3%B6nch_am_Meer_-_Google_Art_Project.jpg
+  width: 3543
+  height: 2254
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Caspar David Friedrich, The Monk by the Sea, 1808–10. Alte Nationalgalerie, Berlin. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2829, height: 1800, bytes: 1104117 }
+  thumb: { width: 472, height: 300, bytes: 15092 }
+  placeholder_color: "#77847d"

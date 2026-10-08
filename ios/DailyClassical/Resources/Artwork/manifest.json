@@ -256,6 +256,24 @@
         "hash": "5e911beabb"
       }
     },
+    "onboarding/friedrich-monk": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Caspar_David_Friedrich_-_Der_M%C3%B6nch_am_Meer_-_Google_Art_Project.jpg",
+      "color": "#77847d",
+      "hero": {
+        "path": "onboarding/friedrich-monk-hero.heic",
+        "width": 2829,
+        "height": 1800,
+        "bytes": 1104117,
+        "hash": "05abe1ca73"
+      },
+      "thumb": {
+        "path": "onboarding/friedrich-monk-thumb.heic",
+        "width": 472,
+        "height": 300,
+        "bytes": 15092,
+        "hash": "4929d9b95f"
+      }
+    },
     "paintings/beethoven-piano-concerto-3": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Martin_von_Molitor_-_Landschaft_mit_Hammerwerk_-_9694_-_%C3%96sterreichische_Galerie_Belvedere.jpg",
       "color": "#696856",
