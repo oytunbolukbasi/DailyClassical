@@ -25,6 +25,10 @@ settings:
       API_BASE_URL: "https:/$()/api.dailyclassical.co"
     Release:
       API_BASE_URL: "https:/$()/api.dailyclassical.co"
+packages:
+  RevenueCat:
+    url: https://github.com/RevenueCat/purchases-ios-spm.git
+    from: 5.93.0
 targets:
   DailyClassical:
     type: application
@@ -53,10 +57,14 @@ targets:
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
         CODE_SIGN_ENTITLEMENTS: DailyClassical/DailyClassical.entitlements
+        # RevenueCat's *public* Apple SDK key (appl_…), safe to ship in the app. Empty = purchases go
+        # straight through StoreKit 2 (local StoreKit configuration file); see EntitlementStore.
+        REVENUECAT_API_KEY: ""
     info:
       path: DailyClassical/Info.plist
       properties:
         API_BASE_URL: $(API_BASE_URL)
+        REVENUECAT_API_KEY: $(REVENUECAT_API_KEY)
         CFBundleLocalizations: [en, tr]
         UIAppFonts: [Literata-Regular.ttf, Literata-Medium.ttf, Literata-SemiBold.ttf, Literata-Italic.ttf, Literata-MediumItalic.ttf]
         NSAppTransportSecurity:
@@ -71,6 +79,7 @@ targets:
     dependencies:
       - target: DailyClassicalWidget
         embed: true
+      - package: RevenueCat
   # Home Screen widgets (small / medium / large). Fetches its own feed (GET /v1/widget) so pieces
   # published after the app shipped appear; falls back to its cached feed, then to the bundled
   # fixtures and artwork, so it always works offline. The language comes from the shared App Group.

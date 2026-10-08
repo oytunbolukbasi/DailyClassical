@@ -32,7 +32,7 @@ E-posta adresinizi doğrulamak ya da şifrenizi sıfırlamak için size kısa bi
 
 **Kötüye kullanıma karşı koruma.** Otomatik giriş ve kayıt denemelerini durdurmak için sunucumuz son denemeleri IP adresi ve e-posta adresi başına sayar. Bu sayaçlar yalnızca tek yönlü özet olarak saklanır ve en geç bir saat sonra silinir.
 
-**Satın almalar.** Premium, Apple’ın App Store’u üzerinden satın alınır. Ödemeyi Apple işler; biz hiçbir ödeme ya da kart bilgisi almayız. Uygulama, etkin bir satın almanız olup olmadığını cihazınızda Apple’a sorarak kontrol eder.
+**Satın almalar.** Premium, Apple’ın App Store’u üzerinden satın alınır. Ödemeyi Apple işler; biz hiçbir ödeme ya da kart bilgisi almayız. Etkin bir satın almanız olup olmadığını kontrol etmek için RevenueCat’i kullanırız: RevenueCat, satın almalarınızın App Store makbuzunu ve uygulama kurulumuna ait bir tanımlayıcıyı (giriş yaptıysanız DailyClassical hesap kimliğinizi) alır; böylece Premium doğrulanabilir ve geri yüklenebilir.
 
 **Günlük hatırlatıcı.** Hatırlatıcı, cihazınızda planlanan yerel bir bildirimdir. Bildirim sunucusu kullanmayız.
 
@@ -55,6 +55,7 @@ DailyClassical’ı çalıştırmak için, verileri yalnızca bizim adımıza i�
 - **Railway** sunucumuzu barındırır (Amerika Birleşik Devletleri).
 - **Neon** veritabanımızı barındırır (Amerika Birleşik Devletleri, AWS us-east-2).
 - **Resend** e-postalarımızı iletir (doğrulama kodları, şifre sıfırlama).
+- **RevenueCat** uygulama içi satın almaları ve abonelik durumunu yönetir (Amerika Birleşik Devletleri).
 
 Bu sağlayıcılar Amerika Birleşik Devletleri’nde olduğundan bilgileriniz yurt dışında işlenebilir. Verileri sektör standardı güvenlik önlemleri ve sözleşmesel güvencelerle koruyan sağlayıcıları seçiyoruz.
 

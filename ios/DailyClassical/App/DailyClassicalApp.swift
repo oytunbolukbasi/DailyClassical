@@ -35,6 +35,8 @@ struct DailyClassicalApp: App {
                 }
                 // Account-level (comp) Premium unlocks the same things as a purchase.
                 .onChange(of: session.accountPremium, initial: true) { entitlements.accountPremium = session.accountPremium }
+                // Purchases show up against the signed-in account in RevenueCat.
+                .task(id: session.userID) { await entitlements.identify(userID: session.userID) }
         }
     }
 }

@@ -6,6 +6,10 @@ import Observation
 @Observable
 final class SessionStore {
     private(set) var email: String?
+    /// The account's id; identifies the buyer to RevenueCat (EntitlementStore.identify).
+    private(set) var userID: String? = UserDefaults.standard.string(forKey: "accountUserID") {
+        didSet { UserDefaults.standard.set(userID, forKey: "accountUserID") }
+    }
     private(set) var favourites: [String: Date] = [:]   // pieceId → savedAt
     /// Complimentary Premium on the account (in addition to App Store purchases).
     private(set) var accountPremium = UserDefaults.standard.bool(forKey: "accountPremium") {
@@ -29,7 +33,7 @@ final class SessionStore {
         #endif
         // Account Premium belongs to a session: without one (signed out, or the Keychain token is
         // gone) a stale flag must not unlock anything.
-        if token == nil { accountPremium = false }
+        if token == nil { accountPremium = false; userID = nil }
     }
 
     func isFavourite(_ pieceId: String) -> Bool { favourites[pieceId] != nil }
@@ -55,6 +59,7 @@ final class SessionStore {
         do {
             let user = try await api.me(token: token)
             email = user.email
+            userID = user.id
             accountPremium = user.premium
         } catch APIError.unauthorized {
             signOut()
@@ -78,6 +83,7 @@ final class SessionStore {
     func signOut() {
         token = nil
         email = nil
+        userID = nil
         favourites = [:]
         accountPremium = false
         Keychain.set(nil, for: "token")
@@ -111,6 +117,7 @@ final class SessionStore {
     private func apply(_ auth: AuthResponse) {
         token = auth.token
         email = auth.user.email
+        userID = auth.user.id
         accountPremium = auth.user.premium
         Keychain.set(auth.token, for: "token")
         UserDefaults.standard.set(auth.user.email, forKey: "accountEmail")

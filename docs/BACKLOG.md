@@ -3,12 +3,6 @@
 Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
 
 ## Sıradaki işler (kod)
-1. **[Oytun] Denetimde karar bekleyen maddeler (`design/AUDIT.md`, "Open" olanlar):**
-   - P2-5: III. ve IV. bölümlerden önceki ayırıcı çizgi (tasarımda yalnızca II'de var; şu an hepsinde aynı).
-   - P2-7: "Spotify'da aç" butonu son bölümden sonra (kayıtlar, kaynaklar) geri gelsin mi?
-   - P2-33: "Kunsthalle Hamburg" mı "Hamburger Kunsthalle" mı?
-   - P2-36: `paywall.title` ve "y. 1818" gibi Türkçe ifadeler (native okumayla birlikte).
-   - P2-21 (e-posta değiştirme) API gerektiriyor; P2-9 (sözlük terimine 44 pt dokunma alanı) özel bir metin bileşeni gerektiriyor.
 8. **[Claude + Oytun] VoiceOver'ı cihazda denemek:** Kod tarafı tamam: günler arası geçiş eylemleri, bölüm düğmesi etiketleri, okunur durak zamanları, sözlük terimi ipucu. Cihazda VoiceOver açıkken bir kez gezinmek gerekiyor.
 9. **[Claude + Oytun] Widget'ın renklendirilmiş (tinted) modu:** Cihazda ana ekran stili "Renklendirilmiş" ve "Şeffaf" iken widget'ların görünümü kontrol edilecek.
 
@@ -28,15 +22,20 @@ Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 
 ## Altyapı
 - **[Oytun] Yasal metinlerin hukuki okuması:** Kullanım koşulları ve gizlilik metinleri iyi niyetli taslaklar; yayından önce bir avukatın ya da KVKK danışmanının bakması önerilir. Özellikle şirket/şahıs bilgisi (veri sorumlusu adı ve adresi) eklenmeli; şu an yalnızca `hello@dailyclassical.co` var ve bu adresin e-posta alabildiğinden emin ol.
-19. **[Oytun + Claude] App Store Connect hazırlığı:**
-    - Uygulama kaydı (`co.dailyclassical.app`).
-    - Uygulama içi satın alma ürünleri: `co.dailyclassical.premium.lifetime` ve `co.dailyclassical.premium.monthly`.
-    - App Group (`group.co.dailyclassical`).
-    - TestFlight için Release build.
+19. **[Oytun + Claude] App Store Connect ve RevenueCat:** Adım adım rehber `docs/APP_STORE.md` içinde (uygulama kaydı, ürünler, RevenueCat, sandbox testi, mağaza metinleri, gizlilik etiketleri, inceleme notları, TestFlight). RevenueCat kodu hazır; public API anahtarı gelince açılacak. Fiyat kararı bekleniyor.
 
 ## Yayından önce sıfırlanacak test verisi
 - **Takvim:** `content/schedule.yaml` içerik kontrolü için 27 Eylül 2026'dan başlıyor, böylece 10 eserin hepsi Kitaplık'ta görünüyor. Yayından önce `start` yayın gününe çekilecek ve sıra Çaykovski 6 ile başlayacak. Ardından `npm run db:seed && npm run fixtures` çalıştırılacak.
 - **Debug premium:** Debug build'lerde premium varsayılan olarak açık (`EntitlementStore.debugUnlock`). Release build'leri etkilemiyor, sıfırlanması gerekmiyor.
+
+## Tamamlananlar (8 Ekim 2026, RevenueCat)
+- RevenueCat SDK (purchases-ios 5.93) eklendi. Public anahtar `REVENUECAT_API_KEY` ayarındayken satın alma, geri yükleme ve durum RevenueCat'ten (`premium` yetkisi, `default` offering); anahtar yokken StoreKit 2. Giriş yapan kullanıcı hesap kimliğiyle RevenueCat'e tanıtılıyor.
+- Gizlilik metnine RevenueCat eklendi.
+
+## Tamamlananlar (8 Ekim 2026, geçiş ve kararlar)
+- **Eser sayfasına geçiş:** Ana sayfayı yukarı çekmek (ya da "Dinlemeye başla") eser sayfasını standart kaydırmayla açıyor; geri dönüş sıradan bir "geri". Zoom geçişi kaldırıldı.
+- **Tab bar:** Geçişin kendisiyle birlikte hareket ediyor; geri kaydırmada parmağı takip ederek beliriyor, yarıda bırakılınca gizli kalıyor.
+- **Denetim kararları (Oytun):** Bölüm ayırıcıları her bölümde kalıyor; "Spotify'da aç" son bölümden sonra geri gelmiyor; "Kunsthalle Hamburg" olduğu gibi kalıyor; paywall başlığı ve "y. 1818" gibi ifadeler Türkçe native okumada ele alınacak (madde 14).
 
 ## Tamamlananlar (8 Ekim 2026, denetim ve tablo)
 - **Denetim (`design/AUDIT.md`):** 43 maddenin hepsi kontrol edildi; 23'ü bu turda düzeltildi, 13'ü zaten düzeltilmişti. Öne çıkanlar:

@@ -32,7 +32,7 @@ To confirm your email address or reset your password we send you a short code or
 
 **Protection against abuse.** To stop automated sign-in and sign-up attempts, our server counts recent attempts per IP address and per email address. These counters are stored only as one-way hashes and are deleted after at most one hour.
 
-**Purchases.** Premium is bought through Apple’s App Store. Apple processes the payment; we receive no payment or card details. The app checks with Apple, on your device, whether you have an active purchase.
+**Purchases.** Premium is bought through Apple’s App Store. Apple processes the payment; we receive no payment or card details. We use RevenueCat to check whether you have an active purchase: it receives the App Store receipt for your purchases and an identifier for the app install (your DailyClassical account id when you are signed in), so Premium can be confirmed and restored.
 
 **Daily reminder.** The reminder is a local notification scheduled on your device. We do not use a push notification server.
 
@@ -55,6 +55,7 @@ We rely on a few companies that process data on our behalf, only to run DailyCla
 - **Railway** hosts our server (United States).
 - **Neon** hosts our database (United States, AWS us-east-2).
 - **Resend** delivers our emails (verification codes, password resets).
+- **RevenueCat** manages in-app purchases and subscription status (United States).
 
 Because these providers are in the United States, your information may be processed outside your country. We choose providers that protect data with industry-standard security and contractual safeguards.
 

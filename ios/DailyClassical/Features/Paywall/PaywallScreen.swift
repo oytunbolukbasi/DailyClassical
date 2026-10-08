@@ -2,7 +2,7 @@ import StoreKit
 import SwiftUI
 
 /// "More of this." (SPEC §4.10): solid full-screen page; only the close button is glass.
-/// Two StoreKit 2 products: lifetime (preselected, Best value) and monthly.
+/// Two products (EntitlementStore: RevenueCat or StoreKit 2): lifetime (preselected, Best value) and monthly.
 struct PaywallScreen: View {
     @Environment(EntitlementStore.self) private var entitlements
     @Environment(\.dismiss) private var dismiss
@@ -77,7 +77,7 @@ struct PaywallScreen: View {
                 .padding(.top, 4)  // top 58 on the 844 pt frame = 4 below its status bar; lines up with nav-row buttons
                 .padding(.trailing, 16)
         }
-        .task { if entitlements.products.isEmpty { await entitlements.load() } }
+        .task { if entitlements.prices.isEmpty { await entitlements.load() } }
         .onChange(of: entitlements.isPremium) { _, premium in
             if premium { dismiss() }
         }
@@ -100,7 +100,7 @@ struct PaywallScreen: View {
                 }
             }
             .buttonStyle(.dcPrimary)
-            .disabled(purchasing || restoring || entitlements.products[plan] == nil)
+            .disabled(purchasing || restoring || !entitlements.isAvailable(plan))
 
             Button {
                 Task { await restore() }
@@ -121,9 +121,9 @@ struct PaywallScreen: View {
         }
     }
 
-    /// StoreKit's localized price ("₺600"), or a dash until products load.
+    /// The store's localized price ("₺600"), or a dash until products load.
     private func price(_ plan: EntitlementStore.Plan) -> String {
-        entitlements.products[plan]?.displayPrice ?? "—"
+        entitlements.prices[plan] ?? "—"
     }
 
     private func buy() async {
