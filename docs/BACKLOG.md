@@ -3,6 +3,12 @@
 Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
 
 ## Sıradaki işler (kod)
+0. **[Claude + Oytun] Apple ile kayıt ve giriş (Sign in with Apple):**
+   - **Uygulama:** Kayıt ve giriş ekranlarına Apple'ın standart "Apple ile devam et" butonu. Butonun yeri ve görünümü tasarımda yok; önce Claude Design'da hesap ekranlarına bir kare eklenecek (Apple'ın kurallarına göre buton e-posta seçeneğinin üstünde ve en az onun kadar belirgin olmalı).
+   - **Sunucu:** `POST /v1/auth/apple`. Apple'ın kimlik token'ı Apple'ın açık anahtarlarıyla doğrulanacak (`aud` = `co.dailyclassical.app`). `users` tablosuna `apple_sub` eklenecek. E-posta Apple'dan doğrulanmış geldiği için kod adımı yok; "e-postamı gizle" seçilirse Apple'ın aktarma adresi saklanacak. Aynı doğrulanmış e-postayla bir hesap zaten varsa ikisi birleştirilecek. Bu hesaplarda şifre olmayacak (şifre değiştir satırı gizlenecek).
+   - **Hesap silme:** Apple, hesap silinirken Apple token'ının iptal edilmesini şart koşuyor. Bunun için Apple Developer'da bir "Sign in with Apple" anahtarı (.p8) gerekiyor.
+   - **Senden:** Apple Developer'da App ID için "Sign in with Apple" yeteneğini açmak (otomatik imzalama çoğunlukla açar), anahtarı oluşturup Railway'e eklemek. Adımları o sırada anlatacağım.
+   - Gizlilik metnine Apple ile girişte hangi bilgilerin alındığı eklenecek.
 1. **[Claude] Koyu modda Sözlük, Kayıtlar ve Besteci sheet'lerine bakmak:** Ana ekranlar, Hesap, Favoriler, premium Arama ve "Şeffaflığı Azalt" kontrol edildi. Bu üç sheet'e koyu modda ayrıca bakılmadı.
 2. **[Claude] Denetimin (`design/AUDIT.md`) kalan küçük maddeleri:** Kısa tanım, toplu yükleme ve Dynamic Type yapıldı. Kalan P2 maddeleri (ör. eser görüntüleyicide zoom'un sınırlandırılması, Today'in yayın tarihini göstermesi) tek tek gözden geçirilecek.
 3. **[Claude] Rahmaninov tablosu:** Levitan'ın *Göl* tablosunun açık lisanslı en iyi görüntüsü 2000×1403 piksel. Diğer tablolardan biraz daha yumuşak görünüyor ve Levitan, Çaykovski 6'nın da ressamı. Daha yüksek çözünürlüklü bir alternatif aranabilir (senin onayınla).

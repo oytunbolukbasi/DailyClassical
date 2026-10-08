@@ -123,6 +123,13 @@ struct SettingsScreen: View {
 
     @ViewBuilder private var premiumRow: some View {
         switch entitlements.activePlan {
+        #if DEBUG
+        case nil where EntitlementStore.debugUnlock && !entitlements.accountPremium:
+            // Debug builds unlock everything for content review; say so, so it isn't mistaken
+            // for the account's or a purchase's Premium. Not localized: debug builds only.
+            SettingsValueRow("settings.premium.row", value: Text(verbatim: "Debug build"))
+                .settingsRow()
+        #endif
         case nil where entitlements.accountPremium:
             // Premium granted on the account (comp), not bought through the App Store.
             SettingsValueRow("settings.premium.row", value: Text("settings.premium.status.account"))
