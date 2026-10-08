@@ -56,8 +56,16 @@ struct RootView: View {
 /// Resolves a router sheet into its screen with the right detents.
 private struct AppSheetView: View {
     let sheet: AppRouter.Sheet
+    @Environment(AppRouter.self) private var router
 
     var body: some View {
+        content
+            // A term link inside a router sheet swaps the sheet for that term (sheets that show
+            // definitions handle their own links first: GlossaryTermSheet, ComposerSheet).
+            .onGlossaryTap { router.present(.glossaryTerm($0)) }
+    }
+
+    @ViewBuilder private var content: some View {
         switch sheet {
         case .paywall:
             EmptyView()  // presented as a full-screen cover by RootView

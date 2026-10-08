@@ -20,6 +20,9 @@ final class ContentStore {
     /// The reader's calendar day ("YYYY-MM-DD") the content was loaded for.
     private(set) var todayDay = APIClient.day()
     private(set) var glossary: [String: GlossaryTerm] = [:]
+    /// Why the last glossary load failed; nil while it loads and once it has loaded. The terms
+    /// from an earlier load stay in `glossary` either way.
+    private(set) var glossaryError: APIError?
     private(set) var composers: [String: Composer] = [:]
     private(set) var language = "en"
 
@@ -37,6 +40,7 @@ final class ContentStore {
         pieceCache = [:]
         today = .loading
         library = .loading
+        glossaryError = nil
         async let t = Result { try await source.today(language) }
         async let l = Result { try await source.pieces(language, day) }
         async let s = Result { try await source.schedule(language, day) }
@@ -57,8 +61,10 @@ final class ContentStore {
         // Without the schedule (offline, nothing cached) Today still shows today's page.
         let past = ((try? await s.get()) ?? []).filter { $0.day < day }.sorted { $0.day < $1.day }
         days = past + (todayPiece.map { [ScheduledDay(day: day, pieceId: $0.id)] } ?? [])
-        if case .success(let terms) = await g {
-            glossary = Dictionary(terms.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
+        switch Self.loadable(await g) {
+        case .loaded(let terms): glossary = Dictionary(terms.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
+        case .failed(let error): glossaryError = error
+        case .idle, .loading: break
         }
         if case .success(let list) = await c {
             ImagePipeline.shared.register(list.map { $0.portrait?.artwork })

@@ -35,6 +35,8 @@ final class AppRouter {
     var toast: LocalizedStringResource?
     /// Piece to save once the guest finishes signing in from the heart.
     var pendingFavourite: String?
+    /// True while Library › Glossary is on screen (set by GlossaryListScreen).
+    @ObservationIgnored var glossaryListVisible = false
 
     func present(_ sheet: Sheet) { self.sheet = sheet }
 
@@ -48,9 +50,15 @@ final class AppRouter {
         }
     }
 
+    /// "See all terms in Library". From a piece opened in Library the list is pushed on top, so
+    /// Back returns to the piece; from another tab the Library stack starts over at the list.
     func openGlossaryList() {
-        tab = .library
-        libraryPath = NavigationPath([GlossaryListRoute()])
+        if tab == .library {
+            if !glossaryListVisible { libraryPath.append(GlossaryListRoute()) }
+        } else {
+            tab = .library
+            libraryPath = NavigationPath([GlossaryListRoute()])
+        }
     }
 }
 

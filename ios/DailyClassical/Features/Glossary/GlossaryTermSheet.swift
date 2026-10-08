@@ -7,21 +7,31 @@ struct GlossaryTermSheet: View {
     @Environment(AppRouter.self) private var router
     @Environment(\.dismiss) private var dismiss
     @State private var height: CGFloat = 265
+    /// A term tapped inside the definition replaces this one in place, so a definition never
+    /// stacks a second sheet (or a broken one) on top of itself.
+    @State private var shownID: String?
 
     var body: some View {
-        let term = content.glossary[termID]
+        let id = shownID ?? termID
+        let term = content.glossary[id]
         VStack(alignment: .leading, spacing: 14) {
-            SheetHeader(title: Text(verbatim: term?.term ?? termID), titleFont: Typography.titleM) { dismiss() }
+            SheetHeader(title: Text(verbatim: term?.term ?? id), titleFont: Typography.titleM) { dismiss() }
             if let term {
                 RichTextView(source: term.definition)
+                    .onGlossaryTap { shownID = $0 }
             }
-            Button("glossarySheet.seeAll") {
+            Button {
                 dismiss()
                 router.openGlossaryList()
+            } label: {
+                Text("glossarySheet.seeAll")
+                    .font(Typography.meta13)
+                    .foregroundStyle(Palette.accent)
+                    .padding(.vertical, 14)  // 44 pt hit target…
+                    .contentShape(.rect)
             }
-            .font(Typography.meta13)
-            .foregroundStyle(Palette.accent)
             .buttonStyle(.plain)
+            .padding(.vertical, -14)  // …that doesn't move the layout
             .padding(.top, 4)
         }
         .padding(.horizontal, 24)
@@ -40,6 +50,8 @@ struct PieceGlossarySheet: View {
     let document: PieceDocument
     @Environment(ContentStore.self) private var content
     @Environment(\.dismiss) private var dismiss
+    /// A term tapped inside a definition opens over this sheet (as in the composer sheet).
+    @State private var glossaryTerm: GlossaryLink?
 
     private var terms: [GlossaryTerm] {
         var seen = Set<String>()
@@ -60,6 +72,7 @@ struct PieceGlossarySheet: View {
                     VStack(alignment: .leading, spacing: 4) {
                         Text(verbatim: term.term).font(Typography.rowTitle).foregroundStyle(Palette.ink)
                         RichTextView(source: term.definition, font: Typography.body15, lineHeight: 1.5, literataSize: nil, color: Palette.ink2)
+                            .onGlossaryTap { glossaryTerm = GlossaryLink(id: $0) }
                     }
                     .padding(.vertical, 13)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -70,7 +83,13 @@ struct PieceGlossarySheet: View {
             .padding(.top, 26)
             .padding(.bottom, 32)
         }
+        .sheet(item: $glossaryTerm) { GlossaryTermSheet(termID: $0.id) }
         .presentationDetents([.medium, .large])
         .presentationDragIndicator(.visible)
     }
+}
+
+/// A glossary term opened from a sheet's own text, presented over that sheet.
+struct GlossaryLink: Identifiable {
+    let id: String
 }
