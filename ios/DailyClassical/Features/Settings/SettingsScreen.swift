@@ -14,6 +14,10 @@ struct SettingsScreen: View {
     @AppStorage("reminderHour") private var reminderHour: Int?
     @AppStorage("reminderMinute") private var reminderMinute: Int?
 
+    // Test builds only (TestBuild): replay the welcome flow, preview the free trial.
+    @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
+    @AppStorage("debugTrialDays") private var debugTrialDays = 0
+
     @State private var restoring = false
     @State private var showManageSubscription = false
 
@@ -91,6 +95,8 @@ struct SettingsScreen: View {
                 } header: {
                     SettingsHeader("settings.section.about")
                 }
+
+                if TestBuild.isActive { testSection }
             }
             .settingsList()
             // The Literata title lives in the list; the bar title only feeds the back button.
@@ -106,6 +112,39 @@ struct SettingsScreen: View {
     }
 
     // MARK: Rows
+
+    /// Never in App Store or TestFlight builds, so not localized.
+    private var testSection: some View {
+        Section {
+            Button { hasCompletedOnboarding = false } label: {
+                Text(verbatim: "Karşılamayı yeniden göster").foregroundStyle(Palette.accent)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .settingsRow()
+            Toggle(isOn: Binding(
+                get: { debugTrialDays > 0 },
+                set: { on in
+                    debugTrialDays = on ? 3 : 0
+                    Task { await entitlements.reloadPreviewTrial() }
+                }
+            )) {
+                Text(verbatim: "3 gün deneme teklifini göster").foregroundStyle(Palette.ink)
+            }
+            .tint(Palette.accent)
+            .settingsRow()
+        } header: {
+            Text(verbatim: "Test")
+                .font(Typography.meta13)
+                .tracking(0.26)
+                .textCase(.uppercase)
+                .foregroundStyle(Palette.ink2)
+                .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 3, trailing: 16))
+        } footer: {
+            Text(verbatim: "Yalnızca test build'lerinde görünür. Deneme önizlemesi gerçek bir ürün yokken satın alma yapmaz.")
+                .font(Typography.meta13)
+                .foregroundStyle(Palette.ink3)
+        }
+    }
 
     @ViewBuilder private var accountRow: some View {
         if session.isSignedIn, let email = session.email {

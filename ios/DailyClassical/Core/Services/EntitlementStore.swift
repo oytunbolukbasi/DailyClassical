@@ -82,15 +82,26 @@ final class EntitlementStore {
         }
     }
 
-    /// Debug builds launched outside Xcode have no StoreKit configuration, so the trial card in
-    /// the welcome flow never shows. `-debugTrialDays 3` fakes an eligible trial for design review.
+    /// Test builds can fake an eligible free trial, so the welcome flow's trial card and the
+    /// paywall's trial copy can be reviewed before App Store products exist: Settings › Test, or
+    /// the `-debugTrialDays 3` launch argument (simulator builds have no StoreKit configuration).
+    static var previewTrialDays: Int {
+        TestBuild.isActive ? UserDefaults.standard.integer(forKey: "debugTrialDays") : 0
+    }
+
     private func applyDebugTrial() {
-        #if DEBUG
-        let days = UserDefaults.standard.integer(forKey: "debugTrialDays")
+        let days = Self.previewTrialDays
         guard days > 0 else { return }
         trialDays = days
         if prices[.monthly] == nil { prices[.monthly] = "₺129,99" }
-        #endif
+    }
+
+    /// Re-reads the products after the test preview is switched on or off.
+    func reloadPreviewTrial() async {
+        trialDays = nil
+        prices[.monthly] = nil
+        await load()
+        applyDebugTrial()
     }
 
     // MARK: Products

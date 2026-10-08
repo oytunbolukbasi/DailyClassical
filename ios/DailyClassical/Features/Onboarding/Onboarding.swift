@@ -26,6 +26,8 @@ private struct OnboardingModifier: ViewModifier {
                     }
             }
             .onAppear { if !isComplete { show = true } }
+            // Settings › Test › Show the welcome again.
+            .onChange(of: isComplete) { _, complete in if !complete { show = true } }
     }
 }
 

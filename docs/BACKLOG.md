@@ -43,6 +43,7 @@ Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 - Paywall'da aylık plan (3 gün ücretsiz denemeyle) önceden seçili geliyor (Oytun'un kararı); "En avantajlı" rozeti ömür boyunda kalıyor.
 - 4. kart (deneme) kalıyor (Oytun'un kararı); yalnızca deneme hakkı varken ve kullanıcı Premium değilken görünüyor; "Bugünün eseriyle devam et" deneme butonu kadar erişilebilir. Yenileme satırı App Review için uzun metinle (24 saat kuralı) kaldı.
 - Koyu mod ve en büyük erişilebilirlik yazı boyutu kontrol edildi: önce tablo küçülüyor, metin kaydırılıyor, hiçbir şey kesilmiyor.
+- **Ayarlar › Test** (yalnızca test build'lerinde: Debug ve Xcode/kabloyla kurulan Release; App Store ve TestFlight'ta görünmez): "Karşılamayı yeniden göster" ve "3 gün deneme teklifini göster" (ürünler hazır olmadan deneme sayfasını ve paywall metnini önizler, satın alma yapmaz).
 - Debug: simülatörde `-debugTrialDays 3` deneme kartını StoreKit yapılandırması olmadan gösteriyor; `-debugPremium NO` artık launch argümanından da doğru okunuyor.
 
 ## Tamamlananlar (8 Ekim 2026, RevenueCat)
