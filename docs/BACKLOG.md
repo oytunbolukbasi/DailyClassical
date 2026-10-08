@@ -25,7 +25,6 @@ Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 
 ## Altyapı
 - **[Oytun] Yasal metinlerin hukuki okuması:** Kullanım koşulları ve gizlilik metinleri iyi niyetli taslaklar; yayından önce bir avukatın ya da KVKK danışmanının bakması önerilir. Özellikle şirket/şahıs bilgisi (veri sorumlusu adı ve adresi) eklenmeli; şu an yalnızca `hello@dailyclassical.co` var ve bu adresin e-posta alabildiğinden emin ol.
-17. **[Oytun] Neon'da `dev` branch'i:** Neon panelinde production'dan bir `dev` branch'i aç ve bağlantı adresini lokal `backend/.env` dosyasına yaz (ya da bana ver). Şu an lokal geliştirme ve seed doğrudan production veritabanına gidiyor. Bilgisayarda Neon CLI ya da API anahtarı olmadığı için bunu ben açamadım.
 19. **[Oytun + Claude] App Store Connect hazırlığı:**
     - Uygulama kaydı (`co.dailyclassical.app`).
     - Uygulama içi satın alma ürünleri: `co.dailyclassical.premium.lifetime` ve `co.dailyclassical.premium.monthly`.
@@ -35,6 +34,10 @@ Son güncelleme: 7 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 ## Yayından önce sıfırlanacak test verisi
 - **Takvim:** `content/schedule.yaml` içerik kontrolü için 27 Eylül 2026'dan başlıyor, böylece 10 eserin hepsi Kitaplık'ta görünüyor. Yayından önce `start` yayın gününe çekilecek ve sıra Çaykovski 6 ile başlayacak. Ardından `npm run db:seed && npm run fixtures` çalıştırılacak.
 - **Debug premium:** Debug build'lerde premium varsayılan olarak açık (`EntitlementStore.debugUnlock`). Release build'leri etkilemiyor, sıfırlanması gerekmiyor.
+
+## Tamamlananlar (8 Ekim 2026, Neon dev branch'i)
+- Lokal `backend/.env` artık Neon'un `dev` branch'ine bağlı. Production'dan ayrı olduğu doğrulandı: dev'e yazılan bir test işareti production API'de görünmedi. Lokal migration, seed ve test hesapları artık gerçek kullanıcı verisine dokunmuyor.
+- Production'a yalnızca Railway (deploy öncesi migration) ve `content-publish` GitHub Action'ı yazıyor.
 
 ## Tamamlananlar (8 Ekim 2026, yasal sayfalar)
 - **Kullanım Koşulları ve Gizlilik Politikası** (EN + TR): `api.dailyclassical.co/terms` ve `/privacy`. Metinler `backend/legal/*.md` içinde. Gizlilik metni uygulamanın gerçekte işlediği verilere göre yazıldı: hesap bilgileri, özetlenmiş kodlar, Apple satın almaları, Railway/Neon/Resend, takip yok.
