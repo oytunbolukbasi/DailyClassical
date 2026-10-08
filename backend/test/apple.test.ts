@@ -39,3 +39,20 @@ test("a token without an email still verifies (returning users)", async () => {
   const { verify, sign } = await setup();
   assert.deepEqual(await verify(await sign({})), { sub: "001234.abcd", email: null, emailVerified: false });
 });
+
+test("the Apple private key is read however it was pasted", async () => {
+  const { normalizePrivateKey } = await import("../src/lib/apple.js");
+  const { importPKCS8, exportPKCS8, generateKeyPair } = await import("jose");
+  const { privateKey } = await generateKeyPair("ES256", { extractable: true });
+  const pem = await exportPKCS8(privateKey);
+  const body = pem.split("\n").filter((l) => l && !l.startsWith("-----")).join("");
+  const variants = [
+    pem,
+    pem.replace(/\n/g, "\\n"),
+    pem.replace(/\n/g, " "),
+    pem.replace(/\n/g, "\r\n"),
+    body,
+    `"${pem}"`,
+  ];
+  for (const v of variants) await importPKCS8(normalizePrivateKey(v), "ES256");
+});

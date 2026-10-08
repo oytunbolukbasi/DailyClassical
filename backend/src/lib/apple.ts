@@ -28,9 +28,22 @@ export async function verifyAppleIdentityToken(
 
 const configured = () => !!(env.APPLE_TEAM_ID && env.APPLE_KEY_ID && env.APPLE_PRIVATE_KEY);
 
+/**
+ * The .p8 contents as a clean PEM, however they were pasted into the host's variables: with or
+ * without the BEGIN/END lines, newlines kept, escaped as \\n, turned into spaces, or CRLF.
+ */
+export function normalizePrivateKey(raw: string): string {
+  const body = raw
+    .replace(/\\n/g, "\n")
+    .replace(/-----(BEGIN|END) [A-Z ]*PRIVATE KEY-----/g, "")
+    .replace(/["'\s]/g, "");
+  const lines = body.match(/.{1,64}/g) ?? [];
+  return `-----BEGIN PRIVATE KEY-----\n${lines.join("\n")}\n-----END PRIVATE KEY-----\n`;
+}
+
 /** The short-lived ES256 client secret Apple's token and revoke endpoints require. */
 async function clientSecret(): Promise<string> {
-  const key = await importPKCS8(env.APPLE_PRIVATE_KEY!, "ES256");
+  const key = await importPKCS8(normalizePrivateKey(env.APPLE_PRIVATE_KEY!), "ES256");
   return new SignJWT({})
     .setProtectedHeader({ alg: "ES256", kid: env.APPLE_KEY_ID! })
     .setIssuer(env.APPLE_TEAM_ID!)
