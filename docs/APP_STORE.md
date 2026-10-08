@@ -180,7 +180,11 @@ Zorunlu boyut: 6.9" (1320×2868). Taslak set hazır (EN + TR, 6'şar görüntü)
 
 ## 9. TestFlight ve gönderim [Claude + Oytun]
 
-1. Sürüm numarası: `MARKETING_VERSION` 1.0.0, build 1 (project.yml).
-2. `schedule.yaml` yayın gününe çekilir, sıra Çaykovski 6 ile başlar; `db:seed` ve `fixtures` çalıştırılır (BACKLOG, "Yayından önce sıfırlanacak test verisi").
-3. Xcode › Product › Archive › Distribute App › App Store Connect (ya da `xcodebuild archive` + `-exportArchive`; ben hazırlarım).
-4. TestFlight'ta iç test, sonra **Submit for Review**.
+**Hazır (8 Ekim 2026):** Sürüm 1.0.0 (build 1); `ITSAppUsesNonExemptEncryption = NO` (yalnızca HTTPS, her yüklemede şifreleme sorusu çıkmaz); gizlilik manifestleri (`Resources/PrivacyInfo.xcprivacy`, widget'ta ayrıca; App Privacy etiketleriyle aynı). Archive Xcode Organizer'da görünür.
+
+1. **Yükleme:** `cd ios && xcodebuild -exportArchive -archivePath "<archive>" -exportOptionsPlist ExportOptions.plist -exportPath build/export -allowProvisioningUpdates` (Xcode'daki hesapla App Store Connect'e yükler). Ya da Xcode › Window › Organizer › **Distribute App** › App Store Connect › Upload. Sonraki yüklemelerde `CURRENT_PROJECT_VERSION` bir artırılır.
+2. App Store Connect › TestFlight: build işlenince (10–30 dk) iç testçilere (Internal Testing) açılır; telefonda TestFlight uygulamasından kurulur. TestFlight'ta satın almalar yine sandbox'tır, para çekilmez.
+3. **İnceleme süresince takvim:** İncelemeci uygulamayı o günkü sunucu içeriğiyle görür. Gönderimden onaya kadar `schedule.yaml` ileri bir tarihe başlatılmaz (boş Bugün/Kitaplık = red riski). Şu anki test takvimi (bütün eserler yayında) inceleme için en güvenlisi.
+4. Sürüm sayfasında: ekran görüntüleri (§8), metinler (§5), iki satın alma ürünü (In-App Purchases and Subscriptions), inceleme bilgileri (§7), **Version Release: Manually release this version** › **Submit for Review**.
+5. **Yayın günü:** `schedule.yaml` › `start` o güne, sıra Çaykovski 6 ile; push (content-publish yayındaki veritabanına yazar, uygulama en geç bir dakikada görür). Sonra App Store Connect'te **Release This Version**. Gerekirse mağaza görsellerinin 1. karesi yeniden üretilir (§8).
+6. Yayından sonra içerik (yeni eserler, takvim) uygulama sürümü gerektirmez; yalnızca kod değişiklikleri yeni build ister.
