@@ -3,6 +3,9 @@
 Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
 
 ## Sıradaki işler (kod)
+1. **[Claude] Premium faydası: kaçırılan günler.** Ücretsiz kullanıcı yalnızca bugünün eserini açabiliyor; Premium kullanıcı Bugün ekranında geriye kaydırarak son günlerin eserlerine de geçebiliyor (kitaplıktan bağımsız, "kaçırdığın günleri yakala" olarak anlatılır). Ödeme ekranına fayda satırı eklenecek.
+2. **[Claude] Premium faydası: tablo duvar kâğıdı.** Günün tablosunu telefon ekranı oranında (ör. 1320×2868) kırpılmış, yüksek çözünürlüklü duvar kâğıdı olarak Fotoğraflar'a kaydetme ya da paylaşma; eser sayfasında ve tablo görüntüleyicide bir düğme. Kırpma noktası tablonun odak noktasına göre. Ödeme ekranına fayda satırı.
+3. **[Oytun + Claude] Karşılama akışı:** Brief `design/ONBOARDING_BRIEF.md`; Claude Design'da tasarlanınca uygulamaya geçirilecek.
 8. **[Claude + Oytun] VoiceOver'ı cihazda denemek:** Kod tarafı tamam: günler arası geçiş eylemleri, bölüm düğmesi etiketleri, okunur durak zamanları, sözlük terimi ipucu. Cihazda VoiceOver açıkken bir kez gezinmek gerekiyor.
 9. **[Claude + Oytun] Widget'ın renklendirilmiş (tinted) modu:** Cihazda ana ekran stili "Renklendirilmiş" ve "Şeffaf" iken widget'ların görünümü kontrol edilecek.
 
