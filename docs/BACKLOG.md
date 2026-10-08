@@ -3,8 +3,8 @@
 Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
 
 ## Sıradaki işler (kod)
-8. **[Claude + Oytun] VoiceOver'ı cihazda denemek:** Kod tarafı tamam: günler arası geçiş eylemleri, bölüm düğmesi etiketleri, okunur durak zamanları, sözlük terimi ipucu. Cihazda VoiceOver açıkken bir kez gezinmek gerekiyor.
-9. **[Claude + Oytun] Widget'ın renklendirilmiş (tinted) modu:** Cihazda ana ekran stili "Renklendirilmiş" ve "Şeffaf" iken widget'ların görünümü kontrol edilecek.
+- Şu an açık kod işi yok; sıradaki adımlar App Store hazırlığında (madde 19).
+- **Ertelendi (Oytun'un kararı):** VoiceOver'ın cihazda denenmesi. Kod tarafı hazır (günler arası geçiş eylemleri, bölüm düğmesi etiketleri, okunur durak zamanları, sözlük terimi ipucu).
 
 ## İçerik güncelleme servisi: senden beklenenler
 - **[Oytun] App Store linki:** Uygulama App Store'da olunca Railway'e `APP_STORE_URL` ekle. Güncelleme istemek için `LATEST_APP_VERSION` (bir kez önerir) ya da `MIN_APP_VERSION` (zorunlu ekran) kullanılır. Normalde ikisi de boş kalır.
@@ -36,6 +36,10 @@ Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 ## Tamamlananlar (8 Ekim 2026, fiyat ve deneme)
 - Ömür boyu ₺699,99, aylık ₺129,99. Aylık abonelikte 3 günlük ücretsiz deneme (App Store "introductory offer"). Ödeme ekranında aylık seçiliyken düğme "3 gün ücretsiz dene" oluyor ve altında App Store'un istediği yenileme açıklaması çıkıyor; yalnızca denemeye hak kazanan Apple Kimlikleri için.
 - Kullanım koşullarına deneme süresi eklendi. Yerel StoreKit test dosyası güncellendi; birim testi fiyatları ve denemeyi doğruluyor.
+
+## Tamamlananlar (8 Ekim 2026, cihaz testleri)
+- Widget'ın renklendirilmiş ve şeffaf modları cihazda kontrol edildi (Oytun): sorun yok.
+- Karşılama 2. kartında "usta bir kayda" yerine "zamansız bir kayda".
 
 ## Tamamlananlar (8 Ekim 2026, karşılama akışı)
 - Claude Design §09 uygulandı: tablolu dört kart (Vernet, Levitan, Friedrich *Deniz Kıyısındaki Keşiş*, Gezgin) ve ardından hatırlatıcı. Yatay kaydırma, sağ üstte cam "Geç" (hatırlatıcıya atlar), 1. sayfada "Zaten hesabınız var mı? Giriş yapın".
