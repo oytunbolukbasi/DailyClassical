@@ -214,6 +214,8 @@ struct AuthSheet: View {
             titleFont: Typography.titleXL,
             titleLineHeight: 1.15,
             titleSize: 30,
+            subtitleFont: Typography.body15,  // SPEC §4.17: SF 15/1.5 under the auth titles
+            subtitleLineHeight: 1.5,
             close: { dismiss() }
         )
     }
