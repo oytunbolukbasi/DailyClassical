@@ -5,6 +5,7 @@ import { HTTPException } from "hono/http-exception";
 import { logger } from "hono/logger";
 import { secureHeaders } from "hono/secure-headers";
 import { sql } from "./db/client.js";
+import { appleStatus } from "./lib/apple.js";
 import { account } from "./routes/account.js";
 import { config } from "./routes/config.js";
 import { content } from "./routes/content.js";
@@ -17,7 +18,8 @@ app.use("*", logger(), secureHeaders());
 
 app.get("/health", async (c) => {
   await sql`select 1`;
-  return c.json({ ok: true });
+  // Sign in with Apple configuration (lib/apple.ts): status words only, never the key.
+  return c.json({ ok: true, appleSignIn: await appleStatus() });
 });
 
 // Optimized painting/portrait HEICs (scripts/optimize-images.ts). URLs carry ?v=<hash>, so they never change.

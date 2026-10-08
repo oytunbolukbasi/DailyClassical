@@ -57,14 +57,17 @@ export async function exchangeAppleCode(code: string): Promise<string | null> {
     const res = await post("/auth/token", {
       client_id: env.APPLE_BUNDLE_ID, client_secret: await clientSecret(), code, grant_type: "authorization_code",
     });
-    if (!res.ok) {
-      console.error("apple code exchange failed", res.status);
+    const body = (await res.json().catch(() => ({}))) as { refresh_token?: string; error?: string };
+    if (!res.ok || !body.refresh_token) {
+      console.error("apple code exchange failed", res.status, body.error);
+      lastExchange = "failed";
       return null;
     }
-    const body = (await res.json()) as { refresh_token?: string };
-    return body.refresh_token ?? null;
+    lastExchange = "ok";
+    return body.refresh_token;
   } catch (err) {
     console.error("apple code exchange failed", err);
+    lastExchange = "failed";
     return null;
   }
 }
@@ -79,5 +82,25 @@ export async function revokeAppleToken(refreshToken: string): Promise<void> {
     if (!res.ok) console.error("apple revoke failed", res.status);
   } catch (err) {
     console.error("apple revoke failed", err);
+  }
+}
+
+/**
+ * What GET /health reports about Sign in with Apple, without exposing anything secret.
+ * - key: whether the three variables are set and the .p8 parses with plausible ids. Apple offers no
+ *   way to test a key on its own (its token endpoint rejects a made-up code before it looks at the
+ *   client secret), so a wrong key or key id only shows up on a real sign-in:
+ * - lastExchange: the outcome of the most recent code-for-token exchange on this server process.
+ */
+let lastExchange: "none_yet" | "ok" | "failed" = "none_yet";
+
+export async function appleStatus() {
+  if (!configured()) return { key: "not_configured" as const, lastExchange };
+  const ids = /^[A-Z0-9]{10}$/.test(env.APPLE_TEAM_ID!) && /^[A-Z0-9]{10}$/.test(env.APPLE_KEY_ID!);
+  try {
+    await clientSecret();
+    return { key: ids ? ("valid_format" as const) : ("bad_team_or_key_id" as const), lastExchange };
+  } catch {
+    return { key: "unreadable_private_key" as const, lastExchange };
   }
 }
