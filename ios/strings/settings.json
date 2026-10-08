@@ -515,10 +515,22 @@
     "en": "Per month, cancel any time",
     "tr": "Her ay, istediğiniz zaman iptal edin"
   },
+  "paywall.plan.monthly.trialDetail %lld": {
+    "en": "%lld days free, then monthly. Cancel anytime",
+    "tr": "%lld gün ücretsiz, sonra aylık. İstediğiniz zaman iptal edin"
+  },
   "paywall.cta %@": {
     "en": "Continue · %@",
     "tr": "Devam · %@",
     "comment": "%@ = StoreKit displayPrice of the selected plan"
+  },
+  "paywall.cta.trial %lld": {
+    "en": "Start %lld-day free trial",
+    "tr": "%lld gün ücretsiz dene"
+  },
+  "paywall.trial.terms %lld %@": {
+    "en": "%1$lld days free, then %2$@ a month. Renews automatically unless cancelled at least 24 hours before the trial ends; manage it in your Apple ID settings.",
+    "tr": "%1$lld gün ücretsiz, ardından aylık %2$@. Deneme bitmeden en az 24 saat önce iptal edilmezse otomatik yenilenir; Apple Kimliği ayarlarınızdan yönetebilirsiniz."
   },
   "paywall.restore": {
     "en": "Restore purchases",
