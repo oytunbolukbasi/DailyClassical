@@ -172,7 +172,9 @@ Hesapsız kullanımda hiçbir şey toplanmıyor, ama etiketler en geniş durumu 
 
 ## 8. Ekran görüntüleri [Claude, Oytun onayı]
 
-App Store Connect'in **iPhone with Dynamic Island (medium display)** alanı 6.3" ister (1206×2622): **`design/app-store/out-6.3/<dil>/01–06.png`** yükle (6.9" kaynak set `out/<dil>/`, 1320×2868). **Header** (ürün sayfası üst görseli, 5244×2950): `design/app-store/header/header-vernet-5244x2950.jpg` (yazısız, Vernet; orijinal çözünürlükten kırpıldı). Set (EN + TR, 6'şar görüntü): `design/app-store/out/<dil>/01–06.png`, genel bakış `design/app-store/contact-sheet.png`. Sıra: Bugün, dinleme durakları, sözlük, Kitaplık, besteci, duvar kâğıdı (Premium).
+App Store Connect'in **iPhone with Dynamic Island (medium display)** alanı 6.3" ister (1206×2622): **`design/app-store/out-6.3/<dil>/01–06.png`** yükle (6.9" kaynak set `out/<dil>/`, 1320×2868). **Creative assets** (iOS 27 App Store; [Apple spec](https://developer.apple.com/help/app-store-connect/reference/app-information/creative-assets-specifications/)):
+- **Header** (21:9, 3840×1646, JPG/PNG): `design/app-store/header/header-vernet-3840x1646.jpg`, yazısız Vernet. Alternatif "universal" (16:9, 5244×2950, **yalnızca PNG**): `header/universal-vernet-5244x2950.png`.
+- **Search results** (3:2, 3840×2560, JPG/PNG): `design/app-store/search/search-<dil>-3840x2560.jpg`, kısa başlık + Bugün ve dinleme durakları ekranı (`search.html`). Set (EN + TR, 6'şar görüntü): `design/app-store/out/<dil>/01–06.png`, genel bakış `design/app-store/contact-sheet.png`. Sıra: Bugün, dinleme durakları, sözlük, Kitaplık, besteci, duvar kâğıdı (Premium).
 
 - Ham ekranlar: `ios/scripts/app-store-shots.sh <simülatör-udid>` (Debug build; `App/ScreenshotScene.swift` launch argümanlarıyla her ekranı doğrudan açar). `design/app-store/raw/` git'e girmez.
 - Çerçeve: `design/app-store/frame.html` (başlıklar ve metinler burada), `design/app-store/render.sh` ile 1320×2868 PNG.

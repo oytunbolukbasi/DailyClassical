@@ -1,0 +1,52 @@
+<!doctype html>
+<!-- App Store "Search results" creative asset (3:2, 3840×2560): search.html?lang=en. Rendered by render.sh.
+     Apple: make the app's purpose obvious at a glance and show the interface; short localized text,
+     key elements away from the edges. -->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Search results asset</title>
+<style>
+  @font-face { font-family: Literata; font-weight: 500; src: url("../../ios/DailyClassical/Resources/Fonts/Literata-Medium.ttf"); }
+  :root { --bg: #F5F2EC; --ink: #1E1B17; --ink2: #5E5852; --accent: #6B4A2B; --bezel: #1E1B17; }
+  html, body { margin: 0; width: 3840px; height: 2560px; overflow: hidden; }
+  body { background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; position: relative; }
+
+  .copy { position: absolute; left: 300px; top: 0; bottom: 0; width: 1500px; display: flex; flex-direction: column; justify-content: center; }
+  .label { font: 600 64px/1 -apple-system, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 70px; }
+  h1 { font: 500 236px/1.06 Literata, serif; letter-spacing: -0.015em; margin: 0; text-wrap: balance; }
+  p { font: 400 84px/1.38 -apple-system, sans-serif; color: var(--ink2); margin: 64px 0 0; text-wrap: pretty; }
+
+  .phone {
+    position: absolute; width: 900px; padding: 22px; border-radius: 132px; background: var(--bezel);
+    box-shadow: 0 90px 180px rgba(30, 27, 23, 0.24), 0 24px 60px rgba(30, 27, 23, 0.14);
+  }
+  .phone img { display: block; width: 100%; border-radius: 112px; }
+  .a { left: 2000px; top: 330px; }
+  .b { left: 2700px; top: 620px; }
+</style>
+</head>
+<body>
+  <div class="copy">
+    <div class="label" id="label"></div>
+    <h1 id="title"></h1>
+    <p id="body"></p>
+  </div>
+  <div class="phone a"><img id="a" alt=""></div>
+  <div class="phone b"><img id="b" alt=""></div>
+<script>
+const COPY = {
+  en: { label: "Classical music", title: "One classical work a day.", body: "With a listening guide and a painting from the same world." },
+  tr: { label: "Klasik müzik", title: "Her gün bir klasik eser.", body: "Bir dinleme rehberi ve aynı dünyadan bir tabloyla." },
+};
+const lang = new URLSearchParams(location.search).get("lang") || "en";
+const t = COPY[lang];
+document.documentElement.lang = lang;
+document.getElementById("label").textContent = t.label;
+document.getElementById("title").textContent = t.title;
+document.getElementById("body").textContent = t.body;
+document.getElementById("a").src = `raw/${lang}/01-today.png`;
+document.getElementById("b").src = `raw/${lang}/02-piece.png`;
+</script>
+</body>
+</html>

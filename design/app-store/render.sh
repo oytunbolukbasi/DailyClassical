@@ -17,3 +17,13 @@ for lang in ${=LANGS:-en tr}; do
   mkdir -p out-6.3/$lang
   for f in out/$lang/*.png; do sips -z 2622 1206 "$f" --out out-6.3/$lang/${f:t} >/dev/null; done
 done
+
+# "Search results" creative asset (3:2, 3840×2560, JPEG).
+mkdir -p search
+for lang in ${=LANGS:-en tr}; do
+  "$CHROME" --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 \
+    --allow-file-access-from-files --window-size=3840,2560 --virtual-time-budget=3000 \
+    --screenshot="$PWD/search/search-$lang.png" "file://$PWD/search.html?lang=$lang" 2>/dev/null
+  sips -s format jpeg -s formatOptions 92 search/search-$lang.png --out search/search-$lang-3840x2560.jpg >/dev/null
+  rm search/search-$lang.png
+done
