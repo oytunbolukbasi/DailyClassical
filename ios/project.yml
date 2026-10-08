@@ -59,7 +59,7 @@ targets:
         CODE_SIGN_ENTITLEMENTS: DailyClassical/DailyClassical.entitlements
         # RevenueCat's *public* Apple SDK key (appl_…), safe to ship in the app. Empty = purchases go
         # straight through StoreKit 2 (local StoreKit configuration file); see EntitlementStore.
-        REVENUECAT_API_KEY: ""
+        REVENUECAT_API_KEY: appl_oyvZmpSeMAqWXZgCzcMxRyRiQDo
     info:
       path: DailyClassical/Info.plist
       properties:

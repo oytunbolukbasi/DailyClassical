@@ -83,7 +83,7 @@ Her ürün için **Review Screenshot** istenir: `design/app-store/review/premium
    Sonra listede `default` satırında **⋯** › **Make current** (yanında tik görünür). Uygulama yalnızca current offering'i okuyor; paketleri içlerindeki ürün kimliğinden tanıyor.
 6. **API Keys** › bu uygulamanın **Public app-specific API key**'ini (`appl_` ile başlar) bana ver. Bu anahtar herkese açık, uygulamaya gömülür; gizli değil. **Secret key'i verme.**
 
-Anahtar gelince ben `project.yml` içindeki `REVENUECAT_API_KEY` ayarına yazacağım; uygulama o andan itibaren satın almaları RevenueCat üzerinden yapacak. Anahtar yokken uygulama doğrudan StoreKit 2 kullanıyor (yerel test).
+**Tamam (8 Ekim 2026):** Public anahtar `project.yml` › `REVENUECAT_API_KEY` ayarında; uygulama satın almaları RevenueCat üzerinden yapıyor. RevenueCat API'si `default` offering'i iki paketle (`$rc_monthly`, `$rc_lifetime`) current olarak döndürüyor; paywall ₺699,99 / ₺129,99 ve 3 günlük denemeyi gösteriyor. Birim testi StoreKit yolunu ayrıca (anahtardan bağımsız, TUR mağazası) kontrol ediyor.
 
 ## 4. Sandbox testi [Oytun + Claude]
 

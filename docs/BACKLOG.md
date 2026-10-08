@@ -22,7 +22,7 @@ Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 
 ## Altyapı
 - **[Oytun] Yasal metinlerin hukuki okuması:** Kullanım koşulları ve gizlilik metinleri iyi niyetli taslaklar; yayından önce bir avukatın ya da KVKK danışmanının bakması önerilir. Özellikle şirket/şahıs bilgisi (veri sorumlusu adı ve adresi) eklenmeli; şu an yalnızca `hello@dailyclassical.co` var ve bu adresin e-posta alabildiğinden emin ol.
-19. **[Oytun + Claude] App Store Connect ve RevenueCat:** Adım adım rehber `docs/APP_STORE.md` içinde (uygulama kaydı, ürünler, RevenueCat, sandbox testi, mağaza metinleri, gizlilik etiketleri, inceleme notları, TestFlight). RevenueCat kodu hazır; public API anahtarı gelince açılacak. Fiyatlar: ömür boyu ₺699,99, aylık ₺129,99 + 3 gün ücretsiz deneme.
+19. **[Oytun + Claude] App Store Connect ve RevenueCat:** Adım adım rehber `docs/APP_STORE.md` içinde (uygulama kaydı, ürünler, RevenueCat, sandbox testi, mağaza metinleri, gizlilik etiketleri, inceleme notları, TestFlight). RevenueCat bağlandı (public anahtar uygulamada, `default` offering doğrulandı). Sıradaki: cihazda sandbox testi (madde 4). Fiyatlar: ömür boyu ₺699,99, aylık ₺129,99 + 3 gün ücretsiz deneme.
 
 ## Yayından önce sıfırlanacak test verisi
 - **Takvim:** `content/schedule.yaml` içerik kontrolü için 27 Eylül 2026'dan başlıyor, böylece 10 eserin hepsi Kitaplık'ta görünüyor. Yayından önce `start` yayın gününe çekilecek ve sıra Çaykovski 6 ile başlayacak. Ardından `npm run db:seed && npm run fixtures` çalıştırılacak.

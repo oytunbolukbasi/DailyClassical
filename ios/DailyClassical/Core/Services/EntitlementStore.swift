@@ -57,8 +57,9 @@ final class EntitlementStore {
     @ObservationIgnored private var packages: [Plan: Package] = [:]
     @ObservationIgnored private var updates: Task<Void, Never>?
 
-    init() {
-        if let key = Self.revenueCatKey {
+    /// `revenueCatKey: nil` forces the StoreKit 2 path (tests against the local configuration).
+    init(revenueCatKey: String? = EntitlementStore.revenueCatKey) {
+        if let key = revenueCatKey {
             #if DEBUG
             Purchases.logLevel = .info
             #endif
