@@ -913,13 +913,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "By continuing you agree to the [Terms](https://dailyclassical.co/terms) and [Privacy Policy](https://dailyclassical.co/privacy)."
+            "value": "By continuing you agree to the [Terms](https://api.dailyclassical.co/terms?locale=en) and [Privacy Policy](https://api.dailyclassical.co/privacy?locale=en)."
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Devam ederek [Kullanım Koşulları](https://dailyclassical.co/terms) ve [Gizlilik Politikası](https://dailyclassical.co/privacy) metinlerini kabul etmiş olursunuz."
+            "value": "Devam ederek [Kullanım Koşulları](https://api.dailyclassical.co/terms?locale=tr) ve [Gizlilik Politikası](https://api.dailyclassical.co/privacy?locale=tr) metinlerini kabul etmiş olursunuz."
           }
         }
       },

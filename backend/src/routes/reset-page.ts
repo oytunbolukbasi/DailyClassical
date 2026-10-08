@@ -83,7 +83,7 @@ button:disabled{opacity:.5;cursor:default}
 </head>
 <body>
 <main>
-<p class="brand">DailyClassical</p>
+<p class="brand" lang="en">DailyClassical</p>
 <section id="form-state"${state === "form" ? "" : " hidden"}>
 <h1>${esc(t.title)}</h1>
 <p>${esc(t.intro)}</p>

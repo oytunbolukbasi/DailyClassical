@@ -1,10 +1,23 @@
 import SwiftUI
 
-/// Public web pages linked from the paywall, auth legal line and About.
+/// Public web pages linked from the paywall, auth legal line and About. Terms and Privacy are served
+/// by the API (backend/src/routes/legal.ts) in the app's language until the website exists.
 enum AppLinks {
     static let website = URL(string: "https://dailyclassical.co")!
-    static let terms = URL(string: "https://dailyclassical.co/terms")!
-    static let privacy = URL(string: "https://dailyclassical.co/privacy")!
+    private static let pagesHost = "api.dailyclassical.co"
+
+    static func terms(_ locale: Locale) -> URL { page("terms", locale) }
+    static func privacy(_ locale: Locale) -> URL { page("privacy", locale) }
+
+    private static func page(_ name: String, _ locale: Locale) -> URL {
+        let language = locale.language.languageCode?.identifier == "tr" ? "tr" : "en"
+        return URL(string: "https://\(pagesHost)/\(name)?locale=\(language)")!
+    }
+
+    /// Terms and Privacy, opened in the in-app browser (opensOwnPagesInApp).
+    static func isOwnPage(_ url: URL) -> Bool {
+        url.host() == pagesHost && ["/terms", "/privacy"].contains(url.path())
+    }
 }
 
 // MARK: - Grouped list styling (SPEC §3.12 Settings row, §3.27 footer)

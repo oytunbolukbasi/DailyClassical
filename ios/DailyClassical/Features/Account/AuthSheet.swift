@@ -43,6 +43,7 @@ struct AuthSheet: View {
             .scrollDismissesKeyboard(.interactively)
         }
         .background(Palette.background)
+        .opensOwnPagesInApp()  // the Terms / Privacy links in the legal line
         .presentationDetents([.large])
         .presentationBackground(Palette.background)
         .presentationDragIndicator(.visible)

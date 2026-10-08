@@ -2,6 +2,8 @@ import SwiftUI
 
 /// Settings › About and credits.
 struct AboutScreen: View {
+    @Environment(\.locale) private var locale
+
     private var version: String {
         let info = Bundle.main.infoDictionary
         let short = info?["CFBundleShortVersionString"] as? String ?? "–"
@@ -34,8 +36,8 @@ struct AboutScreen: View {
 
             Section {
                 Link(destination: AppLinks.website) { linkLabel("about.website") }.settingsRow()
-                Link(destination: AppLinks.terms) { linkLabel("about.terms") }.settingsRow()
-                Link(destination: AppLinks.privacy) { linkLabel("about.privacy") }.settingsRow()
+                Link(destination: AppLinks.terms(locale)) { linkLabel("about.terms") }.settingsRow()
+                Link(destination: AppLinks.privacy(locale)) { linkLabel("about.privacy") }.settingsRow()
             }
 
             Section {
@@ -43,6 +45,7 @@ struct AboutScreen: View {
             }
         }
         .settingsList()
+        .opensOwnPagesInApp()
         .navigationTitle(Text("settings.about.credits"))
         .navigationBarTitleDisplayMode(.inline)
     }

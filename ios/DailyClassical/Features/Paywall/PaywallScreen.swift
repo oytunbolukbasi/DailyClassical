@@ -6,6 +6,7 @@ import SwiftUI
 struct PaywallScreen: View {
     @Environment(EntitlementStore.self) private var entitlements
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.locale) private var locale
 
     @State private var plan: EntitlementStore.Plan = .lifetime
     @State private var purchasing = false
@@ -111,11 +112,12 @@ struct PaywallScreen: View {
             .disabled(purchasing || restoring)
 
             HStack(spacing: 14) {
-                Link(destination: AppLinks.terms) { Text("paywall.terms") }
-                Link(destination: AppLinks.privacy) { Text("paywall.privacy") }
+                Link(destination: AppLinks.terms(locale)) { Text("paywall.terms") }
+                Link(destination: AppLinks.privacy(locale)) { Text("paywall.privacy") }
             }
             .font(Typography.caption)
             .foregroundStyle(Palette.ink3)
+            .opensOwnPagesInApp()
         }
     }
 
