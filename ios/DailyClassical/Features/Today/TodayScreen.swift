@@ -9,6 +9,9 @@ struct TodayScreen: View {
     @Environment(AppRouter.self) private var router
     /// The painting zooms into the piece page (Start listening, or pulling the page up).
     @Namespace private var zoom
+    /// The piece page hides the tab bar. Shown again the moment Today starts to reappear (the
+    /// start of a back swipe, not its end), hidden the moment a piece is pushed.
+    @State private var tabBarVisible = true
 
     var body: some View {
         @Bindable var router = router
@@ -22,14 +25,24 @@ struct TodayScreen: View {
             }
             .background(Palette.background)
             .toolbarVisibility(.hidden, for: .navigationBar)
-            // The piece page hides the tab bar, but popping back through the zoom transition
-            // doesn't bring it back on its own: the root sets it from the stack's depth.
-            .toolbarVisibility(router.todayPath.isEmpty ? .visible : .hidden, for: .tabBar)
+            // Driven by Today's own appearance rather than the stack's depth: the path only empties
+            // once a back swipe has finished, which brought the tab bar in a beat too late.
+            .toolbarVisibility(tabBarVisible ? .visible : .hidden, for: .tabBar)
+            .onAppear { setTabBar(true) }  // also fires as a back swipe begins
+            .onDisappear { if !router.todayPath.isEmpty { setTabBar(false) } }  // a cancelled swipe
+            .onChange(of: router.todayPath.count) { old, new in
+                if new > old { setTabBar(false) } else if new == 0 { setTabBar(true) }
+            }
             .navigationDestination(for: PieceRoute.self) { route in
                 PieceScreen(id: route.id).navigationTransition(.zoom(sourceID: route.id, in: zoom))
             }
         }
         .environment(\.todayZoomNamespace, zoom)
+    }
+
+    private func setTabBar(_ visible: Bool) {
+        guard tabBarVisible != visible else { return }
+        withAnimation(.easeOut(duration: 0.25)) { tabBarVisible = visible }
     }
 }
 
@@ -139,7 +152,23 @@ private struct TodayContent: View {
     @Environment(AppRouter.self) private var router
     @Environment(\.todayZoomNamespace) private var zoom
     @State private var showArtwork = false
-    @State private var textHeight: CGFloat = 0
+    /// Starts from the last measurement for this piece and width: the page is rebuilt when it comes
+    /// back from the piece, and a first frame laid out without the text height drew the painting
+    /// taller, then it settled (the "painting drops into place" at the end of a back swipe).
+    @State private var textHeight: CGFloat
+
+    /// Last measured text block height per piece, language and width (main actor only).
+    private static var measuredTextHeights: [String: CGFloat] = [:]
+    private var measureKey: String { "\(piece.id)/\(piece.contentLocale)/\(Int(metrics.height))" }
+
+    init(piece: Piece, date: Date, metrics: TodayMetrics, previous: (() -> Void)?, next: (() -> Void)?) {
+        self.piece = piece
+        self.date = date
+        self.metrics = metrics
+        self.previous = previous
+        self.next = next
+        _textHeight = State(initialValue: Self.measuredTextHeights["\(piece.id)/\(piece.contentLocale)/\(Int(metrics.height))"] ?? 0)
+    }
     /// Pulling the page up from its top opens the piece when the finger lifts (far enough, or a
     /// flick). Nothing happens mid-drag, so the page follows the finger and the zoom starts clean.
     @State private var scrollOffset: CGFloat = 0
@@ -166,7 +195,18 @@ private struct TodayContent: View {
                 PaintingImage(url: piece.painting?.imageUrl)
                     .frame(height: paintingHeight)
                     .frame(maxWidth: .infinity)
-                    .modifier(ZoomSource(id: piece.id, namespace: zoom))
+                    // The zoom's anchor is an invisible frame over the painting, below the status
+                    // bar: the system clips a source to the safe area and hides it while zooming,
+                    // so anchoring on the painting itself left a pale band around it at the end of
+                    // a back swipe, then the painting jumped into place. This way the painting
+                    // stays put and the page shrinks onto it.
+                    .overlay(alignment: .bottom) {
+                        // Not .clear: an empty view gave the zoom no frame to land on.
+                        Rectangle().fill(Color.black.opacity(0.001))
+                            .frame(height: max(0, paintingHeight - metrics.top))
+                            .modifier(ZoomSource(id: piece.id, namespace: zoom))
+                            .allowsHitTesting(false)
+                    }
                     .contentShape(.rect)
                     .onTapGesture { if piece.painting != nil { showArtwork = true } }
                     .accessibilityLabel(paintingLabel)
@@ -204,7 +244,10 @@ private struct TodayContent: View {
                 }
                 .padding(.horizontal, Spacing.pageGutter)
                 .fixedSize(horizontal: false, vertical: true)
-                .onGeometryChange(for: CGFloat.self) { $0.size.height } action: { textHeight = $0 }
+                .onGeometryChange(for: CGFloat.self) { $0.size.height } action: {
+                    textHeight = $0
+                    Self.measuredTextHeights[measureKey] = $0
+                }
                 .padding(.top, textTopGap)
                 .padding(.bottom, textBottomGap)
             }

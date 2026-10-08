@@ -42,6 +42,9 @@ struct PrimaryGlassButton: View {
         // Frosted glass with a neutral page-colour fill: the label must stay legible over any
         // painting (dark skies included). Neutral, never the accent: elevation says "primary".
         .glassEffect(.regular.tint(Palette.primaryGlassTint).interactive(), in: .capsule)
+        // No "materialize" when the glass is rebuilt, e.g. as Today comes back from the piece's
+        // zoom: it read as a pale blob settling onto the button.
+        .glassEffectTransition(.identity)
         .shadow(color: .black.opacity(0.08), radius: 1.5, y: 1)
         .shadow(color: .black.opacity(0.10), radius: 10, y: 8)
     }
