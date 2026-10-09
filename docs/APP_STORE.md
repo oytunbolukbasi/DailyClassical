@@ -162,6 +162,7 @@ App Store Connect › App Privacy › **Get Started**. "Do you or your third-par
 | Contact Info › **Email Address** | App Functionality | Yes |
 | Identifiers › **User ID** | App Functionality | Yes |
 | Purchases › **Purchase History** | App Functionality | Yes |
+| User Content › **Other User Content** (favoriler) | App Functionality | Yes |
 
 Hesapsız kullanımda hiçbir şey toplanmıyor, ama etiketler en geniş durumu (hesap açılmış) gösterir. Analitik, reklam, konum, sağlık vb. yok.
 
