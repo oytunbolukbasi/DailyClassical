@@ -196,13 +196,17 @@ document.addEventListener("click", (e) => {
   applyLang(b.dataset.setLang);
 });
 
+// ── Hero scale: the 1440 board, scaled down on narrower desktop windows ──
+function scaleHero() { html.style.setProperty("--hs", String(Math.min(1, innerWidth / 1440))); }
+
 // ── Start ─────────────────────────────────────────────
+scaleHero();
 buildBand();
 applyLang(lang());
 showHero(0);
 startHero();
 onScroll();
 addEventListener("scroll", onScroll, { passive: true });
-addEventListener("resize", () => { onScroll(); });
+addEventListener("resize", () => { scaleHero(); onScroll(); });
 matchMedia("(max-width: 899px)").addEventListener("change", () => { buildBand(); captionBand(lang()); });
 reduced.addEventListener("change", () => { startHero(); onScroll(); });

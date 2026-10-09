@@ -9,6 +9,7 @@
 <script>
   // Before first paint: a language picked earlier wins over Accept-Language.
   try { const l = localStorage.getItem("lang"); if (l === "en" || l === "tr") document.documentElement.lang = l; } catch {}
+  document.documentElement.style.setProperty("--hs", String(Math.min(1, innerWidth / 1440)));  // hero scale (site.js)
 </script>
 <title>DailyClassical · One classical work a day</title>
 <meta name="description" content="A symphony, a concerto or a sonata, chosen for today, with a listening guide and a painting from the same world. For iPhone.">
