@@ -267,10 +267,17 @@ mark { color: var(--accent); background: color-mix(in oklab, var(--accent) 14%, 
 
 /* ── Sticky capsule ──────────────────────────────── */
 .capsule {
-  position: fixed; left: 50%; bottom: 28px; z-index: 30; display: flex; align-items: center; gap: 16px; height: 60px; padding: 8px 8px 8px 18px; border-radius: 999px;
+  position: fixed; left: 50%; bottom: 28px; z-index: 30; display: flex; align-items: center; gap: 18px; height: 60px; padding: 8px 8px 8px 16px; border-radius: 999px;
   transform: translate(-50%, 24px); opacity: 0; pointer-events: none; transition: opacity .35s ease, transform .35s ease;
 }
 .capsule.is-on { transform: translate(-50%, 0); opacity: 1; pointer-events: auto; }
+/* Concentric with the capsule (8 pt inset all round); the official badge stays in the hero and closing. */
+.cap-cta {
+  display: flex; align-items: center; height: 44px; padding: 0 20px; border-radius: 999px; white-space: nowrap;
+  background: var(--ink); color: var(--bg); font: 600 15px var(--sans); letter-spacing: -.01em; text-decoration: none;
+  transition: background .2s ease;
+}
+.cap-cta:hover { background: color-mix(in oklab, var(--ink) 86%, var(--bg)); }
 
 @media (min-width: 900px) { .m-steps { display: none; } }
 
