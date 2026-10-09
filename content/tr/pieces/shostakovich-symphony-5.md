@@ -36,12 +36,11 @@ also_recommended:
     # against the Erato 15:00 / 5:10 / 13:09 / 10:52).
     spotify_url: https://open.spotify.com/album/4n4zKOkzZSwuymCZ4XGxuk
 painting:
-  artist: Kazimir Malevich
-  title: Sarı Gömlekli Gövde (Karmaşık Önsezi)
-  year: c. 1932
+  artist: İlya Repin
+  title: Volga Mavnacıları
+  year: 1870–73
   collection: Devlet Rus Müzesi, St. Petersburg
-  pairing_note: Boş bir manzarada yüzsüz bir figür; aynı ülkede ve aynı on yılda, o da resmî baskı altındaki bir sanatçı tarafından boyandı.
-  rights_flag: AB'de ve Türkiye'de 1 Ocak 2006'dan beri kamu malı (ömür + 70; Maleviç 1935'te öldü). ABD'de de büyük olasılıkla kamu malı, ancak tablonun ilk yayımlanma tarihi doğrulanamadı; bu yüzden ABD dağıtımı için küçük bir risk kalıyor. Tek ücretsiz görsel düşük çözünürlüklü (1370 × 1800). Güvenli yedek - İlya Repin, "Volga Mavnacıları", 1870–1873, Devlet Rus Müzesi.
+  pairing_note: Bir mavnaya koşulmuş, seçmedikleri bir yükün altında zorlanan adamlar; senfoniden altmış yıl önce boyanmış, baskı altında bir Rus dayanıklılığı.
 ```
 
 ### Genel bakış

@@ -171,22 +171,21 @@ mahler-symphony-5:
   full: { width: 4000, height: 3482, bytes: 3274737 }
 
 shostakovich-symphony-5:
-  # Low resolution only (1370 × 1800). Commons tag {{PD-Art|PD-old-auto|deathyear=1935}}, no US-specific tag.
-  # PD in EU/Turkey since 2006; small unverified US risk (see the rights_flag in the markdown).
-  # Larger gallery photos on Commons are user photos with their own licences; check before use.
-  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9A%D0%B0%D0%B7%D0%B8%D0%BC%D0%B8%D1%80_%D0%9C%D0%B0%D0%BB%D0%B5%D0%B2%D0%B8%D1%87_%E2%80%94_%D0%92%D0%B0%D0%B6%D0%BA%D0%B5_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D1%87%D1%83%D1%82%D1%82%D1%8F.jpg
-  source_url: https://rusmuseumvrm.ru/data/collections/painting/19_20/malevich_k.s._slozhnoe_predchuvstvie_tors_v_zheltoy_rubashke._okolo_1932._zh-9477/?lang=en
-  commons_page: https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B0%D0%B7%D0%B8%D0%BC%D0%B8%D1%80_%D0%9C%D0%B0%D0%BB%D0%B5%D0%B2%D0%B8%D1%87_%E2%80%94_%D0%92%D0%B0%D0%B6%D0%BA%D0%B5_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D1%87%D1%83%D1%82%D1%82%D1%8F.jpg
-  width: 1370
-  height: 1800
+  # Replaced Malevich (Torso in a Yellow Shirt, c. 1932): its US status was unverified (first publication
+  # date unknown). Repin died in 1930 and the painting was published in the 1870s: public domain everywhere.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Ilya_Repin_-_Barge_Haulers_on_the_Volga_-_Google_Art_Project.jpg
+  source_url: https://artsandculture.google.com/asset/WAG9_bL0sypwYQ
+  commons_page: https://commons.wikimedia.org/wiki/File:Ilya_Repin_-_Barge_Haulers_on_the_Volga_-_Google_Art_Project.jpg
+  width: 5734
+  height: 2684
   medium: Oil on canvas
-  license: Public domain (PD-Art, PD-old-auto; artist d. 1935)
-  credit_line: Kazimir Malevich, Torso in a Yellow Shirt (Complicated Premonition), c. 1932. State Russian Museum, St Petersburg (Ж-9477). Image via Wikimedia Commons, public domain.
-  rights_status: unverified
-  hero: { width: 1370, height: 1800, bytes: 676649 }
-  thumb: { width: 300, height: 394, bytes: 12799 }
-  placeholder_color: "#717a77"
-  full: { width: 1370, height: 1800, bytes: 752973 }
+  license: Public domain (PD-Art, PD-old; artist d. 1930)
+  credit_line: Ilya Repin, Barge Haulers on the Volga, 1870–73. State Russian Museum, St Petersburg. Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 3600, height: 1685, bytes: 1368712 }
+  thumb: { width: 641, height: 300, bytes: 35576 }
+  full: { width: 4000, height: 1872, bytes: 1821185 }
+  placeholder_color: "#af9d83"
 
 mozart-piano-concerto-23:
   # Portrait format (3235 × 4226, ≈ 0.77:1): plan the hero crop. A CC BY 3.0 gallery photo (3096 × 3912) also exists:

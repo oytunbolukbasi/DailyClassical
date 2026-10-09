@@ -575,28 +575,28 @@
       }
     },
     "paintings/shostakovich-symphony-5": {
-      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9A%D0%B0%D0%B7%D0%B8%D0%BC%D0%B8%D1%80_%D0%9C%D0%B0%D0%BB%D0%B5%D0%B2%D0%B8%D1%87_%E2%80%94_%D0%92%D0%B0%D0%B6%D0%BA%D0%B5_%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D1%87%D1%83%D1%82%D1%82%D1%8F.jpg",
-      "color": "#717a77",
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Ilya_Repin_-_Barge_Haulers_on_the_Volga_-_Google_Art_Project.jpg",
+      "color": "#af9d83",
       "hero": {
         "path": "paintings/shostakovich-symphony-5-hero.heic",
-        "width": 1370,
-        "height": 1800,
-        "bytes": 676649,
-        "hash": "a141db2271"
+        "width": 3600,
+        "height": 1685,
+        "bytes": 1368712,
+        "hash": "75a6691069"
       },
       "thumb": {
         "path": "paintings/shostakovich-symphony-5-thumb.heic",
-        "width": 300,
-        "height": 394,
-        "bytes": 12799,
-        "hash": "110e0480a6"
+        "width": 641,
+        "height": 300,
+        "bytes": 35576,
+        "hash": "38b787a6b3"
       },
       "full": {
         "path": "paintings/shostakovich-symphony-5-full.heic",
-        "width": 1370,
-        "height": 1800,
-        "bytes": 752973,
-        "hash": "f7f3dab015"
+        "width": 4000,
+        "height": 1872,
+        "bytes": 1821185,
+        "hash": "36c61d75c4"
       }
     },
     "paintings/tchaikovsky-symphony-6": {

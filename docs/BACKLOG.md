@@ -16,7 +16,6 @@ Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
     - Mozart 40 I–II ve Schubert 8 I–II: ±25–45 sn.
     - Beethoven 9 finali Spotify'da iki parçaya bölünmüş.
 11. **[Oytun] Mravinsky'nin Çaykovski 6 kaydı:** DG'nin resmi albümü Spotify'da yok. Başka bir alternatif kayıt seçilebilir ya da "Spotify'da yok" olarak kalabilir.
-12. **[Oytun] Malevich (Şostakoviç 5'in tablosu):** ABD'de küçük bir telif riski var. Uygulama ABD App Store'da da çıkacaksa Repin'in tablosuna geçilmeli.
 13. **[Oytun] Resmi Spotify logosu:** "Spotify'da aç" butonları için Spotify'ın tasarım kurallarına uygun resmi asset.
 14. **[Oytun] Türkçe içeriğin ve arayüz metinlerinin native okuması:** Çeviriler ve arayüz metinleri (onboarding butonu, "kadans/kadenza" gibi terimler).
 
@@ -36,6 +35,9 @@ Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 ## Tamamlananlar (8 Ekim 2026, fiyat ve deneme)
 - Ömür boyu ₺699,99, aylık ₺129,99. Aylık abonelikte 3 günlük ücretsiz deneme (App Store "introductory offer"). Ödeme ekranında aylık seçiliyken düğme "3 gün ücretsiz dene" oluyor ve altında App Store'un istediği yenileme açıklaması çıkıyor; yalnızca denemeye hak kazanan Apple Kimlikleri için.
 - Kullanım koşullarına deneme süresi eklendi. Yerel StoreKit test dosyası güncellendi; birim testi fiyatları ve denemeyi doğruluyor.
+
+## Tamamlananlar (9 Ekim 2026, Şostakoviç 5 tablosu)
+- Malevich (*Sarı Gömlekli Gövde*, ABD'de telif durumu doğrulanamadı) yerine Repin, *Volga Mavnacıları* (1870–73, Devlet Rus Müzesi; Google Art Project, 5734 px, her yerde kamu malı). Görseller, widget, fixtures ve EN/TR metinler güncellendi; uygulama sürümü gerektirmez (content-publish). Bir sonraki build'de uygulamaya gömülü görsel de yenilenir.
 
 ## Tamamlananlar (9 Ekim 2026, tanıtım sayfası)
 - **www.dailyclassical.co:** Claude Design "DailyClassical Landing" birebir uygulandı (`backend/site/`, `src/routes/site.ts`; tasarım dosyası `design/DailyClassical Landing.dc.html`). Hero'da tarih çipi her 3,2 sn'de bir gün ilerliyor ve tablo değişiyor (Vernet → Levitan → Keşiş); yüzen tablolar; sabit telefonla 3 adımlık hikâye (2. adımda dinleme durağı vurgusu kaydırmayla ilerliyor, 3. adımda sözlük sheet'i yükseliyor); yavaş akan tablo bandı (üzerine gelince künye); kapanışta App Store rozeti + QR; hero'dan sonra alt kapsül.

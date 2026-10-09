@@ -35,12 +35,11 @@ also_recommended:
     # against the Erato 15:00 / 5:10 / 13:09 / 10:52).
     spotify_url: https://open.spotify.com/album/4n4zKOkzZSwuymCZ4XGxuk
 painting:
-  artist: Kazimir Malevich
-  title: Torso in a Yellow Shirt (Complicated Premonition)
-  year: c. 1932
+  artist: Ilya Repin
+  title: Barge Haulers on the Volga
+  year: 1870–73
   collection: State Russian Museum, St Petersburg
-  pairing_note: A faceless figure in an empty landscape, painted in the same country and decade, by an artist who was also under official pressure.
-  rights_flag: Public domain in the EU and Turkey since 1 January 2006 (life + 70; Malevich died in 1935). Very likely public domain in the United States too, but the painting's first-publication date is unverified, so a small residual risk remains for US distribution. The only free image is low-resolution (1370 × 1800). Safe fallback - Ilya Repin, "Barge Haulers on the Volga", 1870–1873, State Russian Museum.
+  pairing_note: Men harnessed to a barge, straining under a load they did not choose; Russian endurance under pressure, painted sixty years before the symphony.
 ```
 
 ### The big picture
