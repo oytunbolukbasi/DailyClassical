@@ -3,6 +3,7 @@
 Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
 
 ## Sıradaki işler (kod)
+- **[Oytun + Claude] dailyclassical.co tanıtım sayfası:** Brief `design/LANDING_BRIEF.md`; Claude Design'da tasarlanınca aynı Railway servisinde `/` adresine konacak (şu an geçici sayfa var).
 - Şu an açık kod işi yok; sıradaki adımlar App Store hazırlığında (madde 19).
 - **Ertelendi (Oytun'un kararı):** VoiceOver'ın cihazda denenmesi. Kod tarafı hazır (günler arası geçiş eylemleri, bölüm düğmesi etiketleri, okunur durak zamanları, sözlük terimi ipucu).
 
