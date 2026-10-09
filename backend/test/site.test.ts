@@ -7,6 +7,7 @@ test("the landing page follows Accept-Language and links hashed CSS/JS", async (
   assert.equal(tr.status, 200);
   const html = await tr.text();
   assert.match(html, /<html lang="tr">/);
+  assert.match(html, /<title>DailyClassical · Her gün bir klasik eser<\/title>/);
   assert.match(html, /\/assets\/site\.css\?v=[a-f0-9]{10}"/);
   assert.match(html, /\/assets\/site\.js\?v=[a-f0-9]{10}"/);
   assert.match(html, /apps\.apple\.com\/app\/id6820556910/);

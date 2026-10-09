@@ -19,7 +19,16 @@ const versioned = (html: string, file: string) => {
   return html.replace(`/assets/${file}"`, `/assets/${file}?v=${hash}"`);
 };
 const page = ["site.css", "site.js"].reduce(versioned, readFileSync(`${root}/index.html`, "utf8"));
-const rendered = { en: page, tr: page.replace('<html lang="en">', '<html lang="tr">') };
+const rendered = {
+  en: page,
+  tr: page
+    .replace('<html lang="en">', '<html lang="tr">')
+    .replace("<title>DailyClassical · One classical work a day</title>", "<title>DailyClassical · Her gün bir klasik eser</title>")
+    .replace(
+      'content="A symphony, a concerto or a sonata, chosen for today, with a listening guide and a painting from the same world. For iPhone."',
+      'content="Bugün için seçilmiş bir senfoni, konçerto ya da sonat; bir dinleme rehberi ve aynı dünyadan bir tabloyla. iPhone için."',
+    ),
+};
 
 site.get("/", (c) => {
   c.header("Cache-Control", "public, max-age=300");
