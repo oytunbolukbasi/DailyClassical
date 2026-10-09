@@ -1,0 +1,217 @@
+<!doctype html>
+<!-- dailyclassical.co (design: Claude Design "DailyClassical Landing.dc.html", design/LANDING_BRIEF.md).
+     Served at / by backend/src/routes/site.ts, which sets <html lang> from ?locale or Accept-Language.
+     Both languages live in the page ([data-l]); the switch stores the choice in localStorage. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>
+  // Before first paint: a language picked earlier wins over Accept-Language.
+  try { const l = localStorage.getItem("lang"); if (l === "en" || l === "tr") document.documentElement.lang = l; } catch {}
+</script>
+<title>DailyClassical · One classical work a day</title>
+<meta name="description" content="A symphony, a concerto or a sonata, chosen for today, with a listening guide and a painting from the same world. For iPhone.">
+<meta name="apple-itunes-app" content="app-id=6820556910">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F5F2EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111010" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.dailyclassical.co/">
+<meta property="og:title" content="DailyClassical · One classical work a day">
+<meta property="og:description" content="A symphony, a concerto or a sonata, chosen for today, with a listening guide and a painting from the same world.">
+<meta property="og:image" content="https://www.dailyclassical.co/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://www.dailyclassical.co/">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/literata-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/img/vernet-1200.webp" as="image" type="image/webp" media="(min-width: 900px)">
+<link rel="preload" href="/assets/img/vernet-640.webp" as="image" type="image/webp" media="(max-width: 899px)">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<div class="top">
+<!-- Nav: transparent over the hero, stays while the phone story plays, then scrolls away. -->
+<header class="nav">
+  <a class="wordmark" href="/" aria-label="DailyClassical"><span class="icon" aria-hidden="true">d</span><span>DailyClassical</span></a>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-set-lang="en" lang="en">EN</button>
+    <button type="button" data-set-lang="tr" lang="tr">TR</button>
+  </div>
+</header>
+
+<!-- 1 · Hero -->
+<section class="hero" id="hero">
+  <div class="stage">
+    <figure class="float f1"><picture><source srcset="/assets/img/wanderer-640.webp" type="image/webp"><img src="/assets/img/wanderer-640.jpg" data-alt="wanderer" alt="" width="640" height="820"></picture></figure>
+    <figure class="float f2"><picture><source srcset="/assets/img/monk-640.webp" type="image/webp"><img src="/assets/img/monk-640.jpg" data-alt="monk" alt="" width="640" height="407"></picture></figure>
+    <figure class="float f3 desk"><picture><source srcset="/assets/img/bierstadt-640.webp" type="image/webp"><img src="/assets/img/bierstadt-640.jpg" data-alt="bierstadt" alt="" width="640" height="383"></picture></figure>
+    <figure class="float f4"><picture><source srcset="/assets/img/klimt-640.webp" type="image/webp"><img src="/assets/img/klimt-640.jpg" data-alt="klimt" alt="" width="640" height="635"></picture></figure>
+    <figure class="float f5"><picture><source srcset="/assets/img/turner-640.webp" type="image/webp"><img src="/assets/img/turner-640.jpg" data-alt="turner" alt="" width="640" height="475"></picture></figure>
+    <figure class="float f6 desk"><picture><source srcset="/assets/img/millet-640.webp" type="image/webp"><img src="/assets/img/millet-640.jpg" data-alt="millet" alt="" width="640" height="532"></picture></figure>
+    <figure class="float f7 desk"><picture><source srcset="/assets/img/watteau-640.webp" type="image/webp"><img src="/assets/img/watteau-640.jpg" data-alt="watteau" alt="" width="640" height="420"></picture></figure>
+    <figure class="float f8 desk"><picture><source srcset="/assets/img/fuseli-640.webp" type="image/webp"><img src="/assets/img/fuseli-640.jpg" data-alt="fuseli" alt="" width="640" height="519"></picture></figure>
+
+    <!-- Featured painting: crossfades with the date chip (site.js). -->
+    <div class="featured">
+      <picture class="is-on" data-key="vernet"><source media="(min-width: 900px)" srcset="/assets/img/vernet-1200.webp" type="image/webp"><source srcset="/assets/img/vernet-640.webp" type="image/webp"><img src="/assets/img/vernet-1200.jpg" data-alt="vernet" alt="" width="1200" height="838" fetchpriority="high"></picture>
+      <picture data-key="levitan"><source media="(min-width: 900px)" srcset="/assets/img/levitan-1200.webp" type="image/webp"><source srcset="/assets/img/levitan-640.webp" type="image/webp"><img src="/assets/img/levitan-1200.jpg" data-alt="levitan" alt="" width="1200" height="861" loading="lazy"></picture>
+      <picture data-key="monk"><source media="(min-width: 900px)" srcset="/assets/img/monk-1200.webp" type="image/webp"><source srcset="/assets/img/monk-640.webp" type="image/webp"><img src="/assets/img/monk-1200.jpg" data-alt="monk" alt="" width="1200" height="763" loading="lazy"></picture>
+    </div>
+    <div class="chip hero-chip" aria-hidden="true"><span class="n"></span><span class="wm"><span class="w"></span><span class="m"></span></span></div>
+
+    <div class="hero-copy">
+      <h1><span data-l="en">One classical work a day.</span><span data-l="tr">Her gün bir klasik eser.</span></h1>
+      <p>
+        <span data-l="en">A symphony, a concerto or a sonata, chosen for today, with a listening guide and a painting from the same world.</span>
+        <span data-l="tr">Bugün için seçilmiş bir senfoni, konçerto ya da sonat; bir dinleme rehberi ve aynı dünyadan bir tabloyla.</span>
+      </p>
+      <a class="badge badge-56 store-link" href="https://apps.apple.com/app/id6820556910">
+        <picture data-l="en"><source media="(prefers-color-scheme: dark)" srcset="/assets/badges/app-store-white-en-us.svg"><img src="/assets/badges/app-store-black-en-us.svg" alt="Download on the App Store" width="168" height="56"></picture>
+        <picture data-l="tr"><source media="(prefers-color-scheme: dark)" srcset="/assets/badges/app-store-white-tr-tr.svg"><img src="/assets/badges/app-store-black-tr-tr.svg" alt="App Store'dan İndirin" width="212" height="56"></picture>
+      </a>
+    </div>
+    <p class="hero-credit"><span class="credit" data-credit="vernet"></span></p>
+  </div>
+</section>
+
+<!-- 2 · Phone story: sticky phone, three steps (desktop); stacked steps with a phone each (mobile, site.js clones the screens). -->
+<section class="story" id="story" aria-label="How it works">
+  <div class="story-sticky">
+    <div class="steps">
+      <div class="step is-on" data-step="0">
+        <div class="step-n">1 / 3</div>
+        <h2><span data-l="en">Every day, one piece.</span><span data-l="tr">Her gün tek bir eser.</span></h2>
+        <p><span data-l="en">Chosen for today, with its painting.</span><span data-l="tr">Bugün için seçildi, tablosuyla birlikte.</span></p>
+      </div>
+      <div class="step" data-step="1">
+        <div class="step-n">2 / 3</div>
+        <h2><span data-l="en">Press play, then follow along.</span><span data-l="tr">Çalmaya başlayın, sonra takip edin.</span></h2>
+        <p><span data-l="en">What to listen for, minute by minute, timed to a timeless recording that opens in Spotify.</span><span data-l="tr">Neyi dinleyeceğiniz, dakika dakika; Spotify’da açılan zamansız bir kayda göre.</span></p>
+      </div>
+      <div class="step" data-step="2">
+        <div class="step-n">3 / 3</div>
+        <h2><span data-l="en">Written for listeners.</span><span data-l="tr">Dinleyiciler için yazıldı.</span></h2>
+        <p><span data-l="en">Tap a musical term for a short, plain explanation.</span><span data-l="tr">Bir müzik terimine dokunun, kısa ve sade bir açıklama açılsın.</span></p>
+      </div>
+    </div>
+
+    <div class="phone-wrap"><div class="phone" aria-hidden="true">
+      <div class="island"></div>
+      <div class="statusbar"><span>9:41</span><span class="sb-icons"><svg width="19" height="12" viewBox="0 0 19 12"><rect x="0" y="7.5" width="3.2" height="4.5" rx=".7"/><rect x="4.8" y="5" width="3.2" height="7" rx=".7"/><rect x="9.6" y="2.5" width="3.2" height="9.5" rx=".7"/><rect x="14.4" y="0" width="3.2" height="12" rx=".7"/></svg><svg width="17" height="12" viewBox="0 0 17 12"><path d="M8.5 3.2c2.3 0 4.4.9 5.9 2.4l1.1-1.1C13.7 2.7 11.2 1.5 8.5 1.5S3.3 2.7 1.5 4.5l1.1 1.1C4.1 4.1 6.2 3.2 8.5 3.2z"/><path d="M8.5 6.8c1.4 0 2.6.5 3.5 1.4l1.1-1.1C11.8 5.9 10.2 5.1 8.5 5.1S5.2 5.9 3.9 7.1L5 8.2c.9-.9 2.1-1.4 3.5-1.4z"/><circle cx="8.5" cy="10.5" r="1.5"/></svg><svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.5" fill="none" stroke="currentColor" stroke-opacity=".35"/><rect x="2" y="2" width="20" height="9" rx="2"/><path d="M25 4.5v4c.8-.3 1.5-1.3 1.5-2s-.7-1.7-1.5-2z" fill-opacity=".4"/></svg></span></div>
+
+      <!-- Screen 1 · Today -->
+      <div class="screen s-today is-on" data-screen="0">
+        <div class="t-painting"><picture><source srcset="/assets/img/levitan-640.webp" type="image/webp"><img src="/assets/img/levitan-640.jpg" alt="" loading="lazy" width="640" height="459"></picture></div>
+        <div class="chip t-chip"><span class="n"></span><span class="wm"><span class="w"></span><span class="m"></span></span></div>
+        <div class="t-listen"><span data-l="en">Start listening</span><span data-l="tr">Dinlemeye başla</span></div>
+        <div class="t-body">
+          <div class="t-credit"><span class="rule"></span><span class="credit" data-credit="levitan"></span></div>
+          <div class="t-composer"><span data-l="en">Pyotr Ilyich Tchaikovsky</span><span data-l="tr">Pyotr İlyiç Çaykovski</span><svg width="8" height="12" viewBox="0 0 8 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l6 6-6 6"/></svg></div>
+          <div class="t-title"><span data-l="en">Symphony No. 6 in B minor, Op. 74, “Pathétique”</span><span data-l="tr">Si minör 6. Senfoni, Op. 74, “Patetik”</span></div>
+          <div class="t-hook"><span data-l="en">A symphony that ends not in triumph but in silence.</span><span data-l="tr">Zaferle değil, sessizlikle biten bir senfoni.</span></div>
+          <div class="t-meta"><span data-l="en">1893 · About 46 minutes · 4 movements</span><span data-l="tr">1893 · Yaklaşık 46 dakika · 4 bölüm</span></div>
+        </div>
+        <div class="tabbar">
+          <div class="tabs glass">
+            <div class="tab is-on"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="11" r="4.5"/><path d="M3 18h18"/></svg><span data-l="en">Today</span><span data-l="tr">Bugün</span></div>
+            <div class="tab"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 5h4v15H4zM10 5h4v15h-4zM15.5 6l3.9-1 3.6 14-3.9 1z"/></svg><span data-l="en">Library</span><span data-l="tr">Kitaplık</span></div>
+            <div class="tab"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M4 7h7M15 7h5M4 12h3M11 12h9M4 17h10M18 17h2"/><circle cx="13" cy="7" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="16" cy="17" r="2"/></svg><span data-l="en">Settings</span><span data-l="tr">Ayarlar</span></div>
+          </div>
+          <div class="search glass"><svg width="24" height="24" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></div>
+        </div>
+      </div>
+
+      <!-- Screen 2 · Listening stops (reading focus follows the scroll) -->
+      <div class="screen s-stops" data-screen="1">
+        <div class="stops-scroll">
+          <div class="summary"><span data-l="en">The heart of the symphony. A restless theme born in darkness meets the most famous, warmest melody Tchaikovsky ever wrote.</span><span data-l="tr">Senfoninin kalbi. Karanlıkta doğan huzursuz bir tema, Çaykovski’nin yazdığı en ünlü, en sıcak melodiyle karşılaşır.</span></div>
+          <div class="label"><span data-l="en">Listening stops</span><span data-l="tr">Dinleme durakları</span></div>
+          <div class="stop"><div class="rail"><i></i><b></b></div><div class="card"><div class="time">≈ 0:00</div><div class="hear"><span data-l="en">A single bassoon over dark, hollow double basses</span><span data-l="tr">Karanlık, oyuk kontrbasların üzerinde tek bir fagot</span></div><div class="what"><span data-l="en">The introduction. The seed of Theme 1, in slow motion</span><span data-l="tr">Giriş. 1. temanın tohumu, ağır çekimde</span></div></div></div>
+          <div class="stop"><div class="rail"><i></i><b></b></div><div class="card"><div class="time">≈ 2:00</div><div class="hear"><span data-l="en">Violas play the same idea, fast and anxious; strings and woodwinds trade phrases</span><span data-l="tr">Viyolalar aynı fikri hızlı ve kaygılı çalar; yaylılar ve tahta üflemeliler cümleleri birbirine paslar</span></div><div class="what"><span data-l="en">The main section begins with Theme 1. Tension climbs step by step</span><span data-l="tr">Ana kısım 1. temayla başlıyor. Gerilim adım adım tırmanıyor</span></div></div></div>
+          <div class="stop"><div class="rail"><i></i><b></b></div><div class="card"><div class="time">≈ 4:30</div><div class="hear"><span data-l="en">Everything calms; a wide, singing melody on muted strings</span><span data-l="tr">Her şey durulur; sordinli yaylılarda geniş, şarkı gibi bir melodi</span></div><div class="what"><span data-l="en">Theme 2. The signature tune of the symphony</span><span data-l="tr">2. tema. Senfoninin imza ezgisi</span></div></div></div>
+          <div class="stop"><div class="rail"><i></i><b></b></div><div class="card"><div class="time">≈ 6:30</div><div class="hear"><span data-l="en">Flute and bassoon in conversation over a pulsing string accompaniment</span><span data-l="tr">Atan bir yaylı eşliğinin üzerinde flüt ve fagot sohbet eder</span></div><div class="what"><span data-l="en">The middle of Theme 2, a little more animated</span><span data-l="tr">2. temanın ortası, biraz daha canlı</span></div></div></div>
+        </div>
+        <div class="fade-top"></div>
+        <div class="p-nav">
+          <div class="circle glass"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M14 5l-7 7 7 7"/></svg></div>
+          <div class="mvts glass"><span class="is-on">I</span><span>II</span><span>III</span><span>IV</span></div>
+          <div class="circle glass"><svg width="22" height="22" viewBox="0 0 24 24"><path d="M12 6c-2-1.5-5-2-8-2v14c3 0 6 .5 8 2 2-1.5 5-2 8-2V4c-3 0-6 .5-8 2zM12 6v14"/></svg></div>
+        </div>
+      </div>
+
+      <!-- Screen 3 · Glossary sheet rises -->
+      <div class="screen s-gloss" data-screen="2">
+        <div class="g-body">
+          <div class="summary ink"><span data-l="en">The heart of the symphony. A restless theme born in darkness meets the warmest melody Tchaikovsky ever wrote. The movement is in <mark>sonata form</mark>: the themes are introduced, thrown into conflict, and brought back.</span><span data-l="tr">Senfoninin kalbi. Karanlıkta doğan huzursuz bir tema, en sıcak melodiyle karşılaşır. Bölüm <mark>sonat formu</mark>nda: temalar tanıtılır, çatışmaya sokulur ve geri getirilir.</span></div>
+          <div class="label ink2"><span data-l="en">Main ideas</span><span data-l="tr">Ana fikirler</span></div>
+          <div class="idea"><div class="idea-name"><span data-l="en">Theme 1, unrest</span><span data-l="tr">1. tema, huzursuzluk</span></div><div class="idea-desc"><span data-l="en">A short, climbing, questioning motif.</span><span data-l="tr">Kısa, tırmanan, soru soran bir motif.</span></div></div>
+        </div>
+        <div class="dim"></div>
+        <div class="sheet">
+          <div class="grabber"></div>
+          <div class="sheet-head"><div class="sheet-term"><span data-l="en">Sonata form</span><span data-l="tr">Sonat formu</span></div><div class="x"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></div></div>
+          <div class="sheet-def"><span data-l="en">A three-stage structure: themes are introduced (exposition), worked and set against each other (development), and brought back (recapitulation).</span><span data-l="tr">Üç evreli bir yapı: temalar tanıtılır (serim), işlenir ve birbirine karşı konur (gelişme), sonra geri getirilir (yeniden serim).</span></div>
+        </div>
+      </div>
+
+      <div class="home-indicator"></div>
+    </div></div>
+
+    <div class="indicator" aria-hidden="true"><i class="is-on"></i><i></i><i></i></div>
+  </div>
+</section>
+</div>
+
+<!-- 3 · Paintings band -->
+<section class="band" aria-labelledby="band-title">
+  <h2 id="band-title"><span data-l="en">Paintings from the same world.</span><span data-l="tr">Aynı dünyadan tablolar.</span></h2>
+  <div class="band-viewport"><div class="band-track"></div></div>
+</section>
+
+<!-- 4 · Closing -->
+<section class="closing" id="closing">
+  <h2><span data-l="en">Today’s piece is waiting.</span><span data-l="tr">Bugünün eseri sizi bekliyor.</span></h2>
+  <div class="closing-row">
+    <a class="badge badge-56 store-link" href="https://apps.apple.com/app/id6820556910">
+      <picture data-l="en"><source media="(prefers-color-scheme: dark)" srcset="/assets/badges/app-store-white-en-us.svg"><img src="/assets/badges/app-store-black-en-us.svg" alt="Download on the App Store" width="168" height="56" loading="lazy"></picture>
+      <picture data-l="tr"><source media="(prefers-color-scheme: dark)" srcset="/assets/badges/app-store-white-tr-tr.svg"><img src="/assets/badges/app-store-black-tr-tr.svg" alt="App Store'dan İndirin" width="212" height="56" loading="lazy"></picture>
+    </a>
+    <div class="qr">
+      <svg viewBox="0 0 29 29" role="img" aria-label="QR code: apps.apple.com/app/id6820556910" shape-rendering="crispEdges"><path stroke="currentColor" d="M0 0.5h7m2 0h2m1 0h1m2 0h5m2 0h7M0 1.5h1m5 0h1m3 0h1m1 0h1m4 0h1m2 0h1m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m1 0h3m1 0h1m1 0h1m1 0h1m3 0h1m1 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m4 0h1m1 0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h1m1 0h1m2 0h3m2 0h3m1 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h1m1 0h6m2 0h1m1 0h1m1 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h1m3 0h2m1 0h1m3 0h2M0 8.5h1m1 0h5m3 0h3m1 0h4m1 0h1m2 0h5M0 9.5h1m1 0h1m5 0h1m1 0h1m8 0h4m1 0h1m3 0h1M0 10.5h2m4 0h3m1 0h1m1 0h1m2 0h2m1 0h1m1 0h1m1 0h2M5 11.5h1m4 0h1m1 0h1m1 0h1m3 0h2m1 0h2m1 0h2m1 0h1M1 12.5h1m1 0h1m1 0h3m9 0h1m5 0h1m1 0h2M0 13.5h2m1 0h1m1 0h1m3 0h2m2 0h2m1 0h1m2 0h6m3 0h1M0 14.5h5m1 0h3m3 0h3m1 0h1m1 0h1m2 0h1m2 0h3M2 15.5h2m4 0h1m4 0h1m1 0h2m1 0h3m3 0h1m2 0h1M1 16.5h4m1 0h1m7 0h1m2 0h3m3 0h1m1 0h2M0 17.5h2m3 0h1m1 0h2m1 0h3m2 0h1m1 0h3m2 0h3m1 0h1m1 0h1M0 18.5h1m1 0h1m3 0h1m1 0h1m6 0h1m1 0h1m2 0h2m2 0h1m1 0h1M0 19.5h1m2 0h2m3 0h2m2 0h1m1 0h1m5 0h2m2 0h1m2 0h1M0 20.5h1m4 0h2m1 0h3m6 0h1m2 0h5m1 0h3M8 21.5h4m1 0h2m2 0h2m1 0h1m3 0h5M0 22.5h7m2 0h2m2 0h2m3 0h3m1 0h1m1 0h3M0 23.5h1m5 0h1m1 0h4m1 0h1m5 0h2m3 0h1M0 24.5h1m1 0h3m1 0h1m1 0h1m1 0h3m1 0h1m2 0h1m2 0h5m1 0h1m1 0h1M0 25.5h1m1 0h3m1 0h1m1 0h1m2 0h3m4 0h1m4 0h1m1 0h2M0 26.5h1m1 0h3m1 0h1m1 0h1m3 0h2m1 0h1m3 0h2m1 0h6M0 27.5h1m5 0h1m2 0h2m2 0h1m1 0h1m2 0h1m1 0h2m1 0h3m1 0h1M0 28.5h7m1 0h3m4 0h2m1 0h2m1 0h1m2 0h1m1 0h1"/></svg>
+      <span><span data-l="en">Scan with your phone</span><span data-l="tr">Telefonunuzla tarayın</span></span>
+    </div>
+  </div>
+  <p class="note"><span data-l="en">Free to start. Premium unlocks the whole library.</span><span data-l="tr">Ücretsiz başlayın. Premium kütüphanenin tamamını açar.</span></p>
+</section>
+
+<footer class="footer">
+  <nav class="links">
+    <a class="lang-link" data-page="/support"><span data-l="en">Support</span><span data-l="tr">Destek</span></a>
+    <a class="lang-link" data-page="/privacy"><span data-l="en">Privacy</span><span data-l="tr">Gizlilik</span></a>
+    <a class="lang-link" data-page="/terms"><span data-l="en">Terms</span><span data-l="tr">Koşullar</span></a>
+    <a href="mailto:hello@dailyclassical.co">hello@dailyclassical.co</a>
+  </nav>
+  <div class="footer-end">
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-set-lang="en" lang="en">EN</button>
+      <button type="button" data-set-lang="tr" lang="tr">TR</button>
+    </div>
+    <span>© 2026 DailyClassical</span>
+  </div>
+</footer>
+
+<!-- Sticky download capsule: after the hero, until the closing (desktop). -->
+<div class="capsule glass" id="capsule" aria-hidden="true">
+  <span class="wordmark small"><span class="icon">d</span><span>DailyClassical</span></span>
+  <a class="badge badge-44 store-link" href="https://apps.apple.com/app/id6820556910" tabindex="-1">
+    <picture data-l="en"><source media="(prefers-color-scheme: dark)" srcset="/assets/badges/app-store-white-en-us.svg"><img src="/assets/badges/app-store-black-en-us.svg" alt="Download on the App Store" width="132" height="44" loading="lazy"></picture>
+    <picture data-l="tr"><source media="(prefers-color-scheme: dark)" srcset="/assets/badges/app-store-white-tr-tr.svg"><img src="/assets/badges/app-store-black-tr-tr.svg" alt="App Store'dan İndirin" width="166" height="44" loading="lazy"></picture>
+  </a>
+</div>
+
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

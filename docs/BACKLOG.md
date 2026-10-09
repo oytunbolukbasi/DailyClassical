@@ -3,7 +3,6 @@
 Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
 
 ## Sıradaki işler (kod)
-- **[Oytun + Claude] dailyclassical.co tanıtım sayfası:** Brief `design/LANDING_BRIEF.md`; Claude Design'da tasarlanınca aynı Railway servisinde `/` adresine konacak (şu an geçici sayfa var).
 - Şu an açık kod işi yok; sıradaki adımlar App Store hazırlığında (madde 19).
 - **Ertelendi (Oytun'un kararı):** VoiceOver'ın cihazda denenmesi. Kod tarafı hazır (günler arası geçiş eylemleri, bölüm düğmesi etiketleri, okunur durak zamanları, sözlük terimi ipucu).
 
@@ -37,6 +36,11 @@ Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Cla
 ## Tamamlananlar (8 Ekim 2026, fiyat ve deneme)
 - Ömür boyu ₺699,99, aylık ₺129,99. Aylık abonelikte 3 günlük ücretsiz deneme (App Store "introductory offer"). Ödeme ekranında aylık seçiliyken düğme "3 gün ücretsiz dene" oluyor ve altında App Store'un istediği yenileme açıklaması çıkıyor; yalnızca denemeye hak kazanan Apple Kimlikleri için.
 - Kullanım koşullarına deneme süresi eklendi. Yerel StoreKit test dosyası güncellendi; birim testi fiyatları ve denemeyi doğruluyor.
+
+## Tamamlananlar (9 Ekim 2026, tanıtım sayfası)
+- **www.dailyclassical.co:** Claude Design "DailyClassical Landing" birebir uygulandı (`backend/site/`, `src/routes/site.ts`; tasarım dosyası `design/DailyClassical Landing.dc.html`). Hero'da tarih çipi her 3,2 sn'de bir gün ilerliyor ve tablo değişiyor (Vernet → Levitan → Keşiş); yüzen tablolar; sabit telefonla 3 adımlık hikâye (2. adımda dinleme durağı vurgusu kaydırmayla ilerliyor, 3. adımda sözlük sheet'i yükseliyor); yavaş akan tablo bandı (üzerine gelince künye); kapanışta App Store rozeti + QR; hero'dan sonra alt kapsül.
+- EN/TR (Accept-Language, seçim localStorage'da), açık/koyu, Hareketi azalt, mobil (390) düzen. Apple'ın resmi rozetleri (EN/TR, siyah/beyaz), Literata WOFF2 siteden, tablolar WebP/JPEG (≤1200 px), paylaşım görseli, Smart App Banner. Çerez ve analitik yok.
+- CSS/JS adresleri içerik özetli (`?v=`), varlıklar 30 gün önbellekte.
 
 ## Tamamlananlar (8 Ekim 2026, cihaz testleri)
 - Widget'ın renklendirilmiş ve şeffaf modları cihazda kontrol edildi (Oytun): sorun yok.

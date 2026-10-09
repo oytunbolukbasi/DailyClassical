@@ -11,6 +11,7 @@ import { config } from "./routes/config.js";
 import { content } from "./routes/content.js";
 import { legal } from "./routes/legal.js";
 import { resetPage } from "./routes/reset-page.js";
+import { site } from "./routes/site.js";
 
 export const app = new Hono();
 
@@ -37,6 +38,7 @@ app.route("/v1", account);
 // Target of the password reset email (no website yet); outside /v1 because it is a web page.
 app.route("/", resetPage);
 app.route("/", legal);
+app.route("/", site);
 
 app.notFound((c) => c.json({ error: "not_found" }, 404));
 app.onError((err, c) => {

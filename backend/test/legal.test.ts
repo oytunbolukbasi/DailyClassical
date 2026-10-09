@@ -32,6 +32,4 @@ test("the legal routes serve both pages in the requested language", async () => 
   assert.match(await en.text(), /<h1>Terms of Use<\/h1>/);
   const support = await legal.request("/support?locale=tr");
   assert.match(await support.text(), /<h1>Destek<\/h1>[\s\S]*hello@dailyclassical\.co/);
-  const home = await legal.request("/", { headers: { "Accept-Language": "tr-TR" } });
-  assert.match(await home.text(), /<title>DailyClassical<\/title>[\s\S]*href="\/\?locale=en"[\s\S]*href="\/support\?locale=tr"/);
 });
