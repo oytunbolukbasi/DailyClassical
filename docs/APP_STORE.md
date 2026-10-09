@@ -173,6 +173,7 @@ Hesapsız kullanımda hiçbir şey toplanmıyor, ama etiketler en geniş durumu 
   DailyClassical shows one classical work a day with a listening guide. Today's piece is free; Premium (one non-consumable, and one monthly subscription with a 3-day free trial) unlocks past pieces, search, and each day's painting as a wallpaper (saved to Photos with add-only access). The demo account has complimentary Premium for review. Recordings open in Spotify; we do not stream audio. Paintings are public domain; sources are listed in Settings › Painting and recording sources. Accounts can be deleted in Settings › Account › Delete account; Sign in with Apple accounts are revoked with Apple on deletion.
 
 - **Contact:** ad, telefon ve e-posta (senin bilgilerin).
+- **Walkthrough videosu (isteğe bağlı, önerilir):** App Review Information › **Attachment**. 1–2 dk, İngilizce arayüz, **TestFlight build'inden** (Xcode build'inde Ayarlar › Test bölümü görünür). Sıra: karşılama › Bugün › eser sayfası (duraklar, sözlük terimi, bölüm geçişi, "Open in Spotify") › Kitaplık'ta kilitli eser › paywall (fiyatlar, deneme, Terms/Privacy, Restore; istersen sandbox satın alma) › tablo › duvar kâğıdı › Fotoğraflar izni › giriş › favori › Settings › Account › Delete account onayı (iptal). Notes'a: "A short walkthrough video is attached (onboarding, listening guide, Spotify link, purchase, wallpaper, account deletion)."
 
 ## 8. Ekran görüntüleri [Claude, Oytun onayı]
 
