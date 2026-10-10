@@ -1,7 +1,8 @@
 import SwiftUI
 
-/// Floating glass control with one roman numeral per movement (2–5). Reflects the
-/// movement under the reading position; tapping jumps to that movement.
+/// Floating glass control with one roman numeral per movement (1–6). Reflects the
+/// movement under the reading position; tapping jumps to that movement. Six movements (Mahler 3)
+/// get narrower segments so the pill still fits between the nav buttons on a 390 pt phone.
 struct MovementSwitcher: View {
     let movements: [Movement]
     let current: Int
@@ -16,7 +17,7 @@ struct MovementSwitcher: View {
             },
             selection: Binding(get: { current }, set: select),
             height: 44,
-            segmentWidth: segmentWidth,
+            segmentWidth: movements.count > 5 ? min(segmentWidth, 36) : segmentWidth,
             font: Typography.rowTitleXS,
             selectedFont: Typography.literata(15, .semibold, relativeTo: .subheadline)
         )
