@@ -3,6 +3,7 @@
 Son güncelleme: 8 Ekim 2026. Köşeli parantez içinde işin sahibi var: **[Claude]** kod tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler.
 
 ## Sıradaki işler (kod)
+- **[Claude] 50 yeni eserin birleştirilmesi:** Taslaklar `content/drafts/`'ta; takip tablosu `docs/CONTENT_STATUS.md`.
 - Şu an açık kod işi yok; sıradaki adımlar App Store hazırlığında (madde 19).
 - **Ertelendi (Oytun'un kararı):** VoiceOver'ın cihazda denenmesi. Kod tarafı hazır (günler arası geçiş eylemleri, bölüm düğmesi etiketleri, okunur durak zamanları, sözlük terimi ipucu).
 
