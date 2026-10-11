@@ -8,34 +8,34 @@ title: Violin Concerto in D major
 catalogue: Op. 35
 key: D major
 year: 1878
-duration_min: 35
+duration_min: 36
 movement_count: 3
 hook: Written in a few weeks by a lake in Switzerland, rejected by the violinist it was meant for, loved ever since.
 reference_recording:
   soloists:
-    - { name: Kyung-Wha Chung, role: violin }
-  conductor: André Previn
-  orchestra: London Symphony Orchestra
-  label: Decca
-  catalogue_number: "SXL 6493 (LP); 475 7734 (CD)"
-  recorded: "June 1970"
-  venue: Kingsway Hall, London
-  release_year: 1970
-  year: 1970
-  spotify_url: https://open.spotify.com/album/43SJ3xkqhvIECCTeY4mtBL
+    - { name: Hilary Hahn, role: violin }
+  conductor: Vasily Petrenko
+  orchestra: Royal Liverpool Philharmonic Orchestra
+  label: Deutsche Grammophon
+  catalogue_number: "477 8777"
+  recorded: "November 2008"
+  venue: Philharmonic Hall, Liverpool
+  release_year: 2010
+  year: 2008
+  # Tracks 4–6 of the album (tracks 1–3 are Jennifer Higdon's Violin Concerto). Uncut finale.
+  spotify_url: https://open.spotify.com/album/5Iijzf1oBpKJwatVUb2P7o
 also_recommended:
   - soloists:
-      - { name: Hilary Hahn, role: violin }
-    conductor: Vasily Petrenko
-    orchestra: Royal Liverpool Philharmonic Orchestra
-    label: Deutsche Grammophon
-    catalogue_number: "477 8777"
-    recorded: "November 2008"
-    venue: Philharmonic Hall, Liverpool
-    release_year: 2010
-    year: 2008
-    # Tracks 4–6 of the album (tracks 1–3 are Jennifer Higdon's Violin Concerto).
-    spotify_url: https://open.spotify.com/album/5Iijzf1oBpKJwatVUb2P7o
+      - { name: Kyung-Wha Chung, role: violin }
+    conductor: André Previn
+    orchestra: London Symphony Orchestra
+    label: Decca
+    catalogue_number: "SXL 6493 (LP); 475 7734 (CD)"
+    recorded: "June 1970"
+    venue: Kingsway Hall, London
+    release_year: 1970
+    year: 1970
+    spotify_url: https://open.spotify.com/album/43SJ3xkqhvIECCTeY4mtBL
 painting:
   artist: Gustave Courbet
   title: Panoramic View of the Alps, Les Dents du Midi
@@ -56,9 +56,9 @@ painting:
 
 | | Tempo | Key | Metre | Duration |
 | --- | --- | --- | --- | --- |
-| I | Allegro moderato | D major | 4/4 | 18:49 |
-| II | Canzonetta: Andante | G minor | 3/4 | 6:24 |
-| III | Finale: Allegro vivacissimo | D major | 2/4 | 9:29 |
+| I | Allegro moderato | D major | 4/4 | 19:23 |
+| II | Canzonetta: Andante | G minor | 3/4 | 6:23 |
+| III | Finale: Allegro vivacissimo | D major | 2/4 | 10:31 |
 
 ### I. Allegro moderato
 
@@ -77,24 +77,24 @@ painting:
 | ≈ 0:00 | The orchestra's violins, quietly, play a gentle phrase; the music hesitates and waits | The introduction |
 | ≈ 0:50 | The solo violin enters alone with a few rising, searching phrases | The soloist's entry, like a short cadenza |
 | ≈ 1:10 | The violin sings a sweet, lilting tune over a light accompaniment | Theme 1, in D major |
-| ≈ 2:00–3:30 | The tune is repeated and decorated; quick runs and leaps | Theme 1 spun out. The [[exposition]] grows more brilliant |
-| ≈ 3:45 | Calmer and more tender: a yearning melody, high on the violin | Theme 2, in A major |
-| ≈ 5:00–6:30 | The violin climbs, races and sparkles; the tension rises | The close of the exposition |
-| ≈ 6:45 | The orchestra alone plays the main tune at full strength, grand and swaggering | The first [[tutti]]: the climax of the exposition |
-| ≈ 7:15 | The music turns restless and wanders through new keys | The [[development]] begins |
-| ≈ 7:45–9:45 | The violin returns with a delicate variation of the main tune, then brilliant passage-work | The development, with the tune in C major |
-| ≈ 10:00 | The orchestra bursts in once more with the main tune, heroic and loud, then stops | A second tutti, in F major, leading to the cadenza |
-| ≈ 10:30–13:00 | The violin alone: chords, runs, some of its highest notes, sudden pauses; it ends on a long trill | The [[cadenza]], written by Tchaikovsky |
-| ≈ 13:00 | While the violin is still trilling, a flute quietly plays the main tune | The [[recapitulation]]. The themes return |
-| ≈ 15:00 | The yearning melody returns, now in D major | Theme 2 in the home key |
+| ≈ 2:10–3:35 | The tune is repeated and decorated; quick runs and leaps | Theme 1 spun out. The [[exposition]] grows more brilliant |
+| ≈ 3:55 | Calmer and more tender: a yearning melody, high on the violin | Theme 2, in A major |
+| ≈ 5:20–6:40 | The violin climbs, races and sparkles; the tension rises | The close of the exposition |
+| ≈ 7:05 | The orchestra alone plays the main tune at full strength, grand and swaggering | The first [[tutti]]: the climax of the exposition |
+| ≈ 7:45 | The music turns restless and wanders through new keys | The [[development]] begins |
+| ≈ 8:15–10:05 | The violin returns with a delicate variation of the main tune, then brilliant passage-work | The development, with the tune in C major |
+| ≈ 10:40 | The orchestra bursts in once more with the main tune, heroic and loud, then stops | A second tutti, in F major, leading to the cadenza |
+| ≈ 11:10–13:25 | The violin alone: chords, runs, some of its highest notes, sudden pauses; it ends on a long trill | The [[cadenza]], written by Tchaikovsky |
+| ≈ 13:50 | While the violin is still trilling, a flute quietly plays the main tune | The [[recapitulation]]. The themes return |
+| ≈ 15:55 | The yearning melody returns, now in D major | Theme 2 in the home key |
 | Last two minutes | Faster; the violin races to the top, and the orchestra ends with a burst | The [[coda]] |
 
 **Things to notice**
 
 1. Listen for the moment the cadenza ends. The violin's trill does not stop: it becomes the accompaniment for the flute, which brings back the main tune.
-2. Compare the main tune at ≈ 1:10, soft and sweet, with the orchestra's version at ≈ 6:45, loud and stately.
+2. Compare the main tune at ≈ 1:10, soft and sweet, with the orchestra's version at ≈ 7:05, loud and stately.
 
-**In this recording.** This was Chung's debut recording for Decca, made with André Previn and the LSO at Kingsway Hall in June 1970. On the Spotify album the Tchaikovsky is tracks 1–3, followed by Sibelius's concerto.
+**In this recording.** Hilary Hahn with Vasily Petrenko and the Royal Liverpool Philharmonic, recorded in Liverpool in November 2008. She plays the finale complete, without the traditional cuts. On the Spotify album the Tchaikovsky is tracks 4–6, after Jennifer Higdon's concerto.
 
 ### II. Canzonetta: Andante
 
@@ -135,13 +135,13 @@ painting:
 | --- | --- | --- |
 | ≈ 0:00 | A loud, lively burst from the orchestra | The finale bursts in |
 | ≈ 0:15 | The violin alone, free and fiery, gathering speed | A short cadenza-like lead-in |
-| ≈ 0:45 | A quick, stamping dance on the violin, low and rough at first | The main theme, in D major |
-| ≈ 1:45 | The orchestra takes up the dance, loud | A [[tutti]] |
-| ≈ 2:00 | A little slower: the violin plays a swaying tune over a steady drone in the bass | The second theme, *Poco meno mosso*, in A major |
-| ≈ 3:00 | Slower still and sadder: woodwinds and violin trade a plaintive phrase | The second theme varied |
-| ≈ 4:00 | The violin speeds up, little by little, and the dance returns | *Poco a poco stringendo*. The main theme, now in F major |
-| ≈ 5:15 | The swaying drone tune returns | The second theme again, in G major |
-| ≈ 7:30 | The dance once more | The main theme, for the last time |
+| ≈ 0:55 | A quick, stamping dance on the violin, low and rough at first | The main theme, in D major |
+| ≈ 2:10 | The orchestra takes up the dance, loud | A [[tutti]] |
+| ≈ 2:30 | A little slower: the violin plays a swaying tune over a steady drone in the bass | The second theme, *Poco meno mosso*, in A major |
+| ≈ 3:40 | Slower still and sadder: woodwinds and violin trade a plaintive phrase | The second theme varied |
+| ≈ 4:55 | The violin speeds up, little by little, and the dance returns | *Poco a poco stringendo*. The main theme, now in F major |
+| ≈ 6:30 | The swaying drone tune returns | The second theme again, in G major |
+| ≈ 9:15 | The dance once more | The main theme, for the last time |
 | Last 90 seconds | Faster and faster, to a brilliant finish | The [[coda]], in D major |
 
 **Things to notice**

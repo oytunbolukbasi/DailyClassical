@@ -54,6 +54,7 @@ Definition: one or two sentences, written for the pop-over.
 | Sustain pedal | The piano pedal that keeps notes ringing after release | The piano's right-hand pedal. It lifts the dampers off the strings, so notes keep ringing after the keys are let go and blend into one another. |
 | Syncopation | Accents off the beat that pull against the pulse | Accents placed off the main beats, which makes the rhythm feel as if it is floating or pulling against the pulse. |
 | Tarantella | A whirling Italian dance in fast 6/8 time | A fast, whirling folk dance from southern Italy in 6/8 time. Legend linked it to the bite of the tarantula spider. |
+| Thematic transformation | One theme reshaped to take on a new character | Changing a theme's speed, rhythm, harmony or mood so that the same notes come back with a different character: a fierce idea, for example, reborn as a love song. |
 | Tremolo | A rapid shimmer between two notes, or on one | A rapid back-and-forth between two notes, or the fast repetition of one, which makes a shimmering or rumbling sound. On the piano it is often an octave in the left hand. |
 | Trill | A rapid shake between two neighbouring notes | A rapid alternation between a note and the note just above it, which makes the sound shimmer or, low on the piano, rumble. |
 | Trio | The gentler middle section of a minuet or scherzo | The contrasting middle section of a minuet or scherzo, usually gentler. |

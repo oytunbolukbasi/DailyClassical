@@ -9,34 +9,34 @@ title: Re majör Keman Konçertosu
 catalogue: Op. 35
 key: Re majör
 year: 1878
-duration_min: 35
+duration_min: 36
 movement_count: 3
 hook: İsviçre'de bir göl kıyısında birkaç haftada yazıldı, adandığı kemancı çalmayı reddetti, o günden beri çok seviliyor.
 reference_recording:
   soloists:
-    - { name: Kyung-Wha Chung, role: violin }
-  conductor: André Previn
-  orchestra: London Symphony Orchestra
-  label: Decca
-  catalogue_number: "SXL 6493 (LP); 475 7734 (CD)"
-  recorded: "June 1970"
-  venue: Kingsway Hall, London
-  release_year: 1970
-  year: 1970
-  spotify_url: https://open.spotify.com/album/43SJ3xkqhvIECCTeY4mtBL
+    - { name: Hilary Hahn, role: violin }
+  conductor: Vasily Petrenko
+  orchestra: Royal Liverpool Philharmonic Orchestra
+  label: Deutsche Grammophon
+  catalogue_number: "477 8777"
+  recorded: "November 2008"
+  venue: Philharmonic Hall, Liverpool
+  release_year: 2010
+  year: 2008
+  # Tracks 4–6 of the album (tracks 1–3 are Jennifer Higdon's Violin Concerto). Uncut finale.
+  spotify_url: https://open.spotify.com/album/5Iijzf1oBpKJwatVUb2P7o
 also_recommended:
   - soloists:
-      - { name: Hilary Hahn, role: violin }
-    conductor: Vasily Petrenko
-    orchestra: Royal Liverpool Philharmonic Orchestra
-    label: Deutsche Grammophon
-    catalogue_number: "477 8777"
-    recorded: "November 2008"
-    venue: Philharmonic Hall, Liverpool
-    release_year: 2010
-    year: 2008
-    # Tracks 4–6 of the album (tracks 1–3 are Jennifer Higdon's Violin Concerto).
-    spotify_url: https://open.spotify.com/album/5Iijzf1oBpKJwatVUb2P7o
+      - { name: Kyung-Wha Chung, role: violin }
+    conductor: André Previn
+    orchestra: London Symphony Orchestra
+    label: Decca
+    catalogue_number: "SXL 6493 (LP); 475 7734 (CD)"
+    recorded: "June 1970"
+    venue: Kingsway Hall, London
+    release_year: 1970
+    year: 1970
+    spotify_url: https://open.spotify.com/album/43SJ3xkqhvIECCTeY4mtBL
 painting:
   artist: Gustave Courbet
   title: Alplerin Panoramik Görünümü, Dents du Midi
@@ -57,9 +57,9 @@ painting:
 
 | | Tempo | Ton | Ölçü | Süre |
 | --- | --- | --- | --- | --- |
-| I | Allegro moderato | Re majör | 4/4 | 18:49 |
-| II | Canzonetta: Andante | Sol minör | 3/4 | 6:24 |
-| III | Finale: Allegro vivacissimo | Re majör | 2/4 | 9:29 |
+| I | Allegro moderato | Re majör | 4/4 | 19:23 |
+| II | Canzonetta: Andante | Sol minör | 3/4 | 6:23 |
+| III | Finale: Allegro vivacissimo | Re majör | 2/4 | 10:31 |
 
 ### I. Allegro moderato
 
@@ -78,24 +78,24 @@ painting:
 | ≈ 0:00 | Orkestranın kemanları sessizce yumuşak bir cümle çalar; müzik duraksar, bekler | Giriş |
 | ≈ 0:50 | Solo keman tek başına, yükselen, arayan birkaç cümleyle girer | Solistin girişi, kısa bir kadans gibi |
 | ≈ 1:10 | Keman, hafif bir eşliğin üzerinde tatlı, salınan bir ezgi söyler | 1. tema, Re majörde |
-| ≈ 2:00–3:30 | Ezgi tekrarlanır ve süslenir; hızlı koşular ve sıçrayışlar | 1. tema açılıyor. [[exposition|Serim]] giderek parlaklaşıyor |
-| ≈ 3:45 | Daha sakin ve şefkatli: kemanın tizinde özlem dolu bir melodi | 2. tema, La majörde |
-| ≈ 5:00–6:30 | Keman tırmanır, koşar, ışıldar; gerilim yükselir | Serimin kapanışı |
-| ≈ 6:45 | Orkestra tek başına ana ezgiyi tüm gücüyle, görkemli ve kurumlu çalar | İlk [[tutti|tutti]]: serimin doruğu |
-| ≈ 7:15 | Müzik huzursuzlaşır, yeni tonlarda dolaşır | [[development|Gelişme]] başlıyor |
-| ≈ 7:45–9:45 | Keman ana ezginin narin bir çeşitlemesiyle döner, ardından parlak pasajlar | Gelişme; ezgi Do majörde |
-| ≈ 10:00 | Orkestra ana ezgiyle bir kez daha, kahramanca ve gür biçimde içeri dalar, sonra susar | İkinci tutti, Fa majörde; kadansa hazırlık |
-| ≈ 10:30–13:00 | Keman tek başına: akorlar, koşular, en tiz notalarından bazıları, ani duraklar; uzun bir trille biter | [[cadenza|Kadans]]; Çaykovski'nin kendisi yazmış |
-| ≈ 13:00 | Keman hâlâ tril yaparken bir flüt ana ezgiyi sessizce çalar | [[recapitulation|Yeniden serim]]. Temalar geri dönüyor |
-| ≈ 15:00 | Özlem dolu melodi geri gelir, şimdi Re majörde | 2. tema ana tonda |
+| ≈ 2:10–3:35 | Ezgi tekrarlanır ve süslenir; hızlı koşular ve sıçrayışlar | 1. tema açılıyor. [[exposition|Serim]] giderek parlaklaşıyor |
+| ≈ 3:55 | Daha sakin ve şefkatli: kemanın tizinde özlem dolu bir melodi | 2. tema, La majörde |
+| ≈ 5:20–6:40 | Keman tırmanır, koşar, ışıldar; gerilim yükselir | Serimin kapanışı |
+| ≈ 7:05 | Orkestra tek başına ana ezgiyi tüm gücüyle, görkemli ve kurumlu çalar | İlk [[tutti|tutti]]: serimin doruğu |
+| ≈ 7:45 | Müzik huzursuzlaşır, yeni tonlarda dolaşır | [[development|Gelişme]] başlıyor |
+| ≈ 8:15–10:05 | Keman ana ezginin narin bir çeşitlemesiyle döner, ardından parlak pasajlar | Gelişme; ezgi Do majörde |
+| ≈ 10:40 | Orkestra ana ezgiyle bir kez daha, kahramanca ve gür biçimde içeri dalar, sonra susar | İkinci tutti, Fa majörde; kadansa hazırlık |
+| ≈ 11:10–13:25 | Keman tek başına: akorlar, koşular, en tiz notalarından bazıları, ani duraklar; uzun bir trille biter | [[cadenza|Kadans]]; Çaykovski'nin kendisi yazmış |
+| ≈ 13:50 | Keman hâlâ tril yaparken bir flüt ana ezgiyi sessizce çalar | [[recapitulation|Yeniden serim]]. Temalar geri dönüyor |
+| ≈ 15:55 | Özlem dolu melodi geri gelir, şimdi Re majörde | 2. tema ana tonda |
 | Son iki dakika | Daha hızlı; keman doruğa koşar, orkestra bir patlamayla bitirir | [[coda|Koda]] |
 
 **Dikkat edilecekler**
 
 1. Kadansın bittiği ana kulak verin. Kemanın trili durmaz: ana ezgiyi geri getiren flüte eşlik etmeye dönüşür.
-2. Ana ezginin ≈ 1:10'daki yumuşak, tatlı hâliyle orkestranın ≈ 6:45'teki gür, görkemli hâlini karşılaştırın.
+2. Ana ezginin ≈ 1:10'daki yumuşak, tatlı hâliyle orkestranın ≈ 7:05'teki gür, görkemli hâlini karşılaştırın.
 
-**Bu kayıtta.** Bu, Chung'ın Decca için yaptığı ilk kayıttı; Haziran 1970'te Kingsway Hall'da André Previn ve LSO ile kaydedildi. Spotify albümünde Çaykovski 1–3 numaralı parçalardır; ardından Sibelius'un konçertosu gelir.
+**Bu kayıtta.** Hilary Hahn, Vasily Petrenko ve Royal Liverpool Filarmoni; Kasım 2008'de Liverpool'da kaydedildi. Finali geleneksel kesintiler olmadan, eksiksiz çalıyor. Spotify albümünde Çaykovski, Jennifer Higdon'un konçertosundan sonra 4–6 numaralı parçalardır.
 
 ### II. Canzonetta: Andante
 
@@ -136,13 +136,13 @@ painting:
 | --- | --- | --- |
 | ≈ 0:00 | Orkestradan gürültülü, canlı bir patlama | Final içeri dalıyor |
 | ≈ 0:15 | Keman tek başına, serbest ve ateşli, hız kazanarak | Kısa, kadans gibi bir giriş |
-| ≈ 0:45 | Kemanda hızlı, tepinişli bir dans; önce pes ve kaba | Ana tema, Re majörde |
-| ≈ 1:45 | Orkestra dansı gürültüyle alır | Bir [[tutti|tutti]] |
-| ≈ 2:00 | Biraz daha yavaş: keman, basta sabit bir dem sesinin üzerinde salınan bir ezgi çalar | İkinci tema, *Poco meno mosso*, La majörde |
-| ≈ 3:00 | Daha da yavaş ve hüzünlü: tahta üflemeliler ile keman yakınan bir cümleyi birbirine verir | İkinci tema çeşitleniyor |
-| ≈ 4:00 | Keman azar azar hızlanır ve dans geri gelir | *Poco a poco stringendo*. Ana tema, şimdi Fa majörde |
-| ≈ 5:15 | Dem üzerindeki salınan ezgi geri döner | İkinci tema yeniden, Sol majörde |
-| ≈ 7:30 | Dans bir kez daha | Ana tema son kez |
+| ≈ 0:55 | Kemanda hızlı, tepinişli bir dans; önce pes ve kaba | Ana tema, Re majörde |
+| ≈ 2:10 | Orkestra dansı gürültüyle alır | Bir [[tutti|tutti]] |
+| ≈ 2:30 | Biraz daha yavaş: keman, basta sabit bir dem sesinin üzerinde salınan bir ezgi çalar | İkinci tema, *Poco meno mosso*, La majörde |
+| ≈ 3:40 | Daha da yavaş ve hüzünlü: tahta üflemeliler ile keman yakınan bir cümleyi birbirine verir | İkinci tema çeşitleniyor |
+| ≈ 4:55 | Keman azar azar hızlanır ve dans geri gelir | *Poco a poco stringendo*. Ana tema, şimdi Fa majörde |
+| ≈ 6:30 | Dem üzerindeki salınan ezgi geri döner | İkinci tema yeniden, Sol majörde |
+| ≈ 9:15 | Dans bir kez daha | Ana tema son kez |
 | Son 90 saniye | Giderek hızlanarak parlak bir bitişe | [[coda|Koda]], Re majörde |
 
 **Dikkat edilecekler**

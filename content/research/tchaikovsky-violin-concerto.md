@@ -8,6 +8,12 @@ Method and status key as in `content/research/liszt-piano-sonata.md`.
 
 ---
 
+> **Merge decision (11 Oct 2026):** the reference recording was switched to **Hahn / Petrenko / RLPO (DG 2008)**,
+> Spotify `5Iijzf1oBpKJwatVUb2P7o`, tracks 4–6: 19:23 / 6:23 / 10:31 (embed page, read 11 Oct 2026). Chung's finale
+> (9:29) is a minute shorter at a similar tempo, which points to the traditional Auer cuts; stops anchored to the
+> full score would be wrong for it. Chung / Previn is now `also_recommended`. The draft's stop times were scaled
+> per movement to Hahn's track lengths (I ×1.03, II ×1.0, III ×1.11) and remain estimates (≈) to re-time by ear.
+
 ## 1. Reference recording: Kyung-Wha Chung / Previn / London Symphony Orchestra (Decca, 1970)
 
 ### Field check

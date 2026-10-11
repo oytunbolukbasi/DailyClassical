@@ -783,3 +783,92 @@ chopin-piano-sonata-2:
   thumb: { width: 653, height: 300, bytes: 34381 }
   full: { width: 4000, height: 1839, bytes: 2353283 }
   placeholder_color: "#4f4b40"
+
+liszt-piano-sonata:
+  # Master in the originals cache is CROPPED (dark backdrop and canvas edges): liszt-piano-sonata.source.jpg
+  # cropped to 3800 × 3096 at offset 100,100 (`sips -c 3096 3800 --cropOffset 100 100`). Do not pass --refresh.
+  # The Met's own Open Access photograph (CC0), mirrored on Commons at the same size.
+  # The photo shows a thin dark border around the canvas: crop it in the master before `npm run images`.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Christ_Asleep_during_the_Tempest_MET_DP-14343-001.jpg
+  source_url: https://www.metmuseum.org/art/collection/search/436176
+  commons_page: https://commons.wikimedia.org/wiki/File:Christ_Asleep_during_the_Tempest_MET_DP-14343-001.jpg
+  width: 3800
+  height: 3096
+  medium: Oil on canvas
+  license: Public domain (CC0, The Met Open Access)
+  credit_line: Eugène Delacroix, Christ Asleep during the Tempest, ca. 1853. The Metropolitan Museum of Art, New York, H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929 (29.100.131). Image via The Met Open Access, public domain.
+  rights_status: public_domain
+  hero: { width: 2209, height: 1800, bytes: 588929 }
+  thumb: { width: 368, height: 300, bytes: 15117 }
+  full: { width: 3800, height: 3096, bytes: 2043925 }
+  placeholder_color: "#2f3026"
+
+grieg-piano-concerto:
+  # Google Art Project file (PD-Art), a Commons Featured Picture. Nasjonalmuseet's own photo of the
+  # same painting (7443 × 5391) carries a CC BY 4.0 licence for the photograph, so this one is preferred.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Adolph_Tidemand_%26_Hans_Gude_-_Bridal_Procession_on_the_Hardangerfjord_-_Google_Art_Project.jpg
+  source_url: https://www.nasjonalmuseet.no/en/collection/object/NG.M.00467
+  commons_page: https://commons.wikimedia.org/wiki/File:Adolph_Tidemand_%26_Hans_Gude_-_Bridal_Procession_on_the_Hardangerfjord_-_Google_Art_Project.jpg
+  width: 7783
+  height: 5565
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old)
+  credit_line: Hans Gude and Adolph Tidemand, Bridal Procession on the Hardangerfjord, 1848. Nasjonalmuseet, Oslo (NG.M.00467). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2517, height: 1800, bytes: 563710 }
+  thumb: { width: 420, height: 300, bytes: 19233 }
+  full: { width: 4000, height: 2860, bytes: 1927707 }
+  placeholder_color: "#576360"
+
+tchaikovsky-piano-concerto-1:
+  # Google Art Project file (PD-Art). Portrait format (3055 × 4000): check the hero crop.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Aleksey_Savrasov_-_%D0%93%D1%80%D0%B0%D1%87%D0%B8_%D0%BF%D1%80%D0%B8%D0%BB%D0%B5%D1%82%D0%B5%D0%BB%D0%B8_-_Google_Art_Project.jpg
+  # The Tretyakov's own object page (https://www.tretyakovgallery.ru/en/collection/grachi-prileteli/) answers 200
+  # but renders by script, so its content could not be read; the Wikipedia article is used meanwhile.
+  source_url: https://en.wikipedia.org/wiki/The_Rooks_Have_Come_Back
+  commons_page: https://commons.wikimedia.org/wiki/File:Aleksey_Savrasov_-_%D0%93%D1%80%D0%B0%D1%87%D0%B8_%D0%BF%D1%80%D0%B8%D0%BB%D0%B5%D1%82%D0%B5%D0%BB%D0%B8_-_Google_Art_Project.jpg
+  width: 3055
+  height: 4000
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old)
+  credit_line: Alexei Savrasov, The Rooks Have Returned, 1871. State Tretyakov Gallery, Moscow (inv. 828). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2357, bytes: 1004644 }
+  thumb: { width: 300, height: 393, bytes: 35205 }
+  full: { width: 3055, height: 4000, bytes: 2463691 }
+  placeholder_color: "#8e8266"
+
+tchaikovsky-violin-concerto:
+  # The Cleveland Museum of Art's Open Access image (CC0), mirrored on Commons at the same size.
+  # The museum also offers the full TIFF: https://openaccess-cdn.clevelandart.org/1964.420/1964.420_full.tif
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Gustave_Courbet_-_Panoramic_View_of_the_Alps,_Les_Dents_du_Midi_-_1964.420_-_Cleveland_Museum_of_Art.jpg
+  source_url: https://clevelandart.org/art/1964.420
+  commons_page: https://commons.wikimedia.org/wiki/File:Gustave_Courbet_-_Panoramic_View_of_the_Alps,_Les_Dents_du_Midi_-_1964.420_-_Cleveland_Museum_of_Art.jpg
+  width: 5905
+  height: 4216
+  medium: Oil on fabric
+  license: Public domain (CC0, Cleveland Museum of Art Open Access)
+  credit_line: Gustave Courbet, Panoramic View of the Alps, Les Dents du Midi, 1877. The Cleveland Museum of Art, John L. Severance Fund and various donors by exchange (1964.420). Image via Cleveland Museum of Art Open Access, public domain.
+  rights_status: public_domain
+  hero: { width: 2521, height: 1800, bytes: 749675 }
+  thumb: { width: 420, height: 300, bytes: 21263 }
+  full: { width: 4000, height: 2856, bytes: 2361476 }
+  placeholder_color: "#707972"
+
+bruch-violin-concerto-1:
+  # Commons file of the first version (Darmstadt). Clean image, but Commons records its source as
+  # "unknown": replace with a museum photograph if the Hessisches Landesmuseum publishes one.
+  # Portrait format (3069 × 4418): check the hero crop.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Feuerbach_Iphigenie1.jpg
+  source_url: https://www.wikidata.org/wiki/Q41658837
+  commons_page: https://commons.wikimedia.org/wiki/File:Feuerbach_Iphigenie1.jpg
+  width: 3069
+  height: 4418
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old)
+  credit_line: Anselm Feuerbach, Iphigenie (first version), 1862. Hessisches Landesmuseum Darmstadt (inv. 488). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2591, bytes: 1054228 }
+  thumb: { width: 300, height: 432, bytes: 27816 }
+  full: { width: 2779, height: 4000, bytes: 2294179 }
+  placeholder_color: "#6a685f"

@@ -54,6 +54,7 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Sustain pedal | Uzatma pedalı | Tuş bırakılınca da notaları çınlatan piyano pedalı | Piyanonun sağdaki pedalı. Sesi kesen keçeleri tellerden kaldırır; böylece tuşlar bırakıldıktan sonra da notalar çınlamayı sürdürür ve birbirine karışır. |
 | Syncopation | Senkop | Vuruş dışına düşen, nabza karşı çeken vurgular | Ana vuruşların dışına yerleştirilen vurgular; ritme süzülüyormuş ya da nabza karşı çekiyormuş gibi bir his verir. |
 | Tarantella | Tarantella | 6/8'lik, hızlı ve fırıl fırıl dönen bir İtalyan dansı | Güney İtalya'dan, 6/8'lik hızlı, fırıl fırıl dönen bir halk dansı. Efsaneye göre tarantula örümceğinin ısırığıyla ilişkilendirilirdi. |
+| Thematic transformation | Tematik dönüşüm | Yeni bir karaktere bürünen aynı tema | Bir temanın hızını, ritmini, armonisini ya da havasını değiştirerek aynı notaların başka bir karakterle geri dönmesi; örneğin sert bir fikrin bir aşk şarkısı olarak yeniden doğması. |
 | Tremolo | Tremolo | İki nota arasında ya da tek notada hızlı titreşim | İki nota arasında hızlı gidip gelme ya da tek bir notanın hızla yinelenmesi; titreşen ya da gürleyen bir ses verir. Piyanoda çoğu zaman sol elde bir oktav arasında çalınır. |
 | Trill | Tril | Yan yana iki nota arasında hızlı titreşim | Bir notayla hemen üstündeki nota arasında hızla gidip gelmek; ses parıldar ya da piyanonun pesinde gürler. |
 | Trio | Trio | Menuet ya da scherzonun daha yumuşak orta kısmı | Bir menuetin ya da scherzonun, genellikle daha yumuşak olan zıt orta kısmı. |

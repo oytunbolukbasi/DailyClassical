@@ -737,3 +737,137 @@
     thumb: { width: 300, height: 374, bytes: 13830 }
     full: { width: 3206, height: 4000, bytes: 2121802 }
     placeholder_color: "#372e1e"
+
+- id: liszt
+  match: Franz Liszt
+  sort_name: Liszt, Franz
+  born: 1811
+  died: 1886
+  era: romantic
+  names:
+    en: { name: Franz Liszt, short: Liszt }
+    tr: { name: Franz Liszt, short: Liszt }
+  nationality: { en: Hungarian, tr: Macar }
+  facts:
+    born: { en: "22 October 1811, Raiding (Doborján), Hungary", tr: "22 Ekim 1811, Raiding (Doborján), Macaristan" }
+    died: { en: "31 July 1886, Bayreuth", tr: "31 Temmuz 1886, Bayreuth" }
+    symphonies: { en: "Two: *A Faust Symphony* and the *Dante Symphony*", tr: "İki: *Faust Senfonisi* ve *Dante Senfonisi*" }
+    best_known_for: { en: "Piano Sonata in B minor, *Hungarian Rhapsodies*, symphonic poems", tr: "Si minör Piyano Sonatı, *Macar Rapsodileri*, senfonik şiirleri" }
+  bio:
+    en: |-
+      Liszt was born in 1811 in Raiding (Doborján in Hungarian), a village in the Kingdom of Hungary, where his father worked as a steward for Prince Esterházy. He was a child prodigy. In Vienna he studied piano with Carl Czerny and composition with Antonio Salieri, and in 1823 the family settled in Paris. In 1832 he heard the violinist Niccolò Paganini, and set out to do for the piano what Paganini had done for the violin.
+
+      He became the most celebrated pianist in Europe. He toured all over the continent, gave the solo piano recital its modern form, and caused such excitement that the poet Heinrich Heine coined the word "Lisztomania". His daughter Cosima, from his relationship with the Countess Marie d'Agoult, later married Richard Wagner. In 1848 he settled in Weimar as court music director, with Princess Carolyne zu Sayn-Wittgenstein. There he conducted new music by Wagner and Berlioz, including the premiere of *Lohengrin* in 1850, and wrote his own most ambitious works: the symphonic poems, the *Faust Symphony* and the Piano Sonata in B minor.
+
+      In the 1860s he moved to Rome and in 1865 took minor orders in the Catholic Church, becoming "Abbé Liszt". From 1872 he divided his year between Rome, Weimar and Budapest, where he helped to found the music academy that now bears his name. He taught hundreds of pianists and never charged for lessons. His late piano pieces are sparse and strange, and look ahead to the music of the 20th century. He died in Bayreuth in 1886.
+    tr: |-
+      Liszt 1811'de, Macaristan Krallığı'na bağlı Raiding (Macarca Doborján) köyünde doğdu; babası orada Esterházy prensinin kâhyasıydı. Harika bir çocuktu. Viyana'da Carl Czerny'den piyano, Antonio Salieri'den kompozisyon dersi aldı; aile 1823'te Paris'e yerleşti. 1832'de kemancı Niccolò Paganini'yi dinledi ve Paganini'nin keman için yaptığını piyano için yapmaya karar verdi.
+
+      Avrupa'nın en ünlü piyanisti oldu. Bütün kıtayı dolaşan turneler yaptı, solo piyano resitaline bugünkü biçimini verdi ve öyle bir heyecan yarattı ki şair Heinrich Heine bunun için "Lisztomani" sözcüğünü uydurdu. Kontes Marie d'Agoult ile ilişkisinden doğan kızı Cosima, sonradan Richard Wagner'le evlendi. 1848'de Prenses Carolyne zu Sayn-Wittgenstein ile birlikte saray müzik direktörü olarak Weimar'a yerleşti. Orada Wagner'in ve Berlioz'un yeni eserlerini yönetti, 1850'de *Lohengrin*'in ilk temsili de bunlardan biriydi; kendi en iddialı eserlerini de orada yazdı: senfonik şiirler, *Faust Senfonisi* ve Si minör Piyano Sonatı.
+
+      1860'larda Roma'ya taşındı ve 1865'te Katolik Kilisesi'nde alt rütbeden ruhban oldu; artık "Abbé Liszt" diye anılıyordu. 1872'den sonra yılını Roma, Weimar ve Budapeşte arasında bölüştürdü; Budapeşte'de bugün onun adını taşıyan müzik akademisinin kuruluşuna yardım etti. Yüzlerce piyanist yetiştirdi ve derslerinden hiç ücret almadı. Geç dönem piyano eserleri yalın ve tuhaftır; 20. yüzyılın müziğini önceden sezer. 1886'da Bayreuth'ta öldü.
+  portrait:
+    artist: Henri Lehmann
+    title: { en: Portrait of Franz Liszt, tr: Franz Liszt'in Portresi }
+    year: "1839"
+    collection: { en: "Musée Carnavalet, Paris", tr: "Carnavalet Müzesi, Paris" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Liszt_(Lehmann_portrait).jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Liszt_(Lehmann_portrait).jpg
+    width: 4760
+    height: 6256
+    license: Public domain (PD-Art, PD-old-auto-expired; artist d. 1882)
+    focal_y: 0.15
+    hero: { width: 1800, height: 2366, bytes: 466887 }
+    thumb: { width: 300, height: 394, bytes: 10623 }
+    full: { width: 3043, height: 4000, bytes: 1280842 }
+    placeholder_color: "#272120"
+
+- id: grieg
+  match: Edvard Grieg
+  sort_name: Grieg, Edvard
+  born: 1843
+  died: 1907
+  era: late_romantic
+  names:
+    en: { name: Edvard Grieg, short: Grieg }
+    tr: { name: Edvard Grieg, short: Grieg }
+  nationality: { en: Norwegian, tr: Norveçli }
+  facts:
+    born: { en: "15 June 1843, Bergen", tr: "15 Haziran 1843, Bergen" }
+    died: { en: "4 September 1907, Bergen", tr: "4 Eylül 1907, Bergen" }
+    symphonies: { en: "One, which he withdrew", tr: "Bir; sonradan geri çekti" }
+    best_known_for: { en: "Piano Concerto, *Peer Gynt*, *Lyric Pieces*", tr: "Piyano Konçertosu, *Peer Gynt*, *Lirik Parçalar*" }
+  bio:
+    en: |-
+      Grieg was born in Bergen, on Norway's west coast, in 1843. His mother, Gesine, was a music teacher and gave him his first piano lessons when he was six. In 1858 the famous Norwegian violinist Ole Bull, a friend of the family, persuaded his parents to send the fifteen-year-old to the Leipzig Conservatory. In 1860 he survived pleurisy and tuberculosis, which left him with a ruined left lung for the rest of his life.
+
+      From 1863 he spent three years in Copenhagen, where he became close friends with the young Norwegian composer Rikard Nordraak; when Nordraak died in 1866, Grieg wrote a funeral march for him. In 1867 he married his cousin, the soprano Nina Hagerup, who sang his songs for the rest of his life. The Piano Concerto, written the next year, made his name across Europe, and his music for Henrik Ibsen's play *Peer Gynt*, with "Morning Mood" and "In the Hall of the Mountain King", made it known everywhere.
+
+      Grieg did his best work in small forms: songs, and sixty-six *Lyric Pieces* for piano, published in ten books. Norwegian folk dances and fiddle tunes run through his music. He suppressed his only symphony and completed only one concerto. He died in Bergen in 1907. His house, Troldhaugen, is now a museum, and his and Nina's ashes rest in a crypt in the rock nearby.
+    tr: |-
+      Grieg 1843'te Norveç'in batı kıyısındaki Bergen'de doğdu. Müzik öğretmeni olan annesi Gesine, ona altı yaşında ilk piyano derslerini verdi. 1858'de ailenin dostu, ünlü Norveçli kemancı Ole Bull, anne babasını on beş yaşındaki oğullarını Leipzig Konservatuvarı'na göndermeye ikna etti. 1860'ta zatülcenp ve vereme yakalandı; atlattı, ama sol akciğeri ömrü boyunca harap kaldı.
+
+      1863'ten başlayarak üç yılını Kopenhag'da geçirdi; orada genç Norveçli besteci Rikard Nordraak ile yakın dost oldu. Nordraak 1866'da ölünce Grieg onun için bir cenaze marşı yazdı. 1867'de kuzeni, soprano Nina Hagerup ile evlendi; Nina ömrü boyunca onun şarkılarını söyledi. Ertesi yıl yazdığı Piyano Konçertosu adını Avrupa'ya duyurdu; Henrik Ibsen'in *Peer Gynt* oyunu için yazdığı, "Sabah" ve "Dağ Kralının Sarayında" bölümlerini de içeren müzik ise onu her yerde tanınır kıldı.
+
+      Grieg en iyi eserlerini küçük biçimlerde verdi: şarkılar ve on kitapta yayımlanan altmış altı piyano parçası, *Lirik Parçalar*. Norveç halk dansları ve keman ezgileri müziğinin her yerinde duyulur. Tek senfonisini geri çekti ve yalnızca bir konçerto tamamladı. 1907'de Bergen'de öldü. Evi Troldhaugen bugün bir müze; onun ve Nina'nın külleri yakındaki kayalığa oyulmuş bir mezarda yatıyor.
+  portrait:
+    artist: Eilif Peterssen
+    title: { en: Portrait of the Composer Edvard Grieg, tr: Besteci Edvard Grieg'in Portresi }
+    year: "1891"
+    collection: { en: "Nasjonalmuseet, Oslo", tr: "Nasjonalmuseet, Oslo" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Eilif_Peterssen_-_Portrait_of_the_Composer_Edvard_Grieg_-_NG.M.00396_-_National_Museum_of_Art,_Architecture_and_Design.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Eilif_Peterssen_-_Portrait_of_the_Composer_Edvard_Grieg_-_NG.M.00396_-_National_Museum_of_Art,_Architecture_and_Design.jpg
+    width: 4000
+    height: 3632
+    license: Public domain painting (PD-Art, artist d. 1928); museum photograph CC BY 4.0
+    license_url: https://creativecommons.org/licenses/by/4.0/
+    credit_line: { en: "Photo: Nasjonalmuseet, Oslo, CC BY 4.0", tr: "Fotoğraf: Nasjonalmuseet, Oslo, CC BY 4.0" }
+    focal_y: 0.25
+    hero: { width: 1982, height: 1800, bytes: 549089 }
+    thumb: { width: 330, height: 300, bytes: 10903 }
+    full: { width: 4000, height: 3632, bytes: 1812937 }
+    placeholder_color: "#1e1d15"
+
+- id: bruch
+  match: Max Bruch
+  sort_name: Bruch, Max
+  born: 1838
+  died: 1920
+  era: romantic
+  names:
+    en: { name: Max Bruch, short: Bruch }
+    tr: { name: Max Bruch, short: Bruch }
+  nationality: { en: German, tr: Alman }
+  facts:
+    born: { en: "6 January 1838, Cologne", tr: "6 Ocak 1838, Köln" }
+    died: { en: "2 October 1920, Berlin", tr: "2 Ekim 1920, Berlin" }
+    symphonies: { en: "Three", tr: "Üç" }
+    best_known_for: { en: "Violin Concerto No. 1, *Scottish Fantasy*, *Kol Nidrei*", tr: "1. Keman Konçertosu, *İskoç Fantezisi*, *Kol Nidrei*" }
+  bio:
+    en: |-
+      Bruch was born in Cologne in 1838. His mother, Wilhelmine, was a singer, and his father a lawyer who rose to be deputy head of the city's police. He had his early training from the composer Ferdinand Hiller, and his talent was noticed by the pianist Ignaz Moscheles. Bruch spent the first half of his career moving from post to post as a conductor and choral director: Mannheim, Koblenz, where he wrote the first version of his First Violin Concerto, Sondershausen, Berlin and Bonn.
+
+      In his own time he was known above all for large choral works, such as *Odysseus*. Like his contemporary Brahms, he stood for the classical tradition against the "New Music" of Liszt and Wagner. From 1880 to 1883 he conducted the Liverpool Philharmonic Society, and in 1881 he married the singer Clara Tuczek. Besides the First Violin Concerto, his best-known works are the *Scottish Fantasy* for violin and orchestra and *Kol Nidrei* for cello and orchestra, based on a Jewish melody. From 1890 to 1910 he taught composition in Berlin; Ottorino Respighi was one of his pupils.
+
+      He wrote three violin concertos and three symphonies, but the First Violin Concerto eclipsed everything else, which exasperated him. Because of *Kol Nidrei*, many assumed he was Jewish. He was a Protestant, but under the Nazis his music was restricted and largely forgotten in Germany. After the First World War he was left poor, and he died in Berlin in 1920. His gravestone reads "Music is the language of God".
+    tr: |-
+      Bruch 1838'de Köln'de doğdu. Annesi Wilhelmine şarkıcıydı, babası ise şehrin polis teşkilatında başkan yardımcılığına yükselmiş bir hukukçuydu. İlk eğitimini besteci Ferdinand Hiller'den aldı; yeteneğini piyanist Ignaz Moscheles fark etti. Kariyerinin ilk yarısını şef ve koro yöneticisi olarak görevden göreve geçerek geçirdi: Mannheim, 1. Keman Konçertosu'nun ilk versiyonunu yazdığı Koblenz, Sondershausen, Berlin ve Bonn.
+
+      Kendi döneminde en çok *Odysseus* gibi büyük koro eserleriyle tanınıyordu. Çağdaşı Brahms gibi, Liszt'in ve Wagner'in "Yeni Müzik"ine karşı klasik geleneği savundu. 1880–1883 arasında Liverpool Filarmoni Derneği'nin şefliğini yaptı, 1881'de şarkıcı Clara Tuczek ile evlendi. 1. Keman Konçertosu'ndan sonra en tanınmış eserleri, keman ve orkestra için *İskoç Fantezisi* ile bir Yahudi ezgisine dayanan, viyolonsel ve orkestra için *Kol Nidrei*'dir. 1890'dan 1910'a kadar Berlin'de kompozisyon öğretti; Ottorino Respighi de öğrencilerinden biriydi.
+
+      Üç keman konçertosu ve üç senfoni yazdı, ama 1. Keman Konçertosu öteki her şeyi gölgede bıraktı; bu da onu çileden çıkarıyordu. *Kol Nidrei* yüzünden birçok kişi onun Yahudi olduğunu sandı. Protestandı, ama Naziler döneminde müziği kısıtlandı ve Almanya'da büyük ölçüde unutuldu. Birinci Dünya Savaşı'ndan sonra yoksul düştü ve 1920'de Berlin'de öldü. Mezar taşında "Müzik Tanrı'nın dilidir" yazar.
+  portrait:
+    artist: { en: "Adolf Neumann, after a photograph", tr: "Adolf Neumann, bir fotoğraftan" }
+    title: { en: Max Bruch, tr: Max Bruch }
+    year: "1881"
+    collection: { en: "Wood engraving, published in Die Gartenlaube, 1881", tr: "Ağaç baskı, Die Gartenlaube dergisinde yayımlandı, 1881" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Die_Gartenlaube_(1881)_b_557.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Die_Gartenlaube_(1881)_b_557.jpg
+    width: 2147
+    height: 2321
+    license: Public domain (published 1881; engraver d. 1884)
+    focal_y: 0.25
+    hero: { width: 1800, height: 1946, bytes: 563674 }
+    thumb: { width: 300, height: 324, bytes: 26797 }
+    full: { width: 2147, height: 2321, bytes: 795502 }
+    placeholder_color: "#b2b2b2"

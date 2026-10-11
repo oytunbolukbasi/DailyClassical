@@ -16,7 +16,7 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 - **Sözlük:** Yeni terimler (Attacca, Trill, Double stop, Ostinato, Hemiola, Leitmotif, Counterpoint, Ritornello, Continuo…). Birkaç grup aynı terimi önerdi; her biri bir kez eklenecek.
 - **Yeni besteciler (19):** haydn, allegri, bruckner, schumann, mendelssohn, chopin, liszt, grieg, bruch, sibelius, elgar, vivaldi, bach, franck, tallis, smetana, debussy, ravel, rimsky-korsakov, wagner. Girdileri `.shared.md`'lerde. Elgar ve Mendelssohn portreleri kırpma ister.
 - ~~**Lisans**~~ **Çözüldü:** Khnopff yerine Hammershøi. Spitzweg kaldı: kamu malı bir tablonun aslına sadık fotoğrafı AB'de (DSM md. 14) ve ABD'de yeni hak doğurmuyor (Molitor girdisindeki gibi); fotoğrafçı künyede anılıyor. Not: yayındaki uygulama CC lisanslı *tablo* fotoğraflarının künyesini göstermiyor (yalnızca portrelerde); bu yüzden tablolarda kamu malı ya da bu ilkeye uyan görseller kullanılıyor.
-- **Çaykovski Keman Konçertosu:** Chung kaydının finalinde kesinti olabilir; çözülmezse referans Hahn kaydına geçecek.
+- ~~**Çaykovski Keman Konçertosu**~~ **Çözüldü:** Chung'ın finali (9:29) kesintili görünüyor; referans kesintisiz Hahn / Petrenko (DG 2008) oldu, duraklar orantılı kaydırıldı.
 - **Spotify Türkiye erişimi:** 50 albüm toplu kontrol edilecek.
 - **Mahler 3 (6 bölüm):** Bölüm seçicideki daraltma bir sonraki build'de. O build yayında olmadan takvime girmeyecek.
 - **Duraklar:** Hepsi tahmini (≈); her eser takvime girmeden kulakla zamanlanacak (`retime-needed.md`).
@@ -29,6 +29,7 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 - **11 Ekim 2026, Grup D** (5 eser + Bruckner): Brahms 1 Menzel → Calame, *Thun Gölü* (Menzel Bach'ta kalıyor; tekniği National Gallery sayfasından doğrulandı). Schiele Mahler 9 ve "Ölüm ve Kız"da iki farklı tabloyla kaldı. Yeni terimler: Offstage, Posthorn, Wagner tuba. Mahler 3 (6 bölüm) yeni build yayına çıkmadan takvime girmeyecek.
 - **11 Ekim 2026, Grup C** (5 eser + Haydn, Allegri): ilk tercih tablolar tutuldu. Allegri `renaissance`, "Senfoni: Yok". Yeni terimler: Counterpoint, Basset clarinet, Plainchant. Not: Jupiter tablosu (Hubert Robert, *Dikilitaş*) yalnızca 1952 px; daha büyük bir kaynak bulunursa değiştirilecek.
 - **11 Ekim 2026, Grup F** (5 eser + Schumann, Mendelssohn, Chopin): ilk tercih tablolar tutuldu (Courbet Chopin 2'de ve Çaykovski Keman'da farklı tablolarla). Mendelssohn portresi çerçeveli TIFF'ten, Kasprzycki tablosu altın çerçeve kenarından kırpıldı. Yeni terimler: Krakowiak, Nocturne.
+- **11 Ekim 2026, Grup G** (5 eser + Liszt, Grieg, Bruch): Çaykovski Keman referansı Chung → Hahn (kesintisiz final). Delacroix (Liszt) görselindeki koyu fon kırpıldı. Yeni terim: Thematic transformation.
 
 ## Eserler
 
@@ -66,11 +67,11 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 | mendelssohn-violin-concerto | F | violin-concerto | 3 | Anne-Sophie Mutter / Herbert von Karajan · Berliner Philharmoniker, 1981 | `5UMYDc7q9Z0GE2O8zlfRsg` | Adolph Menzel, *The Balcony Room* | ressam partide 3 kez | Birleştirildi |
 | chopin-piano-concerto-1 | F | piano-concerto | 3 | Martha Argerich / Claudio Abbado · London Symphony Orchestra, 1968 | `4hQ5UonmIDouhBBEdRAwgC` | Wincenty Kasprzycki, *View of Morysinek* |  | Birleştirildi |
 | chopin-piano-sonata-2 | F | piano-sonata | 4 | Maurizio Pollini, 1985 | `5U3T9zcqmcKSmxK7gJuBZB` | Gustave Courbet, *A Burial at Ornans* | ressam partide 2 kez | Birleştirildi |
-| liszt-piano-sonata | G | piano-sonata | 1 | Krystian Zimerman, 1990 | `6XN6HweLAIZaY2bMKjWdHx` | Eugène Delacroix, *Christ Asleep during the Tempest* |  | Taslak |
-| grieg-piano-concerto | G | piano-concerto | 3 | Krystian Zimerman / Herbert von Karajan · Berliner Philharmoniker, 1981 | `1uOl9hgML9eVDhzWBypnfY` | Hans Gude and Adolph Tidemand, *Bridal Procession on the Hardangerfjord* |  | Taslak |
-| tchaikovsky-piano-concerto-1 | G | piano-concerto | 3 | Martha Argerich / Kirill Kondrashin · Bavarian Radio Symphony Orchestra, 1980 | `0PzMgnYqwwSwPnSijeSKSb` | Alexei Savrasov, *The Rooks Have Returned* |  | Taslak |
-| tchaikovsky-violin-concerto | G | violin-concerto | 3 | Kyung-Wha Chung / André Previn · London Symphony Orchestra, 1970 | `43SJ3xkqhvIECCTeY4mtBL` | Gustave Courbet, *Panoramic View of the Alps, Les Dents du Midi* | ressam partide 2 kez | Taslak |
-| bruch-violin-concerto-1 | G | violin-concerto | 3 | Anne-Sophie Mutter / Herbert von Karajan · Berliner Philharmoniker, 1980 | `4tdB1YoK6zCRCnnxQPP4dE` | Anselm Feuerbach, *Iphigenia* |  | Taslak |
+| liszt-piano-sonata | G | piano-sonata | 1 | Krystian Zimerman, 1990 | `6XN6HweLAIZaY2bMKjWdHx` | Eugène Delacroix, *Christ Asleep during the Tempest* |  | Birleştirildi |
+| grieg-piano-concerto | G | piano-concerto | 3 | Krystian Zimerman / Herbert von Karajan · Berliner Philharmoniker, 1981 | `1uOl9hgML9eVDhzWBypnfY` | Hans Gude and Adolph Tidemand, *Bridal Procession on the Hardangerfjord* |  | Birleştirildi |
+| tchaikovsky-piano-concerto-1 | G | piano-concerto | 3 | Martha Argerich / Kirill Kondrashin · Bavarian Radio Symphony Orchestra, 1980 | `0PzMgnYqwwSwPnSijeSKSb` | Alexei Savrasov, *The Rooks Have Returned* |  | Birleştirildi |
+| tchaikovsky-violin-concerto | G | violin-concerto | 3 | Hilary Hahn / Vasily Petrenko · Royal Liverpool Philharmonic Orchestra, 2008 | `5Iijzf1oBpKJwatVUb2P7o` | Gustave Courbet, *Panoramic View of the Alps, Les Dents du Midi* | ressam partide 2 kez | Birleştirildi |
+| bruch-violin-concerto-1 | G | violin-concerto | 3 | Anne-Sophie Mutter / Herbert von Karajan · Berliner Philharmoniker, 1980 | `4tdB1YoK6zCRCnnxQPP4dE` | Anselm Feuerbach, *Iphigenia* |  | Birleştirildi |
 | sibelius-symphony-5 | H | symphony | 3 | Colin Davis · Boston Symphony Orchestra, 1975 | `6oBoMHHi6wG9ZUpBHtkxgc` | Bruno Liljefors, *Mute Swans in Evening Flight* |  | Taslak |
 | sibelius-violin-concerto | H | violin-concerto | 3 | Hilary Hahn / Esa-Pekka Salonen · Swedish Radio Symphony Orchestra, 2008 | `0YHrFLfeGjkhEhYSCimYdB` | Akseli Gallen-Kallela, *Lake Keitele* |  | Taslak |
 | dvorak-cello-concerto | H | cello-concerto | 3 | Mstislav Rostropovich / Herbert von Karajan · Berliner Philharmoniker, 1968 | `0zwaTXZIMtLu2Y0vgbZDlQ` | Antonín Slavíček, *Birch Mood* |  | Taslak |

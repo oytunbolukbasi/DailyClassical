@@ -101,6 +101,31 @@
         "hash": "db0fe073c5"
       }
     },
+    "composers/bruch": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Gartenlaube_(1881)_b_557.jpg",
+      "color": "#b2b2b2",
+      "hero": {
+        "path": "composers/bruch-hero.heic",
+        "width": 1800,
+        "height": 1946,
+        "bytes": 563674,
+        "hash": "3514c4bd0c"
+      },
+      "thumb": {
+        "path": "composers/bruch-thumb.heic",
+        "width": 300,
+        "height": 324,
+        "bytes": 26797,
+        "hash": "7af80d94ca"
+      },
+      "full": {
+        "path": "composers/bruch-full.heic",
+        "width": 2147,
+        "height": 2321,
+        "bytes": 795502,
+        "hash": "9299ce0f6d"
+      }
+    },
     "composers/bruckner": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Anton_bruckner.jpg",
       "color": "#2b261b",
@@ -181,6 +206,36 @@
         "hash": "dde377275b"
       }
     },
+    "composers/grieg": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Eilif_Peterssen_-_Portrait_of_the_Composer_Edvard_Grieg_-_NG.M.00396_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
+      "color": "#1e1d15",
+      "credit": {
+        "en": "Photo: Nasjonalmuseet, Oslo, CC BY 4.0",
+        "tr": "Fotoğraf: Nasjonalmuseet, Oslo, CC BY 4.0"
+      },
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "hero": {
+        "path": "composers/grieg-hero.heic",
+        "width": 1982,
+        "height": 1800,
+        "bytes": 549089,
+        "hash": "7202a453df"
+      },
+      "thumb": {
+        "path": "composers/grieg-thumb.heic",
+        "width": 330,
+        "height": 300,
+        "bytes": 10903,
+        "hash": "4c5ac88862"
+      },
+      "full": {
+        "path": "composers/grieg-full.heic",
+        "width": 4000,
+        "height": 3632,
+        "bytes": 1812937,
+        "hash": "bda57052e4"
+      }
+    },
     "composers/haydn": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Hardy_(1757-1804)_-_Joseph_Haydn_(1732%E2%80%931809)_-_PPHC000001_-_Royal_College_of_Music.jpg",
       "color": "#33231b",
@@ -204,6 +259,31 @@
         "height": 1200,
         "bytes": 90982,
         "hash": "1f78b50f5f"
+      }
+    },
+    "composers/liszt": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Liszt_(Lehmann_portrait).jpg",
+      "color": "#272120",
+      "hero": {
+        "path": "composers/liszt-hero.heic",
+        "width": 1800,
+        "height": 2366,
+        "bytes": 466887,
+        "hash": "f181bcb47b"
+      },
+      "thumb": {
+        "path": "composers/liszt-thumb.heic",
+        "width": 300,
+        "height": 394,
+        "bytes": 10623,
+        "hash": "0c8c5561e9"
+      },
+      "full": {
+        "path": "composers/liszt-full.heic",
+        "width": 3043,
+        "height": 4000,
+        "bytes": 1280842,
+        "hash": "2d6cc75bcd"
       }
     },
     "composers/mahler": {
@@ -879,6 +959,31 @@
         "hash": "62dfaf7860"
       }
     },
+    "paintings/bruch-violin-concerto-1": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Feuerbach_Iphigenie1.jpg",
+      "color": "#6a685f",
+      "hero": {
+        "path": "paintings/bruch-violin-concerto-1-hero.heic",
+        "width": 1800,
+        "height": 2591,
+        "bytes": 1054228,
+        "hash": "1361e22c7d"
+      },
+      "thumb": {
+        "path": "paintings/bruch-violin-concerto-1-thumb.heic",
+        "width": 300,
+        "height": 432,
+        "bytes": 27816,
+        "hash": "0559334005"
+      },
+      "full": {
+        "path": "paintings/bruch-violin-concerto-1-full.heic",
+        "width": 2779,
+        "height": 4000,
+        "bytes": 2294179,
+        "hash": "88860421c1"
+      }
+    },
     "paintings/bruckner-symphony-7": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Wilhelm_Leibl_-_Drei_Frauen_in_der_Kirche_(1882).jpg",
       "color": "#414540",
@@ -979,6 +1084,31 @@
         "hash": "4804ef5a1a"
       }
     },
+    "paintings/grieg-piano-concerto": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Adolph_Tidemand_%26_Hans_Gude_-_Bridal_Procession_on_the_Hardangerfjord_-_Google_Art_Project.jpg",
+      "color": "#576360",
+      "hero": {
+        "path": "paintings/grieg-piano-concerto-hero.heic",
+        "width": 2517,
+        "height": 1800,
+        "bytes": 563710,
+        "hash": "d5a5e1a10c"
+      },
+      "thumb": {
+        "path": "paintings/grieg-piano-concerto-thumb.heic",
+        "width": 420,
+        "height": 300,
+        "bytes": 19233,
+        "hash": "081a2ae3b9"
+      },
+      "full": {
+        "path": "paintings/grieg-piano-concerto-full.heic",
+        "width": 4000,
+        "height": 2860,
+        "bytes": 1927707,
+        "hash": "c84189d76a"
+      }
+    },
     "paintings/haydn-string-quartet-op-76-3": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Johann_Christian_Brand_-_Laxenburg_vom_M%C3%BCnkendorfer_Lusthaus_gegen_S%C3%BCdwest_-_2575_-_%C3%96sterreichische_Galerie_Belvedere.jpg",
       "color": "#989989",
@@ -1027,6 +1157,31 @@
         "height": 2802,
         "bytes": 2425477,
         "hash": "c00168bb25"
+      }
+    },
+    "paintings/liszt-piano-sonata": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Christ_Asleep_during_the_Tempest_MET_DP-14343-001.jpg",
+      "color": "#2f3026",
+      "hero": {
+        "path": "paintings/liszt-piano-sonata-hero.heic",
+        "width": 2209,
+        "height": 1800,
+        "bytes": 588929,
+        "hash": "333de4e2a2"
+      },
+      "thumb": {
+        "path": "paintings/liszt-piano-sonata-thumb.heic",
+        "width": 368,
+        "height": 300,
+        "bytes": 15117,
+        "hash": "799887f0be"
+      },
+      "full": {
+        "path": "paintings/liszt-piano-sonata-full.heic",
+        "width": 3800,
+        "height": 3096,
+        "bytes": 2043925,
+        "hash": "1f807a73b7"
       }
     },
     "paintings/mahler-symphony-2": {
@@ -1504,6 +1659,31 @@
         "hash": "36c61d75c4"
       }
     },
+    "paintings/tchaikovsky-piano-concerto-1": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleksey_Savrasov_-_%D0%93%D1%80%D0%B0%D1%87%D0%B8_%D0%BF%D1%80%D0%B8%D0%BB%D0%B5%D1%82%D0%B5%D0%BB%D0%B8_-_Google_Art_Project.jpg",
+      "color": "#8e8266",
+      "hero": {
+        "path": "paintings/tchaikovsky-piano-concerto-1-hero.heic",
+        "width": 1800,
+        "height": 2357,
+        "bytes": 1004644,
+        "hash": "9a6c9790c3"
+      },
+      "thumb": {
+        "path": "paintings/tchaikovsky-piano-concerto-1-thumb.heic",
+        "width": 300,
+        "height": 393,
+        "bytes": 35205,
+        "hash": "a4cf594968"
+      },
+      "full": {
+        "path": "paintings/tchaikovsky-piano-concerto-1-full.heic",
+        "width": 3055,
+        "height": 4000,
+        "bytes": 2463691,
+        "hash": "ffc0d6266b"
+      }
+    },
     "paintings/tchaikovsky-symphony-6": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Isaac_Levitan_-_Au-dessus_du_repos_%C3%A9ternel.jpg",
       "color": "#797d62",
@@ -1527,6 +1707,31 @@
         "height": 1981,
         "bytes": 811217,
         "hash": "6b1aedc3af"
+      }
+    },
+    "paintings/tchaikovsky-violin-concerto": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Gustave_Courbet_-_Panoramic_View_of_the_Alps,_Les_Dents_du_Midi_-_1964.420_-_Cleveland_Museum_of_Art.jpg",
+      "color": "#707972",
+      "hero": {
+        "path": "paintings/tchaikovsky-violin-concerto-hero.heic",
+        "width": 2521,
+        "height": 1800,
+        "bytes": 749675,
+        "hash": "983dc55b07"
+      },
+      "thumb": {
+        "path": "paintings/tchaikovsky-violin-concerto-thumb.heic",
+        "width": 420,
+        "height": 300,
+        "bytes": 21263,
+        "hash": "a3f0aae1a8"
+      },
+      "full": {
+        "path": "paintings/tchaikovsky-violin-concerto-full.heic",
+        "width": 4000,
+        "height": 2856,
+        "bytes": 2361476,
+        "hash": "8ba9d7cad8"
       }
     },
     "paywall/friedrich-wanderer": {
