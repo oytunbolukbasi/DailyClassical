@@ -22,6 +22,7 @@ Definition: one or two sentences, written for the pop-over.
 | Fugue | One tune entering voice by voice, woven against itself | A piece or section in which one tune enters in each voice in turn and is woven against itself. |
 | Glissando | A continuous slide from one note to another | A continuous slide from one note to another. |
 | Idée fixe | Berlioz's recurring melody that stands for a person | "Fixed idea": Berlioz's term for a melody that represents a person and returns throughout a piece. |
+| Lydian mode | An old church scale: like a major scale with a raised fourth | One of the old church modes. It sounds like a major scale with its fourth note raised a half step (F to F with B natural), which gives a bright, floating sound. |
 | Ländler | A rustic Austrian dance in three, ancestor of the waltz | A rustic Austrian country dance in three beats, a slower, heavier ancestor of the waltz. |
 | Major | The kind of key that sounds bright or settled | The kind of key that generally sounds bright or settled. Its darker counterpart is the minor. |
 | Minuet | An elegant 18th-century dance in three beats | An elegant 18th-century dance in three beats, used as the third movement of Classical symphonies. |

@@ -259,3 +259,92 @@ rachmaninoff-piano-concerto-2:
   thumb: { width: 424, height: 300, bytes: 8139 }
   full: { width: 3675, height: 2598, bytes: 966863 }
   placeholder_color: "#6f340b"
+
+beethoven-piano-sonata-14:
+  # Master in the originals cache is CROPPED (the Met photo shows a black backdrop and the canvas's
+  # worn edges): beethoven-piano-sonata-14.source.jpg cropped to 3780 × 3000 at offset 120,110
+  # (`sips -c 3000 3780 --cropOffset 110 120`). Do not pass --refresh for this id.
+  # The Met's own Open Access primary image (CC0), 4000 × 3237 (read from the JPEG header on 2026-10-10).
+  # Commons mirrors an older, smaller Met image (3728 × 2976): File:Caspar David Friedrich - Zwei Männer in
+  # Betrachtung des Mondes (Metropolitan Museum of Art).jpg. Not the Dresden first version (1819/20).
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-31997-001-NEW.jpg
+  source_url: https://www.metmuseum.org/art/collection/search/438417
+  commons_page: https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Zwei_M%C3%A4nner_in_Betrachtung_des_Mondes_(Metropolitan_Museum_of_Art).jpg
+  width: 3780
+  height: 3000
+  medium: Oil on canvas
+  license: Public domain (CC0, The Met Open Access)
+  credit_line: Caspar David Friedrich, Two Men Contemplating the Moon, ca. 1825–30. The Metropolitan Museum of Art, New York, Wrightsman Fund, 2000 (2000.51). Image via The Met Open Access, public domain.
+  rights_status: public_domain
+  hero: { width: 2268, height: 1800, bytes: 781653 }
+  thumb: { width: 378, height: 300, bytes: 16232 }
+  full: { width: 3780, height: 3000, bytes: 2855699 }
+  placeholder_color: "#423125"
+
+beethoven-piano-sonata-23:
+  # The Met's Open Access image (CC0), mirrored on Commons at the same size (3907 × 2629).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Johan_Christian_Dahl_-_An_Eruption_of_Vesuvius_-_2019.167.1_-_Metropolitan_Museum_of_Art.jpg
+  source_url: https://www.metmuseum.org/art/collection/search/438159
+  commons_page: https://commons.wikimedia.org/wiki/File:Johan_Christian_Dahl_-_An_Eruption_of_Vesuvius_-_2019.167.1_-_Metropolitan_Museum_of_Art.jpg
+  width: 3907
+  height: 2629
+  medium: Oil on canvas
+  license: Public domain (CC0, The Met Open Access)
+  credit_line: Johan Christian Dahl, An Eruption of Vesuvius, 1824. The Metropolitan Museum of Art, New York, Gift of Christen Sveaas, in celebration of the Museum's 150th Anniversary, 2019 (2019.167.1). Image via The Met Open Access, public domain.
+  rights_status: public_domain
+  hero: { width: 2675, height: 1800, bytes: 698557 }
+  thumb: { width: 446, height: 300, bytes: 19894 }
+  full: { width: 3907, height: 2629, bytes: 1653447 }
+  placeholder_color: "#5d5046"
+
+beethoven-string-quartet-15:
+  # Google Art Project file of the Frick Collection's version (1826). Constable painted several versions:
+  # V&A (1823), the Met (ca. 1825; CC0 but only 1955 × 1541), the Frick (1826). Wikidata Q19896698.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/John_Constable_-_Salisbury_Cathedral_from_the_Bishop%27s_Garden_-_Google_Art_Project.jpg
+  source_url: http://collections.frick.org/view/objects/asitem/items$0040:79
+  commons_page: https://commons.wikimedia.org/wiki/File:John_Constable_-_Salisbury_Cathedral_from_the_Bishop%27s_Garden_-_Google_Art_Project.jpg
+  width: 5568
+  height: 4397
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100-expired)
+  credit_line: John Constable, Salisbury Cathedral from the Bishop's Garden, 1826. The Frick Collection, New York (1908.1.23). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2279, height: 1800, bytes: 1366875 }
+  thumb: { width: 380, height: 300, bytes: 34474 }
+  full: { width: 4000, height: 3159, bytes: 3970763 }
+  placeholder_color: "#5f5544"
+
+mozart-piano-sonata-11:
+  # Rijksmuseum's own image (CC0), uploaded to Commons at full size. A second copy also exists (PD tag, same size):
+  # File:Cornelis Calkoen op weg naar de audiëntie bij sultan Ahmed III Rijksmuseum SK-A-4076.jpeg .
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Cornelis_Calkoen_op_weg_naar_de_audi%C3%ABntie_bij_sultan_Ahmed_III,_SK-A-4076.jpg
+  source_url: https://www.rijksmuseum.nl/en/collection/SK-A-4076
+  commons_page: https://commons.wikimedia.org/wiki/File:Cornelis_Calkoen_op_weg_naar_de_audi%C3%ABntie_bij_sultan_Ahmed_III,_SK-A-4076.jpg
+  width: 5914
+  height: 4256
+  medium: Oil on canvas
+  license: Public domain (CC0, Rijksmuseum)
+  credit_line: Jean Baptiste Vanmour, Cornelis Calkoen on his Way to his Audience with Sultan Ahmed III, c. 1727–30. Rijksmuseum, Amsterdam (SK-A-4076). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2501, height: 1800, bytes: 785366 }
+  thumb: { width: 417, height: 300, bytes: 18887 }
+  full: { width: 4000, height: 2879, bytes: 2542919 }
+  placeholder_color: "#3e3523"
+
+mozart-piano-concerto-21:
+  # Google Art Project file of the KHM painting (GG 1669), 7403 × 4663. A KHM-sourced copy also exists on Commons
+  # (File:Bernardo Bellotto, gen. Canaletto, … GG 1669 - Kunsthistorisches Museum.jpg, 3000 × 1890), smaller.
+  # Wide format (≈ 1.59:1). KHM object page not opened; add its URL as source_url.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Bernardo_Bellotto,_called_Canaletto_-_Vienna_Viewed_from_the_Belvedere_Palace_-_Google_Art_Project.jpg
+  source_url: null
+  commons_page: https://commons.wikimedia.org/wiki/File:Bernardo_Bellotto,_called_Canaletto_-_Vienna_Viewed_from_the_Belvedere_Palace_-_Google_Art_Project.jpg
+  width: 7403
+  height: 4663
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100-1923)
+  credit_line: Bernardo Bellotto, Vienna Viewed from the Belvedere Palace, c. 1759–60. Kunsthistorisches Museum, Vienna (GG 1669). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2858, height: 1800, bytes: 998969 }
+  thumb: { width: 476, height: 300, bytes: 28378 }
+  full: { width: 4000, height: 2520, bytes: 2262222 }
+  placeholder_color: "#a69982"

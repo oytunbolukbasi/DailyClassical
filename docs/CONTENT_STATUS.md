@@ -1,6 +1,6 @@
 # İçerik durumu
 
-Son güncelleme: 10 Ekim 2026. Ekim 2026 partisi: 50 yeni eser (brief: `content/research/BATCH-2026-10.md`).
+Son güncelleme: 11 Ekim 2026. Ekim 2026 partisi: 50 yeni eser (brief: `content/research/BATCH-2026-10.md`).
 
 **Aşamalar**
 1. **Taslak:** `content/drafts/<dil>/<id>.md`. Yayın hattının dışında, hiçbir yere yüklenmez.
@@ -21,6 +21,10 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 - **Mahler 3 (6 bölüm):** Bölüm seçicideki daraltma bir sonraki build'de. O build yayında olmadan takvime girmeyecek.
 - **Duraklar:** Hepsi tahmini (≈); her eser takvime girmeden kulakla zamanlanacak (`retime-needed.md`).
 
+## Birleştirme günlüğü
+
+- **11 Ekim 2026, Grup B** (5 eser): ilk tercih tabloların hepsi tutuldu; Friedrich'in Met görselindeki siyah fon kırpıldı (master `.source.jpg`'den). Yeni terim: Lydian mode. Birleştirme betiği: `content/research/merge-drafts.py`.
+
 ## Eserler
 
 "Çakışma" sütunu: aynı ressam bu partide birden çok kez seçilmişse ya da katalogda zaten varsa. Karar birleştirmede verilecek; `.shared.md`'lerde ikişer alternatif tablo var.
@@ -32,11 +36,11 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 | beethoven-symphony-7 | A | symphony | 4 | Carlos Kleiber · Wiener Philharmoniker, 1976 | `2aNAica8UZ1gPub5p1UYUe` | Pieter Bruegel the Elder, *The Peasant Dance* |  | Taslak |
 | beethoven-piano-concerto-5 | A | piano-concerto | 3 | Wilhelm Kempff / Ferdinand Leitner · Berliner Philharmoniker, 1962 | `3cS6w1hujyiNMpBFZfJtRO` | Jacques-Louis David, *The Emperor Napoleon in His Study at the Tuileries* | katalogda da var (beethoven-piano-sonata-8) | Taslak |
 | beethoven-violin-concerto | A | violin-concerto | 3 | Wolfgang Schneiderhan / Eugen Jochum · Berliner Philharmoniker, 1963 | `0irQe1qulTiJHGNuD5sqUa` | Jean-Auguste-Dominique Ingres, *Mademoiselle Caroline Rivière* | ressam partide 2 kez | Taslak |
-| beethoven-piano-sonata-14 | B | piano-sonata | 3 | Wilhelm Kempff, 1965 | `7z9kHQBUKHO4UQ5ol9D4Ia` | Caspar David Friedrich, *Two Men Contemplating the Moon* | katalogda da var (schubert-symphony-8) | Taslak |
-| beethoven-piano-sonata-23 | B | piano-sonata | 3 | Emil Gilels, 1973 | `3O9HUGtcDizohPdj12wmVh` | Johan Christian Dahl, *An Eruption of Vesuvius* |  | Taslak |
-| beethoven-string-quartet-15 | B | string-quartet | 5 | Takács Quartet, 2004 | `6tFl4rPDztyza1TSAOZP8i` | John Constable, *Salisbury Cathedral from the Bishop's Garden* | ressam partide 2 kez | Taslak |
-| mozart-piano-sonata-11 | B | piano-sonata | 3 | Mitsuko Uchida, 1983 | `36ZImQlSkxKd7FGSiICpEf` | Jean Baptiste Vanmour, *Cornelis Calkoen on his Way to his Audience with Sultan Ahmed III* |  | Taslak |
-| mozart-piano-concerto-21 | B | piano-concerto | 3 | Géza Anda / Géza Anda · Camerata Academica des Mozarteums Salzburg, 1961 | `1YEd3qxJpi1SGJFQFqcqKC` | Bernardo Bellotto, *Vienna Viewed from the Belvedere Palace* | ressam partide 2 kez | Taslak |
+| beethoven-piano-sonata-14 | B | piano-sonata | 3 | Wilhelm Kempff, 1965 | `7z9kHQBUKHO4UQ5ol9D4Ia` | Caspar David Friedrich, *Two Men Contemplating the Moon* | katalogda da var (schubert-symphony-8) | Birleştirildi |
+| beethoven-piano-sonata-23 | B | piano-sonata | 3 | Emil Gilels, 1973 | `3O9HUGtcDizohPdj12wmVh` | Johan Christian Dahl, *An Eruption of Vesuvius* |  | Birleştirildi |
+| beethoven-string-quartet-15 | B | string-quartet | 5 | Takács Quartet, 2004 | `6tFl4rPDztyza1TSAOZP8i` | John Constable, *Salisbury Cathedral from the Bishop's Garden* | ressam partide 2 kez | Birleştirildi |
+| mozart-piano-sonata-11 | B | piano-sonata | 3 | Mitsuko Uchida, 1983 | `36ZImQlSkxKd7FGSiICpEf` | Jean Baptiste Vanmour, *Cornelis Calkoen on his Way to his Audience with Sultan Ahmed III* |  | Birleştirildi |
+| mozart-piano-concerto-21 | B | piano-concerto | 3 | Géza Anda / Géza Anda · Camerata Academica des Mozarteums Salzburg, 1961 | `1YEd3qxJpi1SGJFQFqcqKC` | Bernardo Bellotto, *Vienna Viewed from the Belvedere Palace* | ressam partide 2 kez | Birleştirildi |
 | mozart-symphony-41 | C | symphony | 4 | Sir Charles Mackerras · Scottish Chamber Orchestra, 2008 | `0MNU78TPr4GbVdgRBsBL6L` | Hubert Robert, *The Obelisk* |  | Taslak |
 | mozart-clarinet-concerto | C | concerto | 3 | Thea King / Jeffrey Tate · English Chamber Orchestra, 1986 | `3UemBU0csyQmjZNyiU7c8R` | Joseph Wright of Derby, *Italian Landscape with Mountains and a River* |  | Taslak |
 | haydn-symphony-94 | C | symphony | 4 | Sir Colin Davis · Royal Concertgebouw Orchestra, 1982 | `2FNZ21rGfvoYz953jd6Tda` | Thomas Rowlandson, *Vauxhall Gardens* |  | Taslak |

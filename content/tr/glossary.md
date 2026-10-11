@@ -22,6 +22,7 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Fugue | Füg | Seslere sırayla girip kendisiyle örülen tek ezgi | Tek bir ezginin sırayla her seste girdiği ve kendi kendisiyle örüldüğü bir eser ya da kısım. |
 | Glissando | Glissando | Bir notadan ötekine kesintisiz kayış | Bir notadan ötekine kesintisiz bir kayış. |
 | Idée fixe | İdée fixe | Berlioz'un bir kişiyi temsil eden, dönüp duran melodisi | "Saplantılı fikir": Berlioz'un, bir kişiyi temsil eden ve eser boyunca geri dönen bir melodi için kullandığı terim. |
+| Lydian mode | Lidya modu | Dördüncü notası yükseltilmiş majör gibi eski bir kilise dizisi | Eski kilise dizilerinden biri. Dördüncü notası yarım ses yükseltilmiş bir majör dizi gibi duyulur (Si bekarlı Fa'dan Fa'ya); bu da ona parlak, havada asılı bir renk verir. |
 | Ländler | Ländler | Üç vuruşlu Avusturya köylü dansı, valsin atası | Üç vuruşlu, köylü havasında bir Avusturya halk dansı; valsin daha yavaş, daha ağır bir atası. |
 | Major | Majör | Genellikle parlak ya da yerine oturmuş duyulan ton türü | Genellikle parlak ya da yerine oturmuş duyulan ton türü. Daha karanlık karşılığı minördür. |
 | Minuet | Menuet | Üç vuruşlu, zarif bir 18. yüzyıl dansı | Üç vuruşlu, zarif bir 18. yüzyıl dansı; Klasik dönem senfonilerinde üçüncü bölüm olarak kullanılır. |

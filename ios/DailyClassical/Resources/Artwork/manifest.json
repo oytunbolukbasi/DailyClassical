@@ -299,6 +299,56 @@
         "hash": "13f206fc6a"
       }
     },
+    "paintings/beethoven-piano-sonata-14": {
+      "source": "https://images.metmuseum.org/CRDImages/ep/original/DP-31997-001-NEW.jpg",
+      "color": "#423125",
+      "hero": {
+        "path": "paintings/beethoven-piano-sonata-14-hero.heic",
+        "width": 2268,
+        "height": 1800,
+        "bytes": 781653,
+        "hash": "f8d715a3db"
+      },
+      "thumb": {
+        "path": "paintings/beethoven-piano-sonata-14-thumb.heic",
+        "width": 378,
+        "height": 300,
+        "bytes": 16232,
+        "hash": "022afef4e4"
+      },
+      "full": {
+        "path": "paintings/beethoven-piano-sonata-14-full.heic",
+        "width": 3780,
+        "height": 3000,
+        "bytes": 2855699,
+        "hash": "6adb11c7fb"
+      }
+    },
+    "paintings/beethoven-piano-sonata-23": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Johan_Christian_Dahl_-_An_Eruption_of_Vesuvius_-_2019.167.1_-_Metropolitan_Museum_of_Art.jpg",
+      "color": "#5d5046",
+      "hero": {
+        "path": "paintings/beethoven-piano-sonata-23-hero.heic",
+        "width": 2675,
+        "height": 1800,
+        "bytes": 698557,
+        "hash": "ac3fa01919"
+      },
+      "thumb": {
+        "path": "paintings/beethoven-piano-sonata-23-thumb.heic",
+        "width": 446,
+        "height": 300,
+        "bytes": 19894,
+        "hash": "89088a95e9"
+      },
+      "full": {
+        "path": "paintings/beethoven-piano-sonata-23-full.heic",
+        "width": 3907,
+        "height": 2629,
+        "bytes": 1653447,
+        "hash": "7824111fbc"
+      }
+    },
     "paintings/beethoven-piano-sonata-8": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Death_of_Socrates_MET_DP-13139-001.jpg",
       "color": "#2f2519",
@@ -322,6 +372,31 @@
         "height": 2663,
         "bytes": 1040367,
         "hash": "4f1c52521f"
+      }
+    },
+    "paintings/beethoven-string-quartet-15": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Constable_-_Salisbury_Cathedral_from_the_Bishop%27s_Garden_-_Google_Art_Project.jpg",
+      "color": "#5f5544",
+      "hero": {
+        "path": "paintings/beethoven-string-quartet-15-hero.heic",
+        "width": 2279,
+        "height": 1800,
+        "bytes": 1366875,
+        "hash": "8ced2a61a0"
+      },
+      "thumb": {
+        "path": "paintings/beethoven-string-quartet-15-thumb.heic",
+        "width": 380,
+        "height": 300,
+        "bytes": 34474,
+        "hash": "184263a69c"
+      },
+      "full": {
+        "path": "paintings/beethoven-string-quartet-15-full.heic",
+        "width": 4000,
+        "height": 3159,
+        "bytes": 3970763,
+        "hash": "3ab7a80a4a"
       }
     },
     "paintings/beethoven-symphony-5": {
@@ -474,6 +549,31 @@
         "hash": "6ec9cad351"
       }
     },
+    "paintings/mozart-piano-concerto-21": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Bernardo_Bellotto,_called_Canaletto_-_Vienna_Viewed_from_the_Belvedere_Palace_-_Google_Art_Project.jpg",
+      "color": "#a69982",
+      "hero": {
+        "path": "paintings/mozart-piano-concerto-21-hero.heic",
+        "width": 2858,
+        "height": 1800,
+        "bytes": 998969,
+        "hash": "8729820e17"
+      },
+      "thumb": {
+        "path": "paintings/mozart-piano-concerto-21-thumb.heic",
+        "width": 476,
+        "height": 300,
+        "bytes": 28378,
+        "hash": "e62abd40a3"
+      },
+      "full": {
+        "path": "paintings/mozart-piano-concerto-21-full.heic",
+        "width": 4000,
+        "height": 2520,
+        "bytes": 2262222,
+        "hash": "beb2f1dad7"
+      }
+    },
     "paintings/mozart-piano-concerto-23": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Gainsborough_-_Mr_and_Mrs_William_Hallett_(%27The_Morning_Walk%27)_-_WGA8418.jpg",
       "color": "#575451",
@@ -497,6 +597,31 @@
         "height": 4000,
         "bytes": 2103823,
         "hash": "d02cedf52e"
+      }
+    },
+    "paintings/mozart-piano-sonata-11": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Cornelis_Calkoen_op_weg_naar_de_audi%C3%ABntie_bij_sultan_Ahmed_III,_SK-A-4076.jpg",
+      "color": "#3e3523",
+      "hero": {
+        "path": "paintings/mozart-piano-sonata-11-hero.heic",
+        "width": 2501,
+        "height": 1800,
+        "bytes": 785366,
+        "hash": "e41079940f"
+      },
+      "thumb": {
+        "path": "paintings/mozart-piano-sonata-11-thumb.heic",
+        "width": 417,
+        "height": 300,
+        "bytes": 18887,
+        "hash": "875b8ca1bb"
+      },
+      "full": {
+        "path": "paintings/mozart-piano-sonata-11-full.heic",
+        "width": 4000,
+        "height": 2879,
+        "bytes": 2542919,
+        "hash": "d7383dae70"
       }
     },
     "paintings/mozart-symphony-40": {
