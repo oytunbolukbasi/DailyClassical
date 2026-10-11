@@ -15,7 +15,7 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 - ~~**Rönesans dönemi**~~ **Çözüldü (11 Ekim):** `renaissance` backend'e (migration 0011) ve uygulamaya eklendi. Yayındaki 1.0.0 bilinmeyen dönemi "Diğer" gösteriyor (çökmüyor); bir sonraki build'de "Rönesans".
 - **Sözlük:** Yeni terimler (Attacca, Trill, Double stop, Ostinato, Hemiola, Leitmotif, Counterpoint, Ritornello, Continuo…). Birkaç grup aynı terimi önerdi; her biri bir kez eklenecek.
 - **Yeni besteciler (19):** haydn, allegri, bruckner, schumann, mendelssohn, chopin, liszt, grieg, bruch, sibelius, elgar, vivaldi, bach, franck, tallis, smetana, debussy, ravel, rimsky-korsakov, wagner. Girdileri `.shared.md`'lerde. Elgar ve Mendelssohn portreleri kırpma ister.
-- **Lisans:** Spitzweg (Trout) ve Khnopff (Klarnet Beşlisi) fotoğrafları CC BY / CC BY-SA. Kamu malı alternatife geçilecek ya da künye eklenecek.
+- ~~**Lisans**~~ **Çözüldü:** Khnopff yerine Hammershøi. Spitzweg kaldı: kamu malı bir tablonun aslına sadık fotoğrafı AB'de (DSM md. 14) ve ABD'de yeni hak doğurmuyor (Molitor girdisindeki gibi); fotoğrafçı künyede anılıyor. Not: yayındaki uygulama CC lisanslı *tablo* fotoğraflarının künyesini göstermiyor (yalnızca portrelerde); bu yüzden tablolarda kamu malı ya da bu ilkeye uyan görseller kullanılıyor.
 - **Çaykovski Keman Konçertosu:** Chung kaydının finalinde kesinti olabilir; çözülmezse referans Hahn kaydına geçecek.
 - **Spotify Türkiye erişimi:** 50 albüm toplu kontrol edilecek.
 - **Mahler 3 (6 bölüm):** Bölüm seçicideki daraltma bir sonraki build'de. O build yayında olmadan takvime girmeyecek.
@@ -28,6 +28,7 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 - **11 Ekim 2026, Grup E** (5 eser): Klarnet Beşlisi Khnopff (CC BY-SA) → Hammershøi; D 960 Constable → Dahl, *Ay Işığında Dresden*. Yeni terimler: Double stop, Lied, Tarantella.
 - **11 Ekim 2026, Grup D** (5 eser + Bruckner): Brahms 1 Menzel → Calame, *Thun Gölü* (Menzel Bach'ta kalıyor; tekniği National Gallery sayfasından doğrulandı). Schiele Mahler 9 ve "Ölüm ve Kız"da iki farklı tabloyla kaldı. Yeni terimler: Offstage, Posthorn, Wagner tuba. Mahler 3 (6 bölüm) yeni build yayına çıkmadan takvime girmeyecek.
 - **11 Ekim 2026, Grup C** (5 eser + Haydn, Allegri): ilk tercih tablolar tutuldu. Allegri `renaissance`, "Senfoni: Yok". Yeni terimler: Counterpoint, Basset clarinet, Plainchant. Not: Jupiter tablosu (Hubert Robert, *Dikilitaş*) yalnızca 1952 px; daha büyük bir kaynak bulunursa değiştirilecek.
+- **11 Ekim 2026, Grup F** (5 eser + Schumann, Mendelssohn, Chopin): ilk tercih tablolar tutuldu (Courbet Chopin 2'de ve Çaykovski Keman'da farklı tablolarla). Mendelssohn portresi çerçeveli TIFF'ten, Kasprzycki tablosu altın çerçeve kenarından kırpıldı. Yeni terimler: Krakowiak, Nocturne.
 
 ## Eserler
 
@@ -60,11 +61,11 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 | schubert-symphony-9 | E | symphony | 4 | Günter Wand · Berliner Philharmoniker, 1995 | `1zEbPxFC7m0Wj8ePFMkP8W` | Ferdinand Georg Waldmüller, *View of the Dachstein with the Hallstätter See from the Hütteneckalm near Ischl* |  | Birleştirildi |
 | schubert-piano-sonata-21 | E | piano-sonata | 4 | Mitsuko Uchida, 1998 | `4X32yxTPmTbd7i03gfiSZN` | Johan Christian Dahl, *View of Dresden by Moonlight* | (Constable'dan değişti) | Birleştirildi |
 | schubert-string-quartet-14 | E | string-quartet | 4 | Alban Berg Quartett, 1985 | `2IAsZa1NOpFYcY2A58eYME` | Egon Schiele, *Death and the Maiden* | ressam partide 2 kez | Birleştirildi |
-| schubert-piano-quintet-trout | F | chamber | 5 | Clifford Curzon, 1958 | `06Aea2N1qVuld6Mw9Xz6XS` | Carl Spitzweg, *The Angler* |  | Taslak |
-| schumann-piano-concerto | F | piano-concerto | 3 | Radu Lupu / André Previn · London Symphony Orchestra, 1973 | `6nEpG19dgOSn6mB4ye4czG` | Carl Gustav Carus, *Barge Trip on the Elbe near Dresden* |  | Taslak |
-| mendelssohn-violin-concerto | F | violin-concerto | 3 | Anne-Sophie Mutter / Herbert von Karajan · Berliner Philharmoniker, 1981 | `5UMYDc7q9Z0GE2O8zlfRsg` | Adolph Menzel, *The Balcony Room* | ressam partide 3 kez | Taslak |
-| chopin-piano-concerto-1 | F | piano-concerto | 3 | Martha Argerich / Claudio Abbado · London Symphony Orchestra, 1968 | `4hQ5UonmIDouhBBEdRAwgC` | Wincenty Kasprzycki, *View of Morysinek* |  | Taslak |
-| chopin-piano-sonata-2 | F | piano-sonata | 4 | Maurizio Pollini, 1985 | `5U3T9zcqmcKSmxK7gJuBZB` | Gustave Courbet, *A Burial at Ornans* | ressam partide 2 kez | Taslak |
+| schubert-piano-quintet-trout | F | chamber | 5 | Clifford Curzon, 1958 | `06Aea2N1qVuld6Mw9Xz6XS` | Carl Spitzweg, *The Angler* |  | Birleştirildi |
+| schumann-piano-concerto | F | piano-concerto | 3 | Radu Lupu / André Previn · London Symphony Orchestra, 1973 | `6nEpG19dgOSn6mB4ye4czG` | Carl Gustav Carus, *Barge Trip on the Elbe near Dresden* |  | Birleştirildi |
+| mendelssohn-violin-concerto | F | violin-concerto | 3 | Anne-Sophie Mutter / Herbert von Karajan · Berliner Philharmoniker, 1981 | `5UMYDc7q9Z0GE2O8zlfRsg` | Adolph Menzel, *The Balcony Room* | ressam partide 3 kez | Birleştirildi |
+| chopin-piano-concerto-1 | F | piano-concerto | 3 | Martha Argerich / Claudio Abbado · London Symphony Orchestra, 1968 | `4hQ5UonmIDouhBBEdRAwgC` | Wincenty Kasprzycki, *View of Morysinek* |  | Birleştirildi |
+| chopin-piano-sonata-2 | F | piano-sonata | 4 | Maurizio Pollini, 1985 | `5U3T9zcqmcKSmxK7gJuBZB` | Gustave Courbet, *A Burial at Ornans* | ressam partide 2 kez | Birleştirildi |
 | liszt-piano-sonata | G | piano-sonata | 1 | Krystian Zimerman, 1990 | `6XN6HweLAIZaY2bMKjWdHx` | Eugène Delacroix, *Christ Asleep during the Tempest* |  | Taslak |
 | grieg-piano-concerto | G | piano-concerto | 3 | Krystian Zimerman / Herbert von Karajan · Berliner Philharmoniker, 1981 | `1uOl9hgML9eVDhzWBypnfY` | Hans Gude and Adolph Tidemand, *Bridal Procession on the Hardangerfjord* |  | Taslak |
 | tchaikovsky-piano-concerto-1 | G | piano-concerto | 3 | Martha Argerich / Kirill Kondrashin · Bavarian Radio Symphony Orchestra, 1980 | `0PzMgnYqwwSwPnSijeSKSb` | Alexei Savrasov, *The Rooks Have Returned* |  | Taslak |

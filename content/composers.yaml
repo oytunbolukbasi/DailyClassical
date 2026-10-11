@@ -603,3 +603,137 @@
     thumb: { width: 300, height: 417, bytes: 52469 }
     full: { width: 1800, height: 2500, bytes: 1450554 }
     placeholder_color: "#9c9c9c"
+
+- id: schumann
+  match: Robert Schumann
+  sort_name: Schumann, Robert
+  born: 1810
+  died: 1856
+  era: romantic
+  names:
+    en: { name: Robert Schumann, short: Schumann }
+    tr: { name: Robert Schumann, short: Schumann }
+  nationality: { en: German, tr: Alman }
+  facts:
+    born: { en: "8 June 1810, Zwickau", tr: "8 Haziran 1810, Zwickau" }
+    died: { en: "29 July 1856, Endenich, near Bonn", tr: "29 Temmuz 1856, Endenich, Bonn yakınları" }
+    symphonies: { en: "Four", tr: "Dört" }
+    best_known_for: { en: "Piano music, songs, Piano Concerto", tr: "Piyano eserleri, şarkıları, Piyano Konçertosu" }
+  bio:
+    en: |-
+      Schumann was born in 1810 in Zwickau, in Saxony, the son of a bookseller and publisher, and he grew up loving literature as much as music. He went to university in Leipzig and Heidelberg to study law, but he soon gave it up for the piano and lessons with Friedrich Wieck, a famous teacher in Leipzig. A weakness in the fingers of his right hand, whose cause is still uncertain, ended his hopes of a career as a pianist, and by 1832 he had turned to composing.
+
+      In 1834 he helped to found a music journal, the *Neue Zeitschrift für Musik*, and for ten years he wrote much of it himself, often signing as two imaginary characters: fiery Florestan and dreamy Eusebius. Through the 1830s he wrote mostly piano music, such as *Carnaval* and *Kinderszenen*. He fell in love with Wieck's daughter Clara, already a celebrated pianist; her father fought the match in court, and they married only in September 1840. That year he poured out songs, including the cycle *Dichterliebe*, and in 1841 he turned to symphonies.
+
+      In 1844 the family moved to Dresden, and in 1850 to Düsseldorf, where he became the city's music director. In 1853 the twenty-year-old Brahms called on the Schumanns, and Robert hailed him in print as a genius. Soon afterwards his mental health collapsed. In February 1854 he threw himself into the Rhine, was rescued, and spent his last two years in an asylum at Endenich, near Bonn, where he died in 1856, aged 46. Clara outlived him by forty years and kept playing his music throughout her long career.
+    tr: |-
+      Schumann 1810’da Saksonya’daki Zwickau’da, kitapçı ve yayıncı bir babanın oğlu olarak doğdu; edebiyatı da müzik kadar severek büyüdü. Hukuk okumak için Leipzig ve Heidelberg üniversitelerine gitti, ama kısa süre sonra hukuku bırakıp piyanoya ve Leipzig’in ünlü öğretmeni Friedrich Wieck’in derslerine yöneldi. Sağ elinin parmaklarındaki, nedeni bugün de belirsiz bir güçsüzlük piyanist olma umutlarını bitirdi; 1832’ye gelindiğinde kendini besteciliğe vermişti.
+
+      1834’te *Neue Zeitschrift für Musik* adlı bir müzik dergisinin kurucuları arasında yer aldı ve on yıl boyunca derginin büyük kısmını kendisi yazdı; yazılarını çoğu zaman uydurduğu iki karakterin adıyla imzaladı: ateşli Florestan ve hayalci Eusebius. 1830’lar boyunca çoğunlukla *Carnaval* ve *Çocukluktan Sahneler* (*Kinderszenen*) gibi piyano eserleri yazdı. Wieck’in, daha o yaşta ünlü bir piyanist olan kızı Clara’ya âşık oldu; babası bu evliliğe mahkemede karşı çıktı ve ikisi ancak Eylül 1840’ta evlenebildi. Schumann o yıl *Bir Şairin Aşkı* (*Dichterliebe*) döngüsü de dahil şarkı üstüne şarkı yazdı; 1841’de senfonilere yöneldi.
+
+      Aile 1844’te Dresden’e, 1850’de de Schumann’ın şehrin müzik direktörü olduğu Düsseldorf’a taşındı. 1853’te yirmi yaşındaki Brahms Schumann’ları ziyaret etti; Robert onu bir yazısında dâhi diye selamladı. Kısa süre sonra ruh sağlığı çöktü. Şubat 1854’te kendini Ren Nehri’ne attı, kurtarıldı ve son iki yılını Bonn yakınlarındaki Endenich’te bir akıl hastanesinde geçirdi; 1856’da, 46 yaşında orada öldü. Clara ondan kırk yıl daha yaşadı ve uzun kariyeri boyunca onun müziğini çalmayı sürdürdü.
+  portrait:
+    artist: Josef Kriehuber
+    title: { en: Robert Schumann, tr: Robert Schumann }
+    year: "1839"
+    collection: null
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Robert_Schumann_1839.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Robert_Schumann_1839.jpg
+    width: 3100
+    height: 3100
+    license: Public domain (PD-Art, PD-old-100-1923; lithograph, artist d. 1876)
+    focal_y: 0.2
+    hero: { width: 1800, height: 1800, bytes: 644410 }
+    thumb: { width: 300, height: 300, bytes: 14788 }
+    full: { width: 3100, height: 3100, bytes: 1798016 }
+    placeholder_color: "#cecece"
+
+- id: mendelssohn
+  match: Felix Mendelssohn
+  sort_name: Mendelssohn, Felix
+  born: 1809
+  died: 1847
+  era: romantic
+  names:
+    en: { name: Felix Mendelssohn, short: Mendelssohn }
+    tr: { name: Felix Mendelssohn, short: Mendelssohn }
+  nationality: { en: German, tr: Alman }
+  facts:
+    born: { en: "3 February 1809, Hamburg", tr: "3 Şubat 1809, Hamburg" }
+    died: { en: "4 November 1847, Leipzig", tr: "4 Kasım 1847, Leipzig" }
+    symphonies: { en: "Five numbered, plus 13 early string symphonies", tr: "Beş numaralı, ayrıca 13 erken dönem yaylı senfonisi" }
+    best_known_for: { en: "Violin Concerto, *A Midsummer Night's Dream*, *Songs without Words*", tr: "Keman Konçertosu, *Bir Yaz Gecesi Rüyası*, *Sözsüz Şarkılar*" }
+  bio:
+    en: |-
+      Mendelssohn was born in Hamburg in 1809 into a wealthy, cultured family; his grandfather was the Jewish philosopher Moses Mendelssohn. The family moved to Berlin when he was two, the children were baptised as Protestants, and his parents later added the surname Bartholdy. Felix and his older sister Fanny, herself a gifted composer, grew up surrounded by music. At 16 he wrote his String Octet, and at 17 the overture to *A Midsummer Night's Dream*.
+
+      In 1829, aged 20, he conducted Bach's *St Matthew Passion* in Berlin, a performance that helped bring Bach's music back into concert life. He travelled widely, to Italy and many times to Britain, and the journeys gave him the *Italian* Symphony, the *Scottish* Symphony and the *Hebrides* overture, inspired by Fingal's Cave. In 1835 he became director of the Gewandhaus Orchestra in Leipzig, and in 1843 he founded the Leipzig Conservatory.
+
+      He worked at a furious pace as composer, conductor, pianist and organiser. His oratorio *Elijah* was first performed in Birmingham in 1846. In May 1847 his sister Fanny died suddenly, and less than six months later, on 4 November, he died in Leipzig after a series of strokes, aged 38. Later in the century his polished, light-filled music fell out of fashion, partly through antisemitism, but works such as the Violin Concerto never left the concert hall.
+    tr: |-
+      Mendelssohn 1809’da Hamburg’da varlıklı ve kültürlü bir ailede doğdu; dedesi Yahudi filozof Moses Mendelssohn’du. Aile o iki yaşındayken Berlin’e taşındı; çocuklar Protestan olarak vaftiz edildi, anne babası da sonradan soyadlarına Bartholdy’yi ekledi. Felix ve kendisi de yetenekli bir besteci olan ablası Fanny müziğin içinde büyüdü. On altı yaşında Yaylı Sekizli’sini, on yedi yaşında *Bir Yaz Gecesi Rüyası* uvertürünü yazdı.
+
+      1829’da, yirmi yaşındayken Bach’ın *Matta Pasyonu*’nu Berlin’de yönetti; bu konser Bach’ın müziğinin konser hayatına geri dönmesine yardım etti. Çok gezdi: İtalya’ya ve defalarca Britanya’ya gitti. Bu yolculuklardan *İtalyan* ve *İskoç* senfonileri ile Fingal Mağarası’ndan esinlenen *Hebridler* uvertürü doğdu. 1835’te Leipzig’deki Gewandhaus Orkestrası’nın başına geçti, 1843’te Leipzig Konservatuvarı’nı kurdu.
+
+      Besteci, şef, piyanist ve organizatör olarak soluk soluğa çalıştı. *İlyas* (*Elijah*) oratoryosu ilk kez 1846’da Birmingham’da seslendirildi. Mayıs 1847’de ablası Fanny ansızın öldü; altı ay bile geçmeden, 4 Kasım’da, kendisi de art arda geçirdiği felçlerin ardından 38 yaşında Leipzig’de öldü. Yüzyılın sonlarına doğru cilalı, ışık dolu müziği kısmen antisemitizm yüzünden gözden düştü; ama Keman Konçertosu gibi eserler konser salonlarından hiç eksik olmadı.
+  portrait:
+    # Master in the originals cache is CROPPED from the framed TIFF (mendelssohn.source.tif):
+    # 4780 × 5900 at offset 1200,1180, saved as JPEG q95. Do not pass --refresh for this id.
+    artist: Theodor Hildebrandt
+    title: { en: Felix Mendelssohn Bartholdy, tr: Felix Mendelssohn Bartholdy }
+    year: "c. 1834"
+    collection: { en: "Staatsbibliothek zu Berlin", tr: "Staatsbibliothek zu Berlin" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Theodor_Hildebrandt_-_Felix_Mendelssohn_Bartholdy.tif
+    source_url: https://commons.wikimedia.org/wiki/File:Theodor_Hildebrandt_-_Felix_Mendelssohn_Bartholdy.tif
+    width: 4780
+    height: 5900
+    license: Public domain (Public Domain Mark, Staatsbibliothek zu Berlin; artist d. 1874)
+    focal_y: 0.3
+    hero: { width: 1800, height: 2222, bytes: 535220 }
+    thumb: { width: 300, height: 370, bytes: 9318 }
+    full: { width: 3241, height: 4000, bytes: 1838797 }
+    placeholder_color: "#302d1e"
+
+- id: chopin
+  match: Frédéric Chopin
+  sort_name: Chopin, Frédéric
+  born: 1810
+  died: 1849
+  era: romantic
+  names:
+    en: { name: Frédéric Chopin, short: Chopin }
+    tr: { name: Frédéric Chopin, short: Chopin }
+  nationality: { en: Polish, tr: Polonyalı }
+  facts:
+    born: { en: "1 March 1810, Żelazowa Wola, near Warsaw", tr: "1 Mart 1810, Żelazowa Wola, Varşova yakınları" }
+    died: { en: "17 October 1849, Paris", tr: "17 Ekim 1849, Paris" }
+    symphonies: { en: "None", tr: "Yok" }
+    best_known_for: { en: "Piano music: nocturnes, ballades, études, mazurkas, polonaises", tr: "Piyano eserleri: noktürnler, baladlar, etütler, mazurkalar, polonezler" }
+  bio:
+    en: |-
+      Chopin was born in 1810 in Żelazowa Wola, a village west of Warsaw, to a French father, Nicolas, who had settled in Poland, and a Polish mother. The family moved to Warsaw when he was a baby, and Polish was spoken at home. He was giving public concerts by the age of seven, and from 1826 he studied composition with Józef Elsner at the Warsaw Conservatory. In November 1830 he left to make his name abroad. A few weeks later the November Uprising broke out at home, and he never saw Poland again.
+
+      He reached Paris in 1831 and stayed for the rest of his life. He disliked large halls and gave only about thirty public concerts; he earned his living by teaching and played mostly in private salons. In 1836 he met the novelist George Sand. They were together from 1838 to 1847, spending a difficult winter on Mallorca and most summers at her country house at Nohant, where he wrote many of his finest works.
+
+      Almost everything he wrote involves the piano: nocturnes, études, ballades, preludes, scherzos, and the Polish dances, mazurkas and polonaises, that kept his homeland in his music. Often ill, he gave his last Paris concert in February 1848 and toured Britain that year. He died in Paris on 17 October 1849, aged 39, and the funeral march from his Second Piano Sonata was played at his graveside.
+    tr: |-
+      Chopin 1810’da, Varşova’nın batısındaki Żelazowa Wola köyünde, Polonya’ya yerleşmiş Fransız bir baba, Nicolas, ile Polonyalı bir annenin çocuğu olarak doğdu. Aile o daha bebekken Varşova’ya taşındı; evde Lehçe konuşulurdu. Yedi yaşında halka açık konserler veriyordu; 1826’dan itibaren Varşova Konservatuvarı’nda Józef Elsner’le kompozisyon çalıştı. Kasım 1830’da adını yurtdışında duyurmak için yola çıktı. Birkaç hafta sonra memleketinde Kasım Ayaklanması patlak verdi ve Chopin Polonya’yı bir daha hiç görmedi.
+
+      1831’de Paris’e vardı ve hayatının geri kalanını orada geçirdi. Büyük salonları sevmezdi; hayatı boyunca yalnızca otuz kadar halka açık konser verdi. Geçimini ders vererek sağladı, çoğunlukla da özel salonlarda çaldı. 1836’da romancı George Sand’la tanıştı. 1838’den 1847’ye kadar birlikte oldular; zorlu bir kışı Mallorca’da, yazların çoğunu da Sand’ın Nohant’taki kır evinde geçirdiler. Chopin en güzel eserlerinin birçoğunu orada yazdı.
+
+      Yazdığı hemen her şeyde piyano var: noktürnler, etütler, baladlar, prelüdler, scherzolar ve memleketini müziğinde yaşatan Polonya dansları, mazurkalar ve polonezler. Sık sık hastalanan Chopin, son Paris konserini Şubat 1848’de verdi ve o yıl Britanya’da turneye çıktı. 17 Ekim 1849’da, 39 yaşında Paris’te öldü; mezarı başında İkinci Piyano Sonatı’nın cenaze marşı çalındı.
+  portrait:
+    artist: Eugène Delacroix
+    title: { en: Frédéric Chopin, tr: Frédéric Chopin }
+    year: "1838"
+    collection: { en: "Musée du Louvre, Paris", tr: "Louvre Müzesi, Paris" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Fr%C3%A9d%C3%A9ric_Chopin_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1717.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Fr%C3%A9d%C3%A9ric_Chopin_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1717.jpg
+    width: 4328
+    height: 5400
+    license: Public domain (PD-Art, PD-old-70; artist d. 1863)
+    focal_y: 0.25
+    hero: { width: 1800, height: 2246, bytes: 543775 }
+    thumb: { width: 300, height: 374, bytes: 13830 }
+    full: { width: 3206, height: 4000, bytes: 2121802 }
+    placeholder_color: "#372e1e"

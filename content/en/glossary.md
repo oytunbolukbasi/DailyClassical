@@ -27,6 +27,7 @@ Definition: one or two sentences, written for the pop-over.
 | Glissando | A continuous slide from one note to another | A continuous slide from one note to another. |
 | Hemiola | Two bars of three beats regrouped into three pairs | A rhythmic shift in which two bars of three beats are accented as if they were three groups of two, so they sound like one long bar of three slow beats. The beat seems to stumble or stretch. |
 | Idée fixe | Berlioz's recurring melody that stands for a person | "Fixed idea": Berlioz's term for a melody that represents a person and returns throughout a piece. |
+| Krakowiak | A lively Polish dance from Kraków, with off-beat kicks | A fast Polish folk dance from the Kraków region, in two beats, with syncopated accents that kick against the beat. |
 | Lied | A German art song for voice and piano | A German art song, usually a poem set for one voice with piano. Schubert wrote more than six hundred. |
 | Lydian mode | An old church scale: like a major scale with a raised fourth | One of the old church modes. It sounds like a major scale with its fourth note raised a half step (F to F with B natural), which gives a bright, floating sound. |
 | Ländler | A rustic Austrian dance in three, ancestor of the waltz | A rustic Austrian country dance in three beats, a slower, heavier ancestor of the waltz. |
@@ -34,6 +35,7 @@ Definition: one or two sentences, written for the pop-over.
 | Minuet | An elegant 18th-century dance in three beats | An elegant 18th-century dance in three beats, used as the third movement of Classical symphonies. |
 | Motif | A short musical idea that keeps returning | The smallest musical idea, just a few notes, from which a theme is built. |
 | Muted | Played with a device that softens and veils the sound | Played with a small device on the instrument that softens and veils the sound. |
+| Nocturne | A dreamy "night piece", usually for piano | A "night piece": a slow, dreamy piece with a singing melody over a flowing accompaniment, a form Chopin made famous. |
 | Obbligato | An essential, prominent solo instrumental part | A solo instrumental part that is essential and prominent throughout a movement. |
 | Offstage | Players placed out of sight, heard from a distance | Instruments placed behind the stage or outside the hall, so that they sound far away. |
 | Ostinato | A short pattern repeated over and over | A short rhythm or melody repeated persistently, often underneath changing music. |

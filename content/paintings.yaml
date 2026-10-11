@@ -701,3 +701,85 @@ allegri-miserere:
   thumb: { width: 373, height: 300, bytes: 25000 }
   full: { width: 4000, height: 3214, bytes: 3283089 }
   placeholder_color: "#4e3a21"
+
+schubert-piano-quintet-trout:
+  # Gallery photo (CC BY 4.0, attribution required); the SKD's own images are rights-reserved. Portrait format.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Dresden,_Albertinum,_Carl_Spitzweg,_der_Angler.JPG
+  source_url: https://skd-online-collection.skd.museum/Details/Index/324364
+  commons_page: https://commons.wikimedia.org/wiki/File:Dresden,_Albertinum,_Carl_Spitzweg,_der_Angler.JPG
+  width: 2870
+  height: 4056
+  medium: Oil on poplar panel
+  license: Public domain (painting, artist d. 1885); photograph tagged CC BY 4.0 by Dguendel. Faithful photos of PD 2D art carry no new rights in the EU (DSM art. 14) or the US, as for the Molitor entry
+  credit_line: Carl Spitzweg, The Angler (Der Angler), c. 1875. Galerie Neue Meister, Staatliche Kunstsammlungen Dresden (Gal.-Nr. 2378 A). Image via Wikimedia Commons, public domain (photo Dguendel, CC BY 4.0).
+  rights_status: public_domain
+  hero: { width: 1800, height: 2544, bytes: 828693 }
+  thumb: { width: 300, height: 424, bytes: 29902 }
+  full: { width: 2830, height: 4000, bytes: 1878037 }
+  placeholder_color: "#776446"
+
+schumann-piano-concerto:
+  # Portrait format (4026 × 5467); check the hero crop keeps the woman and the city skyline.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Carl_Gustav_Carus_-_Barge_Trip_on_the_Elbe_near_Dresden_(Morning_on_the_Elbe)_-_Google_Art_Project.jpg
+  source_url: https://www.wikidata.org/wiki/Q28839402
+  commons_page: https://commons.wikimedia.org/wiki/File:Carl_Gustav_Carus_-_Barge_Trip_on_the_Elbe_near_Dresden_(Morning_on_the_Elbe)_-_Google_Art_Project.jpg
+  width: 4026
+  height: 5467
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-expired; artist d. 1869)
+  credit_line: Carl Gustav Carus, Barge Trip on the Elbe near Dresden (Die Kahnfahrt auf der Elbe bei Dresden), c. 1827. Museum Kunstpalast, Düsseldorf (M 130). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2444, bytes: 1507119 }
+  thumb: { width: 300, height: 407, bytes: 31948 }
+  full: { width: 2946, height: 4000, bytes: 4781107 }
+  placeholder_color: "#46524b"
+
+mendelssohn-violin-concerto:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Adolph_Menzel_-_Das_Balkonzimmer_-_Google_Art_Project.jpg
+  source_url: https://www.wikidata.org/wiki/Q18683021
+  commons_page: https://commons.wikimedia.org/wiki/File:Adolph_Menzel_-_Das_Balkonzimmer_-_Google_Art_Project.jpg
+  width: 2908
+  height: 3524
+  medium: Oil on cardboard
+  license: Public domain (PD-Art, PD-old-100-expired; artist d. 1905)
+  credit_line: Adolph Menzel, The Balcony Room (Das Balkonzimmer), 1845. Alte Nationalgalerie, Staatliche Museen zu Berlin (A I 744). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2181, bytes: 871382 }
+  thumb: { width: 300, height: 364, bytes: 19430 }
+  full: { width: 2908, height: 3524, bytes: 2258919 }
+  placeholder_color: "#928764"
+
+chopin-piano-concerto-1:
+  # Master in the originals cache is CROPPED (gilt frame edge): chopin-piano-concerto-1.source.jpg cropped
+  # to 4480 × 3124 at offset 70,70 (`sips -c 3124 4480 --cropOffset 70 70`). Do not pass --refresh for this id.
+  # Own photo on Commons; a thin strip of the gilt frame shows on all four sides. Crop the master to the
+  # canvas before `npm run images` (as for rachmaninoff-piano-concerto-2) and record the crop here.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Kasprzycki_View_of_Morysinek_near_Wilanow.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Wincenty_Kasprzycki_-_View_of_Morysinek_in_Wilan%C3%B3w_-_MP_299_-_National_Museum_in_Warsaw.jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:Kasprzycki_View_of_Morysinek_near_Wilanow.jpg
+  width: 4480
+  height: 3124
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-expired; artist d. 1849)
+  credit_line: Wincenty Kasprzycki, View of Morysinek (Widok Morysinka), 1834. National Museum in Warsaw. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2581, height: 1800, bytes: 742508 }
+  thumb: { width: 430, height: 300, bytes: 24510 }
+  full: { width: 4000, height: 2789, bytes: 1644063 }
+  placeholder_color: "#5f6057"
+
+chopin-piano-sonata-2:
+  # Very wide canvas (2.2 : 1). Check that the hero crop keeps the grave and the mourners in the centre.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg
+  source_url: https://www.wikidata.org/wiki/Q540488
+  commons_page: https://commons.wikimedia.org/wiki/File:Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg
+  width: 6045
+  height: 2779
+  medium: Oil on canvas
+  license: Public domain (PD-Art; artist d. 1877)
+  credit_line: Gustave Courbet, A Burial at Ornans (Un enterrement à Ornans), 1849–50. Musée d'Orsay, Paris (RF 325). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 3600, height: 1655, bytes: 1831913 }
+  thumb: { width: 653, height: 300, bytes: 34381 }
+  full: { width: 4000, height: 1839, bytes: 2353283 }
+  placeholder_color: "#4f4b40"

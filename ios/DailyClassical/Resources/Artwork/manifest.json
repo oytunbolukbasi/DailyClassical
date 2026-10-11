@@ -131,6 +131,31 @@
         "hash": "fb2fa3c20e"
       }
     },
+    "composers/chopin": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Fr%C3%A9d%C3%A9ric_Chopin_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1717.jpg",
+      "color": "#372e1e",
+      "hero": {
+        "path": "composers/chopin-hero.heic",
+        "width": 1800,
+        "height": 2246,
+        "bytes": 543775,
+        "hash": "ed7318e461"
+      },
+      "thumb": {
+        "path": "composers/chopin-thumb.heic",
+        "width": 300,
+        "height": 374,
+        "bytes": 13830,
+        "hash": "665e3c3453"
+      },
+      "full": {
+        "path": "composers/chopin-full.heic",
+        "width": 3206,
+        "height": 4000,
+        "bytes": 2121802,
+        "hash": "e87bfe2e5e"
+      }
+    },
     "composers/dvorak": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Dvorak.jpg",
       "color": "#b5b5b5",
@@ -206,6 +231,31 @@
         "hash": "19485da75d"
       }
     },
+    "composers/mendelssohn": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Theodor_Hildebrandt_-_Felix_Mendelssohn_Bartholdy.tif",
+      "color": "#302d1e",
+      "hero": {
+        "path": "composers/mendelssohn-hero.heic",
+        "width": 1800,
+        "height": 2222,
+        "bytes": 535220,
+        "hash": "340342c720"
+      },
+      "thumb": {
+        "path": "composers/mendelssohn-thumb.heic",
+        "width": 300,
+        "height": 370,
+        "bytes": 9318,
+        "hash": "23329534b1"
+      },
+      "full": {
+        "path": "composers/mendelssohn-full.heic",
+        "width": 3241,
+        "height": 4000,
+        "bytes": 1838797,
+        "hash": "4cd470fd6b"
+      }
+    },
     "composers/mozart": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Barbara_Krafft_-_Portr%C3%A4t_Wolfgang_Amadeus_Mozart_(1819).jpg",
       "color": "#5d3f28",
@@ -279,6 +329,31 @@
         "height": 710,
         "bytes": 44582,
         "hash": "14b95aa0fa"
+      }
+    },
+    "composers/schumann": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert_Schumann_1839.jpg",
+      "color": "#cecece",
+      "hero": {
+        "path": "composers/schumann-hero.heic",
+        "width": 1800,
+        "height": 1800,
+        "bytes": 644410,
+        "hash": "e484651fc8"
+      },
+      "thumb": {
+        "path": "composers/schumann-thumb.heic",
+        "width": 300,
+        "height": 300,
+        "bytes": 14788,
+        "hash": "df6b58890c"
+      },
+      "full": {
+        "path": "composers/schumann-full.heic",
+        "width": 3100,
+        "height": 3100,
+        "bytes": 1798016,
+        "hash": "7b742b05b4"
       }
     },
     "composers/shostakovich": {
@@ -829,6 +904,56 @@
         "hash": "a6895fe297"
       }
     },
+    "paintings/chopin-piano-concerto-1": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Kasprzycki_View_of_Morysinek_near_Wilanow.jpg",
+      "color": "#5f6057",
+      "hero": {
+        "path": "paintings/chopin-piano-concerto-1-hero.heic",
+        "width": 2581,
+        "height": 1800,
+        "bytes": 742508,
+        "hash": "a54979d8f2"
+      },
+      "thumb": {
+        "path": "paintings/chopin-piano-concerto-1-thumb.heic",
+        "width": 430,
+        "height": 300,
+        "bytes": 24510,
+        "hash": "0faf554ade"
+      },
+      "full": {
+        "path": "paintings/chopin-piano-concerto-1-full.heic",
+        "width": 4000,
+        "height": 2789,
+        "bytes": 1644063,
+        "hash": "dcdbd5c1b3"
+      }
+    },
+    "paintings/chopin-piano-sonata-2": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg",
+      "color": "#4f4b40",
+      "hero": {
+        "path": "paintings/chopin-piano-sonata-2-hero.heic",
+        "width": 3600,
+        "height": 1655,
+        "bytes": 1831913,
+        "hash": "8fedee51a8"
+      },
+      "thumb": {
+        "path": "paintings/chopin-piano-sonata-2-thumb.heic",
+        "width": 653,
+        "height": 300,
+        "bytes": 34381,
+        "hash": "2848cdd53e"
+      },
+      "full": {
+        "path": "paintings/chopin-piano-sonata-2-full.heic",
+        "width": 4000,
+        "height": 1839,
+        "bytes": 2353283,
+        "hash": "86a3e92c34"
+      }
+    },
     "paintings/dvorak-symphony-9": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Bierstadt_-_Among_the_Sierra_Nevada,_California_-_Google_Art_Project.jpg",
       "color": "#766559",
@@ -1002,6 +1127,31 @@
         "height": 4000,
         "bytes": 3189709,
         "hash": "483893a445"
+      }
+    },
+    "paintings/mendelssohn-violin-concerto": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Adolph_Menzel_-_Das_Balkonzimmer_-_Google_Art_Project.jpg",
+      "color": "#928764",
+      "hero": {
+        "path": "paintings/mendelssohn-violin-concerto-hero.heic",
+        "width": 1800,
+        "height": 2181,
+        "bytes": 871382,
+        "hash": "7e17cb8b80"
+      },
+      "thumb": {
+        "path": "paintings/mendelssohn-violin-concerto-thumb.heic",
+        "width": 300,
+        "height": 364,
+        "bytes": 19430,
+        "hash": "ca61fdab17"
+      },
+      "full": {
+        "path": "paintings/mendelssohn-violin-concerto-full.heic",
+        "width": 2908,
+        "height": 3524,
+        "bytes": 2258919,
+        "hash": "d115d0ac3c"
       }
     },
     "paintings/mozart-clarinet-concerto": {
@@ -1179,6 +1329,31 @@
         "hash": "22d5f6107d"
       }
     },
+    "paintings/schubert-piano-quintet-trout": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Dresden,_Albertinum,_Carl_Spitzweg,_der_Angler.JPG",
+      "color": "#776446",
+      "hero": {
+        "path": "paintings/schubert-piano-quintet-trout-hero.heic",
+        "width": 1800,
+        "height": 2544,
+        "bytes": 828693,
+        "hash": "b943beb644"
+      },
+      "thumb": {
+        "path": "paintings/schubert-piano-quintet-trout-thumb.heic",
+        "width": 300,
+        "height": 424,
+        "bytes": 29902,
+        "hash": "87263ba5fe"
+      },
+      "full": {
+        "path": "paintings/schubert-piano-quintet-trout-full.heic",
+        "width": 2830,
+        "height": 4000,
+        "bytes": 1878037,
+        "hash": "3f9d002f29"
+      }
+    },
     "paintings/schubert-piano-sonata-21": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Johan_Christian_Dahl_-_View_of_Dresden_by_Moonlight_-_Google_Art_Project_(NwHK-NsdInFfMQ).jpg",
       "color": "#3c3533",
@@ -1277,6 +1452,31 @@
         "height": 3099,
         "bytes": 3774123,
         "hash": "65f5d5f31d"
+      }
+    },
+    "paintings/schumann-piano-concerto": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Carl_Gustav_Carus_-_Barge_Trip_on_the_Elbe_near_Dresden_(Morning_on_the_Elbe)_-_Google_Art_Project.jpg",
+      "color": "#46524b",
+      "hero": {
+        "path": "paintings/schumann-piano-concerto-hero.heic",
+        "width": 1800,
+        "height": 2444,
+        "bytes": 1507119,
+        "hash": "ab89388243"
+      },
+      "thumb": {
+        "path": "paintings/schumann-piano-concerto-thumb.heic",
+        "width": 300,
+        "height": 407,
+        "bytes": 31948,
+        "hash": "6de1ed789d"
+      },
+      "full": {
+        "path": "paintings/schumann-piano-concerto-full.heic",
+        "width": 2946,
+        "height": 4000,
+        "bytes": 4781107,
+        "hash": "ae788f8f97"
       }
     },
     "paintings/shostakovich-symphony-5": {

@@ -27,6 +27,7 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Glissando | Glissando | Bir notadan ötekine kesintisiz kayış | Bir notadan ötekine kesintisiz bir kayış. |
 | Hemiola | Hemiola | Üç vuruşlu iki ölçünün üç ikiliye bölünmesi | Üç vuruşlu iki ölçünün, sanki üç tane ikili grupmuş gibi vurgulanması; böylece iki ölçü, üç yavaş vuruşlu tek bir uzun ölçü gibi duyulur. Vuruş sanki tökezler ya da uzar. |
 | Idée fixe | İdée fixe | Berlioz'un bir kişiyi temsil eden, dönüp duran melodisi | "Saplantılı fikir": Berlioz'un, bir kişiyi temsil eden ve eser boyunca geri dönen bir melodi için kullandığı terim. |
+| Krakowiak | Krakowiak | Krakov'dan, vuruş dışı vurgulu canlı bir Polonya dansı | Krakov yöresinden, iki vuruşlu, hızlı bir Polonya halk dansı; senkoplu vurguları vuruşa karşı tekme atar gibidir. |
 | Lied | Lied | Ses ve piyano için Alman sanat şarkısı | Genellikle bir şiirin tek ses ve piyano için bestelendiği Alman sanat şarkısı. Schubert altı yüzden fazla lied yazdı. |
 | Lydian mode | Lidya modu | Dördüncü notası yükseltilmiş majör gibi eski bir kilise dizisi | Eski kilise dizilerinden biri. Dördüncü notası yarım ses yükseltilmiş bir majör dizi gibi duyulur (Si bekarlı Fa'dan Fa'ya); bu da ona parlak, havada asılı bir renk verir. |
 | Ländler | Ländler | Üç vuruşlu Avusturya köylü dansı, valsin atası | Üç vuruşlu, köylü havasında bir Avusturya halk dansı; valsin daha yavaş, daha ağır bir atası. |
@@ -34,6 +35,7 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Minuet | Menuet | Üç vuruşlu, zarif bir 18. yüzyıl dansı | Üç vuruşlu, zarif bir 18. yüzyıl dansı; Klasik dönem senfonilerinde üçüncü bölüm olarak kullanılır. |
 | Motif | Motif | Sürekli geri dönen kısa bir müzikal fikir | Bir temanın kurulduğu, yalnızca birkaç notadan oluşan en küçük müzikal fikir. |
 | Muted | Sordinli | Sesi yumuşatıp örten bir düzenekle çalınan | Çalgının üzerine takılan, sesi yumuşatan ve örten küçük bir düzenekle çalınan. |
+| Nocturne | Noktürn | Çoğunlukla piyano için düşsel bir "gece parçası" | Bir "gece parçası": akan bir eşliğin üzerinde şarkı gibi bir melodisi olan yavaş, düşsel bir eser; Chopin'in ünlü kıldığı bir tür. |
 | Obbligato | Obligato | Vazgeçilmez ve belirgin bir solo çalgı partisi | Bir bölüm boyunca vazgeçilmez ve belirgin olan solo çalgı partisi. |
 | Offstage | Sahne dışı | Gözden uzakta duran, uzaktan duyulan çalgılar | Sahnenin arkasına ya da salonun dışına yerleştirilen, bu yüzden uzaktan geliyormuş gibi duyulan çalgılar. |
 | Ostinato | Ostinato | Durmadan yinelenen kısa bir kalıp | Çoğu zaman değişen bir müziğin altında ısrarla tekrarlanan kısa bir ritim ya da ezgi. |

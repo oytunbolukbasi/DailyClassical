@@ -13,8 +13,8 @@ schubert-piano-quintet-trout:
   width: 2870
   height: 4056
   medium: Oil on poplar panel
-  license: CC BY 4.0 (photograph by Dguendel, Wikimedia Commons; the painting is public domain, artist d. 1885)
-  credit_line: Carl Spitzweg, The Angler (Der Angler), c. 1875. Galerie Neue Meister, Staatliche Kunstsammlungen Dresden (Gal.-Nr. 2378 A). Photo Dguendel via Wikimedia Commons, CC BY 4.0.
+  license: Public domain (painting, artist d. 1885); photograph tagged CC BY 4.0 by Dguendel. Faithful photos of PD 2D art carry no new rights in the EU (DSM art. 14) or the US, as for the Molitor entry
+  credit_line: Carl Spitzweg, The Angler (Der Angler), c. 1875. Galerie Neue Meister, Staatliche Kunstsammlungen Dresden (Gal.-Nr. 2378 A). Image via Wikimedia Commons, public domain (photo Dguendel, CC BY 4.0).
   rights_status: public_domain
 ```
 
