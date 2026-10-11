@@ -523,3 +523,94 @@ schubert-string-quartet-14:
   thumb: { width: 357, height: 300, bytes: 41771 }
   full: { width: 4000, height: 3365, bytes: 4124838 }
   placeholder_color: "#7e715b"
+
+mahler-symphony-2:
+  # Photograph of the panel taken 14 Dec 2023, after the 2018–2022 restoration (Gleb Simonov, Commons "own work",
+  # {{PD-old-70}}; faithful photo of a 2D PD work, no new rights in the EU (DSM art. 14) or US). Tall format
+  # (2845 × 4701, ≈ 0.6:1): plan the hero crop around the risen figure in the upper half.
+  # Fallback scan: File:Mathis_Gothart_Grünewald_044_cropped.jpg (Yorck Project, 2024 × 3344, PD-Art, darker,
+  # pre-restoration). Do not use the uncropped 044 file (white patch top left).
+  # The Musée Unterlinden has no online object page that we found; source_url is the museum's home page.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Matthias_Gr%C3%BCnewald_-_Resurrection.jpg
+  source_url: https://www.musee-unterlinden.com/
+  commons_page: https://commons.wikimedia.org/wiki/File:Matthias_Gr%C3%BCnewald_-_Resurrection.jpg
+  width: 2845
+  height: 4701
+  medium: Oil on limewood panel
+  license: Public domain (PD-old-70; faithful photograph of a public-domain painting)
+  credit_line: Matthias Grünewald, The Resurrection (Isenheim Altarpiece), c. 1512–1516. Musée Unterlinden, Colmar. Image via Wikimedia Commons (photo Gleb Simonov), public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2974, bytes: 1271423 }
+  thumb: { width: 300, height: 496, bytes: 30334 }
+  full: { width: 2421, height: 4000, bytes: 2145861 }
+  placeholder_color: "#574236"
+
+mahler-symphony-3:
+  # The Getty's own Open Access image (CC0), served by its IIIF image service. Full size is 14389 × 7505;
+  # the URL below asks for a 7194 px wide copy (7194 × 3752), which is plenty for the pipeline.
+  # Full size: https://media.getty.edu/iiif/image/e9fcad31-3ce6-45c2-91db-611ecdf14aea/full/max/0/default.jpg
+  # Commons mirror (3000 × 1565 only): File:Spring_in_the_Alps_by_Giovanni_Segantini.jpg. Wide format (≈ 1.9:1).
+  image_url: https://media.getty.edu/iiif/image/e9fcad31-3ce6-45c2-91db-611ecdf14aea/full/7194,/0/default.jpg
+  source_url: https://www.getty.edu/art/collection/object/109PHC
+  commons_page: https://commons.wikimedia.org/wiki/File:Spring_in_the_Alps_by_Giovanni_Segantini.jpg
+  width: 7194
+  height: 3752
+  medium: Oil on canvas
+  license: Public domain (CC0, Getty Open Content)
+  credit_line: Giovanni Segantini, Spring in the Alps, 1897. The J. Paul Getty Museum, Los Angeles (2019.3). Image via the Getty's Open Content Program, public domain.
+  rights_status: public_domain
+  hero: { width: 3451, height: 1800, bytes: 3102985 }
+  thumb: { width: 575, height: 300, bytes: 67802 }
+  full: { width: 4000, height: 2086, bytes: 4513398 }
+  placeholder_color: "#647265"
+
+mahler-symphony-9:
+  # Google Art Project scan supplied by the Leopold Museum. Portrait format (3886 × 4901, ≈ 0.8:1):
+  # the tree's trunk and crown fill the frame; a centred crop keeps both.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Egon_Schiele_-_Small_Tree_in_Late_Autumn_-_Google_Art_Project.jpg
+  source_url: https://onlinecollection.leopoldmuseum.org/en/object/533-small-tree-in-late-autumn/
+  commons_page: https://commons.wikimedia.org/wiki/File:Egon_Schiele_-_Small_Tree_in_Late_Autumn_-_Google_Art_Project.jpg
+  width: 3886
+  height: 4901
+  medium: Oil on wood
+  license: Public domain (PD-Art, PD-old; artist d. 1918)
+  credit_line: Egon Schiele, Small Tree in Late Autumn, 1911. Leopold Museum, Vienna (Inv. 459). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2270, bytes: 1077978 }
+  thumb: { width: 300, height: 378, bytes: 31606 }
+  full: { width: 3172, height: 4000, bytes: 3189709 }
+  placeholder_color: "#a8a094"
+
+bruckner-symphony-7:
+  # Bildindex-sourced scan on Commons. Portrait format (2944 × 4596, ≈ 0.64:1): the three faces are in the
+  # upper half; crop from the top. The Hamburger Kunsthalle's object page is a JavaScript app (not readable by
+  # the fetcher); its permalink is below.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Wilhelm_Leibl_-_Drei_Frauen_in_der_Kirche_(1882).jpg
+  source_url: https://online-sammlung.hamburger-kunsthalle.de/de/objekt/HK-1534
+  commons_page: https://commons.wikimedia.org/wiki/File:Wilhelm_Leibl_-_Drei_Frauen_in_der_Kirche_(1882).jpg
+  width: 2944
+  height: 4596
+  medium: Oil on mahogany
+  license: Public domain (PD-Art, PD-old-100-1923)
+  credit_line: Wilhelm Leibl, Three Women in Church, 1878–1882. Hamburger Kunsthalle (HK-1534). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2810, bytes: 923565 }
+  thumb: { width: 300, height: 468, bytes: 26579 }
+  full: { width: 2562, height: 4000, bytes: 1907572 }
+  placeholder_color: "#414540"
+
+brahms-symphony-1:
+  # Switched at merge: Menzel is used for bach-brandenburg-concerto-5 (and was picked three times); was alternative A.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Alexandre_Calame_(1810-1864)_-_The_Lake_of_Thun_-_NG1786_-_National_Gallery.jpg
+  source_url: https://www.nationalgallery.org.uk/paintings/alexandre-calame-the-lake-of-thun
+  commons_page: https://commons.wikimedia.org/wiki/File:Alexandre_Calame_(1810-1864)_-_The_Lake_of_Thun_-_NG1786_-_National_Gallery.jpg
+  width: 6000
+  height: 4505
+  medium: Oil on canvas
+  license: Public domain (PD-Art; artist d. 1864)
+  credit_line: Alexandre Calame, The Lake of Thun, 1854. The National Gallery, London (NG1786). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2397, height: 1800, bytes: 524072 }
+  thumb: { width: 400, height: 300, bytes: 17657 }
+  full: { width: 4000, height: 3003, bytes: 2581482 }
+  placeholder_color: "#706a5b"

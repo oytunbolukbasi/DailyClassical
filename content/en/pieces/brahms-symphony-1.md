@@ -34,11 +34,11 @@ also_recommended:
     year: 1987
     spotify_url: https://open.spotify.com/album/55FSkCsbfWQnhgmDcBtAT9
 painting:
-  artist: Adolph Menzel
-  title: The Iron Rolling Mill (Modern Cyclopes)
-  year: 1872–1875
-  collection: Alte Nationalgalerie, Berlin
-  pairing_note: Finished the year before the symphony's premiere, it is all fire, iron and heavy labour, like the hammering drums that open a symphony Brahms laboured over for years.
+  artist: Alexandre Calame
+  title: The Lake of Thun
+  year: 1854
+  collection: The National Gallery, London
+  pairing_note: A sunlit Swiss mountain lake under snowy peaks; the world of the alphorn call Brahms sent to Clara Schumann in 1868 and set at the heart of the finale.
 ```
 
 ### The big picture

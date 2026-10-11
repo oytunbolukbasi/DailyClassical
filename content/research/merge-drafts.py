@@ -82,6 +82,24 @@ def glossary_rows(shared):
     return en, tr
 
 
+def composer_sources(shared):
+    """Text under any heading that mentions composers-sources.md, up to the next numbered section."""
+    out, lines, i = [], shared.split("\n"), 0
+    while i < len(lines):
+        if re.match(r"^#{2,4} .*composers-sources", lines[i]):
+            j = i + 1
+            while j < len(lines) and not re.match(r"^## \d", lines[j]):
+                j += 1
+            body = "\n".join(lines[i + 1:j]).strip("\n")
+            body = re.sub(r"^```\w*\n|\n```$", "", body.strip())
+            if body:
+                out.append(body.strip())
+            i = j
+        else:
+            i += 1
+    return out
+
+
 def key_of(row):
     return row.split("|")[1].strip()
 
@@ -133,6 +151,15 @@ def main(ids):
                 composers = composers.rstrip("\n") + "\n\n" + b + "\n"
                 report.append(f"composer {cid}: added")
         write(composers_path, composers)
+        blocks = composer_blocks(shared)
+        if blocks:
+            src_path = os.path.join(C, "research", "composers-sources.md")
+            src = read(src_path)
+            for body in composer_sources(shared):
+                if body[:120] not in src:
+                    src = src.rstrip("\n") + "\n\n" + body + "\n"
+                    report.append("composer sources: added")
+            write(src_path, src)
 
         en_rows, tr_rows = glossary_rows(shared)
         en = merge_glossary(os.path.join(C, "en", "glossary.md"), "| Term | Short | Definition |", en_rows)

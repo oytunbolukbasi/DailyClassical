@@ -7,17 +7,15 @@ Sources and checks: `content/research/brahms-symphony-1.md` §3.
 
 ```yaml
 brahms-symphony-1:
-  # Google Art Project scan (3543 × 2199, landscape ≈ 1.6:1). The SMB object page also offers its own photo
-  # (Andres Kilger) under Public Domain Mark 1.0, possibly larger; its size was not checked. Do not use any
-  # SMB image marked CC BY-NC-SA.
-  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Adolph_Menzel_-_Eisenwalzwerk_-_Google_Art_Project.jpg
-  source_url: https://id.smb.museum/object/958605
-  commons_page: https://commons.wikimedia.org/wiki/File:Adolph_Menzel_-_Eisenwalzwerk_-_Google_Art_Project.jpg
-  width: 3543
-  height: 2199
+  # Switched at merge: Menzel is used for bach-brandenburg-concerto-5 (and was picked three times); was alternative A.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Alexandre_Calame_(1810-1864)_-_The_Lake_of_Thun_-_NG1786_-_National_Gallery.jpg
+  source_url: https://www.nationalgallery.org.uk/paintings/alexandre-calame-the-lake-of-thun
+  commons_page: https://commons.wikimedia.org/wiki/File:Alexandre_Calame_(1810-1864)_-_The_Lake_of_Thun_-_NG1786_-_National_Gallery.jpg
+  width: 6000
+  height: 4505
   medium: Oil on canvas
-  license: Public domain (PD-Art, PD-old; artist d. 1905)
-  credit_line: Adolph Menzel, The Iron Rolling Mill (Modern Cyclopes), 1872–75. Alte Nationalgalerie, Staatliche Museen zu Berlin (A I 201). Image via Wikimedia Commons (Google Art Project), public domain.
+  license: Public domain (PD-Art; artist d. 1864)
+  credit_line: Alexandre Calame, The Lake of Thun, 1854. The National Gallery, London (NG1786). Image via Wikimedia Commons, public domain.
   rights_status: public_domain
 ```
 

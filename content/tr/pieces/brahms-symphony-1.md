@@ -35,11 +35,11 @@ also_recommended:
     year: 1987
     spotify_url: https://open.spotify.com/album/55FSkCsbfWQnhgmDcBtAT9
 painting:
-  artist: Adolph Menzel
-  title: Demir Haddehanesi (Modern Kikloplar)
-  year: 1872–1875
-  collection: Alte Nationalgalerie, Berlin
-  pairing_note: "Senfoninin ilk seslendirmesinden bir yıl önce tamamlandı: ateş, demir ve ağır emek; tıpkı Brahms'ın yıllarca üzerinde didindiği bir senfoniyi açan çekiç gibi davullar."
+  artist: Alexandre Calame
+  title: Thun Gölü
+  year: 1854
+  collection: Ulusal Galeri, Londra
+  pairing_note: Karlı zirvelerin altında güneşli bir İsviçre dağ gölü; Brahms'ın 1868'de Clara Schumann'a gönderdiği ve finalin tam ortasına yerleştirdiği alphorn çağrısının dünyası.
 ```
 
 ### Genel bakış

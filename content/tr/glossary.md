@@ -33,10 +33,12 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Motif | Motif | Sürekli geri dönen kısa bir müzikal fikir | Bir temanın kurulduğu, yalnızca birkaç notadan oluşan en küçük müzikal fikir. |
 | Muted | Sordinli | Sesi yumuşatıp örten bir düzenekle çalınan | Çalgının üzerine takılan, sesi yumuşatan ve örten küçük bir düzenekle çalınan. |
 | Obbligato | Obligato | Vazgeçilmez ve belirgin bir solo çalgı partisi | Bir bölüm boyunca vazgeçilmez ve belirgin olan solo çalgı partisi. |
+| Offstage | Sahne dışı | Gözden uzakta duran, uzaktan duyulan çalgılar | Sahnenin arkasına ya da salonun dışına yerleştirilen, bu yüzden uzaktan geliyormuş gibi duyulan çalgılar. |
 | Ostinato | Ostinato | Durmadan yinelenen kısa bir kalıp | Çoğu zaman değişen bir müziğin altında ısrarla tekrarlanan kısa bir ritim ya da ezgi. |
 | Passacaglia | Passacaglia | Çevresi değişirken durmadan yinelenen kısa tema | Kısa bir temanın durmadan tekrarlandığı, çevresindeki müziğin ise sürekli değiştiği bir biçim. |
 | Pedal note | Pedal sesi | Değişen armoninin altında basta tutulan tek nota | Üstündeki armoni değişirken, genellikle basta tutulan ya da tekrarlanan tek bir nota. |
 | Pizzicato | Pizzicato | Telleri yay yerine parmakla koparmak | Yaylı bir çalgının tellerini yay yerine parmakla koparmak. |
+| Posthorn | Posta borusu | Posta arabalarında çalınan küçük, pistonsuz boru | Pistonsuz, küçük bir bakır boru; eskiden arabacılar posta arabasının gelişini duyurmak için çalardı. Yalnızca birkaç nota çalabildiği için sade, nostaljik bir sesi vardır. |
 | Programme music | Programlı müzik | Bir öykü anlatan ya da bir sahne betimleyen çalgı müziği | Bestecinin anlattığı bir öyküyü aktaran ya da bir sahneyi betimleyen çalgı müziği. |
 | Recapitulation | Yeniden serim | Sonat formunun sonunda açılış temalarının dönüşü | Sonat formunun son evresi; açılış temaları geri döner. |
 | Recitative | Resitatif | Konuşmanın serbest ritmini izleyen müzik | Konuşmanın ritmini taklit eden, serbest ve ölçüsüz müzik. |
@@ -53,3 +55,4 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Tutti | Tutti | Bütün orkestranın birlikte çalması | İtalyanca "hepsi": solistin karşısında, bütün orkestranın birlikte çalması. |
 | Unison | Unison | Herkesin aynı anda aynı notaları çalması | Herkesin aynı anda aynı notaları çalması. |
 | Variation | Varyasyon | Bir şey değiştirilerek yinelenen tema | Bir temanın, bir şeyi değiştirilerek tekrarlanması: süsleme, ritim, armoni ya da çalgılar. |
+| Wagner tuba | Wagner tubası | Koyu ve yumuşak tınılı, kornoya benzer bakır çalgı | Wagner'in Nibelung Yüzüğü operaları için yapılmış, korno çalgıcılarının çaldığı bir bakır çalgı. Tınısı kornonunkinden daha koyu ve yuvarlaktır. |

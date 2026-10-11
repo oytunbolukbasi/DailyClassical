@@ -103,3 +103,12 @@ Q1151 (Berlioz), Q7294 (Brahms), Q7315 (Tchaikovsky), Q7298 (Dvořák), Q7304 (M
 | focal_y | 0.15 (face at about 20 % from the top of the cropped file) | visual check of the thumbnail | OK |
 
 Rejected: File:Sergei_Rachmaninoff_LOC_33968.jpg (2500 × 3824, PD-Bain) is dated "1900" on Commons, which is clearly wrong (it shows him in middle age on a ship's deck); not used because of the bad date.
+
+## Anton Bruckner (added 2026-10, batch group D)
+- Facts: https://en.wikipedia.org/wiki/Anton_Bruckner · https://de.wikipedia.org/wiki/Anton_Bruckner · https://www.wikidata.org/wiki/Q81752 (P569 1824-09-04, P570 1896-10-11, P19 Ansfelden, P20 Vienna)
+- Choirboy at St Florian after his father's death (1837); organist at St Florian from 1848; Linz cathedral organist from 8 December 1855 (de.wikipedia); studies with Sechter from 1855, mostly by correspondence; composing seriously from 1861 (aged 37) after lessons with Otto Kitzler, who introduced him to Wagner; Vienna Conservatory 1868; organ tours to France 1869 and England 1871.
+- Third Symphony dedicated to Wagner; its 1877 premiere his greatest failure; Hanslick's hostility (de.wikipedia). Breakthrough with the Seventh, Leipzig 1884. Ninth unfinished. Buried at St Florian below the organ.
+- "Nine numbered (the Ninth unfinished), plus two early ones": Wikipedia counts eleven symphonies including the F minor Study Symphony (1863) and the unnumbered D minor symphony.
+- Portrait: Ferry Bératon (1859–1900), *Anton Bruckner*, 1889, oil on canvas, 85.6 × 75.8 cm, Wien Museum inv. 16837 (https://sammlung.wienmuseum.at/objekt/42817-anton-bruckner-1824-1896-komponist-und-organist/).
+  https://commons.wikimedia.org/wiki/File:Anton_bruckner.jpg — 2329 × 2521. Painting public domain ({{PD-Art|PD-old-auto-expired|deathyear=1900}}); the museum's photograph is offered under CC BY 4.0 ("Foto: Birgit und Peter Kainz, Wien Museum"), so the sheet credits it via credit_line, as for the Shostakovich portrait.
+  Rejected: Anton Huber photo c. 1890 (972 × 1602) and Ludwig Grillich photo c. 1892 (ÖNB, 600 × 800), both PD but smaller; Hermann Kaulbach's 1885 portrait (book scan only).

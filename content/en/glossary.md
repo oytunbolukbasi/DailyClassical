@@ -33,10 +33,12 @@ Definition: one or two sentences, written for the pop-over.
 | Motif | A short musical idea that keeps returning | The smallest musical idea, just a few notes, from which a theme is built. |
 | Muted | Played with a device that softens and veils the sound | Played with a small device on the instrument that softens and veils the sound. |
 | Obbligato | An essential, prominent solo instrumental part | A solo instrumental part that is essential and prominent throughout a movement. |
+| Offstage | Players placed out of sight, heard from a distance | Instruments placed behind the stage or outside the hall, so that they sound far away. |
 | Ostinato | A short pattern repeated over and over | A short rhythm or melody repeated persistently, often underneath changing music. |
 | Passacaglia | A short theme repeated while the music around it changes | A form in which a short theme repeats over and over while the music around it keeps changing. |
 | Pedal note | One note held in the bass under changing harmony | A single note held or repeated, usually in the bass, while the harmony changes above it. |
 | Pizzicato | Plucking the strings instead of using the bow | Plucking the strings of a string instrument with the finger instead of using the bow. |
+| Posthorn | A small valveless horn once blown on mail coaches | A small brass horn without valves, once blown by coachmen to announce the mail coach. It plays only a few notes, which gives it a simple, nostalgic sound. |
 | Programme music | Instrumental music that tells a story or paints a scene | Instrumental music that tells a story or depicts a scene described by the composer. |
 | Recapitulation | The return of the opening themes near the end of sonata form | The last stage of sonata form, where the opening themes return. |
 | Recitative | Music that follows the free rhythm of speech | Music that imitates the rhythm of speech, free and unmeasured. |
@@ -53,3 +55,4 @@ Definition: one or two sentences, written for the pop-over.
 | Tutti | The whole orchestra playing together | Italian for "all": the whole orchestra playing together, as opposed to the soloist. |
 | Unison | Everyone playing the same notes at once | Everyone playing the same notes at the same time. |
 | Variation | A theme repeated with something changed | A repeat of a theme in which something is changed: the decoration, the rhythm, the harmony or the instruments. |
+| Wagner tuba | A horn-like brass instrument with a dark, soft tone | A brass instrument made for Wagner's Ring operas and played by horn players. Its tone is darker and rounder than a horn's. |

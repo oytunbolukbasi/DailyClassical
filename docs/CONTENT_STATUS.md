@@ -26,6 +26,7 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 - **11 Ekim 2026, Grup B** (5 eser): ilk tercih tabloların hepsi tutuldu; Friedrich'in Met görselindeki siyah fon kırpıldı (master `.source.jpg`'den). Yeni terim: Lydian mode. Birleştirme betiği: `content/research/merge-drafts.py`.
 - **11 Ekim 2026, Grup A** (5 eser): Beethoven Keman Konçertosu Ingres → Villers (Ingres Allegri'de kalıyor). David'in Napolyon'u "İmparator"da kaldı (alternatifler küçük/tarihsiz). Koch (Pastoral) ve Gros (Eroica) görsellerinde çerçeve/fon kırpıldı. Yeni terimler: Hemiola, Attacca, Ostinato, Trill.
 - **11 Ekim 2026, Grup E** (5 eser): Klarnet Beşlisi Khnopff (CC BY-SA) → Hammershøi; D 960 Constable → Dahl, *Ay Işığında Dresden*. Yeni terimler: Double stop, Lied, Tarantella.
+- **11 Ekim 2026, Grup D** (5 eser + Bruckner): Brahms 1 Menzel → Calame, *Thun Gölü* (Menzel Bach'ta kalıyor; tekniği National Gallery sayfasından doğrulandı). Schiele Mahler 9 ve "Ölüm ve Kız"da iki farklı tabloyla kaldı. Yeni terimler: Offstage, Posthorn, Wagner tuba. Mahler 3 (6 bölüm) yeni build yayına çıkmadan takvime girmeyecek.
 
 ## Eserler
 
@@ -48,11 +49,11 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 | haydn-symphony-94 | C | symphony | 4 | Sir Colin Davis · Royal Concertgebouw Orchestra, 1982 | `2FNZ21rGfvoYz953jd6Tda` | Thomas Rowlandson, *Vauxhall Gardens* |  | Taslak |
 | haydn-string-quartet-op-76-3 | C | string-quartet | 4 | Takács Quartet, 1988 | `2ZNZLJE9S7WvMb23HVfRu4` | Johann Christian Brand, *Laxenburg from the Münkendorf Pavilion, looking south-west* |  | Taslak |
 | allegri-miserere | C | choral | 1 | Deborah Roberts / Peter Phillips, 2007 | `3i1pQhfdXnxiye2G4Qsvqn` | Jean-Auguste-Dominique Ingres, *Pope Pius VII in the Sistine Chapel* | ressam partide 2 kez | Taslak |
-| mahler-symphony-2 | D | symphony | 5 | Elisabeth Schwarzkopf / Otto Klemperer · Philharmonia Orchestra, 1963 | `1oXL9ONCxCGF7ctG6gnjrI` | Matthias Grünewald, *The Resurrection (Isenheim Altarpiece)* |  | Taslak |
-| mahler-symphony-3 | D | symphony | 6 | Martha Lipton / Leonard Bernstein · New York Philharmonic, 1962 | `4RvVQ968WriWyWv37Aa99q` | Giovanni Segantini, *Spring in the Alps* |  | Taslak |
-| mahler-symphony-9 | D | symphony | 4 | Sir John Barbirolli · Berliner Philharmoniker, 1964 | `3mb7iASlTwepiLCXODCnme` | Egon Schiele, *Small Tree in Late Autumn* | ressam partide 2 kez | Taslak |
-| bruckner-symphony-7 | D | symphony | 4 | Herbert von Karajan · Wiener Philharmoniker, 1990 | `641TZuqNeVpzvWgoy6Rbp2` | Wilhelm Leibl, *Three Women in Church* |  | Taslak |
-| brahms-symphony-1 | D | symphony | 4 | Michel Schwalbé / Karl Böhm · Berliner Philharmoniker, 1960 | `2F7kYdoAGsxxK9fSUiJixg` | Adolph Menzel, *The Iron Rolling Mill (Modern Cyclopes)* | ressam partide 3 kez | Taslak |
+| mahler-symphony-2 | D | symphony | 5 | Elisabeth Schwarzkopf / Otto Klemperer · Philharmonia Orchestra, 1963 | `1oXL9ONCxCGF7ctG6gnjrI` | Matthias Grünewald, *The Resurrection (Isenheim Altarpiece)* |  | Birleştirildi |
+| mahler-symphony-3 | D | symphony | 6 | Martha Lipton / Leonard Bernstein · New York Philharmonic, 1962 | `4RvVQ968WriWyWv37Aa99q` | Giovanni Segantini, *Spring in the Alps* |  | Birleştirildi |
+| mahler-symphony-9 | D | symphony | 4 | Sir John Barbirolli · Berliner Philharmoniker, 1964 | `3mb7iASlTwepiLCXODCnme` | Egon Schiele, *Small Tree in Late Autumn* | ressam partide 2 kez | Birleştirildi |
+| bruckner-symphony-7 | D | symphony | 4 | Herbert von Karajan · Wiener Philharmoniker, 1990 | `641TZuqNeVpzvWgoy6Rbp2` | Wilhelm Leibl, *Three Women in Church* |  | Birleştirildi |
+| brahms-symphony-1 | D | symphony | 4 | Michel Schwalbé / Karl Böhm · Berliner Philharmoniker, 1960 | `2F7kYdoAGsxxK9fSUiJixg` | Alexandre Calame, *The Lake of Thun* | (Menzel'den değişti) | Birleştirildi |
 | brahms-violin-concerto | E | violin-concerto | 3 | Anne-Sophie Mutter / Herbert von Karajan · Berliner Philharmoniker, 1982 | `03xKUXxuRY5KuLs1gITc09` | Pál Szinyei Merse, *Picnic in May* |  | Birleştirildi |
 | brahms-clarinet-quintet | E | chamber | 4 | Karl Leister · Amadeus Quartet, 1967 | `3mmIHrQZyvjAyngGlYBohA` | Vilhelm Hammershøi, *Interior with Young Woman Seen from the Back* | (Khnopff'tan değişti) | Birleştirildi |
 | schubert-symphony-9 | E | symphony | 4 | Günter Wand · Berliner Philharmoniker, 1995 | `1zEbPxFC7m0Wj8ePFMkP8W` | Ferdinand Georg Waldmüller, *View of the Dachstein with the Hallstätter See from the Hütteneckalm near Ischl* |  | Birleştirildi |

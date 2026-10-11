@@ -469,3 +469,49 @@
     thumb: { width: 459, height: 300, bytes: 27217 }
     placeholder_color: "#747474"
     full: { width: 1600, height: 1045, bytes: 281356 }
+
+- id: bruckner
+  match: Anton Bruckner
+  sort_name: Bruckner, Anton
+  born: 1824
+  died: 1896
+  era: late_romantic
+  names:
+    en: { name: Anton Bruckner, short: Bruckner }
+    tr: { name: Anton Bruckner, short: Bruckner }
+  nationality: { en: Austrian, tr: Avusturyalı }
+  facts:
+    born: { en: "4 September 1824, Ansfelden", tr: "4 Eylül 1824, Ansfelden" }
+    died: { en: "11 October 1896, Vienna", tr: "11 Ekim 1896, Viyana" }
+    symphonies: { en: "Nine numbered (the Ninth unfinished), plus two early ones", tr: "Dokuz numaralı (Dokuzuncu yarım kaldı) ve iki erken senfoni" }
+    best_known_for: { en: "Symphonies, Masses, *Te Deum*", tr: "Senfonileri, ayin müzikleri, *Te Deum*" }
+  bio:
+    en: |-
+      Bruckner was born in 1824 in Ansfelden, a village near Linz in Upper Austria, the eldest child of the village schoolmaster. His father gave him his first music lessons and taught him the organ. When his father died in 1837, the 13-year-old was sent to the Augustinian monastery of St Florian as a choirboy, and he was in awe of its great organ. He trained as a schoolteacher and spent his late teens and twenties teaching in village schools, playing the organ and composing on the side.
+
+      In 1848 he became organist at St Florian, and in 1855 he won the post of cathedral organist in Linz. That same year he began years of study, mostly by post, with the Viennese theorist Simon Sechter. He only started composing in earnest at 37, after lessons with the young conductor Otto Kitzler, who introduced him to the music of Richard Wagner. In 1868 he moved to Vienna to teach at the Conservatory, and as an organist he toured France in 1869 and England in 1871, where he played at the Royal Albert Hall.
+
+      His symphonies had a hard time in Vienna. Bruckner revered Wagner and dedicated his Third Symphony to him, and from then on the city's most powerful critic, Eduard Hanslick, a champion of Brahms, treated him as a dangerous Wagnerite. The Third's premiere in 1877 was a fiasco. Real success came only at 60, with the Seventh Symphony in Leipzig in 1884. Fiercely self-critical, he revised his scores again and again, which is why many exist in several versions. He died in Vienna in 1896 with his Ninth Symphony unfinished, and lies in the crypt of St Florian, beneath his favourite organ.
+    tr: |-
+      Bruckner 1824’te Yukarı Avusturya’da, Linz yakınlarındaki Ansfelden köyünde, köy öğretmeninin en büyük çocuğu olarak doğdu. İlk müzik derslerini babasından aldı, orgu da ondan öğrendi. Babası 1837’de ölünce on üç yaşındaki Anton, koro çocuğu olarak Aziz Florian’daki Augustinus manastırına gönderildi; manastırın büyük orgu onu derinden etkiledi. Öğretmen olarak yetişti ve gençlik yıllarını köy okullarında ders vererek, bir yandan da org çalıp beste yaparak geçirdi.
+
+      1848’de Aziz Florian’ın orgcusu oldu, 1855’te de Linz Katedrali’nin orgcusu olarak seçildi. Aynı yıl Viyanalı kuramcı Simon Sechter’le, çoğunu mektupla sürdürdüğü uzun bir öğrenim dönemine başladı. Ciddi olarak beste yapmaya ancak 37 yaşında, kendisini Richard Wagner’in müziğiyle tanıştıran genç şef Otto Kitzler’le çalıştıktan sonra başladı. 1868’de Konservatuvar’da ders vermek için Viyana’ya taşındı; orgcu olarak 1869’da Fransa’da, 1871’de İngiltere’de konserler verdi ve Royal Albert Hall’da çaldı.
+
+      Senfonileri Viyana’da zor günler geçirdi. Bruckner Wagner’e hayrandı ve Üçüncü Senfonisi’ni ona ithaf etti; Brahms’ın savunucusu olan, şehrin en güçlü eleştirmeni Eduard Hanslick o andan itibaren onu tehlikeli bir Wagner taklitçisi olarak gördü. Üçüncü’nün 1877’deki ilk seslendirmesi tam bir fiyaskoydu. Gerçek başarı ancak 60 yaşında, 1884’te Leipzig’de Yedinci Senfoni’yle geldi. Kendine karşı son derece eleştirel olduğundan partisyonlarını tekrar tekrar elden geçirdi; bu yüzden eserlerinin birçoğunun birden fazla versiyonu vardır. 1896’da Viyana’da, Dokuzuncu Senfonisi yarım kalmışken öldü; Aziz Florian’ın mahzeninde, çok sevdiği orgun tam altında yatıyor.
+  portrait:
+    artist: Ferry Bératon
+    title: { en: Portrait of Anton Bruckner, tr: Anton Bruckner’in Portresi }
+    year: "1889"
+    collection: { en: "Wien Museum, Vienna", tr: "Wien Museum, Viyana" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Anton_bruckner.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Anton_bruckner.jpg
+    width: 2329
+    height: 2521
+    license: Public domain painting (PD-Art, artist d. 1900); museum photograph CC BY 4.0 (Wien Museum)
+    license_url: https://creativecommons.org/licenses/by/4.0/
+    credit_line: { en: "Photo: Birgit and Peter Kainz, Wien Museum, CC BY 4.0", tr: "Fotoğraf: Birgit ve Peter Kainz, Wien Museum, CC BY 4.0" }
+    focal_y: 0.3
+    hero: { width: 1800, height: 1948, bytes: 738331 }
+    thumb: { width: 300, height: 325, bytes: 11343 }
+    full: { width: 2329, height: 2521, bytes: 1465312 }
+    placeholder_color: "#2b261b"
