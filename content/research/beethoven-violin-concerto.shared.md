@@ -6,17 +6,16 @@ For merging into `content/paintings.yaml` and the glossary files. Sources: `cont
 
 ```yaml
 beethoven-violin-concerto:
-  # Gallery photo (Commons user Shonagon, 2022). The gilt frame's arched top corners show: crop inside the arch.
-  # Portrait (≈ 0.69:1). Louvre date 1805 (shown at the Salon of 1806). Alternative PD scan, smaller:
-  # File:Jean_Auguste_Dominique_Ingres_-_Mademoiselle_Riviere.jpg (2033 × 3000).
-  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Mademoiselle_Caroline_Rivi%C3%A8re_-_Jean-Auguste-Dominique_Ingres_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1447.jpg
-  source_url: https://collections.louvre.fr/ark:/53355/cl010059995
-  commons_page: https://commons.wikimedia.org/wiki/File:Mademoiselle_Caroline_Rivi%C3%A8re_-_Jean-Auguste-Dominique_Ingres_-_Mus%C3%A9e_du_Louvre_Peintures_MI_1447.jpg
-  width: 2421
-  height: 3488
+  # Switched at merge (11 Oct 2026) from Ingres, *Mademoiselle Caroline Rivière*: Ingres is used for allegri-miserere.
+  # Was alternative A. The Met gives the artist as Marie Denise Villers (Commons/Wikidata: "attributed to").
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Portrait_of_Charlotte_du_Val_d%27Ognes,_attributed_to_Marie-Denise_Villers.jpg
+  source_url: https://www.metmuseum.org/art/collection/search/437903
+  commons_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Charlotte_du_Val_d%27Ognes,_attributed_to_Marie-Denise_Villers.jpg
+  width: 5000
+  height: 6250
   medium: Oil on canvas
-  license: Public domain (PD-Art, PD-old-auto-expired)
-  credit_line: Jean-Auguste-Dominique Ingres, Mademoiselle Caroline Rivière, 1805. Musée du Louvre, Paris (MI 1447). Image via Wikimedia Commons, public domain.
+  license: Public domain (CC0, The Met Open Access)
+  credit_line: Marie-Denise Villers, Marie Joséphine Charlotte du Val d'Ognes, 1801. The Metropolitan Museum of Art, New York, Bequest of Isaac D. Fletcher, 1917 (17.120.204). Image via Wikimedia Commons, public domain.
   rights_status: public_domain
 ```
 

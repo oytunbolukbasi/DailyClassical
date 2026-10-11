@@ -37,11 +37,11 @@ also_recommended:
     year: 1980
     spotify_url: https://open.spotify.com/album/2YDAyWyQh1BTeMTSi8pIYv
 painting:
-  artist: Jean-Auguste-Dominique Ingres
-  title: Matmazel Caroline Rivière
-  year: 1805
-  collection: Louvre Müzesi, Paris
-  pairing_note: İlk kez konçertoyla aynı yıl, 1806 Paris Salonu'nda sergilendi; geniş, sakin bir manzaranın önünde beyazlar içinde, dingin ve berrak tek bir figür, tıpkı orkestranın önündeki keman gibi.
+  artist: Marie-Denise Villers
+  title: Marie Joséphine Charlotte du Val d'Ognes (Resim Yapan Genç Kadın)
+  year: 1801
+  collection: Metropolitan Sanat Müzesi, New York
+  pairing_note: 1801'de Paris'te, aydınlık bir pencerenin önünde resim yapan genç bir kadın; kemanın uzun, şarkı söyler gibi çizgisindeki dinginlik, yoğunlaşma ve berrak ışık.
 ```
 
 ### Genel bakış

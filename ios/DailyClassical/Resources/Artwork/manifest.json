@@ -299,6 +299,31 @@
         "hash": "13f206fc6a"
       }
     },
+    "paintings/beethoven-piano-concerto-5": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Emperor_Napoleon_in_His_Study_at_the_Tuileries,_by_Jacques-Louis_David_(1812)_-_National_Gallery_of_Art_(Samuel_H._Kress_Foundation)_-_2.jpg",
+      "color": "#504232",
+      "hero": {
+        "path": "paintings/beethoven-piano-concerto-5-hero.heic",
+        "width": 1800,
+        "height": 2951,
+        "bytes": 594511,
+        "hash": "0354d552c5"
+      },
+      "thumb": {
+        "path": "paintings/beethoven-piano-concerto-5-thumb.heic",
+        "width": 300,
+        "height": 492,
+        "bytes": 27102,
+        "hash": "41430649ac"
+      },
+      "full": {
+        "path": "paintings/beethoven-piano-concerto-5-full.heic",
+        "width": 2440,
+        "height": 4000,
+        "bytes": 1346122,
+        "hash": "6bcbc32ccc"
+      }
+    },
     "paintings/beethoven-piano-sonata-14": {
       "source": "https://images.metmuseum.org/CRDImages/ep/original/DP-31997-001-NEW.jpg",
       "color": "#423125",
@@ -399,6 +424,31 @@
         "hash": "3ab7a80a4a"
       }
     },
+    "paintings/beethoven-symphony-3": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Antoine-Jean_Gros_-_Bonaparte_au_pont_d%27Arcole(1796).jpg",
+      "color": "#523926",
+      "hero": {
+        "path": "paintings/beethoven-symphony-3-hero.heic",
+        "width": 1800,
+        "height": 2210,
+        "bytes": 608906,
+        "hash": "570d5dacd7"
+      },
+      "thumb": {
+        "path": "paintings/beethoven-symphony-3-thumb.heic",
+        "width": 300,
+        "height": 368,
+        "bytes": 17135,
+        "hash": "665b3cd80b"
+      },
+      "full": {
+        "path": "paintings/beethoven-symphony-3-full.heic",
+        "width": 3120,
+        "height": 3831,
+        "bytes": 1950806,
+        "hash": "8eea96f90a"
+      }
+    },
     "paintings/beethoven-symphony-5": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Turner,_Snow_Storm,_50508403226_b272cf84c3_o.jpg",
       "color": "#7e7a69",
@@ -422,6 +472,56 @@
         "height": 2436,
         "bytes": 1540345,
         "hash": "27f4648ad0"
+      }
+    },
+    "paintings/beethoven-symphony-6": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Heroic_Landscape_with_Rainbow_MET_DP224123.jpg",
+      "color": "#534c3f",
+      "hero": {
+        "path": "paintings/beethoven-symphony-6-hero.heic",
+        "width": 1800,
+        "height": 2024,
+        "bytes": 520685,
+        "hash": "f88dad6706"
+      },
+      "thumb": {
+        "path": "paintings/beethoven-symphony-6-thumb.heic",
+        "width": 300,
+        "height": 337,
+        "bytes": 19942,
+        "hash": "6703045367"
+      },
+      "full": {
+        "path": "paintings/beethoven-symphony-6-full.heic",
+        "width": 3260,
+        "height": 3666,
+        "bytes": 1732278,
+        "hash": "f48edc4c91"
+      }
+    },
+    "paintings/beethoven-symphony-7": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Pieter_Bruegel_d._%C3%84._014.jpg",
+      "color": "#765b36",
+      "hero": {
+        "path": "paintings/beethoven-symphony-7-hero.heic",
+        "width": 2614,
+        "height": 1800,
+        "bytes": 896670,
+        "hash": "d9cab6320a"
+      },
+      "thumb": {
+        "path": "paintings/beethoven-symphony-7-thumb.heic",
+        "width": 436,
+        "height": 300,
+        "bytes": 35044,
+        "hash": "5dbe295bbe"
+      },
+      "full": {
+        "path": "paintings/beethoven-symphony-7-full.heic",
+        "width": 3570,
+        "height": 2458,
+        "bytes": 1838705,
+        "hash": "bd5ba7ec04"
       }
     },
     "paintings/beethoven-symphony-9": {
@@ -449,6 +549,31 @@
         "hash": "c2d05917af"
       }
     },
+    "paintings/beethoven-violin-concerto": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Portrait_of_Charlotte_du_Val_d%27Ognes,_attributed_to_Marie-Denise_Villers.jpg",
+      "color": "#433c32",
+      "hero": {
+        "path": "paintings/beethoven-violin-concerto-hero.heic",
+        "width": 1800,
+        "height": 2250,
+        "bytes": 447895,
+        "hash": "491c6e227b"
+      },
+      "thumb": {
+        "path": "paintings/beethoven-violin-concerto-thumb.heic",
+        "width": 300,
+        "height": 375,
+        "bytes": 13853,
+        "hash": "bd65d28416"
+      },
+      "full": {
+        "path": "paintings/beethoven-violin-concerto-full.heic",
+        "width": 3200,
+        "height": 4000,
+        "bytes": 1750327,
+        "hash": "8793abd1d2"
+      }
+    },
     "paintings/berlioz-symphonie-fantastique": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Francisco_de_Goya_y_Lucientes_-_Witches%27_Sabbath_(The_Great_He-Goat).jpg",
       "color": "#413421",
@@ -474,6 +599,31 @@
         "hash": "8afd1cb5a1"
       }
     },
+    "paintings/brahms-clarinet-quintet": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Vilhelm_Hammershoi_-_Interieur_mit_Rueckenansicht_einer_Frau_-_1903-1904_-_Randers_Kunstmuseum.jpg",
+      "color": "#4a4649",
+      "hero": {
+        "path": "paintings/brahms-clarinet-quintet-hero.heic",
+        "width": 1800,
+        "height": 2153,
+        "bytes": 475722,
+        "hash": "63c62f47c7"
+      },
+      "thumb": {
+        "path": "paintings/brahms-clarinet-quintet-thumb.heic",
+        "width": 300,
+        "height": 359,
+        "bytes": 11647,
+        "hash": "2d2cfccacf"
+      },
+      "full": {
+        "path": "paintings/brahms-clarinet-quintet-full.heic",
+        "width": 2470,
+        "height": 2955,
+        "bytes": 919419,
+        "hash": "e51853bc01"
+      }
+    },
     "paintings/brahms-symphony-4": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Arnold_B%C3%B6cklin_-_Die_Toteninsel_III_(Alte_Nationalgalerie,_Berlin).jpg",
       "color": "#655e5e",
@@ -497,6 +647,31 @@
         "height": 2131,
         "bytes": 1173877,
         "hash": "4ed7b58502"
+      }
+    },
+    "paintings/brahms-violin-concerto": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Szinyei_Merse,_P%C3%A1l_-_Picnic_in_May_-_Google_Art_Project.jpg",
+      "color": "#575931",
+      "hero": {
+        "path": "paintings/brahms-violin-concerto-hero.heic",
+        "width": 2282,
+        "height": 1800,
+        "bytes": 857290,
+        "hash": "92b03c1e22"
+      },
+      "thumb": {
+        "path": "paintings/brahms-violin-concerto-thumb.heic",
+        "width": 380,
+        "height": 300,
+        "bytes": 25819,
+        "hash": "5dae2dfb3e"
+      },
+      "full": {
+        "path": "paintings/brahms-violin-concerto-full.heic",
+        "width": 4000,
+        "height": 3155,
+        "bytes": 2684182,
+        "hash": "62dfaf7860"
       }
     },
     "paintings/dvorak-symphony-9": {
@@ -674,6 +849,56 @@
         "hash": "22d5f6107d"
       }
     },
+    "paintings/schubert-piano-sonata-21": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Johan_Christian_Dahl_-_View_of_Dresden_by_Moonlight_-_Google_Art_Project_(NwHK-NsdInFfMQ).jpg",
+      "color": "#3c3533",
+      "hero": {
+        "path": "paintings/schubert-piano-sonata-21-hero.heic",
+        "width": 3405,
+        "height": 1800,
+        "bytes": 1229206,
+        "hash": "e3468373e6"
+      },
+      "thumb": {
+        "path": "paintings/schubert-piano-sonata-21-thumb.heic",
+        "width": 568,
+        "height": 300,
+        "bytes": 24409,
+        "hash": "1940e37128"
+      },
+      "full": {
+        "path": "paintings/schubert-piano-sonata-21-full.heic",
+        "width": 4000,
+        "height": 2114,
+        "bytes": 1973652,
+        "hash": "b1e606fdca"
+      }
+    },
+    "paintings/schubert-string-quartet-14": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Egon_Schiele_-_Der_Tod_und_das_M%C3%A4dchen.jpg",
+      "color": "#7e715b",
+      "hero": {
+        "path": "paintings/schubert-string-quartet-14-hero.heic",
+        "width": 2139,
+        "height": 1800,
+        "bytes": 1253963,
+        "hash": "4c9244f1ef"
+      },
+      "thumb": {
+        "path": "paintings/schubert-string-quartet-14-thumb.heic",
+        "width": 357,
+        "height": 300,
+        "bytes": 41771,
+        "hash": "243ba93aca"
+      },
+      "full": {
+        "path": "paintings/schubert-string-quartet-14-full.heic",
+        "width": 4000,
+        "height": 3365,
+        "bytes": 4124838,
+        "hash": "22b43bc1e7"
+      }
+    },
     "paintings/schubert-symphony-8": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Caspar_David_Friedrich_-_Abtei_im_Eichwald_-_Google_Art_Project.jpg",
       "color": "#5e5449",
@@ -697,6 +922,31 @@
         "height": 2563,
         "bytes": 1547975,
         "hash": "104e7e3f51"
+      }
+    },
+    "paintings/schubert-symphony-9": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Waldm%C3%BCller_-_Ansicht_des_Dachsteins_mit_dem_Hallst%C3%A4ttersee_von_der_H%C3%BCtteneckalpe_bei_Ischl.jpeg",
+      "color": "#9c8b84",
+      "hero": {
+        "path": "paintings/schubert-symphony-9-hero.heic",
+        "width": 2323,
+        "height": 1800,
+        "bytes": 839181,
+        "hash": "dab33aa637"
+      },
+      "thumb": {
+        "path": "paintings/schubert-symphony-9-thumb.heic",
+        "width": 387,
+        "height": 300,
+        "bytes": 20754,
+        "hash": "46533ea215"
+      },
+      "full": {
+        "path": "paintings/schubert-symphony-9-full.heic",
+        "width": 4000,
+        "height": 3099,
+        "bytes": 3774123,
+        "hash": "65f5d5f31d"
       }
     },
     "paintings/shostakovich-symphony-5": {

@@ -36,11 +36,11 @@ also_recommended:
     year: 1980
     spotify_url: https://open.spotify.com/album/2YDAyWyQh1BTeMTSi8pIYv
 painting:
-  artist: Jean-Auguste-Dominique Ingres
-  title: Mademoiselle Caroline Rivière
-  year: 1805
-  collection: Musée du Louvre, Paris
-  pairing_note: First shown at the Paris Salon of 1806, the year of the concerto; one figure in white, calm and clear against a wide, quiet landscape, as the violin is against the orchestra.
+  artist: Marie-Denise Villers
+  title: Marie Joséphine Charlotte du Val d'Ognes (Young Woman Drawing)
+  year: 1801
+  collection: The Metropolitan Museum of Art, New York
+  pairing_note: A young woman drawing by a bright window in Paris in 1801; stillness, concentration and clear light, like the violin's long singing line.
 ```
 
 ### The big picture

@@ -35,11 +35,11 @@ also_recommended:
     year: 1994
     spotify_url: https://open.spotify.com/album/5yB7rdg8kcsrqxKYQL2tos
 painting:
-  artist: Fernand Khnopff
-  title: Kapımı Kendime Kilitliyorum
-  year: 1891
-  collection: Neue Pinakothek, Münih
-  pairing_note: Beşliyle aynı yıl boyandı; kapalı bir kapının ardında düşünceleriyle baş başa bir kadın, aynı içe dönük, sonbahar sessizliğinde.
+  artist: Vilhelm Hammershøi
+  title: Arkası Dönük Genç Kadınla İç Mekân
+  year: 1903–04
+  collection: Randers Sanat Müzesi, Danimarka
+  pairing_note: Gri ve sessiz bir odada arkasını dönmüş bir kadın; beşliden on yıl sonra boyandı. Brahms'ın geç dönem oda müziğindeki o kısık sesli, içe dönük hava.
 ```
 
 ### Genel bakış

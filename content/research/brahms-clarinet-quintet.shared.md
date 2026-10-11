@@ -6,17 +6,15 @@ For merging into `content/paintings.yaml`. Sources: `content/research/brahms-cla
 
 ```yaml
 brahms-clarinet-quintet:
-  # Gallery photo, CC BY-SA 4.0 by the photographer (painting PD; faithful photos of 2D PD art are
-  # unprotected in the EU (DSM art. 14) and the US, but keep the credit). Wide format (≈ 2:1): plan the crop.
-  # PD alternative 3278 × 2057 with frame: File:Fernand_Khnopff_-_I_lock_my_door_upon_myself_-_with_frame.jpg
-  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/I_lock_my_door_upon_myself_Fernand_Khnopff_1891.jpg
-  source_url: https://www.sammlung.pinakothek.de/en/artwork/ma4dqNqxrO
-  commons_page: https://commons.wikimedia.org/wiki/File:I_lock_my_door_upon_myself_Fernand_Khnopff_1891.jpg
-  width: 4202
-  height: 2121
+  # Switched at merge: Khnopff (CC BY-SA photo) is kept for franck-violin-sonata; was alternative A.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Vilhelm_Hammershoi_-_Interieur_mit_Rueckenansicht_einer_Frau_-_1903-1904_-_Randers_Kunstmuseum.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Vilhelm_Hammershoi_-_Interieur_mit_Rueckenansicht_einer_Frau_-_1903-1904_-_Randers_Kunstmuseum.jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:Vilhelm_Hammershoi_-_Interieur_mit_Rueckenansicht_einer_Frau_-_1903-1904_-_Randers_Kunstmuseum.jpg
+  width: 2470
+  height: 2955
   medium: Oil on canvas
-  license: Public domain (artist d. 1921); photograph CC BY-SA 4.0 (Yelkrokoyade, Wikimedia Commons)
-  credit_line: Fernand Khnopff, I Lock My Door upon Myself, 1891. Neue Pinakothek, Munich (inv. 7921). Image via Wikimedia Commons (photo Yelkrokoyade, CC BY-SA 4.0).
+  license: Public domain (PD-Art; artist d. 1916)
+  credit_line: Vilhelm Hammershøi, Interior with Young Woman Seen from the Back, 1903–04. Randers Kunstmuseum, Denmark. Image via Wikimedia Commons, public domain.
   rights_status: public_domain
 ```
 

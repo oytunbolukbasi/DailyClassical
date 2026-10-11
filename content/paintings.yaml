@@ -348,3 +348,178 @@ mozart-piano-concerto-21:
   thumb: { width: 476, height: 300, bytes: 28378 }
   full: { width: 4000, height: 2520, bytes: 2262222 }
   placeholder_color: "#a69982"
+
+beethoven-symphony-3:
+  # Master in the originals cache is CROPPED (the photo shows the gilt frame on the right and a strip at the bottom): beethoven-symphony-3.source.jpg cropped to 3120 × 3831
+  # at offset 10,10 (`sips -c 3831 3120 --cropOffset 10 10`). Do not pass --refresh for this id.
+  # Gallery photo of the canvas (Commons user Sammyday, 2010). Thin strips of the frame show at the edges: crop
+  # slightly. Portrait format (≈ 0.83:1): plan the hero crop around the head. The Louvre calls it an "esquisse",
+  # a study for the portrait painted in Milan in 1796 (finished version at Versailles).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Antoine-Jean_Gros_-_Bonaparte_au_pont_d%27Arcole(1796).jpg
+  source_url: https://collections.louvre.fr/ark:/53355/cl010063557
+  commons_page: https://commons.wikimedia.org/wiki/File:Antoine-Jean_Gros_-_Bonaparte_au_pont_d%27Arcole(1796).jpg
+  width: 3120
+  height: 3831
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100-1923)
+  credit_line: Antoine-Jean Gros, Bonaparte at the Pont d'Arcole (study), c. 1796. Musée du Louvre, Paris (RF 361). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2210, bytes: 608906 }
+  thumb: { width: 300, height: 368, bytes: 17135 }
+  full: { width: 3120, height: 3831, bytes: 1950806 }
+  placeholder_color: "#523926"
+
+beethoven-symphony-6:
+  # Master in the originals cache is CROPPED (the Met photo shows a black backdrop and the unpainted canvas edges): beethoven-symphony-6.source.jpg cropped to 3260 × 3666
+  # at offset 80,85 (`sips -c 3666 3260 --cropOffset 85 80`). Do not pass --refresh for this id.
+  # The Met's Open Access image (CC0), mirrored on Commons at the same size. A thin black border shows: crop.
+  # Do NOT use the larger file in the same Commons category (…MET_KochIRRnocap.jpg, 6174 × 6917): it is an
+  # infrared reflectogram, not a photograph of the painting. Portrait format (≈ 0.89:1).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Heroic_Landscape_with_Rainbow_MET_DP224123.jpg
+  source_url: https://www.metmuseum.org/art/collection/search/439844
+  commons_page: https://commons.wikimedia.org/wiki/File:Heroic_Landscape_with_Rainbow_MET_DP224123.jpg
+  width: 3260
+  height: 3666
+  medium: Oil on canvas
+  license: Public domain (CC0, The Met Open Access)
+  credit_line: Joseph Anton Koch, Heroic Landscape with Rainbow, 1824. The Metropolitan Museum of Art, New York, Purchase, Anne Cox Chambers Gift, Gift of Alfred and Katrin Romney, by exchange, and Nineteenth-Century, Modern, and Contemporary Art Funds, 2008 (2008.420). Image via The Met Open Access, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2024, bytes: 520685 }
+  thumb: { width: 300, height: 337, bytes: 19942 }
+  full: { width: 3260, height: 3666, bytes: 1732278 }
+  placeholder_color: "#534c3f"
+
+beethoven-symphony-7:
+  # Yorck Project scan (3570 × 2458). A far sharper scan of the same panel exists:
+  # File:The_Peasant_Dance_(Bruegel).jpg, 41945 × 29385, 233 MB (Inside Bruegel project, PD-Art). Too large to
+  # download as is; fetch a downscaled copy (Special:FilePath/The_Peasant_Dance_(Bruegel).jpg?width=6000)
+  # and place it in the originals cache if more resolution is wanted.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Pieter_Bruegel_d._%C3%84._014.jpg
+  source_url: https://www.khm.at/objektdb/detail/331/
+  commons_page: https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_d._%C3%84._014.jpg
+  width: 3570
+  height: 2458
+  medium: Oil on oak panel
+  license: Public domain (PD-Art, PD-old-100-1923)
+  credit_line: Pieter Bruegel the Elder, The Peasant Dance, c. 1568. Kunsthistorisches Museum, Vienna (GG 1059). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2614, height: 1800, bytes: 896670 }
+  thumb: { width: 436, height: 300, bytes: 35044 }
+  full: { width: 3570, height: 2458, bytes: 1838705 }
+  placeholder_color: "#765b36"
+
+beethoven-piano-concerto-5:
+  # Samuel H. Kress Foundation image, reduced on Commons from a 16304 × 26731 original (7.8 MB at this size).
+  # NGA's own open-access file is smaller: File:The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_National_Gallery_of_Art_-_A34961.jpg
+  # (2414 × 4000). Tall portrait (≈ 0.61:1): plan the hero crop around the head and shoulders.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/The_Emperor_Napoleon_in_His_Study_at_the_Tuileries,_by_Jacques-Louis_David_(1812)_-_National_Gallery_of_Art_(Samuel_H._Kress_Foundation)_-_2.jpg
+  source_url: https://www.nga.gov/collection/art-object-page.46114.html
+  commons_page: https://commons.wikimedia.org/wiki/File:The_Emperor_Napoleon_in_His_Study_at_the_Tuileries,_by_Jacques-Louis_David_(1812)_-_National_Gallery_of_Art_(Samuel_H._Kress_Foundation)_-_2.jpg
+  width: 8000
+  height: 13116
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-expired)
+  credit_line: Jacques-Louis David, The Emperor Napoleon in His Study at the Tuileries, 1812. National Gallery of Art, Washington, Samuel H. Kress Collection (1961.9.15). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2951, bytes: 594511 }
+  thumb: { width: 300, height: 492, bytes: 27102 }
+  full: { width: 2440, height: 4000, bytes: 1346122 }
+  placeholder_color: "#504232"
+
+beethoven-violin-concerto:
+  # Switched at merge (11 Oct 2026) from Ingres, *Mademoiselle Caroline Rivière*: Ingres is used for allegri-miserere.
+  # Was alternative A. The Met gives the artist as Marie Denise Villers (Commons/Wikidata: "attributed to").
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Portrait_of_Charlotte_du_Val_d%27Ognes,_attributed_to_Marie-Denise_Villers.jpg
+  source_url: https://www.metmuseum.org/art/collection/search/437903
+  commons_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Charlotte_du_Val_d%27Ognes,_attributed_to_Marie-Denise_Villers.jpg
+  width: 5000
+  height: 6250
+  medium: Oil on canvas
+  license: Public domain (CC0, The Met Open Access)
+  credit_line: Marie-Denise Villers, Marie Joséphine Charlotte du Val d'Ognes, 1801. The Metropolitan Museum of Art, New York, Bequest of Isaac D. Fletcher, 1917 (17.120.204). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2250, bytes: 447895 }
+  thumb: { width: 300, height: 375, bytes: 13853 }
+  full: { width: 3200, height: 4000, bytes: 1750327 }
+  placeholder_color: "#433c32"
+
+brahms-violin-concerto:
+  # Google Art Project file, very large (16975 × 13387, 85.9 MB): the pipeline downscales it.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Szinyei_Merse,_P%C3%A1l_-_Picnic_in_May_-_Google_Art_Project.jpg
+  source_url: https://en.mng.hu/artworks/picnic-in-may/
+  commons_page: https://commons.wikimedia.org/wiki/File:Szinyei_Merse,_P%C3%A1l_-_Picnic_in_May_-_Google_Art_Project.jpg
+  width: 16975
+  height: 13387
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old; artist d. 1920)
+  credit_line: Pál Szinyei Merse, Picnic in May (Majális), 1873. Hungarian National Gallery, Budapest. Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2282, height: 1800, bytes: 857290 }
+  thumb: { width: 380, height: 300, bytes: 25819 }
+  full: { width: 4000, height: 3155, bytes: 2684182 }
+  placeholder_color: "#575931"
+
+brahms-clarinet-quintet:
+  # Switched at merge: Khnopff (CC BY-SA photo) is kept for franck-violin-sonata; was alternative A.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Vilhelm_Hammershoi_-_Interieur_mit_Rueckenansicht_einer_Frau_-_1903-1904_-_Randers_Kunstmuseum.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Vilhelm_Hammershoi_-_Interieur_mit_Rueckenansicht_einer_Frau_-_1903-1904_-_Randers_Kunstmuseum.jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:Vilhelm_Hammershoi_-_Interieur_mit_Rueckenansicht_einer_Frau_-_1903-1904_-_Randers_Kunstmuseum.jpg
+  width: 2470
+  height: 2955
+  medium: Oil on canvas
+  license: Public domain (PD-Art; artist d. 1916)
+  credit_line: Vilhelm Hammershøi, Interior with Young Woman Seen from the Back, 1903–04. Randers Kunstmuseum, Denmark. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2153, bytes: 475722 }
+  thumb: { width: 300, height: 359, bytes: 11647 }
+  full: { width: 2470, height: 2955, bytes: 919419 }
+  placeholder_color: "#4a4649"
+
+schubert-symphony-9:
+  # Book scan on Commons ("repro from artbook"); the Wien Museum Online Sammlung may have its own CC0 file: check first.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Waldm%C3%BCller_-_Ansicht_des_Dachsteins_mit_dem_Hallst%C3%A4ttersee_von_der_H%C3%BCtteneckalpe_bei_Ischl.jpeg
+  source_url: https://sammlung.wienmuseum.at/
+  commons_page: https://commons.wikimedia.org/wiki/File:Waldm%C3%BCller_-_Ansicht_des_Dachsteins_mit_dem_Hallst%C3%A4ttersee_von_der_H%C3%BCtteneckalpe_bei_Ischl.jpeg
+  width: 4716
+  height: 3654
+  medium: Oil on wood
+  license: Public domain (PD-old-100; artist d. 1865)
+  credit_line: Ferdinand Georg Waldmüller, View of the Dachstein with the Hallstätter See from the Hütteneckalm near Ischl, 1838. Wien Museum, Vienna. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2323, height: 1800, bytes: 839181 }
+  thumb: { width: 387, height: 300, bytes: 20754 }
+  full: { width: 4000, height: 3099, bytes: 3774123 }
+  placeholder_color: "#9c8b84"
+
+schubert-piano-sonata-21:
+  # Switched at merge: Constable is used for beethoven-string-quartet-15; was alternative B.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Johan_Christian_Dahl_-_View_of_Dresden_by_Moonlight_-_Google_Art_Project_(NwHK-NsdInFfMQ).jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Johan_Christian_Dahl_-_View_of_Dresden_by_Moonlight_-_Google_Art_Project_(NwHK-NsdInFfMQ).jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:Johan_Christian_Dahl_-_View_of_Dresden_by_Moonlight_-_Google_Art_Project_(NwHK-NsdInFfMQ).jpg
+  width: 7162
+  height: 3786
+  medium: Oil on canvas
+  license: Public domain (PD-Art; artist d. 1857)
+  credit_line: Johan Christian Dahl, View of Dresden by Moonlight, 1838. Nasjonalmuseet, Oslo. Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 3405, height: 1800, bytes: 1229206 }
+  thumb: { width: 568, height: 300, bytes: 24409 }
+  full: { width: 4000, height: 2114, bytes: 1973652 }
+  placeholder_color: "#3c3533"
+
+schubert-string-quartet-14:
+  # Yorck Project / Google Art Project file. The Belvedere's own photo is on Commons at 3508 × 2968:
+  # File:Egon_Schiele_-_Tod_und_Mädchen_-_3171_-_Österreichische_Galerie_Belvedere.jpg (PD-Art; photo also CC BY-SA 4.0).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Egon_Schiele_-_Der_Tod_und_das_M%C3%A4dchen.jpg
+  source_url: https://digital.belvedere.at/objects/1968/tod-und-madchen
+  commons_page: https://commons.wikimedia.org/wiki/File:Egon_Schiele_-_Der_Tod_und_das_M%C3%A4dchen.jpg
+  width: 5880
+  height: 4947
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-1923; artist d. 1918)
+  credit_line: Egon Schiele, Death and the Maiden (Tod und Mädchen), 1915. Belvedere, Vienna (Inv. 3171). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2139, height: 1800, bytes: 1253963 }
+  thumb: { width: 357, height: 300, bytes: 41771 }
+  full: { width: 4000, height: 3365, bytes: 4124838 }
+  placeholder_color: "#7e715b"

@@ -1680,6 +1680,23 @@
         }
       }
     },
+    "era.renaissance": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Renaissance"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rönesans"
+          }
+        }
+      }
+    },
     "era.romantic": {
       "extractionState": "manual",
       "localizations": {

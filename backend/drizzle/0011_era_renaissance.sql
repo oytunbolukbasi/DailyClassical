@@ -1,0 +1,1 @@
+ALTER TYPE "public"."era" ADD VALUE 'renaissance' BEFORE 'baroque';

@@ -11,7 +11,7 @@ struct ForwardCompatibilityTests {
     }
 
     @Test func unknownFormAndEraFallBackToOther() throws {
-        let s = try JSONDecoder().decode(PieceSummary.self, from: Data(summary(id: "a", form: "opera", era: "renaissance").utf8))
+        let s = try JSONDecoder().decode(PieceSummary.self, from: Data(summary(id: "a", form: "opera", era: "medieval").utf8))
         #expect(s.kind == .other)
         #expect(s.era == .other)
     }

@@ -34,11 +34,11 @@ also_recommended:
     year: 1994
     spotify_url: https://open.spotify.com/album/5yB7rdg8kcsrqxKYQL2tos
 painting:
-  artist: Fernand Khnopff
-  title: I Lock My Door upon Myself
-  year: 1891
-  collection: Neue Pinakothek, Munich
-  pairing_note: Painted in the year of the quintet, a woman alone with her thoughts behind a closed door, in the same inward, autumnal stillness.
+  artist: Vilhelm Hammershøi
+  title: Interior with Young Woman Seen from the Back
+  year: 1903–04
+  collection: Randers Kunstmuseum, Denmark
+  pairing_note: A woman turned away in a grey, silent room, painted a decade after the quintet; the same hushed, inward mood as Brahms's late chamber music.
 ```
 
 ### The big picture

@@ -12,7 +12,7 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 
 ## Birleştirmeden önce çözülecekler (bütün parti)
 
-- **Rönesans dönemi:** Tallis ve Allegri için `era: renaissance` gerekiyor; backend ve uygulamadaki dönem listesinde yok. Yayındaki uygulamanın bilinmeyen değeri nasıl karşıladığı kontrol edilecek.
+- ~~**Rönesans dönemi**~~ **Çözüldü (11 Ekim):** `renaissance` backend'e (migration 0011) ve uygulamaya eklendi. Yayındaki 1.0.0 bilinmeyen dönemi "Diğer" gösteriyor (çökmüyor); bir sonraki build'de "Rönesans".
 - **Sözlük:** Yeni terimler (Attacca, Trill, Double stop, Ostinato, Hemiola, Leitmotif, Counterpoint, Ritornello, Continuo…). Birkaç grup aynı terimi önerdi; her biri bir kez eklenecek.
 - **Yeni besteciler (19):** haydn, allegri, bruckner, schumann, mendelssohn, chopin, liszt, grieg, bruch, sibelius, elgar, vivaldi, bach, franck, tallis, smetana, debussy, ravel, rimsky-korsakov, wagner. Girdileri `.shared.md`'lerde. Elgar ve Mendelssohn portreleri kırpma ister.
 - **Lisans:** Spitzweg (Trout) ve Khnopff (Klarnet Beşlisi) fotoğrafları CC BY / CC BY-SA. Kamu malı alternatife geçilecek ya da künye eklenecek.
@@ -24,6 +24,8 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 ## Birleştirme günlüğü
 
 - **11 Ekim 2026, Grup B** (5 eser): ilk tercih tabloların hepsi tutuldu; Friedrich'in Met görselindeki siyah fon kırpıldı (master `.source.jpg`'den). Yeni terim: Lydian mode. Birleştirme betiği: `content/research/merge-drafts.py`.
+- **11 Ekim 2026, Grup A** (5 eser): Beethoven Keman Konçertosu Ingres → Villers (Ingres Allegri'de kalıyor). David'in Napolyon'u "İmparator"da kaldı (alternatifler küçük/tarihsiz). Koch (Pastoral) ve Gros (Eroica) görsellerinde çerçeve/fon kırpıldı. Yeni terimler: Hemiola, Attacca, Ostinato, Trill.
+- **11 Ekim 2026, Grup E** (5 eser): Klarnet Beşlisi Khnopff (CC BY-SA) → Hammershøi; D 960 Constable → Dahl, *Ay Işığında Dresden*. Yeni terimler: Double stop, Lied, Tarantella.
 
 ## Eserler
 
@@ -31,11 +33,11 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 
 | Eser | Grup | Form | Bölüm | Referans kayıt | Spotify | Tablo | Çakışma | Durum |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| beethoven-symphony-3 | A | symphony | 4 | Herbert von Karajan · Berliner Philharmoniker, 1977 | `4AAP5zYQJTEFQiQacOFq2s` | Antoine-Jean Gros, *Bonaparte at the Pont d'Arcole* |  | Taslak |
-| beethoven-symphony-6 | A | symphony | 5 | Karl Böhm · Wiener Philharmoniker, 1971 | `1eMMy3QJ3ezrR6hkp6jP7n` | Joseph Anton Koch, *Heroic Landscape with Rainbow* |  | Taslak |
-| beethoven-symphony-7 | A | symphony | 4 | Carlos Kleiber · Wiener Philharmoniker, 1976 | `2aNAica8UZ1gPub5p1UYUe` | Pieter Bruegel the Elder, *The Peasant Dance* |  | Taslak |
-| beethoven-piano-concerto-5 | A | piano-concerto | 3 | Wilhelm Kempff / Ferdinand Leitner · Berliner Philharmoniker, 1962 | `3cS6w1hujyiNMpBFZfJtRO` | Jacques-Louis David, *The Emperor Napoleon in His Study at the Tuileries* | katalogda da var (beethoven-piano-sonata-8) | Taslak |
-| beethoven-violin-concerto | A | violin-concerto | 3 | Wolfgang Schneiderhan / Eugen Jochum · Berliner Philharmoniker, 1963 | `0irQe1qulTiJHGNuD5sqUa` | Jean-Auguste-Dominique Ingres, *Mademoiselle Caroline Rivière* | ressam partide 2 kez | Taslak |
+| beethoven-symphony-3 | A | symphony | 4 | Herbert von Karajan · Berliner Philharmoniker, 1977 | `4AAP5zYQJTEFQiQacOFq2s` | Antoine-Jean Gros, *Bonaparte at the Pont d'Arcole* |  | Birleştirildi |
+| beethoven-symphony-6 | A | symphony | 5 | Karl Böhm · Wiener Philharmoniker, 1971 | `1eMMy3QJ3ezrR6hkp6jP7n` | Joseph Anton Koch, *Heroic Landscape with Rainbow* |  | Birleştirildi |
+| beethoven-symphony-7 | A | symphony | 4 | Carlos Kleiber · Wiener Philharmoniker, 1976 | `2aNAica8UZ1gPub5p1UYUe` | Pieter Bruegel the Elder, *The Peasant Dance* |  | Birleştirildi |
+| beethoven-piano-concerto-5 | A | piano-concerto | 3 | Wilhelm Kempff / Ferdinand Leitner · Berliner Philharmoniker, 1962 | `3cS6w1hujyiNMpBFZfJtRO` | Jacques-Louis David, *The Emperor Napoleon in His Study at the Tuileries* | katalogda da var (beethoven-piano-sonata-8) | Birleştirildi |
+| beethoven-violin-concerto | A | violin-concerto | 3 | Wolfgang Schneiderhan / Eugen Jochum · Berliner Philharmoniker, 1963 | `0irQe1qulTiJHGNuD5sqUa` | Marie-Denise Villers, *Marie Joséphine Charlotte du Val d'Ognes* | (Ingres'ten değişti) | Birleştirildi |
 | beethoven-piano-sonata-14 | B | piano-sonata | 3 | Wilhelm Kempff, 1965 | `7z9kHQBUKHO4UQ5ol9D4Ia` | Caspar David Friedrich, *Two Men Contemplating the Moon* | katalogda da var (schubert-symphony-8) | Birleştirildi |
 | beethoven-piano-sonata-23 | B | piano-sonata | 3 | Emil Gilels, 1973 | `3O9HUGtcDizohPdj12wmVh` | Johan Christian Dahl, *An Eruption of Vesuvius* |  | Birleştirildi |
 | beethoven-string-quartet-15 | B | string-quartet | 5 | Takács Quartet, 2004 | `6tFl4rPDztyza1TSAOZP8i` | John Constable, *Salisbury Cathedral from the Bishop's Garden* | ressam partide 2 kez | Birleştirildi |
@@ -51,11 +53,11 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 | mahler-symphony-9 | D | symphony | 4 | Sir John Barbirolli · Berliner Philharmoniker, 1964 | `3mb7iASlTwepiLCXODCnme` | Egon Schiele, *Small Tree in Late Autumn* | ressam partide 2 kez | Taslak |
 | bruckner-symphony-7 | D | symphony | 4 | Herbert von Karajan · Wiener Philharmoniker, 1990 | `641TZuqNeVpzvWgoy6Rbp2` | Wilhelm Leibl, *Three Women in Church* |  | Taslak |
 | brahms-symphony-1 | D | symphony | 4 | Michel Schwalbé / Karl Böhm · Berliner Philharmoniker, 1960 | `2F7kYdoAGsxxK9fSUiJixg` | Adolph Menzel, *The Iron Rolling Mill (Modern Cyclopes)* | ressam partide 3 kez | Taslak |
-| brahms-violin-concerto | E | violin-concerto | 3 | Anne-Sophie Mutter / Herbert von Karajan · Berliner Philharmoniker, 1982 | `03xKUXxuRY5KuLs1gITc09` | Pál Szinyei Merse, *Picnic in May* |  | Taslak |
-| brahms-clarinet-quintet | E | chamber | 4 | Karl Leister · Amadeus Quartet, 1967 | `3mmIHrQZyvjAyngGlYBohA` | Fernand Khnopff, *I Lock My Door upon Myself* | ressam partide 2 kez | Taslak |
-| schubert-symphony-9 | E | symphony | 4 | Günter Wand · Berliner Philharmoniker, 1995 | `1zEbPxFC7m0Wj8ePFMkP8W` | Ferdinand Georg Waldmüller, *View of the Dachstein with the Hallstätter See from the Hütteneckalm near Ischl* |  | Taslak |
-| schubert-piano-sonata-21 | E | piano-sonata | 4 | Mitsuko Uchida, 1998 | `4X32yxTPmTbd7i03gfiSZN` | John Constable, *Hadleigh Castle, The Mouth of the Thames – Morning after a Stormy Night* | ressam partide 2 kez | Taslak |
-| schubert-string-quartet-14 | E | string-quartet | 4 | Alban Berg Quartett, 1985 | `2IAsZa1NOpFYcY2A58eYME` | Egon Schiele, *Death and the Maiden* | ressam partide 2 kez | Taslak |
+| brahms-violin-concerto | E | violin-concerto | 3 | Anne-Sophie Mutter / Herbert von Karajan · Berliner Philharmoniker, 1982 | `03xKUXxuRY5KuLs1gITc09` | Pál Szinyei Merse, *Picnic in May* |  | Birleştirildi |
+| brahms-clarinet-quintet | E | chamber | 4 | Karl Leister · Amadeus Quartet, 1967 | `3mmIHrQZyvjAyngGlYBohA` | Vilhelm Hammershøi, *Interior with Young Woman Seen from the Back* | (Khnopff'tan değişti) | Birleştirildi |
+| schubert-symphony-9 | E | symphony | 4 | Günter Wand · Berliner Philharmoniker, 1995 | `1zEbPxFC7m0Wj8ePFMkP8W` | Ferdinand Georg Waldmüller, *View of the Dachstein with the Hallstätter See from the Hütteneckalm near Ischl* |  | Birleştirildi |
+| schubert-piano-sonata-21 | E | piano-sonata | 4 | Mitsuko Uchida, 1998 | `4X32yxTPmTbd7i03gfiSZN` | Johan Christian Dahl, *View of Dresden by Moonlight* | (Constable'dan değişti) | Birleştirildi |
+| schubert-string-quartet-14 | E | string-quartet | 4 | Alban Berg Quartett, 1985 | `2IAsZa1NOpFYcY2A58eYME` | Egon Schiele, *Death and the Maiden* | ressam partide 2 kez | Birleştirildi |
 | schubert-piano-quintet-trout | F | chamber | 5 | Clifford Curzon, 1958 | `06Aea2N1qVuld6Mw9Xz6XS` | Carl Spitzweg, *The Angler* |  | Taslak |
 | schumann-piano-concerto | F | piano-concerto | 3 | Radu Lupu / André Previn · London Symphony Orchestra, 1973 | `6nEpG19dgOSn6mB4ye4czG` | Carl Gustav Carus, *Barge Trip on the Elbe near Dresden* |  | Taslak |
 | mendelssohn-violin-concerto | F | violin-concerto | 3 | Anne-Sophie Mutter / Herbert von Karajan · Berliner Philharmoniker, 1981 | `5UMYDc7q9Z0GE2O8zlfRsg` | Adolph Menzel, *The Balcony Room* | ressam partide 3 kez | Taslak |

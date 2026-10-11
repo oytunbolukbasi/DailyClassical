@@ -78,6 +78,13 @@
       "when": 1791424169506,
       "tag": "0010_sign_in_with_apple",
       "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1791678543046,
+      "tag": "0011_era_renaissance",
+      "breakpoints": true
     }
   ]
 }

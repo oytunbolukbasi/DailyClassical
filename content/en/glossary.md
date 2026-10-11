@@ -6,6 +6,7 @@ Definition: one or two sentences, written for the pop-over.
 | Term | Short | Definition |
 | --- | --- | --- |
 | Arpeggio | The notes of a chord played one after another | The notes of a chord played one after another instead of together. |
+| Attacca | Go straight on into the next movement, without a pause | Italian for "attack": the next movement begins at once, with no break, so the two are heard as one continuous piece. |
 | Cadenza | A free solo passage while the orchestra waits | A short solo passage where the rest of the orchestra stops and one player or singer is free to linger. |
 | Canon | One melody chasing itself, like a round | One instrument plays a melody and another follows a moment later with the same melody, like a round. |
 | Cantabile | Smooth and expressive, in a singing style | "In a singing style": played smoothly and expressively, like a voice. |
@@ -17,11 +18,14 @@ Definition: one or two sentences, written for the pop-over.
 | Dies irae | A medieval chant for the dead, a symbol of death | A medieval chant from the Mass for the dead. Composers quote it as a symbol of death. |
 | Divisi | A string section split to play separate lines | A string section split into two or more groups, each playing a different line. |
 | Double exposition | The themes presented twice: orchestra, then soloist | In the first movement of a Classical concerto, the main themes are presented twice: first by the orchestra alone, then by the soloist with the orchestra, this time moving to a new key. |
+| Double stop | Two notes played at once on a string instrument | Bowing two strings at the same time, so that a single violinist or cellist sounds two notes together. |
 | Exposition | The opening of sonata form, where the themes are introduced | The first stage of sonata form, where the main themes are introduced. It is often repeated. |
 | Fugato | A passage that begins like a fugue, then moves on | A passage that starts like a fugue, with instruments entering one by one on the same tune, without being a full fugue. |
 | Fugue | One tune entering voice by voice, woven against itself | A piece or section in which one tune enters in each voice in turn and is woven against itself. |
 | Glissando | A continuous slide from one note to another | A continuous slide from one note to another. |
+| Hemiola | Two bars of three beats regrouped into three pairs | A rhythmic shift in which two bars of three beats are accented as if they were three groups of two, so they sound like one long bar of three slow beats. The beat seems to stumble or stretch. |
 | Idée fixe | Berlioz's recurring melody that stands for a person | "Fixed idea": Berlioz's term for a melody that represents a person and returns throughout a piece. |
+| Lied | A German art song for voice and piano | A German art song, usually a poem set for one voice with piano. Schubert wrote more than six hundred. |
 | Lydian mode | An old church scale: like a major scale with a raised fourth | One of the old church modes. It sounds like a major scale with its fourth note raised a half step (F to F with B natural), which gives a bright, floating sound. |
 | Ländler | A rustic Austrian dance in three, ancestor of the waltz | A rustic Austrian country dance in three beats, a slower, heavier ancestor of the waltz. |
 | Major | The kind of key that sounds bright or settled | The kind of key that generally sounds bright or settled. Its darker counterpart is the minor. |
@@ -29,6 +33,7 @@ Definition: one or two sentences, written for the pop-over.
 | Motif | A short musical idea that keeps returning | The smallest musical idea, just a few notes, from which a theme is built. |
 | Muted | Played with a device that softens and veils the sound | Played with a small device on the instrument that softens and veils the sound. |
 | Obbligato | An essential, prominent solo instrumental part | A solo instrumental part that is essential and prominent throughout a movement. |
+| Ostinato | A short pattern repeated over and over | A short rhythm or melody repeated persistently, often underneath changing music. |
 | Passacaglia | A short theme repeated while the music around it changes | A form in which a short theme repeats over and over while the music around it keeps changing. |
 | Pedal note | One note held in the bass under changing harmony | A single note held or repeated, usually in the bass, while the harmony changes above it. |
 | Pizzicato | Plucking the strings instead of using the bow | Plucking the strings of a string instrument with the finger instead of using the bow. |
@@ -41,7 +46,9 @@ Definition: one or two sentences, written for the pop-over.
 | Sonata form | Three stages: exposition, development, recapitulation | A three-stage structure: themes are introduced (exposition), worked and set against each other (development), and brought back (recapitulation). |
 | Sustain pedal | The piano pedal that keeps notes ringing after release | The piano's right-hand pedal. It lifts the dampers off the strings, so notes keep ringing after the keys are let go and blend into one another. |
 | Syncopation | Accents off the beat that pull against the pulse | Accents placed off the main beats, which makes the rhythm feel as if it is floating or pulling against the pulse. |
+| Tarantella | A whirling Italian dance in fast 6/8 time | A fast, whirling folk dance from southern Italy in 6/8 time. Legend linked it to the bite of the tarantula spider. |
 | Tremolo | A rapid shimmer between two notes, or on one | A rapid back-and-forth between two notes, or the fast repetition of one, which makes a shimmering or rumbling sound. On the piano it is often an octave in the left hand. |
+| Trill | A rapid shake between two neighbouring notes | A rapid alternation between a note and the note just above it, which makes the sound shimmer or, low on the piano, rumble. |
 | Trio | The gentler middle section of a minuet or scherzo | The contrasting middle section of a minuet or scherzo, usually gentler. |
 | Tutti | The whole orchestra playing together | Italian for "all": the whole orchestra playing together, as opposed to the soloist. |
 | Unison | Everyone playing the same notes at once | Everyone playing the same notes at the same time. |

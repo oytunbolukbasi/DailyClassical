@@ -6,14 +6,15 @@ For merging into `content/paintings.yaml`. Sources: `content/research/schubert-p
 
 ```yaml
 schubert-piano-sonata-21:
-  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/John_Constable_-_Hadleigh_Castle,_The_Mouth_of_the_Thames--Morning_after_a_Stormy_Night_-_Google_Art_Project.jpg
-  source_url: https://collections.britishart.yale.edu/catalog/tms:5001
-  commons_page: https://commons.wikimedia.org/wiki/File:John_Constable_-_Hadleigh_Castle,_The_Mouth_of_the_Thames--Morning_after_a_Stormy_Night_-_Google_Art_Project.jpg
-  width: 5988
-  height: 4421
+  # Switched at merge: Constable is used for beethoven-string-quartet-15; was alternative B.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Johan_Christian_Dahl_-_View_of_Dresden_by_Moonlight_-_Google_Art_Project_(NwHK-NsdInFfMQ).jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Johan_Christian_Dahl_-_View_of_Dresden_by_Moonlight_-_Google_Art_Project_(NwHK-NsdInFfMQ).jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:Johan_Christian_Dahl_-_View_of_Dresden_by_Moonlight_-_Google_Art_Project_(NwHK-NsdInFfMQ).jpg
+  width: 7162
+  height: 3786
   medium: Oil on canvas
-  license: Public domain (PD-Art, Google Art Project; artist d. 1837)
-  credit_line: John Constable, Hadleigh Castle, The Mouth of the Thames – Morning after a Stormy Night, 1829. Yale Center for British Art, New Haven, Paul Mellon Collection. Image via Wikimedia Commons (Google Art Project), public domain.
+  license: Public domain (PD-Art; artist d. 1857)
+  credit_line: Johan Christian Dahl, View of Dresden by Moonlight, 1838. Nasjonalmuseet, Oslo. Image via Wikimedia Commons (Google Art Project), public domain.
   rights_status: public_domain
 ```
 

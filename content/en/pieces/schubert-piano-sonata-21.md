@@ -32,11 +32,11 @@ also_recommended:
     year: 1989
     spotify_url: https://open.spotify.com/album/366uEcXyywPPtRxNxzd8Cg
 painting:
-  artist: John Constable
-  title: Hadleigh Castle, The Mouth of the Thames – Morning after a Stormy Night
-  year: 1829
-  collection: Yale Center for British Art, New Haven
-  pairing_note: Painted in the months after Constable's wife died, in the same November as Schubert, a ruined tower above a wide estuary as a storm clears, with the same calm after loss.
+  artist: Johan Christian Dahl
+  title: View of Dresden by Moonlight
+  year: 1838
+  collection: Nasjonalmuseet, Oslo
+  pairing_note: A quiet river city under the moon, painted by a contemporary of Schubert; the sonata's calm, nocturnal glow and its long silences.
 ```
 
 ### The big picture

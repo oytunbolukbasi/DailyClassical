@@ -33,11 +33,11 @@ also_recommended:
     year: 1989
     spotify_url: https://open.spotify.com/album/366uEcXyywPPtRxNxzd8Cg
 painting:
-  artist: John Constable
-  title: Hadleigh Şatosu, Thames'in Ağzı – Fırtınalı Bir Gecenin Sabahı
-  year: 1829
-  collection: Yale İngiliz Sanatı Merkezi, New Haven
-  pairing_note: Constable'ın karısını, Schubert'le aynı Kasım ayında kaybetmesinin ardından gelen aylarda boyandı; fırtına dağılırken geniş bir halicin üzerinde yıkık bir kule; kayıptan sonraki aynı sükûnet.
+  artist: Johan Christian Dahl
+  title: Ay Işığında Dresden
+  year: 1838
+  collection: Ulusal Müze, Oslo
+  pairing_note: Ay ışığı altında sessiz bir nehir kenti; Schubert'in bir çağdaşı boyadı. Sonatın sakin, gece ışıltısı ve uzun sessizlikleri.
 ```
 
 ### Genel bakış

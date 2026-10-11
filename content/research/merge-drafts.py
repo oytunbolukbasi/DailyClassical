@@ -61,6 +61,27 @@ def table_rows(text, header_start):
     return rows
 
 
+def glossary_rows(shared):
+    """Rows of the note's glossary section, with or without table headers or code fences:
+    3 cells = EN (Term, Short, Definition), 4 cells = TR (Key, Terim, Kısa, Tanım)."""
+    en, tr = [], []
+    sections = re.split(r"^## ", shared, flags=re.M)
+    for sec in sections:
+        if not sec.lower().startswith(tuple(f"{n}. glossary" for n in range(1, 10))) and "glossary" not in sec.split("\n", 1)[0].lower():
+            continue
+        for line in sec.split("\n"):
+            if not line.startswith("|") or re.match(r"^\|\s*-", line):
+                continue
+            cells = [c.strip() for c in line.strip().strip("|").split("|")]
+            if cells[0] in ("Term", "Key", "#", ""):
+                continue
+            if len(cells) == 3:
+                en.append(line)
+            elif len(cells) == 4:
+                tr.append(line)
+    return en, tr
+
+
 def key_of(row):
     return row.split("|")[1].strip()
 
@@ -113,14 +134,19 @@ def main(ids):
                 report.append(f"composer {cid}: added")
         write(composers_path, composers)
 
-        en = merge_glossary(os.path.join(C, "en", "glossary.md"), "| Term | Short | Definition |",
-                            table_rows(shared, "| Term | Short | Definition |"))
-        tr = merge_glossary(os.path.join(C, "tr", "glossary.md"), "| Key | Terim | Kısa | Tanım |",
-                            table_rows(shared, "| Key | Terim | Kısa | Tanım |"))
+        en_rows, tr_rows = glossary_rows(shared)
+        en = merge_glossary(os.path.join(C, "en", "glossary.md"), "| Term | Short | Definition |", en_rows)
+        tr = merge_glossary(os.path.join(C, "tr", "glossary.md"), "| Key | Terim | Kısa | Tanım |", tr_rows)
         if en or tr:
             report.append(f"glossary +EN {en} +TR {tr}")
 
         retime = [r for r in table_rows(shared, "| Piece |") if "–" in r.split("|")[1]]
+        if not retime:
+            title = re.search(r"^## (.+)$", read(os.path.join(C, "drafts", "en", f"{pid}.md"))
+                              if os.path.exists(os.path.join(C, "drafts", "en", f"{pid}.md"))
+                              else read(os.path.join(C, "en", "pieces", f"{pid}.md")), re.M).group(1)
+            retime = [f"| {title} | all | – | – | – | see `research/{pid}.md` | every stop (≈) | "
+                      f"New piece, never timed by ear: every stop is an estimate. Details in `research/{pid}.md` |"]
         if retime:
             text = read(retime_path)
             fresh = [r for r in retime if r not in text]

@@ -66,7 +66,7 @@ nonisolated struct Painting: Codable, Hashable, Sendable {
 /// Decoding is tolerant: an era or form added on the server after this build shipped becomes
 /// `.other` instead of failing the whole Library response (content ships without app updates).
 nonisolated enum Era: String, Codable, CaseIterable, Sendable {
-    case baroque, classical, romantic, lateRomantic = "late_romantic", modern, other
+    case renaissance, baroque, classical, romantic, lateRomantic = "late_romantic", modern, other
 
     init(from decoder: Decoder) throws {
         self = Era(rawValue: try decoder.singleValueContainer().decode(String.self)) ?? .other

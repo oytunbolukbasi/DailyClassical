@@ -28,7 +28,7 @@ export type Locale = (typeof locales)[number];
 
 export const localizationStatus = pgEnum("localization_status", ["draft", "review", "published"]);
 export const recordingRole = pgEnum("recording_role", ["reference", "alternative"]);
-export const era = pgEnum("era", ["baroque", "classical", "romantic", "late_romantic", "modern"]);
+export const era = pgEnum("era", ["renaissance", "baroque", "classical", "romantic", "late_romantic", "modern"]);
 
 /** Language-neutral half of a composer portrait (the caption text is per locale). */
 export type ComposerPortraitAsset = {
