@@ -176,3 +176,38 @@ Rejected: File:Sergei_Rachmaninoff_LOC_33968.jpg (2500 × 3824, PD-Bain) is date
 - Portrait: wood engraving by Adolf Neumann (1825–1884) after a photograph, *Die Gartenlaube* 1881, p. 557 (caption "Max Bruch. Nach einer Photographie auf Holz gezeichnet von Adolf Neumann").
   https://commons.wikimedia.org/wiki/File:Die_Gartenlaube_(1881)_b_557.jpg — 2147 × 2321, public domain (Gartenlaube template). Clean scan of the portrait only. focal_y 0.25 (eyes at about 26 % from the top; checked on a thumbnail).
   Rejected: File:Max_bruch.jpg (764 × 1000, from a 1913 Victor booklet), File:Max_Bruch._1900.jpg (447 × 749, National Library of Israel postcard) — both too small; File:Max_Bruch-vp.png (CC BY-SA 4.0 modern drawing).
+
+## Jean Sibelius (added 2026-10-10, batch group H)
+
+- Facts: https://en.wikipedia.org/wiki/Jean_Sibelius · https://www.wikidata.org/wiki/Q45682 (P569 8 Dec 1865, P570 20 Sep 1957, P19 Hämeenlinna, P20 Järvenpää)
+- Father (doctor) died of typhoid July 1868; brought up "in a decidedly female environment"; Swedish-speaking family.
+- Wanted to be a violin virtuoso; quote "My tragedy was that I wanted to be a celebrated violinist at any price … I had begun my training … too late" (paraphrased in the bio).
+- Studied Helsinki Music Institute 1885–89, Berlin 1889–90, Vienna 1890–91. *Kullervo* 1892; married Aino Järnefelt 1892.
+- *Finlandia*: the last tableau ("Finland Awakens") of the *Press Celebration Music*, 4 Nov 1899, written in support of a newspaper suspended for criticising Russian rule.
+- State grant 1898 (ten years, later for life). Ainola near Lake Tuusula, about 45 km north of Helsinki; moved in 24 Sep 1904; lived there (with a Helsinki home 1939–41) until his death.
+- Last major works: *The Tempest* (1926) and *Tapiola* (1926); "silence of Järvenpää"; work on an Eighth Symphony (promised to Koussevitzky 1931–32); Aino's account of burning manuscripts at Ainola in the 1940s.
+- Died 20 Sep 1957 at Ainola (brain haemorrhage), aged 91; the Fifth Symphony (Malcolm Sargent) was being broadcast from Helsinki at the time.
+- "Large shapes grow slowly out of very small ideas": general description, supported by the Symphony No. 5 article (themes built from small cells, rotational form) https://en.wikipedia.org/wiki/Symphony_No._5_(Sibelius)
+- Portrait: Daniel Nyblin (1856–1923), photograph, published 1913 in *What We Hear in Music* (Anne S. Faulkner, Victor Talking Machine Co., USA).
+  https://commons.wikimedia.org/wiki/File:Jean_Sibelius,_1913.jpg — 1872 × 2496 px. Commons: {{PD-Art|PD-old-auto-expired|deathyear=1923}}, permission {{PD-Finland-50}}.
+  Rights check: EU/Finland — the photographer died in 1923, so even as a photographic *work* it is out of copyright (life + 70 ended 1993), and as a simple photographic image it is far beyond Finland's 50-year term. US — published in a US book in 1913, before 1931, so public domain in the US regardless of the URAA. Safe in both.
+  focal_y 0.2: head and shoulders, face in the upper third of the frame (checked on an 800 px thumbnail).
+- Rejected: File:Jean_Sibelius_circa_1898-1900_(3x4_cropped).jpg (Nyblin, c. 1898–1900, Finnish Heritage Agency, 1535 × 2060, PD) is the Wikipedia infobox image and also safe, but lower resolution and shows a much younger man than the composer of the works in the catalogue; keep it as the fallback. Paintings by Gallen-Kallela and Järnefelt exist, but Gallen-Kallela already provides Mahler's portrait.
+
+## Edward Elgar (added 2026-10-10, batch group H)
+
+- Facts: https://en.wikipedia.org/wiki/Edward_Elgar · https://www.wikidata.org/wiki/Q179631 (P569 2 Jun 1857, P570 23 Feb 1934, P19 Lower Broadheath, P20 Worcester)
+- Father William Henry Elgar, piano tuner with a music shop in Worcester. Only formal training: piano and violin lessons from local teachers (and violin studies with Pollitzer in London); otherwise self-taught.
+- Local career: teaching, violin in the Worcester and Birmingham festival orchestras, conducting, music for a wind quintet (with his brother) and for the Powick Asylum band.
+- Married Caroline Alice Roberts, daughter of Major-General Sir Henry Roberts, eight years older, on 8 May 1889; her family disapproved ("She was disinherited", Kennedy); business manager, social secretary and "perceptive musical critic".
+- *Enigma Variations* 1899 (aged 42), portraits of friends; *The Dream of Gerontius* 1900; knighted 5 July 1904; First Symphony 1908 (about a hundred performances in just over a year: https://en.wikipedia.org/wiki/Cello_Concerto_(Elgar)); Violin Concerto 1910.
+- "Land of Hope and Glory" became still more popular in the First World War; Elgar "wished in vain to have new, less nationalistic, words sung to the tune".
+- Brinkwells (Sussex), 1918–19: Violin Sonata, String Quartet, Piano Quintet, Cello Concerto. Music out of fashion in the 1920s. Alice died 7 April 1920; no further large-scale works were completed.
+- "The first composer to take the gramophone seriously" (Robert Philip); recordings from 1914, electrical recordings from 1926.
+- Master of the King's Musick 1924 (the TR text keeps the English title in brackets; the bio uses the modern spelling "Music").
+- Died 23 Feb 1934 (colorectal cancer); Third Symphony sketches elaborated by Anthony Payne (premiered 1998).
+- Portrait: Bain News Service glass negative, Library of Congress, George Grantham Bain Collection, LCCN 2014716700 (ggbain.36551); the same image ran in US newspapers in May 1924 with the caption on his appointment as Master of the King's Music (Keystone View Company; Commons File:Edward_Elgar,_appointed_Master_of_King's_Music.jpg, from the *St. Louis Post-Dispatch*, 9 May 1924).
+  https://commons.wikimedia.org/wiki/File:Sir_Edw._Elgar_LCCN2014716700.jpg — 3715 × 5072 px (TIFF also available). Commons: {{PD-Bain}}, {{PD-old-70-1923}}; LOC: no known restrictions on publication.
+  Rights check: US — published in 1924, before 1931: public domain. UK/EU — photographer unknown (agency print); an anonymous work published in 1924 is out of copyright 70 years after publication (1994). Safe in both. Year shown as "1924" = first known publication; the sitting may be a few years earlier (Elgar wears academic robes; he looks about 60).
+  focal_y 0.15: seated three-quarter figure, face in the top fifth of the frame (checked on a 500 px thumbnail); re-check after cropping the negative border.
+- Rejected: File:Edward_Elgar.jpg (the familiar c. 1905 Rotary Photo postcard portrait; PD-anon-expired, PD-UK-unknown) is only 697 × 698 px. File:Edward_Elgar_1857_-_1934.jpg (3821 × 5454) is a halftone scan from a 1913 book with a visible screen pattern. File:Edward_Elgar,_appointed_Master_of_King's_Music.jpg (1791 × 2086) is the same photo as a newspaper reproduction, lower quality than the LOC negative.

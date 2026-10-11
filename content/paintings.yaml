@@ -872,3 +872,82 @@ bruch-violin-concerto-1:
   thumb: { width: 300, height: 432, bytes: 27816 }
   full: { width: 2779, height: 4000, bytes: 2294179 }
   placeholder_color: "#6a685f"
+
+sibelius-symphony-5:
+  # Museum image (Rijksmuseum Twenthe), very large (10572 × 7303, 15.3 MB): the pipeline downscales it.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Bruno_Liljefors_-_Knobbelzwanen_op_avondtrek_-_0211_-_Rijksmuseum_Twenthe.jpg
+  source_url: https://collectie.rijksmuseumtwenthe.nl/zoeken-in-de-collectie/detail/id/436fb301-72ec-5c5c-bcd9-0fd3e9fcd11e
+  commons_page: https://commons.wikimedia.org/wiki/File:Bruno_Liljefors_-_Knobbelzwanen_op_avondtrek_-_0211_-_Rijksmuseum_Twenthe.jpg
+  width: 10572
+  height: 7303
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-expired; artist d. 1939)
+  credit_line: Bruno Liljefors, Mute Swans in Evening Flight (Knobbelzwanen op avondtrek), 1925. Rijksmuseum Twenthe, Enschede (inv. 0211). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2606, height: 1800, bytes: 360569 }
+  thumb: { width: 434, height: 300, bytes: 14082 }
+  full: { width: 4000, height: 2763, bytes: 1164712 }
+  placeholder_color: "#91949b"
+
+sibelius-violin-concerto:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Akseli_Gallen-Kallela_-_Lake_Keitele,_1905.JPG
+  source_url: https://www.nationalgallery.org.uk/paintings/akseli-gallen-kallela-lake-keitele
+  commons_page: https://commons.wikimedia.org/wiki/File:Akseli_Gallen-Kallela_-_Lake_Keitele,_1905.JPG
+  width: 5422
+  height: 4226
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-1923; artist d. 1931)
+  credit_line: Akseli Gallen-Kallela, Lake Keitele, 1905. The National Gallery, London (NG6574). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2309, height: 1800, bytes: 1477942 }
+  thumb: { width: 385, height: 300, bytes: 22836 }
+  full: { width: 4000, height: 3118, bytes: 4315353 }
+  placeholder_color: "#8e969d"
+
+dvorak-cello-concerto:
+  # Gallery photograph, very large (12000 × 8870, 46 MB): the pipeline downscales it.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/1897_Slavi%C4%8Deck_Birkenstimmung_Nationalgalerie_Prag_anagoria.jpg
+  source_url: https://sbirky.ngprague.cz/dielo/CZE:NG.O_9148
+  commons_page: https://commons.wikimedia.org/wiki/File:1897_Slavi%C4%8Deck_Birkenstimmung_Nationalgalerie_Prag_anagoria.jpg
+  width: 12000
+  height: 8870
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-expired; artist d. 1910)
+  credit_line: Antonín Slavíček, Birch Mood (Břízová nálada), 1897. National Gallery Prague (O 9148). Image via Wikimedia Commons (photo anagoria), public domain.
+  rights_status: public_domain
+  hero: { width: 2435, height: 1800, bytes: 810063 }
+  thumb: { width: 406, height: 300, bytes: 49529 }
+  full: { width: 4000, height: 2957, bytes: 1581941 }
+  placeholder_color: "#807265"
+
+dvorak-string-quartet-12:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Theodore_Robinson_-_Canal_Scene_(1893).jpg
+  source_url: https://www.terraamericanart.org/what-we-offer/our-art-collection/terra-collection-initiative-monet-and-the-artists-of-giverny-the-beginning-of-american-impressionism/
+  commons_page: https://commons.wikimedia.org/wiki/File:Theodore_Robinson_-_Canal_Scene_(1893).jpg
+  width: 3200
+  height: 2375
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-1923; artist d. 1896)
+  credit_line: Theodore Robinson, Canal Scene, 1893. Terra Foundation for American Art, Daniel J. Terra Collection (1992.131). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2425, height: 1800, bytes: 1150744 }
+  thumb: { width: 404, height: 300, bytes: 34051 }
+  full: { width: 3200, height: 2375, bytes: 2313624 }
+  placeholder_color: "#867a55"
+
+elgar-cello-concerto:
+  # Google Art Project file (4950 × 3876). IWM marks its own photo "© IWM"; Commons treats faithful
+  # photographs of this public-domain painting as public domain (artist d. 1946). See the research note.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Nash,_Paul_-_We_are_Making_a_New_World_-_Google_Art_Project.jpg
+  source_url: https://www.iwm.org.uk/collections/item/object/20070
+  commons_page: https://commons.wikimedia.org/wiki/File:Nash,_Paul_-_We_are_Making_a_New_World_-_Google_Art_Project.jpg
+  width: 4950
+  height: 3876
+  medium: Oil on canvas
+  license: Public domain (PD-old-auto-1923; artist d. 1946)
+  credit_line: Paul Nash, We are Making a New World, 1918. Imperial War Museums, London (Art.IWM ART 1146). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2299, height: 1800, bytes: 688633 }
+  thumb: { width: 383, height: 300, bytes: 25331 }
+  full: { width: 4000, height: 3132, bytes: 2036975 }
+  placeholder_color: "#564a36"

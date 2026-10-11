@@ -206,6 +206,31 @@
         "hash": "dde377275b"
       }
     },
+    "composers/elgar": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Sir_Edw._Elgar_LCCN2014716700.jpg",
+      "color": "#5e5e5e",
+      "hero": {
+        "path": "composers/elgar-hero.heic",
+        "width": 1800,
+        "height": 2468,
+        "bytes": 846756,
+        "hash": "d7a4a1ed8f"
+      },
+      "thumb": {
+        "path": "composers/elgar-thumb.heic",
+        "width": 300,
+        "height": 411,
+        "bytes": 24653,
+        "hash": "cc470932fe"
+      },
+      "full": {
+        "path": "composers/elgar-full.heic",
+        "width": 2917,
+        "height": 4000,
+        "bytes": 1852938,
+        "hash": "7d0baddd45"
+      }
+    },
     "composers/grieg": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Eilif_Peterssen_-_Portrait_of_the_Composer_Edvard_Grieg_-_NG.M.00396_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
       "color": "#1e1d15",
@@ -464,6 +489,31 @@
         "height": 1045,
         "bytes": 281356,
         "hash": "95518ca629"
+      }
+    },
+    "composers/sibelius": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Jean_Sibelius,_1913.jpg",
+      "color": "#626262",
+      "hero": {
+        "path": "composers/sibelius-hero.heic",
+        "width": 1800,
+        "height": 2400,
+        "bytes": 923206,
+        "hash": "30084c79c8"
+      },
+      "thumb": {
+        "path": "composers/sibelius-thumb.heic",
+        "width": 300,
+        "height": 400,
+        "bytes": 16640,
+        "hash": "c6c4f6a827"
+      },
+      "full": {
+        "path": "composers/sibelius-full.heic",
+        "width": 1872,
+        "height": 2496,
+        "bytes": 1248444,
+        "hash": "b7f73e3e22"
       }
     },
     "composers/tchaikovsky": {
@@ -1059,6 +1109,56 @@
         "hash": "86a3e92c34"
       }
     },
+    "paintings/dvorak-cello-concerto": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/1897_Slavi%C4%8Deck_Birkenstimmung_Nationalgalerie_Prag_anagoria.jpg",
+      "color": "#807265",
+      "hero": {
+        "path": "paintings/dvorak-cello-concerto-hero.heic",
+        "width": 2435,
+        "height": 1800,
+        "bytes": 810063,
+        "hash": "2150c46658"
+      },
+      "thumb": {
+        "path": "paintings/dvorak-cello-concerto-thumb.heic",
+        "width": 406,
+        "height": 300,
+        "bytes": 49529,
+        "hash": "7fd9d57620"
+      },
+      "full": {
+        "path": "paintings/dvorak-cello-concerto-full.heic",
+        "width": 4000,
+        "height": 2957,
+        "bytes": 1581941,
+        "hash": "1e73c53679"
+      }
+    },
+    "paintings/dvorak-string-quartet-12": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Theodore_Robinson_-_Canal_Scene_(1893).jpg",
+      "color": "#867a55",
+      "hero": {
+        "path": "paintings/dvorak-string-quartet-12-hero.heic",
+        "width": 2425,
+        "height": 1800,
+        "bytes": 1150744,
+        "hash": "f854f47139"
+      },
+      "thumb": {
+        "path": "paintings/dvorak-string-quartet-12-thumb.heic",
+        "width": 404,
+        "height": 300,
+        "bytes": 34051,
+        "hash": "3957c6d35b"
+      },
+      "full": {
+        "path": "paintings/dvorak-string-quartet-12-full.heic",
+        "width": 3200,
+        "height": 2375,
+        "bytes": 2313624,
+        "hash": "704c2f1b75"
+      }
+    },
     "paintings/dvorak-symphony-9": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Bierstadt_-_Among_the_Sierra_Nevada,_California_-_Google_Art_Project.jpg",
       "color": "#766559",
@@ -1082,6 +1182,31 @@
         "height": 2387,
         "bytes": 1519636,
         "hash": "4804ef5a1a"
+      }
+    },
+    "paintings/elgar-cello-concerto": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Nash,_Paul_-_We_are_Making_a_New_World_-_Google_Art_Project.jpg",
+      "color": "#564a36",
+      "hero": {
+        "path": "paintings/elgar-cello-concerto-hero.heic",
+        "width": 2299,
+        "height": 1800,
+        "bytes": 688633,
+        "hash": "95d422b611"
+      },
+      "thumb": {
+        "path": "paintings/elgar-cello-concerto-thumb.heic",
+        "width": 383,
+        "height": 300,
+        "bytes": 25331,
+        "hash": "5c0b49e278"
+      },
+      "full": {
+        "path": "paintings/elgar-cello-concerto-full.heic",
+        "width": 4000,
+        "height": 3132,
+        "bytes": 2036975,
+        "hash": "9a0df74cbd"
       }
     },
     "paintings/grieg-piano-concerto": {
@@ -1657,6 +1782,56 @@
         "height": 1872,
         "bytes": 1821185,
         "hash": "36c61d75c4"
+      }
+    },
+    "paintings/sibelius-symphony-5": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Bruno_Liljefors_-_Knobbelzwanen_op_avondtrek_-_0211_-_Rijksmuseum_Twenthe.jpg",
+      "color": "#91949b",
+      "hero": {
+        "path": "paintings/sibelius-symphony-5-hero.heic",
+        "width": 2606,
+        "height": 1800,
+        "bytes": 360569,
+        "hash": "2716b5ee66"
+      },
+      "thumb": {
+        "path": "paintings/sibelius-symphony-5-thumb.heic",
+        "width": 434,
+        "height": 300,
+        "bytes": 14082,
+        "hash": "fe0404623c"
+      },
+      "full": {
+        "path": "paintings/sibelius-symphony-5-full.heic",
+        "width": 4000,
+        "height": 2763,
+        "bytes": 1164712,
+        "hash": "dd783942e2"
+      }
+    },
+    "paintings/sibelius-violin-concerto": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Akseli_Gallen-Kallela_-_Lake_Keitele,_1905.JPG",
+      "color": "#8e969d",
+      "hero": {
+        "path": "paintings/sibelius-violin-concerto-hero.heic",
+        "width": 2309,
+        "height": 1800,
+        "bytes": 1477942,
+        "hash": "38e5e956f4"
+      },
+      "thumb": {
+        "path": "paintings/sibelius-violin-concerto-thumb.heic",
+        "width": 385,
+        "height": 300,
+        "bytes": 22836,
+        "hash": "095d76d617"
+      },
+      "full": {
+        "path": "paintings/sibelius-violin-concerto-full.heic",
+        "width": 4000,
+        "height": 3118,
+        "bytes": 4315353,
+        "hash": "603dab54b6"
       }
     },
     "paintings/tchaikovsky-piano-concerto-1": {

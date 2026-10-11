@@ -25,6 +25,7 @@ Definition: one or two sentences, written for the pop-over.
 | Fugato | A passage that begins like a fugue, then moves on | A passage that starts like a fugue, with instruments entering one by one on the same tune, without being a full fugue. |
 | Fugue | One tune entering voice by voice, woven against itself | A piece or section in which one tune enters in each voice in turn and is woven against itself. |
 | Glissando | A continuous slide from one note to another | A continuous slide from one note to another. |
+| Harmonics | High, glassy notes made by lightly touching a string | High, glassy, almost flute-like notes, made on a string instrument by touching the string lightly at certain points instead of pressing it down. |
 | Hemiola | Two bars of three beats regrouped into three pairs | A rhythmic shift in which two bars of three beats are accented as if they were three groups of two, so they sound like one long bar of three slow beats. The beat seems to stumble or stretch. |
 | Idée fixe | Berlioz's recurring melody that stands for a person | "Fixed idea": Berlioz's term for a melody that represents a person and returns throughout a piece. |
 | Krakowiak | A lively Polish dance from Kraków, with off-beat kicks | A fast Polish folk dance from the Kraków region, in two beats, with syncopated accents that kick against the beat. |
@@ -41,6 +42,7 @@ Definition: one or two sentences, written for the pop-over.
 | Ostinato | A short pattern repeated over and over | A short rhythm or melody repeated persistently, often underneath changing music. |
 | Passacaglia | A short theme repeated while the music around it changes | A form in which a short theme repeats over and over while the music around it keeps changing. |
 | Pedal note | One note held in the bass under changing harmony | A single note held or repeated, usually in the bass, while the harmony changes above it. |
+| Pentatonic scale | A five-note scale heard in folk music worldwide | A scale of five notes instead of the usual seven, with no semitone steps between them. It gives melodies an open, folk-like sound found in music all over the world. |
 | Pizzicato | Plucking the strings instead of using the bow | Plucking the strings of a string instrument with the finger instead of using the bow. |
 | Plainchant | Ancient unaccompanied church melody, in free rhythm | The ancient melody of the Western Church, sung without accompaniment in a free, speech-like rhythm by one voice or many in unison. Also called plainsong or Gregorian chant. |
 | Posthorn | A small valveless horn once blown on mail coaches | A small brass horn without valves, once blown by coachmen to announce the mail coach. It plays only a few notes, which gives it a simple, nostalgic sound. |

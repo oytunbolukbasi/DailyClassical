@@ -30,6 +30,7 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 - **11 Ekim 2026, Grup C** (5 eser + Haydn, Allegri): ilk tercih tablolar tutuldu. Allegri `renaissance`, "Senfoni: Yok". Yeni terimler: Counterpoint, Basset clarinet, Plainchant. Not: Jupiter tablosu (Hubert Robert, *Dikilitaş*) yalnızca 1952 px; daha büyük bir kaynak bulunursa değiştirilecek.
 - **11 Ekim 2026, Grup F** (5 eser + Schumann, Mendelssohn, Chopin): ilk tercih tablolar tutuldu (Courbet Chopin 2'de ve Çaykovski Keman'da farklı tablolarla). Mendelssohn portresi çerçeveli TIFF'ten, Kasprzycki tablosu altın çerçeve kenarından kırpıldı. Yeni terimler: Krakowiak, Nocturne.
 - **11 Ekim 2026, Grup G** (5 eser + Liszt, Grieg, Bruch): Çaykovski Keman referansı Chung → Hahn (kesintisiz final). Delacroix (Liszt) görselindeki koyu fon kırpıldı. Yeni terim: Thematic transformation.
+- **11 Ekim 2026, Grup H** (5 eser + Sibelius, Elgar): ilk tercih tablolar tutuldu. Nash (Elgar) AB'de 2017'den beri, ABD'de 1928 öncesi yayın olarak kamu malı. Elgar portresi cam negatif kenarı ve el yazısı notundan kırpıldı. Yeni terimler: Harmonics, Pentatonic scale.
 
 ## Eserler
 
@@ -72,11 +73,11 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 | tchaikovsky-piano-concerto-1 | G | piano-concerto | 3 | Martha Argerich / Kirill Kondrashin · Bavarian Radio Symphony Orchestra, 1980 | `0PzMgnYqwwSwPnSijeSKSb` | Alexei Savrasov, *The Rooks Have Returned* |  | Birleştirildi |
 | tchaikovsky-violin-concerto | G | violin-concerto | 3 | Hilary Hahn / Vasily Petrenko · Royal Liverpool Philharmonic Orchestra, 2008 | `5Iijzf1oBpKJwatVUb2P7o` | Gustave Courbet, *Panoramic View of the Alps, Les Dents du Midi* | ressam partide 2 kez | Birleştirildi |
 | bruch-violin-concerto-1 | G | violin-concerto | 3 | Anne-Sophie Mutter / Herbert von Karajan · Berliner Philharmoniker, 1980 | `4tdB1YoK6zCRCnnxQPP4dE` | Anselm Feuerbach, *Iphigenia* |  | Birleştirildi |
-| sibelius-symphony-5 | H | symphony | 3 | Colin Davis · Boston Symphony Orchestra, 1975 | `6oBoMHHi6wG9ZUpBHtkxgc` | Bruno Liljefors, *Mute Swans in Evening Flight* |  | Taslak |
-| sibelius-violin-concerto | H | violin-concerto | 3 | Hilary Hahn / Esa-Pekka Salonen · Swedish Radio Symphony Orchestra, 2008 | `0YHrFLfeGjkhEhYSCimYdB` | Akseli Gallen-Kallela, *Lake Keitele* |  | Taslak |
-| dvorak-cello-concerto | H | cello-concerto | 3 | Mstislav Rostropovich / Herbert von Karajan · Berliner Philharmoniker, 1968 | `0zwaTXZIMtLu2Y0vgbZDlQ` | Antonín Slavíček, *Birch Mood* |  | Taslak |
-| dvorak-string-quartet-12 | H | string-quartet | 4 | Pavel Haas Quartet, 2010 | `1DkQ0bddfB6GipbyL1DpvM` | Theodore Robinson, *Canal Scene* |  | Taslak |
-| elgar-cello-concerto | H | cello-concerto | 4 | Jacqueline du Pré / John Barbirolli · London Symphony Orchestra, 1965 | `5bE9xVTlVYE0N4147mcfb4` | Paul Nash, *We Are Making a New World* |  | Taslak |
+| sibelius-symphony-5 | H | symphony | 3 | Colin Davis · Boston Symphony Orchestra, 1975 | `6oBoMHHi6wG9ZUpBHtkxgc` | Bruno Liljefors, *Mute Swans in Evening Flight* |  | Birleştirildi |
+| sibelius-violin-concerto | H | violin-concerto | 3 | Hilary Hahn / Esa-Pekka Salonen · Swedish Radio Symphony Orchestra, 2008 | `0YHrFLfeGjkhEhYSCimYdB` | Akseli Gallen-Kallela, *Lake Keitele* |  | Birleştirildi |
+| dvorak-cello-concerto | H | cello-concerto | 3 | Mstislav Rostropovich / Herbert von Karajan · Berliner Philharmoniker, 1968 | `0zwaTXZIMtLu2Y0vgbZDlQ` | Antonín Slavíček, *Birch Mood* |  | Birleştirildi |
+| dvorak-string-quartet-12 | H | string-quartet | 4 | Pavel Haas Quartet, 2010 | `1DkQ0bddfB6GipbyL1DpvM` | Theodore Robinson, *Canal Scene* |  | Birleştirildi |
+| elgar-cello-concerto | H | cello-concerto | 4 | Jacqueline du Pré / John Barbirolli · London Symphony Orchestra, 1965 | `5bE9xVTlVYE0N4147mcfb4` | Paul Nash, *We Are Making a New World* |  | Birleştirildi |
 | vivaldi-four-seasons-spring | I | violin-concerto | 3 | Simon Standage / Trevor Pinnock · The English Concert, 1982 | `5tgFFNHTrkzpihDgYvpXEL` | Jean-Antoine Watteau, *Fêtes vénitiennes* |  | Taslak |
 | bach-brandenburg-concerto-5 | I | concerto | 3 | Trevor Pinnock / Trevor Pinnock · The English Concert, 1982 | `3N0xJn1EFWr5GLuslWdBQy` | Adolph Menzel, *The Flute Concert of Frederick the Great at Sanssouci* | ressam partide 3 kez | Taslak |
 | franck-violin-sonata | I | sonata | 4 | Itzhak Perlman, 1969 | `5HaEcNyN82ue3NHkqIBVQu` | Fernand Khnopff, *Listening to Schumann* | ressam partide 2 kez | Taslak |

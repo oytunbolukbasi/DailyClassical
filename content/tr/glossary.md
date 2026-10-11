@@ -25,6 +25,7 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Fugato | Fugato | Füg gibi başlayıp sonra başka yöne giden pasaj | Füg gibi, çalgıların aynı ezgiyle tek tek girmesiyle başlayan ama tam bir füg olmayan pasaj. |
 | Fugue | Füg | Seslere sırayla girip kendisiyle örülen tek ezgi | Tek bir ezginin sırayla her seste girdiği ve kendi kendisiyle örüldüğü bir eser ya da kısım. |
 | Glissando | Glissando | Bir notadan ötekine kesintisiz kayış | Bir notadan ötekine kesintisiz bir kayış. |
+| Harmonics | Flajole | Teli hafifçe dokunarak çıkarılan tiz, camsı sesler | Yaylı bir çalgıda teli bastırmak yerine belirli noktalarına hafifçe dokunarak çıkarılan, neredeyse flüte benzeyen tiz, camsı sesler. |
 | Hemiola | Hemiola | Üç vuruşlu iki ölçünün üç ikiliye bölünmesi | Üç vuruşlu iki ölçünün, sanki üç tane ikili grupmuş gibi vurgulanması; böylece iki ölçü, üç yavaş vuruşlu tek bir uzun ölçü gibi duyulur. Vuruş sanki tökezler ya da uzar. |
 | Idée fixe | İdée fixe | Berlioz'un bir kişiyi temsil eden, dönüp duran melodisi | "Saplantılı fikir": Berlioz'un, bir kişiyi temsil eden ve eser boyunca geri dönen bir melodi için kullandığı terim. |
 | Krakowiak | Krakowiak | Krakov'dan, vuruş dışı vurgulu canlı bir Polonya dansı | Krakov yöresinden, iki vuruşlu, hızlı bir Polonya halk dansı; senkoplu vurguları vuruşa karşı tekme atar gibidir. |
@@ -41,6 +42,7 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Ostinato | Ostinato | Durmadan yinelenen kısa bir kalıp | Çoğu zaman değişen bir müziğin altında ısrarla tekrarlanan kısa bir ritim ya da ezgi. |
 | Passacaglia | Passacaglia | Çevresi değişirken durmadan yinelenen kısa tema | Kısa bir temanın durmadan tekrarlandığı, çevresindeki müziğin ise sürekli değiştiği bir biçim. |
 | Pedal note | Pedal sesi | Değişen armoninin altında basta tutulan tek nota | Üstündeki armoni değişirken, genellikle basta tutulan ya da tekrarlanan tek bir nota. |
+| Pentatonic scale | Pentatonik dizi | Dünyanın her yerinde halk müziğinde duyulan beş sesli dizi | Alışılmış yedi yerine beş notadan oluşan, aralarında yarım ses adımı bulunmayan dizi. Ezgilere, dünyanın dört bir yanındaki müziklerde duyulan açık, halk ezgisi gibi bir tını verir. |
 | Pizzicato | Pizzicato | Telleri yay yerine parmakla koparmak | Yaylı bir çalgının tellerini yay yerine parmakla koparmak. |
 | Plainchant | Gregoryen ilahi | Eşliksiz, serbest ritimli eski kilise ezgisi | Batı Kilisesi'nin eşliksiz, konuşmaya yakın serbest bir ritimle, tek bir sesle ya da birçok sesin aynı notaları söylemesiyle okunan eski ezgisi. Düz şarkı (plainsong) ya da Gregoryen ilahi olarak da bilinir. |
 | Posthorn | Posta borusu | Posta arabalarında çalınan küçük, pistonsuz boru | Pistonsuz, küçük bir bakır boru; eskiden arabacılar posta arabasının gelişini duyurmak için çalardı. Yalnızca birkaç nota çalabildiği için sade, nostaljik bir sesi vardır. |

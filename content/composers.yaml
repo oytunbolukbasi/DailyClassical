@@ -871,3 +871,94 @@
     thumb: { width: 300, height: 324, bytes: 26797 }
     full: { width: 2147, height: 2321, bytes: 795502 }
     placeholder_color: "#b2b2b2"
+
+- id: sibelius
+  match: Jean Sibelius
+  sort_name: Sibelius, Jean
+  born: 1865
+  died: 1957
+  era: late_romantic
+  names:
+    en: { name: Jean Sibelius, short: Sibelius }
+    tr: { name: Jean Sibelius, short: Sibelius }
+  nationality: { en: Finnish, tr: Fin }
+  facts:
+    born: { en: "8 December 1865, Hämeenlinna", tr: "8 Aralık 1865, Hämeenlinna" }
+    died: { en: "20 September 1957, Järvenpää", tr: "20 Eylül 1957, Järvenpää" }
+    symphonies: { en: "Seven", tr: "Yedi" }
+    best_known_for: { en: "*Finlandia*, the Violin Concerto, seven symphonies", tr: "*Finlandia*, Keman Konçertosu, yedi senfonisi" }
+  bio:
+    en: |-
+      Sibelius was born in 1865 in Hämeenlinna, a small town in Finland, then a grand duchy of the Russian Empire. His father, a doctor, died when he was two, and he grew up in a Swedish-speaking household of women. He took up the violin as a boy and longed to become a great soloist, until he had to admit that he had started too late. After studying in Helsinki, Berlin and Vienna, he made his name in 1892 with *Kullervo*, a choral symphony based on the *Kalevala*, Finland’s national epic. That same year he married Aino Järnefelt.
+
+      His music soon became bound up with Finland’s resistance to Russian rule: the last of a set of patriotic tableaux he wrote in 1899 became *Finlandia*. A state grant from 1898 let him concentrate on composing, and in 1904 the family moved to Ainola, a house by Lake Tuusula north of Helsinki, which remained his home. There he wrote the Violin Concerto, most of his seven symphonies and tone poems such as *Tapiola* (1926), music in which large shapes grow slowly out of very small ideas.
+
+      After *Tapiola* and his music for *The Tempest* he published almost nothing more. This long retirement became known as the “silence of Järvenpää”. He worked for years on an Eighth Symphony, but it never appeared, and in the 1940s he burned many of his manuscripts. He died at Ainola on 20 September 1957, aged 91; at that moment his Fifth Symphony was being broadcast on the radio from Helsinki.
+    tr: |-
+      Sibelius 1865’te, o sırada Rus İmparatorluğu’na bağlı bir grandük olan Finlandiya’nın küçük bir kasabası Hämeenlinna’da doğdu. Doktor olan babası o iki yaşındayken öldü; İsveççe konuşulan, kadınlardan oluşan bir evde büyüdü. Çocukken kemana başladı ve büyük bir solist olmayı çok istedi, ta ki bu eğitime çok geç başladığını kabul etmek zorunda kalana dek. Helsinki, Berlin ve Viyana’da öğrenim gördükten sonra 1892’de, Finlandiya’nın ulusal destanı *Kalevala*’ya dayanan koro senfonisi *Kullervo* ile adını duyurdu. Aynı yıl Aino Järnefelt’le evlendi.
+
+      Müziği kısa sürede Finlandiya’nın Rus yönetimine direnişiyle özdeşleşti: 1899’da yazdığı bir dizi yurtsever tablonun sonuncusu *Finlandia* oldu. 1898’de bağlanan bir devlet ödeneği bestelemeye yoğunlaşmasını sağladı; 1904’te aile, Helsinki’nin kuzeyinde Tuusula Gölü kıyısındaki Ainola adlı eve taşındı ve burası onun evi olarak kaldı. Keman Konçertosu’nu, yedi senfonisinin çoğunu ve *Tapiola* (1926) gibi senfonik şiirleri burada yazdı; bu müzikte büyük biçimler çok küçük fikirlerden yavaş yavaş filizlenir.
+
+      *Tapiola*’dan ve *Fırtına* için yazdığı müzikten sonra neredeyse hiçbir şey yayımlamadı. Bu uzun çekilme “Järvenpää sessizliği” olarak anıldı. Yıllarca bir Sekizinci Senfoni üzerinde çalıştı ama eser hiç ortaya çıkmadı; 1940’larda pek çok elyazmasını yaktı. 20 Eylül 1957’de, 91 yaşında Ainola’da öldü; o sırada radyoda Helsinki’den Beşinci Senfonisi yayınlanıyordu.
+  portrait:
+    artist: { en: Daniel Nyblin, tr: Daniel Nyblin }
+    title: { en: Jean Sibelius, tr: Jean Sibelius }
+    year: "1913"
+    collection: null
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Jean_Sibelius,_1913.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Jean_Sibelius,_1913.jpg
+    width: 1872
+    height: 2496
+    license: Public domain (photographer d. 1923, PD-old-auto-expired; published in the US in 1913)
+    focal_y: 0.2
+    hero: { width: 1800, height: 2400, bytes: 923206 }
+    thumb: { width: 300, height: 400, bytes: 16640 }
+    full: { width: 1872, height: 2496, bytes: 1248444 }
+    placeholder_color: "#626262"
+
+- id: elgar
+  match: Edward Elgar
+  sort_name: Elgar, Edward
+  born: 1857
+  died: 1934
+  era: late_romantic
+  names:
+    en: { name: Edward Elgar, short: Elgar }
+    tr: { name: Edward Elgar, short: Elgar }
+  nationality: { en: English, tr: İngiliz }
+  facts:
+    born: { en: "2 June 1857, Lower Broadheath", tr: "2 Haziran 1857, Lower Broadheath" }
+    died: { en: "23 February 1934, Worcester", tr: "23 Şubat 1934, Worcester" }
+    symphonies: { en: "Two (a third completed from his sketches by Anthony Payne)", tr: "İki (üçüncüsü eskizlerinden Anthony Payne tarafından tamamlandı)" }
+    best_known_for: { en: "*Enigma Variations*, Cello Concerto, *Pomp and Circumstance* marches", tr: "*Enigma Varyasyonları*, Viyolonsel Konçertosu, *Pomp and Circumstance* marşları" }
+  bio:
+    en: |-
+      Elgar was born in 1857 in Lower Broadheath, a village near Worcester, the son of a piano tuner who kept a music shop in the city. Apart from piano and violin lessons, he was almost entirely self-taught. For years he earned his living locally: teaching, playing the violin in festival orchestras, conducting, and writing music for whatever ensembles were at hand, from a wind quintet to the band of a nearby asylum. In 1889 he married Caroline Alice Roberts, a general’s daughter eight years older than him, whose family disapproved of the match. She became his business manager and a perceptive critic of his music.
+
+      Success came late. In 1899, at 42, the *Enigma Variations*, a set of musical portraits of his friends, made his name, and *The Dream of Gerontius* followed in 1900. He was knighted in 1904. His First Symphony (1908) was played around a hundred times in little more than a year, and the Violin Concerto followed in 1910. During the First World War “Land of Hope and Glory”, sung to a tune from his first *Pomp and Circumstance* march, grew more popular than ever, though Elgar wished in vain for less nationalistic words.
+
+      After the war his music went out of fashion. In a cottage in the Sussex woods he wrote three chamber works and then the Cello Concerto (1919), his last major work. Alice died in 1920 and he completed no more large-scale pieces, though he became one of the first composers to take the gramophone seriously, recording much of his own music, and in 1924 was made Master of the King’s Music. He died in Worcester in 1934, leaving sketches for a Third Symphony that the composer Anthony Payne later completed.
+    tr: |-
+      Elgar 1857’de Worcester yakınlarındaki Lower Broadheath köyünde doğdu; babası, şehirde bir müzik dükkânı işleten bir piyano akortçusuydu. Piyano ve keman derslerinin dışında neredeyse tamamen kendi kendini yetiştirdi. Yıllarca geçimini yöresinde sağladı: ders verdi, festival orkestralarında keman çaldı, şeflik yaptı ve eldeki her topluluk için, bir üflemeli beşliden yakındaki bir akıl hastanesinin bandosuna kadar, müzik yazdı. 1889’da kendisinden sekiz yaş büyük bir general kızı olan Caroline Alice Roberts’la evlendi; Alice’in ailesi bu evliliğe karşıydı. Alice onun işlerini yöneten kişi ve müziğinin keskin gözlü bir eleştirmeni oldu.
+
+      Başarı geç geldi. 1899’da, 42 yaşındayken, dostlarının müzikal portrelerinden oluşan *Enigma Varyasyonları* onu tanıttı; 1900’de *Gerontius’un Rüyası* izledi. 1904’te şövalye unvanı aldı. Birinci Senfonisi (1908) bir yıldan biraz uzun bir sürede yüze yakın kez çalındı; 1910’da Keman Konçertosu geldi. Birinci Dünya Savaşı sırasında, ilk *Pomp and Circumstance* marşındaki bir ezgiyle söylenen “Land of Hope and Glory” her zamankinden popüler oldu; Elgar ise boşuna daha az milliyetçi sözler istedi.
+
+      Savaştan sonra müziği modası geçmiş sayıldı. Sussex ormanlarındaki bir kulübede üç oda müziği eseri, ardından son büyük eseri Viyolonsel Konçertosu’nu (1919) yazdı. Alice 1920’de öldü ve Elgar bir daha büyük ölçekli bir eser tamamlamadı; yine de gramofonu ciddiye alan ilk bestecilerden biri olarak kendi müziğinin çoğunu kaydetti ve 1924’te Kralın Müzik Ustası (Master of the King’s Music) oldu. 1934’te Worcester’da öldü; geride bıraktığı Üçüncü Senfoni eskizlerini besteci Anthony Payne sonradan tamamladı.
+  portrait:
+    # Master in the originals cache is CROPPED (glass-negative border and handwritten caption):
+    # elgar.source.jpg cropped to 3069 × 4208 at offset 316,379. Do not pass --refresh for this id.
+    artist: { en: Bain News Service, tr: Bain News Service }
+    title: { en: Sir Edward Elgar, tr: Sir Edward Elgar }
+    # Published in US newspapers in May 1924 (Keystone View Co. print); the sitting date is unknown.
+    year: "1924"
+    collection: { en: "Library of Congress, Washington, D.C.", tr: "Kongre Kütüphanesi, Washington" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Sir_Edw._Elgar_LCCN2014716700.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Sir_Edw._Elgar_LCCN2014716700.jpg
+    width: 3069
+    height: 4208
+    license: Public domain (PD-Bain; Library of Congress, no known restrictions on publication)
+    focal_y: 0.15
+    hero: { width: 1800, height: 2468, bytes: 846756 }
+    thumb: { width: 300, height: 411, bytes: 24653 }
+    full: { width: 2917, height: 4000, bytes: 1852938 }
+    placeholder_color: "#5e5e5e"
