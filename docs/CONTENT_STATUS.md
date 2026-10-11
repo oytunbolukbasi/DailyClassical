@@ -13,11 +13,11 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 ## Birleştirmeden önce çözülecekler (bütün parti)
 
 - ~~**Rönesans dönemi**~~ **Çözüldü (11 Ekim):** `renaissance` backend'e (migration 0011) ve uygulamaya eklendi. Yayındaki 1.0.0 bilinmeyen dönemi "Diğer" gösteriyor (çökmüyor); bir sonraki build'de "Rönesans".
-- **Sözlük:** Yeni terimler (Attacca, Trill, Double stop, Ostinato, Hemiola, Leitmotif, Counterpoint, Ritornello, Continuo…). Birkaç grup aynı terimi önerdi; her biri bir kez eklenecek.
-- **Yeni besteciler (19):** haydn, allegri, bruckner, schumann, mendelssohn, chopin, liszt, grieg, bruch, sibelius, elgar, vivaldi, bach, franck, tallis, smetana, debussy, ravel, rimsky-korsakov, wagner. Girdileri `.shared.md`'lerde. Elgar ve Mendelssohn portreleri kırpma ister.
+- ~~**Sözlük**~~ **Çözüldü:** 28 yeni terim, her biri bir kez (toplam 69).
+- ~~**Yeni besteciler**~~ **Çözüldü:** 20 yeni besteci eklendi (portreler kırpıldı; Tallis portresiz).
 - ~~**Lisans**~~ **Çözüldü:** Khnopff yerine Hammershøi. Spitzweg kaldı: kamu malı bir tablonun aslına sadık fotoğrafı AB'de (DSM md. 14) ve ABD'de yeni hak doğurmuyor (Molitor girdisindeki gibi); fotoğrafçı künyede anılıyor. Not: yayındaki uygulama CC lisanslı *tablo* fotoğraflarının künyesini göstermiyor (yalnızca portrelerde); bu yüzden tablolarda kamu malı ya da bu ilkeye uyan görseller kullanılıyor.
 - ~~**Çaykovski Keman Konçertosu**~~ **Çözüldü:** Chung'ın finali (9:29) kesintili görünüyor; referans kesintisiz Hahn / Petrenko (DG 2008) oldu, duraklar orantılı kaydırıldı.
-- **Spotify Türkiye erişimi:** 50 albüm toplu kontrol edilecek.
+- **Spotify Türkiye erişimi (11 Ekim kontrol edildi):** 64 referans albüm Türkiye'den denendi. Üç eserin parçaları Türkiye'de kapalı (COUNTRY_RESTRICTED): Allegri *Miserere* (albümün tamamı), Beethoven "İmparator" (1. bölüm), **Mozart 40 (yayında, finali kapalı)**. Bunlar için Türkiye'de çalan kayıtlar seçiliyor. Diğer 61 eserin bütün parçaları çalıyor.
 - **Mahler 3 (6 bölüm):** Bölüm seçicideki daraltma bir sonraki build'de. O build yayında olmadan takvime girmeyecek.
 - **Duraklar:** Hepsi tahmini (≈); her eser takvime girmeden kulakla zamanlanacak (`retime-needed.md`).
 
@@ -32,6 +32,8 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 - **11 Ekim 2026, Grup G** (5 eser + Liszt, Grieg, Bruch): Çaykovski Keman referansı Chung → Hahn (kesintisiz final). Delacroix (Liszt) görselindeki koyu fon kırpıldı. Yeni terim: Thematic transformation.
 - **11 Ekim 2026, Grup H** (5 eser + Sibelius, Elgar): ilk tercih tablolar tutuldu. Nash (Elgar) AB'de 2017'den beri, ABD'de 1928 öncesi yayın olarak kamu malı. Elgar portresi cam negatif kenarı ve el yazısı notundan kırpıldı. Yeni terimler: Harmonics, Pentatonic scale.
 - **11 Ekim 2026, Grup I** (5 eser + Vivaldi, Bach, Franck, Tallis, Smetana): Vltava için özel koleksiyondaki Schikaneder yerine Prag Ulusal Galerisi'ndeki Braunerová (*Roztoky'de Vltava Koyu*, ahşap üzerine yağlı boya). Franck ve Vivaldi portrelerinin kâğıt kenarları kırpıldı. Tallis portresiz (yaşarken yapılmış portresi yok), dönemi `renaissance`. Yeni terimler: Continuo, Drone, Ritornello, Cyclic form, Motet, Polyphony, Symphonic poem.
+- **11 Ekim 2026, Grup J** (5 eser + Debussy, Ravel, Rimsky-Korsakov, Wagner): Bellotto Kuvartet 8'de kaldı (1760'ta yıkılan Dresden kilisesi, eser 1960'ta Dresden'de yazıldı); Mozart 21 Bellotto → Fragonard, *Salıncak*. Yeni terimler: Leitmotif, Tristan chord, DSCH.
+- **Parti tamamlandı (11 Ekim 2026):** 50 eserin hepsi birleşti; katalog 64 eser, 69 terim, 29 besteci. Aynı tablo iki kez yok; 6 ressam iki farklı tabloyla. Taslak klasörü kaldırıldı.
 
 ## Eserler
 
@@ -48,7 +50,7 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 | beethoven-piano-sonata-23 | B | piano-sonata | 3 | Emil Gilels, 1973 | `3O9HUGtcDizohPdj12wmVh` | Johan Christian Dahl, *An Eruption of Vesuvius* |  | Birleştirildi |
 | beethoven-string-quartet-15 | B | string-quartet | 5 | Takács Quartet, 2004 | `6tFl4rPDztyza1TSAOZP8i` | John Constable, *Salisbury Cathedral from the Bishop's Garden* | ressam partide 2 kez | Birleştirildi |
 | mozart-piano-sonata-11 | B | piano-sonata | 3 | Mitsuko Uchida, 1983 | `36ZImQlSkxKd7FGSiICpEf` | Jean Baptiste Vanmour, *Cornelis Calkoen on his Way to his Audience with Sultan Ahmed III* |  | Birleştirildi |
-| mozart-piano-concerto-21 | B | piano-concerto | 3 | Géza Anda / Géza Anda · Camerata Academica des Mozarteums Salzburg, 1961 | `1YEd3qxJpi1SGJFQFqcqKC` | Bernardo Bellotto, *Vienna Viewed from the Belvedere Palace* | ressam partide 2 kez | Birleştirildi |
+| mozart-piano-concerto-21 | B | piano-concerto | 3 | Géza Anda / Géza Anda · Camerata Academica des Mozarteums Salzburg, 1961 | `1YEd3qxJpi1SGJFQFqcqKC` | Jean-Honoré Fragonard, *The Swing* | (Bellotto'dan değişti) | Birleştirildi |
 | mozart-symphony-41 | C | symphony | 4 | Sir Charles Mackerras · Scottish Chamber Orchestra, 2008 | `0MNU78TPr4GbVdgRBsBL6L` | Hubert Robert, *The Obelisk* |  | Birleştirildi |
 | mozart-clarinet-concerto | C | concerto | 3 | Thea King / Jeffrey Tate · English Chamber Orchestra, 1986 | `3UemBU0csyQmjZNyiU7c8R` | Joseph Wright of Derby, *Italian Landscape with Mountains and a River* |  | Birleştirildi |
 | haydn-symphony-94 | C | symphony | 4 | Sir Colin Davis · Royal Concertgebouw Orchestra, 1982 | `2FNZ21rGfvoYz953jd6Tda` | Thomas Rowlandson, *Vauxhall Gardens* |  | Birleştirildi |
@@ -84,8 +86,8 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 | franck-violin-sonata | I | sonata | 4 | Itzhak Perlman, 1969 | `5HaEcNyN82ue3NHkqIBVQu` | Fernand Khnopff, *Listening to Schumann* | ressam partide 2 kez | Birleştirildi |
 | tallis-spem-in-alium | I | choral | 1 | Peter Phillips, 1985 | `7BdRzzRBSBvoin2yIveUmn` | Jacopo Tintoretto, *Paradise* |  | Birleştirildi |
 | smetana-vltava | I | orchestral | 1 | Rafael Kubelík · Boston Symphony Orchestra, 1971 | `2wnHlBJhXW9dQn5I2s8KxM` | Zdenka Braunerová, *Backwater of the Vltava at Roztoky* | (Schikaneder'den değişti) | Birleştirildi |
-| debussy-la-mer | J | orchestral | 3 | Herbert von Karajan · Berliner Philharmoniker, 1964 | `7nI7p3GS9ENddrxwqk4LSJ` | Katsushika Hokusai, *Under the Wave off Kanagawa (The Great Wave)* |  | Taslak |
-| ravel-bolero | J | orchestral | 1 | Charles Dutoit · Orchestre symphonique de Montréal, 1982 | `07g1hfGy288giLhTE18BHS` | John Singer Sargent, *El Jaleo* |  | Taslak |
-| rimsky-korsakov-scheherazade | J | orchestral | 4 | Steven Staryk / Sir Thomas Beecham · Royal Philharmonic Orchestra, 1958 | `12gqWnkhIOszwytW6jKcMY` | Ivan Aivazovsky, *The Ninth Wave* |  | Taslak |
-| wagner-tristan-prelude-and-liebestod | J | orchestral | 2 | Jessye Norman / Herbert von Karajan · Wiener Philharmoniker, 1988 | `5HgHc9L8xbEpR8d9pCAgwa` | Rogelio de Egusquiza, *Tristan and Isolde (Death)* |  | Taslak |
-| shostakovich-string-quartet-8 | J | string-quartet | 5 | Pavel Haas Quartet, 2019 | `7hiFEJ0rzYwRqrexmLRsAI` | Bernardo Bellotto, *The Ruins of the Old Kreuzkirche in Dresden* | ressam partide 2 kez | Taslak |
+| debussy-la-mer | J | orchestral | 3 | Herbert von Karajan · Berliner Philharmoniker, 1964 | `7nI7p3GS9ENddrxwqk4LSJ` | Katsushika Hokusai, *Under the Wave off Kanagawa (The Great Wave)* |  | Birleştirildi |
+| ravel-bolero | J | orchestral | 1 | Charles Dutoit · Orchestre symphonique de Montréal, 1982 | `07g1hfGy288giLhTE18BHS` | John Singer Sargent, *El Jaleo* |  | Birleştirildi |
+| rimsky-korsakov-scheherazade | J | orchestral | 4 | Steven Staryk / Sir Thomas Beecham · Royal Philharmonic Orchestra, 1958 | `12gqWnkhIOszwytW6jKcMY` | Ivan Aivazovsky, *The Ninth Wave* |  | Birleştirildi |
+| wagner-tristan-prelude-and-liebestod | J | orchestral | 2 | Jessye Norman / Herbert von Karajan · Wiener Philharmoniker, 1988 | `5HgHc9L8xbEpR8d9pCAgwa` | Rogelio de Egusquiza, *Tristan and Isolde (Death)* |  | Birleştirildi |
+| shostakovich-string-quartet-8 | J | string-quartet | 5 | Pavel Haas Quartet, 2019 | `7hiFEJ0rzYwRqrexmLRsAI` | Bernardo Bellotto, *The Ruins of the Old Kreuzkirche in Dresden* |  | Birleştirildi |

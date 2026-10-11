@@ -1174,3 +1174,179 @@
     thumb: { width: 300, height: 390, bytes: 14094 }
     full: { width: 3078, height: 4000, bytes: 1375854 }
     placeholder_color: "#777777"
+
+- id: debussy
+  match: Claude Debussy
+  sort_name: Debussy, Claude
+  born: 1862
+  died: 1918
+  era: late_romantic
+  names:
+    en: { name: Claude Debussy, short: Debussy }
+    tr: { name: Claude Debussy, short: Debussy }
+  nationality: { en: French, tr: Fransız }
+  facts:
+    born: { en: "22 August 1862, Saint-Germain-en-Laye", tr: "22 Ağustos 1862, Saint-Germain-en-Laye" }
+    died: { en: "25 March 1918, Paris", tr: "25 Mart 1918, Paris" }
+    symphonies: { en: "None", tr: "Yok" }
+    best_known_for: { en: "*Prélude à l'après-midi d'un faune*, *La mer*, piano music", tr: "*Bir Faunun Öğleden Sonrası’na Prelüd*, *Deniz*, piyano eserleri" }
+  bio:
+    en: |-
+      Debussy was born in 1862 in Saint-Germain-en-Laye, outside Paris, into a family of modest means with little interest in the arts. His talent at the piano won him a place at the Paris Conservatoire at the age of ten. There he discovered that he cared more about inventing new harmonies than about following the rules, which his teachers did not appreciate. All the same, in 1884 he won the Prix de Rome, France's most prestigious prize for young composers, and spent two unhappy years at the Villa Medici in Rome.
+
+      Back in Paris he fell under Wagner's spell, travelling to Bayreuth in 1888 and 1889, and then worked hard to free himself from it. At the 1889 World's Fair in Paris he heard a Javanese gamelan orchestra, whose shimmering sounds and scales stayed with him. His *Prélude à l'après-midi d'un faune* (1894) opened a new chapter in music; Pierre Boulez later said that modern music was awakened by it. Fame came in 1902, when he was nearly forty, with his only completed opera, *Pelléas et Mélisande*.
+
+      His private life caused a scandal in 1904, when he left his wife for Emma Bardac; their daughter, Claude-Emma, known as Chouchou, was born in 1905, the year of *La mer*. He went on to write the orchestral *Images* and two books of piano *Préludes*, and he always rejected the label "Impressionist". He died of cancer in Paris on 25 March 1918, while the city was under German bombardment.
+    tr: |-
+      Debussy 1862’de, Paris’in hemen dışındaki Saint-Germain-en-Laye’de, sanatla pek ilgisi olmayan, mütevazı bir ailede doğdu. Piyanodaki yeteneği ona on yaşında Paris Konservatuvarı’nın kapılarını açtı. Orada kurallara uymaktan çok yeni armoniler bulmayı sevdiğini fark etti; hocaları bundan pek hoşnut değildi. Yine de 1884’te genç besteciler için Fransa’nın en saygın ödülü olan Roma Ödülü’nü kazandı ve Roma’daki Villa Medici’de mutsuz geçen iki yıl geçirdi.
+
+      Paris’e döndüğünde Wagner’in büyüsüne kapıldı, 1888 ve 1889’da Bayreuth’a gitti; sonra bu etkiden kurtulmak için çok uğraştı. 1889 Paris Dünya Fuarı’nda dinlediği Cava gamelan orkestrasının ışıldayan sesleri ve dizileri aklından hiç çıkmadı. *Bir Faunun Öğleden Sonrası’na Prelüd* (1894) müzikte yeni bir sayfa açtı; Pierre Boulez yıllar sonra modern müziğin bu eserle uyandığını söyleyecekti. Ün, kırk yaşına yaklaşırken, 1902’de tamamlayabildiği tek operası *Pelléas ve Mélisande* ile geldi.
+
+      1904’te karısını Emma Bardac için terk etmesi bir skandala yol açtı; kızları Claude-Emma, nam-ı diğer Chouchou, *Deniz*’in yazıldığı 1905 yılında doğdu. Ardından orkestra için *Imajlar*’ı ve iki kitaplık piyano *Prelüdler*’ini yazdı; “empresyonist” etiketini ise hep reddetti. 25 Mart 1918’de, Paris Alman bombardımanı altındayken, kanserden öldü.
+  portrait:
+    artist: Marcel Baschet
+    title: { en: Portrait of Claude Debussy, tr: Claude Debussy’nin Portresi }
+    year: "1884"
+    collection: { en: "Musée d'Orsay, Paris", tr: "Musée d'Orsay, Paris" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Claude_Debussy,_portrait_by_Marcel_Baschet_(1884).jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Claude_Debussy,_portrait_by_Marcel_Baschet_(1884).jpg
+    width: 5520
+    height: 6547
+    license: Public domain (PD-Art, PD-old-auto-expired; painter d. 1941)
+    focal_y: 0.3
+    hero: { width: 1800, height: 2135, bytes: 543033 }
+    thumb: { width: 300, height: 356, bytes: 13621 }
+    full: { width: 3373, height: 4000, bytes: 1942408 }
+    placeholder_color: "#3e3a33"
+
+- id: ravel
+  match: Maurice Ravel
+  sort_name: Ravel, Maurice
+  born: 1875
+  died: 1937
+  era: modern
+  names:
+    en: { name: Maurice Ravel, short: Ravel }
+    tr: { name: Maurice Ravel, short: Ravel }
+  nationality: { en: French, tr: Fransız }
+  facts:
+    born: { en: "7 March 1875, Ciboure", tr: "7 Mart 1875, Ciboure" }
+    died: { en: "28 December 1937, Paris", tr: "28 Aralık 1937, Paris" }
+    symphonies: { en: "None", tr: "Yok" }
+    best_known_for: { en: "*Boléro*, *Daphnis et Chloé*, piano music", tr: "*Bolero*, *Daphnis ve Khloe*, piyano eserleri" }
+  bio:
+    en: |-
+      Ravel was born in 1875 in Ciboure, a Basque town in south-west France about eleven miles from the Spanish border. His mother was Basque; his father was an engineer and inventor from near the Swiss border. The family moved to Paris when Maurice was three months old, and he grew up there, studying at the Paris Conservatoire. The conservative establishment never warmed to him: he tried five times for the Prix de Rome, and his elimination in 1905, by then an established composer, caused a public scandal.
+
+      He worked slowly and with great care, and many of his pieces exist twice, first for piano and later for orchestra. He became one of the great masters of orchestration: *Daphnis et Chloé* (1912), written for Diaghilev's Ballets Russes, and his orchestral version of Mussorgsky's *Pictures at an Exhibition* (1922) are showpieces for any orchestra. When war came in 1914 he insisted on serving, and in 1915, aged forty, he became an army lorry driver, carrying munitions at night under bombardment. His piano suite *Le Tombeau de Couperin* honours friends killed in the war, one in each movement.
+
+      By the 1920s he was regarded as France's greatest living composer. In 1928 he toured North America for four months, and that same year wrote *Boléro*, which made him more famous than ever, to his own surprise. He wrote no symphonies, but two piano concertos, two operas, ballets, chamber music and songs. From the early 1930s a neurological illness slowly took away his ability to write. He died in Paris on 28 December 1937, after brain surgery, aged 62.
+    tr: |-
+      Ravel 1875’te, Fransa’nın güneybatısında, İspanya sınırına 18 kilometre uzaklıktaki Bask kasabası Ciboure’da doğdu. Annesi Bask’tı; babası İsviçre sınırına yakın bir yerden gelen bir mühendis ve mucitti. Maurice üç aylıkken aile Paris’e taşındı; orada büyüdü ve Paris Konservatuvarı’nda okudu. Tutucu çevreler onu hiçbir zaman benimsemedi: Roma Ödülü’nü beş kez denedi ve artık tanınmış bir besteciyken 1905’te elenmesi kamuoyunda bir skandala dönüştü.
+
+      Ağır ve büyük bir özenle çalışırdı; eserlerinin çoğu iki kez vardır, önce piyano için, sonra orkestra için. Orkestrasyonun büyük ustalarından biri oldu: Diaghilev’in Rus Baleleri için yazdığı *Daphnis ve Khloe* (1912) ve Musorgski’nin *Bir Sergiden Tablolar*’ı için yaptığı orkestra düzenlemesi (1922) her orkestranın vitrin eserleridir. 1914’te savaş başlayınca askere gitmekte ısrar etti ve 1915’te, kırk yaşında, ordu kamyonu sürücüsü oldu; geceleri bombardıman altında cephane taşıdı. Piyano süiti *Couperin’in Mezarı*’nın her bölümü, savaşta ölen bir dostunun anısına adanmıştır.
+
+      1920’lerde Fransa’nın yaşayan en büyük bestecisi sayılıyordu. 1928’de Kuzey Amerika’da dört aylık bir turneye çıktı ve aynı yıl yazdığı *Bolero*, onu kendisini de şaşırtacak kadar ünlü yaptı. Hiç senfoni yazmadı; ama iki piyano konçertosu, iki opera, baleler, oda müziği ve şarkılar bıraktı. 1930’ların başından itibaren nörolojik bir hastalık, yazma yeteneğini yavaş yavaş elinden aldı. 28 Aralık 1937’de Paris’te, bir beyin ameliyatının ardından, 62 yaşında öldü.
+  portrait:
+    artist: { en: Unknown photographer, tr: Fotoğrafçısı bilinmiyor }
+    title: { en: Maurice Ravel, tr: Maurice Ravel }
+    year: "1925"
+    collection: { en: "Bibliothèque nationale de France, Paris", tr: "Bibliothèque nationale de France, Paris" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Maurice_Ravel_1925.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Maurice_Ravel_1925.jpg
+    width: 2880
+    height: 3840
+    license: Public domain (anonymous photograph published 1925; PD-EU-no author disclosure, PD-1996)
+    focal_y: 0.25
+    hero: { width: 1800, height: 2400, bytes: 631134 }
+    thumb: { width: 300, height: 400, bytes: 14415 }
+    full: { width: 2880, height: 3840, bytes: 1506420 }
+    placeholder_color: "#514136"
+
+- id: rimsky-korsakov
+  match: Nikolai Rimsky-Korsakov
+  sort_name: Rimsky-Korsakov, Nikolai
+  born: 1844
+  died: 1908
+  era: late_romantic
+  names:
+    en: { name: Nikolai Rimsky-Korsakov, short: Rimsky-Korsakov }
+    tr: { name: Nikolay Rimski-Korsakov, short: Rimski-Korsakov }
+  nationality: { en: Russian, tr: Rus }
+  facts:
+    born: { en: "18 March 1844, Tikhvin", tr: "18 Mart 1844, Tihvin" }
+    died: { en: "21 June 1908, Lyubensk, near Luga", tr: "21 Haziran 1908, Lyubensk, Luga yakınları" }
+    symphonies: { en: "Three", tr: "Üç" }
+    best_known_for: { en: "*Scheherazade*, *Capriccio espagnol*, operas", tr: "*Şehrazat*, *İspanyol Kapriçyosu*, operaları" }
+  bio:
+    en: |-
+      Rimsky-Korsakov was born in 1844 in Tikhvin, east of St Petersburg, into a noble family. As a boy he loved the sea long before he had seen it, from books and from his older brother's stories of the navy, and he trained as a naval officer himself. At eighteen he sailed on the clipper *Almaz* on a voyage that lasted two years and eight months, and he wrote the slow movement of his First Symphony during a stop in England. Back on shore he joined the circle of composers around Mily Balakirev, later known as The Five, who wanted a music that sounded Russian rather than German.
+
+      In 1871, aged 27 and still a naval officer, he became professor of composition and orchestration at the St Petersburg Conservatory. He admitted that he knew little theory and had to teach himself as he went, becoming, as he put it, the conservatory's best pupil. He taught there for 35 years. His pupils included Glazunov, Prokofiev and Respighi, and he taught Stravinsky privately. He also prepared his friends' unfinished or unpolished works for performance, among them Mussorgsky's operas and Borodin's *Prince Igor*.
+
+      His own music is famous for its brilliant orchestral colour: *Capriccio espagnol*, the *Russian Easter Festival Overture* and *Scheherazade*, the last two written in the summer of 1888, and fifteen operas drawn from Russian fairy tales and legends. In 1905 he defended students who were protesting during the revolution, was dismissed from the conservatory, and for a time the police banned his music, which caused an outcry in Russia and abroad. He died in 1908 at his country estate near Luga, south of St Petersburg.
+    tr: |-
+      Rimski-Korsakov 1844’te St. Petersburg’un doğusundaki Tihvin’de, soylu bir ailede doğdu. Çocukken denizi görmeden önce sevdi; kitaplardan ve ağabeyinin donanma öykülerinden tanıdı. Kendisi de deniz subayı olarak yetişti. On sekiz yaşında *Almaz* adlı klipere bindi ve iki yıl sekiz ay süren bir yolculuğa çıktı; Birinci Senfonisi’nin yavaş bölümünü yolculuğun İngiltere durağında yazdı. Karaya döndüğünde, Alman değil Rus gibi duyulan bir müzik isteyen ve sonradan “Beşler” diye anılacak olan Mili Balakirev çevresindeki bestecilere katıldı.
+
+      1871’de, 27 yaşında ve hâlâ deniz subayıyken, St. Petersburg Konservatuvarı’nda kompozisyon ve orkestrasyon profesörü oldu. Kuramdan pek az şey bildiğini, öğretirken kendini de eğitmek zorunda kaldığını ve kendi deyişiyle konservatuvarın en iyi öğrencisi olduğunu itiraf etti. Orada 35 yıl ders verdi. Öğrencileri arasında Glazunov, Prokofyev ve Respighi vardı; Stravinski’ye de özel ders verdi. Dostlarının yarım kalmış ya da cilalanmamış eserlerini, aralarında Musorgski’nin operaları ve Borodin’in *Knyaz İgor*’u da olmak üzere, seslendirmeye hazırladı.
+
+      Kendi müziği parlak orkestra renkleriyle ünlüdür: *İspanyol Kapriçyosu*, ikisi de 1888 yazında yazılan *Rus Paskalya Uvertürü* ve *Şehrazat*, bir de Rus masallarından ve efsanelerinden beslenen on beş opera. 1905’te devrim sırasında eylem yapan öğrencileri savundu, konservatuvardan uzaklaştırıldı ve müziği bir süre polis tarafından yasaklandı; bu yasak Rusya’da ve yurt dışında büyük tepki topladı. 1908’de St. Petersburg’un güneyinde, Luga yakınlarındaki çiftliğinde öldü.
+  portrait:
+    artist: { en: Valentin Serov, tr: Valentin Serov }
+    title: { en: Portrait of Nikolai Rimsky-Korsakov, tr: Nikolay Rimski-Korsakov’un Portresi }
+    year: "1898"
+    collection: { en: "State Tretyakov Gallery, Moscow", tr: "Devlet Tretyakov Galerisi, Moskova" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Walentin_Alexandrowitsch_Serow_004.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Walentin_Alexandrowitsch_Serow_004.jpg
+    width: 3840
+    height: 3159
+    license: Public domain (PD-Art, PD-old-100; painter d. 1911)
+    focal_y: 0.2
+    hero: { width: 2188, height: 1800, bytes: 767368 }
+    thumb: { width: 365, height: 300, bytes: 21463 }
+    full: { width: 3840, height: 3159, bytes: 2280894 }
+    placeholder_color: "#5a5042"
+
+- id: wagner
+  match: Richard Wagner
+  sort_name: Wagner, Richard
+  born: 1813
+  died: 1883
+  era: romantic
+  names:
+    en: { name: Richard Wagner, short: Wagner }
+    tr: { name: Richard Wagner, short: Wagner }
+  nationality: { en: German, tr: Alman }
+  facts:
+    born: { en: "22 May 1813, Leipzig", tr: "22 Mayıs 1813, Leipzig" }
+    died: { en: "13 February 1883, Venice", tr: "13 Şubat 1883, Venedik" }
+    symphonies: { en: "One, written at 19", tr: "Bir; 19 yaşında yazdığı" }
+    best_known_for: { en: "*The Ring of the Nibelung*, *Tristan und Isolde*, *Parsifal*", tr: "*Nibelung Yüzüğü*, *Tristan ve Isolde*, *Parsifal*" }
+  bio:
+    en: |-
+      Wagner was born in Leipzig in 1813 and grew up in a household that loved the theatre. Hearing Beethoven's Seventh and Ninth Symphonies as a teenager decided his future. Unlike almost every other opera composer, he wrote his own librettos. His early years were spent in small theatre posts, in Riga and in Paris, and were plagued by debts. In 1842 he moved to Dresden, where he became conductor at the Saxon court and where *The Flying Dutchman* and *Tannhäuser* were first staged.
+
+      In 1849 he took part in a failed uprising in Dresden and fled to Switzerland with a warrant out for his arrest. He spent twelve years in exile, writing essays about a "total work of art" that would unite music, poetry and theatre, and beginning the four operas of *The Ring of the Nibelung*. He broke off to write *Tristan und Isolde* (1857–59). His fortunes changed in 1864, when the young King Ludwig II of Bavaria paid his debts and brought him to Munich, where *Tristan* was first performed in 1865. In 1870 he married Cosima, Liszt's daughter.
+
+      Wagner built his own theatre at Bayreuth, which opened in 1876 with the first complete *Ring*; his last opera, *Parsifal*, followed there in 1882. He died in Venice in 1883. His use of the [[leitmotif]] and his restless, chromatic harmony changed music for the next century. He also wrote antisemitic essays, beginning with "Judaism in Music" (1850), and his music was later embraced by Hitler; that legacy is still argued over.
+    tr: |-
+      Wagner 1813’te Leipzig’de doğdu ve tiyatroyu seven bir evde büyüdü. Gençken Beethoven’ın Yedinci ve Dokuzuncu senfonilerini dinlemek geleceğini belirledi. Neredeyse bütün öteki opera bestecilerinden farklı olarak libretolarını kendisi yazdı. İlk yılları küçük tiyatro görevlerinde, Riga’da ve Paris’te, borçlarla boğuşarak geçti. 1842’de Dresden’e taşındı; orada Saksonya sarayının şefi oldu ve *Uçan Hollandalı* ile *Tannhäuser* ilk kez orada sahnelendi.
+
+      1849’da Dresden’de bastırılan bir ayaklanmaya katıldı ve hakkında tutuklama kararı çıkınca İsviçre’ye kaçtı. On iki yıl sürgünde yaşadı; müziği, şiiri ve tiyatroyu birleştirecek bir “toplam sanat eseri” üzerine denemeler yazdı ve *Nibelung Yüzüğü*’nün dört operasına başladı. Bu işe *Tristan ve Isolde*’yi (1857–59) yazmak için ara verdi. Talihi 1864’te döndü: Bavyera’nın genç kralı II. Ludwig borçlarını ödedi ve onu Münih’e getirdi; *Tristan* 1865’te orada ilk kez sahnelendi. 1870’te Liszt’in kızı Cosima ile evlendi.
+
+      Wagner Bayreuth’ta kendi tiyatrosunu yaptırdı; tiyatro 1876’da ilk tam *Yüzük* ile açıldı, son operası *Parsifal* de 1882’de orada sahnelendi. 1883’te Venedik’te öldü. [[leitmotif|Leitmotif]] kullanımı ve huzursuz, kromatik armonisi sonraki yüzyılın müziğini değiştirdi. Öte yandan “Müzikte Yahudilik” (1850) ile başlayan antisemitik yazılar da yazdı; müziği sonradan Hitler tarafından sahiplenildi. Bu miras bugün hâlâ tartışılıyor.
+  portrait:
+    artist: Pierre-Auguste Renoir
+    title: { en: Richard Wagner, tr: Richard Wagner }
+    year: "1882"
+    collection: { en: "Musée d'Orsay, Paris", tr: "Musée d'Orsay, Paris" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Pierre-Auguste_Renoir_114.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Pierre-Auguste_Renoir_114.jpg
+    width: 2024
+    height: 2695
+    license: Public domain (PD-Art, PD-old-100; Yorck Project)
+    focal_y: 0.3
+    hero: { width: 1800, height: 2397, bytes: 514326 }
+    thumb: { width: 300, height: 399, bytes: 25394 }
+    full: { width: 2024, height: 2695, bytes: 643590 }
+    placeholder_color: "#6a614c"

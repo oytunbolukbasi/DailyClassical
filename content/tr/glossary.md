@@ -24,6 +24,7 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Double exposition | Çifte serim | Temaların önce orkestrayla, sonra solistle sunulması | Klasik dönem konçertolarının birinci bölümünde ana temalar iki kez sunulur: önce yalnız orkestra, sonra solist orkestrayla birlikte, bu kez yeni bir tona geçerek. |
 | Double stop | Çift ses | Yaylı bir çalgıda aynı anda çalınan iki nota | Yayla iki teli birden çalmak; böylece tek bir kemancı ya da çellist iki notayı birlikte seslendirir. |
 | Drone | Dem sesi | Gaydadaki gibi uzun tutulan pes nota | Bir ezginin altında uzun süre tutulan ya da yinelenen bir ya da birkaç pes nota; gaydanın dem borularındaki gibi. |
+| DSCH | DSCH | Şostakoviç'in müzikal imzası: Re, Mi bemol, Do, Si | Şostakoviç'in notalara çevrilmiş baş harfleri. Almanca yazılışta D. Sch., D, Es (Mi bemol), C, H (Si) notalarına dönüşür; besteci pek çok eserini bu dört notalık motifle imzaladı. |
 | Exposition | Serim | Sonat formunda temaların tanıtıldığı ilk evre | Sonat formunun ilk evresi; ana temalar tanıtılır. Çoğu zaman tekrarlanır. |
 | Fugato | Fugato | Füg gibi başlayıp sonra başka yöne giden pasaj | Füg gibi, çalgıların aynı ezgiyle tek tek girmesiyle başlayan ama tam bir füg olmayan pasaj. |
 | Fugue | Füg | Seslere sırayla girip kendisiyle örülen tek ezgi | Tek bir ezginin sırayla her seste girdiği ve kendi kendisiyle örüldüğü bir eser ya da kısım. |
@@ -32,6 +33,7 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Hemiola | Hemiola | Üç vuruşlu iki ölçünün üç ikiliye bölünmesi | Üç vuruşlu iki ölçünün, sanki üç tane ikili grupmuş gibi vurgulanması; böylece iki ölçü, üç yavaş vuruşlu tek bir uzun ölçü gibi duyulur. Vuruş sanki tökezler ya da uzar. |
 | Idée fixe | İdée fixe | Berlioz'un bir kişiyi temsil eden, dönüp duran melodisi | "Saplantılı fikir": Berlioz'un, bir kişiyi temsil eden ve eser boyunca geri dönen bir melodi için kullandığı terim. |
 | Krakowiak | Krakowiak | Krakov'dan, vuruş dışı vurgulu canlı bir Polonya dansı | Krakov yöresinden, iki vuruşlu, hızlı bir Polonya halk dansı; senkoplu vurguları vuruşa karşı tekme atar gibidir. |
+| Leitmotif | Leitmotif | Bir karaktere ya da fikre bağlı, dönüp gelen tema | Bir karakter, nesne ya da fikirle ilişkilendirilen ve o her göründüğünde ya da anıldığında geri dönen kısa bir tema. Bu tekniği Wagner ünlü yaptı. |
 | Lied | Lied | Ses ve piyano için Alman sanat şarkısı | Genellikle bir şiirin tek ses ve piyano için bestelendiği Alman sanat şarkısı. Schubert altı yüzden fazla lied yazdı. |
 | Lydian mode | Lidya modu | Dördüncü notası yükseltilmiş majör gibi eski bir kilise dizisi | Eski kilise dizilerinden biri. Dördüncü notası yarım ses yükseltilmiş bir majör dizi gibi duyulur (Si bekarlı Fa'dan Fa'ya); bu da ona parlak, havada asılı bir renk verir. |
 | Ländler | Ländler | Üç vuruşlu Avusturya köylü dansı, valsin atası | Üç vuruşlu, köylü havasında bir Avusturya halk dansı; valsin daha yavaş, daha ağır bir atası. |
@@ -67,6 +69,7 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Tremolo | Tremolo | İki nota arasında ya da tek notada hızlı titreşim | İki nota arasında hızlı gidip gelme ya da tek bir notanın hızla yinelenmesi; titreşen ya da gürleyen bir ses verir. Piyanoda çoğu zaman sol elde bir oktav arasında çalınır. |
 | Trill | Tril | Yan yana iki nota arasında hızlı titreşim | Bir notayla hemen üstündeki nota arasında hızla gidip gelmek; ses parıldar ya da piyanonun pesinde gürler. |
 | Trio | Trio | Menuet ya da scherzonun daha yumuşak orta kısmı | Bir menuetin ya da scherzonun, genellikle daha yumuşak olan zıt orta kısmı. |
+| Tristan chord | Tristan akoru | Wagner'in *Tristan ve Isolde*'yi açan çözülmeyen akoru | Wagner'in *Tristan ve Isolde* operasının ilk akoru. Kulağın beklediği gibi çözülmek yerine havada asılı kalır; müzikal özlemin ve modern armoninin simgesi olmuştur. |
 | Tutti | Tutti | Bütün orkestranın birlikte çalması | İtalyanca "hepsi": solistin karşısında, bütün orkestranın birlikte çalması. |
 | Unison | Unison | Herkesin aynı anda aynı notaları çalması | Herkesin aynı anda aynı notaları çalması. |
 | Variation | Varyasyon | Bir şey değiştirilerek yinelenen tema | Bir temanın, bir şeyi değiştirilerek tekrarlanması: süsleme, ritim, armoni ya da çalgılar. |

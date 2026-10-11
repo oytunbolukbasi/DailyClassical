@@ -37,11 +37,11 @@ also_recommended:
     year: 1986
     spotify_url: https://open.spotify.com/album/2sCnq47RrjWno99LheCwS5
 painting:
-  artist: Bernardo Bellotto
-  title: Belvedere Sarayı'ndan Görülen Viyana
-  year: ca. 1759–60
-  collection: Kunsthistorisches Museum, Viyana
-  pairing_note: Belvedere bahçelerinden bakıldığında berrak gün ışığına yayılmış Viyana; bir kuşak sonra, bu şehirde, Mozart konçertoyu kendi konserlerinden birinde ilk kez çaldı.
+  artist: Jean-Honoré Fragonard
+  title: Salıncak
+  year: 1767–68
+  collection: Wallace Koleksiyonu, Londra
+  pairing_note: Güneşli bir bahçede salıncakla havalanan genç bir kadın; konçertonun dış bölümlerindeki hafiflik ve oyun, Andante'nin rüya gibi havası.
 ```
 
 ### Genel bakış

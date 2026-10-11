@@ -6,17 +6,15 @@ To merge into the shared files. Sources and checks: `content/research/mozart-pia
 
 ```yaml
 mozart-piano-concerto-21:
-  # Google Art Project file of the KHM painting (GG 1669), 7403 × 4663. A KHM-sourced copy also exists on Commons
-  # (File:Bernardo Bellotto, gen. Canaletto, … GG 1669 - Kunsthistorisches Museum.jpg, 3000 × 1890), smaller.
-  # Wide format (≈ 1.59:1). KHM object page not opened; add its URL as source_url.
-  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Bernardo_Bellotto,_called_Canaletto_-_Vienna_Viewed_from_the_Belvedere_Palace_-_Google_Art_Project.jpg
-  source_url: null
-  commons_page: https://commons.wikimedia.org/wiki/File:Bernardo_Bellotto,_called_Canaletto_-_Vienna_Viewed_from_the_Belvedere_Palace_-_Google_Art_Project.jpg
-  width: 7403
-  height: 4663
+  # Switched at merge: Bellotto is kept for shostakovich-string-quartet-8 (the Kreuzkirche ruin, a closer link); was alternative A.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Fragonard,_The_Swing.jpg
+  source_url: https://www.wallacecollection.org/explore/collection/search-the-collection/les-hazards-heureux-de-lescarpolette-swing/
+  commons_page: https://commons.wikimedia.org/wiki/File:Fragonard,_The_Swing.jpg
+  width: 4280
+  height: 5373
   medium: Oil on canvas
-  license: Public domain (PD-Art, PD-old-100-1923)
-  credit_line: Bernardo Bellotto, Vienna Viewed from the Belvedere Palace, c. 1759–60. Kunsthistorisches Museum, Vienna (GG 1669). Image via Wikimedia Commons (Google Art Project), public domain.
+  license: Public domain (PD-Art; artist d. 1806)
+  credit_line: Jean-Honoré Fragonard, The Swing, 1767–68. The Wallace Collection, London (P430). Image via Wikimedia Commons, public domain.
   rights_status: public_domain
 ```
 

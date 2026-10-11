@@ -36,11 +36,11 @@ also_recommended:
     year: 1986
     spotify_url: https://open.spotify.com/album/2sCnq47RrjWno99LheCwS5
 painting:
-  artist: Bernardo Bellotto
-  title: Vienna Viewed from the Belvedere Palace
-  year: ca. 1759–60
-  collection: Kunsthistorisches Museum, Vienna
-  pairing_note: Vienna spread out in clear daylight, seen from the Belvedere gardens; a generation later, in this city, Mozart gave the concerto its first performance at one of his own concerts.
+  artist: Jean-Honoré Fragonard
+  title: The Swing
+  year: 1767–68
+  collection: The Wallace Collection, London
+  pairing_note: A young woman flies up on a swing in a sunlit garden; the lightness and play of the concerto's outer movements, and the dream of its Andante.
 ```
 
 ### The big picture

@@ -331,24 +331,6 @@ mozart-piano-sonata-11:
   full: { width: 4000, height: 2879, bytes: 2542919 }
   placeholder_color: "#3e3523"
 
-mozart-piano-concerto-21:
-  # Google Art Project file of the KHM painting (GG 1669), 7403 × 4663. A KHM-sourced copy also exists on Commons
-  # (File:Bernardo Bellotto, gen. Canaletto, … GG 1669 - Kunsthistorisches Museum.jpg, 3000 × 1890), smaller.
-  # Wide format (≈ 1.59:1). KHM object page not opened; add its URL as source_url.
-  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Bernardo_Bellotto,_called_Canaletto_-_Vienna_Viewed_from_the_Belvedere_Palace_-_Google_Art_Project.jpg
-  source_url: null
-  commons_page: https://commons.wikimedia.org/wiki/File:Bernardo_Bellotto,_called_Canaletto_-_Vienna_Viewed_from_the_Belvedere_Palace_-_Google_Art_Project.jpg
-  width: 7403
-  height: 4663
-  medium: Oil on canvas
-  license: Public domain (PD-Art, PD-old-100-1923)
-  credit_line: Bernardo Bellotto, Vienna Viewed from the Belvedere Palace, c. 1759–60. Kunsthistorisches Museum, Vienna (GG 1669). Image via Wikimedia Commons (Google Art Project), public domain.
-  rights_status: public_domain
-  hero: { width: 2858, height: 1800, bytes: 998969 }
-  thumb: { width: 476, height: 300, bytes: 28378 }
-  full: { width: 4000, height: 2520, bytes: 2262222 }
-  placeholder_color: "#a69982"
-
 beethoven-symphony-3:
   # Master in the originals cache is CROPPED (the photo shows the gilt frame on the right and a strip at the bottom): beethoven-symphony-3.source.jpg cropped to 3120 × 3831
   # at offset 10,10 (`sips -c 3831 3120 --cropOffset 10 10`). Do not pass --refresh for this id.
@@ -1027,3 +1009,103 @@ smetana-vltava:
   thumb: { width: 506, height: 300, bytes: 23742 }
   full: { width: 4000, height: 2370, bytes: 2201874 }
   placeholder_color: "#7b715d"
+
+mozart-piano-concerto-21:
+  # Switched at merge: Bellotto is kept for shostakovich-string-quartet-8 (the Kreuzkirche ruin, a closer link); was alternative A.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Fragonard,_The_Swing.jpg
+  source_url: https://www.wallacecollection.org/explore/collection/search-the-collection/les-hazards-heureux-de-lescarpolette-swing/
+  commons_page: https://commons.wikimedia.org/wiki/File:Fragonard,_The_Swing.jpg
+  width: 4280
+  height: 5373
+  medium: Oil on canvas
+  license: Public domain (PD-Art; artist d. 1806)
+  credit_line: Jean-Honoré Fragonard, The Swing, 1767–68. The Wallace Collection, London (P430). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2260, bytes: 798527 }
+  thumb: { width: 300, height: 377, bytes: 32276 }
+  full: { width: 3186, height: 4000, bytes: 2330637 }
+  placeholder_color: "#46483f"
+
+debussy-la-mer:
+  # A woodblock print, not a painting (the brief named it as the obvious candidate). The Met's own
+  # Open Access image of JP1847 is DP130155 (CC0); the Commons file below is that object (Met 45434).
+  # Landscape, ≈ 1.49:1.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Tsunami_by_hokusai_19th_century.jpg
+  source_url: https://www.metmuseum.org/art/collection/search/45434
+  commons_page: https://commons.wikimedia.org/wiki/File:Tsunami_by_hokusai_19th_century.jpg
+  width: 3859
+  height: 2594
+  medium: Woodblock print; ink and color on paper
+  license: Public domain (PD-Art, PD-old; The Met Open Access, CC0)
+  credit_line: Katsushika Hokusai, Under the Wave off Kanagawa (The Great Wave), from the series Thirty-six Views of Mount Fuji, c. 1830–32. The Metropolitan Museum of Art, New York, H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929 (JP1847). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2678, height: 1800, bytes: 1234937 }
+  thumb: { width: 446, height: 300, bytes: 42631 }
+  full: { width: 3859, height: 2594, bytes: 2324468 }
+  placeholder_color: "#c1c2b7"
+
+ravel-bolero:
+  # Very wide (≈ 1.48:1 in this file; the canvas is 232 × 348 cm). The Gardner's own image page was not
+  # reached; the Commons file cites the museum's former collection URL (kept below as source_url, may redirect).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/EL_JALEO-SINGER.jpg
+  source_url: http://www.gardnermuseum.org/collection/artwork/1st_floor/spanish_cloister/el_jaleo
+  commons_page: https://commons.wikimedia.org/wiki/File:EL_JALEO-SINGER.jpg
+  width: 3000
+  height: 2028
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-expired; US copyright registered 1925, expired)
+  credit_line: John Singer Sargent, El Jaleo, 1882. Isabella Stewart Gardner Museum, Boston (P7s1). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2663, height: 1800, bytes: 857296 }
+  thumb: { width: 444, height: 300, bytes: 23381 }
+  full: { width: 3000, height: 2028, bytes: 1447912 }
+  placeholder_color: "#474238"
+
+rimsky-korsakov-scheherazade:
+  # Landscape ≈ 1.49:1. Google Art Project scan of the State Russian Museum painting (inv. Ж-2202).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Hovhannes_Aivazovsky_-_The_Ninth_Wave_-_Google_Art_Project.jpg
+  source_url: https://artsandculture.google.com/asset/jgHuL-7yxgrOSw
+  commons_page: https://commons.wikimedia.org/wiki/File:Hovhannes_Aivazovsky_-_The_Ninth_Wave_-_Google_Art_Project.jpg
+  width: 5090
+  height: 3420
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100; artist d. 1900)
+  credit_line: Ivan Aivazovsky, The Ninth Wave, 1850. State Russian Museum, St Petersburg (Ж-2202). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2679, height: 1800, bytes: 370126 }
+  thumb: { width: 446, height: 300, bytes: 13190 }
+  full: { width: 4000, height: 2688, bytes: 846306 }
+  placeholder_color: "#896d55"
+
+wagner-tristan-prelude-and-liebestod:
+  # Landscape ≈ 1.5:1 (canvas 160 × 240 cm). Google Art Project scan from the Museo de Bellas Artes de Bilbao.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Rogelio_de_Egusquiza_-_Tristan_and_Isolt_(Death)_-_Google_Art_Project.jpg
+  source_url: https://www.museobilbao.com/catalogo-online/tristan-e-isolda-la-muerte-009
+  commons_page: https://commons.wikimedia.org/wiki/File:Rogelio_de_Egusquiza_-_Tristan_and_Isolt_(Death)_-_Google_Art_Project.jpg
+  width: 3763
+  height: 2511
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-1923; artist d. 1915)
+  credit_line: Rogelio de Egusquiza, Tristan and Isolde (Death), 1910. Museo de Bellas Artes de Bilbao (00/9). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2697, height: 1800, bytes: 780444 }
+  thumb: { width: 450, height: 300, bytes: 21920 }
+  full: { width: 3763, height: 2511, bytes: 1489307 }
+  placeholder_color: "#806f67"
+
+shostakovich-string-quartet-8:
+  # Landscape ≈ 1.27:1. Kunsthaus Zürich version of the subject (Google Art Project scan); a second version
+  # is in Dresden's Gemäldegalerie Alte Meister, but its only large Commons file is a CC BY 4.0 gallery photo.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Bernardo_Bellotto,_il_Canaletto_-_Le_rovine_del_vecchio_Kreuzkirche,_Dresda.jpg
+  source_url: https://artsandculture.google.com/asset/MwGFEGKLmmoojQ
+  commons_page: https://commons.wikimedia.org/wiki/File:Bernardo_Bellotto,_il_Canaletto_-_Le_rovine_del_vecchio_Kreuzkirche,_Dresda.jpg
+  width: 3173
+  height: 2500
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100-expired; artist d. 1780)
+  credit_line: Bernardo Bellotto, The Ruins of the Old Kreuzkirche in Dresden, 1765. Kunsthaus Zürich. Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2285, height: 1800, bytes: 965988 }
+  thumb: { width: 381, height: 300, bytes: 31351 }
+  full: { width: 3173, height: 2500, bytes: 1683611 }
+  placeholder_color: "#8f896f"

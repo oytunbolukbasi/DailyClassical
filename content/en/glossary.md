@@ -24,6 +24,7 @@ Definition: one or two sentences, written for the pop-over.
 | Double exposition | The themes presented twice: orchestra, then soloist | In the first movement of a Classical concerto, the main themes are presented twice: first by the orchestra alone, then by the soloist with the orchestra, this time moving to a new key. |
 | Double stop | Two notes played at once on a string instrument | Bowing two strings at the same time, so that a single violinist or cellist sounds two notes together. |
 | Drone | A long-held low note, like a bagpipe's | One or more low notes held or repeated for a long time under a melody, like the drone pipes of a bagpipe. |
+| DSCH | Shostakovich's musical signature: D, E-flat, C, B | Shostakovich's initials turned into notes. In German spelling, D. Sch. becomes D, Es (E-flat), C, H (B natural); he signed many works with this four-note motif. |
 | Exposition | The opening of sonata form, where the themes are introduced | The first stage of sonata form, where the main themes are introduced. It is often repeated. |
 | Fugato | A passage that begins like a fugue, then moves on | A passage that starts like a fugue, with instruments entering one by one on the same tune, without being a full fugue. |
 | Fugue | One tune entering voice by voice, woven against itself | A piece or section in which one tune enters in each voice in turn and is woven against itself. |
@@ -32,6 +33,7 @@ Definition: one or two sentences, written for the pop-over.
 | Hemiola | Two bars of three beats regrouped into three pairs | A rhythmic shift in which two bars of three beats are accented as if they were three groups of two, so they sound like one long bar of three slow beats. The beat seems to stumble or stretch. |
 | Idée fixe | Berlioz's recurring melody that stands for a person | "Fixed idea": Berlioz's term for a melody that represents a person and returns throughout a piece. |
 | Krakowiak | A lively Polish dance from Kraków, with off-beat kicks | A fast Polish folk dance from the Kraków region, in two beats, with syncopated accents that kick against the beat. |
+| Leitmotif | A recurring theme tied to a character or idea | A short theme linked to a character, object or idea, which returns whenever it appears or is meant. Wagner made the technique famous. |
 | Lied | A German art song for voice and piano | A German art song, usually a poem set for one voice with piano. Schubert wrote more than six hundred. |
 | Lydian mode | An old church scale: like a major scale with a raised fourth | One of the old church modes. It sounds like a major scale with its fourth note raised a half step (F to F with B natural), which gives a bright, floating sound. |
 | Ländler | A rustic Austrian dance in three, ancestor of the waltz | A rustic Austrian country dance in three beats, a slower, heavier ancestor of the waltz. |
@@ -67,6 +69,7 @@ Definition: one or two sentences, written for the pop-over.
 | Tremolo | A rapid shimmer between two notes, or on one | A rapid back-and-forth between two notes, or the fast repetition of one, which makes a shimmering or rumbling sound. On the piano it is often an octave in the left hand. |
 | Trill | A rapid shake between two neighbouring notes | A rapid alternation between a note and the note just above it, which makes the sound shimmer or, low on the piano, rumble. |
 | Trio | The gentler middle section of a minuet or scherzo | The contrasting middle section of a minuet or scherzo, usually gentler. |
+| Tristan chord | Wagner's unresolved chord that opens *Tristan und Isolde* | The first chord of Wagner's *Tristan und Isolde*. It hangs in the air instead of resolving as the ear expects, and became a symbol of musical longing and of modern harmony. |
 | Tutti | The whole orchestra playing together | Italian for "all": the whole orchestra playing together, as opposed to the soloist. |
 | Unison | Everyone playing the same notes at once | Everyone playing the same notes at the same time. |
 | Variation | A theme repeated with something changed | A repeat of a theme in which something is changed: the decoration, the rhythm, the harmony or the instruments. |

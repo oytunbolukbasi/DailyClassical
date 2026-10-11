@@ -206,6 +206,31 @@
         "hash": "e87bfe2e5e"
       }
     },
+    "composers/debussy": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Claude_Debussy,_portrait_by_Marcel_Baschet_(1884).jpg",
+      "color": "#3e3a33",
+      "hero": {
+        "path": "composers/debussy-hero.heic",
+        "width": 1800,
+        "height": 2135,
+        "bytes": 543033,
+        "hash": "af0fa9799e"
+      },
+      "thumb": {
+        "path": "composers/debussy-thumb.heic",
+        "width": 300,
+        "height": 356,
+        "bytes": 13621,
+        "hash": "94c6452dff"
+      },
+      "full": {
+        "path": "composers/debussy-full.heic",
+        "width": 3373,
+        "height": 4000,
+        "bytes": 1942408,
+        "hash": "ae706407b8"
+      }
+    },
     "composers/dvorak": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Dvorak.jpg",
       "color": "#b5b5b5",
@@ -461,6 +486,56 @@
         "hash": "8665efcf65"
       }
     },
+    "composers/ravel": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Maurice_Ravel_1925.jpg",
+      "color": "#514136",
+      "hero": {
+        "path": "composers/ravel-hero.heic",
+        "width": 1800,
+        "height": 2400,
+        "bytes": 631134,
+        "hash": "8971937afa"
+      },
+      "thumb": {
+        "path": "composers/ravel-thumb.heic",
+        "width": 300,
+        "height": 400,
+        "bytes": 14415,
+        "hash": "5bd7aae520"
+      },
+      "full": {
+        "path": "composers/ravel-full.heic",
+        "width": 2880,
+        "height": 3840,
+        "bytes": 1506420,
+        "hash": "caecf29712"
+      }
+    },
+    "composers/rimsky-korsakov": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Walentin_Alexandrowitsch_Serow_004.jpg",
+      "color": "#5a5042",
+      "hero": {
+        "path": "composers/rimsky-korsakov-hero.heic",
+        "width": 2188,
+        "height": 1800,
+        "bytes": 767368,
+        "hash": "13effd8651"
+      },
+      "thumb": {
+        "path": "composers/rimsky-korsakov-thumb.heic",
+        "width": 365,
+        "height": 300,
+        "bytes": 21463,
+        "hash": "011488431f"
+      },
+      "full": {
+        "path": "composers/rimsky-korsakov-full.heic",
+        "width": 3840,
+        "height": 3159,
+        "bytes": 2280894,
+        "hash": "3276c701a3"
+      }
+    },
     "composers/schubert": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Franz_Schubert_by_Wilhelm_August_Rieder_1875_larger_version.png",
       "color": "#5e4137",
@@ -639,6 +714,31 @@
         "height": 1793,
         "bytes": 855802,
         "hash": "f7d8338853"
+      }
+    },
+    "composers/wagner": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Pierre-Auguste_Renoir_114.jpg",
+      "color": "#6a614c",
+      "hero": {
+        "path": "composers/wagner-hero.heic",
+        "width": 1800,
+        "height": 2397,
+        "bytes": 514326,
+        "hash": "a6acbf7858"
+      },
+      "thumb": {
+        "path": "composers/wagner-thumb.heic",
+        "width": 300,
+        "height": 399,
+        "bytes": 25394,
+        "hash": "bbdd196de6"
+      },
+      "full": {
+        "path": "composers/wagner-full.heic",
+        "width": 2024,
+        "height": 2695,
+        "bytes": 643590,
+        "hash": "07234fa760"
       }
     },
     "onboarding/friedrich-monk": {
@@ -1234,6 +1334,31 @@
         "hash": "86a3e92c34"
       }
     },
+    "paintings/debussy-la-mer": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Tsunami_by_hokusai_19th_century.jpg",
+      "color": "#c1c2b7",
+      "hero": {
+        "path": "paintings/debussy-la-mer-hero.heic",
+        "width": 2678,
+        "height": 1800,
+        "bytes": 1234937,
+        "hash": "76c1de945a"
+      },
+      "thumb": {
+        "path": "paintings/debussy-la-mer-thumb.heic",
+        "width": 446,
+        "height": 300,
+        "bytes": 42631,
+        "hash": "a37b9eb530"
+      },
+      "full": {
+        "path": "paintings/debussy-la-mer-full.heic",
+        "width": 3859,
+        "height": 2594,
+        "bytes": 2324468,
+        "hash": "917d271dde"
+      }
+    },
     "paintings/dvorak-cello-concerto": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/1897_Slavi%C4%8Deck_Birkenstimmung_Nationalgalerie_Prag_anagoria.jpg",
       "color": "#807265",
@@ -1610,28 +1735,28 @@
       }
     },
     "paintings/mozart-piano-concerto-21": {
-      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Bernardo_Bellotto,_called_Canaletto_-_Vienna_Viewed_from_the_Belvedere_Palace_-_Google_Art_Project.jpg",
-      "color": "#a69982",
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Fragonard,_The_Swing.jpg",
+      "color": "#46483f",
       "hero": {
         "path": "paintings/mozart-piano-concerto-21-hero.heic",
-        "width": 2858,
-        "height": 1800,
-        "bytes": 998969,
-        "hash": "8729820e17"
+        "width": 1800,
+        "height": 2260,
+        "bytes": 798527,
+        "hash": "f18558a60f"
       },
       "thumb": {
         "path": "paintings/mozart-piano-concerto-21-thumb.heic",
-        "width": 476,
-        "height": 300,
-        "bytes": 28378,
-        "hash": "e62abd40a3"
+        "width": 300,
+        "height": 377,
+        "bytes": 32276,
+        "hash": "b442518086"
       },
       "full": {
         "path": "paintings/mozart-piano-concerto-21-full.heic",
-        "width": 4000,
-        "height": 2520,
-        "bytes": 2262222,
-        "hash": "beb2f1dad7"
+        "width": 3186,
+        "height": 4000,
+        "bytes": 2330637,
+        "hash": "3776e0780f"
       }
     },
     "paintings/mozart-piano-concerto-23": {
@@ -1757,6 +1882,56 @@
         "height": 2598,
         "bytes": 966863,
         "hash": "22d5f6107d"
+      }
+    },
+    "paintings/ravel-bolero": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/EL_JALEO-SINGER.jpg",
+      "color": "#474238",
+      "hero": {
+        "path": "paintings/ravel-bolero-hero.heic",
+        "width": 2663,
+        "height": 1800,
+        "bytes": 857296,
+        "hash": "bdf5e5fe8c"
+      },
+      "thumb": {
+        "path": "paintings/ravel-bolero-thumb.heic",
+        "width": 444,
+        "height": 300,
+        "bytes": 23381,
+        "hash": "f3d3cc2e9a"
+      },
+      "full": {
+        "path": "paintings/ravel-bolero-full.heic",
+        "width": 3000,
+        "height": 2028,
+        "bytes": 1447912,
+        "hash": "14e3ecc130"
+      }
+    },
+    "paintings/rimsky-korsakov-scheherazade": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Hovhannes_Aivazovsky_-_The_Ninth_Wave_-_Google_Art_Project.jpg",
+      "color": "#896d55",
+      "hero": {
+        "path": "paintings/rimsky-korsakov-scheherazade-hero.heic",
+        "width": 2679,
+        "height": 1800,
+        "bytes": 370126,
+        "hash": "a3bc16d039"
+      },
+      "thumb": {
+        "path": "paintings/rimsky-korsakov-scheherazade-thumb.heic",
+        "width": 446,
+        "height": 300,
+        "bytes": 13190,
+        "hash": "b315220a63"
+      },
+      "full": {
+        "path": "paintings/rimsky-korsakov-scheherazade-full.heic",
+        "width": 4000,
+        "height": 2688,
+        "bytes": 846306,
+        "hash": "a388107904"
       }
     },
     "paintings/schubert-piano-quintet-trout": {
@@ -1907,6 +2082,31 @@
         "height": 4000,
         "bytes": 4781107,
         "hash": "ae788f8f97"
+      }
+    },
+    "paintings/shostakovich-string-quartet-8": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Bernardo_Bellotto,_il_Canaletto_-_Le_rovine_del_vecchio_Kreuzkirche,_Dresda.jpg",
+      "color": "#8f896f",
+      "hero": {
+        "path": "paintings/shostakovich-string-quartet-8-hero.heic",
+        "width": 2285,
+        "height": 1800,
+        "bytes": 965988,
+        "hash": "bd6b974721"
+      },
+      "thumb": {
+        "path": "paintings/shostakovich-string-quartet-8-thumb.heic",
+        "width": 381,
+        "height": 300,
+        "bytes": 31351,
+        "hash": "709e54bcc9"
+      },
+      "full": {
+        "path": "paintings/shostakovich-string-quartet-8-full.heic",
+        "width": 3173,
+        "height": 2500,
+        "bytes": 1683611,
+        "hash": "3ab836077e"
       }
     },
     "paintings/shostakovich-symphony-5": {
@@ -2132,6 +2332,31 @@
         "height": 4000,
         "bytes": 1796709,
         "hash": "6772766263"
+      }
+    },
+    "paintings/wagner-tristan-prelude-and-liebestod": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Rogelio_de_Egusquiza_-_Tristan_and_Isolt_(Death)_-_Google_Art_Project.jpg",
+      "color": "#806f67",
+      "hero": {
+        "path": "paintings/wagner-tristan-prelude-and-liebestod-hero.heic",
+        "width": 2697,
+        "height": 1800,
+        "bytes": 780444,
+        "hash": "c9c04bc07c"
+      },
+      "thumb": {
+        "path": "paintings/wagner-tristan-prelude-and-liebestod-thumb.heic",
+        "width": 450,
+        "height": 300,
+        "bytes": 21920,
+        "hash": "fd9dc910f7"
+      },
+      "full": {
+        "path": "paintings/wagner-tristan-prelude-and-liebestod-full.heic",
+        "width": 3763,
+        "height": 2511,
+        "bytes": 1489307,
+        "hash": "497c2346c5"
       }
     },
     "paywall/friedrich-wanderer": {
