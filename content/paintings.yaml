@@ -614,3 +614,90 @@ brahms-symphony-1:
   thumb: { width: 400, height: 300, bytes: 17657 }
   full: { width: 4000, height: 3003, bytes: 2581482 }
   placeholder_color: "#706a5b"
+
+mozart-symphony-41:
+  # Portrait format (1952 × 2250, ≈ 0.87:1): plan the hero crop. AIC's own IIIF master is 13750 × 15846
+  # (image_id 3b8084b4-5fb4-700a-bc0a-16e6fa4698b8); the IIIF server refused scripted downloads during research,
+  # so fetch it by hand for a sharper master if wanted. AIC marks the work public domain, data CC0.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Hubert_Robert_-_The_Obelisk_-_1900.383_-_Art_Institute_of_Chicago.jpg
+  source_url: https://www.artic.edu/artworks/57049
+  commons_page: https://commons.wikimedia.org/wiki/File:Hubert_Robert_-_The_Obelisk_-_1900.383_-_Art_Institute_of_Chicago.jpg
+  width: 1952
+  height: 2250
+  medium: Oil on canvas
+  license: Public domain (PD-Art; Art Institute of Chicago open access, CC0)
+  credit_line: Hubert Robert, The Obelisk, 1787. Art Institute of Chicago, Gift of Clarence Buckingham (1900.383). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2075, bytes: 452849 }
+  thumb: { width: 300, height: 346, bytes: 14779 }
+  full: { width: 1952, height: 2250, bytes: 594418 }
+  placeholder_color: "#4e3c2d"
+
+mozart-clarinet-concerto:
+  # Landscape (3200 × 2258). A lower-resolution Google Art Project scan of the same painting also exists:
+  # File:Joseph_Wright_of_Derby_-_Italian_Landscape_with_Mountains_and_a_River_-_Google_Art_Project.jpg (2401 × 1694).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Wright_of_Derby_-_Italian_Landscape_with_Mountains_and_a_River_-_BF.1985.1_-_Museum_of_Fine_Arts.jpg
+  source_url: https://www.mfah.org/art/detail/19379
+  commons_page: https://commons.wikimedia.org/wiki/File:Joseph_Wright_of_Derby_-_Italian_Landscape_with_Mountains_and_a_River_-_BF.1985.1_-_Museum_of_Fine_Arts.jpg
+  width: 3200
+  height: 2258
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-1923)
+  credit_line: Joseph Wright of Derby, Italian Landscape with Mountains and a River, c. 1790. Museum of Fine Arts, Houston, Sarah Campbell Blaffer Foundation (BF.1985.1). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2551, height: 1800, bytes: 605658 }
+  thumb: { width: 425, height: 300, bytes: 19902 }
+  full: { width: 3200, height: 2258, bytes: 1089740 }
+  placeholder_color: "#7f8369"
+
+haydn-symphony-94:
+  # A watercolour (pen, ink and watercolour on paper), not an oil. Landscape, 5785 × 4053. YCBA releases its
+  # images of public-domain works under CC0.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Rowlandson_-_Vauxhall_Gardens_-_Google_Art_Project.jpg
+  source_url: https://collections.britishart.yale.edu/catalog/tms:5669
+  commons_page: https://commons.wikimedia.org/wiki/File:Thomas_Rowlandson_-_Vauxhall_Gardens_-_Google_Art_Project.jpg
+  width: 5785
+  height: 4053
+  medium: Watercolour, pen and black and grey ink, and graphite on laid paper
+  license: Public domain (PD-Art; Yale Center for British Art open access, CC0)
+  credit_line: Thomas Rowlandson, Vauxhall Gardens, c. 1784. Yale Center for British Art, Paul Mellon Collection (B1975.4.1844). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2569, height: 1800, bytes: 898293 }
+  thumb: { width: 428, height: 300, bytes: 36818 }
+  full: { width: 4000, height: 2802, bytes: 2425477 }
+  placeholder_color: "#a2927e"
+
+haydn-string-quartet-op-76-3:
+  # Commons licence: {{Licensed-PD-Art|PD-old-auto-1923|cc-by-sa-4.0|deathyear=1795}} (painting PD; Belvedere photo by
+  # Johannes Stoll also CC BY-SA 4.0). The Belvedere's object page says downloads are for private/scientific use only,
+  # the same conflict as beethoven-piano-concerto-3 (Molitor); faithful photos of PD 2D art are unprotected in the EU
+  # (DSM art. 14) and the US. Landscape, 3508 × 2395.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Johann_Christian_Brand_-_Laxenburg_vom_M%C3%BCnkendorfer_Lusthaus_gegen_S%C3%BCdwest_-_2575_-_%C3%96sterreichische_Galerie_Belvedere.jpg
+  source_url: https://sammlung.belvedere.at/objects/8375/laxenburg-vom-munkendorfer-lusthaus-gegen-sudwest
+  commons_page: https://commons.wikimedia.org/wiki/File:Johann_Christian_Brand_-_Laxenburg_vom_M%C3%BCnkendorfer_Lusthaus_gegen_S%C3%BCdwest_-_2575_-_%C3%96sterreichische_Galerie_Belvedere.jpg
+  width: 3508
+  height: 2395
+  medium: Oil on canvas
+  license: Public domain (PD-Art; photo also CC BY-SA 4.0)
+  credit_line: Johann Christian Brand, Laxenburg from the Münkendorf Pavilion, looking south-west (Laxenburg vom Münkendorfer Lusthaus gegen Südwest), 1758. Belvedere, Vienna (Inv. 2575). Image via Wikimedia Commons, public domain (photo Belvedere, CC BY-SA 4.0).
+  rights_status: public_domain
+  hero: { width: 2636, height: 1800, bytes: 1048499 }
+  thumb: { width: 439, height: 300, bytes: 19433 }
+  full: { width: 3508, height: 2395, bytes: 2319953 }
+  placeholder_color: "#989989"
+
+allegri-miserere:
+  # NGA Open Access (CC0), landscape 4000 × 3214, clean edges.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Auguste-Dominique_Ingres,_Pope_Pius_VII_in_the_Sistine_Chapel,_1814,_NGA_41606.jpg
+  source_url: https://www.nga.gov/collection/art-object-page.41606.html
+  commons_page: https://commons.wikimedia.org/wiki/File:Jean-Auguste-Dominique_Ingres,_Pope_Pius_VII_in_the_Sistine_Chapel,_1814,_NGA_41606.jpg
+  width: 4000
+  height: 3214
+  medium: Oil on canvas
+  license: Public domain (CC0, National Gallery of Art Open Access)
+  credit_line: Jean-Auguste-Dominique Ingres, Pope Pius VII in the Sistine Chapel, 1814. National Gallery of Art, Washington, Samuel H. Kress Collection (1952.2.23). Image via National Gallery of Art Open Access, CC0.
+  rights_status: public_domain
+  hero: { width: 2240, height: 1800, bytes: 808048 }
+  thumb: { width: 373, height: 300, bytes: 25000 }
+  full: { width: 4000, height: 3214, bytes: 3283089 }
+  placeholder_color: "#4e3a21"

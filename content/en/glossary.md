@@ -7,12 +7,14 @@ Definition: one or two sentences, written for the pop-over.
 | --- | --- | --- |
 | Arpeggio | The notes of a chord played one after another | The notes of a chord played one after another instead of together. |
 | Attacca | Go straight on into the next movement, without a pause | Italian for "attack": the next movement begins at once, with no break, so the two are heard as one continuous piece. |
+| Basset clarinet | A clarinet extended downwards, with extra low notes | A clarinet with a longer body that reaches four semitones lower than the ordinary instrument. Mozart wrote his Clarinet Concerto for it. |
 | Cadenza | A free solo passage while the orchestra waits | A short solo passage where the rest of the orchestra stops and one player or singer is free to linger. |
 | Canon | One melody chasing itself, like a round | One instrument plays a melody and another follows a moment later with the same melody, like a round. |
 | Cantabile | Smooth and expressive, in a singing style | "In a singing style": played smoothly and expressively, like a voice. |
 | Chorale | Slow, hymn-like music in solemn chords | Slow, hymn-like music that moves in solemn chords. |
 | Coda | The closing section that rounds off a movement | A closing section added to the end of a movement. |
 | Col legno | Tapping the strings with the wood of the bow | Tapping the strings with the wooden back of the bow, which makes a dry, clicking sound. |
+| Counterpoint | Two or more independent melodies combined at once | The art of combining two or more independent melodies so that they sound together as one texture, each keeping its own shape. |
 | Crescendo | Getting gradually louder | Getting gradually louder. |
 | Development | The middle of sonata form, where the themes are worked | The middle stage of sonata form, where the themes are broken up, combined and pushed through different keys. |
 | Dies irae | A medieval chant for the dead, a symbol of death | A medieval chant from the Mass for the dead. Composers quote it as a symbol of death. |
@@ -38,6 +40,7 @@ Definition: one or two sentences, written for the pop-over.
 | Passacaglia | A short theme repeated while the music around it changes | A form in which a short theme repeats over and over while the music around it keeps changing. |
 | Pedal note | One note held in the bass under changing harmony | A single note held or repeated, usually in the bass, while the harmony changes above it. |
 | Pizzicato | Plucking the strings instead of using the bow | Plucking the strings of a string instrument with the finger instead of using the bow. |
+| Plainchant | Ancient unaccompanied church melody, in free rhythm | The ancient melody of the Western Church, sung without accompaniment in a free, speech-like rhythm by one voice or many in unison. Also called plainsong or Gregorian chant. |
 | Posthorn | A small valveless horn once blown on mail coaches | A small brass horn without valves, once blown by coachmen to announce the mail coach. It plays only a few notes, which gives it a simple, nostalgic sound. |
 | Programme music | Instrumental music that tells a story or paints a scene | Instrumental music that tells a story or depicts a scene described by the composer. |
 | Recapitulation | The return of the opening themes near the end of sonata form | The last stage of sonata form, where the opening themes return. |

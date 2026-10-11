@@ -112,3 +112,18 @@ Rejected: File:Sergei_Rachmaninoff_LOC_33968.jpg (2500 × 3824, PD-Bain) is date
 - Portrait: Ferry Bératon (1859–1900), *Anton Bruckner*, 1889, oil on canvas, 85.6 × 75.8 cm, Wien Museum inv. 16837 (https://sammlung.wienmuseum.at/objekt/42817-anton-bruckner-1824-1896-komponist-und-organist/).
   https://commons.wikimedia.org/wiki/File:Anton_bruckner.jpg — 2329 × 2521. Painting public domain ({{PD-Art|PD-old-auto-expired|deathyear=1900}}); the museum's photograph is offered under CC BY 4.0 ("Foto: Birgit und Peter Kainz, Wien Museum"), so the sheet credits it via credit_line, as for the Shostakovich portrait.
   Rejected: Anton Huber photo c. 1890 (972 × 1602) and Ludwig Grillich photo c. 1892 (ÖNB, 600 × 800), both PD but smaller; Hermann Kaulbach's 1885 portrait (book scan only).
+
+## Haydn
+- Facts: https://en.wikipedia.org/wiki/Joseph_Haydn · https://www.wikidata.org/wiki/Q7349 (born 31 March 1732, Rohrau; Wikidata also records 1 April, the baptism; died 31 May 1809, Vienna)
+- Bio claims (Wikipedia): wheelwright father; St Stephen's choir from 1740, dismissed 1749; valet-accompanist to Porpora from 1752 ("the true fundamentals of composition"); Vice-Kapellmeister to the Esterházys 1761, Kapellmeister 1766; "forced to become original" at Eszterháza; friend of Mozart from c. 1784; teacher of Beethoven from 1792; London 1791–92 and 1794–95 with Salomon; Oxford honorary doctorate 1791; *The Creation* (1798), *The Seasons* (1801); died during the French occupation of Vienna.
+- "104 numbered (about 106 in all)": Wikipedia cites James Webster's count of 106 symphonies; the Hoboken numbering runs to 104.
+- Imperial hymn: https://en.wikipedia.org/wiki/Gott_erhalte_Franz_den_Kaiser (1797; tune of the *Deutschlandlied*, whose third stanza is Germany's anthem).
+- Portrait: Thomas Hardy (1757–1804), *Joseph Haydn*, 1791, oil on canvas, Royal College of Music, London (PPHC000001).
+  https://commons.wikimedia.org/wiki/File:Thomas_Hardy_(1757-1804)_-_Joseph_Haydn_(1732%E2%80%931809)_-_PPHC000001_-_Royal_College_of_Music.jpg — 976 × 1200, Public domain (PD-Art).
+
+## Allegri
+- Facts: https://en.wikipedia.org/wiki/Gregorio_Allegri · https://www.wikidata.org/wiki/Q216695 (born 1582, Rome; died 17 February 1652, Rome). Wikipedia gives "c. 14 January 1582"; the card says "c. 1582". Chisholm (1911) gives 18 February 1652, as does the portrait's cartouche.
+- Bio claims (Wikipedia): boy chorister at San Luigi dei Francesi under G. B. Nanino; benefice at Fermo cathedral, motets written there; noticed by Urban VIII, contralto in the Sistine Chapel choir from 6 December 1629 until his death; concerti (1618, 1619) and motets (1621), five masses, two settings of the Lamentations, unpublished motets; music for strings, one piece printed in Kircher's *Musurgia universalis*; generous to the poor and prisoners.
+- Miserere: https://en.wikipedia.org/wiki/Miserere_(Allegri) (1630s; Holy Week Tenebrae; Leopold Mozart's letter of 14 April 1770; top C from Rockstro's 1880 Grove edition, popularised by Atkins 1951 and King's College 1963).
+- Portrait: anonymous 19th-century engraving after Francesco Faraone Aquila, Bibliothèque nationale de France (Est. Allegri 003).
+  https://commons.wikimedia.org/wiki/File:Gregorio_Allegri.jpg — 1800 × 2500, Public domain (PD-Art, PD-old-100).

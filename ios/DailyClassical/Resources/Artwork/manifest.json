@@ -1,6 +1,31 @@
 {
   "version": 2,
   "images": {
+    "composers/allegri": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Gregorio_Allegri.jpg",
+      "color": "#9c9c9c",
+      "hero": {
+        "path": "composers/allegri-hero.heic",
+        "width": 1800,
+        "height": 2500,
+        "bytes": 1368412,
+        "hash": "2170f3f23a"
+      },
+      "thumb": {
+        "path": "composers/allegri-thumb.heic",
+        "width": 300,
+        "height": 417,
+        "bytes": 52469,
+        "hash": "d673aa6486"
+      },
+      "full": {
+        "path": "composers/allegri-full.heic",
+        "width": 1800,
+        "height": 2500,
+        "bytes": 1450554,
+        "hash": "86821ce785"
+      }
+    },
     "composers/beethoven": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Karl_Stieler%27s_Beethoven_mit_dem_Manuskript_der_Missa_solemnis.jpg",
       "color": "#2d2821",
@@ -129,6 +154,31 @@
         "height": 2600,
         "bytes": 1189301,
         "hash": "dde377275b"
+      }
+    },
+    "composers/haydn": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Hardy_(1757-1804)_-_Joseph_Haydn_(1732%E2%80%931809)_-_PPHC000001_-_Royal_College_of_Music.jpg",
+      "color": "#33231b",
+      "hero": {
+        "path": "composers/haydn-hero.heic",
+        "width": 976,
+        "height": 1200,
+        "bytes": 85504,
+        "hash": "4c709e834c"
+      },
+      "thumb": {
+        "path": "composers/haydn-thumb.heic",
+        "width": 300,
+        "height": 369,
+        "bytes": 12216,
+        "hash": "b564e91f6f"
+      },
+      "full": {
+        "path": "composers/haydn-full.heic",
+        "width": 976,
+        "height": 1200,
+        "bytes": 90982,
+        "hash": "1f78b50f5f"
       }
     },
     "composers/mahler": {
@@ -302,6 +352,31 @@
         "height": 300,
         "bytes": 15092,
         "hash": "4929d9b95f"
+      }
+    },
+    "paintings/allegri-miserere": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Auguste-Dominique_Ingres,_Pope_Pius_VII_in_the_Sistine_Chapel,_1814,_NGA_41606.jpg",
+      "color": "#4e3a21",
+      "hero": {
+        "path": "paintings/allegri-miserere-hero.heic",
+        "width": 2240,
+        "height": 1800,
+        "bytes": 808048,
+        "hash": "76889f77e6"
+      },
+      "thumb": {
+        "path": "paintings/allegri-miserere-thumb.heic",
+        "width": 373,
+        "height": 300,
+        "bytes": 25000,
+        "hash": "5e685a402b"
+      },
+      "full": {
+        "path": "paintings/allegri-miserere-full.heic",
+        "width": 4000,
+        "height": 3214,
+        "bytes": 3283089,
+        "hash": "64b5c22ef6"
       }
     },
     "paintings/beethoven-piano-concerto-3": {
@@ -779,6 +854,56 @@
         "hash": "4804ef5a1a"
       }
     },
+    "paintings/haydn-string-quartet-op-76-3": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Johann_Christian_Brand_-_Laxenburg_vom_M%C3%BCnkendorfer_Lusthaus_gegen_S%C3%BCdwest_-_2575_-_%C3%96sterreichische_Galerie_Belvedere.jpg",
+      "color": "#989989",
+      "hero": {
+        "path": "paintings/haydn-string-quartet-op-76-3-hero.heic",
+        "width": 2636,
+        "height": 1800,
+        "bytes": 1048499,
+        "hash": "a8f23804fa"
+      },
+      "thumb": {
+        "path": "paintings/haydn-string-quartet-op-76-3-thumb.heic",
+        "width": 439,
+        "height": 300,
+        "bytes": 19433,
+        "hash": "1b0feaa70e"
+      },
+      "full": {
+        "path": "paintings/haydn-string-quartet-op-76-3-full.heic",
+        "width": 3508,
+        "height": 2395,
+        "bytes": 2319953,
+        "hash": "8ba00283ac"
+      }
+    },
+    "paintings/haydn-symphony-94": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Rowlandson_-_Vauxhall_Gardens_-_Google_Art_Project.jpg",
+      "color": "#a2927e",
+      "hero": {
+        "path": "paintings/haydn-symphony-94-hero.heic",
+        "width": 2569,
+        "height": 1800,
+        "bytes": 898293,
+        "hash": "b401a9378b"
+      },
+      "thumb": {
+        "path": "paintings/haydn-symphony-94-thumb.heic",
+        "width": 428,
+        "height": 300,
+        "bytes": 36818,
+        "hash": "588af255db"
+      },
+      "full": {
+        "path": "paintings/haydn-symphony-94-full.heic",
+        "width": 4000,
+        "height": 2802,
+        "bytes": 2425477,
+        "hash": "c00168bb25"
+      }
+    },
     "paintings/mahler-symphony-2": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Matthias_Gr%C3%BCnewald_-_Resurrection.jpg",
       "color": "#574236",
@@ -879,6 +1004,31 @@
         "hash": "483893a445"
       }
     },
+    "paintings/mozart-clarinet-concerto": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Wright_of_Derby_-_Italian_Landscape_with_Mountains_and_a_River_-_BF.1985.1_-_Museum_of_Fine_Arts.jpg",
+      "color": "#7f8369",
+      "hero": {
+        "path": "paintings/mozart-clarinet-concerto-hero.heic",
+        "width": 2551,
+        "height": 1800,
+        "bytes": 605658,
+        "hash": "0e4e55addb"
+      },
+      "thumb": {
+        "path": "paintings/mozart-clarinet-concerto-thumb.heic",
+        "width": 425,
+        "height": 300,
+        "bytes": 19902,
+        "hash": "0d64b17d5c"
+      },
+      "full": {
+        "path": "paintings/mozart-clarinet-concerto-full.heic",
+        "width": 3200,
+        "height": 2258,
+        "bytes": 1089740,
+        "hash": "8575233b1f"
+      }
+    },
     "paintings/mozart-piano-concerto-21": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Bernardo_Bellotto,_called_Canaletto_-_Vienna_Viewed_from_the_Belvedere_Palace_-_Google_Art_Project.jpg",
       "color": "#a69982",
@@ -977,6 +1127,31 @@
         "height": 2792,
         "bytes": 2664083,
         "hash": "698177de74"
+      }
+    },
+    "paintings/mozart-symphony-41": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Hubert_Robert_-_The_Obelisk_-_1900.383_-_Art_Institute_of_Chicago.jpg",
+      "color": "#4e3c2d",
+      "hero": {
+        "path": "paintings/mozart-symphony-41-hero.heic",
+        "width": 1800,
+        "height": 2075,
+        "bytes": 452849,
+        "hash": "fffdc7f79f"
+      },
+      "thumb": {
+        "path": "paintings/mozart-symphony-41-thumb.heic",
+        "width": 300,
+        "height": 346,
+        "bytes": 14779,
+        "hash": "4b8272e98f"
+      },
+      "full": {
+        "path": "paintings/mozart-symphony-41-full.heic",
+        "width": 1952,
+        "height": 2250,
+        "bytes": 594418,
+        "hash": "ee0ab52716"
       }
     },
     "paintings/rachmaninoff-piano-concerto-2": {

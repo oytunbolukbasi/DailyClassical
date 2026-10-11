@@ -7,12 +7,14 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | --- | --- | --- | --- |
 | Arpeggio | Arpej | Bir akorun notalarının art arda çalınması | Bir akorun notalarının birlikte değil, art arda çalınması. |
 | Attacca | Attacca | Ara vermeden bir sonraki bölüme geçmek | İtalyanca "saldır": sonraki bölüm hiç ara vermeden hemen başlar, böylece iki bölüm kesintisiz tek bir müzik gibi duyulur. |
+| Basset clarinet | Basset klarnet | Aşağı doğru uzatılmış, ek pes notaları olan klarnet | Gövdesi daha uzun, sıradan klarnetten dört yarım ses daha pese inebilen bir klarnet. Mozart Klarnet Konçertosu'nu bu çalgı için yazdı. |
 | Cadenza | Kadans | Orkestra susarken çalınan serbest solo pasaj | Orkestranın geri kalanının durduğu ve bir çalgıcının ya da şarkıcının dilediğince oyalanabildiği kısa bir solo pasaj. |
 | Canon | Kanon | Aynı melodinin bir an arayla kendini izlemesi | Bir çalgı bir melodi çalar, bir başkası bir an sonra aynı melodiyle onu izler; bir dönüşümlü şarkı gibi. |
 | Cantabile | Cantabile | Şarkı söyler gibi, akıcı ve anlamlı | "Şarkı söyler gibi": bir insan sesi gibi akıcı ve anlamlı çalınan. |
 | Chorale | Koral | Ağırbaşlı akorlarla ilerleyen, ilahi gibi müzik | Ağırbaşlı akorlarla ilerleyen yavaş, ilahi gibi bir müzik. |
 | Coda | Koda | Bir bölümü toparlayan kapanış kısmı | Bir bölümün sonuna eklenen kapanış kısmı. |
 | Col legno | Col legno | Tellere yayın tahta sırtıyla vurmak | Tellere yayın tahta sırtıyla vurmak; kuru, tıkırdayan bir ses çıkarır. |
+| Counterpoint | Kontrpuan | Aynı anda yürüyen iki ya da daha çok bağımsız ezgi | İki ya da daha fazla bağımsız ezgiyi, her biri kendi biçimini koruyarak birlikte tek bir doku oluşturacak şekilde aynı anda yürütme sanatı. |
 | Crescendo | Crescendo | Giderek güçlenen ses | Giderek güçlenen ses. |
 | Development | Gelişme | Sonat formunda temaların işlendiği orta evre | Sonat formunun orta evresi; temalar parçalanır, birleştirilir ve farklı tonlardan geçirilir. |
 | Dies irae | Dies irae | Ölüler ayininden, ölümü simgeleyen bir ilahi | Ölüler için okunan ayinden bir Orta Çağ ilahisi. Besteciler onu ölümün simgesi olarak alıntılar. |
@@ -38,6 +40,7 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Passacaglia | Passacaglia | Çevresi değişirken durmadan yinelenen kısa tema | Kısa bir temanın durmadan tekrarlandığı, çevresindeki müziğin ise sürekli değiştiği bir biçim. |
 | Pedal note | Pedal sesi | Değişen armoninin altında basta tutulan tek nota | Üstündeki armoni değişirken, genellikle basta tutulan ya da tekrarlanan tek bir nota. |
 | Pizzicato | Pizzicato | Telleri yay yerine parmakla koparmak | Yaylı bir çalgının tellerini yay yerine parmakla koparmak. |
+| Plainchant | Gregoryen ilahi | Eşliksiz, serbest ritimli eski kilise ezgisi | Batı Kilisesi'nin eşliksiz, konuşmaya yakın serbest bir ritimle, tek bir sesle ya da birçok sesin aynı notaları söylemesiyle okunan eski ezgisi. Düz şarkı (plainsong) ya da Gregoryen ilahi olarak da bilinir. |
 | Posthorn | Posta borusu | Posta arabalarında çalınan küçük, pistonsuz boru | Pistonsuz, küçük bir bakır boru; eskiden arabacılar posta arabasının gelişini duyurmak için çalardı. Yalnızca birkaç nota çalabildiği için sade, nostaljik bir sesi vardır. |
 | Programme music | Programlı müzik | Bir öykü anlatan ya da bir sahne betimleyen çalgı müziği | Bestecinin anlattığı bir öyküyü aktaran ya da bir sahneyi betimleyen çalgı müziği. |
 | Recapitulation | Yeniden serim | Sonat formunun sonunda açılış temalarının dönüşü | Sonat formunun son evresi; açılış temaları geri döner. |

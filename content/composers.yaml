@@ -515,3 +515,91 @@
     thumb: { width: 300, height: 325, bytes: 11343 }
     full: { width: 2329, height: 2521, bytes: 1465312 }
     placeholder_color: "#2b261b"
+
+- id: haydn
+  match: Joseph Haydn
+  sort_name: Haydn, Joseph
+  born: 1732
+  died: 1809
+  era: classical
+  names:
+    en: { name: Joseph Haydn, short: Haydn }
+    tr: { name: Joseph Haydn, short: Haydn }
+  nationality: { en: Austrian, tr: Avusturyalı }
+  facts:
+    born: { en: "31 March 1732, Rohrau", tr: "31 Mart 1732, Rohrau" }
+    died: { en: "31 May 1809, Vienna", tr: "31 Mayıs 1809, Viyana" }
+    symphonies: { en: "104 numbered (about 106 in all)", tr: "104 numaralı (toplam 106 kadar)" }
+    best_known_for: { en: "Symphonies, string quartets, *The Creation*", tr: "Senfonileri, yaylı dörtlüleri, *Yaratılış*" }
+  bio:
+    en: |-
+      Haydn was born in 1732 in Rohrau, a village in Lower Austria near the Hungarian border, the son of a wheelwright. At about eight he was sent to Vienna to sing in the choir of St Stephen's Cathedral. When his voice broke he was dismissed, and for years he scraped a living by teaching and playing while he taught himself to compose. For a time he worked as accompanist and valet to the Italian composer Nicola Porpora, from whom, he said, he learned the true fundamentals of composition.
+
+      In 1761 he joined the household of the Esterházy princes, and from 1766 he directed their music for almost thirty years, much of the time at the remote palace of Eszterháza in Hungary. He had an orchestra, singers and an opera house at his disposal and could experiment as he liked. Cut off from the world, he later said, he was "forced to become original". There he wrote most of his symphonies and string quartets and made both into central forms of the Classical style. He became a close friend of Mozart, and in 1792 the young Beethoven came to Vienna to study with him.
+
+      After Prince Nikolaus died in 1790, Haydn travelled to London with the concert manager Johann Peter Salomon, in 1791–92 and again in 1794–95. His twelve London symphonies were a triumph, and Oxford made him an honorary doctor. Back in Vienna he wrote the oratorios *The Creation* and *The Seasons*, and the hymn for the emperor whose tune is now the German national anthem. He died in Vienna in May 1809, while the city was occupied by Napoleon's army. He is often called the father of the symphony and of the string quartet: he did not invent them, but he showed what they could do.
+    tr: |-
+      Haydn 1732’de, Aşağı Avusturya’da, Macaristan sınırına yakın Rohrau köyünde, bir araba tekerleği ustasının oğlu olarak doğdu. Sekiz yaşlarındayken Viyana’ya, Aziz Stefan Katedrali’nin korosunda şarkı söylemeye gönderildi. Sesi değişince korodan çıkarıldı; yıllarca ders vererek ve çalgı çalarak kıt kanaat geçinirken besteciliği kendi kendine öğrendi. Bir süre İtalyan besteci Nicola Porpora’nın yanında eşlikçi ve uşak olarak çalıştı; kendi deyişiyle, besteciliğin gerçek temellerini ondan öğrendi.
+
+      1761’de Esterházy prenslerinin hizmetine girdi ve 1766’dan itibaren yaklaşık otuz yıl boyunca onların müziğini yönetti; bu sürenin büyük bölümünü Macaristan’daki ıssız Eszterháza sarayında geçirdi. Emrinde bir orkestra, şarkıcılar ve bir opera binası vardı; istediği gibi denemeler yapabiliyordu. Sonradan söylediğine göre, dünyadan kopuk olduğu için “özgün olmaya zorlanmıştı”. Senfonilerinin ve yaylı dörtlülerinin çoğunu orada yazdı ve ikisini de Klasik üslubun temel türleri hâline getirdi. Mozart’la yakın dost oldu; 1792’de genç Beethoven onunla çalışmak için Viyana’ya geldi.
+
+      Prens Nikolaus 1790’da ölünce Haydn, konser düzenleyicisi Johann Peter Salomon’la birlikte 1791–92’de ve yeniden 1794–95’te Londra’ya gitti. On iki Londra senfonisi büyük bir başarı kazandı; Oxford Üniversitesi ona fahri doktora verdi. Viyana’ya döndükten sonra *Yaratılış* ve *Mevsimler* oratoryolarını ve ezgisi bugün Alman milli marşı olan imparator ilahisini yazdı. Mayıs 1809’da, şehir Napolyon’un ordusunun işgali altındayken Viyana’da öldü. Çoğu zaman senfoninin ve yaylı dörtlünün babası diye anılır: bu türleri o icat etmedi, ama neler yapabileceklerini o gösterdi.
+  portrait:
+    artist: Thomas Hardy
+    title: { en: Portrait of Joseph Haydn, tr: Joseph Haydn’ın Portresi }
+    year: "1791"
+    collection: { en: "Royal College of Music, London", tr: "Royal College of Music, Londra" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Hardy_(1757-1804)_-_Joseph_Haydn_(1732%E2%80%931809)_-_PPHC000001_-_Royal_College_of_Music.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Thomas_Hardy_(1757-1804)_-_Joseph_Haydn_(1732%E2%80%931809)_-_PPHC000001_-_Royal_College_of_Music.jpg
+    width: 976
+    height: 1200
+    license: Public domain (PD-Art, PD-old-auto-expired)
+    focal_y: 0.25
+    hero: { width: 976, height: 1200, bytes: 85504 }
+    thumb: { width: 300, height: 369, bytes: 12216 }
+    full: { width: 976, height: 1200, bytes: 90982 }
+    placeholder_color: "#33231b"
+
+- id: allegri
+  match: Gregorio Allegri
+  sort_name: Allegri, Gregorio
+  born: 1582
+  died: 1652
+  era: renaissance
+  names:
+    en: { name: Gregorio Allegri, short: Allegri }
+    tr: { name: Gregorio Allegri, short: Allegri }
+  nationality: { en: Italian, tr: İtalyan }
+  facts:
+    born: { en: "c. 1582, Rome", tr: "1582 dolayları, Roma" }
+    died: { en: "17 February 1652, Rome", tr: "17 Şubat 1652, Roma" }
+    symphonies: { en: "None", tr: "Yok" }
+    best_known_for: { en: "*Miserere*, sacred choral music", tr: "*Miserere*, dinî koro müziği" }
+  bio:
+    en: |-
+      Allegri was born in Rome around 1582 and grew up there as a choirboy at San Luigi dei Francesi, the church of the French community, where he studied with the composer Giovanni Bernardino Nanino. He was intended for the Church, and for some years he held a post at the cathedral of Fermo, in central Italy, where he wrote many motets and other sacred works.
+
+      His music came to the notice of Pope Urban VIII, and on 6 December 1629 Allegri joined the choir of the Sistine Chapel as a singer, a post he held for the rest of his life. He published collections of sacred concertos and motets, and wrote masses, settings of the Lamentations of Jeremiah and a little music for strings; one of these pieces was printed by the scholar Athanasius Kircher in his great book on music, *Musurgia universalis* (1650). He was remembered as a kind man who gave generously to the poor and to prisoners.
+
+      He died in Rome in February 1652. His fame rests almost entirely on one work, the *Miserere*, written in the 1630s for the Holy Week services of the Sistine Chapel. For generations the papal singers performed it with ornaments of their own, passed on by ear, and the music gained an aura of secrecy. The story that the fourteen-year-old Mozart wrote it down from memory in 1770 made it famous across Europe, and 20th-century recordings turned its soaring soprano line into one of the best-known sounds in choral music.
+    tr: |-
+      Allegri 1582 dolaylarında Roma’da doğdu ve orada, Fransız topluluğunun kilisesi San Luigi dei Francesi’de koro çocuğu olarak yetişti; besteci Giovanni Bernardino Nanino’nun öğrencisi oldu. Din adamı olması düşünülüyordu; bir süre İtalya’nın ortasındaki Fermo katedralinde görev yaptı ve orada çok sayıda motet ve başka dinî eser yazdı.
+
+      Müziği Papa VIII. Urbanus’un dikkatini çekti; Allegri 6 Aralık 1629’da Sistina Şapeli korosuna şarkıcı olarak katıldı ve ömrünün sonuna dek bu görevde kaldı. Dinî konçerto ve motet derlemeleri yayımladı; misalar, Yeremya’nın Ağıtları üzerine besteler ve yaylılar için az sayıda eser yazdı. Bu eserlerden biri, bilgin Athanasius Kircher’in müzik üzerine büyük kitabı *Musurgia universalis*’te (1650) basıldı. Yoksullara ve mahkûmlara cömertçe yardım eden iyi kalpli bir insan olarak hatırlandı.
+
+      Şubat 1652’de Roma’da öldü. Ünü neredeyse yalnızca tek bir esere dayanır: 1630’larda Sistina Şapeli’nin Kutsal Hafta ayinleri için yazdığı *Miserere*. Papalık şarkıcıları onu kuşaklar boyunca, kulaktan kulağa aktarılan kendi süslemeleriyle söyledi ve müzik bir gizem havasına büründü. On dört yaşındaki Mozart’ın 1770’te eseri ezberden yazıya geçirdiği hikâyesi onu bütün Avrupa’da ünlü yaptı; 20. yüzyılın kayıtları da yükselen soprano çizgisini koro müziğinin en tanınmış seslerinden biri hâline getirdi.
+  portrait:
+    artist: { en: "Anonymous, after Francesco Faraone Aquila", tr: "Anonim, Francesco Faraone Aquila’dan" }
+    title: { en: Portrait of Gregorio Allegri, tr: Gregorio Allegri’nin Portresi }
+    year: null
+    collection: { en: "Bibliothèque nationale de France, Paris", tr: "Fransa Ulusal Kütüphanesi, Paris" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Gregorio_Allegri.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Gregorio_Allegri.jpg
+    width: 1800
+    height: 2500
+    license: Public domain (PD-Art, PD-old-100)
+    focal_y: 0.3
+    hero: { width: 1800, height: 2500, bytes: 1368412 }
+    thumb: { width: 300, height: 417, bytes: 52469 }
+    full: { width: 1800, height: 2500, bytes: 1450554 }
+    placeholder_color: "#9c9c9c"

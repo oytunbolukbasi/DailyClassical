@@ -57,7 +57,7 @@ Two schema notes for the merger:
   sort_name: Allegri, Gregorio
   born: 1582
   died: 1652
-  era: baroque
+  era: renaissance
   names:
     en: { name: Gregorio Allegri, short: Allegri }
     tr: { name: Gregorio Allegri, short: Allegri }
@@ -65,6 +65,7 @@ Two schema notes for the merger:
   facts:
     born: { en: "c. 1582, Rome", tr: "1582 dolayları, Roma" }
     died: { en: "17 February 1652, Rome", tr: "17 Şubat 1652, Roma" }
+    symphonies: { en: "None", tr: "Yok" }
     best_known_for: { en: "*Miserere*, sacred choral music", tr: "*Miserere*, dinî koro müziği" }
   bio:
     en: |-

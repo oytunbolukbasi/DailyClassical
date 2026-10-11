@@ -27,6 +27,7 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 - **11 Ekim 2026, Grup A** (5 eser): Beethoven Keman Konçertosu Ingres → Villers (Ingres Allegri'de kalıyor). David'in Napolyon'u "İmparator"da kaldı (alternatifler küçük/tarihsiz). Koch (Pastoral) ve Gros (Eroica) görsellerinde çerçeve/fon kırpıldı. Yeni terimler: Hemiola, Attacca, Ostinato, Trill.
 - **11 Ekim 2026, Grup E** (5 eser): Klarnet Beşlisi Khnopff (CC BY-SA) → Hammershøi; D 960 Constable → Dahl, *Ay Işığında Dresden*. Yeni terimler: Double stop, Lied, Tarantella.
 - **11 Ekim 2026, Grup D** (5 eser + Bruckner): Brahms 1 Menzel → Calame, *Thun Gölü* (Menzel Bach'ta kalıyor; tekniği National Gallery sayfasından doğrulandı). Schiele Mahler 9 ve "Ölüm ve Kız"da iki farklı tabloyla kaldı. Yeni terimler: Offstage, Posthorn, Wagner tuba. Mahler 3 (6 bölüm) yeni build yayına çıkmadan takvime girmeyecek.
+- **11 Ekim 2026, Grup C** (5 eser + Haydn, Allegri): ilk tercih tablolar tutuldu. Allegri `renaissance`, "Senfoni: Yok". Yeni terimler: Counterpoint, Basset clarinet, Plainchant. Not: Jupiter tablosu (Hubert Robert, *Dikilitaş*) yalnızca 1952 px; daha büyük bir kaynak bulunursa değiştirilecek.
 
 ## Eserler
 
@@ -44,11 +45,11 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 | beethoven-string-quartet-15 | B | string-quartet | 5 | Takács Quartet, 2004 | `6tFl4rPDztyza1TSAOZP8i` | John Constable, *Salisbury Cathedral from the Bishop's Garden* | ressam partide 2 kez | Birleştirildi |
 | mozart-piano-sonata-11 | B | piano-sonata | 3 | Mitsuko Uchida, 1983 | `36ZImQlSkxKd7FGSiICpEf` | Jean Baptiste Vanmour, *Cornelis Calkoen on his Way to his Audience with Sultan Ahmed III* |  | Birleştirildi |
 | mozart-piano-concerto-21 | B | piano-concerto | 3 | Géza Anda / Géza Anda · Camerata Academica des Mozarteums Salzburg, 1961 | `1YEd3qxJpi1SGJFQFqcqKC` | Bernardo Bellotto, *Vienna Viewed from the Belvedere Palace* | ressam partide 2 kez | Birleştirildi |
-| mozart-symphony-41 | C | symphony | 4 | Sir Charles Mackerras · Scottish Chamber Orchestra, 2008 | `0MNU78TPr4GbVdgRBsBL6L` | Hubert Robert, *The Obelisk* |  | Taslak |
-| mozart-clarinet-concerto | C | concerto | 3 | Thea King / Jeffrey Tate · English Chamber Orchestra, 1986 | `3UemBU0csyQmjZNyiU7c8R` | Joseph Wright of Derby, *Italian Landscape with Mountains and a River* |  | Taslak |
-| haydn-symphony-94 | C | symphony | 4 | Sir Colin Davis · Royal Concertgebouw Orchestra, 1982 | `2FNZ21rGfvoYz953jd6Tda` | Thomas Rowlandson, *Vauxhall Gardens* |  | Taslak |
-| haydn-string-quartet-op-76-3 | C | string-quartet | 4 | Takács Quartet, 1988 | `2ZNZLJE9S7WvMb23HVfRu4` | Johann Christian Brand, *Laxenburg from the Münkendorf Pavilion, looking south-west* |  | Taslak |
-| allegri-miserere | C | choral | 1 | Deborah Roberts / Peter Phillips, 2007 | `3i1pQhfdXnxiye2G4Qsvqn` | Jean-Auguste-Dominique Ingres, *Pope Pius VII in the Sistine Chapel* | ressam partide 2 kez | Taslak |
+| mozart-symphony-41 | C | symphony | 4 | Sir Charles Mackerras · Scottish Chamber Orchestra, 2008 | `0MNU78TPr4GbVdgRBsBL6L` | Hubert Robert, *The Obelisk* |  | Birleştirildi |
+| mozart-clarinet-concerto | C | concerto | 3 | Thea King / Jeffrey Tate · English Chamber Orchestra, 1986 | `3UemBU0csyQmjZNyiU7c8R` | Joseph Wright of Derby, *Italian Landscape with Mountains and a River* |  | Birleştirildi |
+| haydn-symphony-94 | C | symphony | 4 | Sir Colin Davis · Royal Concertgebouw Orchestra, 1982 | `2FNZ21rGfvoYz953jd6Tda` | Thomas Rowlandson, *Vauxhall Gardens* |  | Birleştirildi |
+| haydn-string-quartet-op-76-3 | C | string-quartet | 4 | Takács Quartet, 1988 | `2ZNZLJE9S7WvMb23HVfRu4` | Johann Christian Brand, *Laxenburg from the Münkendorf Pavilion, looking south-west* |  | Birleştirildi |
+| allegri-miserere | C | choral | 1 | Deborah Roberts / Peter Phillips, 2007 | `3i1pQhfdXnxiye2G4Qsvqn` | Jean-Auguste-Dominique Ingres, *Pope Pius VII in the Sistine Chapel* | ressam partide 2 kez | Birleştirildi |
 | mahler-symphony-2 | D | symphony | 5 | Elisabeth Schwarzkopf / Otto Klemperer · Philharmonia Orchestra, 1963 | `1oXL9ONCxCGF7ctG6gnjrI` | Matthias Grünewald, *The Resurrection (Isenheim Altarpiece)* |  | Birleştirildi |
 | mahler-symphony-3 | D | symphony | 6 | Martha Lipton / Leonard Bernstein · New York Philharmonic, 1962 | `4RvVQ968WriWyWv37Aa99q` | Giovanni Segantini, *Spring in the Alps* |  | Birleştirildi |
 | mahler-symphony-9 | D | symphony | 4 | Sir John Barbirolli · Berliner Philharmoniker, 1964 | `3mb7iASlTwepiLCXODCnme` | Egon Schiele, *Small Tree in Late Autumn* | ressam partide 2 kez | Birleştirildi |
