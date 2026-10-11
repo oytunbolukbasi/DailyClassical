@@ -962,3 +962,215 @@
     thumb: { width: 300, height: 411, bytes: 24653 }
     full: { width: 2917, height: 4000, bytes: 1852938 }
     placeholder_color: "#5e5e5e"
+
+- id: vivaldi
+  match: Antonio Vivaldi
+  sort_name: Vivaldi, Antonio
+  born: 1678
+  died: 1741
+  era: baroque
+  names:
+    en: { name: Antonio Vivaldi, short: Vivaldi }
+    tr: { name: Antonio Vivaldi, short: Vivaldi }
+  nationality: { en: Italian, tr: İtalyan }
+  facts:
+    born: { en: "4 March 1678, Venice", tr: "4 Mart 1678, Venedik" }
+    died: { en: "28 July 1741, Vienna", tr: "28 Temmuz 1741, Viyana" }
+    symphonies: { en: "None (only short string *sinfonie*)", tr: "Yok (yalnızca kısa yaylı *sinfonia*'lar)" }
+    best_known_for: { en: "*The Four Seasons*, violin concertos, *Gloria*", tr: "*Dört Mevsim*, keman konçertoları, *Gloria*" }
+  bio:
+    en: |-
+      Vivaldi was born in Venice in 1678, the son of a barber who became a professional violinist and taught him the instrument. He trained for the priesthood and was ordained in 1703, and his red hair earned him the nickname "the Red Priest". A chronic "tightness of the chest" soon excused him from saying Mass, and music became his whole career.
+
+      In 1703 he became violin master at the Ospedale della Pietà, a Venetian home for abandoned children whose orchestra and choir of girls became famous across Europe. He wrote hundreds of concertos, many of them for the girls, and his collection *L'estro armonico* (1711) made his name abroad; Bach later arranged some of his concertos. He also wrote and staged dozens of operas, and spent three years at the court of Mantua, where he probably composed much of *The Four Seasons*.
+
+      Tastes changed, and in Venice his music went out of fashion. He moved to Vienna, hoping for the support of the Emperor Charles VI, who had admired him, but the emperor died soon after he arrived, and Vivaldi died there in poverty in July 1741. For almost two centuries he was nearly forgotten. His music was rediscovered in the 20th century, and by 2011 about a thousand recordings of *The Four Seasons* had been made.
+    tr: |-
+      Vivaldi 1678'de Venedik'te doğdu. Babası, sonradan profesyonel kemancı olmuş bir berberdi ve oğluna keman çalmayı o öğretti. Antonio rahip olmak için eğitim aldı ve 1703'te papaz oldu; kızıl saçları yüzünden ona "Kızıl Rahip" dendi. Sürekli bir "göğüs darlığı" çektiği için kısa sürede ayin yönetmekten muaf tutuldu ve müzik onun bütün mesleği oldu.
+
+      1703'te, Venedik'te terk edilmiş çocuklara bakan bir yurt olan Ospedale della Pietà'nın keman öğretmeni oldu; yurdun kızlardan oluşan orkestrası ve korosu bütün Avrupa'da ün kazandı. Çoğunu bu kızlar için olmak üzere yüzlerce konçerto yazdı; *L'estro armonico* (1711) adlı derlemesi adını yurt dışında duyurdu, Bach da sonradan onun bazı konçertolarını uyarladı. Onlarca opera yazıp sahneledi ve üç yıl Mantova sarayında çalıştı; *Dört Mevsim*'in büyük bölümünü büyük olasılıkla orada besteledi.
+
+      Zevkler değişti ve Venedik'te müziği modası geçmiş sayılmaya başladı. Kendisine hayran olan İmparator VI. Karl'ın desteğini umarak Viyana'ya taşındı; ama imparator onun gelişinden kısa süre sonra öldü ve Vivaldi Temmuz 1741'de orada yoksulluk içinde hayata gözlerini yumdu. Yaklaşık iki yüzyıl boyunca neredeyse unutuldu. Müziği 20. yüzyılda yeniden keşfedildi; 2011'e gelindiğinde *Dört Mevsim*'in bine yakın kaydı yapılmıştı.
+  portrait:
+    # Master in the originals cache is CROPPED (paper margins around the engraved plate): vivaldi.source.jpg cropped to
+    # 1359 × 1793 at offset 233,233. Do not pass --refresh for this id.
+    artist: François Morellon de La Cave
+    title: { en: "Portrait of Antonio Vivaldi (Effigies Antonii Vivaldi)", tr: "Antonio Vivaldi'nin Portresi (Effigies Antonii Vivaldi)" }
+    year: "1725"
+    collection: { en: "Rijksmuseum, Amsterdam", tr: "Rijksmuseum, Amsterdam" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Portret_van_de_Italiaanse_componist_Antonio_Vivaldi_Effigies_Antonii_Vivaldi_(titel_op_object),_RP-P-2016-1496-1.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Portret_van_de_Italiaanse_componist_Antonio_Vivaldi_Effigies_Antonii_Vivaldi_(titel_op_object),_RP-P-2016-1496-1.jpg
+    width: 1359
+    height: 1793
+    license: Public domain (engraving of 1725; Rijksmuseum image CC0)
+    focal_y: 0.2
+    hero: { width: 1359, height: 1793, bytes: 790906 }
+    thumb: { width: 300, height: 396, bytes: 26472 }
+    full: { width: 1359, height: 1793, bytes: 855802 }
+    placeholder_color: "#897b6c"
+
+- id: bach
+  match: Johann Sebastian Bach
+  sort_name: Bach, Johann Sebastian
+  born: 1685
+  died: 1750
+  era: baroque
+  names:
+    en: { name: Johann Sebastian Bach, short: Bach }
+    tr: { name: Johann Sebastian Bach, short: Bach }
+  nationality: { en: German, tr: Alman }
+  facts:
+    born: { en: "21 March 1685 (Old Style), Eisenach", tr: "21 Mart 1685 (eski takvim), Eisenach" }
+    died: { en: "28 July 1750, Leipzig", tr: "28 Temmuz 1750, Leipzig" }
+    symphonies: { en: "None (the form came after his time)", tr: "Yok (bu tür ondan sonra doğdu)" }
+    best_known_for: { en: "*Brandenburg Concertos*, *St Matthew Passion*, *The Well-Tempered Clavier*", tr: "*Brandenburg Konçertoları*, *Matta Pasyonu*, *İyi Düzenlenmiş Klavye*" }
+  bio:
+    en: |-
+      Bach was born in Eisenach in 1685, the youngest child of a town musician, into a family that had produced musicians for generations. Orphaned at ten, he lived for five years with his eldest brother, an organist, and went on to work as an organist himself in Arnstadt and Mühlhausen and then at the court of Weimar, where he became known above all as a brilliant player.
+
+      In 1717 he became music director to Prince Leopold of Anhalt-Köthen, a keen musician who paid him well. The Calvinist court needed little church music, so Bach wrote instrumental works there, among them the *Brandenburg Concertos*. In 1723 he moved to Leipzig as Thomaskantor, responsible for the music of the city's main churches and the St Thomas School, and held the post for 27 years. There he wrote whole yearly cycles of church cantatas, the *St Matthew Passion* and, later, the *Mass in B minor*.
+
+      He had twenty children, four of whom became composers. After his death in 1750 he was remembered mainly as an organist, and his music was thought old-fashioned. Mendelssohn's performance of the *St Matthew Passion* in 1829 started a revival that has never stopped. His mastery of [[fugue]] and of weaving several melodies together is now seen as one of the foundations of Western music.
+    tr: |-
+      Bach 1685'te Eisenach'ta, kuşaklar boyunca müzisyen yetiştirmiş bir ailede, bir kent müzisyeninin en küçük çocuğu olarak doğdu. On yaşında öksüz ve yetim kaldı; beş yıl orgcu olan ağabeyinin yanında yaşadı. Sonra kendisi de orgcu olarak önce Arnstadt'ta ve Mühlhausen'de, ardından Weimar sarayında çalıştı; burada her şeyden önce parlak bir çalıcı olarak tanındı.
+
+      1717'de, kendisi de tutkulu bir müzisyen olan ve ona iyi ücret ödeyen Anhalt-Köthen Prensi Leopold'ün müzik yönetmeni oldu. Kalvinist saray pek kilise müziğine ihtiyaç duymadığı için Bach orada çalgı müziği yazdı; *Brandenburg Konçertoları* da bunlar arasındadır. 1723'te Leipzig'e Thomaskantor olarak geçti; kentin başlıca kiliselerinin ve Thomas Okulu'nun müziğinden sorumluydu ve bu görevi 27 yıl sürdürdü. Orada yıllık döngüler hâlinde kilise kantatları, *Matta Pasyonu*'nu ve daha sonra *Si minör Missa*'yı yazdı.
+
+      Yirmi çocuğu oldu; dördü besteci oldu. 1750'de ölümünden sonra daha çok bir orgcu olarak hatırlandı ve müziği eski moda sayıldı. Mendelssohn'un 1829'da *Matta Pasyonu*'nu seslendirmesi, o günden beri hiç durmayan bir yeniden keşfi başlattı. [[fugue|Füg]] ustalığı ve birkaç ezgiyi bir arada örme becerisi bugün Batı müziğinin temellerinden biri sayılıyor.
+  portrait:
+    artist: Elias Gottlob Haussmann
+    title: { en: Johann Sebastian Bach, tr: Johann Sebastian Bach }
+    year: "1746"
+    collection: { en: "Stadtgeschichtliches Museum, Leipzig", tr: "Stadtgeschichtliches Museum, Leipzig" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Johann_Sebastian_Bach_1746.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Johann_Sebastian_Bach_1746.jpg
+    width: 2616
+    height: 3438
+    license: Public domain (PD-Art, PD-old-100)
+    focal_y: 0.2
+    hero: { width: 1800, height: 2366, bytes: 866643 }
+    thumb: { width: 300, height: 394, bytes: 19116 }
+    full: { width: 2616, height: 3438, bytes: 1800218 }
+    placeholder_color: "#43362a"
+
+- id: franck
+  match: César Franck
+  sort_name: Franck, César
+  born: 1822
+  died: 1890
+  era: romantic
+  names:
+    en: { name: César Franck, short: Franck }
+    tr: { name: César Franck, short: Franck }
+  nationality: { en: French, tr: Fransız }
+  facts:
+    born: { en: "10 December 1822, Liège", tr: "10 Aralık 1822, Liège" }
+    died: { en: "8 November 1890, Paris", tr: "8 Kasım 1890, Paris" }
+    symphonies: { en: "One, in D minor", tr: "Bir, Re minör" }
+    best_known_for: { en: "Violin Sonata, Symphony in D minor, organ music", tr: "Keman Sonatı, Re minör Senfoni, org eserleri" }
+  bio:
+    en: |-
+      Franck was born in Liège, in today's Belgium, in 1822. His father, a bank clerk, wanted him to become a touring piano prodigy like Liszt, arranged his first concerts at the age of eleven and in 1835 took him to Paris to study. The virtuoso career never came. Franck broke with his father to marry one of his piano pupils, Félicité Saillot, in February 1848, in the middle of a revolution: the wedding party had to climb over the barricades to reach the church.
+
+      For the rest of his life he earned his living as a church organist and teacher. From 1859 he was organist of the church of Sainte-Clotilde in Paris, famous for his improvisations, and from 1872 professor of organ at the Paris Conservatoire, for which he took French nationality. A devoted circle of pupils, among them Vincent d'Indy, Ernest Chausson and Henri Duparc, gathered around the man they called "Père Franck".
+
+      Almost all the music he is remembered for came in his last dozen years: the Piano Quintet, the Violin Sonata, the Symphony in D minor and the organ *Chorals*, finished a few weeks before his death. Many of these works use [[cyclic form]], with themes that return from one movement to the next. Success came late: his String Quartet, first played in April 1890, was his first unqualified public triumph. He died in Paris that November.
+    tr: |-
+      Franck 1822'de bugünkü Belçika'da, Liège'de doğdu. Banka memuru olan babası onun Liszt gibi turneye çıkan bir harika çocuk piyanist olmasını istedi; on bir yaşında ilk konserlerini düzenledi ve 1835'te eğitim için onu Paris'e götürdü. Virtüözlük kariyeri hiç gelmedi. Franck, piyano öğrencilerinden Félicité Saillot ile evlenmek için babasıyla yollarını ayırdı; düğün Şubat 1848'de, bir devrimin ortasında yapıldı ve düğün alayı kiliseye ulaşmak için barikatların üstünden geçmek zorunda kaldı.
+
+      Hayatının geri kalanında geçimini kilise orgculuğu ve öğretmenlikle sağladı. 1859'dan itibaren Paris'teki Sainte-Clotilde kilisesinin orgcusuydu ve doğaçlamalarıyla ünlüydü; 1872'den itibaren Paris Konservatuvarı'nda org profesörü oldu ve bu görev için Fransız vatandaşlığına geçti. Aralarında Vincent d'Indy, Ernest Chausson ve Henri Duparc'ın da bulunduğu, ona bağlı bir öğrenci çevresi "Père Franck" ("Franck Baba") dedikleri hocalarının etrafında toplandı.
+
+      Bugün hatırlanan müziğinin neredeyse tamamı hayatının son on iki yılında doğdu: Piyanolu Beşli, Keman Sonatı, Re minör Senfoni ve ölümünden birkaç hafta önce bitirdiği org *Koralleri*. Bu eserlerin çoğu, temaların bir bölümden ötekine geri döndüğü [[cyclic form|döngüsel form]]u kullanır. Başarı geç geldi: Nisan 1890'da ilk kez çalınan Yaylı Dörtlüsü, onun ilk tartışmasız halk başarısı oldu. O yılın kasımında Paris'te öldü.
+  portrait:
+    # Master in the originals cache is CROPPED (blank paper margins around the etched image): franck.source.jpg cropped to
+    # 2524 × 3412 at offset 1305,1305. Do not pass --refresh for this id.
+    artist: Fernand Desmoulin
+    title: { en: Portrait of César Franck, tr: César Franck'ın Portresi }
+    # Undated etching; Desmoulin died in 1914. See the research note.
+    year: "before 1914"
+    collection: { en: "Musée Carnavalet, Paris", tr: "Musée Carnavalet, Paris" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Portrait_de_C%C3%A9sar_Franck._G.12664_(1_of_2).jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Portrait_de_C%C3%A9sar_Franck._G.12664_(1_of_2).jpg
+    width: 2524
+    height: 3412
+    license: Public domain (artist d. 1914; Paris Musées image CC0)
+    focal_y: 0.2
+    hero: { width: 1800, height: 2433, bytes: 1082285 }
+    thumb: { width: 300, height: 406, bytes: 26698 }
+    full: { width: 2524, height: 3412, bytes: 2402150 }
+    placeholder_color: "#6c5233"
+
+- id: tallis
+  match: Thomas Tallis
+  sort_name: Tallis, Thomas
+  born: 1505
+  died: 1585
+  era: renaissance
+  names:
+    en: { name: Thomas Tallis, short: Tallis }
+    tr: { name: Thomas Tallis, short: Tallis }
+  nationality: { en: English, tr: İngiliz }
+  facts:
+    born: { en: "c. 1505, probably Kent", tr: "y. 1505, büyük olasılıkla Kent" }
+    died: { en: "November 1585, Greenwich", tr: "Kasım 1585, Greenwich" }
+    symphonies: { en: "None (the form did not exist yet)", tr: "Yok (bu tür henüz ortada yoktu)" }
+    best_known_for: { en: "*Spem in alium*, *Lamentations of Jeremiah*, English anthems", tr: "*Spem in alium*, *Yeremya'nın Ağıtları*, İngilizce ilahiler" }
+  bio:
+    en: |-
+      Almost nothing is known about Tallis's early life. He was probably born in Kent around 1505, and the first record of him, from 1531, shows him as organist of the priory at Dover. He then worked at a London church and at Waltham Abbey in Essex until it was closed in 1540, when Henry VIII dissolved the monasteries, and after that sang at Canterbury Cathedral.
+
+      From about 1543 he belonged to the Chapel Royal, the monarch's own choir, and he served four Tudor rulers in turn: Henry VIII, Edward VI, Mary I and Elizabeth I. As the official religion swung between Catholic and Protestant, he wrote Latin music for one reign and English music for the next, and seems to have stayed clear of the religious conflicts around him. He married around 1552 and lived in Greenwich.
+
+      In 1575 Elizabeth gave Tallis and his former pupil William Byrd the sole right to print music in parts, and together they published a collection of Latin motets, *Cantiones sacrae*. Tallis died in Greenwich in November 1585, and Byrd wrote an elegy for him. No portrait made in his lifetime survives. His music, from short English anthems to the forty voices of *Spem in alium*, is still sung in churches and concert halls.
+    tr: |-
+      Tallis'in gençliği hakkında neredeyse hiçbir şey bilinmiyor. Büyük olasılıkla 1505 dolaylarında Kent'te doğdu; ondan söz eden ilk belge, 1531 tarihli, onu Dover'daki manastırın orgcusu olarak gösterir. Ardından Londra'da bir kilisede ve Essex'teki Waltham Manastırı'nda çalıştı; manastır, VIII. Henry'nin manastırları kapattığı 1540'ta kapanınca Canterbury Katedrali'nde şarkı söyledi.
+
+      Yaklaşık 1543'ten itibaren hükümdarın kendi korosu olan Chapel Royal'in üyesiydi ve sırasıyla dört Tudor hükümdarına hizmet etti: VIII. Henry, VI. Edward, I. Mary ve I. Elizabeth. Resmî din Katoliklik ile Protestanlık arasında gidip gelirken o bir dönem için Latince, ardından gelen dönem için İngilizce müzik yazdı ve çevresindeki dinsel çatışmalardan uzak durmayı başarmış görünüyor. 1552 dolaylarında evlendi ve Greenwich'te yaşadı.
+
+      1575'te Elizabeth, Tallis'e ve eski öğrencisi William Byrd'e çok sesli müzik basma tekelini verdi; ikisi birlikte Latince motetlerden oluşan *Cantiones sacrae* derlemesini yayımladı. Tallis Kasım 1585'te Greenwich'te öldü; Byrd onun için bir ağıt yazdı. Hayattayken yapılmış hiçbir portresi günümüze ulaşmadı. Kısa İngilizce ilahilerden *Spem in alium*'un kırk sesine kadar müziği bugün de kiliselerde ve konser salonlarında söyleniyor.
+  portrait: null
+
+- id: smetana
+  match: Bedřich Smetana
+  sort_name: Smetana, Bedřich
+  born: 1824
+  died: 1884
+  era: romantic
+  names:
+    en: { name: Bedřich Smetana, short: Smetana }
+    tr: { name: Bedřich Smetana, short: Smetana }
+  nationality: { en: Czech, tr: Çek }
+  facts:
+    born: { en: "2 March 1824, Litomyšl", tr: "2 Mart 1824, Litomyšl" }
+    died: { en: "12 May 1884, Prague", tr: "12 Mayıs 1884, Prag" }
+    symphonies: { en: "One, the *Triumphal Symphony* (1853)", tr: "Bir, *Triumf Senfonisi* (1853)" }
+    best_known_for: { en: "*Má vlast*, *The Bartered Bride*", tr: "*Má vlast* (Vatanım), *Satılmış Gelin*" }
+  bio:
+    en: |-
+      Smetana was born in 1824 in Litomyšl, in Bohemia, then part of the Habsburg Empire, the son of a prosperous brewer. Like most educated Czechs of his day he grew up speaking German, and he learned to write good Czech only as an adult. He played in public at six, studied music in Prague, and in 1848 briefly joined the uprising there. Liszt, to whom he wrote for help that year, became a friend and supporter.
+
+      Unable to make a living in Prague, he spent five years in Gothenburg, in Sweden, as a teacher and choirmaster, and returned in the early 1860s, when Czech culture was beginning to flourish. His comic opera *The Bartered Bride* (1866) became a great success, and he was made principal conductor of Prague's Provisional Theatre, the first home of Czech opera, although rivals attacked his music as too close to Wagner.
+
+      In 1874 he went completely deaf and had to leave the theatre. In the years that followed he wrote some of his finest music, including *Má vlast*, a cycle of six orchestral pictures of his homeland, and the string quartet *From My Life*, in which a long, high note portrays the onset of his deafness. His health then broke down, and he died in a Prague asylum in 1884. In his own country he is regarded as the father of Czech music.
+    tr: |-
+      Smetana 1824'te, o sırada Habsburg İmparatorluğu'na bağlı olan Bohemya'da, Litomyšl'de, varlıklı bir bira üreticisinin oğlu olarak doğdu. Döneminin eğitimli Çeklerinin çoğu gibi Almanca konuşarak büyüdü; düzgün Çekçe yazmayı ancak yetişkinliğinde öğrendi. Altı yaşında halk önünde çaldı, Prag'da müzik eğitimi aldı ve 1848'de oradaki ayaklanmaya kısa bir süre katıldı. Aynı yıl yardım istemek için mektup yazdığı Liszt, onun dostu ve destekçisi oldu.
+
+      Prag'da geçimini sağlayamayınca İsveç'te, Göteborg'da öğretmen ve koro şefi olarak beş yıl geçirdi; 1860'ların başında, Çek kültürünün filizlenmeye başladığı bir dönemde geri döndü. Komik operası *Satılmış Gelin* (1866) büyük başarı kazandı ve Çek operasının ilk yuvası olan Prag Geçici Tiyatrosu'nun baş şefliğine getirildi; ama rakipleri müziğini Wagner'e fazla yakın bulup ona saldırdı.
+
+      1874'te tamamen sağır oldu ve tiyatrodan ayrılmak zorunda kaldı. Sonraki yıllarda en güzel eserlerinden bazılarını yazdı: vatanını anlatan altı orkestra tablosundan oluşan *Má vlast* döngüsü ve uzun, tiz bir notanın sağırlığının başlangıcını anlattığı *Hayatımdan* adlı yaylı dörtlüsü. Ardından sağlığı çöktü ve 1884'te Prag'da bir akıl hastanesinde öldü. Kendi ülkesinde Çek müziğinin babası sayılır.
+  portrait:
+    artist: { en: "Unknown photographer (copy by Bain News Service)", tr: "Bilinmeyen fotoğrafçı (Bain News Service kopyası)" }
+    title: { en: Bedřich Smetana, tr: Bedřich Smetana }
+    # The Bain copy negative is captioned "1900" (unverified); the photograph itself predates Smetana's death in 1884.
+    year: "before 1884"
+    collection: { en: "Library of Congress, Washington, D.C.", tr: "Kongre Kütüphanesi, Washington" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Smetana_LCCN2014716851_(cropped).jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Smetana_LCCN2014716851_(cropped).jpg
+    width: 3173
+    height: 4123
+    license: Public domain (PD-Bain, PD-old-70; Library of Congress, no known restrictions)
+    focal_y: 0.2
+    hero: { width: 1800, height: 2339, bytes: 527727 }
+    thumb: { width: 300, height: 390, bytes: 14094 }
+    full: { width: 3078, height: 4000, bytes: 1375854 }
+    placeholder_color: "#777777"

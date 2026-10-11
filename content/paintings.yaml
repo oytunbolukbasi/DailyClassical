@@ -951,3 +951,79 @@ elgar-cello-concerto:
   thumb: { width: 383, height: 300, bytes: 25331 }
   full: { width: 4000, height: 3132, bytes: 2036975 }
   placeholder_color: "#564a36"
+
+vivaldi-four-seasons-spring:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Antoine_Watteau_-_F%C3%AAtes_Venitiennes_-_Google_Art_Project.jpg
+  source_url: https://www.nationalgalleries.org/art-and-artists/5560
+  commons_page: https://commons.wikimedia.org/wiki/File:Jean-Antoine_Watteau_-_F%C3%AAtes_Venitiennes_-_Google_Art_Project.jpg
+  width: 3238
+  height: 4001
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100; Google Art Project)
+  credit_line: Jean-Antoine Watteau, Fêtes vénitiennes, c. 1718–19. Scottish National Gallery, Edinburgh (NG 439). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2224, bytes: 671741 }
+  thumb: { width: 300, height: 371, bytes: 21618 }
+  full: { width: 3237, height: 4000, bytes: 1796709 }
+  placeholder_color: "#494230"
+
+bach-brandenburg-concerto-5:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Adolph_Menzel_-_Fl%C3%B6tenkonzert_Friedrichs_des_Gro%C3%9Fen_in_Sanssouci_-_Google_Art_Project.jpg
+  source_url: https://id.smb.museum/object/966477
+  commons_page: https://commons.wikimedia.org/wiki/File:Adolph_Menzel_-_Fl%C3%B6tenkonzert_Friedrichs_des_Gro%C3%9Fen_in_Sanssouci_-_Google_Art_Project.jpg
+  width: 3543
+  height: 2433
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old; Google Art Project)
+  credit_line: Adolph Menzel, The Flute Concert of Frederick the Great at Sanssouci, 1850–52. Alte Nationalgalerie, Staatliche Museen zu Berlin (A I 206). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2621, height: 1800, bytes: 1957226 }
+  thumb: { width: 437, height: 300, bytes: 34623 }
+  full: { width: 3543, height: 2433, bytes: 3033850 }
+  placeholder_color: "#5c4b3e"
+
+franck-violin-sonata:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Khnopff,_Listening_to_Schumann.jpg
+  source_url: http://balat.kikirpa.be/object/20037227
+  commons_page: https://commons.wikimedia.org/wiki/File:Khnopff,_Listening_to_Schumann.jpg
+  width: 3782
+  height: 3288
+  medium: Oil on canvas
+  license: Public domain (PD-old; photographic reproduction of a 2D work)
+  credit_line: Fernand Khnopff, Listening to Schumann, 1883. Royal Museums of Fine Arts of Belgium, Brussels (inv. 6366). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2070, height: 1800, bytes: 616815 }
+  thumb: { width: 345, height: 300, bytes: 20066 }
+  full: { width: 3782, height: 3288, bytes: 2016656 }
+  placeholder_color: "#5f5760"
+
+tallis-spem-in-alium:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/F0427_Louvre_Le_Tintoret_Le_Paradis_INV570_rwk.jpg
+  source_url: https://collections.louvre.fr/ark:/53355/cl010064392
+  commons_page: https://commons.wikimedia.org/wiki/File:F0427_Louvre_Le_Tintoret_Le_Paradis_INV570_rwk.jpg
+  width: 5496
+  height: 2124
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100); photograph also CC BY-SA 4.0 (Mbzt)
+  credit_line: Jacopo Tintoretto, The Coronation of the Virgin, known as Paradise, c. 1579. Musée du Louvre, Paris (INV 570). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 3600, height: 1391, bytes: 1258370 }
+  thumb: { width: 720, height: 278, bytes: 73451 }
+  full: { width: 4000, height: 1546, bytes: 1572540 }
+  placeholder_color: "#817f78"
+
+smetana-vltava:
+  # Switched at merge: Schikaneder is in a private collection, known only from an auction record; was alternative A (museum-held, the river itself).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Zdenka_Braunerov%C3%A1_-_Z%C3%A1toka_Vltavy_v_Roztok%C3%A1ch_(1885).jpg
+  source_url: https://www.webumenia.sk/en/dielo/SVK:TMP.683
+  commons_page: https://commons.wikimedia.org/wiki/File:Zdenka_Braunerov%C3%A1_-_Z%C3%A1toka_Vltavy_v_Roztok%C3%A1ch_(1885).jpg
+  width: 7296
+  height: 4323
+  medium: Oil on panel
+  license: Public domain (PD-Art; artist d. 1934; Public Domain Mark via Web umenia)
+  credit_line: Zdenka Braunerová, Backwater of the Vltava at Roztoky, 1885. National Gallery Prague (O 5276). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 3038, height: 1800, bytes: 1064013 }
+  thumb: { width: 506, height: 300, bytes: 23742 }
+  full: { width: 4000, height: 2370, bytes: 2201874 }
+  placeholder_color: "#7b715d"

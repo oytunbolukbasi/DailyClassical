@@ -211,3 +211,37 @@ Rejected: File:Sergei_Rachmaninoff_LOC_33968.jpg (2500 × 3824, PD-Bain) is date
   Rights check: US — published in 1924, before 1931: public domain. UK/EU — photographer unknown (agency print); an anonymous work published in 1924 is out of copyright 70 years after publication (1994). Safe in both. Year shown as "1924" = first known publication; the sitting may be a few years earlier (Elgar wears academic robes; he looks about 60).
   focal_y 0.15: seated three-quarter figure, face in the top fifth of the frame (checked on a 500 px thumbnail); re-check after cropping the negative border.
 - Rejected: File:Edward_Elgar.jpg (the familiar c. 1905 Rotary Photo postcard portrait; PD-anon-expired, PD-UK-unknown) is only 697 × 698 px. File:Edward_Elgar_1857_-_1934.jpg (3821 × 5454) is a halftone scan from a 1913 book with a visible screen pattern. File:Edward_Elgar,_appointed_Master_of_King's_Music.jpg (1791 × 2086) is the same photo as a newspaper reproduction, lower quality than the LOC negative.
+
+## Vivaldi (added 2026-10-10)
+- Facts: https://en.wikipedia.org/wiki/Antonio_Vivaldi · https://www.britannica.com/biography/Antonio-Vivaldi · https://www.wikidata.org/wiki/Q1340
+- Born 4 March 1678, Venice; died night of 27/28 July 1741, Vienna (card: 28 July). Ordained 1703; "il Prete Rosso"; excused from saying Mass ("strettezza di petto"). Ospedale della Pietà from September 1703; *L'estro armonico* Amsterdam 1711; Mantua (Philip of Hesse-Darmstadt) from 1717/18 for three years; met Charles VI 1728; Vienna; the emperor died shortly after his arrival (October 1740). About 1,000 recordings of *The Four Seasons* by 2011 (Wikipedia, *The Four Seasons*). Bach's arrangements: Wikipedia (Bach) "Bach copied and arranged Italian masters such as Vivaldi (e.g. BWV 1065)".
+- "None (only short string *sinfonie*)": he wrote string and opera *sinfonie*, not symphonies in the later sense.
+- Portrait: François Morellon de La Cave, *Effigies Antonii Vivaldi*, engraving, 1725 (signed "F. M. la Cave Sculpsit 1725"), frontispiece portrait for the first edition of Op. 8. Rijksmuseum RP-P-2016-1496-1.
+  https://commons.wikimedia.org/wiki/File:Portret_van_de_Italiaanse_componist_Antonio_Vivaldi_Effigies_Antonii_Vivaldi_(titel_op_object),_RP-P-2016-1496-1.jpg — 1902 × 2500, CC0 (Rijksmuseum). Rejected: the anonymous Bologna oil (File:Vivaldi.jpg), identification questioned.
+
+## Bach (added 2026-10-10)
+- Facts: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach · https://www.britannica.com/biography/Johann-Sebastian-Bach · https://www.wikidata.org/wiki/Q1339
+- Born 21 March 1685 Old Style (31 March New Style), Eisenach; the card gives the Old Style date, by which his birthday is usually known, and says so. Died 28 July 1750, Leipzig.
+- Orphaned at 10; five years with his brother Johann Christoph; Arnstadt, Mühlhausen, Weimar (Konzertmeister 1714); Köthen 1717–1723 (Prince Leopold, Calvinist court, mostly instrumental music); Thomaskantor in Leipzig from 1723 for 27 years; annual cantata cycles; twenty children, four composers; Mendelssohn's *St Matthew Passion* 1829 started the Bach revival.
+- Portrait: Elias Gottlob Haussmann (1695–1774), *Johann Sebastian Bach*, 1746, oil on canvas, Stadtgeschichtliches Museum Leipzig (XXII/48), with the riddle canon BWV 1076.
+  https://commons.wikimedia.org/wiki/File:Johann_Sebastian_Bach_1746.jpg — 2616 × 3438, Public domain (PD-Art). The 1748 version (File:Johann_Sebastian_Bach.jpg, 1376 × 1786) is smaller.
+
+## Franck (added 2026-10-10)
+- Facts: https://en.wikipedia.org/wiki/C%C3%A9sar_Franck · https://www.britannica.com/biography/Cesar-Franck · https://www.wikidata.org/wiki/Q50187
+- Born 10 December 1822, Liège; died 8 November 1890, Paris. First concerts 1834; Paris 1835 (Reicha). Married Félicité Saillot 22 February 1848 (barricades, per d'Indy). Sainte-Clotilde from 1859; Conservatoire professor 1872 (took French nationality). Pupils d'Indy, Chausson, Duparc, Vierne. Late works: Piano Quintet 1879, Prelude, Chorale and Fugue 1884, Symphonic Variations 1885, Violin Sonata 1886, Symphony in D minor 1886–88, String Quartet (premiered April 1890, first unqualified success), *Trois Chorals* (August–September 1890). Cab accident July 1890; died of pleurisy; the link to the accident is uncertain (not claimed).
+- Portrait: Fernand Desmoulin (1853–1914), *Portrait de César Franck*, etching and drypoint, undated, Musée Carnavalet G.12664 (Paris Musées, CC0).
+  https://commons.wikimedia.org/wiki/File:Portrait_de_C%C3%A9sar_Franck._G.12664_(1_of_2).jpg — 5114 × 6413. Year label "before 1914" (engraver's death). Rejected: Pierre Petit photograph (472 × 604, too small); Rongier's organ-loft painting (face too small for the crop).
+
+## Tallis (added 2026-10-10)
+- Facts: https://en.wikipedia.org/wiki/Thomas_Tallis · https://www.britannica.com/biography/Thomas-Tallis · https://www.wikidata.org/wiki/Q207789
+- Born c. 1505 (estimates 1500–1520), probably Kent. Died in Greenwich on 20 or 23 November 1585 (Wikipedia lead and Wikidata: 23 November); the card says "November 1585".
+- Dover Priory 1531; St Mary-at-Hill 1536–38; Waltham Abbey to March 1540; Canterbury 1540–42; Chapel Royal from c. 1543; served Henry VIII, Edward VI, Mary I, Elizabeth I. Married Joan c. 1552; Greenwich. 1575 printing monopoly with Byrd; *Cantiones sacrae* 1575. Byrd's elegy *Ye Sacred Muses*.
+- Portrait: none. "No contemporaneous portrait of Tallis survives; the one painted by Gerard Vandergucht dates from 150 years after the composer's death" (Wikipedia). `portrait: null`.
+- Era: the enum has no `renaissance` value; see `content/research/tallis-spem-in-alium.shared.md` §4.
+
+## Smetana (added 2026-10-10)
+- Facts: https://en.wikipedia.org/wiki/Bed%C5%99ich_Smetana · https://www.britannica.com/biography/Bedrich-Smetana · https://www.wikidata.org/wiki/Q48173
+- Born 2 March 1824, Litomyšl; died 12 May 1884, Kateřinky asylum, Prague; buried Vyšehrad Cemetery. German-speaking upbringing; first public performance October 1830; Proksch; 1848 uprising; Liszt's help (1848) and Weimar visit (1857); Gothenburg 1856–c. 1861; *The Bartered Bride* 1866; principal conductor of the Provisional Theatre from 1866; "Wagnerism" attacks (Pivoda); deaf by the end of 1874; *Má vlast* 1874–79; String Quartet No. 1 *From My Life* (deafness as a long high harmonic E).
+- Symphonies: one, the *Triumphal Symphony* (1853).
+- Portrait: Bain News Service copy of a 19th-century photograph, Library of Congress (LCCN 2014716851, ggbain.36702), cropped on Commons.
+  https://commons.wikimedia.org/wiki/File:Smetana_LCCN2014716851_(cropped).jpg — 3173 × 4123, Public domain (PD-Bain). Bain's date "1900" refers to the copy; the card says "before 1884".

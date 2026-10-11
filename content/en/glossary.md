@@ -14,13 +14,16 @@ Definition: one or two sentences, written for the pop-over.
 | Chorale | Slow, hymn-like music in solemn chords | Slow, hymn-like music that moves in solemn chords. |
 | Coda | The closing section that rounds off a movement | A closing section added to the end of a movement. |
 | Col legno | Tapping the strings with the wood of the bow | Tapping the strings with the wooden back of the bow, which makes a dry, clicking sound. |
+| Continuo | The bass line and chords that underpin Baroque music | The accompaniment that runs under almost all Baroque music: a bass line played by a cello, bassoon or double bass, with a harpsichord, organ or lute filling in the chords. |
 | Counterpoint | Two or more independent melodies combined at once | The art of combining two or more independent melodies so that they sound together as one texture, each keeping its own shape. |
 | Crescendo | Getting gradually louder | Getting gradually louder. |
+| Cyclic form | Themes that come back across a work's movements | A way of building a work in several movements so that themes from one movement return, often transformed, in the others. |
 | Development | The middle of sonata form, where the themes are worked | The middle stage of sonata form, where the themes are broken up, combined and pushed through different keys. |
 | Dies irae | A medieval chant for the dead, a symbol of death | A medieval chant from the Mass for the dead. Composers quote it as a symbol of death. |
 | Divisi | A string section split to play separate lines | A string section split into two or more groups, each playing a different line. |
 | Double exposition | The themes presented twice: orchestra, then soloist | In the first movement of a Classical concerto, the main themes are presented twice: first by the orchestra alone, then by the soloist with the orchestra, this time moving to a new key. |
 | Double stop | Two notes played at once on a string instrument | Bowing two strings at the same time, so that a single violinist or cellist sounds two notes together. |
+| Drone | A long-held low note, like a bagpipe's | One or more low notes held or repeated for a long time under a melody, like the drone pipes of a bagpipe. |
 | Exposition | The opening of sonata form, where the themes are introduced | The first stage of sonata form, where the main themes are introduced. It is often repeated. |
 | Fugato | A passage that begins like a fugue, then moves on | A passage that starts like a fugue, with instruments entering one by one on the same tune, without being a full fugue. |
 | Fugue | One tune entering voice by voice, woven against itself | A piece or section in which one tune enters in each voice in turn and is woven against itself. |
@@ -34,6 +37,7 @@ Definition: one or two sentences, written for the pop-over.
 | Ländler | A rustic Austrian dance in three, ancestor of the waltz | A rustic Austrian country dance in three beats, a slower, heavier ancestor of the waltz. |
 | Major | The kind of key that sounds bright or settled | The kind of key that generally sounds bright or settled. Its darker counterpart is the minor. |
 | Minuet | An elegant 18th-century dance in three beats | An elegant 18th-century dance in three beats, used as the third movement of Classical symphonies. |
+| Motet | A sacred choral piece on a Latin text | A sacred piece for choir, usually unaccompanied, on a Latin text; one of the main forms of Renaissance church music. |
 | Motif | A short musical idea that keeps returning | The smallest musical idea, just a few notes, from which a theme is built. |
 | Muted | Played with a device that softens and veils the sound | Played with a small device on the instrument that softens and veils the sound. |
 | Nocturne | A dreamy "night piece", usually for piano | A "night piece": a slow, dreamy piece with a singing melody over a flowing accompaniment, a form Chopin made famous. |
@@ -45,15 +49,18 @@ Definition: one or two sentences, written for the pop-over.
 | Pentatonic scale | A five-note scale heard in folk music worldwide | A scale of five notes instead of the usual seven, with no semitone steps between them. It gives melodies an open, folk-like sound found in music all over the world. |
 | Pizzicato | Plucking the strings instead of using the bow | Plucking the strings of a string instrument with the finger instead of using the bow. |
 | Plainchant | Ancient unaccompanied church melody, in free rhythm | The ancient melody of the Western Church, sung without accompaniment in a free, speech-like rhythm by one voice or many in unison. Also called plainsong or Gregorian chant. |
+| Polyphony | Several independent melodies sounding together | Music made of several independent melodic lines sung or played at once, each with its own shape, instead of one tune with accompaniment. |
 | Posthorn | A small valveless horn once blown on mail coaches | A small brass horn without valves, once blown by coachmen to announce the mail coach. It plays only a few notes, which gives it a simple, nostalgic sound. |
 | Programme music | Instrumental music that tells a story or paints a scene | Instrumental music that tells a story or depicts a scene described by the composer. |
 | Recapitulation | The return of the opening themes near the end of sonata form | The last stage of sonata form, where the opening themes return. |
 | Recitative | Music that follows the free rhythm of speech | Music that imitates the rhythm of speech, free and unmeasured. |
+| Ritornello | The returning refrain of a Baroque concerto | In a Baroque concerto, the passage the whole ensemble plays at the start and brings back, often shortened or in new keys, between the soloist's episodes. |
 | Rondo | A main theme returning between contrasting episodes | A form in which one main theme keeps returning between contrasting episodes. |
 | Scherzo | A fast, energetic movement; the word means "joke" | A fast, energetic movement, usually third in a symphony. The word means "joke", though the mood is often far from funny. |
 | Siciliano | A slow, swaying dance with a lilting long-short-long rhythm | A slow, swaying piece in 6/8 or 12/8 with a lilting long-short-long rhythm, often used for gentle or melancholy music. |
 | Sonata form | Three stages: exposition, development, recapitulation | A three-stage structure: themes are introduced (exposition), worked and set against each other (development), and brought back (recapitulation). |
 | Sustain pedal | The piano pedal that keeps notes ringing after release | The piano's right-hand pedal. It lifts the dampers off the strings, so notes keep ringing after the keys are let go and blend into one another. |
+| Symphonic poem | A one-movement orchestral piece that tells a story | A single-movement orchestral work that describes a story, a place or a scene. The form was pioneered by Liszt. |
 | Syncopation | Accents off the beat that pull against the pulse | Accents placed off the main beats, which makes the rhythm feel as if it is floating or pulling against the pulse. |
 | Tarantella | A whirling Italian dance in fast 6/8 time | A fast, whirling folk dance from southern Italy in 6/8 time. Legend linked it to the bite of the tarantula spider. |
 | Thematic transformation | One theme reshaped to take on a new character | Changing a theme's speed, rhythm, harmony or mood so that the same notes come back with a different character: a fierce idea, for example, reborn as a love song. |

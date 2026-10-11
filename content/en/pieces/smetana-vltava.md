@@ -30,11 +30,11 @@ also_recommended:
     year: 2018
     spotify_url: https://open.spotify.com/album/1nkSLLBE1oEzl0JqzAUP6e
 painting:
-  artist: Jakub Schikaneder
-  title: Steamer on the Vltava by the Palacký Bridge, Prague
-  year: c. 1910–20
-  collection: Private collection
-  pairing_note: Schikaneder paints the Vltava at dusk in the heart of Prague, by a bridge whose statues of Czech legends, among them Šárka and the bard Lumír from Má vlast, now stand at Vyšehrad.
+  artist: Zdenka Braunerová
+  title: Backwater of the Vltava at Roztoky
+  year: 1885
+  collection: National Gallery Prague
+  pairing_note: A quiet bend of the Vltava just north of Prague, painted three years after Má vlast was first played complete; the river of the music, seen by a Czech painter of Smetana's Prague.
 ```
 
 ### The big picture

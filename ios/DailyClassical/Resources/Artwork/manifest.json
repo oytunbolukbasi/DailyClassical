@@ -26,6 +26,31 @@
         "hash": "86821ce785"
       }
     },
+    "composers/bach": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Johann_Sebastian_Bach_1746.jpg",
+      "color": "#43362a",
+      "hero": {
+        "path": "composers/bach-hero.heic",
+        "width": 1800,
+        "height": 2366,
+        "bytes": 866643,
+        "hash": "94ea44dab3"
+      },
+      "thumb": {
+        "path": "composers/bach-thumb.heic",
+        "width": 300,
+        "height": 394,
+        "bytes": 19116,
+        "hash": "57adc6192d"
+      },
+      "full": {
+        "path": "composers/bach-full.heic",
+        "width": 2616,
+        "height": 3438,
+        "bytes": 1800218,
+        "hash": "b66a7190f3"
+      }
+    },
     "composers/beethoven": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Karl_Stieler%27s_Beethoven_mit_dem_Manuskript_der_Missa_solemnis.jpg",
       "color": "#2d2821",
@@ -229,6 +254,31 @@
         "height": 4000,
         "bytes": 1852938,
         "hash": "7d0baddd45"
+      }
+    },
+    "composers/franck": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Portrait_de_C%C3%A9sar_Franck._G.12664_(1_of_2).jpg",
+      "color": "#6c5233",
+      "hero": {
+        "path": "composers/franck-hero.heic",
+        "width": 1800,
+        "height": 2433,
+        "bytes": 1082285,
+        "hash": "8ff2ce2b83"
+      },
+      "thumb": {
+        "path": "composers/franck-thumb.heic",
+        "width": 300,
+        "height": 406,
+        "bytes": 26698,
+        "hash": "12bdbfec56"
+      },
+      "full": {
+        "path": "composers/franck-full.heic",
+        "width": 2524,
+        "height": 3412,
+        "bytes": 2402150,
+        "hash": "8867c0ad0a"
       }
     },
     "composers/grieg": {
@@ -516,6 +566,31 @@
         "hash": "b7f73e3e22"
       }
     },
+    "composers/smetana": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Smetana_LCCN2014716851_(cropped).jpg",
+      "color": "#777777",
+      "hero": {
+        "path": "composers/smetana-hero.heic",
+        "width": 1800,
+        "height": 2339,
+        "bytes": 527727,
+        "hash": "9d2eca61ff"
+      },
+      "thumb": {
+        "path": "composers/smetana-thumb.heic",
+        "width": 300,
+        "height": 390,
+        "bytes": 14094,
+        "hash": "278f920594"
+      },
+      "full": {
+        "path": "composers/smetana-full.heic",
+        "width": 3078,
+        "height": 4000,
+        "bytes": 1375854,
+        "hash": "d4673095fd"
+      }
+    },
     "composers/tchaikovsky": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Portr%C3%A4t_des_Komponisten_Pjotr_I._Tschaikowski_(1840-1893).jpg",
       "color": "#252623",
@@ -539,6 +614,31 @@
         "height": 2466,
         "bytes": 341197,
         "hash": "5e911beabb"
+      }
+    },
+    "composers/vivaldi": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Portret_van_de_Italiaanse_componist_Antonio_Vivaldi_Effigies_Antonii_Vivaldi_(titel_op_object),_RP-P-2016-1496-1.jpg",
+      "color": "#897b6c",
+      "hero": {
+        "path": "composers/vivaldi-hero.heic",
+        "width": 1359,
+        "height": 1793,
+        "bytes": 790906,
+        "hash": "f4ca73da4a"
+      },
+      "thumb": {
+        "path": "composers/vivaldi-thumb.heic",
+        "width": 300,
+        "height": 396,
+        "bytes": 26472,
+        "hash": "d1ef498217"
+      },
+      "full": {
+        "path": "composers/vivaldi-full.heic",
+        "width": 1359,
+        "height": 1793,
+        "bytes": 855802,
+        "hash": "f7d8338853"
       }
     },
     "onboarding/friedrich-monk": {
@@ -582,6 +682,31 @@
         "height": 3214,
         "bytes": 3283089,
         "hash": "64b5c22ef6"
+      }
+    },
+    "paintings/bach-brandenburg-concerto-5": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Adolph_Menzel_-_Fl%C3%B6tenkonzert_Friedrichs_des_Gro%C3%9Fen_in_Sanssouci_-_Google_Art_Project.jpg",
+      "color": "#5c4b3e",
+      "hero": {
+        "path": "paintings/bach-brandenburg-concerto-5-hero.heic",
+        "width": 2621,
+        "height": 1800,
+        "bytes": 1957226,
+        "hash": "78f8758ff1"
+      },
+      "thumb": {
+        "path": "paintings/bach-brandenburg-concerto-5-thumb.heic",
+        "width": 437,
+        "height": 300,
+        "bytes": 34623,
+        "hash": "dc94ab8a28"
+      },
+      "full": {
+        "path": "paintings/bach-brandenburg-concerto-5-full.heic",
+        "width": 3543,
+        "height": 2433,
+        "bytes": 3033850,
+        "hash": "2fc561fca8"
       }
     },
     "paintings/beethoven-piano-concerto-3": {
@@ -1209,6 +1334,31 @@
         "hash": "9a0df74cbd"
       }
     },
+    "paintings/franck-violin-sonata": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Khnopff,_Listening_to_Schumann.jpg",
+      "color": "#5f5760",
+      "hero": {
+        "path": "paintings/franck-violin-sonata-hero.heic",
+        "width": 2070,
+        "height": 1800,
+        "bytes": 616815,
+        "hash": "24591d666a"
+      },
+      "thumb": {
+        "path": "paintings/franck-violin-sonata-thumb.heic",
+        "width": 345,
+        "height": 300,
+        "bytes": 20066,
+        "hash": "98cc8edba8"
+      },
+      "full": {
+        "path": "paintings/franck-violin-sonata-full.heic",
+        "width": 3782,
+        "height": 3288,
+        "bytes": 2016656,
+        "hash": "89479fb821"
+      }
+    },
     "paintings/grieg-piano-concerto": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Adolph_Tidemand_%26_Hans_Gude_-_Bridal_Procession_on_the_Hardangerfjord_-_Google_Art_Project.jpg",
       "color": "#576360",
@@ -1834,6 +1984,56 @@
         "hash": "603dab54b6"
       }
     },
+    "paintings/smetana-vltava": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Zdenka_Braunerov%C3%A1_-_Z%C3%A1toka_Vltavy_v_Roztok%C3%A1ch_(1885).jpg",
+      "color": "#7b715d",
+      "hero": {
+        "path": "paintings/smetana-vltava-hero.heic",
+        "width": 3038,
+        "height": 1800,
+        "bytes": 1064013,
+        "hash": "c99eb6471d"
+      },
+      "thumb": {
+        "path": "paintings/smetana-vltava-thumb.heic",
+        "width": 506,
+        "height": 300,
+        "bytes": 23742,
+        "hash": "5c410a26ab"
+      },
+      "full": {
+        "path": "paintings/smetana-vltava-full.heic",
+        "width": 4000,
+        "height": 2370,
+        "bytes": 2201874,
+        "hash": "38a71f39b2"
+      }
+    },
+    "paintings/tallis-spem-in-alium": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/F0427_Louvre_Le_Tintoret_Le_Paradis_INV570_rwk.jpg",
+      "color": "#817f78",
+      "hero": {
+        "path": "paintings/tallis-spem-in-alium-hero.heic",
+        "width": 3600,
+        "height": 1391,
+        "bytes": 1258370,
+        "hash": "4fe6843f3f"
+      },
+      "thumb": {
+        "path": "paintings/tallis-spem-in-alium-thumb.heic",
+        "width": 720,
+        "height": 278,
+        "bytes": 73451,
+        "hash": "e2890c9465"
+      },
+      "full": {
+        "path": "paintings/tallis-spem-in-alium-full.heic",
+        "width": 4000,
+        "height": 1546,
+        "bytes": 1572540,
+        "hash": "97bc3dc3d3"
+      }
+    },
     "paintings/tchaikovsky-piano-concerto-1": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Aleksey_Savrasov_-_%D0%93%D1%80%D0%B0%D1%87%D0%B8_%D0%BF%D1%80%D0%B8%D0%BB%D0%B5%D1%82%D0%B5%D0%BB%D0%B8_-_Google_Art_Project.jpg",
       "color": "#8e8266",
@@ -1907,6 +2107,31 @@
         "height": 2856,
         "bytes": 2361476,
         "hash": "8ba9d7cad8"
+      }
+    },
+    "paintings/vivaldi-four-seasons-spring": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Antoine_Watteau_-_F%C3%AAtes_Venitiennes_-_Google_Art_Project.jpg",
+      "color": "#494230",
+      "hero": {
+        "path": "paintings/vivaldi-four-seasons-spring-hero.heic",
+        "width": 1800,
+        "height": 2224,
+        "bytes": 671741,
+        "hash": "d92dbe905b"
+      },
+      "thumb": {
+        "path": "paintings/vivaldi-four-seasons-spring-thumb.heic",
+        "width": 300,
+        "height": 371,
+        "bytes": 21618,
+        "hash": "42f96ce601"
+      },
+      "full": {
+        "path": "paintings/vivaldi-four-seasons-spring-full.heic",
+        "width": 3237,
+        "height": 4000,
+        "bytes": 1796709,
+        "hash": "6772766263"
       }
     },
     "paywall/friedrich-wanderer": {

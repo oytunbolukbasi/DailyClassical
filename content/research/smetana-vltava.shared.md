@@ -6,14 +6,15 @@ For merging into `content/paintings.yaml`, the glossary files, `content/composer
 
 ```yaml
 smetana-vltava:
-  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Jakub_Schikaneder_Prag_Palacky-Br%C3%BCcke.jpg
-  source_url: https://www.dorotheum.com/en/l/7201672/
-  commons_page: https://commons.wikimedia.org/wiki/File:Jakub_Schikaneder_Prag_Palacky-Br%C3%BCcke.jpg
-  width: 5608
-  height: 4408
-  medium: Oil on canvas
-  license: Public domain (PD-Art, PD-old-auto-expired; artist d. 1924)
-  credit_line: Jakub Schikaneder, Steamer on the Vltava by the Palacký Bridge, Prague, c. 1910–20. Private collection. Image via Wikimedia Commons (Dorotheum), public domain.
+  # Switched at merge: Schikaneder is in a private collection, known only from an auction record; was alternative A (museum-held, the river itself).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Zdenka_Braunerov%C3%A1_-_Z%C3%A1toka_Vltavy_v_Roztok%C3%A1ch_(1885).jpg
+  source_url: https://www.webumenia.sk/en/dielo/SVK:TMP.683
+  commons_page: https://commons.wikimedia.org/wiki/File:Zdenka_Braunerov%C3%A1_-_Z%C3%A1toka_Vltavy_v_Roztok%C3%A1ch_(1885).jpg
+  width: 7296
+  height: 4323
+  medium: Oil on panel
+  license: Public domain (PD-Art; artist d. 1934; Public Domain Mark via Web umenia)
+  credit_line: Zdenka Braunerová, Backwater of the Vltava at Roztoky, 1885. National Gallery Prague (O 5276). Image via Wikimedia Commons, public domain.
   rights_status: public_domain
 ```
 

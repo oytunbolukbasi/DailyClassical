@@ -31,11 +31,11 @@ also_recommended:
     year: 2018
     spotify_url: https://open.spotify.com/album/1nkSLLBE1oEzl0JqzAUP6e
 painting:
-  artist: Jakub Schikaneder
-  title: Prag'da Palacký Köprüsü Önünde Vltava'da Bir Vapur
-  year: c. 1910–20
-  collection: Özel koleksiyon
-  pairing_note: Schikaneder Vltava'yı akşam alacasında, Prag'ın göbeğinde, bir köprünün yanında resmediyor; köprünün Çek efsanelerini canlandıran heykelleri, aralarında Má vlast'tan Šárka ve ozan Lumír de olmak üzere, bugün Vyšehrad'da duruyor.
+  artist: Zdenka Braunerová
+  title: Roztoky'de Vltava Koyu
+  year: 1885
+  collection: Prag Ulusal Galerisi
+  pairing_note: Prag'ın hemen kuzeyinde Vltava'nın sakin bir kıvrımı; Má vlast'ın ilk kez bütünüyle çalınmasından üç yıl sonra boyandı. Müzikteki nehir, Smetana'nın Prag'ından bir Çek ressamın gözüyle.
 ```
 
 ### Genel bakış

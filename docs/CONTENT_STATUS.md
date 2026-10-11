@@ -31,6 +31,7 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 - **11 Ekim 2026, Grup F** (5 eser + Schumann, Mendelssohn, Chopin): ilk tercih tablolar tutuldu (Courbet Chopin 2'de ve Çaykovski Keman'da farklı tablolarla). Mendelssohn portresi çerçeveli TIFF'ten, Kasprzycki tablosu altın çerçeve kenarından kırpıldı. Yeni terimler: Krakowiak, Nocturne.
 - **11 Ekim 2026, Grup G** (5 eser + Liszt, Grieg, Bruch): Çaykovski Keman referansı Chung → Hahn (kesintisiz final). Delacroix (Liszt) görselindeki koyu fon kırpıldı. Yeni terim: Thematic transformation.
 - **11 Ekim 2026, Grup H** (5 eser + Sibelius, Elgar): ilk tercih tablolar tutuldu. Nash (Elgar) AB'de 2017'den beri, ABD'de 1928 öncesi yayın olarak kamu malı. Elgar portresi cam negatif kenarı ve el yazısı notundan kırpıldı. Yeni terimler: Harmonics, Pentatonic scale.
+- **11 Ekim 2026, Grup I** (5 eser + Vivaldi, Bach, Franck, Tallis, Smetana): Vltava için özel koleksiyondaki Schikaneder yerine Prag Ulusal Galerisi'ndeki Braunerová (*Roztoky'de Vltava Koyu*, ahşap üzerine yağlı boya). Franck ve Vivaldi portrelerinin kâğıt kenarları kırpıldı. Tallis portresiz (yaşarken yapılmış portresi yok), dönemi `renaissance`. Yeni terimler: Continuo, Drone, Ritornello, Cyclic form, Motet, Polyphony, Symphonic poem.
 
 ## Eserler
 
@@ -78,11 +79,11 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 | dvorak-cello-concerto | H | cello-concerto | 3 | Mstislav Rostropovich / Herbert von Karajan · Berliner Philharmoniker, 1968 | `0zwaTXZIMtLu2Y0vgbZDlQ` | Antonín Slavíček, *Birch Mood* |  | Birleştirildi |
 | dvorak-string-quartet-12 | H | string-quartet | 4 | Pavel Haas Quartet, 2010 | `1DkQ0bddfB6GipbyL1DpvM` | Theodore Robinson, *Canal Scene* |  | Birleştirildi |
 | elgar-cello-concerto | H | cello-concerto | 4 | Jacqueline du Pré / John Barbirolli · London Symphony Orchestra, 1965 | `5bE9xVTlVYE0N4147mcfb4` | Paul Nash, *We Are Making a New World* |  | Birleştirildi |
-| vivaldi-four-seasons-spring | I | violin-concerto | 3 | Simon Standage / Trevor Pinnock · The English Concert, 1982 | `5tgFFNHTrkzpihDgYvpXEL` | Jean-Antoine Watteau, *Fêtes vénitiennes* |  | Taslak |
-| bach-brandenburg-concerto-5 | I | concerto | 3 | Trevor Pinnock / Trevor Pinnock · The English Concert, 1982 | `3N0xJn1EFWr5GLuslWdBQy` | Adolph Menzel, *The Flute Concert of Frederick the Great at Sanssouci* | ressam partide 3 kez | Taslak |
-| franck-violin-sonata | I | sonata | 4 | Itzhak Perlman, 1969 | `5HaEcNyN82ue3NHkqIBVQu` | Fernand Khnopff, *Listening to Schumann* | ressam partide 2 kez | Taslak |
-| tallis-spem-in-alium | I | choral | 1 | Peter Phillips, 1985 | `7BdRzzRBSBvoin2yIveUmn` | Jacopo Tintoretto, *Paradise* |  | Taslak |
-| smetana-vltava | I | orchestral | 1 | Rafael Kubelík · Boston Symphony Orchestra, 1971 | `2wnHlBJhXW9dQn5I2s8KxM` | Jakub Schikaneder, *Steamer on the Vltava by the Palacký Bridge, Prague* |  | Taslak |
+| vivaldi-four-seasons-spring | I | violin-concerto | 3 | Simon Standage / Trevor Pinnock · The English Concert, 1982 | `5tgFFNHTrkzpihDgYvpXEL` | Jean-Antoine Watteau, *Fêtes vénitiennes* |  | Birleştirildi |
+| bach-brandenburg-concerto-5 | I | concerto | 3 | Trevor Pinnock / Trevor Pinnock · The English Concert, 1982 | `3N0xJn1EFWr5GLuslWdBQy` | Adolph Menzel, *The Flute Concert of Frederick the Great at Sanssouci* | ressam partide 3 kez | Birleştirildi |
+| franck-violin-sonata | I | sonata | 4 | Itzhak Perlman, 1969 | `5HaEcNyN82ue3NHkqIBVQu` | Fernand Khnopff, *Listening to Schumann* | ressam partide 2 kez | Birleştirildi |
+| tallis-spem-in-alium | I | choral | 1 | Peter Phillips, 1985 | `7BdRzzRBSBvoin2yIveUmn` | Jacopo Tintoretto, *Paradise* |  | Birleştirildi |
+| smetana-vltava | I | orchestral | 1 | Rafael Kubelík · Boston Symphony Orchestra, 1971 | `2wnHlBJhXW9dQn5I2s8KxM` | Zdenka Braunerová, *Backwater of the Vltava at Roztoky* | (Schikaneder'den değişti) | Birleştirildi |
 | debussy-la-mer | J | orchestral | 3 | Herbert von Karajan · Berliner Philharmoniker, 1964 | `7nI7p3GS9ENddrxwqk4LSJ` | Katsushika Hokusai, *Under the Wave off Kanagawa (The Great Wave)* |  | Taslak |
 | ravel-bolero | J | orchestral | 1 | Charles Dutoit · Orchestre symphonique de Montréal, 1982 | `07g1hfGy288giLhTE18BHS` | John Singer Sargent, *El Jaleo* |  | Taslak |
 | rimsky-korsakov-scheherazade | J | orchestral | 4 | Steven Staryk / Sir Thomas Beecham · Royal Philharmonic Orchestra, 1958 | `12gqWnkhIOszwytW6jKcMY` | Ivan Aivazovsky, *The Ninth Wave* |  | Taslak |

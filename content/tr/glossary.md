@@ -14,13 +14,16 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Chorale | Koral | Ağırbaşlı akorlarla ilerleyen, ilahi gibi müzik | Ağırbaşlı akorlarla ilerleyen yavaş, ilahi gibi bir müzik. |
 | Coda | Koda | Bir bölümü toparlayan kapanış kısmı | Bir bölümün sonuna eklenen kapanış kısmı. |
 | Col legno | Col legno | Tellere yayın tahta sırtıyla vurmak | Tellere yayın tahta sırtıyla vurmak; kuru, tıkırdayan bir ses çıkarır. |
+| Continuo | Continuo | Barok müziğin altındaki bas çizgisi ve akorlar | Barok müziğin neredeyse tamamının altında süren eşlik: bir viyolonselin, fagotun ya da kontrbasın çaldığı bas çizgisi ve üstünde akorları dolduran bir klavsen, org ya da lavta. |
 | Counterpoint | Kontrpuan | Aynı anda yürüyen iki ya da daha çok bağımsız ezgi | İki ya da daha fazla bağımsız ezgiyi, her biri kendi biçimini koruyarak birlikte tek bir doku oluşturacak şekilde aynı anda yürütme sanatı. |
 | Crescendo | Crescendo | Giderek güçlenen ses | Giderek güçlenen ses. |
+| Cyclic form | Döngüsel form | Temaların bölümler boyunca geri döndüğü yapı | Birkaç bölümlük bir eserin, bir bölümdeki temaların öteki bölümlerde, çoğu zaman dönüşerek, yeniden ortaya çıkacağı biçimde kurulması. |
 | Development | Gelişme | Sonat formunda temaların işlendiği orta evre | Sonat formunun orta evresi; temalar parçalanır, birleştirilir ve farklı tonlardan geçirilir. |
 | Dies irae | Dies irae | Ölüler ayininden, ölümü simgeleyen bir ilahi | Ölüler için okunan ayinden bir Orta Çağ ilahisi. Besteciler onu ölümün simgesi olarak alıntılar. |
 | Divisi | Divisi | Ayrı çizgiler çalmak için bölünen yaylı grubu | Bir yaylı grubunun, her biri farklı bir çizgi çalan iki ya da daha fazla gruba bölünmesi. |
 | Double exposition | Çifte serim | Temaların önce orkestrayla, sonra solistle sunulması | Klasik dönem konçertolarının birinci bölümünde ana temalar iki kez sunulur: önce yalnız orkestra, sonra solist orkestrayla birlikte, bu kez yeni bir tona geçerek. |
 | Double stop | Çift ses | Yaylı bir çalgıda aynı anda çalınan iki nota | Yayla iki teli birden çalmak; böylece tek bir kemancı ya da çellist iki notayı birlikte seslendirir. |
+| Drone | Dem sesi | Gaydadaki gibi uzun tutulan pes nota | Bir ezginin altında uzun süre tutulan ya da yinelenen bir ya da birkaç pes nota; gaydanın dem borularındaki gibi. |
 | Exposition | Serim | Sonat formunda temaların tanıtıldığı ilk evre | Sonat formunun ilk evresi; ana temalar tanıtılır. Çoğu zaman tekrarlanır. |
 | Fugato | Fugato | Füg gibi başlayıp sonra başka yöne giden pasaj | Füg gibi, çalgıların aynı ezgiyle tek tek girmesiyle başlayan ama tam bir füg olmayan pasaj. |
 | Fugue | Füg | Seslere sırayla girip kendisiyle örülen tek ezgi | Tek bir ezginin sırayla her seste girdiği ve kendi kendisiyle örüldüğü bir eser ya da kısım. |
@@ -34,6 +37,7 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Ländler | Ländler | Üç vuruşlu Avusturya köylü dansı, valsin atası | Üç vuruşlu, köylü havasında bir Avusturya halk dansı; valsin daha yavaş, daha ağır bir atası. |
 | Major | Majör | Genellikle parlak ya da yerine oturmuş duyulan ton türü | Genellikle parlak ya da yerine oturmuş duyulan ton türü. Daha karanlık karşılığı minördür. |
 | Minuet | Menuet | Üç vuruşlu, zarif bir 18. yüzyıl dansı | Üç vuruşlu, zarif bir 18. yüzyıl dansı; Klasik dönem senfonilerinde üçüncü bölüm olarak kullanılır. |
+| Motet | Motet | Latince bir metin üzerine dinsel koro eseri | Çoğunlukla eşliksiz koro için, Latince bir metin üzerine yazılmış dinsel eser; Rönesans kilise müziğinin başlıca türlerinden biri. |
 | Motif | Motif | Sürekli geri dönen kısa bir müzikal fikir | Bir temanın kurulduğu, yalnızca birkaç notadan oluşan en küçük müzikal fikir. |
 | Muted | Sordinli | Sesi yumuşatıp örten bir düzenekle çalınan | Çalgının üzerine takılan, sesi yumuşatan ve örten küçük bir düzenekle çalınan. |
 | Nocturne | Noktürn | Çoğunlukla piyano için düşsel bir "gece parçası" | Bir "gece parçası": akan bir eşliğin üzerinde şarkı gibi bir melodisi olan yavaş, düşsel bir eser; Chopin'in ünlü kıldığı bir tür. |
@@ -45,15 +49,18 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Pentatonic scale | Pentatonik dizi | Dünyanın her yerinde halk müziğinde duyulan beş sesli dizi | Alışılmış yedi yerine beş notadan oluşan, aralarında yarım ses adımı bulunmayan dizi. Ezgilere, dünyanın dört bir yanındaki müziklerde duyulan açık, halk ezgisi gibi bir tını verir. |
 | Pizzicato | Pizzicato | Telleri yay yerine parmakla koparmak | Yaylı bir çalgının tellerini yay yerine parmakla koparmak. |
 | Plainchant | Gregoryen ilahi | Eşliksiz, serbest ritimli eski kilise ezgisi | Batı Kilisesi'nin eşliksiz, konuşmaya yakın serbest bir ritimle, tek bir sesle ya da birçok sesin aynı notaları söylemesiyle okunan eski ezgisi. Düz şarkı (plainsong) ya da Gregoryen ilahi olarak da bilinir. |
+| Polyphony | Polifoni | Aynı anda duyulan birkaç bağımsız ezgi | Tek bir ezgi ve eşlik yerine, her biri kendi biçimine sahip birkaç bağımsız ezgi çizgisinin aynı anda söylendiği ya da çalındığı müzik. |
 | Posthorn | Posta borusu | Posta arabalarında çalınan küçük, pistonsuz boru | Pistonsuz, küçük bir bakır boru; eskiden arabacılar posta arabasının gelişini duyurmak için çalardı. Yalnızca birkaç nota çalabildiği için sade, nostaljik bir sesi vardır. |
 | Programme music | Programlı müzik | Bir öykü anlatan ya da bir sahne betimleyen çalgı müziği | Bestecinin anlattığı bir öyküyü aktaran ya da bir sahneyi betimleyen çalgı müziği. |
 | Recapitulation | Yeniden serim | Sonat formunun sonunda açılış temalarının dönüşü | Sonat formunun son evresi; açılış temaları geri döner. |
 | Recitative | Resitatif | Konuşmanın serbest ritmini izleyen müzik | Konuşmanın ritmini taklit eden, serbest ve ölçüsüz müzik. |
+| Ritornello | Ritornello | Barok konçertonun geri dönen nakaratı | Barok konçertoda bütün topluluğun başta çaldığı ve solistin bölümleri arasında, çoğu zaman kısaltılarak ya da başka tonlarda, yeniden getirdiği pasaj. |
 | Rondo | Rondo | Zıt ara bölümler arasında dönüp duran bir ana tema | Bir ana temanın, birbirine zıt ara bölümler arasında durmadan geri döndüğü biçim. |
 | Scherzo | Scherzo | Hızlı, enerjik bir bölüm; sözcük "şaka" demektir | Hızlı, enerjik bir bölüm; bir senfonide genellikle üçüncü sırada. Sözcük "şaka" demektir, ama havası çoğu zaman hiç de komik değildir. |
 | Siciliano | Sicilyana | Uzun-kısa-uzun ritmiyle salınan yavaş bir dans | 6/8 ya da 12/8'lik, uzun-kısa-uzun ritmiyle salınan yavaş bir parça; çoğu zaman yumuşak ya da hüzünlü müzikte kullanılır. |
 | Sonata form | Sonat formu | Üç evre: serim, gelişme, yeniden serim | Üç evreli bir yapı: temalar tanıtılır (serim), işlenir ve birbirine karşı konur (gelişme), sonra geri getirilir (yeniden serim). |
 | Sustain pedal | Uzatma pedalı | Tuş bırakılınca da notaları çınlatan piyano pedalı | Piyanonun sağdaki pedalı. Sesi kesen keçeleri tellerden kaldırır; böylece tuşlar bırakıldıktan sonra da notalar çınlamayı sürdürür ve birbirine karışır. |
+| Symphonic poem | Senfonik şiir | Bir öykü anlatan tek bölümlük orkestra eseri | Bir öyküyü, bir yeri ya da bir sahneyi betimleyen tek bölümlük orkestra eseri. Bu türün öncüsü Liszt'tir. |
 | Syncopation | Senkop | Vuruş dışına düşen, nabza karşı çeken vurgular | Ana vuruşların dışına yerleştirilen vurgular; ritme süzülüyormuş ya da nabza karşı çekiyormuş gibi bir his verir. |
 | Tarantella | Tarantella | 6/8'lik, hızlı ve fırıl fırıl dönen bir İtalyan dansı | Güney İtalya'dan, 6/8'lik hızlı, fırıl fırıl dönen bir halk dansı. Efsaneye göre tarantula örümceğinin ısırığıyla ilişkilendirilirdi. |
 | Thematic transformation | Tematik dönüşüm | Yeni bir karaktere bürünen aynı tema | Bir temanın hızını, ritmini, armonisini ya da havasını değiştirerek aynı notaların başka bir karakterle geri dönmesi; örneğin sert bir fikrin bir aşk şarkısı olarak yeniden doğması. |
