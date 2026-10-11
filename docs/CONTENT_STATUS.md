@@ -55,7 +55,7 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 | mozart-clarinet-concerto | C | concerto | 3 | Thea King / Jeffrey Tate · English Chamber Orchestra, 1986 | `3UemBU0csyQmjZNyiU7c8R` | Joseph Wright of Derby, *Italian Landscape with Mountains and a River* |  | Birleştirildi |
 | haydn-symphony-94 | C | symphony | 4 | Sir Colin Davis · Royal Concertgebouw Orchestra, 1982 | `2FNZ21rGfvoYz953jd6Tda` | Thomas Rowlandson, *Vauxhall Gardens* |  | Birleştirildi |
 | haydn-string-quartet-op-76-3 | C | string-quartet | 4 | Takács Quartet, 1988 | `2ZNZLJE9S7WvMb23HVfRu4` | Johann Christian Brand, *Laxenburg from the Münkendorf Pavilion, looking south-west* |  | Birleştirildi |
-| allegri-miserere | C | choral | 1 | Deborah Roberts / Peter Phillips, 2007 | `3i1pQhfdXnxiye2G4Qsvqn` | Jean-Auguste-Dominique Ingres, *Pope Pius VII in the Sistine Chapel* | ressam partide 2 kez | Birleştirildi |
+| allegri-miserere | C | choral | 1 | Harry Christophers · The Sixteen, 1989 | `0lSeYO6mLZIngXj5NPS3Hl` | Jean-Auguste-Dominique Ingres, *Pope Pius VII in the Sistine Chapel* | ressam partide 2 kez | Birleştirildi |
 | mahler-symphony-2 | D | symphony | 5 | Elisabeth Schwarzkopf / Otto Klemperer · Philharmonia Orchestra, 1963 | `1oXL9ONCxCGF7ctG6gnjrI` | Matthias Grünewald, *The Resurrection (Isenheim Altarpiece)* |  | Birleştirildi |
 | mahler-symphony-3 | D | symphony | 6 | Martha Lipton / Leonard Bernstein · New York Philharmonic, 1962 | `4RvVQ968WriWyWv37Aa99q` | Giovanni Segantini, *Spring in the Alps* |  | Birleştirildi |
 | mahler-symphony-9 | D | symphony | 4 | Sir John Barbirolli · Berliner Philharmoniker, 1964 | `3mb7iASlTwepiLCXODCnme` | Egon Schiele, *Small Tree in Late Autumn* | ressam partide 2 kez | Birleştirildi |
