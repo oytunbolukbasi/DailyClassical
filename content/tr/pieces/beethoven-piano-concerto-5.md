@@ -9,33 +9,35 @@ title: Mi bemol majör 5. Piyano Konçertosu, "İmparator"
 catalogue: Op. 73
 key: Mi bemol majör
 year: 1809
-duration_min: 38
+duration_min: 41
 movement_count: 3
 hook: 1809'da Fransız toplarının altında yazıldı; piyano daha ilk akorda yönetimi ele alıyor.
 reference_recording:
   soloists:
-    - { name: Wilhelm Kempff, role: piano }
-  conductor: Ferdinand Leitner
-  orchestra: Berliner Philharmoniker
+    - { name: Krystian Zimerman, role: piano }
+  conductor: Leonard Bernstein
+  orchestra: Wiener Philharmoniker
   label: Deutsche Grammophon
-  catalogue_number: "SLPM 138 777 (LP); 419 468-2 (CD, with Piano Sonata Op. 111)"
-  recorded: "July 1961"
-  venue: Ufa-Studio, Berlin
-  release_year: 1962
-  year: 1962
-  spotify_url: https://open.spotify.com/album/3cS6w1hujyiNMpBFZfJtRO
+  catalogue_number: "435 467-2 (CD, The Piano Concertos); 429 748-2 (CD, No. 5 alone)"
+  recorded: "September 1989 (live)"
+  venue: Musikverein (Großer Saal), Vienna
+  release_year: 1992
+  year: 1992
+  spotify_url: https://open.spotify.com/album/6z85OonA4aXLoUOVeo6GNF
 also_recommended:
   - soloists:
-      - { name: Krystian Zimerman, role: piano }
-    conductor: Leonard Bernstein
-    orchestra: Wiener Philharmoniker
+      - { name: Wilhelm Kempff, role: piano }
+    conductor: Ferdinand Leitner
+    orchestra: Berliner Philharmoniker
     label: Deutsche Grammophon
-    catalogue_number: "435 467-2 (CD, The Piano Concertos)"
-    recorded: "September 1989 (live)"
-    venue: Musikverein (Großer Saal), Vienna
-    release_year: 1992
-    year: 1992
-    spotify_url: https://open.spotify.com/album/6z85OonA4aXLoUOVeo6GNF
+    catalogue_number: "SLPM 138 777 (LP); 419 468-2 (CD, with Piano Sonata Op. 111)"
+    recorded: "July 1961"
+    venue: Ufa-Studio, Berlin
+    release_year: 1962
+    year: 1962
+    # not playable in Turkey (Oct 2026): track 1 of the original album 3cS6w1hujyiNMpBFZfJtRO.
+    # This link is the same performance on "The Complete Concertos Vol. 2", fully playable.
+    spotify_url: https://open.spotify.com/album/4fKyZtf0JJtIhLm4sYOpK1
 painting:
   artist: Jacques-Louis David
   title: Tuileries'deki Çalışma Odasında İmparator Napoléon
@@ -56,9 +58,9 @@ painting:
 
 | | Tempo | Ton | Ölçü | Süre |
 | --- | --- | --- | --- | --- |
-| I | Allegro | Mi bemol majör | 4/4 | 19:54 |
-| II | Adagio un poco mosso | Si majör | 4/4 | 7:34 |
-| III | Rondo: Allegro ma non troppo | Mi bemol majör | 6/8 | 10:25 |
+| I | Allegro | Mi bemol majör | 4/4 | 20:45 |
+| II | Adagio un poco mosso | Si majör | 4/4 | 9:08 |
+| III | Rondo: Allegro ma non troppo | Mi bemol majör | 6/8 | 10:46 |
 
 ### I. Allegro
 
@@ -75,16 +77,16 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Orkestradan dev bir akor; piyano dalgalanan akorlar, triller ve gamlardan oluşan bir akışla yanıt verir. İki kez daha | Üç akor, üç solo: orkestra daha bir ezgi çalmadan piyano yönetimi ele alıyor |
-| ≈ 1:05 | Orkestra gururlu, adımlayan bir temaya başlar | Orkestranın [[exposition|serim]]i 1. temayla başlıyor |
-| ≈ 2:05 | Çok sessiz, yaylılarda minörde bir marş; ardından kornolar onu majörde yumuşakça çalar | 2. tema, marş |
-| ≈ 4:20 | Piyano yavaş, yükselen bir gamla yeniden girer, sonra 1. temayı yumuşak ve şefkatle çalar | Solistin serimi |
-| ≈ 5:40 | Çok yumuşak ve tizde, piyano marşı uzak bir tonda çalar | 2. tema Si minörde, şaşırtıcı bir ton |
-| ≈ 6:10 | Orkestra içeri dalar ve marşı beklenen tonda, gürültüyle çalar | Orkestra solistin sözünü kesiyor |
-| ≈ 8:10 | Temalar parçalanır, piyano ile orkestra arasında paslaşılır | [[development|Gelişme bölümü]] |
-| ≈ 9:50–10:50 | Piyano ve orkestra birbirine ağır oktavlar ve akorlar fırlatır | Bölümün ortasındaki savaş |
-| ≈ 12:30 | Büyük akorlar ve piyano soloları geri gelir | [[recapitulation|Yeniden serim]] |
-| ≈ 17:00 | Orkestra durur; piyano tek başına çalar, ama yalnızca kısa bir süre | Beethoven'in kendi yazdığı [[cadenza|kadans]]; solistin kendinden bir kadans eklememesini istemişti |
-| ≈ 17:20 | Kornolar marş ezgisiyle piyanoya sessizce katılır | Kadans [[coda|koda]]ya karışıyor |
+| ≈ 1:10 | Orkestra gururlu, adımlayan bir temaya başlar | Orkestranın [[exposition|serim]]i 1. temayla başlıyor |
+| ≈ 2:10 | Çok sessiz, yaylılarda minörde bir marş; ardından kornolar onu majörde yumuşakça çalar | 2. tema, marş |
+| ≈ 4:30 | Piyano yavaş, yükselen bir gamla yeniden girer, sonra 1. temayı yumuşak ve şefkatle çalar | Solistin serimi |
+| ≈ 5:55 | Çok yumuşak ve tizde, piyano marşı uzak bir tonda çalar | 2. tema Si minörde, şaşırtıcı bir ton |
+| ≈ 6:25 | Orkestra içeri dalar ve marşı beklenen tonda, gürültüyle çalar | Orkestra solistin sözünü kesiyor |
+| ≈ 8:30 | Temalar parçalanır, piyano ile orkestra arasında paslaşılır | [[development|Gelişme bölümü]] |
+| ≈ 10:15–11:20 | Piyano ve orkestra birbirine ağır oktavlar ve akorlar fırlatır | Bölümün ortasındaki savaş |
+| ≈ 13:00 | Büyük akorlar ve piyano soloları geri gelir | [[recapitulation|Yeniden serim]] |
+| ≈ 17:45 | Orkestra durur; piyano tek başına çalar, ama yalnızca kısa bir süre | Beethoven'in kendi yazdığı [[cadenza|kadans]]; solistin kendinden bir kadans eklememesini istemişti |
+| ≈ 18:05 | Kornolar marş ezgisiyle piyanoya sessizce katılır | Kadans [[coda|koda]]ya karışıyor |
 | Son 2 dakika | Piyano ve orkestra bir arada, Mi bemol majörde kararlı bir sona doğru büyür | |
 
 **Dikkat edilecekler**
@@ -92,7 +94,7 @@ painting:
 1. 1. temayı orkestrada ve piyanoda karşılaştırın. Orkestra yürür; piyano aynı ezgiyi yumuşakça söyler.
 2. Kadansta kornoların ne kadar çabuk geri geldiğine dikkat edin. Beethoven solisti kısa tasmayla tutar.
 
-**Bu kayıtta.** Kempff ve Leitner konçertoyu Temmuz 1961'de Berlin'de, Berlin Filarmoni ile yaptıkları Beethoven piyano konçertoları dizisinin parçası olarak kaydetti. Spotify albümünde konçerto 1–3 numaralı parçalardır; ardından Kempff'in 1964'te kaydettiği Op. 111 Piyano Sonatı gelir.
+**Bu kayıtta.** Bir konser kaydı: Zimerman, Bernstein ve Viyana Filarmoni konçertoyu Eylül 1989'da Viyana'daki Musikverein'da, 3. ve 4. konçertolarla birlikte çaldı. Bernstein Ekim 1990'da öldü; Zimerman 1. ve 2. konçertoları 1991'de, orkestrayı piyanodan yöneterek kaydetti. Bernstein ağır bölümü geniş tutuyor: pek çok kayıtta yedi buçuk dakika kadar süren bölüm burada dokuz dakikayı biraz geçiyor. Spotify albümünde konçerto 13–15 numaralı parçalardır.
 
 ### II. Adagio un poco mosso
 
@@ -108,9 +110,9 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Sordinli yaylılar yavaş, fısıltılı bir ilahi çalar | Tema, Si majörde; Mi bemolden bambaşka bir dünya |
-| ≈ 1:25 | Piyano tizden, yumuşak notalardan oluşan yavaş, inen bir çizgiyle girer | Piyano ilahiyi tekrarlamıyor, ona yanıt veriyor |
-| ≈ 4:00 | Piyano ilahiyi sessiz akorlarla kendisi çalar | Tema piyanoda |
-| ≈ 5:30 | İlahiyi flüt, klarnet ve fagot alır; piyano onu yumuşak, akan notalarla süsler | Tema tahta üflemelilerde, piyano eşlik ediyor |
+| ≈ 1:45 | Piyano tizden, yumuşak notalardan oluşan yavaş, inen bir çizgiyle girer | Piyano ilahiyi tekrarlamıyor, ona yanıt veriyor |
+| ≈ 4:50 | Piyano ilahiyi sessiz akorlarla kendisi çalar | Tema piyanoda |
+| ≈ 6:40 | İlahiyi flüt, klarnet ve fagot alır; piyano onu yumuşak, akan notalarla süsler | Tema tahta üflemelilerde, piyano eşlik ediyor |
 | Son 30 saniye | Tutulan bir nota yarım ses iner; piyano tereddütle, yavaşça yeni bir ezgi çizer | Finale köprü: piyano rondo temasını önceden deniyor; sonraki bölüm ara vermeden geliyor ([[attacca|attacca]]) |
 
 **Dikkat edilecekler**
@@ -132,10 +134,10 @@ painting:
 | --- | --- | --- |
 | ≈ 0:00 | Piyano sıçrayan, dans eden bir temayla içeri dalar; orkestra onu gürültüyle tekrarlar | Rondo teması |
 | ≈ 1:00 | Piyanoda dalgalanan koşular ve daha hafif ikinci bir ezgi | İlk ara bölüm |
-| ≈ 2:10 | Sıçrayan tema yeniden, piyanoda | Rondo teması dönüyor |
-| ≈ 3:20–4:40 | Tema üç farklı tondan geçirilir; ardından piyano tek başına dalgalanır | Orta ara bölüm, temanın bir [[development|gelişmesi]] |
-| ≈ 5:20 | Rondo teması ana tonda geri gelir | |
-| ≈ 9:30 | Müzik yavaşlar ve sessizleşir: piyano, timpaninin yumuşak, düzenli tıkırtısı üzerinde temanın parçalarını çalar | Piyano ve timpani baş başa; enerji çekiliyor |
+| ≈ 2:15 | Sıçrayan tema yeniden, piyanoda | Rondo teması dönüyor |
+| ≈ 3:25–4:50 | Tema üç farklı tondan geçirilir; ardından piyano tek başına dalgalanır | Orta ara bölüm, temanın bir [[development|gelişmesi]] |
+| ≈ 5:30 | Rondo teması ana tonda geri gelir | |
+| ≈ 9:50 | Müzik yavaşlar ve sessizleşir: piyano, timpaninin yumuşak, düzenli tıkırtısı üzerinde temanın parçalarını çalar | Piyano ve timpani baş başa; enerji çekiliyor |
 | Son 20 saniye | Piyano klavyede yukarı koşar; orkestra güçlü akorlarla bitirir | Son |
 
 **Dikkat edilecekler**

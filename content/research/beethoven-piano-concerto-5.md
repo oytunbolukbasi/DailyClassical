@@ -101,6 +101,47 @@ Reference: Kempff / Leitner, Spotify `3cS6w1hujyiNMpBFZfJtRO`.
 
 ## 6. Open items
 
-1. Re-time by ear.
+1. Re-time by ear against the **Zimerman / Bernstein** tracks 13–15 of `6z85OonA4aXLoUOVeo6GNF` (see "Recording change (Oct 2026)" below; §5 is the superseded Kempff estimate).
 2. Painting: David is a second work by an artist already in `paintings.yaml`; coordinator to accept or switch to an alternative.
 3. Metre of II (4/4) to be checked in the score.
+
+---
+
+## 7. Recording change (Oct 2026)
+
+**Why.** Checked on 2026-10-11 from a Turkish IP with the Spotify embed page (`__NEXT_DATA__`, `isPlayable` per track): on the Kempff album `3cS6w1hujyiNMpBFZfJtRO` track 1 (movement I, 1 194 341 ms) is `COUNTRY_RESTRICTED`; tracks 2–5 are playable. A guide whose first movement cannot be played does not work in Turkey.
+
+**New reference: Zimerman / Bernstein / Wiener Philharmoniker (DG, live 1989)**, the existing `also_recommended`, promoted. Spotify https://open.spotify.com/album/6z85OonA4aXLoUOVeo6GNF, "Beethoven: Concertos for Piano and Orchestra", 15 tracks, **all 15 playable in Turkey** (2026-10-11). Album page: date 1992-01-01, "© 1992 Deutsche Grammophon GmbH, Berlin".
+
+| Track | Title (Spotify) | ms | Guide |
+| --- | --- | --- | --- |
+| 13 | Piano Concerto No. 5 in E-Flat Major, Op. 73 "Emperor": I. Allegro - Live | 1 245 000 | I = 20:45 |
+| 14 | … II. Adagio un poco moto - Live (Spotify's spelling "moto") | 547 893 | II = 9:08 |
+| 15 | … III. Rondo. Allegro ma non troppo - Live | 646 106 | III = 10:46 |
+| | Total | 2 438 999 | 40:39 → `duration_min: 41` (38 before) |
+
+Discogs gives 40:39 for No. 5 on both the box (435 467-2) and the single CD, so the Spotify tracks match the CD.
+
+| Field | Value in the guide | Source | Status |
+| --- | --- | --- | --- |
+| Soloist / conductor / orchestra | Krystian Zimerman / Leonard Bernstein / Wiener Philharmoniker | Spotify credits; Discogs https://api.discogs.com/releases/19559530 (Bernstein conducts CDs 2–3 = Nos. 3–5; Zimerman conducts CD 1 = Nos. 1–2) | OK |
+| Catalogue | 435 467-2 (CD, The Piano Concertos); 429 748-2 (CD, No. 5 alone) | Discogs 19559530 (435 467-2, ℗ 1992); https://api.discogs.com/releases/3303549 (429 748-2, *Klavierkonzert No. 5 »Emperor«*, 1992, 40:39) | OK |
+| Recorded / venue | September 1989 (live); Musikverein (Großer Saal), Vienna | Discogs 19559530: "Recordings: Wien, Musikverein, Grosser Saal, 9/1989 (Nos. 3–5); 12/1991 (Nos 1 & 2) … Live Recordings (Nos. 3–5)" | OK (month only) |
+| Release year | 1992 | ℗ 1992 (box and single CD) | OK |
+| Production (not in yaml) | – | Recording producer Hans Weber; balance engineer Hans-Peter Schweigmann (Nos. 3–5) | for reference |
+| "In this recording": Bernstein died in October 1990; Zimerman recorded Nos. 1 and 2 in 1991 directing from the keyboard | Discogs 19559530 (12/1991, Zimerman as conductor of CD 1); https://en.wikipedia.org/wiki/Leonard_Bernstein (died 14 October 1990) | OK |
+| "In this recording": slow movement "just over nine minutes, where many recordings take about seven and a half" | 9:08 here; Kempff/Leitner 7:34 (both Kempff editions); the comparison is kept general | OK |
+
+**Old reference** moved to `also_recommended`. Its spotify_url now points to the *same performance* on "Beethoven: The Complete Concertos Vol. 2" (`4fKyZtf0JJtIhLm4sYOpK1`, "℗ 1977 Deutsche Grammophon", credited Kempff / Berliner Philharmoniker / Leitner), whose Op. 73 tracks 1–3 (1 216 000 / 454 173 / 636 826 ms) are **all playable** in Turkey (2026-10-11). A yaml comment records that the original album `3cS6w1hujyiNMpBFZfJtRO` is not playable in Turkey (Oct 2026). Label, catalogue and dates in the entry are those of the 1961 recording, unchanged.
+
+**Stops re-placed (all ≈, none heard).** The Kempff estimates (§5) were scaled by each movement's track-length ratio (I × 1.043, II × 1.206, III × 1.034) and rounded to 5 s. Bernstein's tempo changes are not uniform, so the later stops in each movement are the least reliable.
+
+| Mvt | Old (Kempff) | New (Zimerman / Bernstein) |
+| --- | --- | --- |
+| I | 0:00, 1:05, 2:05, 4:20, 5:40, 6:10, 8:10, 9:50–10:50, 12:30, 17:00, 17:20, Last 2 minutes | 0:00, 1:10, 2:10, 4:30, 5:55, 6:25, 8:30, 10:15–11:20, 13:00, 17:45, 18:05, Last 2 minutes |
+| II | 0:00, 1:25, 4:00, 5:30, Last 30 seconds | 0:00, 1:45, 4:50, 6:40, Last 30 seconds |
+| III | 0:00, 1:00, 2:10, 3:20–4:40, 5:20, 9:30, Last 20 seconds | 0:00, 1:00, 2:15, 3:25–4:50, 5:30, 9:50, Last 20 seconds |
+
+**Check by ear.** These are live tracks: track 13 may begin with a few seconds of hall noise, and track 15 may end with applause. If it does, "Last 20 seconds" in III and the ≈ 9:50 piano–timpani stop must move earlier. The free opening cadenzas of I (Zimerman) set every later stop in I.
+
+Text changes (EN and TR): yaml, Movements durations, `duration_min` 38 → 41, the "In this recording" note, stop times.

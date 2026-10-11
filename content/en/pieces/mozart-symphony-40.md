@@ -20,13 +20,15 @@ reference_recording:
   venue: City Halls, Glasgow
   release_year: 2008
   year: 2008
-  spotify_url: https://open.spotify.com/album/0MNU78TPr4GbVdgRBsBL6L
+  # Linn's 2018 digital edition of the same recording. The 2008 edition (album 0MNU78TPr4GbVdgRBsBL6L,
+  # still used by mozart-symphony-41) is not playable in Turkey for the finale (Oct 2026).
+  spotify_url: https://open.spotify.com/album/1EsOER6UdNfA5Lliol1o73
 also_recommended:
   - conductor: Nikolaus Harnoncourt
     orchestra: Concentus Musicus Wien
     label: Sony Classical
     catalogue_number: "88843026352"
-    recorded: "12–14 October 2013"  # MusicWeb; classiquenews.com dates the sessions to Dec 2012
+    recorded: "December 2012"  # K. 550 only: Discogs (booklet: "December 1+2", year printed 2002) and classiquenews.com; MusicWeb gives 12–14 Oct 2013 for the set (Nos. 39 and 41)
     venue: Musikverein, Vienna
     release_year: 2014
     year: 2014
@@ -51,10 +53,10 @@ painting:
 
 | | Tempo | Key | Metre | Duration |
 | --- | --- | --- | --- | --- |
-| I | Molto allegro | G minor | 2/2 | 7:07 |
+| I | Molto allegro | G minor | 2/2 | 7:06 |
 | II | Andante | E-flat major | 6/8 | 13:25 |
 | III | Menuetto: Allegretto | G minor | 3/4 | 4:03 |
-| IV | Allegro assai | G minor | 2/2 | 9:27 |
+| IV | Allegro assai | G minor | 2/2 | 9:16 |
 
 ### I. Molto allegro
 
@@ -71,10 +73,10 @@ painting:
 | --- | --- | --- |
 | ≈ 0:00 | Violas murmur for a moment alone; then violins enter with the sighing tune | Theme 1. The accompaniment begins before the melody, which was highly unusual |
 | ≈ 0:45 | A pause, then a softer melody passed between strings and woodwinds | Theme 2, in B-flat major. The only calm in the movement |
-| ≈ 1:50 | The opening returns exactly | The [[exposition]] is repeated |
-| ≈ 3:40 | The sighing tune appears in a strange, distant key, then is tossed between low and high strings | The [[development]]. The theme is pulled apart until only its three-note sigh remains |
-| ≈ 5:00 | Woodwinds drift downward and the sighing tune slips back in | The [[recapitulation]] |
-| ≈ 6:00 | The gentle second melody returns, but darker | Theme 2 is now in G minor. The relief it offered earlier is withdrawn |
+| ≈ 1:45 | The opening returns exactly | The [[exposition]] is repeated |
+| ≈ 3:35 | The sighing tune appears in a strange, distant key, then is tossed between low and high strings | The [[development]]. The theme is pulled apart until only its three-note sigh remains |
+| ≈ 4:40 | Woodwinds drift downward and the sighing tune slips back in | The [[recapitulation]] |
+| ≈ 5:50 | The gentle second melody returns, but darker | Theme 2 is now in G minor. The relief it offered earlier is withdrawn |
 | Near the end | A last quiet statement of the sigh, then firm chords | The [[coda]] |
 
 **Things to notice**
@@ -96,9 +98,9 @@ painting:
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | Repeated notes stacking up from low to high | The main theme assembles itself in layers |
-| ≈ 0:40 | Quick two-note flutters, like small sighs, passing between instruments | The second idea. It will decorate everything from here on |
+| ≈ 0:50 | Quick two-note flutters, like small sighs, passing between instruments | The second idea. It will decorate everything from here on |
 | Middle | The repeated notes turn insistent and the harmony darkens | The [[development]]. The calm surface cracks |
-| ≈ 8:00 | The layered opening returns | The [[recapitulation]] |
+| ≈ 6:50 | The layered opening returns | The [[recapitulation]] |
 
 **Things to notice**
 
@@ -114,8 +116,8 @@ painting:
 | --- | --- | --- |
 | ≈ 0:00 | A heavy, striding tune with accents in unexpected places | The minuet. Phrases are three bars long instead of the usual four, which keeps it off balance |
 | ≈ 0:40 | Upper and lower instruments chase each other with the same tune | The lines overlap in [[canon]], grinding against each other |
-| ≈ 1:50 | Suddenly gentle: strings, then woodwinds, then glowing horns | The [[trio]], in G major. The most peaceful minute of the symphony |
-| ≈ 3:00 | The stern dance returns | The minuet is repeated |
+| ≈ 1:35 | Suddenly gentle: strings, then woodwinds, then glowing horns | The [[trio]], in G major. The most peaceful minute of the symphony |
+| ≈ 3:15 | The stern dance returns | The minuet is repeated |
 
 ### IV. Allegro assai
 
@@ -131,10 +133,10 @@ painting:
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | Soft rising figure, loud answer, soft, loud | Theme 1. A question-and-answer built on an upward [[arpeggio]] |
-| ≈ 1:00 | A calmer, singing melody in the violins, echoed by clarinet | Theme 2, in B-flat major |
-| ≈ 3:50 | A jagged, stumbling passage for the whole orchestra with no clear key | The start of the [[development]]. For a few seconds Mozart touches almost every note of the scale and the music loses its footing |
-| ≈ 4:10 | The rising figure piled on top of itself, entering in one section after another | A stretch of [[fugato]] |
-| ≈ 5:20 | The quiet rising figure returns | The [[recapitulation]] |
+| ≈ 1:05 | A calmer, singing melody in the violins, echoed by clarinet | Theme 2, in B-flat major |
+| ≈ 3:45 | A jagged, stumbling passage for the whole orchestra with no clear key | The start of the [[development]]. For a few seconds Mozart touches almost every note of the scale and the music loses its footing |
+| ≈ 4:00 | The rising figure piled on top of itself, entering in one section after another | A stretch of [[fugato]] |
+| ≈ 5:00 | The quiet rising figure returns | The [[recapitulation]] |
 | Near the end | The singing melody again, now in the minor; then a brisk close | No turn to the major. The symphony ends as darkly as it began |
 
 **Things to notice**

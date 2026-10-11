@@ -103,6 +103,66 @@ Ready-to-paste rows for `content/research/retime-needed.md` are in `allegri-mise
 
 ## Open items
 
-1. Re-time every stop against Spotify 3i1pQhfdXnxiye2G4Qsvqn, **track 1**.
-2. Confirm the verse plan by ear (which group sings each verse; that the chant is a single voice).
+1. Re-time every stop against Spotify 0lSeYO6mLZIngXj5NPS3Hl, **track 3** (The Sixteen; see "Recording change (Oct 2026)" below). The table above is the superseded Tallis Scholars estimate.
+2. Confirm the verse plan by ear (which group sings each verse; whether The Sixteen's chant is one voice or several, which is why the guide no longer says "one male voice").
 3. `era`: the enum has no "renaissance"; `allegri` is entered as `baroque` (see the shared file).
+
+---
+
+## Recording change (Oct 2026)
+
+**Why.** Checked on 2026-10-11 from a Turkish IP with the Spotify embed page (`__NEXT_DATA__`, `isPlayable` per track): every track of the Tallis Scholars 2005 album `3i1pQhfdXnxiye2G4Qsvqn` is `COUNTRY_RESTRICTED`, and so is track 1 (the Miserere) of *The Essential Tallis Scholars* `6JEv6kB09FPYpoSDZc3pZJ`. The split 1980 edition `5Z8aRUB5vsWi7zrahwfKMN` is also blocked (tracks 1–5). The 1980 album `11EFoolEeb3cHbpugUS6dm` is playable but splits the Miserere into 11 tracks (breaks the one-track rule).
+
+**Candidates checked (all with the Miserere as one playable track, embed 2026-10-11):**
+
+| Album | Performers | Miserere track | Note |
+| --- | --- | --- | --- |
+| `0lSeYO6mLZIngXj5NPS3Hl` | The Sixteen / Harry Christophers (1989) | 3, 12:17 | **chosen** |
+| `3fvFlaBBbAFO0QCrSTbfaU` | Tenebrae / Nigel Short (Signum 2006) | 9, 11:59 | added as `also_recommended` |
+| `7BHJ8uK2I4LDSjEGdVaVK2` | King's College, Cambridge / Willcocks, Roy Goodman (Decca, ℗ 1964) | 1, 11:18 | rejected: sung in English (Wikipedia, citing BBC Radio 3) |
+| `1h2X4xm65mT7W2GtgbrF0p` | Westminster Abbey Choir / Simon Preston (DG) | 1, 11:49 | single |
+| `7M4rCIHkKLuFQoKWlXVUZZ` | King's College, Cambridge / Cleobury (1984) | 2, 13:02 | |
+| `3PhrlfZzwnjGGmrwZ92ePz` | St John's College, Cambridge / George Guest | 1, 13:53 | |
+| `1sAYovAaldSjpP4oftroVW` | The Cardinall's Musick / Andrew Carwood | 15, 12:35 | |
+
+**New reference: The Sixteen / Harry Christophers.** Spotify album https://open.spotify.com/album/0lSeYO6mLZIngXj5NPS3Hl, "Allegri: Miserere - Palestrina: Missa Papae Marcelli", 9 tracks, all playable in Turkey (2026-10-11). Spotify date 1990-07-01, "© 2003 The Sixteen Productions Ltd".
+
+| Track | Title (Spotify) | ms | Guide |
+| --- | --- | --- | --- |
+| 1 | Crucifixus (Lotti) | 202 560 | – |
+| 2 | Stabat Mater Dolorosa (Palestrina) | 564 973 | – |
+| **3** | **Miserere mei** (credited Ruth Dean, Sally Dunkley, Christopher Royall, Christopher Purves, Harry Christophers) | **737 400** | **I = 12:17; `duration_min: 12`** |
+| 4–9 | Missa Papae Marcelli (Kyrie … Agnus Dei II) | 236 666 / 350 360 / 513 400 / 368 466 / 196 773 / 215 533 | – |
+
+| Field | Value in the guide | Source | Status |
+| --- | --- | --- | --- |
+| Label / cat. no. | Coro, COR16014 (first issued as Collins Classics 50092) | Discogs https://api.discogs.com/releases/28588450 (COR16014, 2003, "Reissue of Collins 50092"); https://api.discogs.com/releases/3606647 (Collins Classics 50092, 1990, "℗ 1990 Lambourne Productions"); MusicBrainz https://musicbrainz.org/release/e765ef8f-b347-4fbc-ba01-7dff5a714686 | OK |
+| Recorded / venue | November 1989; St Jude-on-the-Hill, London | Both Discogs releases: "Recorded at St Jude's Church, London, Nov. 1989"; company "Church Of St. Jude-on-the-Hill, Hampstead"; MusicBrainz: recorded at St Jude-on-the-Hill, 1989-11 | OK (the church is in Hampstead Garden Suburb, north London) |
+| Release year | 1990 | Collins 50092 (1990); Spotify date 1990-07-01 | OK |
+| Soloists | Ruth Dean, Sally Dunkley (sopranos), Christopher Royall (alto), Christopher Purves (bass) | Discogs 28588450: these four credited "Vocals" on the Miserere track; voice types from the release's choir list; Spotify credits the same four | OK. Which soprano sings the top C is **not** stated: the guide does not say |
+| Discogs CD time | 12:08 (Spotify track 12:17) | Discogs | note: the Spotify track is 9 s longer (silence) |
+| Who sings the chant | not stated in any source found | – | UNVERIFIED: the guide now describes the chant without saying how many sing it |
+| Distant quartet | not stated for this recording | – | the guide no longer calls the quartet "distant" |
+| Producer / engineer | Mark Brown / Antony Howell | Discogs 28588450 | for reference |
+
+**Also recommended (new): Tenebrae / Nigel Short.** https://open.spotify.com/album/3fvFlaBBbAFO0QCrSTbfaU, "Allegri Miserere", 13 tracks, all playable (2026-10-11); Miserere = track 9, 719 133 ms (11:59). "© 2006 Signum Records". Discogs https://api.discogs.com/releases/14612418: Signum Classics SIGCD085, 2006; Miserere soloists Grace Davidson, Julia Doyle (sopranos), Benjamin Turner (alto), Matthew Brook (bass), edition George Guest. No recording date or venue found: left `null`.
+
+**Old reference kept** in `also_recommended` with the comment `# not playable in Turkey (Oct 2026)` (Tallis Scholars 2005). The 1980 Tallis Scholars entry (*The Essential Tallis Scholars*, track 1 blocked) was dropped.
+
+**Stops re-placed (all ≈, none heard).** Same method as the "Re-time" section above: the 1980 Tallis Scholars verse groups (verses 1–4 = 138.5 s, 5–8 = 132.9 s, 9–12 = 147.8 s, 13–16 = 135.0 s, 17–20 = 192.3 s; total 746.5 s) scaled to 737.4 s (× 0.988), with the same within-cycle proportions (choir 32 %, chant 12 %, quartet 43 %, chant 12 %).
+
+| Verse | Old (Tallis 2005, 13:42) | New (Sixteen, 12:17) |
+| --- | --- | --- |
+| 1 choir | 0:00 | 0:00 |
+| 2 chant | 0:50 | 0:45 |
+| 3 quartet, top C | 1:10 | 1:00 |
+| 5 choir | 2:35 | 2:15 |
+| 7 quartet | 3:45 | 3:15 |
+| 11 quartet | 6:15 | 5:35 |
+| 15 quartet | 8:50 | 7:55 |
+| 19 quartet | 11:25 | 10:15 |
+| 20 nine voices | 12:30 | 11:15 |
+
+Text changes (EN and TR): yaml, Movements duration, `duration_min` 14 → 12, the "In this recording" note, and neutral wording for the chant ("one male voice" removed) and the quartet ("distant" / "further away" removed).
+
+Sources: Spotify embed pages above (checked 2026-10-11 from Turkey); Discogs and MusicBrainz URLs in the tables; https://en.wikipedia.org/wiki/Miserere_(Allegri) (King's 1963 sung in English).

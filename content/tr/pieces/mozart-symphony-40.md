@@ -21,13 +21,15 @@ reference_recording:
   venue: City Halls, Glasgow
   release_year: 2008
   year: 2008
-  spotify_url: https://open.spotify.com/album/0MNU78TPr4GbVdgRBsBL6L
+  # Linn's 2018 digital edition of the same recording. The 2008 edition (album 0MNU78TPr4GbVdgRBsBL6L,
+  # still used by mozart-symphony-41) is not playable in Turkey for the finale (Oct 2026).
+  spotify_url: https://open.spotify.com/album/1EsOER6UdNfA5Lliol1o73
 also_recommended:
   - conductor: Nikolaus Harnoncourt
     orchestra: Concentus Musicus Wien
     label: Sony Classical
     catalogue_number: "88843026352"
-    recorded: "12–14 October 2013"  # MusicWeb; classiquenews.com dates the sessions to Dec 2012
+    recorded: "December 2012"  # K. 550 only: Discogs (booklet: "December 1+2", year printed 2002) and classiquenews.com; MusicWeb gives 12–14 Oct 2013 for the set (Nos. 39 and 41)
     venue: Musikverein, Vienna
     release_year: 2014
     year: 2014
@@ -52,10 +54,10 @@ painting:
 
 | | Tempo | Ton | Ölçü | Süre |
 | --- | --- | --- | --- | --- |
-| I | Molto allegro | Sol minör | 2/2 | 7:07 |
+| I | Molto allegro | Sol minör | 2/2 | 7:06 |
 | II | Andante | Mi bemol majör | 6/8 | 13:25 |
 | III | Menuetto: Allegretto | Sol minör | 3/4 | 4:03 |
-| IV | Allegro assai | Sol minör | 2/2 | 9:27 |
+| IV | Allegro assai | Sol minör | 2/2 | 9:16 |
 
 ### I. Molto allegro
 
@@ -72,10 +74,10 @@ painting:
 | --- | --- | --- |
 | ≈ 0:00 | Viyolalar bir an yalnız mırıldanır; sonra kemanlar iç çeken ezgiyle girer | 1. tema. Eşlik melodiden önce başlıyor; bu o dönem için çok alışılmadıktı |
 | ≈ 0:45 | Bir duraksama, ardından yaylılarla tahta üflemeliler arasında dolaşan daha yumuşak bir melodi | 2. tema, Si bemol majörde. Bölümdeki tek sakin an |
-| ≈ 1:50 | Açılış aynen geri gelir | [[exposition|Serim]] tekrarlanıyor |
-| ≈ 3:40 | İç çeken ezgi tuhaf, uzak bir tonda belirir, sonra pes ve tiz yaylılar arasında bir oraya bir buraya atılır | [[development|Gelişme bölümü]]. Tema, geriye yalnızca üç notalık iç çekişi kalana dek parçalanıyor |
-| ≈ 5:00 | Tahta üflemeliler aşağı doğru süzülür ve iç çeken ezgi sessizce geri döner | [[recapitulation|Yeniden serim]] |
-| ≈ 6:00 | Yumuşak ikinci melodi geri gelir, ama daha karanlık | 2. tema artık Sol minörde. Önceki teselli geri alınıyor |
+| ≈ 1:45 | Açılış aynen geri gelir | [[exposition|Serim]] tekrarlanıyor |
+| ≈ 3:35 | İç çeken ezgi tuhaf, uzak bir tonda belirir, sonra pes ve tiz yaylılar arasında bir oraya bir buraya atılır | [[development|Gelişme bölümü]]. Tema, geriye yalnızca üç notalık iç çekişi kalana dek parçalanıyor |
+| ≈ 4:40 | Tahta üflemeliler aşağı doğru süzülür ve iç çeken ezgi sessizce geri döner | [[recapitulation|Yeniden serim]] |
+| ≈ 5:50 | Yumuşak ikinci melodi geri gelir, ama daha karanlık | 2. tema artık Sol minörde. Önceki teselli geri alınıyor |
 | Sona doğru | İç çekişin son, sessiz bir söylenişi, ardından kararlı akorlar | [[coda|Koda]] |
 
 **Dikkat edilecekler**
@@ -97,9 +99,9 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Pesten tize doğru üst üste binen tekrarlı notalar | Ana tema katman katman kendini kuruyor |
-| ≈ 0:40 | Çalgılar arasında dolaşan, küçük iç çekişler gibi hızlı iki notalık çırpıntılar | İkinci fikir. Bundan sonra her şeyi süsleyecek |
+| ≈ 0:50 | Çalgılar arasında dolaşan, küçük iç çekişler gibi hızlı iki notalık çırpıntılar | İkinci fikir. Bundan sonra her şeyi süsleyecek |
 | Orta | Tekrarlı notalar ısrarcı hâle gelir, armoni kararır | [[development|Gelişme bölümü]]. Sakin yüzey çatlıyor |
-| ≈ 8:00 | Katmanlı açılış geri döner | [[recapitulation|Yeniden serim]] |
+| ≈ 6:50 | Katmanlı açılış geri döner | [[recapitulation|Yeniden serim]] |
 
 **Dikkat edilecekler**
 
@@ -115,8 +117,8 @@ painting:
 | --- | --- | --- |
 | ≈ 0:00 | Beklenmedik yerlerde vurgular taşıyan ağır, uzun adımlı bir ezgi | Menuet. Cümleler alışılmış dört yerine üç ölçü uzunluğunda; bu da dengesini hep bozuyor |
 | ≈ 0:40 | Tiz ve pes çalgılar aynı ezgiyle birbirini kovalar | Çizgiler [[canon|kanon]] hâlinde üst üste biniyor, birbirine sürtünüyor |
-| ≈ 1:50 | Birden yumuşar: önce yaylılar, sonra tahta üflemeliler, sonra ışıldayan kornolar | [[trio|Trio]], Sol majörde. Senfoninin en huzurlu dakikası |
-| ≈ 3:00 | Sert dans geri gelir | Menuet tekrarlanıyor |
+| ≈ 1:35 | Birden yumuşar: önce yaylılar, sonra tahta üflemeliler, sonra ışıldayan kornolar | [[trio|Trio]], Sol majörde. Senfoninin en huzurlu dakikası |
+| ≈ 3:15 | Sert dans geri gelir | Menuet tekrarlanıyor |
 
 ### IV. Allegro assai
 
@@ -132,10 +134,10 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Yumuşak yükselen figür, gür cevap, yumuşak, gür | 1. tema. Yukarı doğru bir [[arpeggio|arpej]] üzerine kurulu bir soru-cevap |
-| ≈ 1:00 | Kemanlarda daha sakin, şarkı gibi bir melodi; klarnet yankılar | 2. tema, Si bemol majörde |
-| ≈ 3:50 | Bütün orkestra için, belirgin bir tonu olmayan, pürüzlü, tökezleyen bir pasaj | [[development|Gelişme bölümü]]nün başlangıcı. Birkaç saniye boyunca Mozart gamın neredeyse her notasına dokunuyor ve müziğin ayağı kayıyor |
-| ≈ 4:10 | Yükselen figür kendi üstüne yığılır; çalgı grupları birbiri ardına girer | Bir [[fugato|fugato]] pasajı |
-| ≈ 5:20 | Sessiz yükselen figür geri döner | [[recapitulation|Yeniden serim]] |
+| ≈ 1:05 | Kemanlarda daha sakin, şarkı gibi bir melodi; klarnet yankılar | 2. tema, Si bemol majörde |
+| ≈ 3:45 | Bütün orkestra için, belirgin bir tonu olmayan, pürüzlü, tökezleyen bir pasaj | [[development|Gelişme bölümü]]nün başlangıcı. Birkaç saniye boyunca Mozart gamın neredeyse her notasına dokunuyor ve müziğin ayağı kayıyor |
+| ≈ 4:00 | Yükselen figür kendi üstüne yığılır; çalgı grupları birbiri ardına girer | Bir [[fugato|fugato]] pasajı |
+| ≈ 5:00 | Sessiz yükselen figür geri döner | [[recapitulation|Yeniden serim]] |
 | Sona doğru | Şarkı gibi melodi yeniden, bu kez minörde; ardından çevik bir kapanış | Majöre dönüş yok. Senfoni başladığı kadar karanlık bitiyor |
 
 **Dikkat edilecekler**
