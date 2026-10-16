@@ -43,7 +43,7 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 
 | Eser | Grup | Form | Bölüm | Referans kayıt | Spotify | Tablo | Çakışma | Durum |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| beethoven-symphony-3 | A | symphony | 4 | Herbert von Karajan · Berliner Philharmoniker, 1977 | `4AAP5zYQJTEFQiQacOFq2s` | Antoine-Jean Gros, *Bonaparte at the Pont d'Arcole* |  | Birleştirildi · I kulakla zamanlandı (17 Eki) |
+| beethoven-symphony-3 | A | symphony | 4 | Herbert von Karajan · Berliner Philharmoniker, 1977 | `4AAP5zYQJTEFQiQacOFq2s` | Antoine-Jean Gros, *Bonaparte at the Pont d'Arcole* |  | Kulakla zamanlandı (17 Eki; I ölçüldü, II–IV tahminler onaylandı) |
 | beethoven-symphony-6 | A | symphony | 5 | Karl Böhm · Wiener Philharmoniker, 1971 | `1eMMy3QJ3ezrR6hkp6jP7n` | Joseph Anton Koch, *Heroic Landscape with Rainbow* |  | Birleştirildi |
 | beethoven-symphony-7 | A | symphony | 4 | Carlos Kleiber · Wiener Philharmoniker, 1976 | `2aNAica8UZ1gPub5p1UYUe` | Pieter Bruegel the Elder, *The Peasant Dance* |  | Birleştirildi |
 | beethoven-piano-concerto-5 | A | piano-concerto | 3 | Krystian Zimerman / Leonard Bernstein · Wiener Philharmoniker, 1989 | `6z85OonA4aXLoUOVeo6GNF` | Jacques-Louis David, *The Emperor Napoleon in His Study at the Tuileries* | katalogda da var (beethoven-piano-sonata-8) | Birleştirildi |

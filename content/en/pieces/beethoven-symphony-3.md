@@ -104,14 +104,14 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | Very quiet: the violins play a slow, low march tune; the basses answer with a short, shuddering growl | The march theme, in C minor. The bass figure imitates muffled drums |
-| ≈ 0:30 | The oboe takes the tune, plaintive and alone | The march repeated in a new colour |
-| ≈ 1:05 | A gentler, rising phrase in the major, which soon darkens again | The second theme, in E-flat major |
-| ≈ 4:35 | The mood lifts: oboe, flute and bassoon sing over flowing strings, then the full orchestra with trumpets and drums rings out | The major section, in C major (Beethoven marks it *Maggiore*). Consolation, then a glimpse of glory |
-| ≈ 7:00–7:40 | The march returns, but after a few bars it changes course: the instruments enter one after another, weaving a dense web | A [[fugue]], in F minor. The march becomes a lament of many voices |
-| ≈ 10:15–11:10 | A crushing outburst with the full brass, then a stark, hollow passage | The emotional peak of the movement |
-| ≈ 11:30 | The march tune returns in the oboe, in the home key | The opening comes back |
-| ≈ 14:00 | A quiet marching figure from the major section, then a last, slow approach to the tune | The [[coda]] |
+| 0:00 | Very quiet: the violins play a slow, low march tune; the basses answer with a short, shuddering growl | The march theme, in C minor. The bass figure imitates muffled drums |
+| 0:30 | The oboe takes the tune, plaintive and alone | The march repeated in a new colour |
+| 1:05 | A gentler, rising phrase in the major, which soon darkens again | The second theme, in E-flat major |
+| 4:35 | The mood lifts: oboe, flute and bassoon sing over flowing strings, then the full orchestra with trumpets and drums rings out | The major section, in C major (Beethoven marks it *Maggiore*). Consolation, then a glimpse of glory |
+| 7:00–7:40 | The march returns, but after a few bars it changes course: the instruments enter one after another, weaving a dense web | A [[fugue]], in F minor. The march becomes a lament of many voices |
+| 10:15–11:10 | A crushing outburst with the full brass, then a stark, hollow passage | The emotional peak of the movement |
+| 11:30 | The march tune returns in the oboe, in the home key | The opening comes back |
+| 14:00 | A quiet marching figure from the major section, then a last, slow approach to the tune | The [[coda]] |
 | Last 40 seconds | The tune comes back one last time and breaks into short phrases with silences between them | The march crumbles and ends very quietly |
 
 **Things to notice**
@@ -132,11 +132,11 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | The strings whisper fast, short notes; an oboe picks out a little tune | The scherzo begins very quietly, as if from a distance, and not yet in the home key |
-| ≈ 0:50 | Suddenly the whole orchestra bursts in, loud | The tune arrives in the home key, E-flat major |
-| ≈ 3:00 | Three horns play a ringing fanfare; strings and woodwinds answer softly | The [[trio]]. The third horn was the novelty |
-| ≈ 4:35 | The fast, whispering strings return | The scherzo again |
-| ≈ 5:40 | A loud descending figure in [[unison]] suddenly lurches into a different rhythm, in two instead of three | Beethoven changes the metre for four bars |
+| 0:00 | The strings whisper fast, short notes; an oboe picks out a little tune | The scherzo begins very quietly, as if from a distance, and not yet in the home key |
+| 0:50 | Suddenly the whole orchestra bursts in, loud | The tune arrives in the home key, E-flat major |
+| 3:00 | Three horns play a ringing fanfare; strings and woodwinds answer softly | The [[trio]]. The third horn was the novelty |
+| 4:35 | The fast, whispering strings return | The scherzo again |
+| 5:40 | A loud descending figure in [[unison]] suddenly lurches into a different rhythm, in two instead of three | Beethoven changes the metre for four bars |
 | Last 15 seconds | A quick build from very soft to very loud, and a sharp ending | The [[coda]] |
 
 **Things to notice**
@@ -156,16 +156,16 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | A rush of strings, then loud chords | The introduction |
-| ≈ 0:15 | The strings pluck a bare, halting line, with silences between the notes | The bass line of the theme, on its own, in [[pizzicato]] |
-| ≈ 0:45 | The same bass line, now bowed, with new lines woven around it | The first [[variation]]s: the theme is being built up |
-| ≈ 1:10 | A cheerful, simple tune appears in the oboe, on top of the bass line | The real melody, from the *Prometheus* ballet |
-| ≈ 2:20 | The strings enter one after another on a quiet, busy subject, building tension | A [[fugue]] on the bass line |
-| ≈ 3:30 | Bright and light; a flute flutters above the tune | A variation in D major |
-| ≈ 4:15 | Fierce and stamping, in the minor | A wild, dance-like variation in G minor |
-| ≈ 5:30 | Another fugue, this time bright and in the home key, building to a big climax | The second fugue |
-| ≈ 7:00 | Everything slows down; the oboe sings the melody as a tender, hymn-like song | *Poco andante*: the theme turned into a hymn |
-| ≈ 8:45 | The horns blaze the melody out over the whole orchestra | The heroic climax of the symphony |
+| 0:00 | A rush of strings, then loud chords | The introduction |
+| 0:15 | The strings pluck a bare, halting line, with silences between the notes | The bass line of the theme, on its own, in [[pizzicato]] |
+| 0:45 | The same bass line, now bowed, with new lines woven around it | The first [[variation]]s: the theme is being built up |
+| 1:10 | A cheerful, simple tune appears in the oboe, on top of the bass line | The real melody, from the *Prometheus* ballet |
+| 2:20 | The strings enter one after another on a quiet, busy subject, building tension | A [[fugue]] on the bass line |
+| 3:30 | Bright and light; a flute flutters above the tune | A variation in D major |
+| 4:15 | Fierce and stamping, in the minor | A wild, dance-like variation in G minor |
+| 5:30 | Another fugue, this time bright and in the home key, building to a big climax | The second fugue |
+| 7:00 | Everything slows down; the oboe sings the melody as a tender, hymn-like song | *Poco andante*: the theme turned into a hymn |
+| 8:45 | The horns blaze the melody out over the whole orchestra | The heroic climax of the symphony |
 | Last 45 seconds | A sudden, very fast dash and three huge chords | The *Presto* [[coda]] |
 
 **Things to notice**

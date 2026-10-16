@@ -105,14 +105,14 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Çok sessiz: kemanlar yavaş, alçak bir marş ezgisi çalar; baslar kısa, ürpertili bir hırıltıyla yanıt verir | Marş teması, Do minörde. Bas figürü boğuk davulları taklit ediyor |
-| ≈ 0:30 | Ezgiyi obua devralır, yakınır gibi ve yalnız | Marş yeni bir renkle yineleniyor |
-| ≈ 1:05 | Majörde daha yumuşak, yükselen bir cümle; kısa sürede yeniden kararır | İkinci tema, Mi bemol majörde |
-| ≈ 4:35 | Hava aydınlanır: obua, flüt ve fagot akan yaylıların üzerinde şarkı söyler; ardından trompetler ve davullarla bütün orkestra çınlar | Do majör kısım (Beethoven *Maggiore* diye işaretler). Önce teselli, sonra bir zafer pırıltısı |
-| ≈ 7:00–7:40 | Marş geri gelir, ama birkaç ölçü sonra yön değiştirir: çalgılar birbiri ardına girer, sık bir ağ örülür | Fa minörde bir [[fugue|füg]]. Marş çok sesli bir ağıta dönüşüyor |
-| ≈ 10:15–11:10 | Bütün bakır üflemelilerle ezici bir patlama, ardından çıplak, boş bir pasaj | Bölümün duygusal doruğu |
-| ≈ 11:30 | Marş ezgisi ana tonda, obuada geri gelir | Açılış dönüyor |
-| ≈ 14:00 | Majör kısımdan sessiz bir yürüyüş figürü, ardından ezgiye son, yavaş bir yaklaşma | [[coda|Koda]] |
+| 0:00 | Çok sessiz: kemanlar yavaş, alçak bir marş ezgisi çalar; baslar kısa, ürpertili bir hırıltıyla yanıt verir | Marş teması, Do minörde. Bas figürü boğuk davulları taklit ediyor |
+| 0:30 | Ezgiyi obua devralır, yakınır gibi ve yalnız | Marş yeni bir renkle yineleniyor |
+| 1:05 | Majörde daha yumuşak, yükselen bir cümle; kısa sürede yeniden kararır | İkinci tema, Mi bemol majörde |
+| 4:35 | Hava aydınlanır: obua, flüt ve fagot akan yaylıların üzerinde şarkı söyler; ardından trompetler ve davullarla bütün orkestra çınlar | Do majör kısım (Beethoven *Maggiore* diye işaretler). Önce teselli, sonra bir zafer pırıltısı |
+| 7:00–7:40 | Marş geri gelir, ama birkaç ölçü sonra yön değiştirir: çalgılar birbiri ardına girer, sık bir ağ örülür | Fa minörde bir [[fugue|füg]]. Marş çok sesli bir ağıta dönüşüyor |
+| 10:15–11:10 | Bütün bakır üflemelilerle ezici bir patlama, ardından çıplak, boş bir pasaj | Bölümün duygusal doruğu |
+| 11:30 | Marş ezgisi ana tonda, obuada geri gelir | Açılış dönüyor |
+| 14:00 | Majör kısımdan sessiz bir yürüyüş figürü, ardından ezgiye son, yavaş bir yaklaşma | [[coda|Koda]] |
 | Son 40 saniye | Ezgi son bir kez gelir ve aralarında sessizlikler olan kısa cümlelere bölünür | Marş ufalanıyor ve çok sessizce bitiyor |
 
 **Dikkat edilecekler**
@@ -133,11 +133,11 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Yaylılar hızlı, kısa notalar fısıldar; bir obua küçük bir ezgi seçer | Scherzo, uzaktan geliyormuş gibi çok sessiz ve henüz ana tonda değil başlıyor |
-| ≈ 0:50 | Birden bütün orkestra gürleyerek içeri dalar | Ezgi ana tona, Mi bemol majöre varıyor |
-| ≈ 3:00 | Üç korno çınlayan bir fanfar çalar; yaylılar ve tahta üflemeliler yumuşakça yanıt verir | [[trio|Trio]]. Yenilik, üçüncü kornoydu |
-| ≈ 4:35 | Hızlı, fısıldayan yaylılar geri gelir | Yeniden scherzo |
-| ≈ 5:40 | [[unison|Unison]] çalınan güçlü, inen bir figür birden başka bir ritme sendeler: üçlü yerine ikili | Beethoven dört ölçülüğüne ölçüyü değiştiriyor |
+| 0:00 | Yaylılar hızlı, kısa notalar fısıldar; bir obua küçük bir ezgi seçer | Scherzo, uzaktan geliyormuş gibi çok sessiz ve henüz ana tonda değil başlıyor |
+| 0:50 | Birden bütün orkestra gürleyerek içeri dalar | Ezgi ana tona, Mi bemol majöre varıyor |
+| 3:00 | Üç korno çınlayan bir fanfar çalar; yaylılar ve tahta üflemeliler yumuşakça yanıt verir | [[trio|Trio]]. Yenilik, üçüncü kornoydu |
+| 4:35 | Hızlı, fısıldayan yaylılar geri gelir | Yeniden scherzo |
+| 5:40 | [[unison|Unison]] çalınan güçlü, inen bir figür birden başka bir ritme sendeler: üçlü yerine ikili | Beethoven dört ölçülüğüne ölçüyü değiştiriyor |
 | Son 15 saniye | Çok hafiften çok güçlüye hızlı bir yükseliş ve keskin bir bitiş | [[coda|Koda]] |
 
 **Dikkat edilecekler**
@@ -157,16 +157,16 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Yaylılarda bir hamle, ardından güçlü akorlar | Giriş |
-| ≈ 0:15 | Yaylılar, notalar arasında sessizlikler bırakarak çıplak, aksak bir çizgiyi parmakla çeker | Temanın bas çizgisi tek başına, [[pizzicato|pizzicato]] |
-| ≈ 0:45 | Aynı bas çizgisi, bu kez yayla; çevresine yeni çizgiler örülür | İlk [[variation|varyasyonlar]]: tema kuruluyor |
-| ≈ 1:10 | Bas çizgisinin üzerinde, obuada neşeli, sade bir ezgi belirir | Gerçek melodi, *Prometheus* balesinden |
-| ≈ 2:20 | Yaylılar hareketli, sessiz bir konuyla birbiri ardına girer, gerilim artar | Bas çizgisi üzerine bir [[fugue|füg]] |
-| ≈ 3:30 | Aydınlık ve hafif; ezginin üzerinde bir flüt kanat çırpar | Re majörde bir varyasyon |
-| ≈ 4:15 | Sert ve tepinen, minörde | Sol minörde vahşi, dans gibi bir varyasyon |
-| ≈ 5:30 | Yeni bir füg; bu kez aydınlık, ana tonda ve büyük bir doruğa tırmanıyor | İkinci füg |
-| ≈ 7:00 | Her şey yavaşlar; obua melodiyi şefkatli, ilahi gibi bir şarkı olarak söyler | *Poco andante*: tema bir ilahiye dönüşüyor |
-| ≈ 8:45 | Kornolar melodiyi bütün orkestranın üzerinden haykırır | Senfoninin kahramanca doruğu |
+| 0:00 | Yaylılarda bir hamle, ardından güçlü akorlar | Giriş |
+| 0:15 | Yaylılar, notalar arasında sessizlikler bırakarak çıplak, aksak bir çizgiyi parmakla çeker | Temanın bas çizgisi tek başına, [[pizzicato|pizzicato]] |
+| 0:45 | Aynı bas çizgisi, bu kez yayla; çevresine yeni çizgiler örülür | İlk [[variation|varyasyonlar]]: tema kuruluyor |
+| 1:10 | Bas çizgisinin üzerinde, obuada neşeli, sade bir ezgi belirir | Gerçek melodi, *Prometheus* balesinden |
+| 2:20 | Yaylılar hareketli, sessiz bir konuyla birbiri ardına girer, gerilim artar | Bas çizgisi üzerine bir [[fugue|füg]] |
+| 3:30 | Aydınlık ve hafif; ezginin üzerinde bir flüt kanat çırpar | Re majörde bir varyasyon |
+| 4:15 | Sert ve tepinen, minörde | Sol minörde vahşi, dans gibi bir varyasyon |
+| 5:30 | Yeni bir füg; bu kez aydınlık, ana tonda ve büyük bir doruğa tırmanıyor | İkinci füg |
+| 7:00 | Her şey yavaşlar; obua melodiyi şefkatli, ilahi gibi bir şarkı olarak söyler | *Poco andante*: tema bir ilahiye dönüşüyor |
+| 8:45 | Kornolar melodiyi bütün orkestranın üzerinden haykırır | Senfoninin kahramanca doruğu |
 | Son 45 saniye | Ani, çok hızlı bir koşu ve üç dev akor | *Presto* [[coda|koda]] |
 
 **Dikkat edilecekler**
