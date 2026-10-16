@@ -72,15 +72,15 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | Two loud, short chords from the whole orchestra | The home key, E-flat major, stated in two blows |
-| ≈ 0:03 | The cellos play a plain tune; after a few bars it slides onto a strange note, and the violins answer with an uneasy throbbing | Theme 1. The wrong note (C-sharp) is the first crack in the hero's armour |
-| ≈ 0:50 | A gentle falling figure is passed from oboe to clarinet to flute to violins | The second group of themes, in B-flat major |
-| ≈ 2:30 | Loud, jabbing chords that seem to beat in two against the three of the bar | A [[hemiola]]: the rhythm stumbles on purpose. The climax of the [[exposition]] |
-| ≈ 3:00 | The cellos' tune is broken into fragments and pushed into darker keys | The [[development]] begins |
-| ≈ 4:35–5:25 | The instruments enter one after another on a busy figure; then a long series of hammered, grinding chords at full volume | A short [[fugato]], then the most violent passage in the movement |
-| ≈ 5:30 | Out of the wreckage, the oboes sing a new, sad melody | A new theme, in E minor |
-| ≈ 7:40 | Everything goes quiet; the violins tremble on a chord, and a single horn plays the cellos' tune too early, clashing with it. A moment later the whole orchestra crashes in | The famous "early" horn entry, then the [[recapitulation]] |
-| ≈ 10:50 | The music sets off again, as if for a second development; the E minor melody returns | The [[coda]], one of the longest Beethoven wrote |
+| 0:05 | Two loud, short chords from the whole orchestra | The home key, E-flat major, stated in two blows |
+| 0:07 | The cellos play a plain tune; after a few bars it slides onto a strange note, and the violins answer with an uneasy throbbing | Theme 1. The wrong note (C-sharp) is the first crack in the hero's armour |
+| 0:54 | A gentle falling figure is passed from oboe to clarinet to flute to violins | The second group of themes, in B-flat major |
+| 2:35 | Loud, jabbing chords that seem to beat in two against the three of the bar | A [[hemiola]]: the rhythm stumbles on purpose. The climax of the [[exposition]] |
+| 3:00 | The cellos' tune is broken into fragments and pushed into darker keys | The [[development]] begins |
+| 4:35–5:25 | The instruments enter one after another on a busy figure; then a long series of hammered, grinding chords at full volume | A short [[fugato]], then the most violent passage in the movement |
+| 5:30 | Out of the wreckage, the oboes sing a new, sad melody | A new theme, in E minor |
+| 7:40 | Everything goes quiet; the violins tremble on a chord, and a single horn plays the cellos' tune too early, clashing with it. A moment later the whole orchestra crashes in | The famous "early" horn entry, then the [[recapitulation]] |
+| 10:50 | The music sets off again, as if for a second development; the E minor melody returns | The [[coda]], one of the longest Beethoven wrote |
 | Last minute | The cellos' tune, now in the horns and then the whole orchestra, rises again and again | For the first time it is heard whole, as a fanfare |
 
 **Things to notice**

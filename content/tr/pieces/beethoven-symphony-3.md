@@ -73,15 +73,15 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Bütün orkestradan iki kısa, güçlü akor | Ana ton, Mi bemol majör, iki darbeyle ortaya konuyor |
-| ≈ 0:03 | Çellolar sade bir ezgi çalar; birkaç ölçü sonra ezgi tuhaf bir notaya kayar, kemanlar huzursuz bir çarpıntıyla yanıt verir | 1. tema. Yanlış nota (Do diyez), kahramanın zırhındaki ilk çatlak |
-| ≈ 0:50 | Yumuşak, inen bir figür obuadan klarnete, flüte ve kemanlara geçer | İkinci tema grubu, Si bemol majörde |
-| ≈ 2:30 | Ölçünün üç vuruşuna karşı sanki ikili vuran, sert ve dürtükleyen akorlar | Bir [[hemiola|hemiola]]: ritim bilerek tökezliyor. [[exposition|Serim]]in doruğu |
-| ≈ 3:00 | Çellolardaki ezgi parçalara ayrılır ve daha karanlık tonlara itilir | [[development|Gelişme bölümü]] başlıyor |
-| ≈ 4:35–5:25 | Çalgılar hareketli bir figürle birbiri ardına girer; ardından tam güçte, çekiçlenen, gıcırdayan uzun bir akor dizisi | Kısa bir [[fugato|fugato]], sonra bölümün en sert pasajı |
-| ≈ 5:30 | Enkazın içinden obualar yeni, hüzünlü bir melodi söyler | Yeni bir tema, Mi minörde |
-| ≈ 7:40 | Her şey susar; kemanlar bir akorda titrer ve tek bir korno çelloların ezgisini erken çalar, akorla çatışarak. Hemen ardından bütün orkestra içeri dalar | Ünlü "erken" korno girişi, ardından [[recapitulation|yeniden serim]] |
-| ≈ 10:50 | Müzik sanki ikinci bir gelişme bölümüne başlar gibi yeniden yola çıkar; Mi minör melodi geri gelir | Beethoven'in yazdığı en uzun [[coda|koda]]lardan biri |
+| 0:05 | Bütün orkestradan iki kısa, güçlü akor | Ana ton, Mi bemol majör, iki darbeyle ortaya konuyor |
+| 0:07 | Çellolar sade bir ezgi çalar; birkaç ölçü sonra ezgi tuhaf bir notaya kayar, kemanlar huzursuz bir çarpıntıyla yanıt verir | 1. tema. Yanlış nota (Do diyez), kahramanın zırhındaki ilk çatlak |
+| 0:54 | Yumuşak, inen bir figür obuadan klarnete, flüte ve kemanlara geçer | İkinci tema grubu, Si bemol majörde |
+| 2:35 | Ölçünün üç vuruşuna karşı sanki ikili vuran, sert ve dürtükleyen akorlar | Bir [[hemiola|hemiola]]: ritim bilerek tökezliyor. [[exposition|Serim]]in doruğu |
+| 3:00 | Çellolardaki ezgi parçalara ayrılır ve daha karanlık tonlara itilir | [[development|Gelişme bölümü]] başlıyor |
+| 4:35–5:25 | Çalgılar hareketli bir figürle birbiri ardına girer; ardından tam güçte, çekiçlenen, gıcırdayan uzun bir akor dizisi | Kısa bir [[fugato|fugato]], sonra bölümün en sert pasajı |
+| 5:30 | Enkazın içinden obualar yeni, hüzünlü bir melodi söyler | Yeni bir tema, Mi minörde |
+| 7:40 | Her şey susar; kemanlar bir akorda titrer ve tek bir korno çelloların ezgisini erken çalar, akorla çatışarak. Hemen ardından bütün orkestra içeri dalar | Ünlü "erken" korno girişi, ardından [[recapitulation|yeniden serim]] |
+| 10:50 | Müzik sanki ikinci bir gelişme bölümüne başlar gibi yeniden yola çıkar; Mi minör melodi geri gelir | Beethoven'in yazdığı en uzun [[coda|koda]]lardan biri |
 | Son dakika | Çelloların ezgisi, önce kornolarda sonra bütün orkestrada, tekrar tekrar yükselir | İlk kez bütünüyle, bir fanfar olarak duyuluyor |
 
 **Dikkat edilecekler**
