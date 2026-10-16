@@ -72,14 +72,14 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Bütün yaylı topluluk parlak, sekerek ilerleyen bir ezgi çalar; her kısa cümle bir yankı gibi sessizce yinelenir | [[ritornello|Ritornello]]: "İlkbahar geldi" |
-| ≈ 0:30 | Topluluk çekilir; solo keman ve iki keman daha tizde cıvıldar, tril yapar, birbirine cevap verir | Kuşlar ilkbaharı şarkılarıyla karşılıyor |
-| ≈ 1:05 | Nakarat kısa bir süre geri gelir | Yeniden ritornello |
-| ≈ 1:13 | Kemanlar birbirine yakın, kısa notalardan yumuşak, akan koşular çalar; su gibi | "Dereler tatlı bir mırıltıyla akar" |
-| ≈ 1:44 | Bütün topluluk hızla aynı notaları döver; solist yukarı fırlayan hızlı koşularla cevap verir | Gök gürültüsü ve şimşek. Müzik minör bir tona döner |
-| ≈ 2:13 | Nakarat, bu kez daha karanlık, minör bir tonda | Fırtına geçiyor |
-| ≈ 2:20 | Tiz triller solo kemanda geri gelir | "Kuşlar yeniden şarkılarına döner" |
-| ≈ 3:02 | Nakarat son kez, yumuşakça biterek | Kapanış ritornellosu |
+| 0:00 | Bütün yaylı topluluk parlak, sekerek ilerleyen bir ezgi çalar; her kısa cümle bir yankı gibi sessizce yinelenir | [[ritornello|Ritornello]]: "İlkbahar geldi" |
+| 0:33 | Topluluk çekilir; solo keman ve iki keman daha tizde cıvıldar, tril yapar, birbirine cevap verir | Kuşlar ilkbaharı şarkılarıyla karşılıyor |
+| 1:06 | Nakarat kısa bir süre geri gelir | Yeniden ritornello |
+| 1:14 | Kemanlar birbirine yakın, kısa notalardan yumuşak, akan koşular çalar; su gibi | "Dereler tatlı bir mırıltıyla akar" |
+| 1:44 | Bütün topluluk hızla aynı notaları döver; solist yukarı fırlayan hızlı koşularla cevap verir | Gök gürültüsü ve şimşek. Müzik minör bir tona döner |
+| 2:10 | Nakarat, bu kez daha karanlık, minör bir tonda | Fırtına geçiyor |
+| 2:17 | Tiz triller solo kemanda geri gelir | "Kuşlar yeniden şarkılarına döner" |
+| 2:58 | Nakarat son kez, yumuşakça biterek | Kapanış ritornellosu |
 
 **Dikkat edilecekler**
 
@@ -100,9 +100,9 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Kemanlarda çok sessiz, sallanan notalar; altta her vuruşta kararlılıkla yinelenen tek bir nota | Yapraklar hışırdıyor; viola "köpek" havlamaya başlıyor. Vivaldi bu bölüme bas partisi yazmadı |
-| ≈ 0:05 | Solo keman uzun soluklu, yavaş bir ezgiyle girer | Keçi çobanı uyuyor |
-| ≈ 1:20 | Ezgi daha yükseğe tırmanır ve bir an için daha aydınlık bir tona geçer | Rüyanın ortası |
+| 0:00 | Kemanlarda çok sessiz, sallanan notalar; altta her vuruşta kararlılıkla yinelenen tek bir nota | Yapraklar hışırdıyor; viola "köpek" havlamaya başlıyor. Vivaldi bu bölüme bas partisi yazmadı |
+| 0:05 | Solo keman uzun soluklu, yavaş bir ezgiyle girer | Keçi çobanı uyuyor |
+| 1:20 | Ezgi daha yükseğe tırmanır ve bir an için daha aydınlık bir tona geçer | Rüyanın ortası |
 | Sona doğru | Solo çizgi başladığı yere iner; köpek son ölçüye kadar havlamayı sürdürür | Sahne olduğu gibi kalıyor |
 
 **Dikkat edilecekler**
@@ -124,13 +124,13 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Neredeyse hiç değişmeyen, tutulan pes notaların üstünde salınan bir dans ezgisi | Gayda [[drone|demi]] üzerinde ritornello |
-| ≈ 0:30 | Solo keman kendi, daha süslü çizgisiyle öne çıkar | İlk solo bölüm: dansçılar oyuna başlıyor |
-| ≈ 0:55 | Dans ezgisi yine bütün toplulukta | Ritornello geri geliyor |
-| ≈ 1:10 | Solo keman yeniden, daha geniş sıçrayışlar ve daha hızlı notalarla | İkinci bölüm |
-| ≈ 1:50 | Dans kararır: aynı ritim, minör bir tonda | Dansın minör bir turu; kısa bir bulut |
-| ≈ 2:30 | Solist hızlı notalarla aşağı yukarı koşar; dem alttan sürer | Son ve en parlak solo bölüm |
-| ≈ 3:05 | Dans ezgisi, parlak ana tona dönmüş olarak | Son ritornello |
+| 0:00 | Neredeyse hiç değişmeyen, tutulan pes notaların üstünde salınan bir dans ezgisi | Gayda [[drone|demi]] üzerinde ritornello |
+| 0:30 | Solo keman kendi, daha süslü çizgisiyle öne çıkar | İlk solo bölüm: dansçılar oyuna başlıyor |
+| 0:55 | Dans ezgisi yine bütün toplulukta | Ritornello geri geliyor |
+| 1:10 | Solo keman yeniden, daha geniş sıçrayışlar ve daha hızlı notalarla | İkinci bölüm |
+| 1:50 | Dans kararır: aynı ritim, minör bir tonda | Dansın minör bir turu; kısa bir bulut |
+| 2:30 | Solist hızlı notalarla aşağı yukarı koşar; dem alttan sürer | Son ve en parlak solo bölüm |
+| 3:05 | Dans ezgisi, parlak ana tona dönmüş olarak | Son ritornello |
 
 **Dikkat edilecekler**
 

@@ -71,14 +71,14 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | The whole string band plays a bright, skipping tune; each short phrase is repeated quietly, like an echo | The [[ritornello]]: "Spring has arrived" |
-| ≈ 0:30 | The band falls away; the solo violin and two other violins chirp and trill high up, answering each other | The birds greet the spring with song |
-| ≈ 1:05 | The refrain returns briefly | The ritornello again |
-| ≈ 1:13 | The violins play soft, flowing runs of short notes, close together, like water | "The streams flow with a sweet murmur" |
-| ≈ 1:44 | The whole band hammers fast repeated notes; the soloist answers with rapid runs shooting upwards | Thunder and lightning. The music turns towards a minor key |
-| ≈ 2:13 | The refrain, now darker, in a minor key | The storm is passing |
-| ≈ 2:20 | The high trills come back in the solo violin | "The birds return to their song" |
-| ≈ 3:02 | The refrain one last time, ending softly | The closing ritornello |
+| 0:00 | The whole string band plays a bright, skipping tune; each short phrase is repeated quietly, like an echo | The [[ritornello]]: "Spring has arrived" |
+| 0:33 | The band falls away; the solo violin and two other violins chirp and trill high up, answering each other | The birds greet the spring with song |
+| 1:06 | The refrain returns briefly | The ritornello again |
+| 1:14 | The violins play soft, flowing runs of short notes, close together, like water | "The streams flow with a sweet murmur" |
+| 1:44 | The whole band hammers fast repeated notes; the soloist answers with rapid runs shooting upwards | Thunder and lightning. The music turns towards a minor key |
+| 2:10 | The refrain, now darker, in a minor key | The storm is passing |
+| 2:17 | The high trills come back in the solo violin | "The birds return to their song" |
+| 2:58 | The refrain one last time, ending softly | The closing ritornello |
 
 **Things to notice**
 
@@ -99,9 +99,9 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | Very quiet rocking notes in the violins; underneath, one note repeated firmly on every beat | The leaves rustle; the viola "dog" starts barking. Vivaldi wrote no bass part for this movement |
-| ≈ 0:05 | The solo violin enters with a slow, long-breathed melody | The goatherd sleeps |
-| ≈ 1:20 | The melody climbs higher and moves to a brighter key for a moment | The middle of the dream |
+| 0:00 | Very quiet rocking notes in the violins; underneath, one note repeated firmly on every beat | The leaves rustle; the viola "dog" starts barking. Vivaldi wrote no bass part for this movement |
+| 0:05 | The solo violin enters with a slow, long-breathed melody | The goatherd sleeps |
+| 1:20 | The melody climbs higher and moves to a brighter key for a moment | The middle of the dream |
 | Near the end | The solo line sinks back to where it began; the dog keeps barking to the last bar | The scene stays exactly as it was |
 
 **Things to notice**
@@ -123,13 +123,13 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | A swinging dance tune over low, held notes that hardly change | The ritornello, over a bagpipe [[drone]] |
-| ≈ 0:30 | The solo violin steps forward with its own, more decorated line | The first solo episode: the dancers start |
-| ≈ 0:55 | The dance tune again, the whole band | The ritornello returns |
-| ≈ 1:10 | The solo violin again, with wider leaps and quicker notes | A second episode |
-| ≈ 1:50 | The dance turns darker: the same rhythm in a minor key | A minor-key round of the dance, a brief cloud |
-| ≈ 2:30 | The soloist runs up and down in fast notes; the drone continues below | The last and most brilliant episode |
-| ≈ 3:05 | The dance tune, back in the bright home key | The final ritornello |
+| 0:00 | A swinging dance tune over low, held notes that hardly change | The ritornello, over a bagpipe [[drone]] |
+| 0:30 | The solo violin steps forward with its own, more decorated line | The first solo episode: the dancers start |
+| 0:55 | The dance tune again, the whole band | The ritornello returns |
+| 1:10 | The solo violin again, with wider leaps and quicker notes | A second episode |
+| 1:50 | The dance turns darker: the same rhythm in a minor key | A minor-key round of the dance, a brief cloud |
+| 2:30 | The soloist runs up and down in fast notes; the drone continues below | The last and most brilliant episode |
+| 3:05 | The dance tune, back in the bright home key | The final ritornello |
 
 **Things to notice**
 

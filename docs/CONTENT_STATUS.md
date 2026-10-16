@@ -83,7 +83,7 @@ Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekl
 | dvorak-cello-concerto | H | cello-concerto | 3 | Mstislav Rostropovich / Herbert von Karajan · Berliner Philharmoniker, 1968 | `0zwaTXZIMtLu2Y0vgbZDlQ` | Antonín Slavíček, *Birch Mood* |  | Birleştirildi |
 | dvorak-string-quartet-12 | H | string-quartet | 4 | Pavel Haas Quartet, 2010 | `1DkQ0bddfB6GipbyL1DpvM` | Theodore Robinson, *Canal Scene* |  | Birleştirildi |
 | elgar-cello-concerto | H | cello-concerto | 4 | Jacqueline du Pré / John Barbirolli · London Symphony Orchestra, 1965 | `5bE9xVTlVYE0N4147mcfb4` | Paul Nash, *We Are Making a New World* |  | Birleştirildi |
-| vivaldi-four-seasons-spring | I | violin-concerto | 3 | Simon Standage / Trevor Pinnock · The English Concert, 1982 | `5tgFFNHTrkzpihDgYvpXEL` | Jean-Antoine Watteau, *Fêtes vénitiennes* |  | Birleştirildi |
+| vivaldi-four-seasons-spring | I | violin-concerto | 3 | Simon Standage / Trevor Pinnock · The English Concert, 1982 | `5tgFFNHTrkzpihDgYvpXEL` | Jean-Antoine Watteau, *Fêtes vénitiennes* |  | Kulakla zamanlandı (17 Eki; I ölçüldü, II–III tahminler onaylandı) |
 | bach-brandenburg-concerto-5 | I | concerto | 3 | Trevor Pinnock / Trevor Pinnock · The English Concert, 1982 | `3N0xJn1EFWr5GLuslWdBQy` | Adolph Menzel, *The Flute Concert of Frederick the Great at Sanssouci* | ressam partide 3 kez | Birleştirildi |
 | franck-violin-sonata | I | sonata | 4 | Itzhak Perlman, 1969 | `5HaEcNyN82ue3NHkqIBVQu` | Fernand Khnopff, *Listening to Schumann* | ressam partide 2 kez | Birleştirildi |
 | tallis-spem-in-alium | I | choral | 1 | Peter Phillips, 1985 | `7BdRzzRBSBvoin2yIveUmn` | Jacopo Tintoretto, *Paradise* |  | Birleştirildi |
