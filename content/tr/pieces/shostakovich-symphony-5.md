@@ -98,7 +98,7 @@ painting:
 | ≈ 0:00 | Çellolar ve kontrbaslar hırçınca, tek başlarına başlar | Hantal, ayak vuran bir başlangıç |
 | ≈ 0:20 | Cırtlak küçük bir klarnet, ardından kurumlu kornolar | Bir karikatürler geçidi, [[Ländler|ländler]] tarzında |
 | ≈ 1:45 | Solo bir keman, arpın üzerinde kaymalarla süslü, nazlı küçük bir ezgi çalar | [[trio|Trio]]. Bir flüt onu tekrarlıyor. [[glissando|Glissando]] kaymaları ona sahte bir masumiyet veriyor |
-| ≈ 2:50 | Açılış şimdi parmak uçlarında geri döner: fagot ve koparılan teller | Scherzo [[pizzicato|pizzicato]] olarak geri geliyor |
+| ≈ 2:50 | Açılış şimdi parmak uçlarında geri döner: fagot ve parmakla çekilen teller | Scherzo [[pizzicato|pizzicato]] olarak geri geliyor |
 | Son 20 saniye | Obua nazlı ezgiyi bu kez minörde hatırlatır; ardından gür bir savuşturma | Ekşi bir son söz |
 
 ### III. Largo

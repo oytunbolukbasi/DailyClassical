@@ -74,14 +74,14 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Timpani tek bir notayı durmadan döver; kemanlar yukarı zorlanırken tahta üflemeliler aşağı kayar | Giriş. Çizgiler gerilen bir halat gibi birbirinden uzaklaşıyor |
-| ≈ 1:00 | Daha sessiz: koparılan teller, yalnız bir obua | Bir soluklanma |
+| ≈ 1:00 | Daha sessiz: parmakla çekilen teller, yalnız bir obua | Bir soluklanma |
 | ≈ 2:30 | Keskin bir akor; ardından kemanlar gergin, sıçrayan bir temaya atılır | Allegro başlıyor: 1. tema |
 | ≈ 3:30 | Yaylılar ve timpani kısa-kısa-kısa-uzun bir ritim vurur | Beethoven'ın Beşinci'sindeki "kader" motifinin bir yankısı |
 | ≈ 4:00 | Fırtına diner; obua, klarnet ve korno yumuşak bir ezgi söyler | 2. tema |
 | ≈ 5:30 | Müzik temalarını parçalayarak uzak tonlara sapar | [[development|Gelişme bölümü]] |
 | ≈ 7:30 | Baslarda pes bir uğultu, ardından bakırların üzerinde kemanlarda yükselen arpejler | Eve dönüş atılımı |
 | ≈ 8:30 | Birinci tema bütün gücüyle | [[recapitulation|Yeniden serim]] |
-| ≈ 11:30 | Koparılan teller, yavaşlayarak | [[coda|Koda]] |
+| ≈ 11:30 | Parmakla çekilen teller, yavaşlayarak | [[coda|Koda]] |
 | Son dakika | Yumuşak, geniş akorlar | Do majörde sakin bir kapanış |
 
 ### II. Andante sostenuto
@@ -110,7 +110,7 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Koparılan çelloların üzerinde bir klarnet sakin, adım adım ilerleyen bir ezgi söyler | Ana tema |
+| ≈ 0:00 | Parmakla çekilen çelloların üzerinde bir klarnet sakin, adım adım ilerleyen bir ezgi söyler | Ana tema |
 | ≈ 0:40 | Flüt, klarnet ve fagotta inen, noktalı bir figür | İkinci fikir |
 | ≈ 1:15 | Minörde daha kısa, daha keskin cümleler | Kısa bir gölge |
 | ≈ 1:55 | Ölçü salınan bir 6/8'e döner; flüt, obua ve fagot neşeli bir ezgiyi paylaşır | [[trio|Trio]] |
@@ -126,7 +126,7 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Yaylılarda yavaş, karanlık, inen notalar; bir ezginin hüzünlü bir ipucu | Do minörde giriş |
-| ≈ 1:00 | Koparılan teller giderek hızlanır, tizden pese atılıp durur; ardından bir timpani gümbürtüsü | Gerilim kırılma noktasına varıyor |
+| ≈ 1:00 | Parmakla çekilen teller giderek hızlanır, tizden pese atılıp durur; ardından bir timpani gümbürtüsü | Gerilim kırılma noktasına varıyor |
 | ≈ 2:30 | Pırıldayan yaylıların üzerinde bir korno geniş bir çağrı söyler; bir flüt cevap verir | Do majörde alp borusu teması |
 | ≈ 3:15 | Trombonlar ve fagotlarda yumuşak, ağırbaşlı bir [[chorale|koral]] | Finale kadar bekletilen trombonlar bir ilahiyi önden götürüyor |
 | ≈ 4:10 | Kemanlar büyük, sıcak, adımlayan bir ezgiye başlar | Allegro'nun ana teması; sık sık "Neşeye Övgü"ye benzetilir |

@@ -117,7 +117,7 @@ painting:
 | ≈ 0:25 | Çellolar ve kontrbaslar uzun bir gamda aşağı doğru adımlar; kasvetli ve ağır | 1. tema: mahkûmun yürüyüşü. Çok geçmeden bir fagot alaycı bir karşı ezgi ekler |
 | ≈ 1:40 | Bakırlarda ve üflemelilerde alev alev, kabadayı bir ezgi | 2. tema: kalabalığın marşı, parlak ve acımasız |
 | Son 30 saniye | Solo bir klarnet idée fixe'e şefkatle başlar | "Son bir aşk düşüncesi" |
-| Hemen ardından | Gürleyen bir akor; koparılan teller; davul gümbürtüleri ve bakırlar | Bıçak düşer, baş yuvarlanır, kalabalık kükrer |
+| Hemen ardından | Gürleyen bir akor; parmakla çekilen teller; davul gümbürtüleri ve bakırlar | Bıçak düşer, baş yuvarlanır, kalabalık kükrer |
 
 **Dikkat edilecekler**
 

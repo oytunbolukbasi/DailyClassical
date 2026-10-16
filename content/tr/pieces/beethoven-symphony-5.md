@@ -115,7 +115,7 @@ painting:
 | ≈ 0:00 | Çellolar ve kontrbaslar neredeyse sessizlikte yukarı doğru sürünür | Hayalet gibi bir açılış |
 | ≈ 0:20 | Kornolar çekiç gibi vuran bir ritmi haykırır | Yine slogan motif: kısa, kısa, kısa, uzun |
 | ≈ 1:45 | Çellolar ve kontrbaslar hırçınca koşuşturur; diğer yaylılar sırayla katılır | [[trio|Trio]], Do majörde; bir [[fugue|füg]] gibi başlıyor |
-| ≈ 3:10 | Açılış bir gölge gibi döner: koparılan teller ve sessiz bir fagot | Scherzo [[pizzicato|pizzicato]] olarak geri geliyor, sanki birini uyandırmaktan korkar gibi |
+| ≈ 3:10 | Açılış bir gölge gibi döner: parmakla çekilen teller ve sessiz bir fagot | Scherzo [[pizzicato|pizzicato]] olarak geri geliyor, sanki birini uyandırmaktan korkar gibi |
 | ≈ 4:20 | Uzun tutulan bir notanın üzerinde yumuşak bir davul vuruşu; kemanlar el yordamıyla yukarı tırmanır | Geçiş. Gerilim neredeyse bir dakika boyunca birikir, sonra hiç ara vermeden doğrudan finale akar |
 
 ### IV. Allegro

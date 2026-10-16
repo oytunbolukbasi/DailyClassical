@@ -129,7 +129,7 @@ painting:
 | ≈ 0:00 | Klarnet sade, yumuşak bir ezgi çalar; yaylılar artık sordinsiz | Andantino, Re majörde |
 | ≈ 0:44 | Kemanlar küçük, zikzak çizen bir figür ekler | Bir sonraki kısmı sürükleyecek yeni bir fikir |
 | ≈ 1:23 | Daha hızlı: birinci keman ezginin hafif, seken bir biçimini çalar | Presto, Si minörde. Aynı notalar, yeni bir ritimde |
-| ≈ 1:46 | Klarnet, koparılan tellerin üzerinde vuruş dışı bir melodiyle öne geçer | [[pizzicato]] eşliğinde ikinci bir fikir |
+| ≈ 1:46 | Klarnet, parmakla çekilen tellerin üzerinde vuruş dışı bir melodiyle öne geçer | [[pizzicato]] eşliğinde ikinci bir fikir |
 | ≈ 4:01 | Hızlı müzik yavaşlıyormuş gibi olur ve açılışa karışır | Andantino'nun dönüşü |
 | Sona doğru | Yumuşak ezginin son ölçüleri | Re majörde sessiz bir kapanış |
 

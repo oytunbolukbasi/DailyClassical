@@ -106,7 +106,7 @@ painting:
 | ≈ 0:00 | Dört korno seslenir; solo bir korno zıplayan bir köy dansını önden götürür | [[scherzo|Scherzo]] teması, gürbüz bir [[Ländler|ländler]]. Kornonun baştan sona bir [[obbligato|obligato]] partisi var |
 | ≈ 2:30 | Yaylılarda daha yumuşak, daha zarif bir vals | Birinci trio. Köy terbiyesinden sonra şehir terbiyesi |
 | ≈ 6:00 | Müzik durur; solo korno seslenir, diğerleri sessizliklerin ötesinden cevap verir | Dağların arasında yankılanır gibi korno çağrıları |
-| ≈ 8:00 | Yaylılar utangaç, küçük bir valsi koparır | Çekingen ve içten bir [[pizzicato|pizzicato]] ara bölümü |
+| ≈ 8:00 | Yaylılar, telleri parmakla çekerek utangaç, küçük bir vals çalar | Çekingen ve içten bir [[pizzicato|pizzicato]] ara bölümü |
 | ≈ 11:00 | Danslar geri döner ve üst üste yığılır | Mahler temalarını büyük bir kontrpuan ustalığıyla birleştiriyor |
 | Son dakika | Tempo çılgınca hızlanır; tahta bir çırpıcı takırdar | Vahşi bir kapanış |
 

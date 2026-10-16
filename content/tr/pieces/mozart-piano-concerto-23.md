@@ -107,7 +107,7 @@ painting:
 | ≈ 0:50 | Orkestra yumuşakça cevap verir; klarnet, kemanlar ve fagot birbirini izler ve birbirine sürtünür | Orkestra ağıtı devralıyor. Çatışan notalar bilinçli |
 | ≈ 2:30 | Hava aydınlanır: flüt ve klarnet sıcak, yeni bir ezgi çalar, piyano cevap verir | Orta kısım, La majörde |
 | ≈ 3:50 | Piyano sallanan minör melodiye geri döner | Açılış kısmı geri geliyor |
-| ≈ 6:05 | Çok sessiz: kemanlar yayla çalar, pes yaylılar teli parmakla koparır, piyanonun çizgisi seyrelir | [[coda|Koda]]. Bölüm minörde sönerek biter |
+| ≈ 6:05 | Çok sessiz: kemanlar yayla çalar, pes yaylılar telleri parmakla çeker, piyanonun çizgisi seyrelir | [[coda|Koda]]. Bölüm minörde sönerek biter |
 
 **Dikkat edilecekler**
 

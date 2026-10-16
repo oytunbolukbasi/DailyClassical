@@ -58,7 +58,7 @@ painting:
 
 **Ana fikirler**
 
-- Kaynaklar: iki flütte, sonra iki klarnette hızlı, dalgalanan notalar; su damlası gibi tek tek koparılan notalarla.
+- Kaynaklar: iki flütte, sonra iki klarnette hızlı, dalgalanan notalar; su damlası gibi tek tek parmakla çekilen notalarla.
 - Nehir ezgisi: kemanlarda, bir akıntı gibi yükselip alçalan geniş, şarkı gibi bir melodi.
 - Kıyıdaki sahneler: kornolarla bir av, bir köy polkası, su perilerinin gece dansı.
 - Vyšehrad: *Má vlast*'ın ilk şiiri *Vyšehrad*'dan, bakır üflemelilerde yavaş, gururlu bir tema.

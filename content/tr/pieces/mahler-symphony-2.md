@@ -106,7 +106,7 @@ painting:
 | ≈ 2:00 | Yaylılarda koşuşan üçlemeler; daha huzursuz | Birinci ara bölüm |
 | ≈ 3:30 | Dans geri döner; çellolar altına sıcak bir karşı ezgi ekler | Ländler, daha zengin |
 | ≈ 5:00 | Koşuşan figürler bakırlarla birlikte, daha gür döner | İkinci ara bölüm, bu kez fırtınalı |
-| ≈ 7:00 | Dans ezgisi yeniden, ama bu kez yaylılar onu parmaklarıyla koparır | Ezgi [[pizzicato|pizzicato]] çalınıyor; bir anı kadar hafif |
+| ≈ 7:00 | Dans ezgisi yeniden, ama bu kez yaylılar onu telleri parmaklarıyla çekerek çalar | Ezgi [[pizzicato|pizzicato]] çalınıyor; bir anı kadar hafif |
 | Son dakika | Arp ve yumuşak yaylılar söner | Anı kapanıyor |
 
 ### III. In ruhig fließender Bewegung

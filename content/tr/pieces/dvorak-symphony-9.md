@@ -90,7 +90,7 @@ painting:
 | --- | --- | --- |
 | ≈ 0:00 | Bakırlarda tuhaf armonilerden geçen yavaş, ağırbaşlı akorlar | Yedi akordan bir kapı |
 | ≈ 0:45 | [[muted|Sordinli]] yaylıların üzerinde İngiliz kornosu | Ana tema |
-| ≈ 4:40 | Flüt ve obuada biraz daha hızlı, yakınır gibi bir ezgi; altta koparılan kontrbaslar yürür | Orta kısım, minörde. Dvořák bunu "Hiawatha"daki ormanda bir cenazeyle ilişkilendirdi |
+| ≈ 4:40 | Flüt ve obuada biraz daha hızlı, yakınır gibi bir ezgi; altta parmakla çekilen kontrbaslar yürür | Orta kısım, minörde. Dvořák bunu "Hiawatha"daki ormanda bir cenazeyle ilişkilendirdi |
 | ≈ 8:00 | Obua ve flüt parlak parlak cıvıldar; müzik kabarır; trombonlar birinci bölümün korno çağrısını gürleyerek çalar | Ani bir gün ışığı görüntüsü ve birinci bölüm araya giriyor |
 | ≈ 9:15 | İngiliz kornosu melodisi geri döner | Yeniden ana tema |
 | ≈ 10:30 | Bir avuç solo yaylı ezgiyi devralır. Durur. Sessizlik. Yeniden dener | Melodi, sanki duygularına yenik düşmüş gibi iki kez bocalıyor |

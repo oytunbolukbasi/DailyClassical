@@ -82,7 +82,7 @@ painting:
 | Gelişme ortası | Trombonlarda ve trompetlerde yavaş, ilahi gibi bir cümle | Rus Ortodoks cenaze ayininden bir alıntı |
 | ≈ 12:30–14:30 | 1. tema fırtınanın içinde geri döner; trombonlar yuvarlanan timpaninin üzerinde adım adım iner | [[recapitulation|Yeniden serim]] ve doruk iç içe geçiyor. En trajik an |
 | ≈ 15:00 | Ünlü melodi daha parlak hâlde geri gelir | 2. tema, şimdi Si majörde: aynı ezgi, ama hak edilmiş bir huzur gibi |
-| ≈ 18:00 | Yaylılar yavaşça inen bir gamı koparır; üstünde sakin bir bakır [[chorale|koral]] | [[coda|Koda]], yaylılar [[pizzicato|pizzicato]]. Fırtına geçti; son huzurlu, ama aşağıyı işaret ediyor |
+| ≈ 18:00 | Yaylılar, telleri parmakla çekerek yavaşça inen bir gam çalar; üstünde sakin bir bakır [[chorale|koral]] | [[coda|Koda]], yaylılar [[pizzicato|pizzicato]]. Fırtına geçti; son huzurlu, ama aşağıyı işaret ediyor |
 
 **Dikkat edilecekler**
 
@@ -100,7 +100,7 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Koparılan tellerin üzerinde çellolarda akıcı, gülümseyen bir melodi | Ana kısım, Re majörde. Birinci bölümden sonra bir nefes |
+| ≈ 0:00 | Parmakla çekilen tellerin üzerinde çellolarda akıcı, gülümseyen bir melodi | Ana kısım, Re majörde. Birinci bölümden sonra bir nefes |
 | ≈ 1:00–2:30 | Melodi tahta üflemelilere ve kemanlara geçer, süslenerek tekrarlanır | Ana kısım genişliyor |
 | ≈ 2:30 | Hava kararır: kemanlarda iç çeken, inen cümleler. Altta davullar ve kontrbaslar her vuruşta hiç değişmeyen tek bir notayı tekrarlar | Orta kısım, Si minörde. O ısrarcı nota bir [[pedal note|pedal sesi]]; kalp atışı gibi duyuluyor |
 | ≈ 5:00 | İlk melodi geri döner | Ana kısım geri geliyor |

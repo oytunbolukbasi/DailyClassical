@@ -110,7 +110,7 @@ painting:
 | ≈ 3:00 | Orkestrada minör tonda ani, güçlü bir patlama | Orta kısım başlıyor |
 | ≈ 3:30–5:30 | Viyolonsel özlem dolu, hüzünlü bir melodi söyler | Dvořák'ın "Beni Yalnız Bırakın" şarkısından alıntı |
 | ≈ 6:30 | Üç korno açılış melodisini bir ilahi gibi sessizce çalar | Ana tema, kornolar için bir [[chorale|koral]] olarak dönüyor |
-| ≈ 8:30–10:30 | Viyolonsel tek başına, neredeyse serbest bir zamanda; tahta üflemeliler cevap verir; sol eliyle boş telleri koparırken akorlar çalar | Bütün konçertoda bir [[cadenza|kadans]]a en çok benzeyen pasaj |
+| ≈ 8:30–10:30 | Viyolonsel tek başına, neredeyse serbest bir zamanda; tahta üflemeliler cevap verir; sol eliyle boş telleri parmakla çekerken akorlar çalar | Bütün konçertoda bir [[cadenza|kadans]]a en çok benzeyen pasaj |
 | Son dakika | Viyolonsel çok yumuşak, tiz, camsı sesler çalar ve bölüm söner | [[harmonics|Flajole]] seslerle biten son |
 
 **Dikkat edilecekler**

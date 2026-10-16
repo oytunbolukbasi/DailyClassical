@@ -91,7 +91,7 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Kornolar tek başına, ağırbaşlı, arkaik tınlayan bir çağrıda | Açılış eski bir kilise dizisi kullanıyor; uzak, efsanevi rengini buna borçlu |
-| ≈ 0:30 | Klarnetler, koparılan tellerin üzerinde ezgiyi devralır | 1. tema; [[pizzicato|pizzicato]] ayak sesleriyle yavaş bir alay gibi |
+| ≈ 0:30 | Klarnetler, parmakla çekilen tellerin üzerinde ezgiyi devralır | 1. tema; [[pizzicato|pizzicato]] ayak sesleriyle yavaş bir alay gibi |
 | ≈ 3:30 | Çellolar geniş, ışıldayan bir melodi söyler; kemanlar yukarıdan süsler | 2. tema |
 | ≈ 5:30 | Alay daha çalkantılı hâlde geri döner ve sert bir doruğa yükselir | Bölümün ortası |
 | ≈ 8:00 | Işıldayan melodi yeniden, şimdi bütün zengin yaylı grubunda | Duygusal zirve. Yaylılar daha fazla sıcaklık için birçok partiye bölünüyor |
@@ -119,7 +119,7 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Üflemelilerde ve bakırlarda adım adım tırmanan sekiz sert akor | Tema. Trombonlar senfonide ilk kez çalıyor |
-| ≈ 0:15–1:20 | Koparılan teller ve davullar; ardından tahta üflemelilerde kaskatı bir ezgi | İlk varyasyonlar. Sekiz nota basa iniyor |
+| ≈ 0:15–1:20 | Parmakla çekilen teller ve davullar; ardından tahta üflemelilerde kaskatı bir ezgi | İlk varyasyonlar. Sekiz nota basa iniyor |
 | ≈ 1:30 | Yaylılar coşkun, tutkulu bir melodiyle devralır | Varyasyonlar daha lirik ve daha ivedi hâle geliyor |
 | ≈ 3:00 | Nabız yavaşlar. Solo bir flüt, yalnız ve duraksayarak | Flüt varyasyonu. Senfoninin en yalnız anı |
 | ≈ 4:20 | Trombonlar ve kornolarda yumuşak, ilahi gibi akorlar | Mi majörde bir [[chorale|koral]]. Kısa bir huzur görüntüsü |

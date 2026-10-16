@@ -106,7 +106,7 @@ painting:
 | ≈ 5:50 | Bir korno tek bir notayı yumuşakça yineler, yaylılar cevap verir; müzik nefesini tutmuş gibi | Yürüyüşe dönüş yolu. Schumann burada kornonun başka bir dünyadan seslendiğini, orkestranın da onu dinlediğini yazmıştı |
 | ≈ 6:30 | Obuanın yürüyüşü yeniden | 1. tema dönüyor |
 | ≈ 9:30–10:30 | Yürüyüş gür, yinelenen, çatışan akorlardan bir doruğa tırmanır, sonra birden durur | Bölümün krizi; ardından sessizlik |
-| ≈ 10:30 | Çellolar sessizce söyler, ardından koparılan teller | Müzik yavaş yavaş kendine geliyor |
+| ≈ 10:30 | Çellolar sessizce söyler, ardından parmakla çekilen teller | Müzik yavaş yavaş kendine geliyor |
 | ≈ 11:10 | Sıcak melodi bu kez La majörde geri gelir | 2. tema |
 | Son 2 dakika | Yürüyüş daha yumuşak olarak geri gelir ve söner | [[coda|Koda]] |
 

@@ -125,7 +125,7 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Bir pırıltının üzerinde kemanlarda kıvrak, noktalı bir ezgi | 1. tema; senfoninin açılış melodisinin bir akrabası |
-| ≈ 1:20 | Koparılan basların üzerinde sakin, ilahi gibi bir melodi | La bemol majörde 2. tema, bir [[chorale|koral]] |
+| ≈ 1:20 | Parmakla çekilen basların üzerinde sakin, ilahi gibi bir melodi | La bemol majörde 2. tema, bir [[chorale|koral]] |
 | ≈ 3:00 | Bütün orkestra oktavlarla bir temayı çekiçler | 3. tema |
 | ≈ 4:30 | Temalar parçalanır ve birleştirilir | [[development|Gelişme bölümü]] |
 | ≈ 7:30 | Bu kez önce gürültülü oktav teması gelir | Temalar ters sırayla dönüyor |

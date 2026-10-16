@@ -49,7 +49,7 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Passacaglia | Passacaglia | Çevresi değişirken durmadan yinelenen kısa tema | Kısa bir temanın durmadan tekrarlandığı, çevresindeki müziğin ise sürekli değiştiği bir biçim. |
 | Pedal note | Pedal sesi | Değişen armoninin altında basta tutulan tek nota | Üstündeki armoni değişirken, genellikle basta tutulan ya da tekrarlanan tek bir nota. |
 | Pentatonic scale | Pentatonik dizi | Dünyanın her yerinde halk müziğinde duyulan beş sesli dizi | Alışılmış yedi yerine beş notadan oluşan, aralarında yarım ses adımı bulunmayan dizi. Ezgilere, dünyanın dört bir yanındaki müziklerde duyulan açık, halk ezgisi gibi bir tını verir. |
-| Pizzicato | Pizzicato | Telleri yay yerine parmakla koparmak | Yaylı bir çalgının tellerini yay yerine parmakla koparmak. |
+| Pizzicato | Pizzicato | Telleri yay yerine parmakla çekmek | Yaylı bir çalgının tellerini yay yerine parmakla çekerek çalmak. |
 | Plainchant | Gregoryen ilahi | Eşliksiz, serbest ritimli eski kilise ezgisi | Batı Kilisesi'nin eşliksiz, konuşmaya yakın serbest bir ritimle, tek bir sesle ya da birçok sesin aynı notaları söylemesiyle okunan eski ezgisi. Düz şarkı (plainsong) ya da Gregoryen ilahi olarak da bilinir. |
 | Polyphony | Polifoni | Aynı anda duyulan birkaç bağımsız ezgi | Tek bir ezgi ve eşlik yerine, her biri kendi biçimine sahip birkaç bağımsız ezgi çizgisinin aynı anda söylendiği ya da çalındığı müzik. |
 | Posthorn | Posta borusu | Posta arabalarında çalınan küçük, pistonsuz boru | Pistonsuz, küçük bir bakır boru; eskiden arabacılar posta arabasının gelişini duyurmak için çalardı. Yalnızca birkaç nota çalabildiği için sade, nostaljik bir sesi vardır. |

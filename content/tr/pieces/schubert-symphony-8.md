@@ -70,7 +70,7 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Çellolar ve kontrbaslar tek başına, çok sessiz, aşağı doğru kıvrılarak | Slogan motif. Aklınızda tutun; ileride hıncını alırcasına geri dönecek |
-| ≈ 0:20 | Koparılan kontrbasların üzerinde tedirgin, titreşen kemanlar; obua ve klarnet birlikte söyler | 1. tema |
+| ≈ 0:20 | Parmakla çekilen kontrbasların üzerinde tedirgin, titreşen kemanlar; obua ve klarnet birlikte söyler | 1. tema |
 | ≈ 1:15 | Kornolar ve fagotlar tek bir uzun notayı tutar; hava aydınlanır | Bir menteşe. Tek bir tutulan nota müziği yeni bir tona taşıyor |
 | ≈ 1:25 | Çellolar yumuşak, salınan bir melodi söyler; kemanlar devralır | 2. tema, Sol majörde |
 | ≈ 2:00 | Melodi cümlenin ortasında durur. Bir ölçü sessizlik. Ardından şiddetli akorlar | İlk kesinti |
@@ -90,14 +90,14 @@ painting:
 
 **Ana fikirler**
 
-- 1. tema: kemanlarda sessiz bir melodi; önce kornolar ve aşağı inen koparılmış kontrbaslar hazırlar.
+- 1. tema: kemanlarda sessiz bir melodi; önce kornolar ve aşağı inen, parmakla çekilen kontrbaslar hazırlar.
 - 2. tema: yumuşakça atan yaylıların üzerinde klarnet, sonra obua için uzun, yalnız bir solo.
 
 **Dinleme durakları**
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Kornolar ve fagotlar, adım adım inen koparılmış kontrbaslar, ardından sakin bir keman melodisi | 1. tema |
+| ≈ 0:00 | Kornolar ve fagotlar, adım adım inen, parmakla çekilen kontrbaslar, ardından sakin bir keman melodisi | 1. tema |
 | ≈ 1:10 | Trombonlarla birden gelen gür, uzun adımlı bir pasaj | İlk sarsıntı. Kontrbaslar yürürken üflemeliler yukarıdan seslenir |
 | ≈ 2:45 | Kemanlar tek başına, yumuşak notalardan ince bir çizgi tutar | Neredeyse hiçlikten bir köprü |
 | ≈ 3:00 | Hafifçe vuruş dışı çalan yaylıların üzerinde uzun, arayış dolu bir klarnet solosu; obua majörde cevap verir | 2. tema. Eşlik [[syncopation|senkop]] kullanıyor; süzülen havasını buna borçlu |

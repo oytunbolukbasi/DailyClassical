@@ -94,7 +94,7 @@ painting:
 
 ### II. Andante
 
-**Özet.** Yumuşak, nabız gibi atan bir eşlik üzerinde uzun, düş gibi bir melodi. Kemanlar [[muted|sordinli]] çalıyor, orta yaylılar üçlü gruplar hâlinde nabız tutuyor, viyolonseller ve kontrbaslar teli parmakla koparıyor. Piyano şarkıyı devralıyor ve eve dönmeden önce uzak tonlarda dolaşıyor.
+**Özet.** Yumuşak, nabız gibi atan bir eşlik üzerinde uzun, düş gibi bir melodi. Kemanlar [[muted|sordinli]] çalıyor, orta yaylılar üçlü gruplar hâlinde nabız tutuyor, viyolonseller ve kontrbaslar telleri parmakla çekiyor. Piyano şarkıyı devralıyor ve eve dönmeden önce uzak tonlarda dolaşıyor.
 
 **Ana fikirler**
 

@@ -100,7 +100,7 @@ painting:
 
 ### II. Andantino semplice – Prestissimo – Tempo I
 
-**Özet.** Ortasında bir sürpriz saklayan yumuşak bir kır havası. Bir flüt koparılan tellerin üzerinde sade bir ezgi söyler, piyano onu tekrarlar. Sonra müzik birden koşmaya başlar: popüler bir Fransız şarkısı üzerine kurulu hafif, hızlı bir [[scherzo|scherzo]]. Sonda yumuşak ezgi geri gelir.
+**Özet.** Ortasında bir sürpriz saklayan yumuşak bir kır havası. Bir flüt, parmakla çekilen tellerin üzerinde sade bir ezgi söyler, piyano onu tekrarlar. Sonra müzik birden koşmaya başlar: popüler bir Fransız şarkısı üzerine kurulu hafif, hızlı bir [[scherzo|scherzo]]. Sonda yumuşak ezgi geri gelir.
 
 **Ana fikirler**
 
@@ -111,7 +111,7 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Yumuşak, koparılan teller | [[pizzicato|Pizzicato]] ile kısa bir giriş |
+| ≈ 0:00 | Yumuşak, parmakla çekilen teller | [[pizzicato|Pizzicato]] ile kısa bir giriş |
 | ≈ 0:10 | Bir flüt sade, yumuşak bir ezgi çalar | Ana tema |
 | ≈ 0:45 | Piyano ezgiyi biraz değiştirerek tekrarlar | Piyano devralıyor |
 | ≈ 1:20–2:20 | Ezgi piyano ile tahta üflemeliler arasında gidip gelir; piyano onu süsler | İlk kısım açılıyor |

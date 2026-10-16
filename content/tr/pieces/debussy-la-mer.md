@@ -72,7 +72,7 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Timpani ve kontrbaslardan alçak, yumuşak bir gümbürtü; arplar teller koparır; üstte sordinli kemanlar titreşir | Şafaktan önceki karanlık. Altta tek bir pes nota tutulur: bir [[pedal note|pedal sesi]] |
+| ≈ 0:00 | Timpani ve kontrbaslardan alçak, yumuşak bir gümbürtü; arplar telleri parmakla çeker; üstte sordinli kemanlar titreşir | Şafaktan önceki karanlık. Altta tek bir pes nota tutulur: bir [[pedal note|pedal sesi]] |
 | ≈ 0:50 | İngiliz kornosuyla sordinli trompetten birlikte kısa bir çağrı | İlk [[motif|motif]]. Aklınızda tutun |
 | ≈ 2:00 | Hız artar: tahta üflemeliler ileri geri sallanır, kornolar cevap verir, arplar dalgalanır | Deniz uyanıyor. Bölümün asıl kısmı başlıyor |
 | ≈ 4:45–5:30 | Yaylıların pes bölgesinde sıcak, salınan, koyu ve dolgun bir melodi | Dört gruba ayrılmış çellolar [[divisi|divisi]] çalıyor. Partisyonun ünlü sayfalarından biri |

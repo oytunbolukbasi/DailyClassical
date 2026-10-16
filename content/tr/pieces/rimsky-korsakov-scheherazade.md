@@ -94,7 +94,7 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Solo keman ve arp | Şehrazat yeni bir öyküye başlıyor |
-| ≈ 0:30 | Solo bir fagot, yumuşakça koparılan kontrbasların üzerinde küçük kıvrımlarla dolu uzun, gezinen bir ezgi çalar | Kalender'in masalı. Kontrbaslar [[pizzicato|pizzicato]] çalıyor |
+| ≈ 0:30 | Solo bir fagot, yumuşakça parmakla çekilen kontrbasların üzerinde küçük kıvrımlarla dolu uzun, gezinen bir ezgi çalar | Kalender'in masalı. Kontrbaslar [[pizzicato|pizzicato]] çalıyor |
 | ≈ 1:30 | Aynı ezgiyi önce bir obua, sonra kemanlar alır | Öykü sesten sese geçiyor |
 | ≈ 4:00 | Ani bir trombon fanfarı; [[muted|sordinli]] bir trompet cevap verir | Allegro molto: bir savaş çağrısı |
 | ≈ 6:00–7:00 | Orkestra beklerken önce bir klarnet, sonra bir fagot serbest, gösterişli solo pasajlar çalar | Her biri kısa bir [[cadenza|kadans]] |

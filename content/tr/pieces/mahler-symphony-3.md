@@ -103,7 +103,7 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Koparılan tellerin üzerinde zarif bir ezgiyle solo obua | Menuet |
+| ≈ 0:00 | Parmakla çekilen tellerin üzerinde zarif bir ezgiyle solo obua | Menuet |
 | ≈ 1:45 | Flütlerde ve kemanlarda daha hızlı, hışırdayan bir müzik | Birinci ara bölüm; otların arasında esen rüzgâr gibi |
 | ≈ 3:20 | Obuanın ezgisi geri gelir | Yeniden menuet |
 | ≈ 4:30 | Keskin vurgularla daha hızlı ve daha fırtınalı | İkinci ara bölüm, bu kez sert esintili |
@@ -118,7 +118,7 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Koparılan tellerin üzerinde klarnetler ve pikolo gevezelik eder | Hayvanların scherzosu; Mahler'in "Ablösung im Sommer" şarkısından |
+| ≈ 0:00 | Parmakla çekilen tellerin üzerinde klarnetler ve pikolo gevezelik eder | Hayvanların scherzosu; Mahler'in "Ablösung im Sommer" şarkısından |
 | ≈ 2:45 | Seken bir ritimde daha hafif, zıplayan bir müzik | İkinci bir dans |
 | ≈ 6:00 | Her şey durur. Bir posta borusu uzaktan uzun, hüzünlü bir melodi çalar | İlk posta borusu solosu, [[offstage|sahne dışından]] |
 | ≈ 8:30 | Ani bir trompet işareti araya girer | Bir Avusturya askerî çağrısı büyüyü bozuyor |

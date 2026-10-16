@@ -70,7 +70,7 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Zar zor duyulan bir trampet, viyola ve çellolardan yumuşak koparmalar; birkaç saniye sonra pes ve sessiz bir flüt girer | Önce ritim, ardından flütte A ezgisi |
+| ≈ 0:00 | Zar zor duyulan bir trampet, viyola ve çellolardan parmakla çekilen yumuşak notalar; birkaç saniye sonra pes ve sessiz bir flüt girer | Önce ritim, ardından flütte A ezgisi |
 | ≈ 0:55 | Bir klarnet aynı ezgiyi çalar | A ezgisi ikinci kez |
 | ≈ 1:45 | Tiz bölgesinde bir fagot, yeni ve daha kıvrak bir ezgiyle; ardından aynı ezgi küçük, cırtlak bir klarnette | B ezgisi giriyor, sonra Mi bemol klarnette tekrarlanıyor |
 | ≈ 4:10 | [[muted|Sordinli]] bir trompet; çok yukarıda bir flüt onu gölge gibi izler | A ezgisi yeni bir renkte |

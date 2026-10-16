@@ -81,7 +81,7 @@ painting:
 | ≈ 14:00 | Yavaş bir yürüyüş: timpani ve pes çanlar arpın dört notasını çalar | Mahler'in deyişiyle "bir cenaze alayı gibi" |
 | ≈ 19:30 | Açılış ritmi ve iç çeken tema, artık daha sessiz | [[recapitulation|Yeniden serim]] |
 | ≈ 21:30 | Flüt, pikolo, obua ve solo keman kuşlar gibi birbirine cevap verir | [[coda|Koda]]. Berg bu pasajı öte dünyaya dair bir görü olarak nitelemişti |
-| Son dakika | Tiz bir flüt, yumuşak bir korno, birkaç koparılan nota | Bölüm çözülüp dağılıyor |
+| Son dakika | Tiz bir flüt, yumuşak bir korno, parmakla çekilen birkaç nota | Bölüm çözülüp dağılıyor |
 
 ### II. Im Tempo eines gemächlichen Ländlers
 
