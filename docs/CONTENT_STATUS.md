@@ -8,6 +8,8 @@ Son güncelleme: 11 Ekim 2026. Ekim 2026 partisi: 50 yeni eser (brief: `content/
 3. **Kulakla zamanlandı:** ≈ duraklar referans kayda göre düzeltildi.
 4. **Takvimde:** `schedule.yaml`'a eklendi; günü gelince Bugün'de ve Kitaplık'ta.
 
+**Kulakla zamanlama:** Durak Zamanlayıcı sayfası (https://claude.ai/artifact/XxHjkkNYbpT5qA823QbPpH). Süreler sayfanın kaydına (`timings/<id>`) düşer; Claude okuyup EN/TR dosyalara işler ve aşamayı "Kulakla zamanlandı" yapar.
+
 Her eserin araştırma notu `content/research/<id>.md`; ortak dosyalara girecekler `content/research/<id>.shared.md`.
 
 ## Birleştirmeden önce çözülecekler (bütün parti)
