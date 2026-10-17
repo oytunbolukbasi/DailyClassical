@@ -80,3 +80,19 @@ Stops in I were scaled from the bar numbers in the Wikipedia analysis (139, 155,
 | I Allegro maestoso | 18:59 | 0:00, 1:15, 3:45, 4:30, 6:15, 7:30–10:00, 10:15, 13:20, 15:45, Near the end | Piano entry (≈ 3:45; depends on the introduction being uncut), the tutti/development (≈ 10:15), recapitulation (≈ 13:20) |
 | II Romance | 9:58 | 0:00, 0:45, 2:45, 4:30, 6:15, 8:00, Last minute | Middle section (≈ 4:30) and return (≈ 6:15) |
 | III Rondo | 9:04 | 0:00, 0:25, 1:20, 2:00, 3:15, 4:15, 5:30, 6:30, 7:45, Near the end | All episode boundaries; whether the octave tune is at ≈ 2:00 |
+
+---
+
+## Reference switched to Zimerman (17 Oct 2026)
+
+At the product owner's request (their favourite recording) the reference is now Krystian Zimerman / Polish Festival Orchestra, Zimerman directing from the piano; Argerich / Abbado moves to the also-recommended list (replacing the earlier Zimerman entry, album `0XuGv9tnHvdEDMtOdAmpe1`).
+
+| Field | Value | Source | Status |
+| --- | --- | --- | --- |
+| Spotify album | https://open.spotify.com/album/6VihhA5em01r0pkom28mNb, "Chopin: Piano Concertos Nos.1 & 2", 6 tracks, ℗/© 1999 Deutsche Grammophon GmbH, Berlin; credits Zimerman, Polish Festival Orchestra (no conductor). No. 1 = tracks 1–3, all playable from Turkey on 17 Oct 2026 | embed page `https://open.spotify.com/embed/album/6VihhA5em01r0pkom28mNb` | VERIFIED |
+| Tracks | I `1kcRgEBrqgA5mmzGwDntrF` 1 404 000 ms (23:24) · II `4czfzwEfUJ8Qx52pYfOOUj` 755 000 ms (12:35) · III `0bicXMCuxsMjhJ4KFO11zS` 593 000 ms (9:53); total 45:52 (CD: 46'00) | embed page; Discogs 7377043 | VERIFIED |
+| Label, catalogue | Deutsche Grammophon 459 684-2 (2 CD, released 30 Sep 1999) | https://api.discogs.com/releases/7377043 | VERIFIED |
+| Recorded | "Recording: Torino, Auditorium Giovanni Agnelli, 8/1999" (booklet credit as transcribed on Discogs; also the NYPL catalogue record). Culture.pl's search snippet mentions July 1999 at the Polish Radio studio in Warsaw, probably the rehearsal/tour period; the booklet wins | https://api.discogs.com/releases/7377043 ; https://api.discogs.com/releases/6779545 | VERIFIED (booklet) |
+| 150th anniversary context | Zimerman formed the orchestra for the 1999 Chopin anniversary | culture.pl search snippet (page body not fetchable) | SECONDARY |
+
+Stops rescaled from the Argerich estimates by track length (I ×1.233, II ×1.263, III ×1.090). Zimerman's rubato is not uniform, so every stop is still ≈ and must be re-timed by ear; least certain: the piano entry (≈ 4:37, depends on how broad the introduction is) and the development (≈ 12:38).
