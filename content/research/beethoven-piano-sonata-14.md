@@ -106,3 +106,12 @@ No listening was possible. Times come from the bar structure in the Humdrum scor
 | I Adagio sostenuto | 4 (6:09) | 0:00, 0:21, 0:50, 2:25–3:35, 3:37, 5:12, 5:45 | Bars 1, 5, 10, 28–41, 42, 60, 66. The pedal-note passage range is a guess |
 | II Allegretto | 5 (2:19) | 0:00, 0:16, 0:56, 1:44, 2:12 | Played-bar count 1, 17, 57, 105, 137; assumes all trio repeats |
 | III Presto agitato | 6 (5:30) | 0:00, 0:21, 0:33, 1:08, 1:44, 2:42, 4:10, 4:58, 5:05 | Bars 1, 14, 21, 43, 66, 102, 158, 188, 189. **First check whether Kempff repeats the exposition** (see §1) |
+
+---
+
+## Reference switched to Barenboim (17 Oct 2026)
+
+At the user's request the reference recording is now Barenboim (DG, Dec 1983, CD 419 602-2; Spotify album `4TCTWpN6Gwq2dA37rkwMX1`, tracks 1–3, verified in §1 and in `beethoven-piano-sonata-8.md`); Kempff moves to the also-recommended list. Spotify embed on 17 Oct 2026, all three tracks playable from Turkey: I `7edAygxi1ST8WJdcT48lWB` 400 200 ms (6:40), II `7BrteBEKtzRaSHxtCRt39I` 132 678 ms (2:13), III `6z9cnXFmz13C7gp0cnzvYU` 462 533 ms (7:43).
+
+Stops: I and II rescaled from the Kempff estimates by track length (×1.084, ×0.957). III: Barenboim takes the exposition repeat (bars 2–65), so 264 bars are played; at ≈ 1.71 s a bar the repeat starts ≈ 1:51 (new stop), development ≈ 3:41, recapitulation ≈ 4:43, coda ≈ 6:17, the slow bars ≈ 7:09, the final rush ≈ 7:16. All still ≈, to be re-timed by ear.
+

@@ -8,19 +8,19 @@ title: Piano Sonata No. 14 in C-sharp minor, "Moonlight"
 catalogue: Op. 27 No. 2
 key: C-sharp minor
 year: 1801
-duration_min: 14
+duration_min: 17
 movement_count: 3
 hook: A hushed, slow ripple that everyone knows, then a short dance and a storm few expect.
 reference_recording:
   soloists:
-    - { name: Wilhelm Kempff, role: piano }
+    - { name: Daniel Barenboim, role: piano }
   label: Deutsche Grammophon
-  catalogue_number: "139 300 (LP); 415 834-2 (CD)"
-  recorded: "January 1965"
-  venue: Beethovensaal, Hanover
-  release_year: 1965
-  year: 1965
-  spotify_url: https://open.spotify.com/album/7z9kHQBUKHO4UQ5ol9D4Ia
+  catalogue_number: "419 602-2 (CD, with Sonatas Nos. 8 & 23)"
+  recorded: "December 1983"
+  venue: Maison de la Mutualité, Paris
+  release_year: 1984
+  year: 1984
+  spotify_url: https://open.spotify.com/album/4TCTWpN6Gwq2dA37rkwMX1
 also_recommended:
   - soloists:
       - { name: Emil Gilels, role: piano }
@@ -32,14 +32,14 @@ also_recommended:
     year: 1981
     spotify_url: https://open.spotify.com/album/73KOojES6U1jObQdYuNORQ
   - soloists:
-      - { name: Daniel Barenboim, role: piano }
+      - { name: Wilhelm Kempff, role: piano }
     label: Deutsche Grammophon
-    catalogue_number: "419 602-2 (CD, with Sonatas Nos. 8 & 23)"
-    recorded: "December 1983"
-    venue: Maison de la Mutualité, Paris
-    release_year: 1984
-    year: 1984
-    spotify_url: https://open.spotify.com/album/4TCTWpN6Gwq2dA37rkwMX1
+    catalogue_number: "139 300 (LP); 415 834-2 (CD)"
+    recorded: "January 1965"
+    venue: Beethovensaal, Hanover
+    release_year: 1965
+    year: 1965
+    spotify_url: https://open.spotify.com/album/7z9kHQBUKHO4UQ5ol9D4Ia
 painting:
   artist: Caspar David Friedrich
   title: Two Men Contemplating the Moon
@@ -61,9 +61,9 @@ painting:
 
 | | Tempo | Key | Metre | Duration |
 | --- | --- | --- | --- | --- |
-| I | Adagio sostenuto | C-sharp minor | 2/2 | 6:09 |
-| II | Allegretto | D-flat major | 3/4 | 2:19 |
-| III | Presto agitato | C-sharp minor | 4/4 | 5:30 |
+| I | Adagio sostenuto | C-sharp minor | 2/2 | 6:40 |
+| II | Allegretto | D-flat major | 3/4 | 2:13 |
+| III | Presto agitato | C-sharp minor | 4/4 | 7:43 |
 
 ### I. Adagio sostenuto
 
@@ -80,12 +80,12 @@ painting:
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | Low octaves and a soft ripple of broken chords, with no tune yet | Four bars of accompaniment set the mood |
-| ≈ 0:21 | A tune enters on top: one note repeated in a long-short rhythm, like a distant bell | The melody, sung above the ripple. One player, three layers |
-| ≈ 0:50 | The chords shift under the tune; for a moment the colour brightens, then darkens again | The music leaves C-sharp minor, passes through a major key and moves on |
-| ≈ 2:25–3:35 | The tune falls silent. A low note is held while the ripple climbs high up the keyboard and sinks back, again and again | A [[pedal note]] in the bass prepares the return |
-| ≈ 3:37 | The tune with its bell-like repeated note, back where it began | The opening returns, like a [[recapitulation]] |
-| ≈ 5:12 | The long-short rhythm of the tune moves down into the bass, under the ripple | The [[coda]] |
-| ≈ 5:45 | Slow, low chords, quieter still, and silence | The end, *pp* |
+| ≈ 0:23 | A tune enters on top: one note repeated in a long-short rhythm, like a distant bell | The melody, sung above the ripple. One player, three layers |
+| ≈ 0:54 | The chords shift under the tune; for a moment the colour brightens, then darkens again | The music leaves C-sharp minor, passes through a major key and moves on |
+| ≈ 2:37–3:53 | The tune falls silent. A low note is held while the ripple climbs high up the keyboard and sinks back, again and again | A [[pedal note]] in the bass prepares the return |
+| ≈ 3:55 | The tune with its bell-like repeated note, back where it began | The opening returns, like a [[recapitulation]] |
+| ≈ 5:38 | The long-short rhythm of the tune moves down into the bass, under the ripple | The [[coda]] |
+| ≈ 6:14 | Slow, low chords, quieter still, and silence | The end, *pp* |
 
 **Things to notice**
 
@@ -108,10 +108,10 @@ painting:
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | A gentle, lilting tune in chords, smooth phrases answered by short, bouncing ones | The dance, in D-flat major |
-| ≈ 0:16 | The tune wanders a little further, then comes home; this part is played twice | The second half of the dance, repeated |
-| ≈ 0:56 | Lower and heavier, with accents that land just after the beat | The [[trio]] |
-| ≈ 1:44 | The lilting opening tune again | The dance returns, this time without repeats |
-| ≈ 2:12 | Two quiet closing chords | The end |
+| ≈ 0:15 | The tune wanders a little further, then comes home; this part is played twice | The second half of the dance, repeated |
+| ≈ 0:54 | Lower and heavier, with accents that land just after the beat | The [[trio]] |
+| ≈ 1:40 | The lilting opening tune again | The dance returns, this time without repeats |
+| ≈ 2:06 | Two quiet closing chords | The end |
 
 **Things to notice**
 
@@ -132,21 +132,22 @@ painting:
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | Waves of fast notes surge up the keyboard, each crashing into two loud chords | Theme 1. The ripple of the first movement, now at full speed |
-| ≈ 0:21 | A held chord and a moment of silence | A breath before the next section |
-| ≈ 0:33 | A melody in the right hand over a rushing left hand, with sudden loud accents | Theme 2, in G-sharp minor |
-| ≈ 1:08 | Hammered chords and short phrases that will not let go | The closing section of the [[exposition]] |
-| ≈ 1:44 | The rising waves again, now starting in a new key | The [[development]]. Kempff goes straight on, without repeating the exposition |
-| ≈ 2:42 | The waves and the two hard chords back in C-sharp minor | The [[recapitulation]] |
-| ≈ 4:10 | The rising waves grow into a long, rolling build-up, with the left hand churning low | The [[coda]] begins |
-| ≈ 4:58 | A free run up and down the keyboard, then two slow bars, almost a stop | A short [[cadenza]]-like passage |
-| ≈ 5:05 | Fast again: broken chords plunge down the whole keyboard; two final loud chords | The end, in C-sharp minor |
+| ≈ 0:22 | A held chord and a moment of silence | A breath before the next section |
+| ≈ 0:35 | A melody in the right hand over a rushing left hand, with sudden loud accents | Theme 2, in G-sharp minor |
+| ≈ 1:13 | Hammered chords and short phrases that will not let go | The closing section of the [[exposition]] |
+| ≈ 1:51 | The rising waves and the two hard chords from the very beginning | The [[exposition]] is repeated, as Beethoven asks |
+| ≈ 3:41 | The rising waves again, now starting in a new key | The [[development]] |
+| ≈ 4:43 | The waves and the two hard chords back in C-sharp minor | The [[recapitulation]] |
+| ≈ 6:17 | The rising waves grow into a long, rolling build-up, with the left hand churning low | The [[coda]] begins |
+| ≈ 7:09 | A free run up and down the keyboard, then two slow bars, almost a stop | A short [[cadenza]]-like passage |
+| ≈ 7:16 | Fast again: broken chords plunge down the whole keyboard; two final loud chords | The end, in C-sharp minor |
 
 **Things to notice**
 
 1. Compare the first bars with the first movement. Both are built from broken chords in C-sharp minor: slow and soft there, fast and violent here.
-2. Listen for the moment near ≈ 4:58 when everything slows almost to a halt before the last rush.
+2. Listen for the moment near ≈ 7:09 when everything slows almost to a halt before the last rush.
 
-**In this recording.** Kempff does not take the repeat of the exposition, so his finale is about a minute and a half shorter than many others. Gilels and Barenboim, in the recordings recommended above, both play it.
+**In this recording.** Barenboim takes the repeat of the exposition, so the finale runs nearly eight minutes. Kempff, in the recordings recommended above, leaves it out and is about two minutes shorter.
 
 ### Threads
 
