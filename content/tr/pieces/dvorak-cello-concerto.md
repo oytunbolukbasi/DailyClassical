@@ -73,16 +73,16 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Klarnetler pes yaylıların üzerinde sessiz, kara kara düşünen bir ezgi çalar | 1. tema, Si minörde |
-| ≈ 1:00 | Bütün orkestra ezgiyi güçlü ve görkemli biçimde devralır | 1. tema *grandioso*, [[tutti|tutti]] |
-| ≈ 1:50 | Solo bir korno uzun, şefkatli bir melodi söyler | 2. tema |
-| ≈ 3:45 | Viyolonsel güçlü, serbest bir süslemeyle girer, ardından üç notalı dolgun akorlar | Solistin girişi, *quasi improvisando*. 1. tema şimdi Si majörde |
-| ≈ 4:30–6:00 | Viyolonsel birinci temayı hızlı, parlak figürlerle koşturur | Solistin işlediği 1. tema |
-| ≈ 6:00 | Viyolonsel korno ezgisini yumuşak ve yavaş söyler | Viyolonselde 2. tema |
-| ≈ 7:20 | Orkestra güçlü biçimde araya girer | [[exposition|Serim]]in sonu |
-| ≈ 8:30 | Müzik yavaşlar, düşe dalar; viyolonsel bir flütle birlikte 1. temayı uzak bir tonda yumuşakça çalar | [[development|Gelişme]], La bemol minörde |
-| ≈ 10:30 | Bütün orkestra korno ezgisini Si majörde zaferle çalar | [[recapitulation|Yeniden serim]] 1. temayla değil, 2. temayla başlıyor |
-| ≈ 12:30 | Viyolonselde hızlı oktavlar, [[double stop|çift sesler]] ve koşular | Solistin en zor pasajı |
+| 0:00 | Klarnetler pes yaylıların üzerinde sessiz, kara kara düşünen bir ezgi çalar | 1. tema, Si minörde |
+| 0:55 | Bütün orkestra ezgiyi güçlü ve görkemli biçimde devralır | 1. tema *grandioso*, [[tutti|tutti]] |
+| 2:12 | Solo bir korno uzun, şefkatli bir melodi söyler | 2. tema |
+| 3:40 | Viyolonsel güçlü, serbest bir süslemeyle girer, ardından üç notalı dolgun akorlar | Solistin girişi, *quasi improvisando*. 1. tema şimdi Si majörde |
+| 4:36–6:07 | Viyolonsel birinci temayı hızlı, parlak figürlerle koşturur | Solistin işlediği 1. tema |
+| 6:07 | Viyolonsel korno ezgisini yumuşak ve yavaş söyler | Viyolonselde 2. tema |
+| 7:33 | Orkestra güçlü biçimde araya girer | [[exposition|Serim]]in sonu |
+| 9:40 | Müzik yavaşlar, düşe dalar; viyolonsel bir flütle birlikte 1. temayı uzak bir tonda yumuşakça çalar | [[development|Gelişme]], La bemol minörde |
+| 11:50 | Bütün orkestra korno ezgisini Si majörde zaferle çalar | [[recapitulation|Yeniden serim]] 1. temayla değil, 2. temayla başlıyor |
+| 12:50 | Viyolonselde hızlı oktavlar, [[double stop|çift sesler]] ve koşular | Solistin en zor pasajı |
 | Son dakika | Orkestra 1. temayı son bir kez parıl parıl çalar | [[coda|Koda]], *grandioso* |
 
 **Dikkat edilecekler**

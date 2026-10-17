@@ -72,16 +72,16 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | Clarinets play a quiet, brooding tune over low strings | Theme 1, in B minor |
-| ≈ 1:00 | The whole orchestra takes up the tune, loud and grand | Theme 1 *grandioso*, played [[tutti]] |
-| ≈ 1:50 | A solo horn sings a long, tender melody | Theme 2 |
-| ≈ 3:45 | The cello enters with a strong, free flourish, then rich three-note chords | The soloist's entry, *quasi improvisando*. Theme 1 now in B major |
-| ≈ 4:30–6:00 | The cello races through the first theme in fast, brilliant figures | Theme 1, worked by the soloist |
-| ≈ 6:00 | The cello sings the horn tune, softly and slowly | Theme 2 on the cello |
-| ≈ 7:20 | The orchestra bursts in loudly | The end of the [[exposition]] |
-| ≈ 8:30 | The music becomes slow and dreamy; the cello plays Theme 1 softly in a distant key, with a flute | The [[development]], in A-flat minor |
-| ≈ 10:30 | The whole orchestra plays the horn tune in triumph, in B major | The [[recapitulation]] starts with Theme 2, not Theme 1 |
-| ≈ 12:30 | The cello in fast octaves, [[double stop]]s and runs | The soloist's hardest passage |
+| 0:00 | Clarinets play a quiet, brooding tune over low strings | Theme 1, in B minor |
+| 0:55 | The whole orchestra takes up the tune, loud and grand | Theme 1 *grandioso*, played [[tutti]] |
+| 2:12 | A solo horn sings a long, tender melody | Theme 2 |
+| 3:40 | The cello enters with a strong, free flourish, then rich three-note chords | The soloist's entry, *quasi improvisando*. Theme 1 now in B major |
+| 4:36–6:07 | The cello races through the first theme in fast, brilliant figures | Theme 1, worked by the soloist |
+| 6:07 | The cello sings the horn tune, softly and slowly | Theme 2 on the cello |
+| 7:33 | The orchestra bursts in loudly | The end of the [[exposition]] |
+| 9:40 | The music becomes slow and dreamy; the cello plays Theme 1 softly in a distant key, with a flute | The [[development]], in A-flat minor |
+| 11:50 | The whole orchestra plays the horn tune in triumph, in B major | The [[recapitulation]] starts with Theme 2, not Theme 1 |
+| 12:50 | The cello in fast octaves, [[double stop]]s and runs | The soloist's hardest passage |
 | Last minute | The orchestra blazes out Theme 1 one last time | The [[coda]], *grandioso* |
 
 **Things to notice**
