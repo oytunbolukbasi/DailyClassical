@@ -21,7 +21,7 @@ Son güncelleme: 17 Ekim 2026. Katalog: **64 eser** (14'ü takvimde ve yayında,
 - **İnceleme sürerken:** `schedule.yaml` değişmez (test takvimi bütün 14 eseri yayında gösteriyor; boş Bugün red riski).
 - **Yayın günü:** `start` o güne, sıra Çaykovski 6 ile başlar; `npm run db:seed && npm run fixtures`, push; sonra App Store Connect'te **Release This Version**.
 - **1.0.1 build'i** (Rönesans etiketi, 6 bölümlük seçici, www bağlantıları, favorileri bildiren gizlilik manifesti; kodu hazır) Mahler 3'ten önce yayında olmalı.
-- **15. günden itibaren** haftada yaklaşık 7 kulakla zamanlanmış eser takvime girer. İlk hafta: Beethoven 3 ✓, Vivaldi İlkbahar ✓, Ay Işığı ✓, Dvořák Çello ✓, Boléro, Mozart 41, Chopin 1. Piyano Konçertosu.
+- **15. günden itibaren** haftada yaklaşık 7 kulakla zamanlanmış eser takvime girer. İlk hafta: Beethoven 3 ✓, Vivaldi İlkbahar ✓, Ay Işığı ✓, Dvořák Çello ✓, Boléro ✓, Mozart 41, Chopin 1. Piyano Konçertosu.
 
 ## Eserler
 
@@ -89,7 +89,7 @@ Takvimdekiler yayın sırasıyla, ardından takvim dışı parti. Spotify sütun
 | tallis-spem-in-alium | choral | 1 | Peter Phillips, 1985 | `7BdRzzRBSBvoin2yIveUmn` | Jacopo Tintoretto, *Paradise* | Takvim dışı · duraklar ≈ |
 | smetana-vltava | orchestral | 1 | Rafael Kubelík · Boston Symphony Orchestra, 1971 | `2wnHlBJhXW9dQn5I2s8KxM` | Zdenka Braunerová, *Backwater of the Vltava at Roztoky* | Takvim dışı · duraklar ≈ |
 | debussy-la-mer | orchestral | 3 | Herbert von Karajan · Berliner Philharmoniker, 1964 | `7nI7p3GS9ENddrxwqk4LSJ` | Katsushika Hokusai, *Under the Wave off Kanagawa (The Great Wave)* | Takvim dışı · duraklar ≈ |
-| ravel-bolero | orchestral | 1 | Charles Dutoit · Orchestre symphonique de Montréal, 1982 | `07g1hfGy288giLhTE18BHS` | John Singer Sargent, *El Jaleo* | Takvim dışı · duraklar ≈ |
+| ravel-bolero | orchestral | 1 | Charles Dutoit · Orchestre symphonique de Montréal, 1982 | `07g1hfGy288giLhTE18BHS` | John Singer Sargent, *El Jaleo* | Kulakla zamanlandı (17 Eki; boş duraklar tahmin olarak onaylandı) |
 | rimsky-korsakov-scheherazade | orchestral | 4 | Steven Staryk / Sir Thomas Beecham · Royal Philharmonic Orchestra, 1958 | `12gqWnkhIOszwytW6jKcMY` | Ivan Aivazovsky, *The Ninth Wave* | Takvim dışı · duraklar ≈ |
 | wagner-tristan-prelude-and-liebestod | orchestral | 2 | Jessye Norman / Herbert von Karajan · Wiener Philharmoniker, 1988 | `5HgHc9L8xbEpR8d9pCAgwa` | Rogelio de Egusquiza, *Tristan and Isolde (Death)* | Takvim dışı · duraklar ≈ |
 | shostakovich-string-quartet-8 | string-quartet | 5 | Pavel Haas Quartet, 2019 | `7hiFEJ0rzYwRqrexmLRsAI` | Bernardo Bellotto, *The Ruins of the Old Kreuzkirche in Dresden* | Takvim dışı · duraklar ≈ |
@@ -175,7 +175,7 @@ Written from the score, published analyses and the exact track lengths; none wer
 | Tallis – Spem in alium | all | – | – | – | see `research/tallis-spem-in-alium.md` | every stop (≈) | New piece, never timed by ear: every stop is an estimate. Details in `research/tallis-spem-in-alium.md` |
 | Smetana – Vltava (The Moldau), from Má vlast | all | – | – | – | see `research/smetana-vltava.md` | every stop (≈) | New piece, never timed by ear: every stop is an estimate. Details in `research/smetana-vltava.md` |
 | Debussy – La mer | all | – | – | – | see `research/debussy-la-mer.md` | every stop (≈) | New piece, never timed by ear: every stop is an estimate. Details in `research/debussy-la-mer.md` |
-| Ravel – Boléro | all | – | – | – | see `research/ravel-bolero.md` | every stop (≈) | New piece, never timed by ear: every stop is an estimate. Details in `research/ravel-bolero.md` |
+| Ravel – Boléro | done | – | 15:03 | – | Dutoit / Montréal 1982 | – | Closed 17 Oct 2026. Timed by ear: 1:00, 1:49, 6:35, 8:13, 9:47, 13:43–14:25; 0:00, 4:10, 5:00 (saxophones, range now ends at 6:35) and the last 30 seconds kept as estimates, accepted by the user. Statements fall about every 48 s |
 | Rimsky-Korsakov – Scheherazade | all | – | – | – | see `research/rimsky-korsakov-scheherazade.md` | every stop (≈) | New piece, never timed by ear: every stop is an estimate. Details in `research/rimsky-korsakov-scheherazade.md` |
 | Wagner – Tristan und Isolde: Prelude and Liebestod | all | – | – | – | see `research/wagner-tristan-prelude-and-liebestod.md` | every stop (≈) | New piece, never timed by ear: every stop is an estimate. Details in `research/wagner-tristan-prelude-and-liebestod.md` |
 | Shostakovich – String Quartet No. 8 in C minor | all | – | – | – | see `research/shostakovich-string-quartet-8.md` | every stop (≈) | New piece, never timed by ear: every stop is an estimate. Details in `research/shostakovich-string-quartet-8.md` |

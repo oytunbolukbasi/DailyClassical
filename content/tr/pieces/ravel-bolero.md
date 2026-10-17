@@ -70,21 +70,21 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Zar zor duyulan bir trampet, viyola ve çellolardan parmakla çekilen yumuşak notalar; birkaç saniye sonra pes ve sessiz bir flüt girer | Önce ritim, ardından flütte A ezgisi |
-| ≈ 0:55 | Bir klarnet aynı ezgiyi çalar | A ezgisi ikinci kez |
-| ≈ 1:45 | Tiz bölgesinde bir fagot, yeni ve daha kıvrak bir ezgiyle; ardından aynı ezgi küçük, cırtlak bir klarnette | B ezgisi giriyor, sonra Mi bemol klarnette tekrarlanıyor |
-| ≈ 4:10 | [[muted|Sordinli]] bir trompet; çok yukarıda bir flüt onu gölge gibi izler | A ezgisi yeni bir renkte |
-| ≈ 5:00–6:30 | Önce bir tenor saksafon, sonra bir soprano saksafon B ezgisinde kayarak ilerler | Saksafonlar: 1928'in caz çağından bir dokunuş |
-| ≈ 6:30 | Bir korno A ezgisini çalar, ama ses bir org yazmacı gibidir: çelesta ve iki pikolo onu başka tonlarda ikiler | Pikololar kornonun doğal üst seslerini güçlendiriyor. Tuhaf, ışıldayan bir ses |
-| ≈ 8:00 | Kayan, kurumlu bir solo trombon | Trombonda B ezgisi; herkesin gözü önünde, ünlü bir solo |
-| ≈ 9:40 | Kemanlar ilk kez, tahta üflemelilerle birlikte melodiyi alır | Yaylılar katılıyor. Bundan sonra ses her tekrarda kalınlaşıyor |
-| ≈ 13:40–14:30 | Bütün orkestra B ezgisinde; sonra hiç uyarmadan müzik yeni bir tona, Mi majöre sıçrar | Eserdeki tek ton değişimi, sekiz ölçü sürüyor |
+| 0:00 | Zar zor duyulan bir trampet, viyola ve çellolardan parmakla çekilen yumuşak notalar; birkaç saniye sonra pes ve sessiz bir flüt girer | Önce ritim, ardından flütte A ezgisi |
+| 1:00 | Bir klarnet aynı ezgiyi çalar | A ezgisi ikinci kez |
+| 1:49 | Tiz bölgesinde bir fagot, yeni ve daha kıvrak bir ezgiyle; ardından aynı ezgi küçük, cırtlak bir klarnette | B ezgisi giriyor, sonra Mi bemol klarnette tekrarlanıyor |
+| 4:10 | [[muted|Sordinli]] bir trompet; çok yukarıda bir flüt onu gölge gibi izler | A ezgisi yeni bir renkte |
+| 5:00–6:35 | Önce bir tenor saksafon, sonra bir soprano saksafon B ezgisinde kayarak ilerler | Saksafonlar: 1928'in caz çağından bir dokunuş |
+| 6:35 | Bir korno A ezgisini çalar, ama ses bir org yazmacı gibidir: çelesta ve iki pikolo onu başka tonlarda ikiler | Pikololar kornonun doğal üst seslerini güçlendiriyor. Tuhaf, ışıldayan bir ses |
+| 8:13 | Kayan, kurumlu bir solo trombon | Trombonda B ezgisi; herkesin gözü önünde, ünlü bir solo |
+| 9:47 | Kemanlar ilk kez, tahta üflemelilerle birlikte melodiyi alır | Yaylılar katılıyor. Bundan sonra ses her tekrarda kalınlaşıyor |
+| 13:43–14:25 | Bütün orkestra B ezgisinde; sonra hiç uyarmadan müzik yeni bir tona, Mi majöre sıçrar | Eserdeki tek ton değişimi, sekiz ölçü sürüyor |
 | Son 30 saniye | Yeniden Do majör; büyük davul, ziller ve gong ilk kez gürler; trombonlar kayar; bütün orkestra trampetin ritmini döver ve çöker | Son |
 
 **Dikkat edilecekler**
 
 1. Ezgiyi değil, trampeti izleyin. Hiç durmaz, hiç değişmez. Daha sonra ikinci bir trampet de ona katılır.
-2. ≈ 6:30'da pikoloları kornonun sesinin içinde duymaya çalışın. Ezgiyi aynı anda iki başka tonda çalıyorlar.
+2. 6:35'te pikoloları kornonun sesinin içinde duymaya çalışın. Ezgiyi aynı anda iki başka tonda çalıyorlar.
 
 **Bu kayıtta.** Ravel temponun ilk ölçüden son ölçüye kadar aynı kalmasını isterdi; 1930'daki bir kayıtta, sona doğru hızlandığı için şefi durdurdu. Aynı yıl yaptığı kendi kaydı yaklaşık 15 dakika 50 saniye sürer. Dutoit'nın kaydı 15:03.
 

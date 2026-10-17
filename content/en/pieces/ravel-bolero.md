@@ -69,21 +69,21 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | A snare drum, barely audible, and soft plucked violas and cellos; after a few seconds a flute enters, low and quiet | The rhythm, then Tune A on the flute |
-| ≈ 0:55 | A clarinet plays the same tune | Tune A, second time |
-| ≈ 1:45 | A bassoon, high in its range, with a new, slinkier tune; then the same tune on a small, shrill clarinet | Tune B enters, then repeats on the E-flat clarinet |
-| ≈ 4:10 | A [[muted]] trumpet, with a flute shadowing it high above | Tune A in a new colour |
-| ≈ 5:00–6:30 | A tenor saxophone, then a soprano saxophone, slide through Tune B | The saxophones, a jazz-age touch in 1928 |
-| ≈ 6:30 | A horn plays Tune A, but it sounds like an organ stop: celesta and two piccolos double it in other keys | The piccolos reinforce the horn's natural overtones. A strange, glowing sound |
-| ≈ 8:00 | A solo trombone, sliding and swaggering | Tune B on the trombone, a famously exposed solo |
-| ≈ 9:40 | For the first time the violins take the melody, with woodwinds | The strings join. From here the sound grows thicker with every repeat |
-| ≈ 13:40–14:30 | The whole orchestra on Tune B; then, without warning, the music lurches up into a new key, E major | The only change of key in the piece, eight bars long |
+| 0:00 | A snare drum, barely audible, and soft plucked violas and cellos; after a few seconds a flute enters, low and quiet | The rhythm, then Tune A on the flute |
+| 1:00 | A clarinet plays the same tune | Tune A, second time |
+| 1:49 | A bassoon, high in its range, with a new, slinkier tune; then the same tune on a small, shrill clarinet | Tune B enters, then repeats on the E-flat clarinet |
+| 4:10 | A [[muted]] trumpet, with a flute shadowing it high above | Tune A in a new colour |
+| 5:00–6:35 | A tenor saxophone, then a soprano saxophone, slide through Tune B | The saxophones, a jazz-age touch in 1928 |
+| 6:35 | A horn plays Tune A, but it sounds like an organ stop: celesta and two piccolos double it in other keys | The piccolos reinforce the horn's natural overtones. A strange, glowing sound |
+| 8:13 | A solo trombone, sliding and swaggering | Tune B on the trombone, a famously exposed solo |
+| 9:47 | For the first time the violins take the melody, with woodwinds | The strings join. From here the sound grows thicker with every repeat |
+| 13:43–14:25 | The whole orchestra on Tune B; then, without warning, the music lurches up into a new key, E major | The only change of key in the piece, eight bars long |
 | Last 30 seconds | Back in C major; bass drum, cymbals and gong crash in for the first time; trombones slide; the whole orchestra beats out the drum rhythm and collapses | The end |
 
 **Things to notice**
 
 1. Follow the snare drum, not the tune. It never stops and never changes. Later on, a second snare drum joins in.
-2. At ≈ 6:30, try to hear the piccolos inside the horn sound. They are playing the tune in two other keys at once.
+2. At 6:35, try to hear the piccolos inside the horn sound. They are playing the tune in two other keys at once.
 
 **In this recording.** Ravel wanted the tempo to stay the same from the first bar to the last; at a 1930 recording session he stopped the conductor for speeding up near the end. His own recording that year lasts about 15 minutes 50 seconds. Dutoit takes 15:03.
 
