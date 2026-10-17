@@ -11,7 +11,7 @@ Son güncelleme: 17 Ekim 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]** 
 
 ## İçerik
 
-- **[Oytun] Kulakla zamanlama:** Takvim dışı 45 eser ve yayındaki 14 eserin durakları hâlâ tahmini (≈). Sıra ve liste `content_status.md`'de; ilk haftadan Mozart 41 ve Chopin 1. Piyano Konçertosu kaldı.
+- **[Oytun] Kulakla zamanlama:** Takvim dışı 44 eser ve yayındaki 14 eserin durakları hâlâ tahmini (≈). Sıra ve liste `content_status.md`'de; ilk haftadan Chopin 1. Piyano Konçertosu kaldı.
 - **[Oytun] Dvořák Çello Konçertosu II–III ince ayarı:** Tahminle kapatıldı; en olası kaymalar II 6:30 ve 8:30–10:30, III 8:30 ve 10:00–11:30.
 - **[Oytun + Claude] Beethoven 9 finali:** Spotify'da iki parça (6:26 + 17:35). Duraklar bölüm toplamı olarak yazılı; uygulamanın bunları toplam mı, ikinci parçaya göre mi göstereceğine karar verilecek.
 - **[Claude] Mozart 41 tablosu:** Hubert Robert, *Dikilitaş* yalnızca 1952 px; daha büyük bir kaynak bulunursa değiştirilecek.

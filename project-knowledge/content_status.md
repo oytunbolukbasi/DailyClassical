@@ -21,7 +21,7 @@ Son güncelleme: 17 Ekim 2026. Katalog: **64 eser** (14'ü takvimde ve yayında,
 - **İnceleme sürerken:** `schedule.yaml` değişmez (test takvimi bütün 14 eseri yayında gösteriyor; boş Bugün red riski).
 - **Yayın günü:** `start` o güne, sıra Çaykovski 6 ile başlar; `npm run db:seed && npm run fixtures`, push; sonra App Store Connect'te **Release This Version**.
 - **1.0.1 build'i** (Rönesans etiketi, 6 bölümlük seçici, www bağlantıları, favorileri bildiren gizlilik manifesti; kodu hazır) Mahler 3'ten önce yayında olmalı.
-- **15. günden itibaren** haftada yaklaşık 7 kulakla zamanlanmış eser takvime girer. İlk hafta: Beethoven 3 ✓, Vivaldi İlkbahar ✓, Ay Işığı ✓, Dvořák Çello ✓, Boléro ✓, Mozart 41, Chopin 1. Piyano Konçertosu.
+- **15. günden itibaren** haftada yaklaşık 7 kulakla zamanlanmış eser takvime girer. İlk hafta: Beethoven 3 ✓, Vivaldi İlkbahar ✓, Ay Işığı ✓, Dvořák Çello ✓, Boléro ✓, Mozart 41 ✓, Chopin 1. Piyano Konçertosu.
 
 ## Eserler
 
@@ -53,7 +53,7 @@ Takvimdekiler yayın sırasıyla, ardından takvim dışı parti. Spotify sütun
 | beethoven-string-quartet-15 | string-quartet | 5 | Takács Quartet, 2004 | `6tFl4rPDztyza1TSAOZP8i` | John Constable, *Salisbury Cathedral from the Bishop's Garden* | Takvim dışı · duraklar ≈ |
 | mozart-piano-sonata-11 | piano-sonata | 3 | Mitsuko Uchida, 1983 | `36ZImQlSkxKd7FGSiICpEf` | Jean Baptiste Vanmour, *Cornelis Calkoen on his Way to his Audience with Sultan Ahmed III* | Takvim dışı · duraklar ≈ |
 | mozart-piano-concerto-21 | piano-concerto | 3 | Géza Anda / Géza Anda · Camerata Academica des Mozarteums Salzburg, 1961 | `1YEd3qxJpi1SGJFQFqcqKC` | Jean-Honoré Fragonard, *The Swing* | Takvim dışı · duraklar ≈ |
-| mozart-symphony-41 | symphony | 4 | Sir Charles Mackerras · Scottish Chamber Orchestra, 2008 | `0MNU78TPr4GbVdgRBsBL6L` | Hubert Robert, *The Obelisk* | Takvim dışı · duraklar ≈ |
+| mozart-symphony-41 | symphony | 4 | Sir Charles Mackerras · Scottish Chamber Orchestra, 2008 | `0MNU78TPr4GbVdgRBsBL6L` | Hubert Robert, *The Obelisk* | Kulakla zamanlandı (17 Eki; I ölçüldü, II–IV tahminler onaylandı) |
 | mozart-clarinet-concerto | concerto | 3 | Thea King / Jeffrey Tate · English Chamber Orchestra, 1986 | `3UemBU0csyQmjZNyiU7c8R` | Joseph Wright of Derby, *Italian Landscape with Mountains and a River* | Takvim dışı · duraklar ≈ |
 | haydn-symphony-94 | symphony | 4 | Sir Colin Davis · Royal Concertgebouw Orchestra, 1982 | `2FNZ21rGfvoYz953jd6Tda` | Thomas Rowlandson, *Vauxhall Gardens* | Takvim dışı · duraklar ≈ |
 | haydn-string-quartet-op-76-3 | string-quartet | 4 | Takács Quartet, 1988 | `2ZNZLJE9S7WvMb23HVfRu4` | Johann Christian Brand, *Laxenburg from the Münkendorf Pavilion, looking south-west* | Takvim dışı · duraklar ≈ |
@@ -149,7 +149,7 @@ Written from the score, published analyses and the exact track lengths; none wer
 | Mahler – Symphony No. 9 | all | – | – | – | see `research/mahler-symphony-9.md` | every stop (≈) | New piece, never timed by ear: every stop is an estimate. Details in `research/mahler-symphony-9.md` |
 | Bruckner – Symphony No. 7 in E major | all | – | – | – | see `research/bruckner-symphony-7.md` | every stop (≈) | New piece, never timed by ear: every stop is an estimate. Details in `research/bruckner-symphony-7.md` |
 | Brahms – Symphony No. 1 in C minor | all | – | – | – | see `research/brahms-symphony-1.md` | every stop (≈) | New piece, never timed by ear: every stop is an estimate. Details in `research/brahms-symphony-1.md` |
-| Mozart – Symphony No. 41 in C major, "Jupiter" | all | – | – | – | see `research/mozart-symphony-41.md` | every stop (≈) | New piece, never timed by ear: every stop is an estimate. Details in `research/mozart-symphony-41.md` |
+| Mozart – Symphony No. 41 in C major, "Jupiter" | done | – | 11:28 / 10:27 / 5:03 / 11:30 | – | Mackerras / SCO 2008 | – | Closed 17 Oct 2026. I timed by ear (1:30, 2:09, 2:43, 6:23, 7:23); I 0:00, 3:10 (exposition repeat), 8:10 (recapitulation) and all of II–IV kept as estimates, accepted by the user. I's empty stops agree with ≈ 1.6 s a bar |
 | Mozart – Clarinet Concerto in A major | all | – | – | – | see `research/mozart-clarinet-concerto.md` | every stop (≈) | New piece, never timed by ear: every stop is an estimate. Details in `research/mozart-clarinet-concerto.md` |
 | Haydn – Symphony No. 94 in G major, "Surprise" | all | – | – | – | see `research/haydn-symphony-94.md` | every stop (≈) | New piece, never timed by ear: every stop is an estimate. Details in `research/haydn-symphony-94.md` |
 | Haydn – String Quartet in C major, Op. 76 No. 3, "Emperor" | all | – | – | – | see `research/haydn-string-quartet-op-76-3.md` | every stop (≈) | New piece, never timed by ear: every stop is an estimate. Details in `research/haydn-string-quartet-op-76-3.md` |

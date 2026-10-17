@@ -71,14 +71,14 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Bütün orkestradan üç gür, vurgulu darbe, ardından yaylılardan yumuşak bir cevap; sonra aynı kalıp yeniden | 1. tema. Güç ile zarafetin karşıtlığı bütün bölüm boyunca sürüyor |
-| ≈ 1:25 | Bir duraksamanın ardından yaylılarda yumuşak, akan bir melodi | 2. tema, Sol majörde |
-| ≈ 2:05 | Bütün orkestradan, minörde, ani ve gür bir patlama | İkinci tema grubunun ortasında bir fırtına |
-| ≈ 2:40 | Kemanlarda hafif, cıvıl cıvıl, neredeyse komik bir şarkıya benzeyen ezgi | *Un bacio di mano*'dan gelen arya ezgisi [[exposition|serimi]] kapatıyor |
-| ≈ 3:10 | Üç gür darbe yeniden | Serim tekrarlanıyor |
-| ≈ 6:20 | Tahta üflemeliler birlikte aşağı süzülür; arya ezgisi yeni bir tonda geri gelir | [[development|Gelişme bölümü]] başlıyor; önce arya ezgisi üzerine kurulu |
-| ≈ 7:25 | Açılış ezgisi sessizce geri döner, ama bir şey yanlış gibidir | Sahte bir dönüş: tema "yanlış" tonda, Fa majörde beliriyor, sonra müzik yoluna devam ediyor |
-| ≈ 8:10 | Üç gür darbe, bu kez ana tonda | Gerçek [[recapitulation|yeniden serim]] |
+| 0:00 | Bütün orkestradan üç gür, vurgulu darbe, ardından yaylılardan yumuşak bir cevap; sonra aynı kalıp yeniden | 1. tema. Güç ile zarafetin karşıtlığı bütün bölüm boyunca sürüyor |
+| 1:30 | Bir duraksamanın ardından yaylılarda yumuşak, akan bir melodi | 2. tema, Sol majörde |
+| 2:09 | Bütün orkestradan, minörde, ani ve gür bir patlama | İkinci tema grubunun ortasında bir fırtına |
+| 2:43 | Kemanlarda hafif, cıvıl cıvıl, neredeyse komik bir şarkıya benzeyen ezgi | *Un bacio di mano*'dan gelen arya ezgisi [[exposition|serimi]] kapatıyor |
+| 3:10 | Üç gür darbe yeniden | Serim tekrarlanıyor |
+| 6:23 | Tahta üflemeliler birlikte aşağı süzülür; arya ezgisi yeni bir tonda geri gelir | [[development|Gelişme bölümü]] başlıyor; önce arya ezgisi üzerine kurulu |
+| 7:23 | Açılış ezgisi sessizce geri döner, ama bir şey yanlış gibidir | Sahte bir dönüş: tema "yanlış" tonda, Fa majörde beliriyor, sonra müzik yoluna devam ediyor |
+| 8:10 | Üç gür darbe, bu kez ana tonda | Gerçek [[recapitulation|yeniden serim]] |
 | Sona doğru | Arya ezgisi bir kez daha, ardından trompet ve davullarla fanfarlar | Bölüm tam bir tören havasında, Do majörde bitiyor |
 
 **Dikkat edilecekler**
@@ -99,13 +99,13 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Sordinli kemanlar yavaş, ağırbaşlı bir melodi çalar; öteki yaylılar ona eşlik eder | Ana tema. "Cantabile", şarkı söyler gibi demek |
-| ≈ 0:55 | Hava kararır: vuruşların arasına düşüyormuş gibi gelen tedirgin akorlar, minörde | Do minöre ani bir dönüş; [[syncopation|senkop]] |
-| ≈ 1:25 | Daha yumuşak, şarkı gibi bir fikir | İlk yarının kapanış fikri |
-| ≈ 2:15 | Açılış melodisi yeniden | İlk yarı tekrarlanıyor |
-| ≈ 4:35 | Vuruş dışı huzursuz figürler geri gelir ve güçlenir | [[development|Gelişme bölümü]] |
-| ≈ 5:15 | Ağırbaşlı melodi geri döner | [[recapitulation|Yeniden serim]] |
-| ≈ 7:30 | Huzursuz orta kısım yeniden başlar | İkinci yarı tekrarlanıyor |
+| 0:00 | Sordinli kemanlar yavaş, ağırbaşlı bir melodi çalar; öteki yaylılar ona eşlik eder | Ana tema. "Cantabile", şarkı söyler gibi demek |
+| 0:55 | Hava kararır: vuruşların arasına düşüyormuş gibi gelen tedirgin akorlar, minörde | Do minöre ani bir dönüş; [[syncopation|senkop]] |
+| 1:25 | Daha yumuşak, şarkı gibi bir fikir | İlk yarının kapanış fikri |
+| 2:15 | Açılış melodisi yeniden | İlk yarı tekrarlanıyor |
+| 4:35 | Vuruş dışı huzursuz figürler geri gelir ve güçlenir | [[development|Gelişme bölümü]] |
+| 5:15 | Ağırbaşlı melodi geri döner | [[recapitulation|Yeniden serim]] |
+| 7:30 | Huzursuz orta kısım yeniden başlar | İkinci yarı tekrarlanıyor |
 | Sona doğru | Açılış melodisi bir kez daha, sessizce | [[coda|Koda]] |
 
 **Dikkat edilecekler**
@@ -120,11 +120,11 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Kemanlar yumuşakça inen, kayan bir çizgi çalar; bütün orkestra cevap verir | Menuet |
+| 0:00 | Kemanlar yumuşakça inen, kayan bir çizgi çalar; bütün orkestra cevap verir | Menuet |
 | Menuetin ikinci yarısı | Tahta üflemeliler, yalnız başlarına, inen kısa bir cümleyi birbirine aktarır | Üflemelilerde taklit; tam orkestra dönmeden önce sessiz bir an |
-| ≈ 2:35 | Müzik hafifler: tahta üflemelilerde ve yaylılarda kısa, sessiz cümleler | [[trio|Trio]] |
+| 2:35 | Müzik hafifler: tahta üflemelilerde ve yaylılarda kısa, sessiz cümleler | [[trio|Trio]] |
 | Trionun ikinci yarısı | Minörde, yükselip inen dört notalık bir figür | Finalin ana teması olacak dört notalık figür |
-| ≈ 3:45 | Süzülen menuet geri gelir | Menuet bu kez tekrarsız çalınıyor |
+| 3:45 | Süzülen menuet geri gelir | Menuet bu kez tekrarsız çalınıyor |
 
 **Dikkat edilecekler**
 
@@ -144,15 +144,15 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Kemanlar dört uzun notayı yumuşakça çalar, ardından hızlı bir cevap; kısa süre sonra bütün orkestra patlar | 1. tema, dört notalık motif |
-| ≈ 0:30 | Dört notalık tema yaylı gruplarında birbiri ardına girer, üst üste yığılır | Bir [[fugato|fugato]] |
-| ≈ 1:05 | Daha yumuşak, zarif bir ezgi | 2. tema, Sol majörde |
-| ≈ 2:20 | Dört uzun nota yeniden | [[exposition|Serim]] tekrarlanıyor |
-| ≈ 4:40 | Dört notalık tema minör tonlarda, tiz ve pes çalgılar arasında bir oraya bir buraya atılır | [[development|Gelişme bölümü]] |
-| ≈ 5:40 | Dört uzun nota ana tonda geri döner | [[recapitulation|Yeniden serim]] |
-| ≈ 7:35 | Fırtınalı gelişme yeniden | İkinci yarı tekrarlanıyor |
-| ≈ 10:30 | Yeniden sessizlik: dört notalık tema şimdi çalgıdan çalgıya geçer | [[coda|Koda]] başlıyor |
-| ≈ 10:45 | Kat kat: beş ayrı tema girer ve birlikte çalar | Beş tema bir arada, beş sesli kontrpuan |
+| 0:00 | Kemanlar dört uzun notayı yumuşakça çalar, ardından hızlı bir cevap; kısa süre sonra bütün orkestra patlar | 1. tema, dört notalık motif |
+| 0:30 | Dört notalık tema yaylı gruplarında birbiri ardına girer, üst üste yığılır | Bir [[fugato|fugato]] |
+| 1:05 | Daha yumuşak, zarif bir ezgi | 2. tema, Sol majörde |
+| 2:20 | Dört uzun nota yeniden | [[exposition|Serim]] tekrarlanıyor |
+| 4:40 | Dört notalık tema minör tonlarda, tiz ve pes çalgılar arasında bir oraya bir buraya atılır | [[development|Gelişme bölümü]] |
+| 5:40 | Dört uzun nota ana tonda geri döner | [[recapitulation|Yeniden serim]] |
+| 7:35 | Fırtınalı gelişme yeniden | İkinci yarı tekrarlanıyor |
+| 10:30 | Yeniden sessizlik: dört notalık tema şimdi çalgıdan çalgıya geçer | [[coda|Koda]] başlıyor |
+| 10:45 | Kat kat: beş ayrı tema girer ve birlikte çalar | Beş tema bir arada, beş sesli kontrpuan |
 | Sona doğru | Trompet ve davullarla fanfarlar | Senfoni bayram havasında, Do majörde bitiyor |
 
 **Dikkat edilecekler**

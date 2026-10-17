@@ -70,14 +70,14 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | Three loud, emphatic strokes from the full orchestra, then a soft reply in the strings; then the pattern again | Theme 1. The contrast of force and grace runs through the whole movement |
-| ≈ 1:25 | After a pause, a gentle, flowing melody in the strings | Theme 2, in G major |
-| ≈ 2:05 | A sudden loud outburst from the whole orchestra, in the minor | A storm in the middle of the second theme group |
-| ≈ 2:40 | A light, chattering tune in the violins, almost like a comic song | The aria tune from *Un bacio di mano* closes the [[exposition]] |
-| ≈ 3:10 | The three loud strokes again | The exposition is repeated |
-| ≈ 6:20 | Woodwinds slide down together, and the aria tune returns in a new key | The [[development]] begins, built at first on the aria tune |
-| ≈ 7:25 | The opening tune comes back quietly, but sounds slightly wrong | A false return: the theme appears in the "wrong" key, F major, before the music moves on |
-| ≈ 8:10 | The three loud strokes in the home key | The real [[recapitulation]] |
+| 0:00 | Three loud, emphatic strokes from the full orchestra, then a soft reply in the strings; then the pattern again | Theme 1. The contrast of force and grace runs through the whole movement |
+| 1:30 | After a pause, a gentle, flowing melody in the strings | Theme 2, in G major |
+| 2:09 | A sudden loud outburst from the whole orchestra, in the minor | A storm in the middle of the second theme group |
+| 2:43 | A light, chattering tune in the violins, almost like a comic song | The aria tune from *Un bacio di mano* closes the [[exposition]] |
+| 3:10 | The three loud strokes again | The exposition is repeated |
+| 6:23 | Woodwinds slide down together, and the aria tune returns in a new key | The [[development]] begins, built at first on the aria tune |
+| 7:23 | The opening tune comes back quietly, but sounds slightly wrong | A false return: the theme appears in the "wrong" key, F major, before the music moves on |
+| 8:10 | The three loud strokes in the home key | The real [[recapitulation]] |
 | Near the end | The aria tune once more, then fanfares from trumpets and drums | The movement ends in full ceremonial C major |
 
 **Things to notice**
@@ -98,13 +98,13 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | Muted violins play a slow, stately melody; the rest of the strings support it | The main theme. "Cantabile" means in a singing style |
-| ≈ 0:55 | The mood darkens: uneasy chords that seem to fall between the beats, in the minor | A sudden turn to C minor, with [[syncopation]] |
-| ≈ 1:25 | A gentler, singing idea | The closing idea of the first half |
-| ≈ 2:15 | The opening melody again | The first half is repeated |
-| ≈ 4:35 | The restless off-beat figures return and grow stronger | The [[development]] |
-| ≈ 5:15 | The stately melody returns | The [[recapitulation]] |
-| ≈ 7:30 | The restless middle section starts again | The second half is repeated |
+| 0:00 | Muted violins play a slow, stately melody; the rest of the strings support it | The main theme. "Cantabile" means in a singing style |
+| 0:55 | The mood darkens: uneasy chords that seem to fall between the beats, in the minor | A sudden turn to C minor, with [[syncopation]] |
+| 1:25 | A gentler, singing idea | The closing idea of the first half |
+| 2:15 | The opening melody again | The first half is repeated |
+| 4:35 | The restless off-beat figures return and grow stronger | The [[development]] |
+| 5:15 | The stately melody returns | The [[recapitulation]] |
+| 7:30 | The restless middle section starts again | The second half is repeated |
 | Near the end | The opening melody once more, quietly | The [[coda]] |
 
 **Things to notice**
@@ -119,11 +119,11 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | Violins play a gently falling, sliding line; the whole orchestra answers | The minuet |
+| 0:00 | Violins play a gently falling, sliding line; the whole orchestra answers | The minuet |
 | Second half of the minuet | Woodwinds alone pass a short falling phrase from one instrument to the next | Imitation in the winds, a quiet moment before the full orchestra returns |
-| ≈ 2:35 | The music lightens: short, quiet phrases in the woodwinds and strings | The [[trio]] |
+| 2:35 | The music lightens: short, quiet phrases in the woodwinds and strings | The [[trio]] |
 | Second half of the trio | A four-note figure, rising and falling, in the minor | The four-note figure that will become the main theme of the finale |
-| ≈ 3:45 | The gliding minuet returns | The minuet is played again, without repeats |
+| 3:45 | The gliding minuet returns | The minuet is played again, without repeats |
 
 **Things to notice**
 
@@ -143,15 +143,15 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | Violins softly play four long notes, then a quick answer; soon the whole orchestra bursts in | Theme 1, the four-note motif |
-| ≈ 0:30 | The four-note theme enters in one string section after another, piling up | A [[fugato]] |
-| ≈ 1:05 | A gentler, graceful tune | Theme 2, in G major |
-| ≈ 2:20 | The four long notes again | The [[exposition]] is repeated |
-| ≈ 4:40 | The four-note theme in minor keys, tossed between high and low instruments | The [[development]] |
-| ≈ 5:40 | The four long notes return in the home key | The [[recapitulation]] |
-| ≈ 7:35 | The stormy development again | The second half is repeated |
-| ≈ 10:30 | Quiet again: the four-note theme, now passed between instruments | The [[coda]] begins |
-| ≈ 10:45 | Layer after layer: five different themes enter and play together | The five themes combined, in five-part counterpoint |
+| 0:00 | Violins softly play four long notes, then a quick answer; soon the whole orchestra bursts in | Theme 1, the four-note motif |
+| 0:30 | The four-note theme enters in one string section after another, piling up | A [[fugato]] |
+| 1:05 | A gentler, graceful tune | Theme 2, in G major |
+| 2:20 | The four long notes again | The [[exposition]] is repeated |
+| 4:40 | The four-note theme in minor keys, tossed between high and low instruments | The [[development]] |
+| 5:40 | The four long notes return in the home key | The [[recapitulation]] |
+| 7:35 | The stormy development again | The second half is repeated |
+| 10:30 | Quiet again: the four-note theme, now passed between instruments | The [[coda]] begins |
+| 10:45 | Layer after layer: five different themes enter and play together | The five themes combined, in five-part counterpoint |
 | Near the end | Fanfares with trumpets and drums | The symphony ends in festive C major |
 
 **Things to notice**
