@@ -79,13 +79,13 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | Low octaves and a soft ripple of broken chords, with no tune yet | Four bars of accompaniment set the mood |
-| ≈ 0:23 | A tune enters on top: one note repeated in a long-short rhythm, like a distant bell | The melody, sung above the ripple. One player, three layers |
-| ≈ 0:54 | The chords shift under the tune; for a moment the colour brightens, then darkens again | The music leaves C-sharp minor, passes through a major key and moves on |
-| ≈ 2:37–3:53 | The tune falls silent. A low note is held while the ripple climbs high up the keyboard and sinks back, again and again | A [[pedal note]] in the bass prepares the return |
-| ≈ 3:55 | The tune with its bell-like repeated note, back where it began | The opening returns, like a [[recapitulation]] |
-| ≈ 5:38 | The long-short rhythm of the tune moves down into the bass, under the ripple | The [[coda]] |
-| ≈ 6:14 | Slow, low chords, quieter still, and silence | The end, *pp* |
+| 0:00 | Low octaves and a soft ripple of broken chords, with no tune yet | Four bars of accompaniment set the mood |
+| 0:30 | A tune enters on top: one note repeated in a long-short rhythm, like a distant bell | The melody, sung above the ripple. One player, three layers |
+| 0:54 | The chords shift under the tune; for a moment the colour brightens, then darkens again | The music leaves C-sharp minor, passes through a major key and moves on |
+| 2:38–3:54 | The tune falls silent. A low note is held while the ripple climbs high up the keyboard and sinks back, again and again | A [[pedal note]] in the bass prepares the return |
+| 3:58 | The tune with its bell-like repeated note, back where it began | The opening returns, like a [[recapitulation]] |
+| 5:40 | The long-short rhythm of the tune moves down into the bass, under the ripple | The [[coda]] |
+| 6:15 | Slow, low chords, quieter still, and silence | The end, *pp* |
 
 **Things to notice**
 
@@ -107,11 +107,11 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | A gentle, lilting tune in chords, smooth phrases answered by short, bouncing ones | The dance, in D-flat major |
-| ≈ 0:15 | The tune wanders a little further, then comes home; this part is played twice | The second half of the dance, repeated |
-| ≈ 0:54 | Lower and heavier, with accents that land just after the beat | The [[trio]] |
-| ≈ 1:40 | The lilting opening tune again | The dance returns, this time without repeats |
-| ≈ 2:06 | Two quiet closing chords | The end |
+| 0:00 | A gentle, lilting tune in chords, smooth phrases answered by short, bouncing ones | The dance, in D-flat major |
+| 0:15 | The tune wanders a little further, then comes home; this part is played twice | The second half of the dance, repeated |
+| 0:54 | Lower and heavier, with accents that land just after the beat | The [[trio]] |
+| 1:40 | The lilting opening tune again | The dance returns, this time without repeats |
+| 2:06 | Two quiet closing chords | The end |
 
 **Things to notice**
 
@@ -131,21 +131,21 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | Waves of fast notes surge up the keyboard, each crashing into two loud chords | Theme 1. The ripple of the first movement, now at full speed |
-| ≈ 0:22 | A held chord and a moment of silence | A breath before the next section |
-| ≈ 0:35 | A melody in the right hand over a rushing left hand, with sudden loud accents | Theme 2, in G-sharp minor |
-| ≈ 1:13 | Hammered chords and short phrases that will not let go | The closing section of the [[exposition]] |
-| ≈ 1:51 | The rising waves and the two hard chords from the very beginning | The [[exposition]] is repeated, as Beethoven asks |
-| ≈ 3:41 | The rising waves again, now starting in a new key | The [[development]] |
-| ≈ 4:43 | The waves and the two hard chords back in C-sharp minor | The [[recapitulation]] |
-| ≈ 6:17 | The rising waves grow into a long, rolling build-up, with the left hand churning low | The [[coda]] begins |
-| ≈ 7:09 | A free run up and down the keyboard, then two slow bars, almost a stop | A short [[cadenza]]-like passage |
-| ≈ 7:16 | Fast again: broken chords plunge down the whole keyboard; two final loud chords | The end, in C-sharp minor |
+| 0:00 | Waves of fast notes surge up the keyboard, each crashing into two loud chords | Theme 1. The ripple of the first movement, now at full speed |
+| 0:22 | A held chord and a moment of silence | A breath before the next section |
+| 0:35 | A melody in the right hand over a rushing left hand, with sudden loud accents | Theme 2, in G-sharp minor |
+| 1:13 | Hammered chords and short phrases that will not let go | The closing section of the [[exposition]] |
+| 1:51 | The rising waves and the two hard chords from the very beginning | The [[exposition]] is repeated, as Beethoven asks |
+| 3:41 | The rising waves again, now starting in a new key | The [[development]] |
+| 4:43 | The waves and the two hard chords back in C-sharp minor | The [[recapitulation]] |
+| 6:17 | The rising waves grow into a long, rolling build-up, with the left hand churning low | The [[coda]] begins |
+| 7:09 | A free run up and down the keyboard, then two slow bars, almost a stop | A short [[cadenza]]-like passage |
+| 7:16 | Fast again: broken chords plunge down the whole keyboard; two final loud chords | The end, in C-sharp minor |
 
 **Things to notice**
 
 1. Compare the first bars with the first movement. Both are built from broken chords in C-sharp minor: slow and soft there, fast and violent here.
-2. Listen for the moment near ≈ 7:09 when everything slows almost to a halt before the last rush.
+2. Listen for the moment near 7:09 when everything slows almost to a halt before the last rush.
 
 **In this recording.** Barenboim takes the repeat of the exposition, so the finale runs nearly eight minutes. Kempff, in the recordings recommended above, leaves it out and is about two minutes shorter.
 

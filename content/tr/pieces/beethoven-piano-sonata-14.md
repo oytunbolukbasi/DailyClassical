@@ -80,13 +80,13 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Pes oktavlar ve kırık akorlardan yumuşak bir dalgalanma; henüz ezgi yok | Dört ölçülük eşlik havayı kuruyor |
-| ≈ 0:23 | En üstte bir ezgi girer: uzun-kısa ritimle yinelenen tek bir nota, uzaktan gelen bir çan sesi gibi | Melodi, dalgalanmanın üzerinde. Tek çalgıcı, üç katman |
-| ≈ 0:54 | Ezginin altında akorlar kayar; renk bir an aydınlanır, sonra yeniden kararır | Müzik Do diyez minörden ayrılıyor, majör bir tondan geçip yoluna devam ediyor |
-| ≈ 2:37–3:53 | Ezgi susar. Pes bir nota tutulurken dalgalanma klavyede yükseklere tırmanır ve geri iner; bu tekrar tekrar olur | Basta bir [[pedal note|pedal sesi]] dönüşü hazırlıyor |
-| ≈ 3:55 | Çan gibi yinelenen notasıyla ezgi, başladığı yerde | Açılış geri dönüyor; bir [[recapitulation|yeniden serim]] gibi |
-| ≈ 5:38 | Ezginin uzun-kısa ritmi dalgalanmanın altına, basa iner | [[coda|Koda]] |
-| ≈ 6:14 | Daha da sessiz, yavaş ve pes akorlar; sonra sessizlik | Son, *pp* |
+| 0:00 | Pes oktavlar ve kırık akorlardan yumuşak bir dalgalanma; henüz ezgi yok | Dört ölçülük eşlik havayı kuruyor |
+| 0:30 | En üstte bir ezgi girer: uzun-kısa ritimle yinelenen tek bir nota, uzaktan gelen bir çan sesi gibi | Melodi, dalgalanmanın üzerinde. Tek çalgıcı, üç katman |
+| 0:54 | Ezginin altında akorlar kayar; renk bir an aydınlanır, sonra yeniden kararır | Müzik Do diyez minörden ayrılıyor, majör bir tondan geçip yoluna devam ediyor |
+| 2:38–3:54 | Ezgi susar. Pes bir nota tutulurken dalgalanma klavyede yükseklere tırmanır ve geri iner; bu tekrar tekrar olur | Basta bir [[pedal note|pedal sesi]] dönüşü hazırlıyor |
+| 3:58 | Çan gibi yinelenen notasıyla ezgi, başladığı yerde | Açılış geri dönüyor; bir [[recapitulation|yeniden serim]] gibi |
+| 5:40 | Ezginin uzun-kısa ritmi dalgalanmanın altına, basa iner | [[coda|Koda]] |
+| 6:15 | Daha da sessiz, yavaş ve pes akorlar; sonra sessizlik | Son, *pp* |
 
 **Dikkat edilecekler**
 
@@ -108,11 +108,11 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Akorlarla çalınan yumuşak, salınan bir ezgi; bağlı cümlelere kısa, sekerek ilerleyen cümleler cevap verir | Dans, Re bemol majörde |
-| ≈ 0:15 | Ezgi biraz daha uzağa dolaşır, sonra eve döner; bu kısım iki kez çalınır | Dansın ikinci yarısı, tekrarıyla |
-| ≈ 0:54 | Daha pes ve daha ağır; vurgular vuruşun hemen ardına düşer | [[trio|Trio]] |
-| ≈ 1:40 | Salınan açılış ezgisi yeniden | Dans geri dönüyor, bu kez tekrarsız |
-| ≈ 2:06 | İki sessiz kapanış akoru | Son |
+| 0:00 | Akorlarla çalınan yumuşak, salınan bir ezgi; bağlı cümlelere kısa, sekerek ilerleyen cümleler cevap verir | Dans, Re bemol majörde |
+| 0:15 | Ezgi biraz daha uzağa dolaşır, sonra eve döner; bu kısım iki kez çalınır | Dansın ikinci yarısı, tekrarıyla |
+| 0:54 | Daha pes ve daha ağır; vurgular vuruşun hemen ardına düşer | [[trio|Trio]] |
+| 1:40 | Salınan açılış ezgisi yeniden | Dans geri dönüyor, bu kez tekrarsız |
+| 2:06 | İki sessiz kapanış akoru | Son |
 
 **Dikkat edilecekler**
 
@@ -132,21 +132,21 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Hızlı notalardan dalgalar klavyede yukarı doğru kabarır, her biri iki gür akora çarpar | 1. tema. İlk bölümdeki dalgalanma, bu kez son hızda |
-| ≈ 0:22 | Tutulan bir akor ve bir anlık sessizlik | Sonraki kısımdan önce bir nefes |
-| ≈ 0:35 | Koşan bir sol elin üzerinde sağ elde bir melodi; ani, gür vurgularla | 2. tema, Sol diyez minörde |
-| ≈ 1:13 | Dövülen akorlar ve bir türlü bırakmayan kısa cümleler | [[exposition|Serim]]in kapanış kısmı |
-| ≈ 1:51 | Baştaki yükselen dalgalar ve iki sert akor yeniden | [[exposition|Serim]], Beethoven'in istediği gibi tekrarlanıyor |
-| ≈ 3:41 | Yükselen dalgalar yeniden, bu kez yeni bir tonda başlayarak | [[development|Gelişme]] |
-| ≈ 4:43 | Dalgalar ve iki sert akor, yeniden Do diyez minörde | [[recapitulation|Yeniden serim]] |
-| ≈ 6:17 | Yükselen dalgalar uzun, yuvarlanan bir birikime dönüşür; sol el pesten çalkalanır | [[coda|Koda]] başlıyor |
-| ≈ 7:09 | Klavyede aşağı yukarı serbest bir koşu, sonra iki yavaş ölçü, neredeyse bir duruş | Kısa, [[cadenza|kadans]] benzeri bir pasaj |
-| ≈ 7:16 | Yeniden hızlı: kırık akorlar bütün klavye boyunca aşağı dalar; iki gür son akor | Son, Do diyez minörde |
+| 0:00 | Hızlı notalardan dalgalar klavyede yukarı doğru kabarır, her biri iki gür akora çarpar | 1. tema. İlk bölümdeki dalgalanma, bu kez son hızda |
+| 0:22 | Tutulan bir akor ve bir anlık sessizlik | Sonraki kısımdan önce bir nefes |
+| 0:35 | Koşan bir sol elin üzerinde sağ elde bir melodi; ani, gür vurgularla | 2. tema, Sol diyez minörde |
+| 1:13 | Dövülen akorlar ve bir türlü bırakmayan kısa cümleler | [[exposition|Serim]]in kapanış kısmı |
+| 1:51 | Baştaki yükselen dalgalar ve iki sert akor yeniden | [[exposition|Serim]], Beethoven'in istediği gibi tekrarlanıyor |
+| 3:41 | Yükselen dalgalar yeniden, bu kez yeni bir tonda başlayarak | [[development|Gelişme]] |
+| 4:43 | Dalgalar ve iki sert akor, yeniden Do diyez minörde | [[recapitulation|Yeniden serim]] |
+| 6:17 | Yükselen dalgalar uzun, yuvarlanan bir birikime dönüşür; sol el pesten çalkalanır | [[coda|Koda]] başlıyor |
+| 7:09 | Klavyede aşağı yukarı serbest bir koşu, sonra iki yavaş ölçü, neredeyse bir duruş | Kısa, [[cadenza|kadans]] benzeri bir pasaj |
+| 7:16 | Yeniden hızlı: kırık akorlar bütün klavye boyunca aşağı dalar; iki gür son akor | Son, Do diyez minörde |
 
 **Dikkat edilecekler**
 
 1. İlk ölçüleri birinci bölümle karşılaştırın. İkisi de Do diyez minörde kırık akorlardan kurulu: orada yavaş ve yumuşak, burada hızlı ve şiddetli.
-2. ≈ 7:09 civarında, son atılımdan önce her şeyin neredeyse durma noktasına kadar yavaşladığı âna kulak verin.
+2. 7:09 civarında, son atılımdan önce her şeyin neredeyse durma noktasına kadar yavaşladığı âna kulak verin.
 
 **Bu kayıtta.** Barenboim serimin tekrarını çalıyor; bu yüzden final sekiz dakikaya yakın sürüyor. Yukarıda önerilen kayıtlardan Kempff'inkinde tekrar yok, iki dakika kadar daha kısa.
 
