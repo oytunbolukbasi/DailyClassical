@@ -105,12 +105,12 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Bir klarnet, obua ve fagotla birlikte yumuşak bir melodi çalar | Ana tema |
-| ≈ 0:45 | Viyolonsel melodiyi devralır ve sürdürür | Solist katılıyor |
-| ≈ 3:00 | Orkestrada minör tonda ani, güçlü bir patlama | Orta kısım başlıyor |
-| ≈ 3:30–5:30 | Viyolonsel özlem dolu, hüzünlü bir melodi söyler | Dvořák'ın "Beni Yalnız Bırakın" şarkısından alıntı |
-| ≈ 6:30 | Üç korno açılış melodisini bir ilahi gibi sessizce çalar | Ana tema, kornolar için bir [[chorale|koral]] olarak dönüyor |
-| ≈ 8:30–10:30 | Viyolonsel tek başına, neredeyse serbest bir zamanda; tahta üflemeliler cevap verir; sol eliyle boş telleri parmakla çekerken akorlar çalar | Bütün konçertoda bir [[cadenza|kadans]]a en çok benzeyen pasaj |
+| 0:00 | Bir klarnet, obua ve fagotla birlikte yumuşak bir melodi çalar | Ana tema |
+| 0:45 | Viyolonsel melodiyi devralır ve sürdürür | Solist katılıyor |
+| 3:00 | Orkestrada minör tonda ani, güçlü bir patlama | Orta kısım başlıyor |
+| 3:30–5:30 | Viyolonsel özlem dolu, hüzünlü bir melodi söyler | Dvořák'ın "Beni Yalnız Bırakın" şarkısından alıntı |
+| 6:30 | Üç korno açılış melodisini bir ilahi gibi sessizce çalar | Ana tema, kornolar için bir [[chorale|koral]] olarak dönüyor |
+| 8:30–10:30 | Viyolonsel tek başına, neredeyse serbest bir zamanda; tahta üflemeliler cevap verir; sol eliyle boş telleri parmakla çekerken akorlar çalar | Bütün konçertoda bir [[cadenza|kadans]]a en çok benzeyen pasaj |
 | Son dakika | Viyolonsel çok yumuşak, tiz, camsı sesler çalar ve bölüm söner | [[harmonics|Flajole]] seslerle biten son |
 
 **Dikkat edilecekler**
@@ -130,14 +130,14 @@ painting:
 
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
-| ≈ 0:00 | Kornolar pes yaylıların üzerinde sessiz, marş gibi bir ezgi çalar; ezgi güçlenir | Ana tema, henüz uzaktan |
-| ≈ 0:45 | Viyolonsel ezginin tamamıyla, cesur ve dans eder gibi girer | [[rondo|Rondo]]nun ana teması |
-| ≈ 2:00 | Viyolonselde daha hüzünlü bir melodi; Re majörde hızlı, dalgalanan notalara dağılır | İlk ara bölüm |
-| ≈ 3:30 | Marş ezgisi orkestrada geri döner | Yeniden ana tema |
-| ≈ 4:30–6:30 | Hüzünlü melodi döner, ama viyolonsel müziği yavaş bölümün havasını taşıyan daha sıcak bir Sol majöre götürür | Orta ara bölüm |
-| ≈ 7:15 | Marş ezgisi bir kez daha | Ana tema |
-| ≈ 8:30 | Her şey yavaşlayıp Si majöre varır; viyolonsel orkestradan bir solo kemanla şefkatli bir düet çalar | Veda başlıyor, *Andante* |
-| ≈ 10:00–11:30 | Tahta üflemeliler birinci bölümün açılış temasını sessizce hatırlatır; viyolonselin çizgisi inmeyi sürdürür | Önceki müziğin anıları; Dvořák'ın Josefina'nın ölümünden sonra yeniden yazdığı sonun parçası |
+| 0:00 | Kornolar pes yaylıların üzerinde sessiz, marş gibi bir ezgi çalar; ezgi güçlenir | Ana tema, henüz uzaktan |
+| 0:45 | Viyolonsel ezginin tamamıyla, cesur ve dans eder gibi girer | [[rondo|Rondo]]nun ana teması |
+| 2:00 | Viyolonselde daha hüzünlü bir melodi; Re majörde hızlı, dalgalanan notalara dağılır | İlk ara bölüm |
+| 3:30 | Marş ezgisi orkestrada geri döner | Yeniden ana tema |
+| 4:30–6:30 | Hüzünlü melodi döner, ama viyolonsel müziği yavaş bölümün havasını taşıyan daha sıcak bir Sol majöre götürür | Orta ara bölüm |
+| 7:15 | Marş ezgisi bir kez daha | Ana tema |
+| 8:30 | Her şey yavaşlayıp Si majöre varır; viyolonsel orkestradan bir solo kemanla şefkatli bir düet çalar | Veda başlıyor, *Andante* |
+| 10:00–11:30 | Tahta üflemeliler birinci bölümün açılış temasını sessizce hatırlatır; viyolonselin çizgisi inmeyi sürdürür | Önceki müziğin anıları; Dvořák'ın Josefina'nın ölümünden sonra yeniden yazdığı sonun parçası |
 | Son 40 saniye | Ani bir yükseliş; orkestra konçertoyu güçlü ve hızlı bitirir | *Allegro vivo* |
 
 **Dikkat edilecekler**

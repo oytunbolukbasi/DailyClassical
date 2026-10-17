@@ -104,12 +104,12 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | A clarinet, with oboe and bassoon, plays a gentle melody | The main theme |
-| ≈ 0:45 | The cello takes up the melody and continues it | The soloist joins |
-| ≈ 3:00 | A sudden loud outburst in the orchestra, in the minor | The middle section begins |
-| ≈ 3:30–5:30 | The cello sings a longing, sad melody | The quotation from Dvořák's song "Leave Me Alone" |
-| ≈ 6:30 | Three horns play the opening melody quietly, like a hymn | The main theme returns, as a [[chorale]] for horns |
-| ≈ 8:30–10:30 | The cello alone, almost free in time, with woodwinds answering; it plays chords while plucking open strings with its left hand | The passage most like a [[cadenza]] in the whole concerto |
+| 0:00 | A clarinet, with oboe and bassoon, plays a gentle melody | The main theme |
+| 0:45 | The cello takes up the melody and continues it | The soloist joins |
+| 3:00 | A sudden loud outburst in the orchestra, in the minor | The middle section begins |
+| 3:30–5:30 | The cello sings a longing, sad melody | The quotation from Dvořák's song "Leave Me Alone" |
+| 6:30 | Three horns play the opening melody quietly, like a hymn | The main theme returns, as a [[chorale]] for horns |
+| 8:30–10:30 | The cello alone, almost free in time, with woodwinds answering; it plays chords while plucking open strings with its left hand | The passage most like a [[cadenza]] in the whole concerto |
 | Last minute | The cello plays very soft, high, glassy notes and the movement fades | The ending, in [[harmonics]] |
 
 **Things to notice**
@@ -129,14 +129,14 @@ painting:
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
-| ≈ 0:00 | Horns play a quiet, march-like tune over low strings; it grows louder | The main theme, still in the distance |
-| ≈ 0:45 | The cello enters with the full tune, bold and dancing | The main theme of the [[rondo]] |
-| ≈ 2:00 | A sadder melody in the cello, which dissolves into quick, rippling notes in D major | The first episode |
-| ≈ 3:30 | The march tune returns in the orchestra | The main theme again |
-| ≈ 4:30–6:30 | The sad melody returns, but the cello leads the music into a warmer G major, with something of the slow movement's mood | The middle episode |
-| ≈ 7:15 | The march tune once more | The main theme |
-| ≈ 8:30 | Everything slows into B major; the cello plays a tender duet with a solo violin from the orchestra | The farewell begins, *Andante* |
-| ≈ 10:00–11:30 | The woodwinds quietly recall the opening theme of the first movement; the cello's line keeps falling | Memories of earlier music, part of the ending Dvořák rewrote after Josefina's death |
+| 0:00 | Horns play a quiet, march-like tune over low strings; it grows louder | The main theme, still in the distance |
+| 0:45 | The cello enters with the full tune, bold and dancing | The main theme of the [[rondo]] |
+| 2:00 | A sadder melody in the cello, which dissolves into quick, rippling notes in D major | The first episode |
+| 3:30 | The march tune returns in the orchestra | The main theme again |
+| 4:30–6:30 | The sad melody returns, but the cello leads the music into a warmer G major, with something of the slow movement's mood | The middle episode |
+| 7:15 | The march tune once more | The main theme |
+| 8:30 | Everything slows into B major; the cello plays a tender duet with a solo violin from the orchestra | The farewell begins, *Andante* |
+| 10:00–11:30 | The woodwinds quietly recall the opening theme of the first movement; the cello's line keeps falling | Memories of earlier music, part of the ending Dvořák rewrote after Josefina's death |
 | Last 40 seconds | A sudden rise; the orchestra ends the concerto loudly and fast | *Allegro vivo* |
 
 **Things to notice**
