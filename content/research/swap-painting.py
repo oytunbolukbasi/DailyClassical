@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Replace a drafted piece's first-choice painting before merging (docs/CONTENT_STATUS.md).
+"""Replace a drafted piece's first-choice painting before merging (project-knowledge/content_status.md).
 
     python3 content/research/swap-painting.py spec.json
 

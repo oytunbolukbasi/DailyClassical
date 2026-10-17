@@ -1,7 +1,7 @@
 import SwiftUI
 
 #if DEBUG
-/// App Store screenshots (docs/APP_STORE.md §8): launch arguments that put the app on one screen,
+/// App Store screenshots (project-knowledge/project_information.md §7): launch arguments that put the app on one screen,
 /// so every language is shot on the same frame without driving the simulator by hand.
 ///
 ///     -shotTab library              Library tab

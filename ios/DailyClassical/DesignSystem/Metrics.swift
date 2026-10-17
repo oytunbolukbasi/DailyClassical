@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Spacing and radii from SPEC.md §2.3–2.4.
+/// Spacing and radii from project-knowledge/project_information.md §8.3.
 enum Spacing {
     static let pageGutter: CGFloat = 24
     static let barInset: CGFloat = 16

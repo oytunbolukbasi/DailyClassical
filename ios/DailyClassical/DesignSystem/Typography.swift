@@ -1,7 +1,7 @@
 import SwiftUI
 import UIKit
 
-/// Type ramp from SPEC.md §2.2 / §2.8. Literata (bundled variable font) for titles and
+/// Type ramp from project-knowledge/project_information.md §8.3. Literata (bundled variable font) for titles and
 /// reading; the system font for UI. Every style scales with Dynamic Type through `relativeTo:`.
 enum Typography {
     static func literata(_ size: CGFloat, _ weight: Font.Weight = .regular, relativeTo style: Font.TextStyle = .body) -> Font {

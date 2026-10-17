@@ -1,5 +1,5 @@
 #!/bin/zsh
-# App Store screenshots (docs/APP_STORE.md §8): captures the six raw screens per language on a
+# App Store screenshots (project-knowledge/project_information.md §7): captures the six raw screens per language on a
 # 6.9" simulator (1320×2868) into design/app-store/raw/<lang>/, using the Debug-only launch
 # arguments in App/ScreenshotScene.swift. Then design/app-store/render.sh frames them.
 #

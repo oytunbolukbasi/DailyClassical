@@ -3,7 +3,7 @@ import { join } from "node:path";
 
 /**
  * The markdown for one locale: content/<locale>/glossary.md followed by every
- * content/<locale>/pieces/*.md (one piece per file, see content/CONTENT_GUIDE.md).
+ * content/<locale>/pieces/*.md (one piece per file, see project-knowledge/project_information.md §6).
  * Null when the locale has no pieces folder.
  */
 export function readLocaleMarkdown(contentRoot: string, locale: string): string | null {

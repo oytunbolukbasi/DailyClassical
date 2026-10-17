@@ -121,7 +121,7 @@ enum AuthValidation {
         return !s.contains(" ")
     }
 
-    /// Maps API failures to the copy in strings (design/strings-en.md "Proposed").
+    /// Maps API failures to the copy in strings (auth.error.* keys).
     static func message(for error: Error) -> LocalizedStringKey {
         switch error as? APIError {
         case .server(409, "email_taken"): "auth.error.emailInUse"

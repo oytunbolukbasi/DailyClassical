@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Merge drafted pieces of the October 2026 batch into the live content (docs/CONTENT_STATUS.md).
+"""Merge drafted pieces of a content batch into the live content (project-knowledge/content_status.md).
 
     python3 content/research/merge-drafts.py <id> [<id> …]
 
@@ -8,7 +8,8 @@ For each id, from content/research/<id>.shared.md:
   - new glossary rows (EN `| Term | Short | Definition |`, TR `| Key | Terim | Kısa | Tanım |`)
     → content/{en,tr}/glossary.md, alphabetically, skipping terms already there
   - composers.yaml entries (```yaml blocks starting `- id:`) → content/composers.yaml, skipping existing ids
-  - retime rows (table rows starting `| <Composer> –`) → content/research/retime-needed.md
+  - retime rows (table rows starting `| <Composer> –`) → project-knowledge/content_status.md
+    ("Zamanlanacak duraklar" section, table under "### New pieces")
 and moves content/drafts/{en,tr}/<id>.md → content/{en,tr}/pieces/<id>.md.
 
 Choosing an alternative painting is a manual edit of the shared note before running this.
@@ -127,7 +128,7 @@ def merge_glossary(path, header_start, new_rows):
 def main(ids):
     paintings_path = os.path.join(C, "paintings.yaml")
     composers_path = os.path.join(C, "composers.yaml")
-    retime_path = os.path.join(C, "research", "retime-needed.md")
+    retime_path = os.path.join(ROOT, "project-knowledge", "content_status.md")
     for pid in ids:
         shared = read(os.path.join(C, "research", f"{pid}.shared.md"))
         report = [pid]
@@ -178,11 +179,12 @@ def main(ids):
             text = read(retime_path)
             fresh = [r for r in retime if r not in text]
             if fresh:
-                if "| Piece | Mvt |" not in text.split("## New pieces (October 2026)")[-1]:
-                    text = text.rstrip("\n") + ("\n\n| Piece | Mvt | Old draft | Measured | Diff | Reference track |"
-                                                " Current stops (unchanged) | Note |\n| --- | --- | --- | --- | --- | --- | --- | --- |")
-                text = text.rstrip("\n") + "\n" + "\n".join(fresh) + "\n"
-                write(retime_path, text)
+                # append to the last table of the "### New pieces" subsection (before the merge log)
+                i = text.rindex("### New pieces")
+                j = text.find("\n## ", i)
+                j = len(text) if j < 0 else j
+                section = text[i:j].rstrip("\n") + "\n" + "\n".join(fresh) + "\n\n"
+                write(retime_path, text[:i] + section + text[j:].lstrip("\n"))
                 report.append(f"retime +{len(fresh)}")
 
         for lang in ("en", "tr"):

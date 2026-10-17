@@ -6,7 +6,7 @@ import { readLocaleMarkdown } from "../src/content/sources.js";
 
 /**
  * content/<locale>/glossary.md + content/<locale>/pieces/*.md  →  content/build/<locale>.json
- * (consumed by db:seed and fixtures). Format: content/CONTENT_GUIDE.md.
+ * (consumed by db:seed and fixtures). Format: project-knowledge/project_information.md §6.
  */
 const root = join(dirname(fileURLToPath(import.meta.url)), "../../content");
 

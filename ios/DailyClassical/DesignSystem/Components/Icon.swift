@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// The custom line-icon set (design/icons, 24 pt grid, 1.75 stroke). Template images,
+/// The custom line-icon set (sources in design/icons, 24 pt grid, 1.75 stroke). Template images,
 /// so they take the foreground style; the size follows Dynamic Type.
 struct Icon: View {
     let name: String

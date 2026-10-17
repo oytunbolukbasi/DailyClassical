@@ -17,7 +17,7 @@ import { PIECE_FORMS } from "./types.js";
 
 /**
  * Parser for the content markdown (content/<locale>/pieces/*.md + glossary.md, see
- * content/CONTENT_GUIDE.md). A `## ` section holding a yaml block is a piece.
+ * project-knowledge/project_information.md §6.4). A `## ` section holding a yaml block is a piece.
  * The English and Turkish files share one structure; only the fixed
  * labels differ, so every label is matched against both languages.
  */

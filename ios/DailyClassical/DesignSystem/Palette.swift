@@ -1,7 +1,7 @@
 import SwiftUI
 import UIKit
 
-/// Colour tokens from design/SPEC.md §2.1. Paper in light, ink in dark; umber is the
+/// Colour tokens from project-knowledge/project_information.md §8.3. Paper in light, ink in dark; umber is the
 /// single accent and is reserved for text, links, glossary terms and the saved heart.
 ///
 /// `nonisolated`: SwiftUI resolves colours on its async render thread while scrolling fast.
