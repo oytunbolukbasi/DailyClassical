@@ -3135,6 +3135,24 @@
         }
       }
     },
+    "paywall.monthly.terms %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ a month. Renews automatically unless cancelled at least 24 hours before the end of the current period; manage it in your Apple ID settings."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aylık %@. Dönem bitmeden en az 24 saat önce iptal edilmezse otomatik yenilenir; Apple Kimliği ayarlarınızdan yönetebilirsiniz."
+          }
+        }
+      },
+      "comment": "Shown under the button when the monthly plan is selected and no free trial applies. %@ = StoreKit displayPrice"
+    },
     "paywall.painting.accessibilityLabel": {
       "extractionState": "manual",
       "localizations": {
@@ -3347,13 +3365,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Terms"
+            "value": "Terms of Use"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Koşullar"
+            "value": "Kullanım Koşulları"
           }
         }
       }

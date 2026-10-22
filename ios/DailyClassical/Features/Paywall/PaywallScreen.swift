@@ -111,13 +111,20 @@ struct PaywallScreen: View {
 
             // App Review 3.1.2: the trial's length, what is billed after it, and how to avoid
             // that, next to the button that starts it.
-            if plan == .monthly, let days = entitlements.trialDays {
-                Text("paywall.trial.terms \(days) \(price(.monthly))")
-                    .font(Typography.caption)
-                    .lineHeight(1.45)
-                    .foregroundStyle(Palette.ink3)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
+            // Without a trial the monthly plan still states its price, period and renewal.
+            if plan == .monthly {
+                Group {
+                    if let days = entitlements.trialDays {
+                        Text("paywall.trial.terms \(days) \(price(.monthly))")
+                    } else {
+                        Text("paywall.monthly.terms \(price(.monthly))")
+                    }
+                }
+                .font(Typography.caption)
+                .lineHeight(1.45)
+                .foregroundStyle(Palette.ink3)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
             }
 
             Button {
