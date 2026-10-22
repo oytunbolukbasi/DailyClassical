@@ -132,6 +132,11 @@ struct SettingsScreen: View {
             }
             .tint(Palette.accent)
             .settingsRow()
+            Button { router.showRatePrompt = true } label: {
+                Text(verbatim: "Değerlendirme istemini göster").foregroundStyle(Palette.accent)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .settingsRow()
         } header: {
             Text(verbatim: "Test")
                 .font(Typography.meta13)

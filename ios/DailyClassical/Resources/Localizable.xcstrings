@@ -3911,6 +3911,74 @@
         }
       }
     },
+    "rate.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A piece and a painting every day. If you enjoy it, your rating on the App Store helps new listeners find us."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Her gün bir eser ve bir tablo. Beğeniyorsanız, App Store'daki puanınız yeni dinleyicilerin bizi bulmasına yardım eder."
+          }
+        }
+      }
+    },
+    "rate.later": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Later"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sonra"
+          }
+        }
+      }
+    },
+    "rate.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Would you like to rate DailyClassical?"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DailyClassical'ı değerlendirmek ister misiniz?"
+          }
+        }
+      }
+    },
+    "rate.yes": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yes"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Evet"
+          }
+        }
+      }
+    },
     "recordings.note": {
       "extractionState": "manual",
       "localizations": {

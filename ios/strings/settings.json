@@ -529,6 +529,22 @@
     "tr": "Aylık %@. Dönem bitmeden en az 24 saat önce iptal edilmezse otomatik yenilenir; Apple Kimliği ayarlarınızdan yönetebilirsiniz.",
     "comment": "Shown under the button when the monthly plan is selected and no free trial applies. %@ = StoreKit displayPrice"
   },
+  "rate.title": {
+    "en": "Would you like to rate DailyClassical?",
+    "tr": "DailyClassical'ı değerlendirmek ister misiniz?"
+  },
+  "rate.body": {
+    "en": "A piece and a painting every day. If you enjoy it, your rating on the App Store helps new listeners find us.",
+    "tr": "Her gün bir eser ve bir tablo. Beğeniyorsanız, App Store'daki puanınız yeni dinleyicilerin bizi bulmasına yardım eder."
+  },
+  "rate.yes": {
+    "en": "Yes",
+    "tr": "Evet"
+  },
+  "rate.later": {
+    "en": "Later",
+    "tr": "Sonra"
+  },
   "paywall.restore": {
     "en": "Restore purchases",
     "tr": "Satın alımları geri yükle"

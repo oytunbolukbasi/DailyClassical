@@ -133,7 +133,10 @@ struct PieceContent: View {
             if let painting = piece.painting { ArtworkViewer(painting: painting) }
         }
         // The user reads along while the music plays: the screen must not dim or lock.
-        .onAppear { UIApplication.shared.isIdleTimerDisabled = true }
+        .onAppear {
+            UIApplication.shared.isIdleTimerDisabled = true
+            RatePromptPolicy.recordPieceDay()
+        }
         #if DEBUG
         .task {
             guard ScreenshotScene.piece == piece.id else { return }

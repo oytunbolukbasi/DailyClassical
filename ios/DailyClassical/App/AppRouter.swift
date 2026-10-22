@@ -33,6 +33,8 @@ final class AppRouter {
     var libraryPath = NavigationPath()
     var sheet: Sheet?
     var toast: LocalizedStringResource?
+    /// The App Store rating card (Features/Rating). Set by RatePromptPolicy, or Settings › Test.
+    var showRatePrompt = false
     /// Piece to save once the guest finishes signing in from the heart.
     var pendingFavourite: String?
     /// True while Library › Glossary is on screen (set by GlossaryListScreen).
