@@ -68,7 +68,7 @@ cd ios && xcodegen generate && open DailyClassical.xcodeproj
 - Dil: Ayarlar › Dil (Sistem / English / Türkçe); arayüz `Localizable.xcstrings`, içerik dili API'ye gider. İçerik eksikse İngilizceye düşer.
 - Eski sürümlere dayanıklılık: bilinmeyen tür, dönem ve kayıt rolü "diğer" okunur; çözülemeyen liste öğesi atlanır. `GET /v1/config` ile güncelleme istemi.
 - Bundle ID `co.dailyclassical.app` (+ `.widget`, `.tests`). `ITSAppUsesNonExemptEncryption = NO`. Gizlilik manifestleri `Resources/PrivacyInfo.xcprivacy` (+ widget), App Privacy etiketleriyle aynı.
-- **Yükleme:** `cd ios && xcodebuild -exportArchive -archivePath "<archive>" -exportOptionsPlist ExportOptions.plist -exportPath build/export -allowProvisioningUpdates`, ya da Xcode › Organizer › Distribute App. Her yüklemede `CURRENT_PROJECT_VERSION` bir artar (yayındaki 1.0.0 (1); sıradaki build 2).
+- **Yükleme:** `cd ios && xcodebuild -exportArchive -archivePath "<archive>" -exportOptionsPlist ExportOptions.plist -exportPath build/export -allowProvisioningUpdates`, ya da Xcode › Organizer › Distribute App. Her yüklemede `CURRENT_PROJECT_VERSION` bir artar (1.0.0 (1) reddedildi, 1.0.0 (2) 22 Ekim'de yüklendi; sıradaki build 3).
 
 ## 5. İçerik hattı ve yayın
 
