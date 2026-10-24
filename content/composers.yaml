@@ -1350,3 +1350,246 @@
     thumb: { width: 300, height: 399, bytes: 25394 }
     full: { width: 2024, height: 2695, bytes: 643590 }
     placeholder_color: "#6a614c"
+
+- id: pachelbel
+  match: Johann Pachelbel
+  sort_name: Pachelbel, Johann
+  born: 1653
+  died: 1706
+  era: baroque
+  names:
+    en: { name: Johann Pachelbel, short: Pachelbel }
+    tr: { name: Johann Pachelbel, short: Pachelbel }
+  nationality: { en: German, tr: Alman }
+  facts:
+    born: { en: "Baptised 1 September 1653 (Old Style), Nuremberg", tr: "1 Eylül 1653'te vaftiz edildi (eski takvim), Nürnberg" }
+    died: { en: "Early March 1706, Nuremberg (buried 9 March)", tr: "Mart 1706 başı, Nürnberg (9 Mart'ta gömüldü)" }
+    symphonies: { en: "None (the form came after his time)", tr: "Yok (bu tür ondan sonra doğdu)" }
+    best_known_for: { en: "*Canon in D*, organ chorales and fugues, *Hexachordum Apollinis*", tr: "*Re majör Kanon*, org koralleri ve fügleri, *Hexachordum Apollinis*" }
+  bio:
+    en: |-
+      Pachelbel was born in Nuremberg in 1653, the son of a wine merchant. After brief studies at the University of Altdorf and at a grammar school in Regensburg, he was working by 1673 as deputy organist of St Stephen's Cathedral in Vienna. He spent five years there, and although he was a Lutheran, the Italian and south German music of the Catholic south shaped his style for good.
+
+      In 1677 he became court organist at Eisenach, where he grew close to the Bach family, and in 1678 he moved to Erfurt as organist of the Predigerkirche. In twelve years there he became one of the leading organ composers in Germany. He taught Johann Christoph Bach, Johann Sebastian's eldest brother, and was godfather to one of the Bach daughters. His first wife and their son died of plague in 1683. After short posts in Stuttgart and Gotha, Nuremberg invited him home in 1695 as organist of St Sebaldus, without the usual audition.
+
+      He died in Nuremberg in March 1706, aged 52. In his lifetime he was famous above all for his organ music, more than two hundred pieces, many of them chorale preludes and fugues, and for *Hexachordum Apollinis* (1699), a set of keyboard variations dedicated to Buxtehude. He also wrote about a hundred vocal works; only a little of his chamber music survives. Today he is known mainly for his [[canon]] in D, a piece that was rediscovered only in the 20th century.
+    tr: |-
+      Pachelbel 1653'te Nürnberg'de, bir şarap tüccarının oğlu olarak doğdu. Altdorf Üniversitesi'nde ve Regensburg'da bir lisede kısa süre okuduktan sonra, 1673'te Viyana'daki Aziz Stefan Katedrali'nde yardımcı orgcu olarak çalışıyordu. Orada beş yıl kaldı; Lutheryen olmasına karşın Katolik güneyin İtalyan ve güney Alman müziği üslubunu kalıcı olarak biçimlendirdi.
+
+      1677'de Eisenach'ta saray orgcusu oldu ve Bach ailesiyle yakınlaştı; 1678'de Predigerkirche'nin orgcusu olarak Erfurt'a geçti. Oradaki on iki yılında Almanya'nın önde gelen org bestecilerinden biri oldu. Johann Sebastian'ın ağabeyi Johann Christoph Bach'a ders verdi ve Bach kızlarından birinin vaftiz babası oldu. İlk karısı ve oğulları 1683'te vebadan öldü. Stuttgart'ta ve Gotha'da kısa süreli görevlerin ardından, Nürnberg 1695'te onu her zamanki sınava sokmadan St. Sebaldus Kilisesi'nin orgcusu olarak memleketine çağırdı.
+
+      Mart 1706'da, 52 yaşında Nürnberg'de öldü. Hayattayken her şeyden önce, çoğu koral prelüdü ve füg olan iki yüzü aşkın org eseriyle ve Buxtehude'ye ithaf ettiği klavye varyasyonları dizisi *Hexachordum Apollinis* (1699) ile ünlüydü. Yüz kadar vokal eser de yazdı; oda müziğinden ise pek azı günümüze ulaştı. Bugün daha çok, ancak 20. yüzyılda yeniden keşfedilen Re majör [[canon|kanon]]uyla tanınıyor.
+  portrait: null
+
+- id: borodin
+  match: Alexander Borodin
+  sort_name: Borodin, Alexander
+  born: 1833
+  died: 1887
+  era: romantic
+  names:
+    en: { name: Alexander Borodin, short: Borodin }
+    tr: { name: Aleksandr Borodin, short: Borodin }
+  nationality: { en: Russian, tr: Rus }
+  facts:
+    born: { en: "12 November 1833, St Petersburg", tr: "12 Kasım 1833, St. Petersburg" }
+    died: { en: "27 February 1887, St Petersburg", tr: "27 Şubat 1887, St. Petersburg" }
+    symphonies: { en: "Two, and an unfinished Third", tr: "İki, bir de yarım kalmış Üçüncü" }
+    best_known_for: { en: "*Prince Igor*, *In the Steppes of Central Asia*, String Quartet No. 2", tr: "*Knyaz İgor*, *Orta Asya Bozkırlarında*, 2. Yaylı Dörtlü" }
+  bio:
+    en: |-
+      Borodin was born in St Petersburg in 1833, the illegitimate son of an elderly Georgian nobleman, Luka Gedevanishvili. The nobleman registered the boy as the son of one of his serfs, Porfiry Borodin, which is where the name comes from, and freed him when he was seven. Taught at home by private tutors, he entered the Medical–Surgical Academy in St Petersburg in 1850 and became a chemist. From 1859 he worked for three years in Heidelberg, where he played chamber music on the cello and met the pianist Ekaterina Protopopova, whom he married in 1863.
+
+      In 1862 he became professor of chemistry at the Medical–Surgical Academy, a career he kept all his life. He is credited, with the Frenchman Charles-Adolphe Wurtz, with discovering the aldol reaction, and he helped to found medical courses for women. In the same year he began lessons with Mily Balakirev and joined the circle later known as The Five, who wanted music that sounded Russian. He composed in the time his work left him, often when he was ill: the First Symphony was first played in 1869, the Second in 1877, and the orchestral picture *In the Steppes of Central Asia* followed in 1880. That year Liszt arranged a performance of the First Symphony in Germany.
+
+      His great project was the opera *Prince Igor*, which occupied him from the late 1860s until his death; Rimsky-Korsakov and Glazunov completed it. Its Polovtsian Dances are his best-known music. He died suddenly at a ball in St Petersburg in February 1887, aged 53. His long, lyrical melodies and rich harmonies later fascinated Debussy and Ravel, and in 1953 Broadway turned them into the musical *Kismet*.
+    tr: |-
+      Borodin 1833'te St. Petersburg'da, yaşlı bir Gürcü soylusu olan Luka Gedevanişvili'nin evlilik dışı oğlu olarak doğdu. Soylu, çocuğu serflerinden Porfiri Borodin'in oğlu olarak kaydettirdi; soyadı buradan gelir. Çocuk yedi yaşındayken onu serflikten azat etti. Evde özel öğretmenlerden eğitim alan Borodin, 1850'de St. Petersburg'daki Tıp ve Cerrahi Akademisi'ne girdi ve kimyacı oldu. 1859'dan başlayarak üç yıl Heidelberg'de çalıştı; orada viyolonselle oda müziği çaldı ve 1863'te evleneceği piyanist Yekaterina Protopopova'yla tanıştı.
+
+      1862'de Tıp ve Cerrahi Akademisi'nde kimya profesörü oldu ve bu mesleği ömrü boyunca sürdürdü. Aldol tepkimesinin keşfi, Fransız kimyacı Charles-Adolphe Wurtz'la birlikte ona atfedilir; kadınlar için tıp kurslarının kurulmasına da öncülük etti. Aynı yıl Mili Balakirev'den ders almaya başladı ve sonradan "Beşler" diye anılacak, Rus gibi duyulan bir müzik isteyen çevreye katıldı. İşinin ona bıraktığı zamanlarda, çoğu kez de hastayken beste yaptı: Birinci Senfoni ilk kez 1869'da, İkinci 1877'de çalındı; *Orta Asya Bozkırlarında* adlı orkestra tablosu 1880'de geldi. Aynı yıl Liszt, Birinci Senfoni'nin Almanya'da seslendirilmesini sağladı.
+
+      Büyük tasarısı *Knyaz İgor* operasıydı; 1860'ların sonundan ölümüne kadar onunla uğraştı, eseri Rimski-Korsakov ve Glazunov tamamladı. Operanın Polovets Dansları, en çok bilinen müziğidir. Şubat 1887'de St. Petersburg'da bir baloda, 53 yaşında ansızın öldü. Uzun, lirik melodileri ve zengin armonileri sonradan Debussy'yi ve Ravel'i büyüledi; 1953'te Broadway onları *Kismet* müzikaline dönüştürdü.
+  portrait:
+    artist: { en: "After a painting by A. Levinstein", tr: "A. Levinstein'ın bir tablosundan" }
+    title: { en: Portrait of Alexander Borodin, tr: Aleksandr Borodin'in Portresi }
+    year: "Print, 1910"
+    collection: { en: "Bibliothèque nationale de France, Paris", tr: "Fransa Ulusal Kütüphanesi, Paris" }
+    # Master in the originals cache is CROPPED to the photograph (the scan shows the book page and its border): borodin.source.jpg cropped to 1420 × 2040 at offset 893,838. Do not pass --refresh for this id.
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Alexandre_Borodine_-_d%27apr%C3%A8s_le_tableau_de_A._Levinstein_-_btv1b8415940h.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Alexandre_Borodine_-_d%27apr%C3%A8s_le_tableau_de_A._Levinstein_-_btv1b8415940h.jpg
+    width: 1420
+    height: 2040
+    license: Public domain (PD-France, PD-US-expired)
+    focal_y: 0.3
+    hero: { width: 1420, height: 2040, bytes: 616860 }
+    thumb: { width: 300, height: 431, bytes: 19984 }
+    full: { width: 1420, height: 2040, bytes: 680844 }
+    placeholder_color: "#967072"
+
+- id: vaughan-williams
+  match: Ralph Vaughan Williams
+  sort_name: Vaughan Williams, Ralph
+  born: 1872
+  died: 1958
+  era: modern
+  names:
+    en: { name: Ralph Vaughan Williams, short: Vaughan Williams }
+    tr: { name: Ralph Vaughan Williams, short: Vaughan Williams }
+  nationality: { en: English, tr: İngiliz }
+  facts:
+    born: { en: "12 October 1872, Down Ampney, Gloucestershire", tr: "12 Ekim 1872, Down Ampney, Gloucestershire" }
+    died: { en: "26 August 1958, London", tr: "26 Ağustos 1958, Londra" }
+    symphonies: { en: "Nine", tr: "Dokuz" }
+    best_known_for: { en: "*The Lark Ascending*, *Fantasia on a Theme by Thomas Tallis*, nine symphonies", tr: "*Yükselen Tarlakuşu*, *Thomas Tallis’in Bir Teması Üzerine Fantezi*, dokuz senfoni" }
+  bio:
+    en: |-
+      Vaughan Williams was born in 1872 at Down Ampney in Gloucestershire, where his father was the vicar. His father died when he was two, and the family moved to his mother's family home in Surrey; she was a great-granddaughter of the potter Josiah Wedgwood and a niece of Charles Darwin. He began piano lessons at five but much preferred the violin. He studied at the Royal College of Music with Hubert Parry and at Cambridge, and was a late developer: he found his own voice only in his late thirties.
+
+      From 1903 he travelled the English countryside collecting folk songs from village singers, and their old modes shaped his music for the rest of his life, together with his love of Tudor church music. In the winter of 1907–08 he spent three months in Paris studying with Maurice Ravel, who said he was "my only pupil who does not write my music". Two premieres in 1910 made his name: the *Fantasia on a Theme by Thomas Tallis* in Gloucester Cathedral and *A Sea Symphony* in Leeds.
+
+      When war came in 1914 he volunteered, aged nearly 42, and served as a stretcher-bearer in France and Greece and later as an artillery officer; the guns damaged his hearing. He went on to teach at the Royal College of Music, and wrote nine symphonies over almost half a century, the last first heard four months before his death. After the death of his first wife, Adeline, he married the poet Ursula Wood in 1953. He died in London on 26 August 1958, aged 85, and his ashes lie in Westminster Abbey, near Henry Purcell.
+    tr: |-
+      Vaughan Williams 1872’de, babasının papaz olduğu Gloucestershire’daki Down Ampney’de doğdu. Babası o iki yaşındayken öldü ve aile, annesinin Surrey’deki aile evine taşındı; annesi çömlekçi Josiah Wedgwood’un torununun kızı ve Charles Darwin’in yeğeniydi. Beş yaşında piyano derslerine başladı ama kemanı çok daha çok sevdi. Kraliyet Müzik Koleji’nde Hubert Parry ile ve Cambridge’de okudu; geç gelişen bir besteciydi, kendi sesini ancak otuzlarının sonunda buldu.
+
+      1903’ten itibaren İngiliz kırsalını dolaşıp köylerdeki halk şarkıcılarından türküler derledi; bu şarkıların eski modları, Tudor dönemi kilise müziğine duyduğu sevgiyle birlikte, müziğini ömrünün sonuna dek biçimlendirdi. 1907–08 kışında Paris’te üç ay Maurice Ravel ile çalıştı; Ravel onun için “benim müziğimi yazmayan tek öğrencim” dedi. 1910’daki iki ilk seslendirme adını duyurdu: Gloucester Katedrali’nde *Thomas Tallis’in Bir Teması Üzerine Fantezi* ve Leeds’te *Deniz Senfonisi*.
+
+      1914’te savaş çıkınca 42 yaşına girmek üzereyken gönüllü oldu; Fransa’da ve Yunanistan’da sedyeci, sonra da topçu subayı olarak görev yaptı; top sesleri işitmesine zarar verdi. Ardından Kraliyet Müzik Koleji’nde ders verdi ve neredeyse yarım yüzyıla yayılan dokuz senfoni yazdı; sonuncusu ölümünden dört ay önce ilk kez seslendirildi. İlk eşi Adeline’in ölümünden sonra, 1953’te şair Ursula Wood ile evlendi. 26 Ağustos 1958’de, 85 yaşında Londra’da öldü; külleri Westminster Abbey’de, Henry Purcell’in yakınında yatıyor.
+  portrait:
+    artist: { en: William G. Whittaker, tr: William G. Whittaker }
+    title: { en: Vaughan Williams (right) with Gustav Holst in the Malvern Hills, tr: Malvern Tepeleri’nde Gustav Holst ile Vaughan Williams (sağda) }
+    year: "1921"
+    collection: null
+    # Master in the originals cache is CROPPED to the photograph (the scan shows the mount): vaughan-williams.source.jpg cropped to 1010 × 1660 at offset 140,140. Do not pass --refresh for this id.
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Vaughan_Williams_and_Holst_walking_in_the_Malvern_Hills_1921.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Vaughan_Williams_and_Holst_walking_in_the_Malvern_Hills_1921.jpg
+    width: 1010
+    height: 1660
+    license: Public domain (photographer W. G. Whittaker d. 1944; PD-Art / PD-old-auto-expired)
+    focal_y: 0.3
+    hero: { width: 1010, height: 1660, bytes: 112123 }
+    thumb: { width: 300, height: 493, bytes: 24577 }
+    full: { width: 1010, height: 1660, bytes: 123636 }
+    placeholder_color: "#6e675e"
+
+- id: prokofiev
+  match: Sergei Prokofiev
+  sort_name: Prokofiev, Sergei
+  born: 1891
+  died: 1953
+  era: modern
+  names:
+    en: { name: Sergei Prokofiev, short: Prokofiev }
+    tr: { name: Sergey Prokofyev, short: Prokofyev }
+  nationality: { en: Russian, tr: Rus }
+  facts:
+    born: { en: "27 April 1891, Sontsovka (now Ukraine)", tr: "27 Nisan 1891, Sontsovka (bugün Ukrayna)" }
+    died: { en: "5 March 1953, Moscow", tr: "5 Mart 1953, Moskova" }
+    symphonies: { en: "Seven", tr: "Yedi" }
+    best_known_for: { en: "*Peter and the Wolf*, *Romeo and Juliet*, the *Classical* Symphony", tr: "*Peter ile Kurt*, *Romeo ve Juliet*, *Klasik* Senfoni" }
+  bio:
+    en: |-
+      Prokofiev was born in 1891 on a country estate at Sontsovka, in what is now eastern Ukraine, where his father managed the land. His mother was a keen pianist, and he wrote his first piano piece at five and his first opera at nine. At thirteen he entered the St Petersburg Conservatory, where he was younger than most of his classmates and soon known as a rebel. His spiky, percussive piano music and his first two piano concertos caused scandals; he finished his studies in 1914 by winning the Conservatory's piano prize with his own First Concerto.
+
+      In 1917, the year of the revolutions, he wrote his *Classical* Symphony and his First Violin Concerto. In 1918, with official permission, he left Russia and spent the next years abroad, first in the United States, where his opera *The Love for Three Oranges* was staged in Chicago in 1921, then in Paris, working for Diaghilev's Ballets Russes and touring as a pianist. In 1923 he married the Spanish singer Lina Codina; they had two sons.
+
+      In 1936 he settled with his family in Moscow. That year he wrote *Peter and the Wolf*; his Soviet successes also included the ballet *Romeo and Juliet* and his music for Eisenstein's film *Alexander Nevsky* (1938). During the war he worked on the opera *War and Peace*. In 1948 the Soviet authorities condemned his music as "formalist", and the same year his former wife Lina was arrested and charged with espionage. He died in Moscow on 5 March 1953, on the same day as Stalin; the crowds mourning the dictator made it hard even to carry his coffin through the streets.
+    tr: |-
+      Prokofyev 1891’de, bugün Ukrayna’nın doğusunda kalan Sontsovka’da, babasının yönettiği bir çiftlikte doğdu. Annesi tutkulu bir piyanistti; Sergey ilk piyano parçasını beş yaşında, ilk operasını dokuz yaşında yazdı. On üç yaşında St. Petersburg Konservatuvarı’na girdi; sınıf arkadaşlarının çoğundan küçüktü ve kısa sürede asi biri olarak tanındı. Sivri, vurgulu piyano müziği ve ilk iki piyano konçertosu skandallara yol açtı; öğrenimini 1914’te, Konservatuvar’ın piyano ödülünü kendi Birinci Konçertosu’yla kazanarak bitirdi.
+
+      Devrimlerin yılı olan 1917’de *Klasik* Senfoni’yi ve Birinci Keman Konçertosu’nu yazdı. 1918’de resmî izinle Rusya’dan ayrıldı ve sonraki yılları yurt dışında geçirdi: önce Amerika Birleşik Devletleri’nde, *Üç Portakala Aşk* operası 1921’de Chicago’da sahnelendi; sonra Paris’te, Diaghilev’in Rus Baleleri için çalıştı ve piyanist olarak turneler yaptı. 1923’te İspanyol şarkıcı Lina Codina ile evlendi; iki oğulları oldu.
+
+      1936’da ailesiyle Moskova’ya yerleşti. Aynı yıl *Peter ile Kurt*’u yazdı; Sovyetler’deki başarıları arasında *Romeo ve Juliet* balesi ve Eisenstein’ın *Aleksandr Nevski* (1938) filminin müziği de vardı. Savaş yıllarında *Savaş ve Barış* operası üzerinde çalıştı. 1948’de Sovyet yönetimi müziğini “biçimci” diye kınadı; aynı yıl eski eşi Lina casusluk suçlamasıyla tutuklandı. 5 Mart 1953’te, Stalin’le aynı gün Moskova’da öldü; diktatörün yasını tutan kalabalıklar yüzünden tabutu sokaklardan güçlükle taşınabildi.
+  portrait:
+    artist: { en: Bain News Service, tr: Bain News Service }
+    title: { en: Sergei Prokofiev, tr: Sergey Prokofyev }
+    # LOC does not date the negative; "c. 1918" follows LOC/Commons (taken in the US, after August 1918).
+    year: "c. 1918"
+    collection: { en: "Library of Congress, Washington, D.C.", tr: "Kongre Kütüphanesi, Washington" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Sergei_Prokofiev_circa_1918_over_Chair_Bain.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Sergei_Prokofiev_circa_1918_over_Chair_Bain.jpg
+    width: 2116
+    height: 2607
+    license: Public domain (PD-Bain, PD-old-70-1923; Library of Congress, no known restrictions)
+    focal_y: 0.2
+    hero: { width: 1800, height: 2218, bytes: 513087 }
+    thumb: { width: 300, height: 370, bytes: 14886 }
+    full: { width: 2116, height: 2607, bytes: 662837 }
+    placeholder_color: "#707170"
+
+- id: barber
+  match: Samuel Barber
+  sort_name: Barber, Samuel
+  born: 1910
+  died: 1981
+  era: modern
+  names:
+    en: { name: Samuel Barber, short: Barber }
+    tr: { name: Samuel Barber, short: Barber }
+  nationality: { en: American, tr: Amerikalı }
+  facts:
+    born: { en: "9 March 1910, West Chester, Pennsylvania", tr: "9 Mart 1910, West Chester, Pensilvanya" }
+    died: { en: "23 January 1981, New York", tr: "23 Ocak 1981, New York" }
+    symphonies: { en: "Two (he later suppressed the Second)", tr: "İki (İkinci’yi sonradan geri çekti)" }
+    best_known_for: { en: "*Adagio for Strings*, *Knoxville: Summer of 1915*, the opera *Vanessa*", tr: "*Yaylılar için Adagio*, *Knoxville: 1915 Yazı*, *Vanessa* operası" }
+  bio:
+    en: |-
+      Barber was born in 1910 in West Chester, Pennsylvania, the son of a doctor. Music ran in the family: his aunt, Louise Homer, was a leading contralto at the Metropolitan Opera, and her husband, the songwriter Sidney Homer, guided him for more than twenty-five years. He wrote his first piece at seven, and at nine left his mother a note: he was not meant to be an athlete but a composer. At fourteen he entered the new Curtis Institute of Music in Philadelphia, where he studied composition, piano and singing, and where in 1928 he met the Italian composer Gian Carlo Menotti, his partner for more than forty years.
+
+      Success came early. For a while he also sang professionally as a baritone, on NBC radio. A Rome Prize took him to Italy, where he wrote his Symphony in One Movement, and in 1938 Arturo Toscanini conducted his *Adagio for Strings* on the radio, making him famous. His music stayed lyrical and largely tonal while much modern music turned away from melody. He served in the Army Air Corps during the Second World War, and from 1943 he and Menotti lived at Capricorn, a house north of New York, where he wrote much of his best music, including *Knoxville: Summer of 1915* for soprano and orchestra.
+
+      He won the Pulitzer Prize twice, for his opera *Vanessa* (1958) and for his Piano Concerto, written for the opening of Lincoln Center in New York. His opera *Antony and Cleopatra*, which opened the new Metropolitan Opera House in 1966, was poorly received, and in his last years he struggled with depression and drinking and wrote less. He died of cancer in New York on 23 January 1981, aged 70, and was buried in his home town of West Chester.
+    tr: |-
+      Barber 1910’da Pensilvanya’nın West Chester kasabasında, bir doktorun oğlu olarak doğdu. Müzik ailede vardı: teyzesi Louise Homer, Metropolitan Operası’nın önde gelen kontraltolarındandı; onun eşi şarkı bestecisi Sidney Homer da yirmi beş yılı aşkın bir süre ona yol gösterdi. İlk parçasını yedi yaşında yazdı; dokuz yaşında annesine bıraktığı bir notta sporcu olmak için değil, besteci olmak için doğduğunu yazdı. On dört yaşında Philadelphia’daki yeni Curtis Müzik Enstitüsü’ne girdi; kompozisyon, piyano ve şan okudu. 1928’de orada, kırk yılı aşkın hayat arkadaşı olacak İtalyan besteci Gian Carlo Menotti ile tanıştı.
+
+      Başarı erken geldi. Bir süre NBC radyosunda profesyonel bariton olarak da şarkı söyledi. Roma Ödülü onu İtalya’ya götürdü; orada *Tek Bölümlük Senfoni*’sini yazdı. 1938’de Arturo Toscanini’nin radyoda yönettiği *Yaylılar için Adagio* onu ünlü yaptı. Modern müziğin büyük bölümü melodiden uzaklaşırken onun müziği lirik ve büyük ölçüde tonal kaldı. İkinci Dünya Savaşı’nda Ordu Hava Kuvvetleri’nde görev yaptı; 1943’ten itibaren Menotti ile New York’un kuzeyindeki Capricorn adlı evde yaşadı ve en iyi eserlerinin çoğunu, soprano ve orkestra için *Knoxville: 1915 Yazı* da dahil, orada yazdı.
+
+      Pulitzer Ödülü’nü iki kez kazandı: *Vanessa* operası (1958) ve New York’taki Lincoln Center’ın açılışı için yazdığı Piyano Konçertosu ile. Yeni Metropolitan Opera binasını 1966’da açan *Antonius ve Kleopatra* operası kötü karşılandı; son yıllarında depresyon ve alkolle boğuştu, daha az yazdı. 23 Ocak 1981’de, 70 yaşında New York’ta kanserden öldü ve doğduğu kasaba West Chester’da toprağa verildi.
+  # No safely public-domain portrait: the usable photographs are Carl Van Vechten's (1944, Library of
+  # Congress, "PD-Van Vechten": no known US restrictions, but Van Vechten died 1964, so EU/Turkey status
+  # rests on the rule of the shorter term, and his estate asks that the photos not be cropped, which the
+  # app's cover crop does). See content/research/composers-sources.md.
+  portrait: null
+
+- id: saint-saens
+  match: Camille Saint-Saëns
+  sort_name: Saint-Saëns, Camille
+  born: 1835
+  died: 1921
+  era: romantic
+  names:
+    en: { name: Camille Saint-Saëns, short: Saint-Saëns }
+    tr: { name: Camille Saint-Saëns, short: Saint-Saëns }
+  nationality: { en: French, tr: Fransız }
+  facts:
+    born: { en: "9 October 1835, Paris", tr: "9 Ekim 1835, Paris" }
+    died: { en: "16 December 1921, Algiers", tr: "16 Aralık 1921, Cezayir" }
+    symphonies: { en: "Five, three of them numbered", tr: "Beş; üçü numaralı" }
+    best_known_for: { en: "*The Carnival of the Animals*, *Danse macabre*, *Samson and Delilah*", tr: "*Hayvanlar Karnavalı*, *Danse macabre*, *Samson ve Dalila*" }
+  bio:
+    en: |-
+      Saint-Saëns was born in Paris in 1835. His father, an official at the Ministry of the Interior, died of tuberculosis when Camille was only a few months old, and the boy was brought up by his mother and her aunt, Charlotte Masson, who taught him the piano. Before he was three he showed perfect pitch, and at ten, in 1846, he made his official debut at the Salle Pleyel, playing concertos by Mozart and Beethoven. At thirteen he entered the Paris Conservatoire, where he studied the organ with François Benoist and composition with Fromental Halévy. He was just as gifted at school, and kept a lifelong amateur passion for astronomy.
+
+      In 1853 he became organist of the church of Saint-Merri, and in 1858 of La Madeleine, the official church of the Empire; Liszt heard him there and called him the greatest organist in the world. From 1861 to 1865 he taught the piano at the École Niedermeyer, where his pupil Gabriel Fauré became a friend for life. In 1871, after the Franco-Prussian War, he helped to found the Société nationale de musique to promote new French music. He admired Liszt's [[symphonic poem]]s and wrote his own, among them *Danse macabre*, and it was through Liszt that his opera *Samson and Delilah* was first staged, at Weimar in 1877. His marriage of 1875 collapsed after both his young sons died in 1878; he left his wife in 1881.
+
+      By the 1880s he was famous across Europe, especially in England, where the Philharmonic Society of London commissioned his "Organ" Symphony in 1886. That year he also finished *The Carnival of the Animals*, but forbade performances of it in his lifetime, fearing it would harm his name as a serious composer. He travelled constantly, wintered in Algiers and Egypt, and in 1908 wrote a score for the film *L'Assassinat du duc de Guise*. In old age he attacked Debussy and the new music of the 20th century, and came to be seen as a conservative. He died in Algiers in December 1921, aged 86, and was given a state funeral at the Madeleine. He once wrote that art exists to create beauty and character, and that feeling comes afterwards; Fauré and Fauré's pupil Ravel revered him as a genius.
+    tr: |-
+      Saint-Saëns 1835'te Paris'te doğdu. İçişleri Bakanlığı'nda memur olan babası, Camille daha birkaç aylıkken veremden öldü; çocuğu annesi ve annesinin teyzesi Charlotte Masson büyüttü, piyanoyu da ona Masson öğretti. Üç yaşına gelmeden mutlak kulağı olduğu anlaşıldı; on yaşında, 1846'da Salle Pleyel'de ilk resmî konserini verdi ve Mozart ile Beethoven'in konçertolarını çaldı. On üç yaşında Paris Konservatuvarı'na girdi; François Benoist'dan org, Fromental Halévy'den kompozisyon dersi aldı. Okulda da aynı ölçüde parlaktı; astronomiye ömrü boyunca amatör bir tutkuyla bağlı kaldı.
+
+      1853'te Saint-Merri Kilisesi'nin, 1858'de de İmparatorluğun resmî kilisesi La Madeleine'in orgcusu oldu; Liszt onu orada dinleyince dünyanın en büyük orgcusu olduğunu söyledi. 1861'den 1865'e kadar École Niedermeyer'de piyano öğretti; öğrencisi Gabriel Fauré ömür boyu dostu olarak kaldı. 1871'de, Fransa-Prusya Savaşı'nın ardından, yeni Fransız müziğini tanıtmak için kurulan Société nationale de musique'in kurucuları arasında yer aldı. Liszt'in [[symphonic poem|senfonik şiirlerine]] hayrandı ve bu türde kendi eserlerini de yazdı; *Danse macabre* bunlardan biridir. *Samson ve Dalila* operası da ilk kez Liszt'in aracılığıyla, 1877'de Weimar'da sahnelendi. 1875'te yaptığı evlilik, iki küçük oğlunun 1878'de ölmesinden sonra dağıldı; 1881'de karısını bıraktı.
+
+      1880'lerde bütün Avrupa'da, en çok da İngiltere'de ünlüydü; Londra Filarmoni Derneği 1886'da ondan "Org" Senfonisi'ni istedi. Aynı yıl *Hayvanlar Karnavalı*'nı da bitirdi, ama ciddi bir besteci olarak adına zarar vereceği kaygısıyla eserin sağlığında çalınmasını yasakladı. Durmadan yolculuk etti, kışları Cezayir'de ve Mısır'da geçirdi; 1908'de *L'Assassinat du duc de Guise* filmi için müzik yazdı. Yaşlılığında Debussy'ye ve 20. yüzyılın yeni müziğine saldırdı, tutucu biri olarak anılır oldu. Aralık 1921'de, 86 yaşında Cezayir'de öldü ve La Madeleine'de devlet töreniyle uğurlandı. Bir yazısında sanatın güzellik ve karakter yaratmak için var olduğunu, duygunun ise sonra geldiğini söylemişti; Fauré ve Fauré'nin öğrencisi Ravel onu bir dahi olarak sayarlardı.
+  portrait:
+    artist: Eugène Pirou
+    title: { en: Camille Saint-Saëns, tr: Camille Saint-Saëns }
+    year: "1880"
+    collection: { en: "Bibliothèque nationale de France, Paris", tr: "Fransa Ulusal Kütüphanesi, Paris" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Camille_Saint-Sa%C3%ABns_by_Eug%C3%A8ne_Pirou,_1880_(cropped,_retouched).jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Camille_Saint-Sa%C3%ABns_by_Eug%C3%A8ne_Pirou,_1880_(cropped,_retouched).jpg
+    width: 2310
+    height: 3080
+    license: Public domain (photograph, 1880; photographer d. 1909; PD-France, PD-US-expired)
+    focal_y: 0.2
+    hero: { width: 1800, height: 2400, bytes: 603435 }
+    thumb: { width: 300, height: 400, bytes: 15774 }
+    full: { width: 2310, height: 3080, bytes: 1051552 }
+    placeholder_color: "#979797"

@@ -1109,3 +1109,815 @@ shostakovich-string-quartet-8:
   thumb: { width: 381, height: 300, bytes: 31351 }
   full: { width: 3173, height: 2500, bytes: 1683611 }
   placeholder_color: "#8f896f"
+
+bach-cello-suite-1:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Giacomo_Ceruti_-_Portrait_of_a_Cellist.jpg
+  source_url: https://www.khm.at/kunstwerke/bildnis-eines-cellospielers-471
+  commons_page: https://commons.wikimedia.org/wiki/File:Giacomo_Ceruti_-_Portrait_of_a_Cellist.jpg
+  width: 2539
+  height: 3187
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100-expired)
+  credit_line: Giacomo Ceruti, Portrait of a Cello Player, c. 1740. Kunsthistorisches Museum, Vienna (GG 9690). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2259, bytes: 1195858 }
+  thumb: { width: 300, height: 377, bytes: 22435 }
+  full: { width: 2539, height: 3187, bytes: 2449148 }
+  placeholder_color: "#564c3e"
+
+bach-violin-partita-2:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Pieter_Claesz._-_Still_Life_with_a_Self-portrait.jpg
+  source_url: https://objektkatalog.gnm.de/objekt/Gm1409
+  commons_page: https://commons.wikimedia.org/wiki/File:Pieter_Claesz._-_Still_Life_with_a_Self-portrait.jpg
+  width: 6668
+  height: 3972
+  medium: Oil on oak panel
+  license: Public domain (PD-Art, PD-old-100)
+  credit_line: Pieter Claesz, Vanitas Still Life with Self-Portrait, 1628. Germanisches Nationalmuseum, Nuremberg (Gm 1409). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 3022, height: 1800, bytes: 983828 }
+  thumb: { width: 504, height: 300, bytes: 25765 }
+  full: { width: 4000, height: 2383, bytes: 1912742 }
+  placeholder_color: "#453315"
+
+bach-brandenburg-concerto-3:
+  # No museum object page found for the Gallerie dell'Accademia; Wikidata item instead.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Accademia_-_Il_concertino_-_Pietro_Longhi.jpg
+  source_url: https://www.wikidata.org/wiki/Q124251986
+  commons_page: https://commons.wikimedia.org/wiki/File:Accademia_-_Il_concertino_-_Pietro_Longhi.jpg
+  width: 4655
+  height: 5609
+  medium: Oil on canvas
+  license: Public domain (painting); photograph by Didier Descouens, CC BY-SA 4.0
+  credit_line: Pietro Longhi, The Little Concert (Il concertino), 1741. Gallerie dell'Accademia, Venice. Image via Wikimedia Commons, public domain (photo Didier Descouens, CC BY-SA 4.0).
+  rights_status: public_domain
+  hero: { width: 1800, height: 2169, bytes: 929717 }
+  thumb: { width: 300, height: 361, bytes: 33395 }
+  full: { width: 3320, height: 4000, bytes: 2822899 }
+  placeholder_color: "#604330"
+
+bach-keyboard-concerto-1:
+  # No SKD object page checked; Wikidata item instead.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Canaletto_-_Dresden_seen_from_the_Right_Bank_of_the_Elbe,_beneath_the_Augusts_Bridge_-_Google_Art_Project.jpg
+  source_url: https://www.wikidata.org/wiki/Q1258467
+  commons_page: https://commons.wikimedia.org/wiki/File:Canaletto_-_Dresden_seen_from_the_Right_Bank_of_the_Elbe,_beneath_the_Augusts_Bridge_-_Google_Art_Project.jpg
+  width: 6175
+  height: 3486
+  medium: Oil on canvas
+  license: Public domain (PD-Art; Google Art Project)
+  credit_line: Bernardo Bellotto, Dresden from the Right Bank of the Elbe below the Augustus Bridge, 1748. Gemäldegalerie Alte Meister, Staatliche Kunstsammlungen Dresden (Gal.-Nr. 606). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 3188, height: 1800, bytes: 581006 }
+  thumb: { width: 531, height: 300, bytes: 23451 }
+  full: { width: 4000, height: 2258, bytes: 926778 }
+  placeholder_color: "#8f9da1"
+
+vivaldi-four-seasons-winter:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Avercamp,_Hendrick_-_Winterlandschap_met_schaatsers_-_SK-A-1718.jpg
+  source_url: https://www.rijksmuseum.nl/en/collection/SK-A-1718
+  commons_page: https://commons.wikimedia.org/wiki/File:Avercamp,_Hendrick_-_Winterlandschap_met_schaatsers_-_SK-A-1718.jpg
+  width: 6278
+  height: 3626
+  medium: Oil on oak panel
+  license: Public domain (PD-Art, PD-old-100; Rijksmuseum CC0)
+  credit_line: Hendrick Avercamp, Winter Landscape with Ice Skaters, c. 1608. Rijksmuseum, Amsterdam (SK-A-1718). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 3116, height: 1800, bytes: 1300855 }
+  thumb: { width: 519, height: 300, bytes: 41110 }
+  full: { width: 4000, height: 2310, bytes: 2313903 }
+  placeholder_color: "#a2987b"
+
+pachelbel-canon:
+  # Portrait format (3141 × 4000): check the hero crop. SMB photograph, marked public domain on Commons
+  # ({{PD-Art|PD-old-auto-expired}}, CC-PD-Mark); no NC licence on the Commons file.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Gerard_ter_Borch_(der_J%C3%BCngere)_(1617_-_1681)_-_The_Concert_-_791G_-_Gem%C3%A4ldegalerie.jpg
+  source_url: https://id.smb.museum/object/869262/das-konzert
+  commons_page: https://commons.wikimedia.org/wiki/File:Gerard_ter_Borch_(der_J%C3%BCngere)_(1617_-_1681)_-_The_Concert_-_791G_-_Gem%C3%A4ldegalerie.jpg
+  width: 3141
+  height: 4000
+  medium: Oil on panel
+  license: Public domain (PD-Art)
+  credit_line: Gerard ter Borch, The Concert, c. 1675. Gemäldegalerie, Staatliche Museen zu Berlin (791G). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2292, bytes: 1012997 }
+  thumb: { width: 300, height: 382, bytes: 19807 }
+  full: { width: 3141, height: 4000, bytes: 3660893 }
+  placeholder_color: "#483715"
+
+bach-orchestral-suite-3:
+  # NGA Open Access (CC0), uploaded by the NGA project. Landscape, 4000 × 2857.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Nicolas_Lancret,_La_Camargo_Dancing,_c._1730,_NGA_96.jpg
+  source_url: https://purl.org/nga/collection/artobject/96
+  commons_page: https://commons.wikimedia.org/wiki/File:Nicolas_Lancret,_La_Camargo_Dancing,_c._1730,_NGA_96.jpg
+  width: 4000
+  height: 2857
+  medium: Oil on canvas
+  license: CC0 (National Gallery of Art Open Access)
+  credit_line: Nicolas Lancret, La Camargo Dancing, c. 1730. National Gallery of Art, Washington, Andrew W. Mellon Collection (1937.1.89). Image via Wikimedia Commons, CC0.
+  rights_status: public_domain
+  hero: { width: 2520, height: 1800, bytes: 1122124 }
+  thumb: { width: 420, height: 300, bytes: 23369 }
+  full: { width: 4000, height: 2857, bytes: 3036716 }
+  placeholder_color: "#534f3a"
+
+haydn-symphony-104:
+  # Yale Center for British Art, Paul Mellon Collection, B1976.7.94 (YCBA open access). Landscape, 5095 × 3831.
+  # source_url uses the Wikidata P4738 formatter; the YCBA site showed a bot check and was not opened: confirm.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Canaletto_-_Westminster_Bridge,_with_the_Lord_Mayor%27s_Procession_on_the_Thames_-_Google_Art_Project.jpg
+  source_url: https://collections.britishart.yale.edu/vufind/Record/1669225
+  commons_page: https://commons.wikimedia.org/wiki/File:Canaletto_-_Westminster_Bridge,_with_the_Lord_Mayor%27s_Procession_on_the_Thames_-_Google_Art_Project.jpg
+  width: 5095
+  height: 3831
+  medium: Oil on canvas
+  license: Public domain (PD-Art; Yale Center for British Art open access)
+  credit_line: Canaletto, Westminster Bridge, with the Lord Mayor's Procession on the Thames, 1747. Yale Center for British Art, Paul Mellon Collection (B1976.7.94). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2394, height: 1800, bytes: 420791 }
+  thumb: { width: 399, height: 300, bytes: 19660 }
+  full: { width: 4000, height: 3008, bytes: 1030780 }
+  placeholder_color: "#86887d"
+
+haydn-cello-concerto-1:
+  # Yale Center for British Art, Paul Mellon Collection, B1977.14.87 (YCBA open access). Landscape, 5821 × 4588.
+  # source_url uses the Wikidata P4738 formatter; the YCBA site showed a bot check and was not opened: confirm URL and medium.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Johan_Joseph_Zoffany_-_The_Gore_Family_with_George,_3rd_Earl_Cowper_-_Google_Art_Project.jpg
+  source_url: https://collections.britishart.yale.edu/vufind/Record/1669246
+  commons_page: https://commons.wikimedia.org/wiki/File:Johan_Joseph_Zoffany_-_The_Gore_Family_with_George,_3rd_Earl_Cowper_-_Google_Art_Project.jpg
+  width: 5821
+  height: 4588
+  medium: Oil on canvas
+  license: Public domain (PD-Art; Yale Center for British Art open access)
+  credit_line: Johann Zoffany, The Gore Family with George, third Earl Cowper, c. 1775. Yale Center for British Art, Paul Mellon Collection (B1977.14.87). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2284, height: 1800, bytes: 636890 }
+  thumb: { width: 381, height: 300, bytes: 27776 }
+  full: { width: 4000, height: 3153, bytes: 2101206 }
+  placeholder_color: "#7a634f"
+
+haydn-trumpet-concerto:
+  # Switched at merge: Chardin is an oval canvas in a gilt frame; a rectangular crop was too small
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Jan_Brueghel_I_%26_Peter_Paul_Rubens_-_Hearing_(Museo_del_Prado).jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Jan_Brueghel_I_%26_Peter_Paul_Rubens_-_Hearing_(Museo_del_Prado).jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:Jan_Brueghel_I_%26_Peter_Paul_Rubens_-_Hearing_(Museo_del_Prado).jpg
+  width: 3051
+  height: 1836
+  medium: Oil on panel
+  license: Public domain (PD-Art)
+  credit_line: Jan Brueghel the Elder and Peter Paul Rubens, Hearing, 1617–18. Museo del Prado, Madrid. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2991, height: 1800, bytes: 1541248 }
+  thumb: { width: 499, height: 300, bytes: 42797 }
+  full: { width: 3051, height: 1836, bytes: 2008840 }
+  placeholder_color: "#5a4131"
+
+mozart-eine-kleine-nachtmusik:
+  # Portrait ≈ 0.78:1 (canvas 55.2 × 43.2 cm). Commons file is the Met's collection image (larger than the Met's current open-access JPEG, 1520 × 1932).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Antoine_Watteau_-_Mezzetin.JPG
+  source_url: https://www.metmuseum.org/art/collection/search/437926
+  commons_page: https://commons.wikimedia.org/wiki/File:Jean-Antoine_Watteau_-_Mezzetin.JPG
+  width: 2261
+  height: 2904
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100-1923; artist d. 1721)
+  credit_line: Jean-Antoine Watteau, Mezzetin, ca. 1718–20. The Metropolitan Museum of Art, New York, Munsey Fund, 1934 (34.138). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2312, bytes: 513240 }
+  thumb: { width: 300, height: 385, bytes: 30402 }
+  full: { width: 2261, height: 2904, bytes: 1053373 }
+  placeholder_color: "#4b4a32"
+
+mozart-piano-concerto-20:
+  # Switched at merge: Bellotto kept for the Bach keyboard concerto (Bellotto already in the catalogue); Fuseli from the alternatives
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Johann_Heinrich_F%C3%BCssli_-_The_Nightmare_55.5.A-d1-2019-04-15.jpg
+  source_url: https://dia.org/collection/nightmare-45573
+  commons_page: https://commons.wikimedia.org/wiki/File:Johann_Heinrich_F%C3%BCssli_-_The_Nightmare_55.5.A-d1-2019-04-15.jpg
+  width: 8192
+  height: 6577
+  medium: Oil on canvas
+  license: Public domain (Detroit Institute of Arts)
+  credit_line: Henry Fuseli, The Nightmare, 1781. Detroit Institute of Arts (55.5.A). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2242, height: 1800, bytes: 846134 }
+  thumb: { width: 374, height: 300, bytes: 14485 }
+  full: { width: 4000, height: 3211, bytes: 3270755 }
+  placeholder_color: "#47322c"
+
+beethoven-violin-sonata-9:
+  # Switched at merge: Loutherbourg image too small (1580 px); Mähler from the alternatives
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/M%C3%A4hler_-_Ludwig_van_Beethoven,_um_1804-1805.png
+  source_url: https://sammlung.wienmuseum.at/objekt/180001-ludwig-van-beethoven-komponist/
+  commons_page: https://commons.wikimedia.org/wiki/File:M%C3%A4hler_-_Ludwig_van_Beethoven,_um_1804-1805.png
+  width: 2983
+  height: 3818
+  medium: Oil on canvas
+  license: Public domain (Wien Museum)
+  credit_line: Joseph Willibrord Mähler, Ludwig van Beethoven, c. 1804–05. Wien Museum, Vienna. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2304, bytes: 608988 }
+  thumb: { width: 300, height: 384, bytes: 11626 }
+  full: { width: 2983, height: 3818, bytes: 1741385 }
+  placeholder_color: "#3c3728"
+
+beethoven-piano-trio-7:
+  # Hamburger Kunsthalle, inv. 1285 (the 1811 version; a c. 1812 version is in the Alte Nationalgalerie, Berlin).
+  # Yorck Project / Bildindex scan, portrait format 3062 × 3765.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Georg_Friedrich_Kersting_001.jpg
+  source_url: https://online-sammlung.hamburger-kunsthalle.de/en/objekt/HK-1285
+  commons_page: https://commons.wikimedia.org/wiki/File:Georg_Friedrich_Kersting_001.jpg
+  width: 3062
+  height: 3765
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Georg Friedrich Kersting, Caspar David Friedrich in His Studio, 1811. Hamburger Kunsthalle (HK-1285). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2213, bytes: 576666 }
+  thumb: { width: 300, height: 369, bytes: 18360 }
+  full: { width: 3062, height: 3765, bytes: 1524540 }
+  placeholder_color: "#6a6040"
+
+beethoven-piano-sonata-21:
+  # National Gallery NG479, Turner Bequest 1856; NG gives "Date made: Before 1807". Yorck Project scan, 5729 × 4226.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Mallord_William_Turner_049.jpg
+  source_url: https://www.nationalgallery.org.uk/paintings/joseph-mallord-william-turner-sun-rising-through-vapour
+  commons_page: https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_049.jpg
+  width: 5729
+  height: 4226
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: J. M. W. Turner, Sun Rising through Vapour, before 1807. The National Gallery, London (NG479). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2440, height: 1800, bytes: 484474 }
+  thumb: { width: 407, height: 300, bytes: 14813 }
+  full: { width: 4000, height: 2951, bytes: 1685347 }
+  placeholder_color: "#675d48"
+
+schubert-string-quintet:
+  # Museum der bildenden Künste Leipzig, inv. 1217 (bought 1931). MdbK online-collection image, 4374 × 3396, strongly
+  # compressed (1.3 MB); a sharper PD-Art gallery photo is File:Lebensstufen (Caspar David Friedrich)-WUS03264.jpg
+  # (4048 × 3367): check it for frame and glare before switching.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Caspar_David_Friedrich_-_Die_Lebensstufen_(ca._1834).jpg
+  source_url: https://mdbk.de/sammlungen/#online-collection
+  commons_page: https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Die_Lebensstufen_(ca._1834).jpg
+  width: 4374
+  height: 3396
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Caspar David Friedrich, The Stages of Life, c. 1834. Museum der bildenden Künste, Leipzig (1217). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2318, height: 1800, bytes: 1068173 }
+  thumb: { width: 386, height: 300, bytes: 14875 }
+  full: { width: 4000, height: 3106, bytes: 2663955 }
+  placeholder_color: "#8d7c5a"
+
+schubert-symphony-5:
+  # Switched at merge: Jakob Alt's watercolour only known from a book reproduction; Runge from the alternatives
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/1805_Runge_Die_H%C3%BClsenbeckschen_Kinder_anagoria.JPG
+  source_url: https://www.hamburger-kunsthalle.de/sammlung-online/philipp-otto-runge/die-huelsenbeckschen-kinder
+  commons_page: https://commons.wikimedia.org/wiki/File:1805_Runge_Die_H%C3%BClsenbeckschen_Kinder_anagoria.JPG
+  width: 4450
+  height: 4400
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: "Philipp Otto Runge, The Hülsenbeck Children, 1805–06. Hamburger Kunsthalle. Photo: anagoria, via Wikimedia Commons, public domain."
+  rights_status: public_domain
+  hero: { width: 1820, height: 1800, bytes: 499936 }
+  thumb: { width: 303, height: 300, bytes: 29213 }
+  full: { width: 4000, height: 3955, bytes: 1962152 }
+  placeholder_color: "#7f6148"
+
+mendelssohn-symphony-4:
+  # Gallery photo by User:Shonagon (3861 × 2535). Check the edges for frame or wall before `npm run images`.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/L%27Arriv%C3%A9e_des_moissonneurs_dans_les_marais_Pontins_-_L%C3%A9opold_Robert_-_Mus%C3%A9e_du_Louvre_Peintures_INV_7663.jpg
+  source_url: https://collections.louvre.fr/ark:/53355/cl010063373
+  commons_page: https://commons.wikimedia.org/wiki/File:L%27Arriv%C3%A9e_des_moissonneurs_dans_les_marais_Pontins_-_L%C3%A9opold_Robert_-_Mus%C3%A9e_du_Louvre_Peintures_INV_7663.jpg
+  width: 3861
+  height: 2535
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-expired)
+  credit_line: Léopold Robert, The Arrival of the Harvesters in the Pontine Marshes, 1830. Musée du Louvre, Paris (INV 7663). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2742, height: 1800, bytes: 649636 }
+  thumb: { width: 457, height: 300, bytes: 29376 }
+  full: { width: 3861, height: 2535, bytes: 1330204 }
+  placeholder_color: "#816e61"
+
+mendelssohn-octet:
+  # National Gallery scan (6000 × 3387, ≈ 1.77:1). Small oil sketch on paper (25.5 × 44.6 cm).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Eduard_Gaertner_(1801-1877)_-_The_Friedrichsgracht,_Berlin_-_NG6524_-_National_Gallery.jpg
+  source_url: https://www.nationalgallery.org.uk/paintings/eduard-gaertner-the-friedrichsgracht-berlin
+  commons_page: https://commons.wikimedia.org/wiki/File:Eduard_Gaertner_(1801-1877)_-_The_Friedrichsgracht,_Berlin_-_NG6524_-_National_Gallery.jpg
+  width: 6000
+  height: 3387
+  medium: Oil on paper, mounted on paper-fibre based board
+  license: Public domain (PD-Art, PD-old-auto-expired)
+  credit_line: Eduard Gaertner, The Friedrichsgracht, Berlin, probably 1830s. The National Gallery, London (NG6524). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 3189, height: 1800, bytes: 1242314 }
+  thumb: { width: 531, height: 300, bytes: 31622 }
+  full: { width: 4000, height: 2258, bytes: 2177481 }
+  placeholder_color: "#9c938b"
+
+schumann-symphony-3:
+  # Museum press image (4977 × 6352, portrait). A cropped version exists on Commons
+  # (File:Carl_Hasenpflug,_Idealansicht_des_Kölner_Doms_(cropped).jpg, 3725 × 6619): use it if the full file
+  # shows frame or margins. Tall format: check the hero crop (focus on the west front and towers).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Carl_Hasenpflug,_Idealansicht_des_K%C3%B6lner_Doms.jpg
+  # No museum object page found: Wikidata item (collection, inventory KSM 1962/73, size, medium).
+  source_url: https://www.wikidata.org/wiki/Q19915177
+  commons_page: https://commons.wikimedia.org/wiki/File:Carl_Hasenpflug,_Idealansicht_des_K%C3%B6lner_Doms.jpg
+  width: 4977
+  height: 6352
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100-expired)
+  credit_line: Carl Hasenpflug, Ideal View of Cologne Cathedral from the South-West, 1834–36. Kölnisches Stadtmuseum, Cologne (KSM 1962/73). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2297, bytes: 562763 }
+  thumb: { width: 300, height: 383, bytes: 21148 }
+  full: { width: 3134, height: 4000, bytes: 2054296 }
+  placeholder_color: "#998b88"
+
+schumann-piano-quintet:
+  # Switched at merge: Danhauser's Liszt at the Piano went to Liszt PC1 (clash); Schwind from the alternatives
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Moritz_von_Schwind_-_Eine_Symphonie_-_Neue_Pinakothek_-_WAF_1017.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Moritz_von_Schwind_-_Eine_Symphonie_-_Neue_Pinakothek_-_WAF_1017.jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:Moritz_von_Schwind_-_Eine_Symphonie_-_Neue_Pinakothek_-_WAF_1017.jpg
+  width: 5304
+  height: 7952
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Moritz von Schwind, A Symphony, 1852. Bayerische Staatsgemäldesammlungen, Munich (WAF 1017). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2699, bytes: 1116336 }
+  thumb: { width: 300, height: 450, bytes: 39985 }
+  full: { width: 2668, height: 4000, bytes: 2863753 }
+  placeholder_color: "#876f47"
+
+chopin-piano-concerto-2:
+  # National Museum in Warsaw scan (2500 × 1679), modest resolution.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Marcin_Zaleski_-_View_of_the_Kazimierz_Palace_from_Powi%C5%9Ble_-_MP_2288_-_National_Museum_in_Warsaw.jpg
+  # No museum object page found: Wikidata item (collection, inventory MP 2288 MNW, size, medium).
+  source_url: https://www.wikidata.org/wiki/Q24686991
+  commons_page: https://commons.wikimedia.org/wiki/File:Marcin_Zaleski_-_View_of_the_Kazimierz_Palace_from_Powi%C5%9Ble_-_MP_2288_-_National_Museum_in_Warsaw.jpg
+  width: 2500
+  height: 1679
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-expired)
+  credit_line: Marcin Zaleski, View of the Kazimierz Palace from Powiśle, 1830s. National Museum in Warsaw (MP 2288 MNW). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2500, height: 1679, bytes: 797568 }
+  thumb: { width: 447, height: 300, bytes: 26134 }
+  full: { width: 2500, height: 1679, bytes: 846593 }
+  placeholder_color: "#90826d"
+
+brahms-symphony-2:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Marko_Pernhart_-_A_view_of_Lake_W%C3%B6rthersee_with_Maria_Loretto_and_Freyenthurn_Castle.jpg
+  source_url: https://www.dorotheum.com/en/l/1091998/
+  commons_page: https://commons.wikimedia.org/wiki/File:Marko_Pernhart_-_A_view_of_Lake_W%C3%B6rthersee_with_Maria_Loretto_and_Freyenthurn_Castle.jpg
+  width: 4833
+  height: 3869
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100)
+  credit_line: Markus Pernhart, View of the Wörthersee with Maria Loretto and Freyenthurn Castle, 1850. Private collection, Austria. Image via Wikimedia Commons (Dorotheum), public domain.
+  rights_status: public_domain
+  hero: { width: 2248, height: 1800, bytes: 866029 }
+  thumb: { width: 375, height: 300, bytes: 13496 }
+  full: { width: 4000, height: 3202, bytes: 2801449 }
+  placeholder_color: "#a2947f"
+
+brahms-piano-concerto-2:
+  # Switched at merge: Tina Blau's Spring in the Prater went to Mahler 1 (clash); Schindler from the alternatives
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Emil_Jakob_Schindler_-_M%C3%A4rzstimmung_%E2%80%93_Vorfr%C3%BChling_im_Wienerwald_-_4013_-_%C3%96sterreichische_Galerie_Belvedere.jpg
+  source_url: https://digital.belvedere.at/objects/2807/marzstimmung--vorfruhling-im-wienerwald
+  commons_page: https://commons.wikimedia.org/wiki/File:Emil_Jakob_Schindler_-_M%C3%A4rzstimmung_%E2%80%93_Vorfr%C3%BChling_im_Wienerwald_-_4013_-_%C3%96sterreichische_Galerie_Belvedere.jpg
+  width: 2619
+  height: 3508
+  medium: Oil on canvas
+  license: Public domain (PD-Art; Belvedere)
+  credit_line: "Emil Jakob Schindler, March Mood: Early Spring in the Vienna Woods, 1884. Österreichische Galerie Belvedere, Vienna (4013). Image via Wikimedia Commons, public domain."
+  rights_status: public_domain
+  hero: { width: 1800, height: 2411, bytes: 2113632 }
+  thumb: { width: 300, height: 402, bytes: 26857 }
+  full: { width: 2619, height: 3508, bytes: 4046977 }
+  placeholder_color: "#8e806e"
+
+tchaikovsky-symphony-4:
+  # Google Art Project file, very wide (8077 × 3764, ≈ 2.15:1): check the hero crop keeps the fair in the centre.
+  # Date: Google Arts & Culture (Russian Museum data) says 1916, Wikidata Q18683418 says 1919 (see research note).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Boris_Kustodiev_-_Shrovetide_-_Google_Art_Project.jpg
+  source_url: https://artsandculture.google.com/asset/ZwF572j7IPGWnA
+  commons_page: https://commons.wikimedia.org/wiki/File:Boris_Kustodiev_-_Shrovetide_-_Google_Art_Project.jpg
+  width: 8077
+  height: 3764
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto; artist d. 1927)
+  credit_line: Boris Kustodiev, Shrovetide (Maslenitsa), 1916. State Russian Museum, St Petersburg (Ж-4358). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 3600, height: 1678, bytes: 1221772 }
+  thumb: { width: 644, height: 300, bytes: 52520 }
+  full: { width: 4000, height: 1864, bytes: 1656848 }
+  placeholder_color: "#a38d9e"
+
+tchaikovsky-symphony-5:
+  # Landscape ≈ 1.48:1. Commons featured picture (Hermitage-torrent scan). The bears are by Savitsky.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Shishkin,_Ivan_-_Morning_in_a_Pine_Forest.jpg
+  source_url: https://www.tretyakovgallery.ru/collection/utro-v-sosnovom-lesu/
+  commons_page: https://commons.wikimedia.org/wiki/File:Shishkin,_Ivan_-_Morning_in_a_Pine_Forest.jpg
+  width: 5668
+  height: 3840
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100-expired)
+  credit_line: Ivan Shishkin and Konstantin Savitsky, Morning in a Pine Forest, 1889. State Tretyakov Gallery, Moscow (inv. 841). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2657, height: 1800, bytes: 1526734 }
+  thumb: { width: 443, height: 300, bytes: 45446 }
+  full: { width: 4000, height: 2710, bytes: 3409645 }
+  placeholder_color: "#615f48"
+
+tchaikovsky-serenade-for-strings:
+  # Landscape ≈ 1.21:1. Tretyakov version (inv. 2670); a smaller variant is in the Russian Museum.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Moscow_Courtyard_(Polenov,_1878).jpg
+  source_url: https://www.wikidata.org/wiki/Q4304117
+  commons_page: https://commons.wikimedia.org/wiki/File:Moscow_Courtyard_(Polenov,_1878).jpg
+  width: 4999
+  height: 4122
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-expired; artist d. 1927)
+  credit_line: Vasily Polenov, Moscow Courtyard, 1878. State Tretyakov Gallery, Moscow (inv. 2670). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2183, height: 1800, bytes: 1072274 }
+  thumb: { width: 364, height: 300, bytes: 27897 }
+  full: { width: 4000, height: 3298, bytes: 3155466 }
+  placeholder_color: "#969271"
+
+borodin-string-quartet-2:
+  # Portrait format (1784 × 2508, ≈ 0.71:1), moderate resolution: check the hero crop keeps the woman on the bench.
+  # Collection from the credit on the smaller Commons file "Moonlight night by Ivan Kramskoy (GTG).jpeg"; inventory number not found.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Ivan_Kramskoi_-_Moonlit_Night(%D0%9B%D1%83%D0%BD%D0%BD%D0%B0%D1%8F_%D0%BD%D0%BE%D1%87%D1%8C)_(1880).jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Moonlight_night_by_Ivan_Kramskoy_(GTG).jpeg
+  commons_page: https://commons.wikimedia.org/wiki/File:Ivan_Kramskoi_-_Moonlit_Night(%D0%9B%D1%83%D0%BD%D0%BD%D0%B0%D1%8F_%D0%BD%D0%BE%D1%87%D1%8C)_(1880).jpg
+  width: 1784
+  height: 2508
+  medium: Oil on canvas
+  license: Public domain (PD-old-70-1923; artist d. 1887)
+  credit_line: Ivan Kramskoi, Moonlit Night, 1880. State Tretyakov Gallery, Moscow. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1784, height: 2508, bytes: 860326 }
+  thumb: { width: 300, height: 422, bytes: 32043 }
+  full: { width: 1784, height: 2508, bytes: 912917 }
+  placeholder_color: "#242421"
+
+rachmaninoff-piano-concerto-3:
+  # NGA Open Access file (CC0), landscape ≈ 1.28:1. A 13134 × 10196 Commons file of the same painting also exists:
+  # https://commons.wikimedia.org/wiki/File:George_Bellows_-_Blue_Morning_(1909).jpg
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/George_Bellows,_Blue_Morning,_1909,_NGA_46557.jpg
+  source_url: https://www.nga.gov/collection/art-object-page.46557.html
+  commons_page: https://commons.wikimedia.org/wiki/File:George_Bellows,_Blue_Morning,_1909,_NGA_46557.jpg
+  width: 4000
+  height: 3117
+  medium: Oil on canvas
+  license: Public domain (CC0, National Gallery of Art Open Access)
+  credit_line: George Bellows, Blue Morning, 1909. National Gallery of Art, Washington, Chester Dale Collection (1963.10.82). Image via National Gallery of Art Open Access, public domain.
+  rights_status: public_domain
+  hero: { width: 2310, height: 1800, bytes: 1186482 }
+  thumb: { width: 385, height: 300, bytes: 26028 }
+  full: { width: 4000, height: 3117, bytes: 4331612 }
+  placeholder_color: "#707b7a"
+
+dvorak-symphony-8:
+  # Gallery photograph, very large (12000 × 9480): the pipeline downscales it. Inventory number from Wikidata
+  # (Q117213566); the NG Prague collection site did not answer from this machine.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/1887_Chittussi_Chrudimka-Tal_Nationalgalerie_Prag_anagoria.jpg
+  source_url: https://sbirky.ngprague.cz/dielo/CZE:NG.O_10266
+  commons_page: https://commons.wikimedia.org/wiki/File:1887_Chittussi_Chrudimka-Tal_Nationalgalerie_Prag_anagoria.jpg
+  width: 12000
+  height: 9480
+  medium: Oil on panel
+  license: Public domain (PD-Art, PD-old-auto-expired; artist d. 1891)
+  credit_line: Antonín Chittussi, The Chrudimka Valley (Údolí Chrudimky), 1887. National Gallery Prague (O 10266). Image via Wikimedia Commons (photo anagoria), public domain.
+  rights_status: public_domain
+  hero: { width: 2278, height: 1800, bytes: 515459 }
+  thumb: { width: 380, height: 300, bytes: 25977 }
+  full: { width: 4000, height: 3160, bytes: 1211766 }
+  placeholder_color: "#867e55"
+
+dvorak-piano-quintet-2:
+  # Gallery photograph, very large (12000 × 7871): the pipeline downscales it. Inventory number from Wikidata
+  # (Q117213499); the NG Prague collection site did not answer from this machine.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/1889_Hynais_Gesellschaft_in_der_Natur_Nationalgalerie_Prag_anagoria.jpg
+  source_url: https://sbirky.ngprague.cz/dielo/CZE:NG.DO_2007
+  commons_page: https://commons.wikimedia.org/wiki/File:1889_Hynais_Gesellschaft_in_der_Natur_Nationalgalerie_Prag_anagoria.jpg
+  width: 12000
+  height: 7871
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-expired; artist d. 1925)
+  credit_line: Vojtěch Hynais, Company in the Country (Společnost na venkově), 1889. National Gallery Prague (DO 2007). Image via Wikimedia Commons (photo anagoria), public domain.
+  rights_status: public_domain
+  hero: { width: 2744, height: 1800, bytes: 937293 }
+  thumb: { width: 457, height: 300, bytes: 50726 }
+  full: { width: 4000, height: 2624, bytes: 1747699 }
+  placeholder_color: "#585c57"
+
+grieg-peer-gynt-suite-1:
+  # Museum photograph, large (10232 × 6752): the pipeline downscales it. Commons licence:
+  # {{Licensed-PD-Art|PD-old-auto-expired|cc-by-4.0|deathyear=1914}} (painting PD; photo also CC BY 4.0 by the museum).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Theodor_Kittelsen_-_Soria_Moria_Palace_-_NG.M.00551_-_National_Museum_of_Art%2C_Architecture_and_Design.jpg
+  source_url: https://www.nasjonalmuseet.no/en/collection/object/NG.M.00551
+  commons_page: https://commons.wikimedia.org/wiki/File:Theodor_Kittelsen_-_Soria_Moria_Palace_-_NG.M.00551_-_National_Museum_of_Art,_Architecture_and_Design.jpg
+  width: 10232
+  height: 6752
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-expired; artist d. 1914); photograph also CC BY 4.0 (Nasjonalmuseet)
+  credit_line: Theodor Kittelsen, Soria Moria Palace (Der laa Soria Moria Slot), 1900. Nasjonalmuseet, Oslo (NG.M.00551). Image via Wikimedia Commons, public domain (photo Nasjonalmuseet / Børre Høstland, CC BY 4.0).
+  rights_status: public_domain
+  hero: { width: 2728, height: 1800, bytes: 909794 }
+  thumb: { width: 455, height: 300, bytes: 16041 }
+  full: { width: 4000, height: 2640, bytes: 2648743 }
+  placeholder_color: "#969d95"
+
+mahler-symphony-1:
+  # Commons licence: {{Licensed-PD-Art|PD-old-auto-1923|cc-by-sa-4.0|deathyear=1916}} (painting PD; photo also
+  # CC BY-SA 4.0 by the Belvedere). As for beethoven-piano-concerto-3: faithful photos of PD 2D art are unprotected
+  # in the EU (DSM art. 14) and the US.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Tina_Blau_-_Fr%C3%BChling_im_Prater_-_2233_-_%C3%96sterreichische_Galerie_Belvedere.jpg
+  source_url: https://sammlung.belvedere.at/objects/8033/fruhling-im-prater
+  commons_page: https://commons.wikimedia.org/wiki/File:Tina_Blau_-_Fr%C3%BChling_im_Prater_-_2233_-_%C3%96sterreichische_Galerie_Belvedere.jpg
+  width: 3508
+  height: 2609
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-1923); photograph also CC BY-SA 4.0 (Belvedere)
+  credit_line: Tina Blau, Spring in the Prater (Frühling im Prater), 1882. Belvedere, Vienna (Inv. 2233). Image via Wikimedia Commons, public domain (photo Belvedere, CC BY-SA 4.0).
+  rights_status: public_domain
+  hero: { width: 2420, height: 1800, bytes: 1462984 }
+  thumb: { width: 403, height: 300, bytes: 34881 }
+  full: { width: 3508, height: 2609, bytes: 3223505 }
+  placeholder_color: "#878271"
+
+mahler-symphony-4:
+  # Google Art Project reproduction (portrait format, 3543 × 4389). Do not use the SMB's own photos, which may be
+  # CC BY-NC-SA. The hero crop loses the sides; both faces are in the upper half.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Arnold_Boecklin-fiedelnder_Tod.jpg
+  source_url: https://recherche.smb.museum/detail/962057
+  commons_page: https://commons.wikimedia.org/wiki/File:Arnold_Boecklin-fiedelnder_Tod.jpg
+  width: 3543
+  height: 4389
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old; artist d. 1901)
+  credit_line: Arnold Böcklin, Self-Portrait with Death Playing the Fiddle (Selbstbildnis mit fiedelndem Tod), 1872. Alte Nationalgalerie, Staatliche Museen zu Berlin (A I 633). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2230, bytes: 1098130 }
+  thumb: { width: 300, height: 372, bytes: 20974 }
+  full: { width: 3229, height: 4000, bytes: 2730957 }
+  placeholder_color: "#312e24"
+
+bruckner-symphony-4:
+  # Gallery photo by User:anagoria (2014), landscape ≈ 1.52:1. The SMB's own photo is CC BY-NC-SA and is
+  # not used. The SMB online-collection object page was not found; source_url is the Wikidata item.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/1815_Schinkel_Mittelalterliche_Stadt_an_einem_Fluss_anagoria.JPG
+  source_url: https://www.wikidata.org/wiki/Q50119136
+  commons_page: https://commons.wikimedia.org/wiki/File:1815_Schinkel_Mittelalterliche_Stadt_an_einem_Fluss_anagoria.JPG
+  width: 4827
+  height: 3168
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100-expired; artist d. 1841)
+  credit_line: Karl Friedrich Schinkel, Medieval City on a River (Mittelalterliche Stadt an einem Fluss), 1815. Alte Nationalgalerie, Staatliche Museen zu Berlin (NG 6a/91). Image via Wikimedia Commons (photo anagoria), public domain.
+  rights_status: public_domain
+  hero: { width: 2743, height: 1800, bytes: 692458 }
+  thumb: { width: 457, height: 300, bytes: 25071 }
+  full: { width: 4000, height: 2625, bytes: 1601792 }
+  placeholder_color: "#6b6960"
+
+sibelius-symphony-2:
+  # Switched at merge: Pielisjärvi view is 3.3:1 and only 1206 px high, too wide for the portrait hero; Järnefelt's Koli study from the alternatives
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Eero_J%C3%A4rnefelt_-_Harjoitelma_Kolilta_-_A_III_2640_-_Finnish_National_Gallery.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Eero_J%C3%A4rnefelt_-_Harjoitelma_Kolilta_-_A_III_2640_-_Finnish_National_Gallery.jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:Eero_J%C3%A4rnefelt_-_Harjoitelma_Kolilta_-_A_III_2640_-_Finnish_National_Gallery.jpg
+  width: 4000
+  height: 3098
+  medium: Study on paper
+  license: Public domain (PD-Art; Finnish National Gallery, CC0)
+  credit_line: Eero Järnefelt, Study from Koli, 1895. Finnish National Gallery, Ateneum Art Museum, Helsinki (A III 2640). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2324, height: 1800, bytes: 733091 }
+  thumb: { width: 387, height: 300, bytes: 25424 }
+  full: { width: 4000, height: 3098, bytes: 1598753 }
+  placeholder_color: "#7c7262"
+
+elgar-violin-concerto:
+  # Auction photograph (Christie's, 2013), square ≈ 0.99:1. Private collection: source_url is the Christie's lot,
+  # whose essay names the sitters (Mary, Effie and Alice "Carrie" Millais, Alice on the right).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/John_Everett_Millais_-_Sisters,_1868.jpg
+  source_url: https://www.christies.com/en/lot/lot-5701815
+  commons_page: https://commons.wikimedia.org/wiki/File:John_Everett_Millais_-_Sisters,_1868.jpg
+  width: 3179
+  height: 3200
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-1923; artist d. 1896)
+  credit_line: John Everett Millais, Sisters, 1868. Private collection. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 1812, bytes: 1179969 }
+  thumb: { width: 300, height: 302, bytes: 25885 }
+  full: { width: 3179, height: 3200, bytes: 2235322 }
+  placeholder_color: "#7f7462"
+
+debussy-prelude-faune:
+  # Switched at merge: Böcklin kept for Mahler 4 (Böcklin already in the catalogue); Corot from the alternatives
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Camille_Corot_-_A_Morning._The_Dance_of_the_Nymphs_-_Google_Art_Project.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Camille_Corot_-_A_Morning._The_Dance_of_the_Nymphs_-_Google_Art_Project.jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:Camille_Corot_-_A_Morning._The_Dance_of_the_Nymphs_-_Google_Art_Project.jpg
+  width: 5442
+  height: 4063
+  medium: Oil on canvas
+  license: Public domain (PD-Art; Google Art Project)
+  credit_line: Camille Corot, A Morning. The Dance of the Nymphs, c. 1850. Musée d'Orsay, Paris. Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2411, height: 1800, bytes: 812469 }
+  thumb: { width: 402, height: 300, bytes: 26995 }
+  full: { width: 4000, height: 2986, bytes: 2297867 }
+  placeholder_color: "#5a5a4e"
+
+ravel-piano-concerto-g:
+  # Google Art Project file, landscape ≈ 1.38:1. The MNAC page dates it 1888 (Commons: c. 1890) and labels it public domain.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Dar%C3%ADo_de_Regoyos_-_Basque_Celebration_(dance_at_El_Antiguo,_San_Sebasti%C3%A1n)_-_Google_Art_Project.jpg
+  source_url: https://www.museunacional.cat/en/colleccio/basque-celebration-dance-el-antiguo-san-sebastian/dario-de-regoyos/065614-000
+  commons_page: https://commons.wikimedia.org/wiki/File:Dar%C3%ADo_de_Regoyos_-_Basque_Celebration_(dance_at_El_Antiguo,_San_Sebasti%C3%A1n)_-_Google_Art_Project.jpg
+  width: 5197
+  height: 3769
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100-1923; artist d. 1913)
+  credit_line: Darío de Regoyos, Basque Celebration (Dance at El Antiguo, San Sebastián), 1888. Museu Nacional d'Art de Catalunya, Barcelona (065614-000). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2482, height: 1800, bytes: 1480573 }
+  thumb: { width: 414, height: 300, bytes: 32593 }
+  full: { width: 4000, height: 2901, bytes: 3672593 }
+  placeholder_color: "#787c71"
+
+ravel-string-quartet:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Henri-Edmond_Cross_-_The_Evening_Air_-_Google_Art_Project.jpg
+  source_url: https://artsandculture.google.com/asset/9AFV5fBXEc99-g
+  commons_page: https://commons.wikimedia.org/wiki/File:Henri-Edmond_Cross_-_The_Evening_Air_-_Google_Art_Project.jpg
+  width: 7959
+  height: 5610
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100)
+  credit_line: Henri-Edmond Cross, The Evening Air (L'Air du soir), c. 1893. Musée d'Orsay, Paris (RF 1976 81). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2554, height: 1800, bytes: 1527186 }
+  thumb: { width: 426, height: 300, bytes: 62450 }
+  full: { width: 4000, height: 2819, bytes: 3973748 }
+  placeholder_color: "#a09585"
+
+vaughan-williams-lark-ascending:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/John_Constable_-_The_Cornfield.jpg
+  source_url: https://www.nationalgallery.org.uk/paintings/john-constable-the-cornfield
+  commons_page: https://commons.wikimedia.org/wiki/File:John_Constable_-_The_Cornfield.jpg
+  width: 2024
+  height: 2364
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100; Yorck Project)
+  credit_line: John Constable, The Cornfield, 1826. The National Gallery, London (NG130). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2102, bytes: 814181 }
+  thumb: { width: 300, height: 350, bytes: 32077 }
+  full: { width: 2024, height: 2364, bytes: 1016742 }
+  placeholder_color: "#8d805f"
+
+prokofiev-symphony-1:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Konstantin_Somov_-_%D0%94%D0%B0%D0%BC%D0%B0_%D0%B2_%D0%B3%D0%BE%D0%BB%D1%83%D0%B1%D0%BE%D0%BC._%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%95.%D0%9C.%D0%9C%D0%B0%D1%80%D1%82%D1%8B%D0%BD%D0%BE%D0%B2%D0%BE%D0%B9_-_Google_Art_Project.jpg
+  source_url: https://artsandculture.google.com/asset/qwG83e42IKGkDA
+  commons_page: https://commons.wikimedia.org/wiki/File:Konstantin_Somov_-_%D0%94%D0%B0%D0%BC%D0%B0_%D0%B2_%D0%B3%D0%BE%D0%BB%D1%83%D0%B1%D0%BE%D0%BC._%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%95.%D0%9C.%D0%9C%D0%B0%D1%80%D1%82%D1%8B%D0%BD%D0%BE%D0%B2%D0%BE%D0%B9_-_Google_Art_Project.jpg
+  width: 3929
+  height: 4000
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-expired)
+  credit_line: Konstantin Somov, Lady in Blue (Portrait of Yelizaveta Martynova), 1897–1900. State Tretyakov Gallery, Moscow. Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 1833, bytes: 382913 }
+  thumb: { width: 300, height: 305, bytes: 17399 }
+  full: { width: 3929, height: 4000, bytes: 1504352 }
+  placeholder_color: "#35332b"
+
+shostakovich-piano-concerto-2:
+  # Switched at merge: Kustodiev's Shrovetide went to Tchaikovsky 4 (clash); Renoir from the alternatives
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Two_Young_Girls_at_the_Piano_MET_DT3131.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Two_Young_Girls_at_the_Piano_MET_DT3131.jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:Two_Young_Girls_at_the_Piano_MET_DT3131.jpg
+  width: 2923
+  height: 3722
+  medium: Oil on canvas
+  license: CC0 (The Metropolitan Museum of Art, Open Access)
+  credit_line: "Pierre-Auguste Renoir, Two Young Girls at the Piano, 1892. The Metropolitan Museum of Art, New York, Robert Lehman Collection (1975.1.201). Image: The Met, CC0."
+  rights_status: public_domain
+  hero: { width: 1800, height: 2292, bytes: 802494 }
+  thumb: { width: 300, height: 382, bytes: 25527 }
+  full: { width: 2923, height: 3722, bytes: 2409801 }
+  placeholder_color: "#78705c"
+
+barber-adagio-for-strings:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/George_Inness_-_The_Home_of_the_Heron_-_1911.31_-_Art_Institute_of_Chicago.jpg
+  source_url: https://www.artic.edu/artworks/64724
+  commons_page: https://commons.wikimedia.org/wiki/File:George_Inness_-_The_Home_of_the_Heron_-_1911.31_-_Art_Institute_of_Chicago.jpg
+  width: 3000
+  height: 1972
+  medium: Oil on canvas
+  license: Public domain (CC0, Art Institute of Chicago)
+  credit_line: George Inness, The Home of the Heron, 1893. Art Institute of Chicago (1911.31). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2738, height: 1800, bytes: 821301 }
+  thumb: { width: 456, height: 300, bytes: 17326 }
+  full: { width: 3000, height: 1972, bytes: 1211233 }
+  placeholder_color: "#5b3f11"
+
+mozart-sinfonia-concertante-k364:
+  # Landscape ≈ 1.34:1 (canvas 140.4 × 187.6 cm). Google Arts & Culture capture of the Mozarteum's painting; attribution to della Croce is traditional.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Mozart_Family_Croce.jpg
+  source_url: https://artsandculture.google.com/asset/the-mozart-famliy-johann-nepomuk-della-croce/PwFMv8-fFDJkDw
+  commons_page: https://commons.wikimedia.org/wiki/File:Mozart_Family_Croce.jpg
+  width: 10867
+  height: 8120
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-expired; artist d. 1819)
+  credit_line: Attributed to Johann Nepomuk della Croce, The Mozart Family, 1780–81. International Mozarteum Foundation, Mozart Residence, Salzburg (F 000.291). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2409, height: 1800, bytes: 744493 }
+  thumb: { width: 401, height: 300, bytes: 22265 }
+  full: { width: 4000, height: 2989, bytes: 2743806 }
+  placeholder_color: "#644a34"
+
+mozart-ave-verum-corpus:
+  # Landscape ≈ 1.58:1 (panel 116 × 191 cm). The Prado's own image without frame; the other Prado file on Commons ("restaurada") includes the frame.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/The_Last_Supper_by_Vicente_Juan_Macip.jpg
+  source_url: https://www.museodelprado.es/coleccion/obra-de-arte/la-ultima-cena/2800c04d-a3ad-41eb-a75b-fe359d7d1dde
+  commons_page: https://commons.wikimedia.org/wiki/File:The_Last_Supper_by_Vicente_Juan_Macip.jpg
+  width: 2952
+  height: 1869
+  medium: Oil on panel
+  license: Public domain (PD-Art, PD-old-auto-expired; artist d. 1579)
+  credit_line: Juan de Juanes, The Last Supper, c. 1562. Museo Nacional del Prado, Madrid (P000846). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2843, height: 1800, bytes: 659881 }
+  thumb: { width: 474, height: 300, bytes: 29892 }
+  full: { width: 2952, height: 1869, bytes: 725974 }
+  placeholder_color: "#675a45"
+
+mozart-flute-and-harp-concerto:
+  # Switched at merge: Ducreux image only 1297 px wide; Ollivier from the alternatives
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Le_Th%C3%A9_%C3%A0_l%27anglaise.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Le_Th%C3%A9_%C3%A0_l%27anglaise.jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:Le_Th%C3%A9_%C3%A0_l%27anglaise.jpg
+  width: 3564
+  height: 2702
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Michel-Barthélemy Ollivier, English Tea in the Salon des Quatre-Glaces at the Palais du Temple, 1766. Château de Versailles. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2374, height: 1800, bytes: 280881 }
+  thumb: { width: 396, height: 300, bytes: 18404 }
+  full: { width: 3564, height: 2702, bytes: 564763 }
+  placeholder_color: "#7f664e"
+
+liszt-piano-concerto-1:
+  # The Staatliche Museen's own photo (Jörg P. Anders), marked Public Domain Mark 1.0 on the SMB object page.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Danhauser,_Josef_-_Franz_Liszt_am_Fl%C3%BCgel_phantasierend.jpg
+  source_url: https://recherche.smb.museum/detail/968187
+  commons_page: https://commons.wikimedia.org/wiki/File:Danhauser,_Josef_-_Franz_Liszt_am_Fl%C3%BCgel_phantasierend.jpg
+  width: 4000
+  height: 3004
+  medium: Oil on wood
+  license: Public domain (PD-Art, PD-old-100-expired; museum photograph Public Domain Mark 1.0)
+  credit_line: Josef Danhauser, Liszt at the Piano (Franz Liszt am Flügel phantasierend), 1840. Alte Nationalgalerie, Staatliche Museen zu Berlin (on loan from the Federal Republic of Germany, F.V. 42). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2397, height: 1800, bytes: 671221 }
+  thumb: { width: 399, height: 300, bytes: 25979 }
+  full: { width: 4000, height: 3004, bytes: 1713911 }
+  placeholder_color: "#37291f"
+
+saint-saens-symphony-3:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/The_Organ_Rehearsal_MET_DP160223.jpg
+  source_url: https://www.metmuseum.org/art/collection/search/436880
+  commons_page: https://commons.wikimedia.org/wiki/File:The_Organ_Rehearsal_MET_DP160223.jpg
+  width: 3919
+  height: 2622
+  medium: Oil on canvas
+  license: Public domain (CC0, The Met Open Access)
+  credit_line: Henry Lerolle, The Organ Rehearsal, 1885. The Metropolitan Museum of Art, New York, Gift of George I. Seney, 1887 (87.8.12). Image via The Met Open Access, public domain.
+  rights_status: public_domain
+  hero: { width: 2690, height: 1800, bytes: 475828 }
+  thumb: { width: 448, height: 300, bytes: 15214 }
+  full: { width: 3919, height: 2622, bytes: 1244745 }
+  placeholder_color: "#685948"
+
+saint-saens-cello-concerto-1:
+  # Commons gives the photo's source only as "art database"; it is a faithful, frameless reproduction.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Monet_-_Impression,_Sunrise.jpg
+  source_url: https://www.marmottan.fr/notice/4014/
+  commons_page: https://commons.wikimedia.org/wiki/File:Monet_-_Impression,_Sunrise.jpg
+  width: 5773
+  height: 4478
+  medium: Oil on canvas
+  license: Public domain (PD-old-auto-1996; photograph of a public-domain painting)
+  credit_line: Claude Monet, Impression, Sunrise (Impression, soleil levant), 1872. Musée Marmottan Monet, Paris (inv. 4014). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2321, height: 1800, bytes: 751011 }
+  thumb: { width: 387, height: 300, bytes: 17431 }
+  full: { width: 4000, height: 3103, bytes: 2452366 }
+  placeholder_color: "#818375"

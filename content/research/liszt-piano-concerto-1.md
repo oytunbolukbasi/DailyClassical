@@ -57,6 +57,10 @@ Fields copied from the verified entry in `content/research/chopin-piano-concerto
 | Image | File:Danhauser,_Josef_-_Franz_Liszt_am_Flügel_phantasierend.jpg, 4000 × 3004 px, landscape, from the SMB | Commons | OK |
 | Pairing | Liszt's concerto themes date from c. 1830 and the work was finished in 1849–56; the painting shows him in 1840, the virtuoso years in which he was shaping it. "Most famous pianist in Europe" follows `composers.yaml` ("the most celebrated pianist in Europe") | Wikipedia; composers.yaml | OK |
 
+**Clash (found 2026-10-24).** `schumann-piano-quintet` (group E) proposes the same painting with a gallery photo by User:anagoria. Kept here as first choice because it shows Liszt himself; alternatives in `liszt-piano-concerto-1.shared.md`. The SMB page's photo credit was re-read: "Jörg P. Anders Public Domain Mark 1.0".
+
+**Fix (2026-10-24).** The TR `hook:` contains ": " and did not parse as yaml; it is now quoted.
+
 ---
 
 ## 4. Facts in the guide

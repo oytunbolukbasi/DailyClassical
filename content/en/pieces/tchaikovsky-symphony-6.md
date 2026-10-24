@@ -30,8 +30,8 @@ also_recommended:
     venue: Musikverein, Vienna
     release_year: 1961
     year: 1960
-    # Official DG album not found on Spotify; third-party reissues of unconfirmed identity exist.
-    spotify_url: null
+    # DG album "Symphonies Nos. 4, 5 & 6", tracks 9–12 (found Oct 2026).
+    spotify_url: https://open.spotify.com/album/6SZWTAgkL2iz9pvgVyt1Ej
 painting:
   artist: Isaac Levitan
   title: Above Eternal Peace

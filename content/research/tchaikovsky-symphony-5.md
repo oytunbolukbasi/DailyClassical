@@ -98,3 +98,46 @@ IV: intro (bars 1–57) assumed ≈ 1:55; Allegro ≈ 0.99 s per bar; motto bar 
 | II Andante cantabile | 11:53 | 0:00, 0:30, 1:30, 3:00, 4:15, 6:05, 6:40, 8:40, 10:10, Last 90 seconds | Middle section (≈ 4:15) and the two motto entries (≈ 6:05, ≈ 10:10) |
 | III Valse | 5:31 | 0:00, 0:30, 1:30, 2:10, 4:50, Last 15 seconds | Trio (≈ 1:30) and motto (≈ 4:50) |
 | IV Finale | 11:03 | 0:00, 1:55, 2:45, 3:50, 5:55, 8:35, 8:50, 9:50, Last 40 seconds | Length of the introduction (≈ 1:55), recapitulation (≈ 5:55), the big pause (≈ 8:35) |
+
+---
+
+## 6. Reference switched (Oct 2026): Petrenko / Berliner Philharmoniker (BPHR, 2019)
+
+The product owner's favourite recording replaces Mravinsky as the reference (guide §6.3). Mravinsky moves to `also_recommended` ahead of Karajan; sections 1 and 5 above describe the old reference and are kept as history.
+
+| Field | File value | Verified value | Source URL | Status |
+| --- | --- | --- | --- | --- |
+| Conductor / orchestra | Kirill Petrenko / Berliner Philharmoniker | Spotify credits "Pyotr Ilyich Tchaikovsky, Berlin Philharmonic, Kirill Petrenko" on every track | https://open.spotify.com/embed/album/0yTolmgBhMcUiA0E4fGUsu | VERIFIED |
+| Label | Berliner Philharmoniker Recordings | Spotify album page: "℗ 2020 Berlin Phil Media GmbH", release date 2020-10-23 (digital single *Tchaikovsky: Symphony No. 5*). Discogs: label Berliner Philharmoniker Recordings | https://open.spotify.com/album/0yTolmgBhMcUiA0E4fGUsu ; https://api.discogs.com/releases/15974845 | VERIFIED |
+| Catalogue | BPHR 200351 (box set) | The digital single has no catalogue number. The same performance is in the box *Kirill Petrenko: Beethoven / Tschaikowsky / Schmidt / Stephan* (DCH title "The beginning of a partnership"), BPHR200351, released 2020-09-25, 5 CD + 2 Blu-ray; Symphony No. 5 listed at 45:13, the same as the Spotify tracks' total (2713358 ms). LP edition BPHR 200352 (Discogs 27452751) | https://api.discogs.com/releases/15974845 ; https://www.digitalconcerthall.com/en/edition/BPHR20035 | OK |
+| Recorded | 9 March 2019 | Digital Concert Hall concert 51854 ("Kirill Petrenko and Patricia Kopatchinskaja": Schoenberg Violin Concerto, Ravel, Milhaud, Tchaikovsky 5): `dateCreated` 2019-03-09T18:00:00+00:00 (19:00 Berlin time). A secondary search snippet of a review of the box also gives "Recorded on 9 March 2019 – 45'13" | https://www.digitalconcerthall.com/en/concert/51854 ; https://www.digitalconcerthall.com/en/work/51854-4 | OK |
+| Venue | Philharmonie, Berlin | Box: "Recordings made between 2012 and 2019 at the Philharmonie Berlin"; DCH edition: "Recorded: 2012–2019 · Philharmonie Berlin" | Discogs 15974845 ; DCH edition page | VERIFIED |
+| Release year / year | 2020 / 2019 | ℗ 2020 | Spotify ; Discogs | VERIFIED |
+| "In this recording": chief conductor from August 2019 | Wikipedia: elected June 2015; "His official tenure start was confirmed for 19 August 2019." The DCH concert page says this was his "last appearance with the Berliner Philharmoniker before taking up office as their chief conductor"; a search snippet mentions a Petrenko Tchaikovsky 5 at the 2019 Baden-Baden Easter Festival, so the guide says only "a few months before", not "last concert" | https://en.wikipedia.org/wiki/Kirill_Petrenko ; DCH concert page | OK |
+
+The BPHR product page (https://www.berliner-philharmoniker-recordings.com/kirill-petrenko-beethoven-tchaikovsky-schmidt-stephan.html) now returns "Page not found"; the Wayback Machine was rate-limited.
+
+### Durations and playability (Spotify embed, album 0yTolmgBhMcUiA0E4fGUsu, read from this machine in Turkey, 2026-10-24)
+
+The album is the symphony alone, 4 tracks, one per movement. All `isPlayable: true`.
+
+| Track | Track id | Movement | ms | Time | isPlayable |
+| --- | --- | --- | --- | --- | --- |
+| 1 | 5lVFuhdXSTFgIv65V8Zvua | I. Andante – Allegro con anima | 866866 | 14:26 | true |
+| 2 | 7MrRFi6swb5Jwef9esaJIF | II. Andante cantabile, con alcuna licenza | 785037 | 13:05 | true |
+| 3 | 3Y0TJMyM0M6WSMV6r4Uw55 | III. Valse. Allegro moderato | 357993 | 5:57 | true |
+| 4 | 0xlO2J6n1J1u0qOpHHfVOx | IV. Finale. Andante maestoso – Allegro vivace – Moderato assai e molto maestoso – Presto – Molto meno mosso | 703462 | 11:43 | true |
+| | | Total | 2713358 | 45:13 → `duration_min: 45` | |
+
+### How the stops were rescaled
+
+No structural difference: the symphony has no written repeats, and neither performance makes cuts (the totals differ by tempo, mostly in II, where Petrenko takes 13:05 against Mravinsky's 11:53). Each ≈ stop was multiplied by new track / old track and rounded to 5 s; the label-only stops (Last 90 seconds, Last 15 seconds, Last 40 seconds) are kept. EN and TR have identical times. Still unheard against this recording, so all stay ≈.
+
+| Mvt | Ratio | Old (Mravinsky) | New (Petrenko) |
+| --- | --- | --- | --- |
+| I | 866.9 / 873 = 0.993 | 0:00, 1:50, 3:40, 4:40, 5:05, 5:50–8:40, 8:45, 12:00 | 0:00, 1:50, 3:40, 4:40, 5:05, 5:50–8:35, 8:40, 11:55 |
+| II | 785.0 / 713 = 1.101 | 0:00, 0:30, 1:30, 3:00, 4:15, 6:05, 6:40, 8:40, 10:10 | 0:00, 0:35, 1:40, 3:20, 4:40, 6:40, 7:20, 9:35, 11:10 |
+| III | 358.0 / 331 = 1.082 | 0:00, 0:30, 1:30, 2:10, 4:50 | 0:00, 0:30, 1:35, 2:20, 5:15 |
+| IV | 703.5 / 663 = 1.061 | 0:00, 1:55, 2:45, 3:50, 5:55, 8:35, 8:50, 9:50 | 0:00, 2:00, 2:55, 4:05, 6:15, 9:05, 9:20, 10:25 |
+
+Caveats: the Mravinsky millisecond values in section 1 are suspiciously round (873000, 713000 …), so the old track lengths may themselves be rounded; the effect on the ratios is under 1 %. Petrenko's II is about 10 % slower overall, but rubato in a *con alcuna licenza* movement is uneven, so the II stops (especially the motto entries ≈ 6:40 and ≈ 11:10) are the least certain. This is a concert recording; any applause appears to be cut (the DCH video lists applause separately).

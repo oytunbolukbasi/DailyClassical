@@ -105,3 +105,43 @@ IV: 293 bars, avg 1.61 s; folk song ≈ bar 10, fanfare ≈ bar 199.
 | II Andantino in modo di canzona | 9:15 | 0:00, 0:45, 1:30–3:00, 4:00–5:15, 5:45, Last minute | Start of the *Più mosso* (≈ 4:00) and the return (≈ 5:45) |
 | III Scherzo: Pizzicato ostinato | 5:48 | 0:00, 0:50, 1:50, 2:25, 3:20, 4:40, Last 15 seconds | Brass entry (≈ 2:25) and return of the strings (≈ 3:20) |
 | IV Finale: Allegro con fuoco | 7:53 | 0:00, 0:10, 0:30, 1:00, 1:30–4:30, 5:15, 5:45, Last 90 seconds | Fanfare (≈ 5:15); the third "festive" idea at ≈ 1:00 |
+
+---
+
+## 6. Reference switched (Oct 2026): Pappano / Santa Cecilia (EMI, 2006)
+
+The product owner's favourite recording replaces Mravinsky as the reference (guide §6.3: "The product owner's favourite wins"). Mravinsky moves to `also_recommended` ahead of Karajan; sections 1 and 5 above describe the old reference and are kept as history.
+
+| Field | File value | Verified value | Source URL | Status |
+| --- | --- | --- | --- | --- |
+| Conductor / orchestra | Antonio Pappano / Orchestra dell'Accademia Nazionale di Santa Cecilia | Spotify credits "Pyotr Ilyich Tchaikovsky, Antonio Pappano, Orchestra dell'Accademia Nazionale di Santa Cecilia" on every track | https://open.spotify.com/embed/album/1A8j1hcCw91OQRQlLpfmtY | VERIFIED |
+| Label | EMI Classics (now Warner Classics) | Spotify album page: "℗ A Warner Classics release, ℗ 2007 Parlophone Records Limited", release date 2007-01-01. Discogs: EMI Classics, ℗ 2007 EMI Records Ltd. | https://open.spotify.com/album/1A8j1hcCw91OQRQlLpfmtY ; https://api.discogs.com/releases/15861692 | VERIFIED |
+| Catalogue | 3 53258 2 (2 CD, Nos. 4–6) | Discogs release 15861692 (2007, barcode 0 94635 32582 9): EMI Classics 3 53258 2 (also lists 50999 0 85212 2 4, the number of the 2011 Abbey Road remaster, release 9940410). Later also EMI Masters 6 31811 2 (MusicWeb Dec 2010) | https://api.discogs.com/releases/15861692 ; https://api.discogs.com/releases/9940410 ; https://www.musicweb-international.com/classrev/2007/Feb07/Tchaikovsky4_5_6_3532582.htm | OK |
+| Recorded / venue | July 2006; Sala Santa Cecilia, Auditorium Parco della Musica, Rome | Discogs notes from the CD: "Recorded in concerts at Sala Santa Cecilia, Auditorium Parco della Musica, Rome, 3-15.VII.2006" (one range for all three symphonies; the day of No. 4 is not given). Presto lists 2006-07-15 | https://api.discogs.com/releases/15861692 ; https://www.prestomusic.com/classical/products/7952583--tchaikovsky-symphonies-nos-4-5-6 (search snippet, not opened) | OK (month) |
+| Release year / year | 2007 / 2006 | ℗ 2007 (CD and Spotify) | same | VERIFIED |
+| "In this recording": Pappano music director at Santa Cecilia from 2005 | "In 2005, Pappano became music director of the Orchestra dell'Accademia Nazionale di Santa Cecilia." | https://en.wikipedia.org/wiki/Antonio_Pappano | OK |
+
+### Durations and playability (Spotify embed, album 1A8j1hcCw91OQRQlLpfmtY, read from this machine in Turkey, 2026-10-24)
+
+The album has 12 tracks (Nos. 4, 5, 6); the Fourth is tracks 1–4, one track per movement. All 12 tracks `isPlayable: true`.
+
+| Track | Track id | Movement | ms | Time | isPlayable |
+| --- | --- | --- | --- | --- | --- |
+| 1 | 3NUbrfkK3e523LOcthFMuC | I. Andante sostenuto – Moderato con anima | 1152946 | 19:12 | true |
+| 2 | 53Z8bukLyQnOxOmAQkkduL | II. Andantino in modo di canzona | 581306 | 9:41 | true |
+| 3 | 0asBcj0IYFYvRv9llg9385 | III. Scherzo. Pizzicato ostinato, allegro | 334146 | 5:34 | true |
+| 4 | 016HWFDpGRbj8WtSECsDmD | IV. Finale. Allegro con fuoco | 508840 | 8:28 | true |
+| | | Total | 2577238 | 42:57 → `duration_min: 43` | |
+
+### How the stops were rescaled
+
+No structural difference between the two performances: the symphony has no exposition repeats, and the scherzo's return is written out, so both play the same bars. Each ≈ stop was multiplied by new track / old track and rounded to 5 s; the label-only stops (Last minute, Last 15 seconds, Last 90 seconds) are kept. EN and TR have identical times. Still unheard against this recording, so all stay ≈.
+
+| Mvt | Ratio | Old (Mravinsky) | New (Pappano) |
+| --- | --- | --- | --- |
+| I | 1152.9 / 1122.5 = 1.027 | 0:00, 0:40, 1:10, 3:00–4:30, 5:10, 6:00–8:30, 8:40, 11:30, 12:50, 16:05, 17:15 | 0:00, 0:40, 1:10, 3:05–4:35, 5:20, 6:10–8:45, 8:55, 11:50, 13:10, 16:30, 17:45 |
+| II | 581.3 / 555.4 = 1.047 | 0:00, 0:45, 1:30–3:00, 4:00–5:15, 5:45 | 0:00, 0:45, 1:35–3:10, 4:10–5:30, 6:00 |
+| III | 334.1 / 348.1 = 0.960 | 0:00, 0:50, 1:50, 2:25, 3:20, 4:40 | 0:00, 0:50, 1:45, 2:20, 3:10, 4:30 |
+| IV | 508.8 / 473.5 = 1.075 | 0:00, 0:10, 0:30, 1:00, 1:30–4:30, 5:15, 5:45 | 0:00, 0:10, 0:30, 1:05, 1:35–4:50, 5:40, 6:10 |
+
+Caveat: this is a concert recording. If the finale track ends with applause or a long silence, the finale stops after ≈ 5:40 may sit a few seconds late; check when timing by ear.
