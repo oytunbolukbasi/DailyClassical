@@ -26,6 +26,8 @@ Oytun zamanlamayı bıraktı: çok vakit alıyor. Kulakla zamanlanan 7 eser (Ero
 
 24 Ekim 2026'da 10 agent'a verildi (A–J, beşer eser; liste ve kurallar `content/research/BATCH-2026-10b.md`). Agent'lar yalnızca `content/drafts/{en,tr}/<id>.md`, `content/research/<id>.md` ve `<id>.shared.md` yazar; yarıda kesilirse yazdıkları diskte kalır.
 
+**Durum (24 Ekim, oturum limitiyle durduruldu):** 44 eser hazır (A, B, D, E, G, H, I, J tam; C'den Eine kleine Nachtmusik ve PK 20, F'den Brahms 2 ve Brahms PK 2). Eksik 6: `mozart-sinfonia-concertante-k364`, `mozart-ave-verum-corpus`, `mozart-flute-and-harp-concerto`, `saint-saens-symphony-3`, `saint-saens-cello-concerto-1` (+ Saint-Saëns besteci girdisi), `liszt-piano-concerto-1`. C agent'ı K. 466'nın TR taslağını yazarken durdu: birleştirmeden önce `drafts/tr/mozart-piano-concerto-20.md`'nin tam olduğunu kontrol et. Agent raporlarından çıkan kararlar ve tablo çakışmaları: `content/research/BATCH-2026-10b-notes.md`.
+
 **Kaldığı yerden devam:**
 1. `python3 content/research/check-drafts.py`: her eser için ready / incomplete / merged ve eksik dosyalar.
 2. Eksik eserler için yeni bir agent'a aynı brief'le yalnızca o id'leri ver ("yarım kalan dosyaları tamamla, tamamlananlara dokunma").
