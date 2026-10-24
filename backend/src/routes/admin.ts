@@ -376,7 +376,7 @@ tr.today td{background:var(--today)}
 tr.today td.day{font-weight:600}
 tr.future td{color:var(--ink2)}
 .t{font-family:Literata,Georgia,serif;font-size:15px}
-td:has(.t){min-width:220px}
+td:has(.t){min-width:170px}
 .thumb{display:block;width:56px;height:56px;border-radius:8px;overflow:hidden;background:var(--today)}
 .thumb img{width:100%;height:100%;object-fit:cover;display:block}
 .search{width:100%;margin:0 0 12px;font-size:16px}
@@ -414,7 +414,11 @@ td:has(.t){min-width:220px}
 .st .v{font:500 24px Literata,Georgia,serif;font-variant-numeric:tabular-nums}
 .st .k{font-size:12px;color:var(--ink2)}
 .di{margin-top:16px;display:flex;flex-direction:column;gap:6px;font-size:14px}
-td:has(a){min-width:200px}
+td:has(> a:not(.thumb)){min-width:160px}
+td:has(> .thumb){width:56px;padding-right:4px}
+#cat td{padding:10px}
+#cat td.day{white-space:normal;min-width:96px}
+#cat td:nth-child(5){min-width:140px}
 .narrow{max-width:380px;margin-top:12vh}
 .stack{display:flex;flex-direction:column;gap:8px;margin-top:24px}
 label{font-size:13px;color:var(--ink2)}
