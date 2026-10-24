@@ -12,8 +12,6 @@ Son güncelleme: 22 Ekim 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]** 
 
 ## İçerik
 
-- **[Oytun] Kulakla zamanlama:** Takvim dışı 44 eser ve yayındaki 14 eserin durakları hâlâ tahmini (≈). Sıra ve liste `content_status.md`'de; ilk haftadan Chopin 1. Piyano Konçertosu kaldı.
-- **[Oytun] Dvořák Çello Konçertosu II–III ince ayarı:** Tahminle kapatıldı; en olası kaymalar II 6:30 ve 8:30–10:30, III 8:30 ve 10:00–11:30.
 - **[Oytun + Claude] Beethoven 9 finali:** Spotify'da iki parça (6:26 + 17:35). Duraklar bölüm toplamı olarak yazılı; uygulamanın bunları toplam mı, ikinci parçaya göre mi göstereceğine karar verilecek.
 - **[Claude] Mozart 41 tablosu:** Hubert Robert, *Dikilitaş* yalnızca 1952 px; daha büyük bir kaynak bulunursa değiştirilecek.
 - **[Oytun] Türkçe native okuma:** İçerik ve arayüz metinleri (paywall başlığı, "y. 1818" gibi ifadeler, "kadans/kadenza").
@@ -42,6 +40,8 @@ Son güncelleme: 22 Ekim 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]** 
 - Telefondaki "Ömür boyu", Xcode'un yerel StoreKit ortamındaki bir test satın almasından; hesaba bağlı değil, uygulama silinince gider.
 
 ## Tamamlananlar (özet)
+
+- **24 Ekim:** Kulakla zamanlama kapatıldı (7 eser zamanlandı; kalan duraklar ≈ tahmin olarak kalıyor).
 
 - **17 Ekim:** Beethoven 3, Vivaldi İlkbahar, Ay Işığı (referans Barenboim'e geçti), Dvořák Çello kulakla zamanlandı. Dokümanlar `project-knowledge/` altında üç dosyada toplandı.
 - **16 Ekim:** TR'de pizzicato "parmakla çekmek" (sözlük + 25 eser). Durak Zamanlayıcı kuruldu ve düzeltildi.

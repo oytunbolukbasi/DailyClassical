@@ -1,28 +1,26 @@
 # İçerik durumu
 
-Son güncelleme: 17 Ekim 2026. Katalog: **64 eser** (14'ü takvimde ve yayında, 50'si Ekim 2026 partisinden, takvim dışı), 69 sözlük terimi, 29 besteci. Proje bilgisi ve içerik yazım rehberi `project_information.md`'de, açık işler `backlog.md`'de.
+Son güncelleme: 24 Ekim 2026. Katalog: **64 eser** (14'ü takvimde ve yayında, 50'si Ekim 2026 partisinden, takvim dışı), 69 sözlük terimi, 29 besteci. Proje bilgisi ve içerik yazım rehberi `project_information.md`'de, açık işler `backlog.md`'de.
 
 ## Aşamalar
 
 1. **Taslak:** `content/drafts/<dil>/<id>.md`. Yayın hattının dışında, hiçbir yere yüklenmez (şu an taslak yok).
 2. **Takvim dışı (birleştirildi):** `content/<dil>/pieces/`'te; tablo, besteci ve sözlük girdileri ortak dosyalarda, görseller üretildi. Sunucuya yüklenir ama takvimde olmadığı için kimse görmez.
-3. **Kulakla zamanlandı:** ≈ duraklar referans kayda göre düzeltildi, ≈ kaldırıldı.
+3. ~~**Kulakla zamanlandı**~~ (24 Ekim'de bırakıldı; duraklar tahmin olarak ≈ ile yayına girer).
 4. **Takvimde:** `content/schedule.yaml`'da; günü gelince Bugün'de ve Kitaplık'ta.
 
-## Kulakla zamanlama
+## Kulakla zamanlama (kapandı, 24 Ekim 2026)
 
-- **Durak Zamanlayıcı:** https://claude.ai/artifact/XxHjkkNYbpT5qA823QbPpH. Oytun eseri dinler, süreleri girer; kayıt `timings/<id>` belgesine düşer (`movements.<I…>.stops[]`, durak sırası eserdekiyle aynı, süreler EN ve TR için ortak).
-- **Onay:** Her durakta "Tahmin doğru ✓" düğmesi tahmini süreyi kayda geçirir ("Temizle" geri alır); kayıtta ölçülen süreden farkı yoktur. Chopin 1 gibi önemli kayıtlarda her durak böyle tek tek onaylanır ya da ölçülür.
-- **Kural:** Boş bırakılan durak (ya da hiç dokunulmamış bölüm) "tahmin doğru" demek. Claude yalnızca sırası bozuk ya da eserin yapısına uymayan süreleri işlemeden önce sorar.
-- **"Bitirdim" deyince Claude:** süreleri EN/TR dosyalara yazar, boş duraklarda tahmini tutar, bütün duraklardan ≈'i kaldırır; aşağıdaki "Zamanlanacak duraklar" listesinde eserin satırını kapatır (hangi durak ölçüldü, hangisi tahmin onaylandı); eser tablosunda durumu günceller; `npm run content:build` + `npm run fixtures`, commit, push (content-publish yayına alır). Zamanlayıcı'daki kayda dokunmaz: orada yalnızca Oytun'un ölçtüğü ya da onayladığı süreler ve bitirdiği bölümler durur; boş durak orada "dinlenmedi" demektir.
-- **Kayıt değişirse:** Spotify embed sayfasından parça süreleri ve Türkiye'de çalınabilirlik (`isPlayable`) okunur; `reference_recording` ile `also_recommended` yer değiştirir; Bölümler tablosu, `duration_min`, duraklar (parça süresine oranla; tekrar farkı varsa ölçü sayısına göre) ve kayda özel cümleler ("Bu kayıtta") güncellenir. Zamanlayıcı'nın verisi (scratchpad'deki `retime/data.json` + `template.html`) yamalanıp sayfa yeniden yayımlanır, eski `timings/<id>` belgesi silinir.
+Oytun zamanlamayı bıraktı: çok vakit alıyor. Kulakla zamanlanan 7 eser (Eroica, Vivaldi İlkbahar, Ay Işığı, Dvořák Çello, Boléro, Mozart 41; Chopin 1 Zimerman'a geçti ama zamanlanmadı) ≈'siz; geri kalan bütün duraklar tahmin olarak ≈ ile yayında ve öyle kalıyor. Durak Zamanlayıcı sayfası (https://claude.ai/artifact/XxHjkkNYbpT5qA823QbPpH) duruyor ama kullanılmıyor. Yeni partilerde duraklar yine kaynak ve parça süresinden tahmin edilir (≈); "Zamanlanacak duraklar" listesi artık bir yapılacak işi değil, tahminlerin kaydını tutar.
+
+- **Kayıt değişirse:** Spotify embed sayfasından parça süreleri ve Türkiye'de çalınabilirlik (`isPlayable`) okunur; `reference_recording` ile `also_recommended` yer değiştirir; Bölümler tablosu, `duration_min`, duraklar (parça süresine oranla; tekrar farkı varsa ölçü sayısına göre) ve kayda özel cümleler ("Bu kayıtta") güncellenir.
 
 ## Yayın planı
 
 - **İnceleme sürerken:** `schedule.yaml` değişmez (test takvimi bütün 14 eseri yayında gösteriyor; boş Bugün red riski).
 - **Yayın günü:** `start` o güne, sıra Çaykovski 6 ile başlar; `npm run db:seed && npm run fixtures`, push; sonra App Store Connect'te **Release This Version**.
 - **1.0.1 build'i** (Rönesans etiketi, 6 bölümlük seçici, www bağlantıları, favorileri bildiren gizlilik manifesti; kodu hazır) Mahler 3'ten önce yayında olmalı.
-- **15. günden itibaren** haftada yaklaşık 7 kulakla zamanlanmış eser takvime girer. İlk hafta: Beethoven 3 ✓, Vivaldi İlkbahar ✓, Ay Işığı ✓, Dvořák Çello ✓, Boléro ✓, Mozart 41 ✓, Chopin 1. Piyano Konçertosu.
+- **15. günden itibaren** haftada yaklaşık 7 eser takvime girer. İlk hafta: Beethoven 3, Vivaldi İlkbahar, Ay Işığı, Dvořák Çello, Boléro, Mozart 41, Chopin 1. Piyano Konçertosu.
 
 ## Eserler
 
