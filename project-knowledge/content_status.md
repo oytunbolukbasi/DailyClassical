@@ -22,6 +22,16 @@ Oytun zamanlamayı bıraktı: çok vakit alıyor. Kulakla zamanlanan 7 eser (Ero
 - **1.0.1 build'i** (Rönesans etiketi, 6 bölümlük seçici, www bağlantıları, favorileri bildiren gizlilik manifesti; kodu hazır) Mahler 3'ten önce yayında olmalı.
 - **15. günden itibaren** haftada yaklaşık 7 eser takvime girer. İlk hafta: Beethoven 3, Vivaldi İlkbahar, Ay Işığı, Dvořák Çello, Boléro, Mozart 41, Chopin 1. Piyano Konçertosu.
 
+## Ekim 2026 ikinci parti (50 eser): devam planı
+
+24 Ekim 2026'da 10 agent'a verildi (A–J, beşer eser; liste ve kurallar `content/research/BATCH-2026-10b.md`). Agent'lar yalnızca `content/drafts/{en,tr}/<id>.md`, `content/research/<id>.md` ve `<id>.shared.md` yazar; yarıda kesilirse yazdıkları diskte kalır.
+
+**Kaldığı yerden devam:**
+1. `python3 content/research/check-drafts.py`: her eser için ready / incomplete / merged ve eksik dosyalar.
+2. Eksik eserler için yeni bir agent'a aynı brief'le yalnızca o id'leri ver ("yarım kalan dosyaları tamamla, tamamlananlara dokunma").
+3. Hazır olanlar: tablo çakışmalarını kontrol et (`.shared.md`'deki alternatifler; gerekirse `swap-painting.py`), `python3 content/research/merge-drafts.py <id> …`, sonra `backend/`'de `npm run images -- --only <id>`, `npm run images:widget`, `npm run content:build` (uyarısız), `npm run fixtures`; commit + push (takvime eklenmez).
+4. Birleşenleri aşağıdaki eser tablosuna ekle (Durum: Takvim dışı · duraklar ≈), birleştirme günlüğüne not düş; bittiğinde brief'i ve `.shared.md`'leri sil.
+
 ## Eserler
 
 Takvimdekiler yayın sırasıyla, ardından takvim dışı parti. Spotify sütunu albüm kimliği. Hangi gün hangi eserin gösterildiği, okunma ve Spotify tıklamaları canlı olarak `www.dailyclassical.co/admin`'de.
