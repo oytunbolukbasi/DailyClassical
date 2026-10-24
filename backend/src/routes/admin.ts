@@ -65,7 +65,7 @@ admin.post("/admin/login", async (c) => {
       const code = generateCode();
       await sql`
         insert into admin_login_codes (email, code_hash, expires_at, attempts, sent_at)
-        values (${email}, ${hashCode(code)}, ${new Date(Date.now() + CODE_TTL_MS)}, 0, now())
+        values (${email}, ${hashCode(code)}, ${new Date(Date.now() + CODE_TTL_MS).toISOString()}::timestamptz, 0, now())
         on conflict (email) do update set code_hash = excluded.code_hash, expires_at = excluded.expires_at,
           attempts = 0, sent_at = now()`;
       await sendAdminCodeEmail(email, code).catch((e) => console.error("admin code email", e));
