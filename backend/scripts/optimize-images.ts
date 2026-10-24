@@ -5,6 +5,7 @@ import { dirname, extname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { isMap, parseDocument, type Document } from "yaml";
 import type { ImageManifest, ImageManifestEntry } from "../src/content/repository.js";
+import { scheduledPieceIds } from "./scheduled.js";
 
 /**
  * `npm run images` — painting + composer portrait derivatives (macOS: uses scripts/image-tool.swift).
@@ -57,6 +58,11 @@ const contentDir = join(repo, "content");
 const originalsDir = join(contentDir, "images/.originals");
 const publicDir = join(repo, "backend/public/images");
 const bundleDir = join(repo, "ios/DailyClassical/Resources/Artwork");
+// Painting heroes are bundled only for scheduled pieces (scripts/scheduled.ts); thumbs and every
+// other kind are always bundled.
+const scheduled = scheduledPieceIds(repo);
+const inBundle = (key: string, v: Variant) =>
+  VARIANTS[v].bundled && !(v === "hero" && key.startsWith("paintings/") && !scheduled.has(key.slice("paintings/".length)));
 const toolSource = join(here, "image-tool.swift");
 const toolBinary = join(originalsDir, ".bin/image-tool");
 
@@ -211,7 +217,7 @@ writeFileSync(appImages.path, appImages.doc.toString({ lineWidth: 0 }));
 for (const key of Object.keys(manifest.images)) {
   if (only.size > 0 && !todo.some((j) => `${j.kind}/${j.id}` === key)) continue;
   const entry = manifest.images[key]!;
-  for (const v of variants.filter((v) => VARIANTS[v].bundled)) {
+  for (const v of variants.filter((v) => inBundle(key, v))) {
     const file = entry[v];
     if (!file) continue;
     const dest = join(bundleDir, file.path);
@@ -222,8 +228,8 @@ for (const key of Object.keys(manifest.images)) {
 copyFileSync(manifestPath, join(bundleDir, "manifest.json"));
 
 // Remove every derivative the manifest no longer points at (old .jpg renditions, removed images, `full` in the bundle).
-const keep = (root: string, bundled: boolean) => new Set(Object.values(manifest.images)
-  .flatMap((e) => variants.filter((v) => (!bundled || VARIANTS[v].bundled) && e[v]).map((v) => join(root, e[v]!.path))));
+const keep = (root: string, bundled: boolean) => new Set(Object.entries(manifest.images)
+  .flatMap(([key, e]) => variants.filter((v) => (!bundled || inBundle(key, v)) && e[v]).map((v) => join(root, e[v]!.path))));
 const kinds = [...new Set(["paintings", "composers", ...jobs.map((j) => j.kind)])];
 for (const [root, bundled] of [[publicDir, false], [bundleDir, true]] as const) {
   const wanted = keep(root, bundled);

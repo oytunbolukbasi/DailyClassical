@@ -59,7 +59,7 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Motet | Motet | Latince bir metin üzerine dinsel koro eseri | Çoğunlukla eşliksiz koro için, Latince bir metin üzerine yazılmış dinsel eser; Rönesans kilise müziğinin başlıca türlerinden biri. |
 | Motif | Motif | Sürekli geri dönen kısa bir müzikal fikir | Bir temanın kurulduğu, yalnızca birkaç notadan oluşan en küçük müzikal fikir. |
 | Muted | Sordinli | Sesi yumuşatıp örten bir düzenekle çalınan | Çalgının üzerine takılan, sesi yumuşatan ve örten küçük bir düzenekle çalınan. |
-| Neoclassicism | Neoklasisizm | 18. yüzyılın biçimlerini ve berraklığını canlandıran modern müzik | 20. yüzyılın başlarında Prokofyev ve Stravinski gibi bestecilerin, modern armoni ve ritimleri korurken 18. yüzyıl müziğinin biçimlerini, dokusunu ve hafifliğini ödünç aldığı akım. |
+| Neoclassicism | Neoklasisizm | 18. yüzyıl biçimlerini ve berraklığını canlandıran modern müzik | 20. yüzyılın başlarında Prokofyev ve Stravinski gibi bestecilerin, modern armoni ve ritimleri korurken 18. yüzyıl müziğinin biçimlerini, dokusunu ve hafifliğini ödünç aldığı akım. |
 | Nobilmente | Nobilmente | "Soylu bir biçimde": Elgar'ın sevdiği bir işaret | İtalyanca "soylu bir biçimde". Elgar bu işareti geniş, ağırbaşlı melodiler için sık sık kullandı. |
 | Nocturne | Noktürn | Çoğunlukla piyano için düşsel bir "gece parçası" | Bir "gece parçası": akan bir eşliğin üzerinde şarkı gibi bir melodisi olan yavaş, düşsel bir eser; Chopin'in ünlü kıldığı bir tür. |
 | Obbligato | Obligato | Vazgeçilmez ve belirgin bir solo çalgı partisi | Bir bölüm boyunca vazgeçilmez ve belirgin olan solo çalgı partisi. |

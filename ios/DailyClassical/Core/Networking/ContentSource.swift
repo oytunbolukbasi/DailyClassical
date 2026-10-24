@@ -34,8 +34,9 @@ struct ContentSource: Sendable {
             let schedule = try Fixtures.load(Fixtures.Schedule.self, "schedule", language)
             var dates: [String: String] = [:]
             for (date, id) in schedule.days where date <= day && date > (dates[id] ?? "") { dates[id] = date }
+            let all = ContentSource.showsWholeCatalogue
             return try Fixtures.load([PieceSummary].self, "pieces", language).compactMap { piece in
-                guard let date = dates[piece.id] else { return nil }
+                guard let date = dates[piece.id] else { return all ? piece : nil }
                 var piece = piece
                 piece.publishDate = date
                 return piece
@@ -53,6 +54,12 @@ struct ContentSource: Sendable {
     )
 
     static var `default`: ContentSource { isAPI ? .api : .bundled }
+
+    /// Settings › Test: the Library lists unscheduled pieces too (bundled content only), so new
+    /// pieces can be read on a device before they are scheduled. Never in App Store builds.
+    nonisolated static var showsWholeCatalogue: Bool {
+        TestBuild.isActive && UserDefaults.standard.bool(forKey: "debugShowAllPieces")
+    }
 
     /// Release builds read the API; debug builds use bundled fixtures unless DC_USE_API=1.
     static var isAPI: Bool {

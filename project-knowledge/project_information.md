@@ -80,6 +80,7 @@ content/<dil>/pieces/*.md + glossary.md ──content:build──▶ content/bui
 ```
 
 - `main`'e giren içerik yayına çıkar: `.github/workflows/content-publish.yml` doğrular, migration'ları çalıştırır, production'a seed eder (secret `DATABASE_URL_UNPOOLED`); görseller aynı push'un Railway deploy'uyla gider. Eser `schedule.yaml`'daki gününde kendiliğinden yayına girer; uygulama sürümü gerekmez. Yalnızca kod değişiklikleri yeni build ister.
+- **Görseller nerede:** Bütün görsellerin (hero, thumb, full, widget JPEG) sunucu kopyası `backend/public/images`'ta, Railway API'siyle birlikte yayınlanır (`api.dailyclassical.co/images/…`). Neon'da yalnızca metin ve adresler var. Uygulamaya gömülü olanlar: bütün thumb'lar ve portreler, yalnızca **takvimdeki** eserlerin tablo hero'ları ve widget JPEG'leri (`backend/scripts/scheduled.ts`); gerisi ilk açılışta Railway'den iner ve cihazda önbelleğe alınır. Takvime eser ekledikten sonra, build almadan önce `npm run images` (--only olmadan) ve `npm run images:widget`. Ayarlar › Test › "Tüm katalogu göster" test build'inde takvim dışı eserleri de Kitaplık'ta listeler.
 - Durak süreleri referans kaydın ilgili parçasının başından, saniye olarak saklanır; uygulama dile göre biçimler.
 - `schedule.yaml`: `start` 0. gün; sıra eser eklenene kadar tekrar eder. Şu an test takvimi (bkz. `content_status.md` › Yayın planı).
 

@@ -118,7 +118,8 @@ final class ContentStore {
     private static func published(_ pieces: [PieceSummary], today: Piece?, day: String) -> [PieceSummary] {
         var list = pieces
         if pieces.contains(where: { $0.publishDate != nil }) {
-            list = pieces.filter { ($0.publishDate ?? "9999") <= day }
+            let all = ContentSource.showsWholeCatalogue
+            list = pieces.filter { all ? ($0.publishDate ?? "") <= day : ($0.publishDate ?? "9999") <= day }
         }
         if let today {
             if let i = list.firstIndex(where: { $0.id == today.id }) {

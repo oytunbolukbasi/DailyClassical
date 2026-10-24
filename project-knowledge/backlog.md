@@ -14,7 +14,7 @@ Son güncelleme: 22 Ekim 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]** 
 
 ## İçerik
 
-- **[Claude] Uygulama boyutu:** `npm run images` 114 eserin hero + thumb HEIC'lerini uygulamaya gömüyor (~125 MB). Build 3'ten önce yalnızca takvimdeki eserlerin görsellerini gömüp gerisini sunucudan çekmeyi düşün.
+- **Uygulama boyutu (25 Ekim, çözüldü):** Tablo hero'ları yalnızca takvimdeki eserler için gömülüyor; gömülü görseller 135 MB → 39 MB, widget 29 MB → 2,7 MB. Gerisi Railway'den iner.
 
 - **[Oytun + Claude] Beethoven 9 finali:** Spotify'da iki parça (6:26 + 17:35). Duraklar bölüm toplamı olarak yazılı; uygulamanın bunları toplam mı, ikinci parçaya göre mi göstereceğine karar verilecek.
 - **[Claude] Mozart 41 tablosu:** Hubert Robert, *Dikilitaş* yalnızca 1952 px; daha büyük bir kaynak bulunursa değiştirilecek.

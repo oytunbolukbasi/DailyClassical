@@ -9,6 +9,7 @@ struct SettingsScreen: View {
     @Environment(SessionStore.self) private var session
     @Environment(EntitlementStore.self) private var entitlements
     @Environment(AppRouter.self) private var router
+    @Environment(ContentStore.self) private var content
 
     // ReminderScheduler persists the time under these keys; AppStorage keeps the row live.
     @AppStorage("reminderHour") private var reminderHour: Int?
@@ -17,6 +18,7 @@ struct SettingsScreen: View {
     // Test builds only (TestBuild): replay the welcome flow, preview the free trial.
     @AppStorage("hasCompletedOnboarding") private var hasCompletedOnboarding = false
     @AppStorage("debugTrialDays") private var debugTrialDays = 0
+    @AppStorage("debugShowAllPieces") private var debugShowAllPieces = false
 
     @State private var restoring = false
     @State private var showManageSubscription = false
@@ -129,6 +131,17 @@ struct SettingsScreen: View {
                 }
             )) {
                 Text(verbatim: "3 gün deneme teklifini göster").foregroundStyle(Palette.ink)
+            }
+            .tint(Palette.accent)
+            .settingsRow()
+            Toggle(isOn: Binding(
+                get: { debugShowAllPieces },
+                set: { on in
+                    debugShowAllPieces = on
+                    Task { await content.reload(language: language.code) }
+                }
+            )) {
+                Text(verbatim: "Tüm katalogu göster (takvimde olmayanlar da)").foregroundStyle(Palette.ink)
             }
             .tint(Palette.accent)
             .settingsRow()
