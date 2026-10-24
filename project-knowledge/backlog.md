@@ -14,6 +14,8 @@ Son güncelleme: 22 Ekim 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]** 
 
 ## İçerik
 
+- **[Claude] Uygulama boyutu:** `npm run images` 114 eserin hero + thumb HEIC'lerini uygulamaya gömüyor (~125 MB). Build 3'ten önce yalnızca takvimdeki eserlerin görsellerini gömüp gerisini sunucudan çekmeyi düşün.
+
 - **[Oytun + Claude] Beethoven 9 finali:** Spotify'da iki parça (6:26 + 17:35). Duraklar bölüm toplamı olarak yazılı; uygulamanın bunları toplam mı, ikinci parçaya göre mi göstereceğine karar verilecek.
 - **[Claude] Mozart 41 tablosu:** Hubert Robert, *Dikilitaş* yalnızca 1952 px; daha büyük bir kaynak bulunursa değiştirilecek.
 - **[Oytun] Türkçe native okuma:** İçerik ve arayüz metinleri (paywall başlığı, "y. 1818" gibi ifadeler, "kadans/kadenza").
