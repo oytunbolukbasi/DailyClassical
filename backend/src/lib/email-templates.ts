@@ -182,3 +182,22 @@ export function welcomeEmail(locale: Locale): EmailContent {
     text: `${c.heading}\n\n${c.body}\n\n${c.sign}\n\nDailyClassical · dailyclassical.co`,
   };
 }
+
+/** 6-digit sign-in code for the admin page (routes/admin.ts). Turkish only: the page is. */
+export function adminCodeEmail(code: string, minutes = 10): EmailContent {
+  const heading = "Yönetim sayfası giriş kodu";
+  const body = "DailyClassical yönetim sayfasına girmek için bu kodu kullanın.";
+  const caption = `Kod ${minutes} dakika geçerli.`;
+  const ignore = "Bu girişi siz istemediyseniz bu e-postayı yok sayın.";
+  return {
+    subject: `${code} · DailyClassical yönetim`,
+    html: layout("tr", {
+      heading,
+      preheader: `${body} ${caption}`,
+      paragraphs: [escapeHtml(body)],
+      code: { value: code, caption: escapeHtml(caption) },
+      footnote: escapeHtml(ignore),
+    }),
+    text: `${heading}\n\n${body}\n\n${code}\n\n${caption}\n\n${ignore}`,
+  };
+}

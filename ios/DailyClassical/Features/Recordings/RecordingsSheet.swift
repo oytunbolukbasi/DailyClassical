@@ -4,6 +4,8 @@ import SwiftUI
 /// times follow. Text rows only, so Spotify's artwork rules don't apply (SPEC §4.7).
 struct RecordingsSheet: View {
     let recordings: [Recording]
+    /// Counts "Open in Spotify" taps (Analytics); nil in previews.
+    var pieceId: String? = nil
     @Environment(\.dismiss) private var dismiss
     @Environment(\.openURL) private var openURL
 
@@ -39,7 +41,10 @@ struct RecordingsSheet: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             if let url = r.spotifyUrl {
-                Button("recordings.openInSpotify") { openURL(url) }
+                Button("recordings.openInSpotify") {
+                    if let pieceId { Analytics.shared.spotifyTapped(pieceId) }
+                    openURL(url)
+                }
                     .buttonStyle(SmallCapsuleButtonStyle(prominent: r.role == .reference))
             } else {
                 Text("recordings.unavailable").font(Typography.meta13).foregroundStyle(Palette.ink3)

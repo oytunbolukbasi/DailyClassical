@@ -2,7 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <!-- Privacy manifest (App Store requirement). Matches the App Privacy labels in project-knowledge/project_information.md §7
      and backend/legal/privacy.*.md: no tracking; account email, user ID and purchases for app
-     functionality only. RevenueCat ships its own manifest. -->
+     functionality; anonymous usage counts (Core/Services/Analytics.swift: a random install id and
+     product interaction, not linked to the user) for analytics. RevenueCat ships its own manifest. -->
 <plist version="1.0">
 <dict>
 	<key>NSPrivacyTracking</key>
@@ -58,6 +59,32 @@
 			<key>NSPrivacyCollectedDataTypePurposes</key>
 			<array>
 				<string>NSPrivacyCollectedDataTypePurposeAppFunctionality</string>
+			</array>
+		</dict>
+		<dict>
+			<!-- Anonymous usage counts: days opened, piece pages opened, Spotify taps. -->
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypeProductInteraction</string>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeAnalytics</string>
+			</array>
+		</dict>
+		<dict>
+			<!-- The random install id those counts carry (not the device's or an advertising id). -->
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypeDeviceID</string>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeAnalytics</string>
 			</array>
 		</dict>
 	</array>

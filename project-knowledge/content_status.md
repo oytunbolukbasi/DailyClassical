@@ -24,7 +24,7 @@ Oytun zamanlamayı bıraktı: çok vakit alıyor. Kulakla zamanlanan 7 eser (Ero
 
 ## Eserler
 
-Takvimdekiler yayın sırasıyla, ardından takvim dışı parti. Spotify sütunu albüm kimliği.
+Takvimdekiler yayın sırasıyla, ardından takvim dışı parti. Spotify sütunu albüm kimliği. Hangi gün hangi eserin gösterildiği, okunma ve Spotify tıklamaları canlı olarak `www.dailyclassical.co/admin`'de.
 
 | # | Eser | Form | Bölüm | Referans kayıt | Spotify | Tablo | Durum |
 | --- | --- | --- | --- | --- | --- | --- | --- |

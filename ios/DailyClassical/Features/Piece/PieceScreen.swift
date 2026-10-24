@@ -127,7 +127,7 @@ struct PieceContent: View {
         .overlay(alignment: .bottom) { floatingSpotify }
         .onGlossaryTap { router.present(.glossaryTerm($0)) }
         .environment(\.activeGlossaryTerm, { if case .glossaryTerm(let id) = router.sheet { id } else { nil } }())
-        .sheet(isPresented: $showRecordings) { RecordingsSheet(recordings: piece.recordings) }
+        .sheet(isPresented: $showRecordings) { RecordingsSheet(recordings: piece.recordings, pieceId: piece.id) }
         .sheet(isPresented: $showPieceGlossary) { PieceGlossarySheet(document: piece.document) }
         .fullScreenCover(isPresented: $showArtwork) {
             if let painting = piece.painting { ArtworkViewer(painting: painting) }
@@ -136,6 +136,7 @@ struct PieceContent: View {
         .onAppear {
             UIApplication.shared.isIdleTimerDisabled = true
             RatePromptPolicy.recordPieceDay()
+            Analytics.shared.pieceOpened(piece.id)
         }
         #if DEBUG
         .task {
@@ -259,7 +260,12 @@ struct PieceContent: View {
             ZStack(alignment: .bottom) {
                 BottomFade()
                 PrimaryGlassButton(title: "piece.openInSpotify") {
-                    if let url = piece.referenceRecording?.spotifyUrl { openURL(url) } else { showRecordings = true }
+                    if let url = piece.referenceRecording?.spotifyUrl {
+                        Analytics.shared.spotifyTapped(piece.id)
+                        openURL(url)
+                    } else {
+                        showRecordings = true
+                    }
                 }
                 .padding(.bottom, 40)
             }

@@ -1,21 +1,23 @@
 # Gizlilik Politikası
 
-Son güncelleme: 8 Ekim 2026
+Son güncelleme: 24 Ekim 2026
 
 DailyClassical (“biz”), her gün bir klasik eseri bir dinleme rehberiyle sunan bir uygulamadır. Bu politika, uygulamanın ve sunucumuzun hangi bilgileri neden işlediğini ve sizin hangi seçeneklere sahip olduğunuzu açıklar.
 
 ## Kısaca
 
-- DailyClassical’ı hesap açmadan kullanabilirsiniz. Bu durumda sunucularımızda sizinle ilgili hiçbir bilgi saklamayız.
+- DailyClassical’ı hesap açmadan kullanabilirsiniz. Bu durumda sunucularımızda, size bağlanmayan anonim kullanım sayıları dışında sizinle ilgili hiçbir bilgi saklamayız.
 - Hesap açarsanız e-posta adresinizi, şifrenizin korunmuş bir biçimini, dilinizi ve favorilerinizi saklarız.
 - Satın almaları Apple yönetir. Ödeme bilgilerinizi hiçbir zaman görmeyiz.
-- Reklam, analitik ya da takip aracı yoktur. Verilerinizi pazarlama amacıyla asla satmaz veya paylaşmayız.
+- Reklam ve üçüncü taraf analitik ya da takip aracı yoktur. Verilerinizi pazarlama amacıyla asla satmaz veya paylaşmayız.
 
 ## İşlediğimiz bilgiler
 
 **Uygulamayı hesapsız kullandığınızda.** Uygulama günün eserini, rehberleri ve tabloları sunucumuzdan indirir. Her internet hizmetinde olduğu gibi, her istek IP adresiniz, zaman ve uygulama sürümü gibi teknik bilgiler taşır. Barındırma sağlayıcımız bu bilgileri içeriği iletmek ve hizmeti güvende tutmak için işler. Bu bilgileri sizi tanımlamak ya da profil çıkarmak için kullanmayız.
 
 Ayarlarınız (dil, tema, günlük hatırlatıcı saati) ve açtığınız eserler yalnızca cihazınızda saklanır.
+
+**Anonim kullanım sayıları.** Uygulamayı kaç kişinin kullandığını ve hangi eserlerin okunduğunu görmek için uygulama sunucumuza birkaç sayı gönderir: uygulamanın açıldığı günler, hangi eser sayfalarının açıldığı ve "Spotify'da aç"a kaç kez dokunulduğu. Bunlar, uygulamanın ilk açılışta oluşturduğu rastgele bir tanımlayıcıyla gönderilir. Bu tanımlayıcı hesabınıza, cihazınıza, Apple Kimliğinize ya da herhangi bir reklam tanımlayıcısına bağlı değildir; uygulamayı yeniden kurarsanız değişir. Bunun için üçüncü taraf analitik yazılımı kullanmayız ve yalnızca toplamlara bakarız. Sayılar 400 gün sonra silinir.
 
 **Hesap açtığınızda.** Şunları saklarız:
 
@@ -41,12 +43,12 @@ E-posta adresinizi doğrulamak ya da şifrenizi sıfırlamak için size kısa bi
 ## Yapmadıklarımız
 
 - Reklam göstermeyiz.
-- Analitik, reklam ya da takip yazılımı kullanmayız; sizi başka uygulama ve sitelerde takip etmeyiz.
+- Üçüncü taraf analitik, reklam ya da takip yazılımı kullanmayız; sizi başka uygulama ve sitelerde takip etmeyiz.
 - Bilgilerinizi satmayız ve başkalarının pazarlaması için kimseyle paylaşmayız.
 
 ## Bilgilerinizi neden kullanıyoruz
 
-Hesap bilgilerinizi istediğiniz hizmeti sunmak için kullanırız: girişinizi yapmak, favorilerinizi cihazlar arasında korumak ve Premium’a erişiminizi sağlamak. Teknik istek verilerini ve kötüye kullanım sayaçlarını, hizmeti erişilebilir ve güvenli tutmaktaki meşru menfaatimiz nedeniyle kullanırız. Kanunun bilgi saklamamızı ya da paylaşmamızı gerektirdiği durumlarda bunu yalnızca o ölçüde yaparız.
+Hesap bilgilerinizi istediğiniz hizmeti sunmak için kullanırız: girişinizi yapmak, favorilerinizi cihazlar arasında korumak ve Premium’a erişiminizi sağlamak. Anonim kullanım sayılarını hangi eserlerin okunduğunu anlamak ve kataloğu planlamak için; teknik istek verilerini ve kötüye kullanım sayaçlarını ise hizmeti erişilebilir ve güvenli tutmaktaki meşru menfaatimiz nedeniyle kullanırız. Kanunun bilgi saklamamızı ya da paylaşmamızı gerektirdiği durumlarda bunu yalnızca o ölçüde yaparız.
 
 ## Hizmet sağlayıcılar
 

@@ -33,6 +33,12 @@ const schema = z.object({
   APPLE_PRIVATE_KEY: z.string().optional().transform((v) => v?.replace(/\\n/g, "\n").trim() || undefined),
   /** App Store page, opened by the update prompts. */
   APP_STORE_URL: z.string().url().optional(),
+  /**
+   * Who may sign in to /admin (comma-separated). Sign-in is a 6-digit code sent to the address.
+   * Unset = the admin page is closed.
+   */
+  ADMIN_EMAILS: z.string().optional().transform((v) =>
+    (v ?? "").split(",").map((e) => e.trim().toLowerCase()).filter(Boolean)),
 }).superRefine((e, ctx) => {
   if (e.NODE_ENV === "production" && !e.RESEND_API_KEY) {
     ctx.addIssue({ code: "custom", path: ["RESEND_API_KEY"], message: "required in production" });

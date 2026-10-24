@@ -238,3 +238,51 @@ export const rateLimits = pgTable(
   },
   (t) => [index("rate_limit_expires_at_idx").on(t.expiresAt)],
 );
+
+// ---- Anonymous usage counts (POST /v1/events) and the admin page ----
+
+/**
+ * One row per app install. The id is a random UUID the app makes on first launch: it is not tied
+ * to an account, a device identifier or an advertising id, and nothing here links it to a person.
+ * Test builds (Xcode, TestFlight) are flagged so the admin page can leave them out.
+ */
+export const appInstalls = pgTable("app_installs", {
+  installId: uuid("install_id").primaryKey(),
+  firstSeen: date("first_seen").notNull(),
+  lastSeen: date("last_seen").notNull(),
+  appVersion: text("app_version"),
+  locale: text("locale"),
+  isTest: boolean("is_test").notNull().default(false),
+});
+
+/** Days an install opened the app (DAU / MAU). Rows older than 400 days are deleted. */
+export const appInstallDays = pgTable(
+  "app_install_days",
+  {
+    installId: uuid("install_id").notNull().references(() => appInstalls.installId, { onDelete: "cascade" }),
+    day: date("day").notNull(),
+  },
+  (t) => [primaryKey({ columns: [t.installId, t.day] }), index("app_install_days_day_idx").on(t.day)],
+);
+
+/** Per install, piece and day: how often the piece page opened and "Open in Spotify" was tapped. */
+export const pieceActivity = pgTable(
+  "piece_activity",
+  {
+    installId: uuid("install_id").notNull().references(() => appInstalls.installId, { onDelete: "cascade" }),
+    pieceId: text("piece_id").notNull(),
+    day: date("day").notNull(),
+    opens: integer("opens").notNull().default(0),
+    spotifyTaps: integer("spotify_taps").notNull().default(0),
+  },
+  (t) => [primaryKey({ columns: [t.installId, t.pieceId, t.day] }), index("piece_activity_piece_idx").on(t.pieceId, t.day)],
+);
+
+/** One live sign-in code per admin address (ADMIN_EMAILS); only its keyed hash is stored. */
+export const adminLoginCodes = pgTable("admin_login_codes", {
+  email: text("email").primaryKey(),
+  codeHash: text("code_hash").notNull(),
+  expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+  attempts: smallint("attempts").notNull().default(0),
+  sentAt: timestamp("sent_at", { withTimezone: true }).notNull().defaultNow(),
+});

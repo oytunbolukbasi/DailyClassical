@@ -85,6 +85,13 @@
       "when": 1791678543046,
       "tag": "0011_era_renaissance",
       "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1792836161562,
+      "tag": "0012_analytics_admin",
+      "breakpoints": true
     }
   ]
 }

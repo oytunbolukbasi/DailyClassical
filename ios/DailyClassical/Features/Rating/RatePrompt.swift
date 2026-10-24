@@ -41,7 +41,7 @@ enum RatePromptPolicy {
     }
 
     private static func dayKey(_ date: Date) -> String {
-        date.formatted(.iso8601.year().month().day())
+        date.formatted(Date.ISO8601FormatStyle(timeZone: .current).year().month().day())
     }
 }
 

@@ -9,6 +9,7 @@ struct DailyClassicalApp: App {
     @State private var session = SessionStore()
     @State private var entitlements = EntitlementStore()
     @State private var router = AppRouter()
+    @Environment(\.scenePhase) private var scenePhase
 
     var body: some Scene {
         WindowGroup {
@@ -37,6 +38,8 @@ struct DailyClassicalApp: App {
                 .onChange(of: session.accountPremium, initial: true) { entitlements.accountPremium = session.accountPremium }
                 // Purchases show up against the signed-in account in RevenueCat.
                 .task(id: session.userID) { await entitlements.identify(userID: session.userID) }
+                // Anonymous usage counts for the admin page (Core/Services/Analytics.swift).
+                .onChange(of: scenePhase, initial: true) { if scenePhase == .active { Analytics.shared.appBecameActive() } }
         }
     }
 }

@@ -7,8 +7,10 @@ import { secureHeaders } from "hono/secure-headers";
 import { sql } from "./db/client.js";
 import { appleStatus } from "./lib/apple.js";
 import { account } from "./routes/account.js";
+import { admin } from "./routes/admin.js";
 import { config } from "./routes/config.js";
 import { content } from "./routes/content.js";
+import { events } from "./routes/events.js";
 import { legal } from "./routes/legal.js";
 import { resetPage } from "./routes/reset-page.js";
 import { site } from "./routes/site.js";
@@ -35,9 +37,11 @@ app.use("/images/*", async (c, next) => {
 app.route("/v1", config);
 app.route("/v1", content);
 app.route("/v1", account);
+app.route("/v1", events);
 // Target of the password reset email (no website yet); outside /v1 because it is a web page.
 app.route("/", resetPage);
 app.route("/", legal);
+app.route("/", admin);
 app.route("/", site);
 
 app.notFound((c) => c.json({ error: "not_found" }, 404));
