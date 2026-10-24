@@ -56,7 +56,7 @@ beethoven-symphony-5:
   hero: { width: 2955, height: 1800, bytes: 816457 }
   thumb: { width: 493, height: 300, bytes: 17126 }
   placeholder_color: "#7e7a69"
-  full: { width: 4000, height: 2436, bytes: 1540345 }
+  full: { width: 4000, height: 2436, bytes: 1537532 }
 
 beethoven-symphony-9:
   # Public-domain gallery photo. A larger 3650 × 4633 file exists but is CC BY 4.0 (attribution needed):
@@ -121,7 +121,7 @@ brahms-symphony-4:
   hero: { width: 3379, height: 1800, bytes: 798952 }
   thumb: { width: 563, height: 300, bytes: 25376 }
   placeholder_color: "#655e5e"
-  full: { width: 4000, height: 2131, bytes: 1173877 }
+  full: { width: 4000, height: 2131, bytes: 1173046 }
 
 tchaikovsky-symphony-6:
   # The Tretyakov states no open licence. Smaller alternative 2000 × 1434: File:Levitan_nad_vech_pok28.jpg
@@ -168,7 +168,7 @@ mahler-symphony-5:
   hero: { width: 2068, height: 1800, bytes: 857464 }
   thumb: { width: 345, height: 300, bytes: 32263 }
   placeholder_color: "#605c57"
-  full: { width: 4000, height: 3482, bytes: 3274737 }
+  full: { width: 4000, height: 3482, bytes: 3275004 }
 
 shostakovich-symphony-5:
   # Replaced Malevich (Torso in a Yellow Shirt, c. 1932): its US status was unverified (first publication
@@ -184,7 +184,7 @@ shostakovich-symphony-5:
   rights_status: public_domain
   hero: { width: 3600, height: 1685, bytes: 1368712 }
   thumb: { width: 641, height: 300, bytes: 35576 }
-  full: { width: 4000, height: 1872, bytes: 1821185 }
+  full: { width: 4000, height: 1872, bytes: 1821538 }
   placeholder_color: "#af9d83"
 
 mozart-piano-concerto-23:
@@ -201,7 +201,7 @@ mozart-piano-concerto-23:
   rights_status: public_domain
   hero: { width: 1800, height: 2351, bytes: 733139 }
   thumb: { width: 300, height: 392, bytes: 18088 }
-  full: { width: 3062, height: 4000, bytes: 2103823 }
+  full: { width: 3062, height: 4000, bytes: 2100086 }
   placeholder_color: "#575451"
 
 beethoven-piano-concerto-3:
@@ -236,7 +236,7 @@ beethoven-piano-sonata-8:
   rights_status: public_domain
   hero: { width: 2704, height: 1800, bytes: 397050 }
   thumb: { width: 451, height: 300, bytes: 16873 }
-  full: { width: 4000, height: 2663, bytes: 1040367 }
+  full: { width: 4000, height: 2663, bytes: 1037515 }
   placeholder_color: "#2f2519"
 
 rachmaninoff-piano-concerto-2:
@@ -311,7 +311,7 @@ beethoven-string-quartet-15:
   rights_status: public_domain
   hero: { width: 2279, height: 1800, bytes: 1366875 }
   thumb: { width: 380, height: 300, bytes: 34474 }
-  full: { width: 4000, height: 3159, bytes: 3970763 }
+  full: { width: 4000, height: 3159, bytes: 3972055 }
   placeholder_color: "#5f5544"
 
 mozart-piano-sonata-11:
@@ -328,7 +328,7 @@ mozart-piano-sonata-11:
   rights_status: public_domain
   hero: { width: 2501, height: 1800, bytes: 785366 }
   thumb: { width: 417, height: 300, bytes: 18887 }
-  full: { width: 4000, height: 2879, bytes: 2542919 }
+  full: { width: 4000, height: 2879, bytes: 2545498 }
   placeholder_color: "#3e3523"
 
 beethoven-symphony-3:
@@ -422,7 +422,7 @@ beethoven-violin-concerto:
   rights_status: public_domain
   hero: { width: 1800, height: 2250, bytes: 447895 }
   thumb: { width: 300, height: 375, bytes: 13853 }
-  full: { width: 3200, height: 4000, bytes: 1750327 }
+  full: { width: 3200, height: 4000, bytes: 1751695 }
   placeholder_color: "#433c32"
 
 brahms-violin-concerto:
@@ -503,7 +503,7 @@ schubert-string-quartet-14:
   rights_status: public_domain
   hero: { width: 2139, height: 1800, bytes: 1253963 }
   thumb: { width: 357, height: 300, bytes: 41771 }
-  full: { width: 4000, height: 3365, bytes: 4124838 }
+  full: { width: 4000, height: 3365, bytes: 4123849 }
   placeholder_color: "#7e715b"
 
 mahler-symphony-2:
@@ -543,7 +543,7 @@ mahler-symphony-3:
   rights_status: public_domain
   hero: { width: 3451, height: 1800, bytes: 3102985 }
   thumb: { width: 575, height: 300, bytes: 67802 }
-  full: { width: 4000, height: 2086, bytes: 4513398 }
+  full: { width: 4000, height: 2086, bytes: 4543142 }
   placeholder_color: "#647265"
 
 mahler-symphony-9:
@@ -931,7 +931,7 @@ elgar-cello-concerto:
   rights_status: public_domain
   hero: { width: 2299, height: 1800, bytes: 688633 }
   thumb: { width: 383, height: 300, bytes: 25331 }
-  full: { width: 4000, height: 3132, bytes: 2036975 }
+  full: { width: 4000, height: 3132, bytes: 2037349 }
   placeholder_color: "#564a36"
 
 vivaldi-four-seasons-spring:
@@ -991,7 +991,7 @@ tallis-spem-in-alium:
   rights_status: public_domain
   hero: { width: 3600, height: 1391, bytes: 1258370 }
   thumb: { width: 720, height: 278, bytes: 73451 }
-  full: { width: 4000, height: 1546, bytes: 1572540 }
+  full: { width: 4000, height: 1546, bytes: 1572872 }
   placeholder_color: "#817f78"
 
 smetana-vltava:
@@ -1433,7 +1433,7 @@ schumann-symphony-3:
   rights_status: public_domain
   hero: { width: 1800, height: 2297, bytes: 562763 }
   thumb: { width: 300, height: 383, bytes: 21148 }
-  full: { width: 3134, height: 4000, bytes: 2054296 }
+  full: { width: 3134, height: 4000, bytes: 2052429 }
   placeholder_color: "#998b88"
 
 schumann-piano-quintet:
@@ -1732,7 +1732,7 @@ debussy-prelude-faune:
   rights_status: public_domain
   hero: { width: 2411, height: 1800, bytes: 812469 }
   thumb: { width: 402, height: 300, bytes: 26995 }
-  full: { width: 4000, height: 2986, bytes: 2297867 }
+  full: { width: 4000, height: 2986, bytes: 2297484 }
   placeholder_color: "#5a5a4e"
 
 ravel-piano-concerto-g:
@@ -1748,7 +1748,7 @@ ravel-piano-concerto-g:
   rights_status: public_domain
   hero: { width: 2482, height: 1800, bytes: 1480573 }
   thumb: { width: 414, height: 300, bytes: 32593 }
-  full: { width: 4000, height: 2901, bytes: 3672593 }
+  full: { width: 4000, height: 2901, bytes: 3672354 }
   placeholder_color: "#787c71"
 
 ravel-string-quartet:

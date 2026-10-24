@@ -513,7 +513,7 @@
     focal_y: 0.3
     hero: { width: 1800, height: 1948, bytes: 738331 }
     thumb: { width: 300, height: 325, bytes: 11343 }
-    full: { width: 2329, height: 2521, bytes: 1465312 }
+    full: { width: 2329, height: 2521, bytes: 1473991 }
     placeholder_color: "#2b261b"
 
 - id: haydn
@@ -691,7 +691,7 @@
     focal_y: 0.3
     hero: { width: 1800, height: 2222, bytes: 535220 }
     thumb: { width: 300, height: 370, bytes: 9318 }
-    full: { width: 3241, height: 4000, bytes: 1838797 }
+    full: { width: 3241, height: 4000, bytes: 1826842 }
     placeholder_color: "#302d1e"
 
 - id: chopin
@@ -735,7 +735,7 @@
     focal_y: 0.25
     hero: { width: 1800, height: 2246, bytes: 543775 }
     thumb: { width: 300, height: 374, bytes: 13830 }
-    full: { width: 3206, height: 4000, bytes: 2121802 }
+    full: { width: 3206, height: 4000, bytes: 2122627 }
     placeholder_color: "#372e1e"
 
 - id: liszt
@@ -779,7 +779,7 @@
     focal_y: 0.15
     hero: { width: 1800, height: 2366, bytes: 466887 }
     thumb: { width: 300, height: 394, bytes: 10623 }
-    full: { width: 3043, height: 4000, bytes: 1280842 }
+    full: { width: 3043, height: 4000, bytes: 1276392 }
     placeholder_color: "#272120"
 
 - id: grieg
