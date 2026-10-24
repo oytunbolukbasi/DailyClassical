@@ -245,9 +245,9 @@ async function dashboardView(email: string) {
     <section>
       <h2>Takvim <span class="m">bugün ${dayLabel(today)}, ±14 gün</span></h2>
       <div class="scroll"><table>
-        <thead><tr><th>Gün</th><th>Eser</th><th>Tablo</th><th>Referans kayıt</th><th class="n">Okuyan</th><th class="n">Açılış</th><th class="n">Spotify</th></tr></thead>
-        <tbody>${schedule.map((r) => html`<tr class="${r.day === today ? "today" : r.day > today ? "future" : ""}">
-          <td class="day">${dayLabel(r.day)}</td><td>${pieceCell(r)}</td><td>${paintingCell(r)}</td><td>${recordingCell(r)}</td>
+        <thead><tr><th class="n">#</th><th>Gün</th><th>Eser</th><th>Tablo</th><th>Referans kayıt</th><th class="n">Okuyan</th><th class="n">Açılış</th><th class="n">Spotify</th></tr></thead>
+        <tbody>${schedule.map((r, i) => html`<tr class="${r.day === today ? "today" : r.day > today ? "future" : ""}">
+          <td class="n m">${i + 1}</td><td class="day">${dayLabel(r.day)}</td><td>${pieceCell(r)}</td><td>${paintingCell(r)}</td><td>${recordingCell(r)}</td>
           ${num(r.readers)}${num(r.opens)}${num(r.taps)}</tr>`)}
         </tbody></table></div>
       <p class="m small">Okuyan, açılış ve Spotify o günün sayıları (eserin Bugün olduğu gün).</p>
@@ -256,9 +256,9 @@ async function dashboardView(email: string) {
     <section>
       <h2>Katalog <span class="m">${fmt.format(catalogue.length)} eser</span></h2>
       <div class="scroll"><table>
-        <thead><tr><th>Eser</th><th>Tür</th><th>Tablo</th><th>Referans kayıt</th><th>Takvim</th><th class="n">Okuyan</th><th class="n">Açılış</th><th class="n">Spotify</th></tr></thead>
-        <tbody>${catalogue.map((r) => html`<tr>
-          <td>${pieceCell(r)}</td><td class="m">${r.form}</td><td>${paintingCell(r)}</td><td>${recordingCell(r)}</td>
+        <thead><tr><th class="n">#</th><th>Eser</th><th>Tür</th><th>Tablo</th><th>Referans kayıt</th><th>Takvim</th><th class="n">Okuyan</th><th class="n">Açılış</th><th class="n">Spotify</th></tr></thead>
+        <tbody>${catalogue.map((r, i) => html`<tr>
+          <td class="n m">${i + 1}</td><td>${pieceCell(r)}</td><td class="m">${r.form}</td><td>${paintingCell(r)}</td><td>${recordingCell(r)}</td>
           <td class="day">${r.next_day ? html`sıradaki ${dayLabel(r.next_day)}` : r.last_day ? html`son ${dayLabel(r.last_day)}` : html`<span class="m">takvimde yok</span>`}${r.times_scheduled > 1 ? html`<div class="m">${r.times_scheduled} kez gösterildi</div>` : ""}</td>
           ${num(r.readers)}${num(r.opens)}${num(r.taps)}</tr>`)}
         </tbody></table></div>
