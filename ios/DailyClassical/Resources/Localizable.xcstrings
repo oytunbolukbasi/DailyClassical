@@ -2998,19 +2998,19 @@
         }
       }
     },
-    "onboarding.trial.title %lld": {
+    "onboarding.trial.title": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "The whole library, free for %lld days."
+            "value": "The whole library, whenever you like."
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Kütüphanenin tamamı, %lld gün ücretsiz."
+            "value": "Kütüphanenin tamamı, istediğiniz zaman."
           }
         }
       }
@@ -3101,22 +3101,23 @@
       },
       "comment": "%@ = StoreKit displayPrice of the selected plan"
     },
-    "paywall.cta.trial %lld": {
+    "paywall.cta.monthly %@": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Start %lld-day free trial"
+            "value": "Subscribe · %@/month"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld gün ücretsiz dene"
+            "value": "Abone ol · %@/ay"
           }
         }
-      }
+      },
+      "comment": "Monthly plan button. %@ = StoreKit displayPrice. App Review 3.1.2(c): the billed amount is the most prominent price, a free trial only in smaller text"
     },
     "paywall.error.purchase": {
       "extractionState": "manual",
@@ -3280,16 +3281,34 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld days free, then monthly. Cancel anytime"
+            "value": "Billed monthly after a %lld-day free trial. Cancel anytime"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "%lld gün ücretsiz, sonra aylık. İstediğiniz zaman iptal edin"
+            "value": "%lld günlük ücretsiz denemeden sonra her ay. İstediğiniz zaman iptal edin"
           }
         }
       }
+    },
+    "paywall.price.monthly %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@/month"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@/ay"
+          }
+        }
+      },
+      "comment": "%@ = StoreKit displayPrice of the monthly plan"
     },
     "paywall.privacy": {
       "extractionState": "manual",
@@ -3399,13 +3418,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$lld days free, then %2$@ a month. Renews automatically unless cancelled at least 24 hours before the trial ends; manage it in your Apple ID settings."
+            "value": "%2$@ a month, starting after a %1$lld-day free trial. Renews automatically unless cancelled at least 24 hours before the trial ends; manage it in your Apple ID settings."
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$lld gün ücretsiz, ardından aylık %2$@. Deneme bitmeden en az 24 saat önce iptal edilmezse otomatik yenilenir; Apple Kimliği ayarlarınızdan yönetebilirsiniz."
+            "value": "Aylık %2$@; ücretlendirme %1$lld günlük ücretsiz denemeden sonra başlar. Deneme bitmeden en az 24 saat önce iptal edilmezse otomatik yenilenir; Apple Kimliği ayarlarınızdan yönetebilirsiniz."
           }
         }
       }

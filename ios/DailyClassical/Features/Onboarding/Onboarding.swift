@@ -292,8 +292,9 @@ private struct GlossaryFragment: View {
 
 // MARK: - Card 4: the free trial
 
-/// "The whole library, free for 3 days." An offer, not a wall: "Continue with today's piece"
-/// is as easy to reach as the trial.
+/// "The whole library, whenever you like.", the monthly price, and a button that names it; the
+/// free trial is only in the small terms (App Review 3.1.2(c)). An offer, not a wall: "Continue
+/// with today's piece" is as easy to reach.
 private struct TrialCard: View {
     let dots: PageDots
     let onContinue: () -> Void
@@ -319,7 +320,7 @@ private struct TrialCard: View {
                         .fixedSize(horizontal: false, vertical: true)
                         .padding(.horizontal, 24)
                         .padding(.top, 10)
-                    Text("onboarding.trial.title \(entitlements.trialDays ?? 3)")
+                    Text("onboarding.trial.title")
                         .font(Typography.titleXL)
                         .tracking(-0.3)
                         .lineHeight(1.15, literata: 30)
@@ -328,6 +329,13 @@ private struct TrialCard: View {
                         .accessibilityAddTraits(.isHeader)
                         .padding(.horizontal, 24)
                         .padding(.top, 22)
+                    // App Review 3.1.2(c): the billed amount is the most prominent price on the card;
+                    // the free trial is only in the small terms under the button.
+                    Text("paywall.price.monthly \(entitlements.prices[.monthly] ?? "—")")
+                        .font(Typography.price)
+                        .foregroundStyle(Palette.ink)
+                        .padding(.horizontal, 24)
+                        .padding(.top, 10)
                     VStack(alignment: .leading, spacing: 10) {
                         BenefitLine("onboarding.trial.benefit.library")
                         BenefitLine("onboarding.trial.benefit.search")
@@ -349,7 +357,7 @@ private struct TrialCard: View {
                 }
                 Button { Task { await startTrial() } } label: {
                     ZStack {
-                        Text("paywall.cta.trial \(entitlements.trialDays ?? 3)").opacity(purchasing ? 0 : 1)
+                        Text("paywall.cta.monthly \(entitlements.prices[.monthly] ?? "—")").opacity(purchasing ? 0 : 1)
                         if purchasing { ProgressView().tint(Palette.onTint) }
                     }
                 }

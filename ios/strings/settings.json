@@ -508,21 +508,27 @@
     "tr": "Her ay, istediğiniz zaman iptal edin"
   },
   "paywall.plan.monthly.trialDetail %lld": {
-    "en": "%lld days free, then monthly. Cancel anytime",
-    "tr": "%lld gün ücretsiz, sonra aylık. İstediğiniz zaman iptal edin"
+    "en": "Billed monthly after a %lld-day free trial. Cancel anytime",
+    "tr": "%lld günlük ücretsiz denemeden sonra her ay. İstediğiniz zaman iptal edin"
   },
   "paywall.cta %@": {
     "en": "Continue · %@",
     "tr": "Devam · %@",
     "comment": "%@ = StoreKit displayPrice of the selected plan"
   },
-  "paywall.cta.trial %lld": {
-    "en": "Start %lld-day free trial",
-    "tr": "%lld gün ücretsiz dene"
+  "paywall.cta.monthly %@": {
+    "en": "Subscribe · %@/month",
+    "tr": "Abone ol · %@/ay",
+    "comment": "Monthly plan button. %@ = StoreKit displayPrice. App Review 3.1.2(c): the billed amount is the most prominent price, a free trial only in smaller text"
+  },
+  "paywall.price.monthly %@": {
+    "en": "%@/month",
+    "tr": "%@/ay",
+    "comment": "%@ = StoreKit displayPrice of the monthly plan"
   },
   "paywall.trial.terms %lld %@": {
-    "en": "%1$lld days free, then %2$@ a month. Renews automatically unless cancelled at least 24 hours before the trial ends; manage it in your Apple ID settings.",
-    "tr": "%1$lld gün ücretsiz, ardından aylık %2$@. Deneme bitmeden en az 24 saat önce iptal edilmezse otomatik yenilenir; Apple Kimliği ayarlarınızdan yönetebilirsiniz."
+    "en": "%2$@ a month, starting after a %1$lld-day free trial. Renews automatically unless cancelled at least 24 hours before the trial ends; manage it in your Apple ID settings.",
+    "tr": "Aylık %2$@; ücretlendirme %1$lld günlük ücretsiz denemeden sonra başlar. Deneme bitmeden en az 24 saat önce iptal edilmezse otomatik yenilenir; Apple Kimliği ayarlarınızdan yönetebilirsiniz."
   },
   "paywall.monthly.terms %@": {
     "en": "%@ a month. Renews automatically unless cancelled at least 24 hours before the end of the current period; manage it in your Apple ID settings.",
@@ -698,9 +704,9 @@
     "en": "The themes come back, this time in the home key.",
     "tr": "Temalar geri gelir, bu kez ana tonda."
   },
-  "onboarding.trial.title %lld": {
-    "en": "The whole library, free for %lld days.",
-    "tr": "Kütüphanenin tamamı, %lld gün ücretsiz."
+  "onboarding.trial.title": {
+    "en": "The whole library, whenever you like.",
+    "tr": "Kütüphanenin tamamı, istediğiniz zaman."
   },
   "onboarding.trial.benefit.library": {
     "en": "The full library of past pieces",

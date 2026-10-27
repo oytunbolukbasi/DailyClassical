@@ -54,9 +54,11 @@ struct PaywallScreen: View {
                     .padding(.horizontal, 24)
 
                     HStack(spacing: 10) {
-                        PlanCard(name: "paywall.plan.lifetime.name", price: price(.lifetime), detail: "paywall.plan.lifetime.detail",
+                        PlanCard(name: "paywall.plan.lifetime.name", price: Text(verbatim: price(.lifetime)), detail: "paywall.plan.lifetime.detail",
                                  isSelected: plan == .lifetime, showsBadge: true) { plan = .lifetime }
-                        PlanCard(name: "paywall.plan.monthly.name", price: price(.monthly),
+                        // App Review 3.1.2(c): the billed amount ("₺129,99/ay") is the card's headline; the
+                        // free trial is only mentioned in the small detail line.
+                        PlanCard(name: "paywall.plan.monthly.name", price: Text("paywall.price.monthly \(price(.monthly))"),
                                  detail: entitlements.trialDays.map { "paywall.plan.monthly.trialDetail \($0)" } ?? "paywall.plan.monthly.detail",
                                  isSelected: plan == .monthly, showsBadge: false) { plan = .monthly }
                     }
@@ -147,8 +149,9 @@ struct PaywallScreen: View {
     }
 
     private var ctaTitle: Text {
-        if plan == .monthly, let days = entitlements.trialDays {
-            Text("paywall.cta.trial \(days)")
+        // The button names the billed amount, never "free trial" (App Review 3.1.2(c)).
+        if plan == .monthly {
+            Text("paywall.cta.monthly \(price(.monthly))")
         } else {
             Text("paywall.cta \(price(plan))")
         }
@@ -215,7 +218,7 @@ struct BenefitLine: View {
 /// Solid plan card (SPEC §3.13): 2 pt accent ring when selected, optional "Best value" badge.
 private struct PlanCard: View {
     let name: LocalizedStringKey
-    let price: String
+    let price: Text
     let detail: LocalizedStringKey
     let isSelected: Bool
     let showsBadge: Bool
@@ -230,7 +233,7 @@ private struct PlanCard: View {
                     .font(Typography.planName)
                     .foregroundStyle(Palette.ink)
                     .padding(.top, 4)
-                Text(verbatim: price)
+                price
                     .font(Typography.price)
                     .foregroundStyle(Palette.ink)
                     .minimumScaleFactor(0.7)
