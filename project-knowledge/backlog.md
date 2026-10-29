@@ -1,6 +1,6 @@
 # Yapılacaklar
 
-Son güncelleme: 27 Ekim 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler. İçerik durumu ve zamanlama `content_status.md`'de, proje bilgisi `project_information.md`'de.
+Son güncelleme: 29 Ekim 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler. İçerik durumu ve zamanlama `content_status.md`'de, proje bilgisi `project_information.md`'de.
 
 ## Yayın
 
@@ -40,7 +40,8 @@ Son güncelleme: 27 Ekim 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]** 
 - **Debug build:** Premium açık (`EntitlementStore.debugUnlock`), içerik uygulamaya gömülü; production API'ye bağlanır (giriş, favoriler), içerik için `DC_USE_API=1`. Release/TestFlight build'leri StoreKit/RevenueCat ve production API'yi kullanır.
 - **Ayarlar › Test** (yalnızca Xcode'dan kurulan build'lerde): "Karşılamayı yeniden göster", "3 gün deneme teklifini göster". Simülatörde `-debugTrialDays 3`, `-debugPremium NO`.
 - **Premium test hesabı:** `premium-test@dailyclassical.co`; şifresi git'e girmeyen `backend/test-accounts.local.md`'de. Yeni hesap: `npm run test-user -- adres@... [--free]`.
-- **Simülatörler:** iPhone 18 Pro iOS 27.0, iPhone 17 iOS 26.5. Telefon iOS 27.0.1; cihaz davranışı için iOS 27 simülatörü esas.
+- **Simülatörler (29 Ekim, yeni Mac, Xcode 27.1):** iPhone 17 Pro Max ve iPhone 18 Pro, iOS 27.0 (24A434) ile; mağaza ekranları 6,9 inç (17 Pro Max). iOS 27.1 simülatörü (24A94425) yalnızca iPhone Duo'ya izin veriyor (`restrictedToDeviceTypes`), diğer modeller için 27.0 gerekli. Telefon iOS 27.0.1; cihaz davranışı için iOS 27 simülatörü esas.
+- **[Claude] iPhone Duo düzeni (yayından sonra):** Neredeyse kare ekranda (1398×2034) Bugün ekranındaki tablo tam genişlikte değil, sağda boşluk kalıyor; durum çubuğu sağ kenarda dikey. Geniş ekranlar için hero ve kenar çubuğu düzenine bakılacak.
 - Telefondaki "Ömür boyu", Xcode'un yerel StoreKit ortamındaki bir test satın almasından; hesaba bağlı değil, uygulama silinince gider.
 
 ## Tamamlananlar (özet)
