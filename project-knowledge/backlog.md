@@ -1,6 +1,6 @@
 # Yapılacaklar
 
-Son güncelleme: 29 Ekim 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler. İçerik durumu ve zamanlama `content_status.md`'de, proje bilgisi `project_information.md`'de.
+Son güncelleme: 6 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler. İçerik durumu ve zamanlama `content_status.md`'de, proje bilgisi `project_information.md`'de.
 
 ## Yayın
 
@@ -41,7 +41,13 @@ Son güncelleme: 29 Ekim 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]** 
 - **Ayarlar › Test** (yalnızca Xcode'dan kurulan build'lerde): "Karşılamayı yeniden göster", "3 gün deneme teklifini göster". Simülatörde `-debugTrialDays 3`, `-debugPremium NO`.
 - **Premium test hesabı:** `premium-test@dailyclassical.co`; şifresi git'e girmeyen `backend/test-accounts.local.md`'de. Yeni hesap: `npm run test-user -- adres@... [--free]`.
 - **Simülatörler (29 Ekim, yeni Mac, Xcode 27.1):** iPhone 17 Pro Max ve iPhone 18 Pro, iOS 27.0 (24A434) ile; mağaza ekranları 6,9 inç (17 Pro Max). iOS 27.1 simülatörü (24A94425) yalnızca iPhone Duo'ya izin veriyor (`restrictedToDeviceTypes`), diğer modeller için 27.0 gerekli. Telefon iOS 27.0.1; cihaz davranışı için iOS 27 simülatörü esas.
-- **[Claude] iPhone Duo düzeni (yayından sonra):** Neredeyse kare ekranda (1398×2034) Bugün ekranındaki tablo tam genişlikte değil, sağda boşluk kalıyor; durum çubuğu sağ kenarda dikey. Geniş ekranlar için hero ve kenar çubuğu düzenine bakılacak.
+- **[Claude] iPhone Duo uyumu (sonraki sürüm, 6 Kasım'da simülatörde incelendi):** Uygulama dört konumda da (kapalı dış ekran, açık dikey/yatay, yarı açık dikey/yatay) çalışıyor; sekme çubuğu ve gezinme düğmeleri sistem tarafından dikey sütuna taşınıyor, besteci/duvar kâğıdı/sözlük sayfaları katlanma çizgisinden kaçıyor. Build 2 ve 3 iOS 27.1 SDK ile derlendiği için yayındaki sürüm de bu tam ekran düzenini alır. Ekran görüntüleri `design/iphone-duo/`. Düzeltilecekler:
+  1. **Tablolar sağdaki kontrol sütununun altına uzanmıyor** (Bugün, eser sayfası, ödeme ekranı, karşılama, besteci sayfası); sütun boyunca düz bir şerit kalıyor. Apple'ın önerisi hero görsellerine `.backgroundExtensionEffect()`.
+  2. **Yarı açık yatay (kitap) konumda ortadaki öğeler katlanma çizgisinde:** "Dinlemeye başla", "Spotify'da aç", tarih rozeti ve değerlendirme kartı (Evet butonu). `GeometryProxy.reservedRegions(kind:)` ile katlanma bölgesinden kaydırılacak.
+  3. **Kapalı dış ekran kısa ve geniş:** eser sayfasında tablo ekranın yarısını kaplıyor, ilk bakışta yalnız başlık görünüyor; ödeme ekranında fiyat kartları ve "Abone ol" kaydırmadan görünmüyor. Sabit 280/300 pt hero yükseklikleri (`TodayScreen`, `PieceScreen`, `PaywallScreen`) kullanılabilir yüksekliğe oranlanacak.
+  4. **Duvar kâğıdı** `UIScreen.main.nativeBounds` kullanıyor (Apple kaldırılmasını istiyor; Duo'da ekran boyutu katlanınca değişir): kırpma çerçevesi iPhone oranında kalıyor. `windowScene.screen` / pencere boyutuna geçilecek.
+  5. **Açık yatay iç ekranda metin satırları çok uzun** (~110+ karakter): okuma genişliği ~680 pt ile sınırlanacak.
+  Sonra: App Store Connect'e iPhone Duo ekran görüntüleri (ürün sayfasında Duo rozeti). Test: Device Hub › iPhone Duo (iOS 27.1) › Closed / Partially Open / Open / Rotate; ekran görüntüsü `simctl io <udid> screenshot --display=<UUID>` (iç 2007×2853, dış 1398×2034; `simctl io <udid> enumerate`).
 - Telefondaki "Ömür boyu", Xcode'un yerel StoreKit ortamındaki bir test satın almasından; hesaba bağlı değil, uygulama silinince gider.
 
 ## Tamamlananlar (özet)
