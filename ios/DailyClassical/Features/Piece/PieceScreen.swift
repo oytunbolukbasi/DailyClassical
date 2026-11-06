@@ -259,15 +259,18 @@ struct PieceContent: View {
         if !inMovements {
             ZStack(alignment: .bottom) {
                 BottomFade()
-                PrimaryGlassButton(title: "piece.openInSpotify") {
-                    if let url = piece.referenceRecording?.spotifyUrl {
-                        Analytics.shared.spotifyTapped(piece.id)
-                        openURL(url)
-                    } else {
-                        showRecordings = true
+                FoldAware(alignment: .bottom) {
+                    PrimaryGlassButton(title: "piece.openInSpotify") {
+                        if let url = piece.referenceRecording?.spotifyUrl {
+                            Analytics.shared.spotifyTapped(piece.id)
+                            openURL(url)
+                        } else {
+                            showRecordings = true
+                        }
                     }
+                    .padding(.bottom, 40)
                 }
-                .padding(.bottom, 40)
+                .frame(height: BottomFade().height)  // not the whole page: FoldAware fills what it is given
             }
             .ignoresSafeArea(edges: .bottom)
             .transition(.opacity)
@@ -555,8 +558,10 @@ struct PieceHeader: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             PaintingImage(url: piece.painting?.imageUrl)
-                .frame(height: 300)
+                .containerRelativeFrame(.vertical) { height, _ in HeroHeight.piece(in: height) }
                 .frame(maxWidth: .infinity)
+                // Continues under the controls column on the side of the iPhone Duo.
+                .backgroundExtensionEffect()
                 .accessibilityLabel(paintingLabel)
             if let painting = piece.painting {
                 PaintingCaption(painting: painting).padding(.top, 14).gutter()
@@ -577,7 +582,8 @@ struct PieceHeader: View {
 struct PieceSkeleton: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
-            Rectangle().fill(Palette.skeleton).frame(height: 300)
+            Rectangle().fill(Palette.skeleton)
+                .containerRelativeFrame(.vertical) { height, _ in HeroHeight.piece(in: height) }
             VStack(alignment: .leading, spacing: 14) {
                 SkeletonBar(width: 120, height: 12)
                 SkeletonBar(width: 200, height: 14)
@@ -595,7 +601,7 @@ struct PieceSkeleton: View {
 }
 
 extension View {
-    func gutter() -> some View { padding(.horizontal, Spacing.pageGutter).frame(maxWidth: .infinity, alignment: .leading) }
+    func gutter() -> some View { readableColumn() }
 }
 
 private extension String {

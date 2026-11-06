@@ -31,11 +31,14 @@ struct TodayScreen: View {
 }
 
 /// The screen's safe-area frame, measured once by the pager: pages ignore the safe area so the
-/// painting runs under the status bar and the text can scroll under the floating tab bar.
+/// painting runs under the status bar (and under the controls column on the side of an iPhone
+/// Duo) and the text can scroll under the floating tab bar.
 private struct TodayMetrics: Equatable {
     var height: CGFloat = 0  // full screen height
     var top: CGFloat = 0     // status bar
     var bottom: CGFloat = 0  // up to the top of the floating tab bar
+    var leading: CGFloat = 0
+    var trailing: CGFloat = 0  // the controls column on the side of an iPhone Duo
 }
 
 /// Horizontal pages, one per published day, oldest first; opens on today (the last page).
@@ -48,7 +51,8 @@ private struct TodayPager: View {
         let days = content.days.isEmpty ? [ScheduledDay(day: content.todayDay, pieceId: todayPiece.id)] : content.days
         GeometryReader { geo in
             let metrics = TodayMetrics(height: geo.size.height + geo.safeAreaInsets.top + geo.safeAreaInsets.bottom,
-                                       top: geo.safeAreaInsets.top, bottom: geo.safeAreaInsets.bottom)
+                                       top: geo.safeAreaInsets.top, bottom: geo.safeAreaInsets.bottom,
+                                       leading: geo.safeAreaInsets.leading, trailing: geo.safeAreaInsets.trailing)
             ScrollView(.horizontal) {
                 LazyHStack(spacing: 0) {
                     ForEach(Array(days.enumerated()), id: \.element.day) { index, day in
@@ -70,7 +74,7 @@ private struct TodayPager: View {
             .scrollIndicators(.hidden)
             .scrollBounceBehavior(.basedOnSize, axes: .horizontal)
             .scrollEdgeEffectHidden(true, for: .top)  // see TodayContent: no band over the painting
-            .ignoresSafeArea(edges: .vertical)
+            .ignoresSafeArea()
         }
         .onAppear { if position == nil { position = days.last?.day } }
     }
@@ -99,6 +103,7 @@ private struct TodayDayPage: View {
             } else if let failure {
                 TodayDayOffline(date: day.date, error: failure, previous: previous, next: next) { Task { await load() } }
                     .padding(.top, metrics.top)
+                    .padding(.leading, metrics.leading).padding(.trailing, metrics.trailing)
             } else {
                 PieceSkeleton()
             }
@@ -178,19 +183,25 @@ private struct TodayContent: View {
                     .onTapGesture { if piece.painting != nil { showArtwork = true } }
                     .accessibilityLabel(paintingLabel)
                     .accessibilityAddTraits(.isButton)
-                    .overlay(alignment: .top) {
-                        DateChip(date: date)
-                            .dayNavigation(previous: previous, next: next)
-                            .padding(.top, metrics.top + 11)
+                    .overlay {
+                        FoldAware(alignment: .top) {
+                            DateChip(date: date)
+                                .dayNavigation(previous: previous, next: next)
+                                .padding(.top, metrics.top + 11)
+                        }
+                        .padding(.leading, metrics.leading).padding(.trailing, metrics.trailing)
                     }
-                    .overlay(alignment: .bottom) {
-                        // A past day is Premium ("catch up on the days you missed"); today is always free.
-                        PrimaryGlassButton(title: isLocked ? "today.listenWithPremium" : "today.startListening",
-                                           locked: isLocked) { startListening() }
-                            // Grows a little as the page is pulled: releasing opens the piece.
-                            .scaleEffect(1 + 0.06 * min(pull / pullThreshold, 1))
-                            .animation(.spring(duration: 0.25), value: pullReady)
-                            .offset(y: 27)
+                    .overlay {
+                        FoldAware(alignment: .bottom) {
+                            // A past day is Premium ("catch up on the days you missed"); today is always free.
+                            PrimaryGlassButton(title: isLocked ? "today.listenWithPremium" : "today.startListening",
+                                               locked: isLocked) { startListening() }
+                                // Grows a little as the page is pulled: releasing opens the piece.
+                                .scaleEffect(1 + 0.06 * min(pull / pullThreshold, 1))
+                                .animation(.spring(duration: 0.25), value: pullReady)
+                                .offset(y: 27)
+                        }
+                        .padding(.leading, metrics.leading).padding(.trailing, metrics.trailing)
                     }
                     .zIndex(1)
 
@@ -211,7 +222,8 @@ private struct TodayContent: View {
                     Text("today.meta \(piece.yearText) \(piece.durationMin) \(piece.movementCount)")
                         .font(Typography.meta13).foregroundStyle(Palette.ink2).padding(.top, 2)
                 }
-                .padding(.horizontal, Spacing.pageGutter)
+                .readableColumn()
+                .padding(.leading, metrics.leading).padding(.trailing, metrics.trailing)
                 .fixedSize(horizontal: false, vertical: true)
                 .onGeometryChange(for: CGFloat.self) { $0.size.height } action: {
                     textHeight = $0

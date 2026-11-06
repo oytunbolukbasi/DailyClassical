@@ -15,14 +15,14 @@ struct WallpaperSheet: View {
     @State private var focus = CGPoint(x: 0.5, y: 0.5)
     @State private var dragStart: CGPoint?
     @State private var state: SaveState = .idle
+    /// The pixel size of the screen this sheet is on, portrait. Read from the window scene: an
+    /// iPhone Duo has two displays of different shapes, and folding moves the app between them.
+    @State private var screenPixels = CGSize(width: 1179, height: 2556)
 
     enum SaveState: Equatable { case idle, saving, saved, denied, failed }
 
-    /// The device screen's aspect (portrait), so the wallpaper fills the Lock Screen.
-    private var screenAspect: CGFloat {
-        let size = UIScreen.main.nativeBounds.size
-        return min(size.width, size.height) / max(size.width, size.height)
-    }
+    /// The screen's aspect (portrait), so the wallpaper fills the Lock Screen.
+    private var screenAspect: CGFloat { screenPixels.width / screenPixels.height }
 
     var body: some View {
         VStack(spacing: 22) {
@@ -81,6 +81,7 @@ struct WallpaperSheet: View {
                 .padding(.trailing, 16).padding(.top, 4)
         }
         .environment(\.colorScheme, .dark)
+        .background { WindowScreenReader { screenPixels = $0 } }
         .task {
             if let preloaded { image = preloaded; return }
             if let request = ImagePipeline.shared.request(for: painting.imageUrl, variant: .full, artwork: painting.artwork) {
@@ -159,9 +160,7 @@ struct WallpaperSheet: View {
     private func save() async {
         guard let image else { return }
         state = .saving
-        let native = UIScreen.main.nativeBounds.size
-        let maxSize = CGSize(width: min(native.width, native.height), height: max(native.width, native.height))
-        guard let wallpaper = Self.render(image, focus: focus, aspect: screenAspect, maxSize: maxSize) else {
+        guard let wallpaper = Self.render(image, focus: focus, aspect: screenAspect, maxSize: screenPixels) else {
             state = .failed
             return
         }
@@ -187,6 +186,47 @@ struct WallpaperSheet: View {
     nonisolated private static func addToPhotos(_ image: UIImage) async throws {
         try await PHPhotoLibrary.shared().performChanges {
             PHAssetChangeRequest.creationRequestForAsset(from: image)
+        }
+    }
+}
+
+/// Reports the pixel size (portrait) of the screen the view is on, and again when the scene
+/// moves to another one (`UIScreen.main` is always the same screen).
+private struct WindowScreenReader: UIViewRepresentable {
+    let onChange: (CGSize) -> Void
+
+    func makeUIView(context: Context) -> ReaderView { ReaderView(onChange: onChange) }
+    func updateUIView(_ view: ReaderView, context: Context) { view.onChange = onChange }
+
+    final class ReaderView: UIView {
+        var onChange: (CGSize) -> Void
+        private var reported: CGSize?
+
+        init(onChange: @escaping (CGSize) -> Void) {
+            self.onChange = onChange
+            super.init(frame: .zero)
+            isUserInteractionEnabled = false
+        }
+
+        required init?(coder: NSCoder) { fatalError("init(coder:) is not used") }
+
+        override func didMoveToWindow() {
+            super.didMoveToWindow()
+            report()
+        }
+
+        override func layoutSubviews() {
+            super.layoutSubviews()
+            report()
+        }
+
+        private func report() {
+            guard let native = window?.windowScene?.screen.nativeBounds.size else { return }
+            let size = CGSize(width: min(native.width, native.height), height: max(native.width, native.height))
+            guard size != reported else { return }
+            reported = size
+            // Not during the layout pass that called this.
+            DispatchQueue.main.async { [onChange] in onChange(size) }
         }
     }
 }

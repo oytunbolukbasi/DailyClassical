@@ -65,6 +65,8 @@ struct WelcomeFlow: View {
         }
         .tabViewStyle(.page(indexDisplayMode: .never))
         .background(Palette.background.ignoresSafeArea())
+        // Not `.horizontal` too: the page view then pages by the wider frame and every card sits
+        // off by the iPhone Duo's controls column. The painting stops at the column there.
         .ignoresSafeArea(edges: .top)
         .overlay(alignment: .topTrailing) {
             if page != .reminder {
