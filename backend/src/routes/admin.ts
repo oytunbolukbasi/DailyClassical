@@ -171,7 +171,13 @@ async function loadDashboard() {
       where not i.is_test and pa.piece_id = pc.id
     ) t on true
     order by readers desc, next_day nulls last, pc.id`;
-  return { today, kpi: kpi!, series, schedule, catalogue };
+  // Installs that saw / answered each prompt (1.0.1 on); `times` counts every showing.
+  const prompts = await sql<{ prompt: string; action: string; installs: number; times: number }[]>`
+    select pe.prompt, pe.action, count(distinct pe.install_id)::int as installs, sum(pe.count)::int as times
+    from prompt_events pe join app_installs i using (install_id)
+    where not i.is_test
+    group by pe.prompt, pe.action`;
+  return { today, kpi: kpi!, series, schedule, catalogue, prompts };
 }
 
 // ---- Views ----
@@ -231,7 +237,10 @@ function chart(series: { day: string; n: number }[]) {
 }
 
 async function dashboardView(email: string) {
-  const { today, kpi, series, schedule, catalogue } = await loadDashboard();
+  const { today, kpi, series, schedule, catalogue, prompts } = await loadDashboard();
+  const prompt = (p: string, a: string) => prompts.find((r) => r.prompt === p && r.action === a) ?? { installs: 0, times: 0 };
+  const rateShown = prompt("rate", "shown"), rateYes = prompt("rate", "yes"), rateLater = prompt("rate", "later");
+  const share = (n: number) => rateShown.installs ? `gösterilenlerin %${Math.round((n / rateShown.installs) * 100)}'i` : "henüz gösterilmedi";
   const tile = (label: string, value: number, note?: string) =>
     html`<div class="tile"><div class="k">${label}</div><div class="v">${fmt.format(value)}</div>${note ? html`<div class="m">${note}</div>` : ""}</div>`;
   return html`
@@ -254,6 +263,26 @@ async function dashboardView(email: string) {
         ${chart(series)}
       </div>
       <p class="m small">Kullanıcı = uygulamanın bir kurulumu (anonim). Xcode ve TestFlight build'leri sayılmaz. Gün, kullanıcının kendi tarihine göre.</p>
+    </section>
+
+    <section>
+      <h2>Değerlendirme istemi <span class="m">1.0.1'den itibaren</span></h2>
+      <div class="tiles">
+        ${tile("Gösterilen", rateShown.installs, `${fmt.format(rateShown.times)} kez`)}
+        ${tile("Evet", rateYes.installs, share(rateYes.installs))}
+        ${tile("Sonra", rateLater.installs, share(rateLater.installs))}
+      </div>
+      <details class="note">
+        <summary>Ne zaman gösteriliyor?</summary>
+        <ul>
+          <li>Kullanıcı en az <b>3 farklı günde</b> bir eser sayfası açmış olmalı. Aynı gün içinde birkaç eser açmak tek gün sayılır.</li>
+          <li>Kart, bir eserden <b>Bugün ekranına dönüldüğünde</b> yaklaşık 0,7 saniye sonra çıkar. Başka bir sayfa açıksa ya da karşılama tamamlanmamışsa çıkmaz.</li>
+          <li>Her uygulama sürümünde <b>en fazla 1 kez</b>, son 365 günde <b>en fazla 3 kez</b> gösterilir.</li>
+          <li><b>Evet</b>: kart kapanır ve iOS'un kendi değerlendirme penceresi açılır. iOS bu pencereyi 365 günde en fazla 3 kez gösterir ve kendi kararıyla atlayabilir. Kullanıcının puan verip vermediğini Apple bildirmez; puanlar App Store Connect › Ratings and Reviews'da.</li>
+          <li><b>Sonra</b>: kart kapanır. Kurallar tutarsa sonraki sürümde yeniden çıkabilir.</li>
+          <li>Kullanıcılar kurulum başına sayılır; aynı kişi iki sürümde iki kez görürse "Gösterilen"de bir kişi, iki kez olarak görünür. 1.0.0 kartı gösterir ama saymaz.</li>
+        </ul>
+      </details>
     </section>
 
     <details class="calbox" open>
@@ -358,6 +387,10 @@ a{color:var(--accent)}
 .tile .v{font:500 34px/1.2 Literata,Georgia,serif;font-variant-numeric:tabular-nums;margin:4px 0 2px}
 .tile .m{font-size:13px}
 .card{margin-top:12px}
+.note{margin-top:12px;background:var(--surface);border-radius:16px;box-shadow:0 0 0 .5px var(--rule);padding:12px 18px;font-size:14px;line-height:1.5}
+.note summary{cursor:pointer;color:var(--accent);font-weight:500}
+.note ul{margin:10px 0 4px;padding-left:20px}
+.note li{margin:6px 0}
 .ct{font-size:13px;color:var(--ink2);margin-bottom:8px}
 .chart{width:100%;height:auto;display:block}
 .chart path{fill:var(--accent)}

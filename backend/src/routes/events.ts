@@ -7,19 +7,23 @@ import { enforceRateLimit } from "../lib/rate-limit.js";
 /**
  * POST /v1/events: anonymous usage counts from the app (Core/Services/Analytics.swift). An
  * install sends a random UUID it made itself, never an account, device or advertising id; the
- * server keeps one row per install and per active day and per piece and day (db/schema.ts), and
- * the admin page (routes/admin.ts) reads only totals. Rows older than 400 days are deleted.
+ * server keeps one row per install and per active day, per piece and day, and per prompt answer
+ * and day (db/schema.ts), and the admin page (routes/admin.ts) reads only totals. Rows older than
+ * 400 days are deleted.
  */
 export const events = new Hono();
 
 const day = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
+const PROMPT_TYPES = ["rate", "widget"].flatMap((p) => ["shown", "yes", "later"].map((a) => `${p}_prompt_${a}`)) as [string, ...string[]];
+const PROMPT_EVENT = /^(rate|widget)_prompt_(shown|yes|later)$/;
 const body = z.object({
   installId: z.uuid(),
   appVersion: z.string().max(20).optional(),
   locale: z.string().max(10).optional(),
   test: z.boolean().optional(),
   events: z.array(z.object({
-    type: z.enum(["active", "piece_open", "spotify_tap"]),
+    // `<prompt>_prompt_<action>`: the rating card (1.0.1) and the widget tip.
+    type: z.enum(["active", "piece_open", "spotify_tap", ...PROMPT_TYPES]),
     day,
     pieceId: z.string().max(100).regex(/^[a-z0-9-]+$/).optional(),
   })).min(1).max(100),
@@ -46,9 +50,18 @@ events.post("/events", async (c) => {
   const pieces = await knownPieces();
   const days = new Set<string>();
   const activity = new Map<string, { pieceId: string; day: string; opens: number; taps: number }>();
+  const prompts = new Map<string, { prompt: string; action: string; day: string; count: number }>();
   for (const e of list) {
     if (!plausible(e.day)) continue;
     days.add(e.day);
+    const prompt = PROMPT_EVENT.exec(e.type);
+    if (prompt) {
+      const key = `${e.type}|${e.day}`;
+      const row = prompts.get(key) ?? { prompt: prompt[1]!, action: prompt[2]!, day: e.day, count: 0 };
+      row.count++;
+      prompts.set(key, row);
+      continue;
+    }
     if (e.type === "active" || !e.pieceId || !pieces.has(e.pieceId)) continue;
     const key = `${e.pieceId}|${e.day}`;
     const row = activity.get(key) ?? { pieceId: e.pieceId, day: e.day, opens: 0, taps: 0 };
@@ -80,12 +93,19 @@ events.post("/events", async (c) => {
           opens = piece_activity.opens + excluded.opens,
           spotify_taps = piece_activity.spotify_taps + excluded.spotify_taps`;
     }
+    for (const r of prompts.values()) {
+      await tx`
+        insert into prompt_events (install_id, prompt, action, day, count)
+        values (${installId}, ${r.prompt}, ${r.action}, ${r.day}, ${r.count})
+        on conflict (install_id, prompt, action, day) do update set count = prompt_events.count + excluded.count`;
+    }
   });
 
   // Retention, now and then rather than on a schedule.
   if (Math.random() < 0.01) {
     await sql`delete from app_install_days where day < current_date - ${RETENTION_DAYS}::int`;
     await sql`delete from piece_activity where day < current_date - ${RETENTION_DAYS}::int`;
+    await sql`delete from prompt_events where day < current_date - ${RETENTION_DAYS}::int`;
     await sql`delete from app_installs where last_seen < current_date - ${RETENTION_DAYS}::int`;
   }
   return c.body(null, 204);

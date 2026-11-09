@@ -278,6 +278,22 @@ export const pieceActivity = pgTable(
   (t) => [primaryKey({ columns: [t.installId, t.pieceId, t.day] }), index("piece_activity_piece_idx").on(t.pieceId, t.day)],
 );
 
+/**
+ * Per install, prompt, action and day: how often the rating card ("rate") or the widget tip
+ * ("widget") was shown and answered ("shown", "yes", "later"). The admin page counts installs.
+ */
+export const promptEvents = pgTable(
+  "prompt_events",
+  {
+    installId: uuid("install_id").notNull().references(() => appInstalls.installId, { onDelete: "cascade" }),
+    prompt: text("prompt").notNull(),
+    action: text("action").notNull(),
+    day: date("day").notNull(),
+    count: integer("count").notNull().default(0),
+  },
+  (t) => [primaryKey({ columns: [t.installId, t.prompt, t.action, t.day] })],
+);
+
 /** One live sign-in code per admin address (ADMIN_EMAILS); only its keyed hash is stored. */
 export const adminLoginCodes = pgTable("admin_login_codes", {
   email: text("email").primaryKey(),
