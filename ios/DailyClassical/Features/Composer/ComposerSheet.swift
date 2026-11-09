@@ -28,6 +28,8 @@ struct ComposerSheet: View {
                         .frame(height: Self.portraitHeight)
                         .frame(maxWidth: .infinity)
                         .clipped()
+                        // Continues under the controls column on the side of the iPhone Duo.
+                        .backgroundExtensionEffect()
                         .accessibilityElement()
                         .accessibilityLabel(Text("composer.portrait.accessibilityLabel \(name)"))
                         .accessibilityAddTraits(.isImage)

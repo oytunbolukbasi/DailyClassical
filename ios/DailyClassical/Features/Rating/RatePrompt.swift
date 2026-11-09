@@ -106,60 +106,63 @@ struct RatePromptCard: View {
                 .ignoresSafeArea()
                 .accessibilityHidden(true)
 
-            VStack(spacing: 0) {
-                PaywallPainting()
-                    .frame(height: 220)
-                    .clipped()
-
-                Text("paywall.painting.caption")
-                    .font(Typography.caption)
-                    .lineHeight(1.4)
-                    .foregroundStyle(Palette.ink3)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top, 10)
-                    .padding(.horizontal, 20)
-
+            // In one pane, not across the fold, when an iPhone Duo is half open like a book.
+            FoldAware {
                 VStack(spacing: 0) {
-                    RateStars()
-                        .padding(.top, 22)
+                    PaywallPainting()
+                        .frame(height: 220)
+                        .clipped()
 
-                    Text("rate.title")
-                        .font(Typography.titleM)
-                        .lineHeight(1.25, literata: 24)
-                        .foregroundStyle(Palette.ink)
-                        .multilineTextAlignment(.center)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .accessibilityAddTraits(.isHeader)
-                        .padding(.top, 16)
+                    Text("paywall.painting.caption")
+                        .font(Typography.caption)
+                        .lineHeight(1.4)
+                        .foregroundStyle(Palette.ink3)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.top, 10)
+                        .padding(.horizontal, 20)
 
-                    Text("rate.body")
-                        .font(Typography.body15)
-                        .lineHeight(1.5)
-                        .foregroundStyle(Palette.ink2)
-                        .multilineTextAlignment(.center)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding(.top, 8)
+                    VStack(spacing: 0) {
+                        RateStars()
+                            .padding(.top, 22)
 
-                    VStack(spacing: 4) {
-                        Button(action: onYes) { Text("rate.yes") }
-                            .buttonStyle(.dcPrimary)
-                        Button(action: onLater) { Text("rate.later").frame(maxWidth: .infinity, minHeight: 44) }
-                            .buttonStyle(.dcTextLink)
+                        Text("rate.title")
+                            .font(Typography.titleM)
+                            .lineHeight(1.25, literata: 24)
+                            .foregroundStyle(Palette.ink)
+                            .multilineTextAlignment(.center)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .accessibilityAddTraits(.isHeader)
+                            .padding(.top, 16)
+
+                        Text("rate.body")
+                            .font(Typography.body15)
+                            .lineHeight(1.5)
                             .foregroundStyle(Palette.ink2)
+                            .multilineTextAlignment(.center)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .padding(.top, 8)
+
+                        VStack(spacing: 4) {
+                            Button(action: onYes) { Text("rate.yes") }
+                                .buttonStyle(.dcPrimary)
+                            Button(action: onLater) { Text("rate.later").frame(maxWidth: .infinity, minHeight: 44) }
+                                .buttonStyle(.dcTextLink)
+                                .foregroundStyle(Palette.ink2)
+                        }
+                        .padding(.top, 22)
                     }
-                    .padding(.top, 22)
+                    .padding(.horizontal, 24)
+                    .padding(.bottom, 16)
                 }
+                .background(Palette.background)
+                .clipShape(.rect(cornerRadius: 28, style: .continuous))
+                .shadow(color: .black.opacity(0.3), radius: 30, y: 12)
                 .padding(.horizontal, 24)
-                .padding(.bottom, 16)
+                .frame(maxWidth: 440)
+                .scaleEffect(appeared ? 1 : 0.94)
+                .accessibilityElement(children: .contain)
+                .accessibilityAddTraits(.isModal)
             }
-            .background(Palette.background)
-            .clipShape(.rect(cornerRadius: 28, style: .continuous))
-            .shadow(color: .black.opacity(0.3), radius: 30, y: 12)
-            .padding(.horizontal, 24)
-            .frame(maxWidth: 440)
-            .scaleEffect(appeared ? 1 : 0.94)
-            .accessibilityElement(children: .contain)
-            .accessibilityAddTraits(.isModal)
         }
         .onAppear { withAnimation(.spring(duration: 0.4, bounce: 0.15)) { appeared = true } }
     }

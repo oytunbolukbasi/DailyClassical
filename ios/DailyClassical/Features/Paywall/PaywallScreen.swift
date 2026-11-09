@@ -20,7 +20,9 @@ struct PaywallScreen: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 0) {
                     PaywallPainting()
-                        .frame(height: 280)
+                        .frame(height: HeroHeight.paywall(in: geo.size.height + geo.safeAreaInsets.top))
+                        // Continues under the controls column on the side of the iPhone Duo.
+                        .backgroundExtensionEffect()
 
                     Text("paywall.painting.caption")
                         .font(Typography.caption)
