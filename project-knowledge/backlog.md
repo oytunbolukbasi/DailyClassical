@@ -25,14 +25,17 @@ Sürüm `MARKETING_VERSION` 1.0.1 (`ios/project.yml`); build numarası arşivde 
 
 **Build'den önce yapılacaklar [Claude]**
 
-- **Gömülü görseller yeni takvime göre:** `npm run images` ve `npm run images:widget`; takvime giren 7 yeni eserin (23–29 Kasım) tabloları uygulamaya ve widget'a girer. Takvim haftalık uzadıkça her build'den önce tekrarlanır.
-- **Eser sayfası alt boşluğu:** son bölümden sonra 150 yerine ~44 pt (`Spacing.floatingButtonClearance`).
-- **Karşılamada Duo:** tablo yan sütunda kesiliyor; sayfaları Bugün'deki gibi kendi kaydırma görünümüne geçirmek (isteğe bağlı, karşılama bir kez görülür).
-- **Duo canvas'ını tamamlamak:** açık dikey/yatay ve yarı açık dikey son build'le çekilip canvas'a eklenecek.
-- **Regresyon turu:** iPhone 17 Pro Max, iPhone SE boyu (kısa ekranda tablo yüksekliği değişti) ve Duo'da Bugün, eser, ödeme, karşılama, duvar kâğıdı; telefonda TestFlight.
+- **Gömülü görseller yeni takvime göre (yapıldı, 9 Kasım):** `npm run images` + `images:widget`; 23–29 Kasım'ın 7 eseri uygulamaya (43 MB) ve widget'a (4,4 MB) girdi. Takvim haftalık uzadıkça her build'den önce tekrarlanır.
+- **Eser sayfası alt boşluğu (yapıldı):** son bloktan sonra 150 yerine 44 pt.
+- **Değerlendirme istemi sayaçları (yapıldı):** uygulama gösterildi / Evet / Sonra gönderir (`Analytics.ratePrompt`); sunucuda `prompt_events` (migration 0013), adminde "Değerlendirme istemi" kartı ve gösterim kuralları notu. Sunucu tarafı yayında; sayılar 1.0.1 ile gelmeye başlar.
+- **Widget tanıtımı (tasarım onayı bekliyor):** https://claude.ai/artifact/7HKvqZjoyZEN7gg9jFb2dr. A kart (önerilen), B adım adım sayfası, C Bugün'de ipucu; ne zaman gösterileceği önerisi canvas'ta. Onaydan sonra: kart + Ayarlar'da "Widget ekle" satırı, yerleşik widget varsa göstermeme (`WidgetCenter`), sayaçlar (`widget_prompt_*`, sunucu hazır).
+- **Regresyon turu (yapıldı, simülatör):** iPhone 17 Pro Max değişmedi; iPhone SE'de eser ve ödeme ekranı tablosu kısaldı, fiyat kartları görünüyor; duvar kâğıdı çerçevesi ekran oranında. Telefonda TestFlight turu build'le birlikte.
+- **Karşılamada Duo:** 1.1'e kaldı (ilk açılış akışını yeniden kurmak gerekiyor, risk kazançtan büyük).
+- **Duo canvas'ını tamamlamak:** açık dikey/yatay ve yarı açık dikey; Device Hub ekrana bağlanamadığı için bekliyor.
 
 **Gönderim [Oytun + Claude]**
 
+- App Privacy değişmiyor (sayaçlar zaten beyan edilen "Product Interaction" kapsamında).
 - "Yenilikler" metni (aşağıda), iPhone Duo ekran görüntüleri (ürün sayfasında Duo rozeti), App Review notu: yalnız yerleşim değişikliği, satın alma ekranı aynı.
 - Yenilikler (TR): "iPhone Duo için yeniden düzenlendi: tablolar ekranın tamamını kaplıyor, düğmeler katlanma çizgisinden uzak duruyor. Kısa ekranlarda eser sayfası ve Premium ekranı daha derli toplu. Küçük düzeltmeler."
 - What's New (EN): "Redesigned for iPhone Duo: paintings fill the whole screen and buttons stay clear of the fold. On shorter screens the piece page and the Premium screen are tidier. Small fixes."
@@ -58,7 +61,6 @@ Sürüm `MARKETING_VERSION` 1.0.1 (`ios/project.yml`); build numarası arşivde 
 ## Tasarım denetiminden kalanlar (küçük)
 
 - **[Claude] Dokunma alanı:** Metin içi sözlük terimlerinin 44 pt dokunma alanı yok (`RichTextView` yalnızca `Text` bağlantısı); TextKit ya da `TextRenderer` sarmalayıcısı gerekir.
-- **[Claude] Eser sayfası alt boşluğu:** "Spotify'da aç" son bölümden sonra geri gelmediği için alt boşluk 150 yerine ~44 olabilir (`Spacing.floatingButtonClearance`).
 - **[Claude] E-posta değiştirme:** Hesap › E-posta satırı yalnızca bilgi; değiştirme akışı yok (`account.changeEmail.title` anahtarı ayrılmış).
 - **[Oytun + Claude] Kontrol edilmemiş durumlar:** "Şeffaflığı Azalt" açıkken uygulama genelinde; Premium arama sonuçları ve giriş yapılmış ekranların görsel kontrolü.
 
