@@ -77,12 +77,14 @@ private struct RatePromptHost: ViewModifier {
                     guard router.todayPath.isEmpty, router.sheet == nil else { return }
                     RatePromptPolicy.markShown()
                     router.showRatePrompt = true
+                    Analytics.shared.ratePrompt(.shown)
                 }
             }
     }
 
     private func close(thenReview: Bool) {
         router.showRatePrompt = false
+        Analytics.shared.ratePrompt(thenReview ? .yes : .later)
         guard thenReview else { return }
         Task {
             // After our card has faded, so the two never overlap.
