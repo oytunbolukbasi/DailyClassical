@@ -3,13 +3,15 @@
 # A piece is published on its latest scheduled day up to the reader's today; the Library lists only
 # published pieces and Today pages back through past days.
 #
-# TEST DATA (content review): `start` is 2026-09-24 so all fourteen pieces are published by 7 Oct and
-# show in the Library, with Rachmaninoff 2 (last in the order) as Today on 7 Oct. Before release,
-# set `start` to the launch day with tchaikovsky-symphony-6 first, then re-run db:seed and
-# `npm run fixtures`.
-start: 2026-09-24
+# Launch: the app went live on 9 Nov 2026, day 0, with Tchaikovsky 6. Days 0–13 are the fourteen
+# pieces that shipped in the review build, days 14–20 the first week of the October batches; from
+# then on about seven pieces a week are appended (project-knowledge/content_status.md › Yayın planı).
+# Append only: moving or removing a piece changes which piece earlier days showed.
+start: 2026-11-09
 days: 365
 order:
+  # Days 0–13 (9–22 Nov)
+  - tchaikovsky-symphony-6
   - mozart-symphony-40
   - beethoven-piano-sonata-8
   - beethoven-symphony-5
@@ -22,5 +24,12 @@ order:
   - beethoven-piano-concerto-3
   - mahler-symphony-5
   - shostakovich-symphony-5
-  - tchaikovsky-symphony-6
   - rachmaninoff-piano-concerto-2
+  # Days 14–20 (23–29 Nov)
+  - beethoven-symphony-3
+  - vivaldi-four-seasons-spring
+  - beethoven-piano-sonata-14
+  - dvorak-cello-concerto
+  - ravel-bolero
+  - mozart-symphony-41
+  - chopin-piano-concerto-1
