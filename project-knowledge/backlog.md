@@ -11,7 +11,7 @@ Son güncelleme: 9 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]**
 
 ## 1.0.1 planı
 
-Sürüm `MARKETING_VERSION` 1.0.1 (`ios/project.yml`); build numarası arşivde 4'e çıkar. Kullanıcıya görünen değişiklik iPhone Duo ve kısa ekranlar; geri kalanı bakım.
+Sürüm `MARKETING_VERSION` 1.0.1 (`ios/project.yml`); build numarası arşivde 4'e çıkar. Kullanıcıya görünen değişiklikler: widget tanıtımı, iPhone Duo ve kısa ekranlar; geri kalanı bakım ve sayaçlar.
 
 **Hazır olanlar**
 
@@ -28,7 +28,7 @@ Sürüm `MARKETING_VERSION` 1.0.1 (`ios/project.yml`); build numarası arşivde 
 - **Gömülü görseller yeni takvime göre (yapıldı, 9 Kasım):** `npm run images` + `images:widget`; 23–29 Kasım'ın 7 eseri uygulamaya (43 MB) ve widget'a (4,4 MB) girdi. Takvim haftalık uzadıkça her build'den önce tekrarlanır.
 - **Eser sayfası alt boşluğu (yapıldı):** son bloktan sonra 150 yerine 44 pt.
 - **Değerlendirme istemi sayaçları (yapıldı):** uygulama gösterildi / Evet / Sonra gönderir (`Analytics.ratePrompt`); sunucuda `prompt_events` (migration 0013), adminde "Değerlendirme istemi" kartı ve gösterim kuralları notu. Sunucu tarafı yayında; sayılar 1.0.1 ile gelmeye başlar.
-- **Widget tanıtımı (tasarım onayı bekliyor):** https://claude.ai/artifact/7HKvqZjoyZEN7gg9jFb2dr. A kart (önerilen), B adım adım sayfası, C Bugün'de ipucu; ne zaman gösterileceği önerisi canvas'ta. Onaydan sonra: kart + Ayarlar'da "Widget ekle" satırı, yerleşik widget varsa göstermeme (`WidgetCenter`), sayaçlar (`widget_prompt_*`, sunucu hazır).
+- **Widget tanıtımı (yapıldı, 9 Kasım; tasarım A onaylandı):** https://claude.ai/artifact/7HKvqZjoyZEN7gg9jFb2dr. `Features/WidgetTip/WidgetTip.swift`: kart (bugünün eseriyle orta boy widget, 3 adım, Anladım / Sonra), kısa ekranda simge sırası olmadan, en büyük yazıda kaydırılır; katlanma çizgisinden kaçar. Kurallar: 2 farklı gün açılıştan sonra Bugün'de, ana ekranda widget varsa hiç (`WidgetCenter`), değerlendirme kartıyla aynı gün değil (iki yönlü), Anladım = bir daha yok, Sonra = 7 gün sonra bir kez daha (en fazla 2). Ayarlar › Okuma › Ana ekran widget'ı her zaman açar (sayılmaz). Sayaçlar `widget_prompt_*`, adminde "Widget tanıtımı" kartı ve kurallar notu. Test: Ayarlar › Test › "Widget tanıtımını göster" ya da `-shotWidgetTip YES`.
 - **Regresyon turu (yapıldı, simülatör):** iPhone 17 Pro Max değişmedi; iPhone SE'de eser ve ödeme ekranı tablosu kısaldı, fiyat kartları görünüyor; duvar kâğıdı çerçevesi ekran oranında. Telefonda TestFlight turu build'le birlikte.
 - **Karşılamada Duo:** 1.1'e kaldı (ilk açılış akışını yeniden kurmak gerekiyor, risk kazançtan büyük).
 - **Duo canvas'ını tamamlamak:** açık dikey/yatay ve yarı açık dikey; Device Hub ekrana bağlanamadığı için bekliyor.
@@ -36,9 +36,10 @@ Sürüm `MARKETING_VERSION` 1.0.1 (`ios/project.yml`); build numarası arşivde 
 **Gönderim [Oytun + Claude]**
 
 - App Privacy değişmiyor (sayaçlar zaten beyan edilen "Product Interaction" kapsamında).
+- "Yenilikler" metninde widget tanıtımı ve Ayarlar'daki yeni satır da anılabilir.
 - "Yenilikler" metni (aşağıda), iPhone Duo ekran görüntüleri (ürün sayfasında Duo rozeti), App Review notu: yalnız yerleşim değişikliği, satın alma ekranı aynı.
-- Yenilikler (TR): "iPhone Duo için yeniden düzenlendi: tablolar ekranın tamamını kaplıyor, düğmeler katlanma çizgisinden uzak duruyor. Kısa ekranlarda eser sayfası ve Premium ekranı daha derli toplu. Küçük düzeltmeler."
-- What's New (EN): "Redesigned for iPhone Duo: paintings fill the whole screen and buttons stay clear of the fold. On shorter screens the piece page and the Premium screen are tidier. Small fixes."
+- Yenilikler (TR): "Bugünün eseri artık ana ekranınızda: widget'ı nasıl ekleyeceğinizi gösteren kısa bir rehber (Ayarlar › Ana ekran widget'ı). iPhone Duo için yeniden düzenlendi: tablolar ekranın tamamını kaplıyor, düğmeler katlanma çizgisinden uzak duruyor. Kısa ekranlarda eser sayfası ve Premium ekranı daha derli toplu. Küçük düzeltmeler."
+- What's New (EN): "Today's piece on your Home Screen: a short guide to adding the widget (Settings › Home Screen widget). Redesigned for iPhone Duo: paintings fill the whole screen and buttons stay clear of the fold. On shorter screens the piece page and the Premium screen are tidier. Small fixes."
 - Yayından sonra Railway'de `LATEST_APP_VERSION=1.0.1` (eski sürümdekilere bir kez güncelleme önerir).
 
 **Sürümden bağımsız, sunucu tarafı [Claude]**
