@@ -12,6 +12,7 @@ import SwiftUI
 ///     -shotWallpaper YES            …and its wallpaper sheet
 ///     -shotPlan lifetime            the paywall's selected plan (with -debugTrialDays 3 for prices)
 ///     -shotRatePrompt YES           the App Store rating card
+///     -shotWidgetTip YES            the widget tip
 ///
 /// Debug builds only.
 enum ScreenshotScene {
@@ -25,6 +26,7 @@ enum ScreenshotScene {
     static var wallpaper: Bool { defaults.bool(forKey: "shotWallpaper") }
     static var plan: String? { defaults.string(forKey: "shotPlan") }
     static var ratePrompt: Bool { defaults.bool(forKey: "shotRatePrompt") }
+    static var widgetTip: Bool { defaults.bool(forKey: "shotWidgetTip") }
 
     /// Applied once, after the first screen has loaded.
     @MainActor static func apply(to router: AppRouter) async {
@@ -36,6 +38,7 @@ enum ScreenshotScene {
         }
         if let piece { router.todayPath = NavigationPath([PieceRoute(id: piece)]) }
         if ratePrompt { router.showRatePrompt = true }
+        if widgetTip { router.widgetTip = .automatic }
         guard let sheet else { return }
         try? await Task.sleep(for: .seconds(piece == nil ? 0.5 : 2.5))
         let parts = sheet.split(separator: ":", maxSplits: 1).map(String.init)

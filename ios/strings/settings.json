@@ -551,6 +551,43 @@
     "en": "Later",
     "tr": "Sonra"
   },
+  "widgetTip.title": {
+    "en": "Today’s piece on your Home Screen",
+    "tr": "Bugünün eseri ana ekranınızda"
+  },
+  "widgetTip.body": {
+    "en": "The widget shows each day’s piece and its painting, without opening the app.",
+    "tr": "Widget her gün yeni eseri ve tablosunu gösterir; uygulamayı açmadan."
+  },
+  "widgetTip.step1": {
+    "en": "Touch and hold an empty area of your Home Screen.",
+    "tr": "Ana ekranda boş bir yere basılı tutun."
+  },
+  "widgetTip.step2": {
+    "en": "Tap **Edit** in the top-left corner, then **Add Widget**.",
+    "tr": "Sol üstte **Düzenle**’ye, sonra **Widget Ekle**’ye dokunun.",
+    "comment": "Edit / Add Widget are the system's own Home Screen menu titles in this language"
+  },
+  "widgetTip.step3": {
+    "en": "Search for **DailyClassical** and choose a size.",
+    "tr": "**DailyClassical**’ı arayın, bir boyut seçin."
+  },
+  "widgetTip.done": {
+    "en": "Got it",
+    "tr": "Anladım"
+  },
+  "widgetTip.later": {
+    "en": "Later",
+    "tr": "Sonra"
+  },
+  "widgetTip.preview.accessibilityLabel": {
+    "en": "A medium DailyClassical widget with today’s piece",
+    "tr": "Bugünün eserini gösteren orta boy DailyClassical widget'ı"
+  },
+  "settings.widget": {
+    "en": "Home Screen widget",
+    "tr": "Ana ekran widget'ı"
+  },
   "paywall.restore": {
     "en": "Restore purchases",
     "tr": "Satın alımları geri yükle"

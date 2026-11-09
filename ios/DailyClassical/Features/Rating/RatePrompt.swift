@@ -24,8 +24,14 @@ enum RatePromptPolicy {
 
     static func isDue(_ now: Date = .now) -> Bool {
         guard (defaults.stringArray(forKey: daysKey) ?? []).count >= requiredDays,
-              defaults.string(forKey: versionKey) != AppVersion.current else { return false }
+              defaults.string(forKey: versionKey) != AppVersion.current,
+              !WidgetTipPolicy.wasShown(onSameDayAs: now) else { return false }
         return shownInLastYear(now) < maxPerYear
+    }
+
+    /// One card a day: the widget tip waits for a day without this one, and the other way round.
+    static func wasShown(onSameDayAs date: Date) -> Bool {
+        (defaults.array(forKey: shownKey) as? [Date] ?? []).contains { Calendar.current.isDate($0, inSameDayAs: date) }
     }
 
     static func markShown(_ now: Date = .now) {

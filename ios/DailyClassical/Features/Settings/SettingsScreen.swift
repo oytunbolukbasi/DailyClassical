@@ -63,6 +63,13 @@ struct SettingsScreen: View {
                         SettingsValueRow("settings.language", value: languageName(language.language))
                     }
                     .settingsRow()
+
+                    Button { router.widgetTip = .settings } label: {
+                        Text("settings.widget").foregroundStyle(Palette.ink)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .contentShape(.rect)
+                    }
+                    .settingsRow()
                 } header: {
                     SettingsHeader("settings.section.reading")
                 }
@@ -147,6 +154,11 @@ struct SettingsScreen: View {
             .settingsRow()
             Button { router.showRatePrompt = true } label: {
                 Text(verbatim: "Değerlendirme istemini göster").foregroundStyle(Palette.accent)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .settingsRow()
+            Button { router.widgetTip = .automatic } label: {
+                Text(verbatim: "Widget tanıtımını göster").foregroundStyle(Palette.accent)
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             .settingsRow()

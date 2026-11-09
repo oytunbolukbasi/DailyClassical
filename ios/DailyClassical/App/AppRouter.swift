@@ -35,6 +35,9 @@ final class AppRouter {
     var toast: LocalizedStringResource?
     /// The App Store rating card (Features/Rating). Set by RatePromptPolicy, or Settings › Test.
     var showRatePrompt = false
+    /// The widget tip (Features/WidgetTip): shown by WidgetTipPolicy, or opened from Settings.
+    var widgetTip: WidgetTipSource?
+    enum WidgetTipSource: Equatable { case automatic, settings }
     /// Piece to save once the guest finishes signing in from the heart.
     var pendingFavourite: String?
     /// True while Library › Glossary is on screen (set by GlossaryListScreen).

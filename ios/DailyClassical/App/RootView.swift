@@ -51,6 +51,7 @@ struct RootView: View {
         .onboarding(isComplete: $hasCompletedOnboarding)
         .updateCheck()
         .ratePrompt()
+        .widgetTip()
         #if DEBUG
         .task { await ScreenshotScene.apply(to: router) }
         #endif

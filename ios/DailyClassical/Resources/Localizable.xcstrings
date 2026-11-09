@@ -4890,6 +4890,23 @@
         }
       }
     },
+    "settings.widget": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Home Screen widget"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ana ekran widget'ı"
+          }
+        }
+      }
+    },
     "sources.footer": {
       "extractionState": "manual",
       "localizations": {
@@ -5596,6 +5613,143 @@
           "stringUnit": {
             "state": "translated",
             "value": "Bugün · %@"
+          }
+        }
+      }
+    },
+    "widgetTip.body": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The widget shows each day’s piece and its painting, without opening the app."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Widget her gün yeni eseri ve tablosunu gösterir; uygulamayı açmadan."
+          }
+        }
+      }
+    },
+    "widgetTip.done": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Got it"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anladım"
+          }
+        }
+      }
+    },
+    "widgetTip.later": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Later"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sonra"
+          }
+        }
+      }
+    },
+    "widgetTip.preview.accessibilityLabel": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A medium DailyClassical widget with today’s piece"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugünün eserini gösteren orta boy DailyClassical widget'ı"
+          }
+        }
+      }
+    },
+    "widgetTip.step1": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Touch and hold an empty area of your Home Screen."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ana ekranda boş bir yere basılı tutun."
+          }
+        }
+      }
+    },
+    "widgetTip.step2": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap **Edit** in the top-left corner, then **Add Widget**."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sol üstte **Düzenle**’ye, sonra **Widget Ekle**’ye dokunun."
+          }
+        }
+      },
+      "comment": "Edit / Add Widget are the system's own Home Screen menu titles in this language"
+    },
+    "widgetTip.step3": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search for **DailyClassical** and choose a size."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "**DailyClassical**’ı arayın, bir boyut seçin."
+          }
+        }
+      }
+    },
+    "widgetTip.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today’s piece on your Home Screen"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugünün eseri ana ekranınızda"
           }
         }
       }

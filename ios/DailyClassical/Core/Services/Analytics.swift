@@ -1,7 +1,7 @@
 import Foundation
 
 /// Anonymous usage counts for the admin page (POST /v1/events, backend routes/events.ts): days the
-/// app was opened, piece pages opened, "Open in Spotify" taps, the rating card shown and answered. The install id is a random UUID made
+/// app was opened, piece pages opened, "Open in Spotify" taps, the rating card and the widget tip shown and answered. The install id is a random UUID made
 /// here on first launch; it is never tied to the account, the device or an advertising id, and no
 /// other data is sent. Test builds (Xcode, TestFlight) are flagged so the counts leave them out.
 /// Events wait in UserDefaults until a send succeeds, so offline use is counted later.
@@ -54,6 +54,8 @@ final class Analytics {
     /// The rating card was shown or answered (Features/Rating).
     enum PromptAction: String { case shown, yes, later }
     func ratePrompt(_ action: PromptAction) { record(Event(type: "rate_prompt_\(action.rawValue)", day: Self.today(), pieceId: nil)) }
+    /// The widget tip was shown, "Got it" (`.yes`) or "Later" (Features/WidgetTip).
+    func widgetPrompt(_ action: PromptAction) { record(Event(type: "widget_prompt_\(action.rawValue)", day: Self.today(), pieceId: nil)) }
 
     private func record(_ event: Event) {
         queue.append(event)
