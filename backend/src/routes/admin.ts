@@ -240,7 +240,10 @@ async function dashboardView(email: string) {
   const { today, kpi, series, schedule, catalogue, prompts } = await loadDashboard();
   const prompt = (p: string, a: string) => prompts.find((r) => r.prompt === p && r.action === a) ?? { installs: 0, times: 0 };
   const rateShown = prompt("rate", "shown"), rateYes = prompt("rate", "yes"), rateLater = prompt("rate", "later");
-  const share = (n: number) => rateShown.installs ? `gösterilenlerin %${Math.round((n / rateShown.installs) * 100)}'i` : "henüz gösterilmedi";
+  const widgetShown = prompt("widget", "shown"), widgetYes = prompt("widget", "yes"), widgetLater = prompt("widget", "later");
+  const shareOf = (shown: { installs: number }) => (n: number) =>
+    shown.installs ? `gösterilenlerin %${Math.round((n / shown.installs) * 100)}'i` : "henüz gösterilmedi";
+  const share = shareOf(rateShown), widgetShare = shareOf(widgetShown);
   const tile = (label: string, value: number, note?: string) =>
     html`<div class="tile"><div class="k">${label}</div><div class="v">${fmt.format(value)}</div>${note ? html`<div class="m">${note}</div>` : ""}</div>`;
   return html`
@@ -281,6 +284,26 @@ async function dashboardView(email: string) {
           <li><b>Evet</b>: kart kapanır ve iOS'un kendi değerlendirme penceresi açılır. iOS bu pencereyi 365 günde en fazla 3 kez gösterir ve kendi kararıyla atlayabilir. Kullanıcının puan verip vermediğini Apple bildirmez; puanlar App Store Connect › Ratings and Reviews'da.</li>
           <li><b>Sonra</b>: kart kapanır. Kurallar tutarsa sonraki sürümde yeniden çıkabilir.</li>
           <li>Kullanıcılar kurulum başına sayılır; aynı kişi iki sürümde iki kez görürse "Gösterilen"de bir kişi, iki kez olarak görünür. 1.0.0 kartı gösterir ama saymaz.</li>
+          <li>Widget tanıtımıyla aynı gün çıkmaz.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section>
+      <h2>Widget tanıtımı <span class="m">1.0.1'den itibaren</span></h2>
+      <div class="tiles">
+        ${tile("Gösterilen", widgetShown.installs, `${fmt.format(widgetShown.times)} kez`)}
+        ${tile("Anladım", widgetYes.installs, widgetShare(widgetYes.installs))}
+        ${tile("Sonra", widgetLater.installs, widgetShare(widgetLater.installs))}
+      </div>
+      <details class="note">
+        <summary>Ne zaman gösteriliyor?</summary>
+        <ul>
+          <li>Uygulama en az <b>2 farklı günde</b> açılmış olmalı; ikinci günden itibaren, Bugün ekranında, açılıştan yaklaşık 1,5 saniye sonra çıkar.</li>
+          <li>Ana ekranda zaten bir DailyClassical widget'ı varsa <b>hiç çıkmaz</b>. Eser sayfası, karşılama, başka bir sayfa ya da değerlendirme kartı açıksa çıkmaz; değerlendirme kartıyla aynı gün çıkmaz.</li>
+          <li><b>Anladım</b>: bir daha çıkmaz. <b>Sonra</b>: 7 gün sonra bir kez daha; toplam en fazla 2 kez.</li>
+          <li>Ayarlar › Okuma › Ana ekran widget'ı aynı kartı her zaman açar; oradan açılanlar sayılmaz.</li>
+          <li>Kartta adımlar: ana ekranda boş bir yere basılı tut, Düzenle › Widget Ekle, DailyClassical'ı ara ve boyut seç.</li>
         </ul>
       </details>
     </section>
