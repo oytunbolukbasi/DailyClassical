@@ -41,7 +41,6 @@ Sürüm `MARKETING_VERSION` 1.0.1 (`ios/project.yml`); build numarası arşivde 
 **Sürümden bağımsız, sunucu tarafı [Claude]**
 
 - **Haftalık takvim:** 30 Kasım'dan itibaren her hafta ~7 eser `schedule.yaml`'ın sonuna eklenir (yalnız ekleme; sıra değişirse geçmiş günler değişir). Eklenmezse 21 günlük sıra baştan döner.
-- **Görselleri R2/CDN'e taşımak (önemli):** aşağıda "Altyapı"da; bir sonraki içerik partisinden önce.
 
 **Sonraki sürümlere (1.1)**
 
@@ -65,7 +64,7 @@ Sürüm `MARKETING_VERSION` 1.0.1 (`ios/project.yml`); build numarası arşivde 
 
 ## Altyapı ve test
 
-- **[Claude] Görselleri dosya depolama servisine taşımak (önemli):** Bugün bütün görseller (hero, thumb, full, widget; 114 eserde birkaç yüz MB) git reposunda (`backend/public/images`) duruyor ve Railway her deploy'da onları API'yle birlikte yayınlıyor. Katalog büyüdükçe repo ve her deploy şişiyor. Hedef: Cloudflare R2 (ya da S3) + CDN; `npm run images` çıktıyı oraya yükler, `ASSETS_BASE_URL` (env.ts'te hazır) görsel adreslerini oraya çevirir, repodan `public/images` çıkar. Uygulama değişmez (adresleri API'den alıyor). Birkaç parti daha eklenmeden önce yapılmalı.
+- **[Claude] Görselleri dosya depolama servisine taşımak (ertelendi):** Bugün bütün görseller (hero, thumb, full, widget; 114 eserde birkaç yüz MB) git reposunda (`backend/public/images`) duruyor ve Railway her deploy'da onları API'yle birlikte yayınlıyor. Katalog büyüdükçe repo ve her deploy şişiyor. Hedef: Cloudflare R2 (ya da S3) + CDN; `npm run images` çıktıyı oraya yükler, `ASSETS_BASE_URL` (env.ts'te hazır) görsel adreslerini oraya çevirir, repodan `public/images` çıkar. Uygulama değişmez (adresleri API'den alıyor). **Ertelendi (Oytun'un kararı, 9 Kasım):** kullanıcı sayısı belirli bir düzeye gelince yapılacak; o zamana kadar git ve Railway yetiyor. Erken yapmayı gerektirebilecek işaretler: Railway deploy'unun belirgin uzaması, repo boyutunun GitHub sınırlarına yaklaşması, görsel trafiğinin Railway faturasında öne çıkması.
 
 - **[Oytun] Yasal metinlerin hukuki okuması:** Kullanım koşulları ve gizlilik metinleri iyi niyetli taslaklar; avukat ya da KVKK danışmanı bakmalı. Veri sorumlusunun adı ve adresi eklenmeli; `hello@dailyclassical.co`'nun e-posta aldığından emin olunmalı.
 - **[Oytun] Sandbox'ta kalanlar:** RevenueCat › Customers'ta işlemin görünmesi; uygulamayı silip kurduktan sonra "Satın alımları geri yükle".
