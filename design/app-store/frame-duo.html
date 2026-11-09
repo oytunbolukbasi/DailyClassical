@@ -1,0 +1,89 @@
+<!doctype html>
+<!-- One iPhone Duo App Store screenshot: frame-duo.html?lang=en&n=1&display=outer|inner.
+     outer = 1398×2034 (portrait, closed), inner = 2853×2007 (landscape, open). Rendered by render-duo.sh
+     from raw-duo/<outer|inner-landscape>/<lang>/*.png (ios/scripts: same scenes as the iPhone set). -->
+<html>
+<head>
+<meta charset="utf-8">
+<title>App Store frame, iPhone Duo</title>
+<style>
+  @font-face { font-family: Literata; font-weight: 500; src: url("../../ios/DailyClassical/Resources/Fonts/Literata-Medium.ttf"); }
+  @font-face { font-family: Literata; font-weight: 400; src: url("../../ios/DailyClassical/Resources/Fonts/Literata-Regular.ttf"); }
+
+  :root { --bg: #F5F2EC; --ink: #1E1B17; --ink2: #5E5852; --accent: #6B4A2B; --bezel: #1E1B17; }
+  .dark { --bg: #111010; --ink: #F0EBE3; --ink2: #B3ABA1; --accent: #D4AE84; --bezel: #2A2724; }
+
+  html, body { margin: 0; overflow: hidden; }
+  body { background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; position: relative; }
+  .label { font: 600 28px/1 -apple-system, "SF Pro Text", sans-serif; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 30px; }
+  h1 { font: 500 96px/1.08 Literata, serif; letter-spacing: -0.012em; margin: 0; text-wrap: balance; }
+  p { font: 400 38px/1.42 -apple-system, "SF Pro Text", sans-serif; color: var(--ink2); margin: 26px 0 0; text-wrap: pretty; }
+
+  .device { position: absolute; padding: 14px; background: var(--bezel); box-shadow: 0 50px 110px rgba(30, 27, 23, 0.22), 0 16px 36px rgba(30, 27, 23, 0.14); }
+  .dark .device { box-shadow: 0 50px 130px rgba(0, 0, 0, 0.6), inset 0 0 0 2px rgba(255,255,255,0.06); }
+  .device img { display: block; width: 100%; }
+
+  /* Closed: the outer display, portrait; copy on top, the device bleeding off the bottom. */
+  .outer { width: 1398px; height: 2034px; }
+  .outer .copy { position: absolute; left: 110px; right: 110px; top: 150px; }
+  .outer h1 { font-size: 104px; }
+  .outer p { font-size: 40px; }
+  .outer .device { left: 50%; transform: translateX(-50%); top: 620px; width: 1000px; border-radius: 96px; }
+  .outer .device img { border-radius: 84px; }
+
+  /* Open: the inner display, landscape; copy on the left, the whole device on the right (its side
+     column of controls is what iPhone Duo looks like). */
+  .inner { width: 2853px; height: 2007px; }
+  .inner .copy { position: absolute; left: 150px; width: 780px; top: 50%; transform: translateY(-50%); }
+  .inner h1 { font-size: 104px; }
+  .inner p { font-size: 40px; }
+  .inner .device { left: 1040px; top: 50%; transform: translateY(-50%); width: 1660px; border-radius: 72px; }
+  .inner .device img { border-radius: 60px; }
+</style>
+</head>
+<body>
+  <div class="copy">
+    <div class="label" id="label"></div>
+    <h1 id="title"></h1>
+    <p id="body"></p>
+  </div>
+  <div class="device"><img id="shot" alt=""></div>
+
+<script>
+// Copy as in frame.html (the iPhone set).
+const FRAMES = [
+  { file: "01-today",
+    en: { label: "Every day", title: "One classical work a day.", body: "Chosen for today, with a painting from the same world." },
+    tr: { label: "Her gün", title: "Her gün bir klasik eser.", body: "Bugün için seçildi; aynı dünyadan bir tabloyla." } },
+  { file: "02-piece",
+    en: { label: "Listening guide", title: "Press play, then follow along.", body: "What to listen for, minute by minute, timed to a great recording." },
+    tr: { label: "Dinleme rehberi", title: "Çalmaya başlayın, sonra takip edin.", body: "Neyi dinleyeceğiniz, dakika dakika, zamansız bir kayda göre." } },
+  { file: "03-glossary",
+    en: { label: "No jargon", title: "Written for listeners.", body: "Tap a musical term for a short, plain explanation." },
+    tr: { label: "Terim yok", title: "Dinleyiciler için yazıldı.", body: "Bir müzik terimine dokunun, kısa ve sade bir açıklama açılsın." } },
+  { file: "04-library",
+    en: { label: "Library", title: "A library that grows every day.", body: "Symphonies, concertos and sonatas, each with its painting." },
+    tr: { label: "Kitaplık", title: "Her gün büyüyen bir kitaplık.", body: "Senfoniler, konçertolar, sonatlar; her biri kendi tablosuyla." } },
+  { file: "05-composer",
+    en: { label: "Composers", title: "Meet the person behind the music.", body: "A short life, the key facts and every piece in the app." },
+    tr: { label: "Besteciler", title: "Müziğin ardındaki insan.", body: "Kısa bir hayat hikâyesi, temel bilgiler ve uygulamadaki eserleri." } },
+  { file: "06-wallpaper", dark: true,
+    en: { label: "Premium", title: "Each day’s painting as a wallpaper.", body: "Frame it for your screen and save it to Photos." },
+    tr: { label: "Premium", title: "Günün tablosu duvar kâğıdı olarak.", body: "Ekranınıza göre yerleştirin, Fotoğraflar’a kaydedin." } },
+];
+
+const q = new URLSearchParams(location.search);
+const lang = q.get("lang") || "en";
+const display = q.get("display") === "inner" ? "inner" : "outer";
+const f = FRAMES[(parseInt(q.get("n"), 10) || 1) - 1];
+const t = f[lang];
+document.documentElement.lang = lang;
+document.body.classList.add(display);
+if (f.dark) document.body.classList.add("dark");
+document.getElementById("label").textContent = t.label;
+document.getElementById("title").textContent = t.title;
+document.getElementById("body").textContent = t.body;
+document.getElementById("shot").src = `raw-duo/${display === "inner" ? "inner-landscape" : "outer"}/${lang}/${f.file}.png`;
+</script>
+</body>
+</html>
