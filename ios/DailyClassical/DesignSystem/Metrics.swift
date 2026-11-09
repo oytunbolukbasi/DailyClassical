@@ -9,8 +9,6 @@ enum Spacing {
     static let sectionGapL: CGFloat = 40
     static let cardPaddingV: CGFloat = 16
     static let cardPaddingH: CGFloat = 18
-    /// Clearance under the last block so the floating primary button never covers text.
-    static let floatingButtonClearance: CGFloat = 150
     /// Widest text column (gutters excluded). Phones never reach it; on the iPhone Duo inner
     /// display a full-width line ran past 110 characters.
     static let readableWidth: CGFloat = 640

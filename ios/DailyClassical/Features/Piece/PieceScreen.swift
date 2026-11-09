@@ -514,7 +514,8 @@ struct PieceContent: View {
         }
         .font(Typography.caption).lineHeight(1.5).foregroundStyle(Palette.ink3)
         .padding(.top, 24)
-        .padding(.bottom, Spacing.floatingButtonClearance)
+        // "Open in Spotify" stays hidden once Movement I has docked, so nothing floats over the end.
+        .padding(.bottom, 44)
         .frame(maxWidth: .infinity, alignment: .leading)
         .hairlineTop()
         .padding(.top, 40)
