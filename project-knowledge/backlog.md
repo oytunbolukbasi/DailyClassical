@@ -1,14 +1,51 @@
 # Yapılacaklar
 
-Son güncelleme: 6 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler. İçerik durumu ve zamanlama `content_status.md`'de, proje bilgisi `project_information.md`'de.
+Son güncelleme: 9 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler. İçerik durumu ve zamanlama `content_status.md`'de, proje bilgisi `project_information.md`'de.
 
 ## Yayın
 
-- **[Oytun] App Review, dördüncü gönderim (27 Ekim, Waiting for Review):** Sürüm 1.0.0 (3), Premium Lifetime, Premium grubu, Premium Monthly birlikte gönderildi. Aynı gün sabah 3.1.2(c) reddi geldi: ücretsiz deneme, faturalanan tutardan daha belirgindi ("3 gün ücretsiz dene" butonu). Build 3'te aylık kartın başlığı "₺129,99/ay", buton "Abone ol · ₺129,99/ay"; deneme yalnızca küçük açıklamada ve koşul metninde. Karşılamadaki deneme kartı da aynı sırada (başlıkta "ücretsiz" yok, fiyat büyük). Satın alma inceleme görselleri yeni ödeme ekranıyla değiştirildi (`design/app-store/review/`). Red mesajına cevap yazıldı; App Review Information › Notes'un en üstüne önceki üç reddi ve çözümlerini özetleyen bir durum notu eklendi. App Privacy'ye Product Interaction ve Device ID eklendi (Analytics, kullanıcıya bağlı değil, takip yok) ve yayınlandı.
+- **1.0.0 yayında (9 Kasım 2026).** Dördüncü gönderim (build 3, 27 Ekim) onaylandı. Takvim aynı gün sıfırlandı: gün 0 = 9 Kasım, Çaykovski 6 (`content/schedule.yaml`, 21 gün). Hediye Premium `oytunbolukbasi@gmail.com` hesabına tanımlandı (`users.comp_premium_until` = 2099).
 - **Red geçmişi:** 21 Ekim 2.1(b) ürünler gönderilmemiş + 3.1.2(c) açıklamada EULA bağlantısı yok; 23 Ekim 2.3.2 iki üründe aynı tanıtım görseli (görseller silindi); 27 Ekim 3.1.2(c) deneme fiyattan belirgin. Kural: gönderimdeki öğe kilitlidir; düzenlemek için gönderimden çıkar, düzelt, hepsini **Add for Review** ile aynı taslağa ekleyip birlikte gönder. Ürün silinmez (Product ID bir daha kullanılamaz). Ödeme ekranında deneme hiçbir zaman fiyattan büyük yazılmaz, butonda "ücretsiz" geçmez.
-- **[Oytun + Claude] Yayın günü:** Onay gelince `schedule.yaml` › `start` yayın gününe, sıra Çaykovski 6 ile; `npm run db:seed && npm run fixtures`, push; ardından App Store Connect › **Release This Version**. Gerekirse mağaza görsellerinin 1. karesi yeniden üretilir.
-- **1.0.0 (3), 27 Ekim'de yüklendi (incelemede):** 3.1.2(c) ödeme ekranı düzeltmesi; App Store değerlendirme kartı (`Features/Rating/RatePrompt.swift`, tasarım B, yıldızlar 5→0→5; 3 farklı günde eser açıldıktan sonra bir eserden Bugün'e dönüşte, sürüm başına en fazla 1, 365 günde en fazla 3 kez; "Evet" iOS penceresini açar, TestFlight'ta hiç çıkmaz; test: Ayarlar › Test ya da `-shotRatePrompt YES`); anonim sayaç (`Core/Services/Analytics.swift` → `/v1/events`, yönetim panelindeki DAU/WAU/MAU, açılış ve Spotify sayıları); yalnızca takvimdeki eserlerin tablolarını gömen paketleme. Önceki build 1.0.0 (2) 22 Ekim'de yüklenmişti.
+- **1.0.0 (3) içeriği:** 3.1.2(c) ödeme ekranı düzeltmesi; App Store değerlendirme kartı (`Features/Rating/RatePrompt.swift`, tasarım B, yıldızlar 5→0→5; 3 farklı günde eser açıldıktan sonra bir eserden Bugün'e dönüşte, sürüm başına en fazla 1, 365 günde en fazla 3 kez; "Evet" iOS penceresini açar, TestFlight'ta hiç çıkmaz; test: Ayarlar › Test ya da `-shotRatePrompt YES`); anonim sayaç (`Core/Services/Analytics.swift` → `/v1/events`, yönetim panelindeki DAU/WAU/MAU, açılış ve Spotify sayıları); yalnızca takvimdeki eserlerin tablolarını gömen paketleme. Önceki build 1.0.0 (2) 22 Ekim'de yüklenmişti.
 - **[Oytun] Yayından sonra Railway:** `APP_STORE_URL` eklenecek. Güncelleme istemek için `LATEST_APP_VERSION` (bir kez önerir) ya da `MIN_APP_VERSION` (zorunlu ekran); normalde ikisi de boş.
+
+## 1.0.1 planı
+
+Sürüm `MARKETING_VERSION` 1.0.1 (`ios/project.yml`); build numarası arşivde 4'e çıkar. Kullanıcıya görünen değişiklik iPhone Duo ve kısa ekranlar; geri kalanı bakım.
+
+**Hazır olanlar**
+
+- **iPhone Duo uyumu (hazır, 9 Kasım'da `main`'e birleşti).** 6 Kasım'da simülatörde incelendi (`design/iphone-duo/`; önce/sonra canvas'ı: https://claude.ai/artifact/EfnwruT3fbkuAK9ke2DWwG, kapalı ve yarı açık yatay; açık dikey/yatay ve yarı açık dikey eklenecek), aynı gün düzeltildi ve dört konumda yeniden çekildi; normal iPhone'da görünüm değişmedi:
+  1. Tablolar sağdaki kontrol sütununun altına uzanıyor: eser sayfası, ödeme ekranı, besteci `.backgroundExtensionEffect()`; Bugün'de sayfalar tam genişlikte, yazı ve düğmeler sütun kadar içeride (`TodayMetrics.leading/trailing`).
+  2. Yarı açık yatay konumda "Dinlemeye başla", "Spotify'da aç", tarih rozeti ve değerlendirme kartı katlanma çizgisinden büyük yarıya geçiyor (`FoldAware`, `reservedRegions(kind: .division)`, iOS 27.1+).
+  3. Kısa ekranlarda hero küçülüyor (`HeroHeight`): eser sayfası 300 pt ya da ekranın %37'si, ödeme ekranı 280 pt ya da %34'ü. Dış ekranda başlık ve fiyat kartları kaydırmadan görünüyor; iPhone 13 mini ve üstünde değişiklik yok.
+  4. Duvar kâğıdı ekran boyutunu pencerenin ekranından okuyor (`UIScreen.main` kalktı); Duo'da kırpma çerçevesi o ekranın oranında.
+  5. Eser sayfası ve Bugün metni en fazla 640 pt genişlikte, ortalı sütunda (`readableColumn()`).
+  Kalan: karşılama ekranlarında tablo sütunda duruyor (sayfa görünümü yatay güvenli alanı yok sayınca sayfalar kayıyor; Bugün'deki gibi kendi kaydırma görünümüne geçirilirse düzelir). Sonra: App Store Connect'e iPhone Duo ekran görüntüleri (ürün sayfasında Duo rozeti). Test: Device Hub › iPhone Duo (iOS 27.1) › Closed / Partially Open / Open / Rotate; ekran görüntüsü `simctl io <udid> screenshot --display=<UUID>` (iç 2007×2853, dış 1398×2034; UUID'ler her açılışta değişir, `simctl io <udid> enumerate`).
+
+**Build'den önce yapılacaklar [Claude]**
+
+- **Gömülü görseller yeni takvime göre:** `npm run images` ve `npm run images:widget`; takvime giren 7 yeni eserin (23–29 Kasım) tabloları uygulamaya ve widget'a girer. Takvim haftalık uzadıkça her build'den önce tekrarlanır.
+- **Eser sayfası alt boşluğu:** son bölümden sonra 150 yerine ~44 pt (`Spacing.floatingButtonClearance`).
+- **Karşılamada Duo:** tablo yan sütunda kesiliyor; sayfaları Bugün'deki gibi kendi kaydırma görünümüne geçirmek (isteğe bağlı, karşılama bir kez görülür).
+- **Duo canvas'ını tamamlamak:** açık dikey/yatay ve yarı açık dikey son build'le çekilip canvas'a eklenecek.
+- **Regresyon turu:** iPhone 17 Pro Max, iPhone SE boyu (kısa ekranda tablo yüksekliği değişti) ve Duo'da Bugün, eser, ödeme, karşılama, duvar kâğıdı; telefonda TestFlight.
+
+**Gönderim [Oytun + Claude]**
+
+- "Yenilikler" metni (aşağıda), iPhone Duo ekran görüntüleri (ürün sayfasında Duo rozeti), App Review notu: yalnız yerleşim değişikliği, satın alma ekranı aynı.
+- Yenilikler (TR): "iPhone Duo için yeniden düzenlendi: tablolar ekranın tamamını kaplıyor, düğmeler katlanma çizgisinden uzak duruyor. Kısa ekranlarda eser sayfası ve Premium ekranı daha derli toplu. Küçük düzeltmeler."
+- What's New (EN): "Redesigned for iPhone Duo: paintings fill the whole screen and buttons stay clear of the fold. On shorter screens the piece page and the Premium screen are tidier. Small fixes."
+- Yayından sonra Railway'de `LATEST_APP_VERSION=1.0.1` (eski sürümdekilere bir kez güncelleme önerir).
+
+**Sürümden bağımsız, sunucu tarafı [Claude]**
+
+- **Haftalık takvim:** 30 Kasım'dan itibaren her hafta ~7 eser `schedule.yaml`'ın sonuna eklenir (yalnız ekleme; sıra değişirse geçmiş günler değişir). Eklenmezse 21 günlük sıra baştan döner.
+- **Görselleri R2/CDN'e taşımak (önemli):** aşağıda "Altyapı"da; bir sonraki içerik partisinden önce.
+
+**Sonraki sürümlere (1.1)**
+
+- Metin içi sözlük terimlerine 44 pt dokunma alanı; e-posta değiştirme akışı; Beethoven 9 finalinin iki parçalı durak gösterimi; "Şeffaflığı Azalt" ve VoiceOver turu.
 
 ## İçerik
 
@@ -41,17 +78,11 @@ Son güncelleme: 6 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]**
 - **Ayarlar › Test** (yalnızca Xcode'dan kurulan build'lerde): "Karşılamayı yeniden göster", "3 gün deneme teklifini göster". Simülatörde `-debugTrialDays 3`, `-debugPremium NO`.
 - **Premium test hesabı:** `premium-test@dailyclassical.co`; şifresi git'e girmeyen `backend/test-accounts.local.md`'de. Yeni hesap: `npm run test-user -- adres@... [--free]`.
 - **Simülatörler (29 Ekim, yeni Mac, Xcode 27.1):** iPhone 17 Pro Max ve iPhone 18 Pro, iOS 27.0 (24A434) ile; mağaza ekranları 6,9 inç (17 Pro Max). iOS 27.1 simülatörü (24A94425) yalnızca iPhone Duo'ya izin veriyor (`restrictedToDeviceTypes`), diğer modeller için 27.0 gerekli. Telefon iOS 27.0.1; cihaz davranışı için iOS 27 simülatörü esas.
-- **1.0.1 (dal `release/1.0.1`, build 3 onaylanınca birleştirilir): iPhone Duo uyumu.** 6 Kasım'da simülatörde incelendi (`design/iphone-duo/`; önce/sonra canvas'ı: https://claude.ai/artifact/EfnwruT3fbkuAK9ke2DWwG, kapalı ve yarı açık yatay; açık dikey/yatay ve yarı açık dikey eklenecek), aynı gün düzeltildi ve dört konumda yeniden çekildi; normal iPhone'da görünüm değişmedi:
-  1. Tablolar sağdaki kontrol sütununun altına uzanıyor: eser sayfası, ödeme ekranı, besteci `.backgroundExtensionEffect()`; Bugün'de sayfalar tam genişlikte, yazı ve düğmeler sütun kadar içeride (`TodayMetrics.leading/trailing`).
-  2. Yarı açık yatay konumda "Dinlemeye başla", "Spotify'da aç", tarih rozeti ve değerlendirme kartı katlanma çizgisinden büyük yarıya geçiyor (`FoldAware`, `reservedRegions(kind: .division)`, iOS 27.1+).
-  3. Kısa ekranlarda hero küçülüyor (`HeroHeight`): eser sayfası 300 pt ya da ekranın %37'si, ödeme ekranı 280 pt ya da %34'ü. Dış ekranda başlık ve fiyat kartları kaydırmadan görünüyor; iPhone 13 mini ve üstünde değişiklik yok.
-  4. Duvar kâğıdı ekran boyutunu pencerenin ekranından okuyor (`UIScreen.main` kalktı); Duo'da kırpma çerçevesi o ekranın oranında.
-  5. Eser sayfası ve Bugün metni en fazla 640 pt genişlikte, ortalı sütunda (`readableColumn()`).
-  Kalan: karşılama ekranlarında tablo sütunda duruyor (sayfa görünümü yatay güvenli alanı yok sayınca sayfalar kayıyor; Bugün'deki gibi kendi kaydırma görünümüne geçirilirse düzelir). Sonra: App Store Connect'e iPhone Duo ekran görüntüleri (ürün sayfasında Duo rozeti). Test: Device Hub › iPhone Duo (iOS 27.1) › Closed / Partially Open / Open / Rotate; ekran görüntüsü `simctl io <udid> screenshot --display=<UUID>` (iç 2007×2853, dış 1398×2034; UUID'ler her açılışta değişir, `simctl io <udid> enumerate`).
 - Telefondaki "Ömür boyu", Xcode'un yerel StoreKit ortamındaki bir test satın almasından; hesaba bağlı değil, uygulama silinince gider.
 
 ## Tamamlananlar (özet)
 
+- **9 Kasım:** 1.0.0 App Store'da yayında. Takvim 9 Kasım'dan (Çaykovski 6) yeniden kuruldu; `release/1.0.1` (iPhone Duo) `main`'e birleşti.
 - **27 Ekim:** Dördüncü App Review gönderimi (build 3). App Privacy güncellendi; satın alma inceleme görselleri yenilendi.
 - **25–26 Ekim:** İkinci 50 eserlik parti birleştirildi (114 eser, 36 besteci, 99 terim; Çaykovski 4 ve 5 eklendi); yönetim paneli `dailyclassical.co/admin` (e-postayla kod, KPI'lar, takvim, katalog araması); anonim sayaç; değerlendirme kartı; uygulama boyutu küçültüldü.
 - **24 Ekim:** Kulakla zamanlama kapatıldı (7 eser zamanlandı; kalan duraklar ≈ tahmin olarak kalıyor).

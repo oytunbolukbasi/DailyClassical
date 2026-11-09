@@ -17,10 +17,8 @@ Oytun zamanlamayı bıraktı: çok vakit alıyor. Kulakla zamanlanan 7 eser (Ero
 
 ## Yayın planı
 
-- **İnceleme sürerken:** `schedule.yaml` değişmez (test takvimi bütün 14 eseri yayında gösteriyor; boş Bugün red riski).
-- **Yayın günü:** `start` o güne, sıra Çaykovski 6 ile başlar; `npm run db:seed && npm run fixtures`, push; sonra App Store Connect'te **Release This Version**.
-- **1.0.1 build'i** (Rönesans etiketi, 6 bölümlük seçici, www bağlantıları, favorileri bildiren gizlilik manifesti; kodu hazır) Mahler 3'ten önce yayında olmalı.
-- **15. günden itibaren** haftada yaklaşık 7 eser takvime girer. İlk hafta: Beethoven 3, Vivaldi İlkbahar, Ay Işığı, Dvořák Çello, Boléro, Mozart 41, Chopin 1. Piyano Konçertosu.
+- **Yayın (9 Kasım 2026):** `start` 2026-11-09, gün 0 Çaykovski 6; 9–22 Kasım incelemedeki 14 eser, 23–29 Kasım ilk hafta (aşağıda). Takvime yalnız sondan eklenir.
+- **15. günden itibaren** haftada yaklaşık 7 eser takvime girer; 30 Kasım'dan sonrası her hafta eklenecek. İlk hafta (takvimde): Beethoven 3, Vivaldi İlkbahar, Ay Işığı, Dvořák Çello, Boléro, Mozart 41, Chopin 1. Piyano Konçertosu.
 
 ## Ekim 2026 ikinci parti (50 eser): tamamlandı
 
