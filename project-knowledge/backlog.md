@@ -11,7 +11,7 @@ Son güncelleme: 9 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]**
 
 ## 1.0.1 planı
 
-Sürüm `MARKETING_VERSION` 1.0.1 (`ios/project.yml`); build numarası arşivde 4'e çıkar. Kullanıcıya görünen değişiklikler: widget tanıtımı, iPhone Duo ve kısa ekranlar; geri kalanı bakım ve sayaçlar.
+**Durum (9 Kasım akşamı):** kod hazır, telefonda test edildi; Oytun'un test sonrası düzeltme ve eklemeleri bekleniyor, ardından build 4 ve gönderim (10 Kasım civarı). Sürüm `MARKETING_VERSION` 1.0.1 (`ios/project.yml`); build numarası arşivde 4'e çıkar. Kullanıcıya görünen değişiklikler: widget tanıtımı, iPhone Duo ve kısa ekranlar; geri kalanı bakım ve sayaçlar.
 
 **Hazır olanlar**
 
@@ -37,7 +37,7 @@ Sürüm `MARKETING_VERSION` 1.0.1 (`ios/project.yml`); build numarası arşivde 
 **Gönderim [Oytun + Claude]**
 
 - **iPhone Duo mağaza görselleri (hazır, 9 Kasım):** `design/app-store/out-duo/` (dış ekran 1398×2034, iç ekran yatay 2853×2007; EN ve TR, iPhone setiyle aynı altı sahne ve metin). App Store Connect › sürüm › iPhone Duo bölümüne yüklenince ürün sayfasında "iPhone Duo için optimize" rozeti çıkar; yüklemeden önce App Store Connect'in önizleme aracıyla bakılmalı. Yeniden üretmek: Device Hub › iPhone Duo › Closed / Open, `design/app-store/render-duo.sh`. Nisan 2027'den itibaren iOS 27.1+ SDK ile gönderilen her sürümde Duo görselleri zorunlu.
-- **Öne çıkarılma başvurusu (featuring nomination):** App Store Connect › uygulama › Featuring › Nominations › + › **App Enhancements**; yayın tarihinden en az 3 hafta önce (Account Holder, Admin, App Manager ya da Marketing rolü). "Helpful Details"e: iPhone Duo için optimize, bütün duruşları (kapalı, açık, yarı açık, iki yön) destekliyor. Başvuru inceleme ya da yer garantisi değil; seçilirse App Store Connect bildirim gönderir. Metin taslağı sohbette (9 Kasım).
+- **Öne çıkarılma başvurusu:** yapılmayacak (Oytun'un kararı, 9 Kasım); yalnızca Duo görselleri yüklenecek.
 - **Xcode 27.2:** Apple Duo için 27.2 ile derlemeyi öneriyor; Mac'te 27.2 kurulu, 1.0.1 build'i onunla çıkar.
 - App Privacy değişmiyor (sayaçlar zaten beyan edilen "Product Interaction" kapsamında).
 - "Yenilikler" metninde widget tanıtımı ve Ayarlar'daki yeni satır da anılabilir.
