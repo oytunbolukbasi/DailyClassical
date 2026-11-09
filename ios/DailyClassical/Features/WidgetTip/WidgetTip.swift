@@ -112,8 +112,8 @@ struct WidgetTipCard: View {
 
             // In one pane, not across the fold, when an iPhone Duo is half open like a book.
             FoldAware {
-                // Its own height when it fits; on short screens (iPhone SE) without the row of app
-                // icons and with a lower widget; scrolls only at the largest text sizes.
+                // Its own height when it fits; on short screens (iPhone SE) with a lower widget;
+                // scrolls only at the largest text sizes.
                 ViewThatFits(in: .vertical) {
                     card(compact: false)
                     card(compact: true)
@@ -203,8 +203,8 @@ private struct WidgetTipStep: View {
     }
 }
 
-/// A row of app icons and today's medium widget, as it looks on a Home Screen. The widget mirrors
-/// DailyClassicalWidget's medium layout (TodayWidgetView), with today's piece.
+/// Today's medium widget on a dark Home Screen ground. The widget mirrors DailyClassicalWidget's
+/// medium layout (TodayWidgetView), with today's piece.
 private struct HomeScreenPreview: View {
     let compact: Bool
     @Environment(ContentStore.self) private var content
@@ -213,26 +213,12 @@ private struct HomeScreenPreview: View {
     private static let wallpaper = Color(red: 0x2E / 255, green: 0x2C / 255, blue: 0x28 / 255)
 
     var body: some View {
-        VStack(spacing: 14) {
-            if !compact {
-                HStack(spacing: 16) {
-                    ForEach(0..<4, id: \.self) { _ in
-                        RoundedRectangle(cornerRadius: 13, style: .continuous)
-                            .fill(.white.opacity(0.14))
-                            .frame(height: 52)
-                    }
-                }
-                .padding(.horizontal, 12)
-                .accessibilityHidden(true)
-            }
-
-            widget
-                .frame(height: compact ? 136 : 160)
-                .clipShape(.rect(cornerRadius: 22, style: .continuous))
-                .accessibilityElement(children: .ignore)
-                .accessibilityLabel(Text("widgetTip.preview.accessibilityLabel"))
-        }
-        .padding(EdgeInsets(top: compact ? 18 : 22, leading: 20, bottom: compact ? 18 : 20, trailing: 20))
+        widget
+            .frame(height: compact ? 136 : 160)
+            .clipShape(.rect(cornerRadius: 22, style: .continuous))
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel(Text("widgetTip.preview.accessibilityLabel"))
+            .padding(compact ? 18 : 22)
         .background(Self.wallpaper)
     }
 
@@ -251,7 +237,7 @@ private struct HomeScreenPreview: View {
                     Text(verbatim: piece.composer.name)
                         .font(.system(size: 11.5, weight: .medium)).foregroundStyle(Palette.accent)
                         .lineLimit(1).padding(.top, 2)
-                    Text(verbatim: piece.headerTitle)
+                    Text(verbatim: Self.shortTitle(piece.title))
                         .font(Typography.literata(16, .medium)).foregroundStyle(Palette.ink)
                         .lineLimit(2).minimumScaleFactor(0.85)
                     Spacer(minLength: 2)
@@ -270,6 +256,13 @@ private struct HomeScreenPreview: View {
         }
         .background(Palette.background)
         .dynamicTypeSize(.large)  // a picture of the widget, which keeps its size too
+    }
+
+    /// The widget's title without the key (WidgetPiece.shortTitle in DailyClassicalWidget):
+    /// "Si minör 6. Senfoni, “Patetik”" → "6. Senfoni, “Patetik”".
+    private static func shortTitle(_ title: String) -> String {
+        title.replacingOccurrences(of: #" in [A-G](-flat|-sharp)? (major|minor)"#, with: "", options: .regularExpression)
+            .replacingOccurrences(of: #"^(Do|Re|Mi|Fa|Sol|La|Si)( bemol| diyez)? (majör|minör) "#, with: "", options: .regularExpression)
     }
 
     /// "Mon 9 Nov" / "Pzt 9 Kas", as the medium widget writes it.
