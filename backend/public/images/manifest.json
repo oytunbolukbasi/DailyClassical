@@ -202,8 +202,8 @@
         "path": "composers/bruckner-full.heic",
         "width": 2329,
         "height": 2521,
-        "bytes": 1473991,
-        "hash": "181b5a0a5c"
+        "bytes": 1465312,
+        "hash": "fb2fa3c20e"
       }
     },
     "composers/chopin": {
@@ -227,8 +227,8 @@
         "path": "composers/chopin-full.heic",
         "width": 3206,
         "height": 4000,
-        "bytes": 2122627,
-        "hash": "07d38bb092"
+        "bytes": 2121802,
+        "hash": "e87bfe2e5e"
       }
     },
     "composers/debussy": {
@@ -407,8 +407,8 @@
         "path": "composers/liszt-full.heic",
         "width": 3043,
         "height": 4000,
-        "bytes": 1276392,
-        "hash": "5889626967"
+        "bytes": 1280842,
+        "hash": "2d6cc75bcd"
       }
     },
     "composers/mahler": {
@@ -457,8 +457,8 @@
         "path": "composers/mendelssohn-full.heic",
         "width": 3241,
         "height": 4000,
-        "bytes": 1826842,
-        "hash": "ac57b11dc6"
+        "bytes": 1838797,
+        "hash": "4cd470fd6b"
       }
     },
     "composers/mozart": {
@@ -2730,8 +2730,8 @@
         "path": "paintings/mozart-symphony-40-full.heic",
         "width": 4000,
         "height": 2792,
-        "bytes": 2664083,
-        "hash": "698177de74"
+        "bytes": 2663877,
+        "hash": "f495274b51"
       }
     },
     "paintings/mozart-symphony-41": {
@@ -2930,8 +2930,8 @@
         "path": "paintings/ravel-string-quartet-full.heic",
         "width": 4000,
         "height": 2819,
-        "bytes": 3973748,
-        "hash": "d72ff8f197"
+        "bytes": 3972551,
+        "hash": "eb0d9b1b16"
       }
     },
     "paintings/rimsky-korsakov-scheherazade": {
@@ -3255,8 +3255,8 @@
         "path": "paintings/schumann-symphony-3-full.heic",
         "width": 3134,
         "height": 4000,
-        "bytes": 2052429,
-        "hash": "b35a184906"
+        "bytes": 2054296,
+        "hash": "490a29eeb0"
       }
     },
     "paintings/shostakovich-piano-concerto-2": {

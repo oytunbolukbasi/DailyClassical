@@ -36,7 +36,7 @@ mozart-symphony-40:
   hero: { width: 2579, height: 1800, bytes: 804011 }
   thumb: { width: 430, height: 300, bytes: 21078 }
   placeholder_color: "#2e2a22"
-  full: { width: 4000, height: 2792, bytes: 2664083 }
+  full: { width: 4000, height: 2792, bytes: 2663877 }
 
 beethoven-symphony-5:
   # Public-domain gallery photo of the painting at Tate (4497 × 2739), colour-matched to the warmer
@@ -1433,7 +1433,7 @@ schumann-symphony-3:
   rights_status: public_domain
   hero: { width: 1800, height: 2297, bytes: 562763 }
   thumb: { width: 300, height: 383, bytes: 21148 }
-  full: { width: 3134, height: 4000, bytes: 2052429 }
+  full: { width: 3134, height: 4000, bytes: 2054296 }
   placeholder_color: "#998b88"
 
 schumann-piano-quintet:
@@ -1763,7 +1763,7 @@ ravel-string-quartet:
   rights_status: public_domain
   hero: { width: 2554, height: 1800, bytes: 1527186 }
   thumb: { width: 426, height: 300, bytes: 62450 }
-  full: { width: 4000, height: 2819, bytes: 3973748 }
+  full: { width: 4000, height: 2819, bytes: 3972551 }
   placeholder_color: "#a09585"
 
 vaughan-williams-lark-ascending:
