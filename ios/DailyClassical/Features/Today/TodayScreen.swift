@@ -70,9 +70,11 @@ private struct TodayPager: View {
             }
             .scrollTargetBehavior(.paging)
             .scrollPosition(id: $position)
-            .defaultScrollAnchor(.trailing)
+            // No `.defaultScrollAnchor(.trailing)` or `.scrollBounceBehavior(.basedOnSize)`: under
+            // the iPhone Duo's side column the scroll view also gets the column as a horizontal
+            // content inset, and with a single day the trailing anchor and the paging snap moved
+            // the page back and forth for ever (the app hung on launch day). onAppear opens on today.
             .scrollIndicators(.hidden)
-            .scrollBounceBehavior(.basedOnSize, axes: .horizontal)
             .scrollEdgeEffectHidden(true, for: .top)  // see TodayContent: no band over the painting
             .ignoresSafeArea()
         }
