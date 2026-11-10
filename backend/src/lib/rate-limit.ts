@@ -67,6 +67,10 @@ export const AUTH_RATE_LIMITS = {
     // stops a script from flooding the tables.
     { scope: "ip", limit: 300, windowMs: 15 * MINUTE },
   ],
+  postbacks: [
+    // Copies of install postbacks from iOS (routes/attribution.ts): one per attributed install.
+    { scope: "ip", limit: 120, windowMs: HOUR },
+  ],
   diagnostics: [
     // MetricKit reports (routes/diagnostics.ts): a handful a day at most from one phone.
     { scope: "ip", limit: 60, windowMs: HOUR },

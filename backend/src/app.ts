@@ -8,6 +8,7 @@ import { sql } from "./db/client.js";
 import { appleStatus } from "./lib/apple.js";
 import { account } from "./routes/account.js";
 import { admin } from "./routes/admin.js";
+import { attribution } from "./routes/attribution.js";
 import { config } from "./routes/config.js";
 import { content } from "./routes/content.js";
 import { diagnostics } from "./routes/diagnostics.js";
@@ -41,6 +42,7 @@ app.route("/v1", account);
 app.route("/v1", events);
 app.route("/v1", diagnostics);
 // Target of the password reset email (no website yet); outside /v1 because it is a web page.
+app.route("/", attribution);
 app.route("/", resetPage);
 app.route("/", legal);
 app.route("/", admin);

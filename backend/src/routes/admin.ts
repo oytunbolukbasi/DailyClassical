@@ -5,6 +5,7 @@ import type { HtmlEscapedString } from "hono/utils/html";
 import { jwtVerify, SignJWT } from "jose";
 import { sql } from "../db/client.js";
 import { env } from "../env.js";
+import { AD_NETWORKS } from "../lib/ad-postback.js";
 import { sendAdminCodeEmail } from "../lib/email.js";
 import { enforceRateLimit } from "../lib/rate-limit.js";
 import { CODE_TTL_MS, checkCode, generateCode, hashCode, RESEND_COOLDOWN_MS } from "../lib/verification-code.js";
@@ -121,6 +122,7 @@ admin.get("/admin/diagnostics/:id", async (c) => {
 type Recording = { conductor: string | null; orchestra: string | null; chorus: string | null; soloists: { name: string }[] | null; release_year: number | null; spotify_album_id: string | null };
 type PieceRow = Recording & { piece_id: string; title: string | null; composer: string | null; artist: string | null; painting_title: string | null; image_url: string | null; painting_source: string | null; readers: number; opens: number; taps: number };
 type ScheduleRow = PieceRow & { day: string };
+type AdGroup = { ad_network_id: string | null; source_identifier: string; installs: number; redownloads: number; read: number; paid: number; last_seen: string };
 type DiagnosticGroup = { signature: string; kind: string; n: number; test_only: boolean; versions: string[]; os: string[]; last_seen: string; latest_id: string };
 const DIAGNOSTIC_KINDS: Record<string, string> = { crash: "Çökme", hang: "Donma", launch: "Yavaş açılış", cpu: "Aşırı işlemci", disk: "Aşırı disk yazma" };
 type CatalogueRow = PieceRow & { form: string; next_day: string | null; last_day: string | null; times_scheduled: number };
@@ -208,7 +210,18 @@ async function loadDashboard() {
       max(received_at)::text as last_seen, (array_agg(id::text order by received_at desc))[1] as latest_id
     from diagnostic_reports where received_at > now() - interval '90 days'
     group by signature order by bool_and(is_test), max(received_at) desc limit 50`;
-  return { today, kpi: kpi!, series, schedule, catalogue, prompts, diagTotals, diagGroups };
+  // Copies of install postbacks (routes/attribution.ts), last 90 days, per ad network and campaign.
+  // Conversion values (ios Core/Services/AdAttribution.swift): 20+ opened a piece, 40+ trial or purchase.
+  const adGroups = await sql<AdGroup[]>`
+    select ad_network_id, coalesce(source_identifier, '—') as source_identifier,
+      count(*) filter (where coalesce(postback_index, 0) = 0 and conversion_type is distinct from 'redownload' and conversion_type is distinct from 'reengagement')::int as installs,
+      count(*) filter (where coalesce(postback_index, 0) = 0 and conversion_type = 'redownload')::int as redownloads,
+      count(*) filter (where coalesce(postback_index, 0) = 0 and (fine_value >= 20 or coarse_value in ('medium', 'high')))::int as read,
+      count(*) filter (where coalesce(postback_index, 0) = 0 and (fine_value >= 40 or coarse_value = 'high'))::int as paid,
+      max(received_at)::text as last_seen
+    from ad_postbacks where received_at > now() - interval '90 days'
+    group by ad_network_id, coalesce(source_identifier, '—') order by max(received_at) desc limit 50`;
+  return { today, kpi: kpi!, series, schedule, catalogue, prompts, diagTotals, diagGroups, adGroups };
 }
 
 // ---- Views ----
@@ -269,7 +282,8 @@ function chart(series: { day: string; n: number }[]) {
 }
 
 async function dashboardView(email: string) {
-  const { today, kpi, series, schedule, catalogue, prompts, diagTotals, diagGroups } = await loadDashboard();
+  const { today, kpi, series, schedule, catalogue, prompts, diagTotals, diagGroups, adGroups } = await loadDashboard();
+  const adTotal = (k: "installs" | "read" | "paid") => adGroups.reduce((a, g) => a + g[k], 0);
   const diagCount = (...kinds: string[]) => diagTotals.filter((r) => kinds.includes(r.kind)).reduce((a, r) => a + r.n, 0);
   const seen = (t: string) => new Intl.DateTimeFormat("tr-TR", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: TZ }).format(new Date(t));
   const prompt = (p: string, a: string) => prompts.find((r) => r.prompt === p && r.action === a) ?? { installs: 0, times: 0 };
@@ -342,6 +356,36 @@ async function dashboardView(email: string) {
           <li><b>Anladım</b>: bir daha çıkmaz. <b>Sonra</b>: 7 gün sonra bir kez daha; toplam en fazla 2 kez.</li>
           <li>Ayarlar › Okuma › Ana ekran widget'ı aynı kartı her zaman açar; oradan açılanlar sayılmaz.</li>
           <li>Kartta adımlar: ana ekranda boş bir yere basılı tut, Düzenle › Widget Ekle, DailyClassical'ı ara ve boyut seç.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section>
+      <h2>Reklamdan gelen indirmeler <span class="m">SKAdNetwork ve AdAttributionKit, son 90 gün</span></h2>
+      <div class="tiles">
+        ${tile("İndirme", adTotal("installs"), "reklamla gelen yeni kurulum")}
+        ${tile("Eser açan", adTotal("read"), "ilk 2 günde")}
+        ${tile("Deneme ya da satın alma", adTotal("paid"), "ilk 2 günde")}
+      </div>
+      ${adGroups.length === 0
+        ? html`<p class="m small">Henüz rapor yok.</p>`
+        : html`<div class="scroll" style="margin-top:12px"><table>
+        <thead><tr><th>Ağ</th><th>Kampanya</th><th class="n">İndirme</th><th class="n">Yeniden</th><th class="n">Eser açan</th><th class="n">Deneme/satın alma</th><th>Son</th></tr></thead>
+        <tbody>${adGroups.map((g) => html`<tr>
+          <td>${(g.ad_network_id && AD_NETWORKS[g.ad_network_id]) ?? g.ad_network_id ?? "—"}</td>
+          <td><code>${g.source_identifier}</code></td>
+          ${num(g.installs)}${num(g.redownloads)}${num(g.read)}${num(g.paid)}
+          <td class="m">${seen(g.last_seen)}</td>
+        </tr>`)}</tbody>
+      </table></div>`}
+      <details class="note">
+        <summary>Bu sayılar nereden geliyor?</summary>
+        <ul>
+          <li>Bir reklamdan gelen kurulum, iOS tarafından reklam ağına (Meta) bildirilir; Apple aynı raporun bir kopyasını bize de gönderir. Raporda kullanıcıya ya da cihaza dair bir şey yoktur: reklam ağı, kampanya kimliği ve uygulamanın ilk günlerde ne kadar ilerlediğini gösteren bir değer.</li>
+          <li>Raporlar 1–3 gün gecikmeli gelir. Bir kampanyadan gelen kurulum azsa Apple ayrıntıyı gizler (yalnızca kaba değer gelir ya da hiç değer gelmez), bu yüzden "Eser açan" ve "Deneme ya da satın alma" eksik sayılabilir.</li>
+          <li><b>Kampanya</b> sütunu, reklam ağının kampanyaya verdiği kısa kimliktir; Meta'daki kampanya adına karşılığı Ads Manager'daki kampanya sonuçlarıyla eşleştirilir. Kampanya başına kurulumları Meta Ads Manager da (kendi tahminiyle) gösterir.</li>
+          <li>Değerler: uygulama açıldı → karşılama bitti → bir eser açıldı → deneme ya da aylık abonelik → ömür boyu. Yalnızca 1.0.1 ve sonrası bildirir.</li>
+          <li>Bağlantıyla gelen trafik (Instagram profil bağlantısı, hikâye bağlantısı, trafik kampanyaları) ayrıca App Store Connect › Analytics › Acquisition › Campaigns'te, bağlantıdaki kampanya etiketine (ct) göre görünür.</li>
         </ul>
       </details>
     </section>

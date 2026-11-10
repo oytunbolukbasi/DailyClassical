@@ -318,6 +318,28 @@ export const diagnosticReports = pgTable(
   (t) => [index("diagnostic_reports_signature_idx").on(t.signature, t.receivedAt)],
 );
 
+/**
+ * Copies of winning ad attribution postbacks (SKAdNetwork and AdAttributionKit) that iOS sends to
+ * https://dailyclassical.co/.well-known/... (routes/attribution.ts): which ad network and campaign
+ * (source identifier) an install came from, and how far it got (conversion value). No user data.
+ */
+export const adPostbacks = pgTable(
+  "ad_postbacks",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    receivedAt: timestamp("received_at", { withTimezone: true }).notNull().defaultNow(),
+    framework: text("framework").notNull(),            // skadnetwork | adattributionkit
+    adNetworkId: text("ad_network_id"),
+    sourceIdentifier: text("source_identifier"),      // the campaign, as the ad network encoded it
+    conversionType: text("conversion_type"),          // download | redownload | reengagement
+    fineValue: integer("fine_value"),
+    coarseValue: text("coarse_value"),
+    postbackIndex: integer("postback_index"),         // 0 = first window (0–2 days), 1 and 2 later
+    raw: jsonb("raw").notNull(),
+  },
+  (t) => [index("ad_postbacks_received_idx").on(t.receivedAt)],
+);
+
 /** One live sign-in code per admin address (ADMIN_EMAILS); only its keyed hash is stored. */
 export const adminLoginCodes = pgTable("admin_login_codes", {
   email: text("email").primaryKey(),

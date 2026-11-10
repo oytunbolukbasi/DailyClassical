@@ -21,6 +21,8 @@ Your settings (language, theme, daily reminder time) and the pieces you have ope
 
 **Crash and performance reports.** When the app crashes, freezes, starts slowly or uses too much processor time or storage, iOS prepares a technical report (Apple’s MetricKit) and hands it to the app on a later launch, and the app sends it to our server. A report contains the app and iOS version, the device model (such as “iPhone17,2”) and where in the program it happened; it contains nothing you wrote or read, no identifier and nothing linked to your account. We use these reports only to find and fix faults and delete them after 180 days.
 
+**Ad measurement.** When the app is installed from one of our ads, iOS uses Apple’s privacy-preserving ad attribution (SKAdNetwork and AdAttributionKit) to tell the ad network, and us, which campaign the install came from and how far the app was used in its first days (for example whether a piece page was opened or a subscription started). Apple sends these reports with a delay and without any identifier, so neither the ad network nor we can tell who installed the app. We do not use the advertising identifier, ask for tracking permission or include an advertising SDK.
+
 **When you create an account.** We store:
 
 - your email address;

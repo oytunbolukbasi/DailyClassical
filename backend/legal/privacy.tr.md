@@ -21,6 +21,8 @@ Ayarlarınız (dil, tema, günlük hatırlatıcı saati) ve açtığınız eserl
 
 **Çökme ve performans raporları.** Uygulama çöktüğünde, donduğunda, yavaş açıldığında ya da çok fazla işlemci zamanı veya depolama kullandığında iOS teknik bir rapor hazırlar (Apple’ın MetricKit’i) ve bunu uygulamaya daha sonraki bir açılışta verir; uygulama da raporu sunucumuza gönderir. Raporda uygulamanın ve iOS’un sürümü, cihaz modeli (örneğin “iPhone17,2”) ve hatanın programın neresinde olduğu bulunur; yazdığınız ya da okuduğunuz bir şey, herhangi bir tanımlayıcı ya da hesabınıza bağlı bir bilgi bulunmaz. Bu raporları yalnızca hataları bulup düzeltmek için kullanır, 180 gün sonra sileriz.
 
+**Reklam ölçümü.** Uygulama reklamlarımızdan biri aracılığıyla kurulduğunda iOS, Apple’ın gizliliği koruyan reklam ölçümünü (SKAdNetwork ve AdAttributionKit) kullanarak reklam ağına ve bize kurulumun hangi kampanyadan geldiğini ve uygulamanın ilk günlerde ne kadar kullanıldığını (örneğin bir eser sayfasının açılıp açılmadığını ya da aboneliğin başlayıp başlamadığını) bildirir. Apple bu raporları gecikmeli ve herhangi bir tanımlayıcı olmadan gönderir; bu yüzden ne reklam ağı ne de biz uygulamayı kimin kurduğunu bilebiliriz. Reklam tanımlayıcısını kullanmayız, takip izni istemeyiz ve uygulamada reklam yazılımı (SDK) bulunmaz.
+
 **Hesap açtığınızda.** Şunları saklarız:
 
 - e-posta adresiniz;
