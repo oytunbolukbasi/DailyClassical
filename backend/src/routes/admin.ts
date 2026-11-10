@@ -258,6 +258,7 @@ function chart(series: { day: string; n: number }[]) {
     const x = i * (bw + gap), y = h - bh;
     return `<g class="bar"><rect class="hit" x="${x}" y="0" width="${bw + gap}" height="${h}"/>`
       + (bh ? `<path d="M${x},${h} V${y + 4} q0,-4 4,-4 h${bw - 8} q4,0 4,4 V${h} Z"/>` : "")
+      + (s.n ? `<text x="${x + bw / 2}" y="${y - 4}" class="val">${fmt.format(s.n)}</text>` : "")
       + `<title>${dayLabel(s.day)}: ${fmt.format(s.n)} aktif kullanıcı</title></g>`;
   }).join("");
   return raw(`<svg viewBox="0 0 ${w} ${h + 18}" role="img" aria-label="Son 30 günde günlük aktif kullanıcı" class="chart">
@@ -473,11 +474,12 @@ h2 .m{font:13px -apple-system,system-ui,sans-serif}
 .small{font-size:13px;margin:10px 0 0}
 a{color:var(--accent)}
 .top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:10px}
 .tile,.card{background:var(--surface);border-radius:16px;box-shadow:0 0 0 .5px var(--rule);padding:16px 18px}
-.tile .k{font-size:13px;color:var(--ink2)}
-.tile .v{font:500 34px/1.2 Literata,Georgia,serif;font-variant-numeric:tabular-nums;margin:4px 0 2px}
-.tile .m{font-size:13px}
+.tile{padding:13px 14px;min-width:0}
+.tile .k{font-size:12px;color:var(--ink2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile .v{font:500 28px/1.2 Literata,Georgia,serif;font-variant-numeric:tabular-nums;margin:3px 0 2px}
+.tile .m{font-size:12px;line-height:1.35}
 .card{margin-top:12px}
 .note{margin-top:12px;background:var(--surface);border-radius:16px;box-shadow:0 0 0 .5px var(--rule);padding:12px 18px;font-size:14px;line-height:1.5}
 .note summary{cursor:pointer;color:var(--accent);font-weight:500}
@@ -491,6 +493,7 @@ code{font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-
 .chart .bar:hover path{opacity:.75}
 .chart .axis{stroke:var(--rule)}
 .chart .tick{font:11px -apple-system,system-ui,sans-serif;fill:var(--ink3)}
+.chart .val{font:600 8.5px -apple-system,system-ui,sans-serif;fill:var(--ink2);text-anchor:middle;font-variant-numeric:tabular-nums}
 .scroll{overflow-x:auto;background:var(--surface);border-radius:16px;box-shadow:0 0 0 .5px var(--rule)}
 table{width:100%;border-collapse:collapse;font-size:14px}
 th,td{text-align:left;padding:10px 14px;border-bottom:.5px solid var(--rule);vertical-align:top}
