@@ -129,7 +129,7 @@ const todayIn = (tz: string) => new Intl.DateTimeFormat("en-CA", { timeZone: tz 
 
 async function loadDashboard() {
   const today = todayIn(TZ);
-  const [kpi] = await sql<{ dau: number; dau_yesterday: number; mau: number; wau: number; installs: number; new_7d: number; accounts: number; favourites: number }[]>`
+  const [kpi] = await sql<{ dau: number; dau_yesterday: number; mau: number; wau: number; avg_dau_30: number; installs: number; new_7d: number; accounts: number; favourites: number; opens: number; opens_7d: number }[]>`
     with real_days as (
       select d.install_id, d.day from app_install_days d join app_installs i using (install_id) where not i.is_test
     )
@@ -138,6 +138,12 @@ async function loadDashboard() {
       (select count(*) from real_days where day = ${today}::date - 1)::int as dau_yesterday,
       (select count(distinct install_id) from real_days where day > ${today}::date - 7)::int as wau,
       (select count(distinct install_id) from real_days where day > ${today}::date - 30)::int as mau,
+      -- Over the days with data so far (the app went live on 9 Nov 2026), at most 30.
+      (select count(*)::float / greatest(1, least(30, ${today}::date - min(day) + 1))
+        from real_days where day > ${today}::date - 30) as avg_dau_30,
+      (select coalesce(sum(pa.opens), 0) from piece_activity pa join app_installs i using (install_id) where not i.is_test)::int as opens,
+      (select coalesce(sum(pa.opens), 0) from piece_activity pa join app_installs i using (install_id)
+        where not i.is_test and pa.day > ${today}::date - 7)::int as opens_7d,
       (select count(*) from app_installs where not is_test)::int as installs,
       (select count(*) from app_installs where not is_test and first_seen > ${today}::date - 7)::int as new_7d,
       (select count(*) from users where email_verified_at is not null or apple_sub is not null)::int as accounts,
@@ -273,6 +279,8 @@ async function dashboardView(email: string) {
   const share = shareOf(rateShown), widgetShare = shareOf(widgetShown);
   const tile = (label: string, value: number, note?: string) =>
     html`<div class="tile"><div class="k">${label}</div><div class="v">${fmt.format(value)}</div>${note ? html`<div class="m">${note}</div>` : ""}</div>`;
+  const pctTile = (label: string, ratio: number | null, note: string) =>
+    html`<div class="tile"><div class="k">${label}</div><div class="v">${ratio === null ? "—" : `%${fmt.format(Math.round(ratio * 1000) / 10)}`}</div><div class="m">${note}</div></div>`;
   return html`
     <header class="top">
       <div><div class="brand" lang="en">DailyClassical</div><h1>Yönetim</h1></div>
@@ -282,9 +290,11 @@ async function dashboardView(email: string) {
     <section>
       <h2>Kullanıcılar</h2>
       <div class="tiles">
-        ${tile("Günlük aktif", kpi.dau, `dün ${fmt.format(kpi.dau_yesterday)}`)}
-        ${tile("Haftalık aktif", kpi.wau, "son 7 gün")}
-        ${tile("Aylık aktif", kpi.mau, "son 30 gün")}
+        ${tile("Toplam okunma", kpi.opens, `eser sayfası açılışı · son 7 günde ${fmt.format(kpi.opens_7d)}`)}
+        ${tile("DAU", kpi.dau, `günlük aktif · dün ${fmt.format(kpi.dau_yesterday)}`)}
+        ${tile("WAU", kpi.wau, "haftalık aktif · son 7 gün")}
+        ${tile("MAU", kpi.mau, "aylık aktif · son 30 gün")}
+        ${pctTile("Stickiness (DAU/MAU)", kpi.mau ? kpi.avg_dau_30 / kpi.mau : null, `bağlılık · ortalama DAU ${fmt.format(Math.round(kpi.avg_dau_30 * 10) / 10)}`)}
         ${tile("Toplam kullanıcı", kpi.installs, `son 7 günde ${fmt.format(kpi.new_7d)} yeni`)}
         ${tile("Hesap açan", kpi.accounts, `${fmt.format(kpi.favourites)} favori`)}
       </div>
@@ -292,7 +302,7 @@ async function dashboardView(email: string) {
         <div class="ct">Günlük aktif kullanıcı, son 30 gün</div>
         ${chart(series)}
       </div>
-      <p class="m small">Kullanıcı = uygulamanın bir kurulumu (anonim). Xcode ve TestFlight build'leri sayılmaz. Gün, kullanıcının kendi tarihine göre.</p>
+      <p class="m small">Kullanıcı = uygulamanın bir kurulumu (anonim). Xcode ve TestFlight build'leri sayılmaz. Gün, kullanıcının kendi tarihine göre. Toplam okunma: tüm kitaplıkta eser sayfalarının kaç kez açıldığı (aynı kişi birden çok sayılır). Stickiness: son 30 günün (yayından bu yana geçen günlerin) ortalama DAU'sunun MAU'ya oranı; aylık kullanıcıların ortalama bir günde ne kadarının uygulamayı açtığı.</p>
     </section>
 
     <section>
