@@ -10,6 +10,7 @@ nonisolated struct AppConfig: Decodable, Sendable {
 
 nonisolated enum AppVersion {
     static var current: String { Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0" }
+    static var build: String { Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "0" }
 
     /// "1.2" < "1.10" < "1.10.1": numeric, component by component; missing components count as 0.
     static func isOlder(_ a: String, than b: String) -> Bool {

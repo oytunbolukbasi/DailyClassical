@@ -3,7 +3,8 @@
 <!-- Privacy manifest (App Store requirement). Matches the App Privacy labels in project-knowledge/project_information.md §7
      and backend/legal/privacy.*.md: no tracking; account email, user ID and purchases for app
      functionality; anonymous usage counts (Core/Services/Analytics.swift: a random install id and
-     product interaction, not linked to the user) for analytics. RevenueCat ships its own manifest. -->
+     product interaction, not linked to the user) for analytics; crash and performance reports
+     (Core/Services/Diagnostics.swift, not linked) for app functionality. RevenueCat ships its own manifest. -->
 <plist version="1.0">
 <dict>
 	<key>NSPrivacyTracking</key>
@@ -85,6 +86,32 @@
 			<key>NSPrivacyCollectedDataTypePurposes</key>
 			<array>
 				<string>NSPrivacyCollectedDataTypePurposeAnalytics</string>
+			</array>
+		</dict>
+		<dict>
+			<!-- MetricKit crash reports (Core/Services/Diagnostics.swift): versions, device model, call stacks. -->
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypeCrashData</string>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeAppFunctionality</string>
+			</array>
+		</dict>
+		<dict>
+			<!-- MetricKit hang, launch, CPU and disk-write reports, same contents. -->
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypePerformanceData</string>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeAppFunctionality</string>
 			</array>
 		</dict>
 	</array>

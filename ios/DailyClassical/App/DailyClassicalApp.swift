@@ -40,6 +40,8 @@ struct DailyClassicalApp: App {
                 .task(id: session.userID) { await entitlements.identify(userID: session.userID) }
                 // Anonymous usage counts for the admin page (Core/Services/Analytics.swift).
                 .onChange(of: scenePhase, initial: true) { if scenePhase == .active { Analytics.shared.appBecameActive() } }
+                // Crash and hang reports from MetricKit, for the admin page (Core/Services/Diagnostics.swift).
+                .task { Diagnostics.shared.start() }
         }
     }
 }

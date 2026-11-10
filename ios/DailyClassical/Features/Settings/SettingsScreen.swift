@@ -162,6 +162,13 @@ struct SettingsScreen: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             .settingsRow()
+            #if DEBUG
+            Button { Diagnostics.shared.sendSample() } label: {
+                Text(verbatim: "Örnek çökme raporu gönder").foregroundStyle(Palette.accent)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .settingsRow()
+            #endif
         } header: {
             Text(verbatim: "Test")
                 .font(Typography.meta13)
