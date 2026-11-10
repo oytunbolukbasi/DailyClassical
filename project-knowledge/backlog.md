@@ -11,7 +11,7 @@ Son güncelleme: 9 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]**
 
 ## 1.0.1 planı
 
-**Durum (9 Kasım akşamı):** kod hazır, telefonda test edildi; Oytun'un test sonrası düzeltme ve eklemeleri bekleniyor, ardından build 4 ve gönderim (10 Kasım civarı). Sürüm `MARKETING_VERSION` 1.0.1 (`ios/project.yml`); build numarası arşivde 4'e çıkar. Kullanıcıya görünen değişiklikler: widget tanıtımı, iPhone Duo ve kısa ekranlar; geri kalanı bakım ve sayaçlar.
+**Durum (10 Kasım akşamı):** kod hazır (Duo, widget tanıtımı, sayaçlar, çökme raporları, reklam ölçümü). Sıra: 11 Kasım 1.0.1'i onaya göndermek (build 4) → kök alan adı DNS'i (reklam ölçümü kopyaları için) → reklamları uçtan uca kurmak. Sürüm `MARKETING_VERSION` 1.0.1 (`ios/project.yml`); build numarası arşivde 4'e çıkar. Kullanıcıya görünen değişiklikler: widget tanıtımı, iPhone Duo ve kısa ekranlar; geri kalanı bakım ve sayaçlar.
 
 **Hazır olanlar**
 
