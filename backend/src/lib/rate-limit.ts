@@ -67,6 +67,10 @@ export const AUTH_RATE_LIMITS = {
     // stops a script from flooding the tables.
     { scope: "ip", limit: 300, windowMs: 15 * MINUTE },
   ],
+  diagnostics: [
+    // MetricKit reports (routes/diagnostics.ts): a handful a day at most from one phone.
+    { scope: "ip", limit: 60, windowMs: HOUR },
+  ],
   adminLogin: [
     // Each request may email a code to an admin address.
     { scope: "email", limit: 5, windowMs: HOUR },

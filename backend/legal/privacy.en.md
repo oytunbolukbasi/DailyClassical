@@ -1,12 +1,12 @@
 # Privacy Policy
 
-Last updated: 24 October 2026
+Last updated: 10 November 2026
 
 DailyClassical (“we”, “us”) is an app that offers one classical work a day with a listening guide. This policy explains what information the app and our server handle, why, and the choices you have.
 
 ## The short version
 
-- You can use DailyClassical without an account. In that case we store nothing about you on our servers apart from anonymous usage counts that are not linked to you.
+- You can use DailyClassical without an account. In that case we store nothing about you on our servers apart from anonymous usage counts and crash reports that are not linked to you.
 - If you create an account, we store your email address, a protected form of your password, your language and your favourites.
 - Purchases are handled by Apple. We never see your payment details.
 - There are no ads and no third-party analytics or tracking tools, and we never sell or share your data for marketing.
@@ -18,6 +18,8 @@ DailyClassical (“we”, “us”) is an app that offers one classical work a d
 Your settings (language, theme, daily reminder time) and the pieces you have opened are stored only on your device.
 
 **Anonymous usage counts.** To see how many people use the app and which pieces they read, the app sends our server a few counts: the days it was opened, which piece pages were opened and how often "Open in Spotify" was tapped. These are sent with a random identifier that the app creates on first launch. It is not linked to your account, your device, your Apple ID or any advertising identifier, and it changes if you reinstall the app. We do not use third-party analytics software for this, and we look only at totals. The counts are deleted after 400 days.
+
+**Crash and performance reports.** When the app crashes, freezes, starts slowly or uses too much processor time or storage, iOS prepares a technical report (Apple’s MetricKit) and hands it to the app on a later launch, and the app sends it to our server. A report contains the app and iOS version, the device model (such as “iPhone17,2”) and where in the program it happened; it contains nothing you wrote or read, no identifier and nothing linked to your account. We use these reports only to find and fix faults and delete them after 180 days.
 
 **When you create an account.** We store:
 
@@ -48,7 +50,7 @@ To confirm your email address or reset your password we send you a short code or
 
 ## Why we use your information
 
-We use account information to provide the service you asked for: signing you in, keeping your favourites across devices and giving you access to Premium. We use anonymous usage counts to understand which pieces people read and to plan the catalogue, and technical request data and abuse counters because we have a legitimate interest in keeping the service available and secure. Where the law requires us to keep or disclose information, we do so only to that extent.
+We use account information to provide the service you asked for: signing you in, keeping your favourites across devices and giving you access to Premium. We use anonymous usage counts to understand which pieces people read and to plan the catalogue, crash and performance reports to fix faults, and technical request data and abuse counters because we have a legitimate interest in keeping the service available and secure. Where the law requires us to keep or disclose information, we do so only to that extent.
 
 ## Service providers
 

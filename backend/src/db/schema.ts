@@ -294,6 +294,30 @@ export const promptEvents = pgTable(
   (t) => [primaryKey({ columns: [t.installId, t.prompt, t.action, t.day] })],
 );
 
+/**
+ * MetricKit crash, hang, launch, CPU and disk-write reports (POST /v1/diagnostics). No install or
+ * account id: versions, device model, a few figures and the call stack tree. `signature` groups
+ * reports of the same fault (routes/diagnostics.ts). Rows older than 180 days are deleted.
+ */
+export const diagnosticReports = pgTable(
+  "diagnostic_reports",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    receivedAt: timestamp("received_at", { withTimezone: true }).notNull().defaultNow(),
+    happenedAt: timestamp("happened_at", { withTimezone: true }),
+    kind: text("kind").notNull(),
+    signature: text("signature").notNull(),
+    appVersion: text("app_version").notNull(),
+    build: text("build").notNull(),
+    osVersion: text("os_version").notNull(),
+    device: text("device").notNull(),
+    details: jsonb("details").notNull(),
+    callStack: jsonb("call_stack"),
+    isTest: boolean("is_test").notNull().default(false),
+  },
+  (t) => [index("diagnostic_reports_signature_idx").on(t.signature, t.receivedAt)],
+);
+
 /** One live sign-in code per admin address (ADMIN_EMAILS); only its keyed hash is stored. */
 export const adminLoginCodes = pgTable("admin_login_codes", {
   email: text("email").primaryKey(),

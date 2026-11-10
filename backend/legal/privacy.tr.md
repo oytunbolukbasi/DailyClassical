@@ -1,12 +1,12 @@
 # Gizlilik Politikası
 
-Son güncelleme: 24 Ekim 2026
+Son güncelleme: 10 Kasım 2026
 
 DailyClassical (“biz”), her gün bir klasik eseri bir dinleme rehberiyle sunan bir uygulamadır. Bu politika, uygulamanın ve sunucumuzun hangi bilgileri neden işlediğini ve sizin hangi seçeneklere sahip olduğunuzu açıklar.
 
 ## Kısaca
 
-- DailyClassical’ı hesap açmadan kullanabilirsiniz. Bu durumda sunucularımızda, size bağlanmayan anonim kullanım sayıları dışında sizinle ilgili hiçbir bilgi saklamayız.
+- DailyClassical’ı hesap açmadan kullanabilirsiniz. Bu durumda sunucularımızda, size bağlanmayan anonim kullanım sayıları ve çökme raporları dışında sizinle ilgili hiçbir bilgi saklamayız.
 - Hesap açarsanız e-posta adresinizi, şifrenizin korunmuş bir biçimini, dilinizi ve favorilerinizi saklarız.
 - Satın almaları Apple yönetir. Ödeme bilgilerinizi hiçbir zaman görmeyiz.
 - Reklam ve üçüncü taraf analitik ya da takip aracı yoktur. Verilerinizi pazarlama amacıyla asla satmaz veya paylaşmayız.
@@ -18,6 +18,8 @@ DailyClassical (“biz”), her gün bir klasik eseri bir dinleme rehberiyle sun
 Ayarlarınız (dil, tema, günlük hatırlatıcı saati) ve açtığınız eserler yalnızca cihazınızda saklanır.
 
 **Anonim kullanım sayıları.** Uygulamayı kaç kişinin kullandığını ve hangi eserlerin okunduğunu görmek için uygulama sunucumuza birkaç sayı gönderir: uygulamanın açıldığı günler, hangi eser sayfalarının açıldığı ve "Spotify'da aç"a kaç kez dokunulduğu. Bunlar, uygulamanın ilk açılışta oluşturduğu rastgele bir tanımlayıcıyla gönderilir. Bu tanımlayıcı hesabınıza, cihazınıza, Apple Kimliğinize ya da herhangi bir reklam tanımlayıcısına bağlı değildir; uygulamayı yeniden kurarsanız değişir. Bunun için üçüncü taraf analitik yazılımı kullanmayız ve yalnızca toplamlara bakarız. Sayılar 400 gün sonra silinir.
+
+**Çökme ve performans raporları.** Uygulama çöktüğünde, donduğunda, yavaş açıldığında ya da çok fazla işlemci zamanı veya depolama kullandığında iOS teknik bir rapor hazırlar (Apple’ın MetricKit’i) ve bunu uygulamaya daha sonraki bir açılışta verir; uygulama da raporu sunucumuza gönderir. Raporda uygulamanın ve iOS’un sürümü, cihaz modeli (örneğin “iPhone17,2”) ve hatanın programın neresinde olduğu bulunur; yazdığınız ya da okuduğunuz bir şey, herhangi bir tanımlayıcı ya da hesabınıza bağlı bir bilgi bulunmaz. Bu raporları yalnızca hataları bulup düzeltmek için kullanır, 180 gün sonra sileriz.
 
 **Hesap açtığınızda.** Şunları saklarız:
 
@@ -48,7 +50,7 @@ E-posta adresinizi doğrulamak ya da şifrenizi sıfırlamak için size kısa bi
 
 ## Bilgilerinizi neden kullanıyoruz
 
-Hesap bilgilerinizi istediğiniz hizmeti sunmak için kullanırız: girişinizi yapmak, favorilerinizi cihazlar arasında korumak ve Premium’a erişiminizi sağlamak. Anonim kullanım sayılarını hangi eserlerin okunduğunu anlamak ve kataloğu planlamak için; teknik istek verilerini ve kötüye kullanım sayaçlarını ise hizmeti erişilebilir ve güvenli tutmaktaki meşru menfaatimiz nedeniyle kullanırız. Kanunun bilgi saklamamızı ya da paylaşmamızı gerektirdiği durumlarda bunu yalnızca o ölçüde yaparız.
+Hesap bilgilerinizi istediğiniz hizmeti sunmak için kullanırız: girişinizi yapmak, favorilerinizi cihazlar arasında korumak ve Premium’a erişiminizi sağlamak. Anonim kullanım sayılarını hangi eserlerin okunduğunu anlamak ve kataloğu planlamak için, çökme ve performans raporlarını hataları düzeltmek için; teknik istek verilerini ve kötüye kullanım sayaçlarını ise hizmeti erişilebilir ve güvenli tutmaktaki meşru menfaatimiz nedeniyle kullanırız. Kanunun bilgi saklamamızı ya da paylaşmamızı gerektirdiği durumlarda bunu yalnızca o ölçüde yaparız.
 
 ## Hizmet sağlayıcılar
 

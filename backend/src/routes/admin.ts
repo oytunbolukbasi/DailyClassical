@@ -103,11 +103,26 @@ admin.post("/admin/logout", (c) => {
   return c.redirect("/admin", 303);
 });
 
+/** One MetricKit report as JSON (routes/diagnostics.ts), to read with ios/scripts/symbolicate.sh. */
+admin.get("/admin/diagnostics/:id", async (c) => {
+  if (!(await sessionEmail(c))) return c.redirect("/admin", 303);
+  const id = c.req.param("id");
+  if (!/^[0-9a-f-]{36}$/.test(id)) return c.notFound();
+  const [row] = await sql`
+    select id, received_at, happened_at, kind, signature, app_version, build, os_version, device, details, call_stack, is_test
+    from diagnostic_reports where id = ${id}::uuid`;
+  if (!row) return c.notFound();
+  c.header("Content-Disposition", `attachment; filename="diagnostic-${id}.json"`);
+  return c.json(row);
+});
+
 // ---- Data ----
 
 type Recording = { conductor: string | null; orchestra: string | null; chorus: string | null; soloists: { name: string }[] | null; release_year: number | null; spotify_album_id: string | null };
 type PieceRow = Recording & { piece_id: string; title: string | null; composer: string | null; artist: string | null; painting_title: string | null; image_url: string | null; painting_source: string | null; readers: number; opens: number; taps: number };
 type ScheduleRow = PieceRow & { day: string };
+type DiagnosticGroup = { signature: string; kind: string; n: number; test_only: boolean; versions: string[]; os: string[]; last_seen: string; latest_id: string };
+const DIAGNOSTIC_KINDS: Record<string, string> = { crash: "Çökme", hang: "Donma", launch: "Yavaş açılış", cpu: "Aşırı işlemci", disk: "Aşırı disk yazma" };
 type CatalogueRow = PieceRow & { form: string; next_day: string | null; last_day: string | null; times_scheduled: number };
 
 const todayIn = (tz: string) => new Intl.DateTimeFormat("en-CA", { timeZone: tz }).format(new Date());
@@ -177,7 +192,17 @@ async function loadDashboard() {
     from prompt_events pe join app_installs i using (install_id)
     where not i.is_test
     group by pe.prompt, pe.action`;
-  return { today, kpi: kpi!, series, schedule, catalogue, prompts };
+  // MetricKit reports (1.0.1 on): totals of the last 30 days, and faults grouped by signature.
+  const diagTotals = await sql<{ kind: string; n: number }[]>`
+    select kind, count(*)::int as n from diagnostic_reports
+    where not is_test and received_at > now() - interval '30 days' group by kind`;
+  const diagGroups = await sql<DiagnosticGroup[]>`
+    select signature, min(kind) as kind, count(*)::int as n, bool_and(is_test) as test_only,
+      array_agg(distinct app_version || ' (' || build || ')') as versions, array_agg(distinct os_version) as os,
+      max(received_at)::text as last_seen, (array_agg(id::text order by received_at desc))[1] as latest_id
+    from diagnostic_reports where received_at > now() - interval '90 days'
+    group by signature order by bool_and(is_test), max(received_at) desc limit 50`;
+  return { today, kpi: kpi!, series, schedule, catalogue, prompts, diagTotals, diagGroups };
 }
 
 // ---- Views ----
@@ -237,7 +262,9 @@ function chart(series: { day: string; n: number }[]) {
 }
 
 async function dashboardView(email: string) {
-  const { today, kpi, series, schedule, catalogue, prompts } = await loadDashboard();
+  const { today, kpi, series, schedule, catalogue, prompts, diagTotals, diagGroups } = await loadDashboard();
+  const diagCount = (...kinds: string[]) => diagTotals.filter((r) => kinds.includes(r.kind)).reduce((a, r) => a + r.n, 0);
+  const seen = (t: string) => new Intl.DateTimeFormat("tr-TR", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: TZ }).format(new Date(t));
   const prompt = (p: string, a: string) => prompts.find((r) => r.prompt === p && r.action === a) ?? { installs: 0, times: 0 };
   const rateShown = prompt("rate", "shown"), rateYes = prompt("rate", "yes"), rateLater = prompt("rate", "later");
   const widgetShown = prompt("widget", "shown"), widgetYes = prompt("widget", "yes"), widgetLater = prompt("widget", "later");
@@ -304,6 +331,38 @@ async function dashboardView(email: string) {
           <li><b>Anladım</b>: bir daha çıkmaz. <b>Sonra</b>: 7 gün sonra bir kez daha; toplam en fazla 2 kez.</li>
           <li>Ayarlar › Okuma › Ana ekran widget'ı aynı kartı her zaman açar; oradan açılanlar sayılmaz.</li>
           <li>Kartta adımlar: ana ekranda boş bir yere basılı tut, Düzenle › Widget Ekle, DailyClassical'ı ara ve boyut seç.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section>
+      <h2>Çökmeler ve donmalar <span class="m">MetricKit, 1.0.1'den itibaren</span></h2>
+      <div class="tiles">
+        ${tile("Çökme", diagCount("crash"), "son 30 gün")}
+        ${tile("Donma", diagCount("hang"), "son 30 gün")}
+        ${tile("Diğer", diagCount("launch", "cpu", "disk"), "yavaş açılış, aşırı işlemci ya da disk")}
+      </div>
+      ${diagGroups.length === 0
+        ? html`<p class="m small">Henüz rapor yok.</p>`
+        : html`<div class="scroll" style="margin-top:12px"><table>
+        <thead><tr><th>Tür</th><th>İmza</th><th class="n">Rapor</th><th>Sürüm</th><th>iOS</th><th>Son</th><th></th></tr></thead>
+        <tbody>${diagGroups.map((g) => html`<tr>
+          <td>${DIAGNOSTIC_KINDS[g.kind] ?? g.kind}${g.test_only ? html` <span class="m">(test)</span>` : ""}</td>
+          <td><code>${g.signature}</code></td>
+          ${num(g.n)}
+          <td class="m">${g.versions.join(", ")}</td>
+          <td class="m">${g.os.join(", ")}</td>
+          <td class="m">${seen(g.last_seen)}</td>
+          <td><a href="/admin/diagnostics/${g.latest_id}">JSON</a></td>
+        </tr>`)}</tbody>
+      </table></div>`}
+      <details class="note">
+        <summary>Raporlar nasıl okunur?</summary>
+        <ul>
+          <li>Raporları iOS kendisi topluyor ve uygulamaya veriyor: çökme ve donmalar uygulama bir sonraki açıldığında, yavaş açılış, işlemci ve disk raporları yaklaşık bir gün sonra gelir. Kullanıcıya ya da kuruluma dair bir şey içermez; sürüm, iOS, cihaz modeli ve çağrı yığını.</li>
+          <li><b>İmza</b> aynı hatanın raporlarını bir araya toplar: tür, çökmelerde sinyal ve uygulamanın kendi kodundaki ilk satır (ikili dosya + adres). Adres, o build'in dSYM'iyle okunur.</li>
+          <li>Okumak için: <b>JSON</b>'u indirip Mac'te <code>ios/scripts/symbolicate.sh diagnostic-….json</code>; build'in arşivini bulup satırları dosya adı ve satır numarasıyla yazar.</li>
+          <li>Test build'lerinden gelenler "(test)" diye işaretlenir ve kutulardaki sayılara girmez. Raporlar 180 gün saklanır.</li>
         </ul>
       </details>
     </section>
@@ -412,6 +471,7 @@ a{color:var(--accent)}
 .card{margin-top:12px}
 .note{margin-top:12px;background:var(--surface);border-radius:16px;box-shadow:0 0 0 .5px var(--rule);padding:12px 18px;font-size:14px;line-height:1.5}
 .note summary{cursor:pointer;color:var(--accent);font-weight:500}
+code{font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-all}
 .note ul{margin:10px 0 4px;padding-left:20px}
 .note li{margin:6px 0}
 .ct{font-size:13px;color:var(--ink2);margin-bottom:8px}
