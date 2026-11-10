@@ -136,6 +136,7 @@ struct PieceContent: View {
         .onAppear {
             UIApplication.shared.isIdleTimerDisabled = true
             RatePromptPolicy.recordPieceDay()
+            AdAttribution.record(.readPiece)
             Analytics.shared.pieceOpened(piece.id)
         }
         #if DEBUG

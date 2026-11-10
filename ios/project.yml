@@ -68,6 +68,15 @@ targets:
         # HTTPS only (exempt): no export-compliance question on every upload.
         ITSAppUsesNonExemptEncryption: false
         CFBundleLocalizations: [en, tr]
+        # Ad attribution without an SDK (Core/Services/AdAttribution.swift): Meta's SKAdNetwork ids, and
+        # copies of winning install postbacks to https://dailyclassical.co/.well-known/... (backend
+        # routes/attribution.ts). iOS uses only the registrable domain, so the apex must reach the API.
+        SKAdNetworkItems:
+          - SKAdNetworkIdentifier: v9wttpbfk9.skadnetwork
+          - SKAdNetworkIdentifier: n38lu8286q.skadnetwork
+        NSAdvertisingAttributionReportEndpoint: https://dailyclassical.co
+        AdAttributionKit:
+          AttributionCopyEndpoint: https://dailyclassical.co
         UIAppFonts: [Literata-Regular.ttf, Literata-Medium.ttf, Literata-SemiBold.ttf, Literata-Italic.ttf, Literata-MediumItalic.ttf]
         NSAppTransportSecurity:
           NSAllowsLocalNetworking: true

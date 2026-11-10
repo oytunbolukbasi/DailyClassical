@@ -159,6 +159,7 @@ final class EntitlementStore {
             if result.userCancelled { return false }
             apply(result.customerInfo)
             if plan == .monthly { trialDays = nil }
+            if isPremium { AdAttribution.record(plan == .lifetime ? .lifetime : .trialOrMonthly) }
             return isPremium
         }
         guard let product = storeKitProducts[plan] else { return false }
@@ -166,6 +167,7 @@ final class EntitlementStore {
         case .success(let result):
             if case .verified(let transaction) = result { await transaction.finish() }
             await refresh()
+            if isPremium { AdAttribution.record(plan == .lifetime ? .lifetime : .trialOrMonthly) }
             return isPremium
         default:
             return false

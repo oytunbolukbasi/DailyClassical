@@ -21,6 +21,7 @@ private struct OnboardingModifier: ViewModifier {
                     .fullScreenCover(isPresented: $show) {
                         WelcomeFlow {
                             isComplete = true
+                            AdAttribution.record(.onboarded)
                             show = false
                         }
                     }

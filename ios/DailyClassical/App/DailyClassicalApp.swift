@@ -42,6 +42,8 @@ struct DailyClassicalApp: App {
                 .onChange(of: scenePhase, initial: true) { if scenePhase == .active { Analytics.shared.appBecameActive() } }
                 // Crash and hang reports from MetricKit, for the admin page (Core/Services/Diagnostics.swift).
                 .task { Diagnostics.shared.start() }
+                // Starts Apple's ad attribution window on first launch (Core/Services/AdAttribution.swift).
+                .task { AdAttribution.appLaunched() }
         }
     }
 }
