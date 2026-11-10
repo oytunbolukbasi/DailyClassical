@@ -55,6 +55,25 @@ Son güncelleme: 9 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]**
 
 - Metin içi sözlük terimlerine 44 pt dokunma alanı; e-posta değiştirme akışı; Beethoven 9 finalinin iki parçalı durak gösterimi; "Şeffaflığı Azalt" ve VoiceOver turu.
 
+## Reklam (Instagram / Meta)
+
+**Kararlar (10 Kasım):** Meta Ads Manager'ı Claude, Claude in Chrome ile yönetir (üçüncü taraf bağlantı yok). Pazar: Türkiye ve İngilizce konuşulan ülkeler, ayrı kampanyalar. Ölçüm için reklam SDK'sı ya da MMP (Adjust vb.) yok; Apple'ın SKAdNetwork / AdAttributionKit'i ve App Store Connect kampanya bağlantıları. Para harcatan her adım (yayına alma, bütçe) Oytun'un onayıyla; ödeme yöntemi ve girişler Oytun'da.
+
+**Ölçüm, üç yerden:**
+- **Meta Ads Manager:** kampanya başına yükleme (SKAdNetwork, Meta'nın modellemesiyle).
+- **Admin › Reklamdan gelen indirmeler:** Apple'ın bize gönderdiği rapor kopyaları; reklam ağı ve kampanya kimliği başına indirme, ilk 2 günde eser açan, deneme ya da satın alma. Gecikme 1–3 gün; az kurulumda Apple ayrıntıyı gizler.
+- **App Store Connect › Analytics › Campaigns:** bağlantıyla gelen trafik (profil, hikâye, trafik kampanyaları), bağlantıdaki `ct` etiketine göre kesin indirme sayısı. Kaynaklarda "App Referrer: Instagram" toplamı da görünür.
+
+**Uygulama ve sunucu (hazır, 1.0.1 ile gelir):** `Core/Services/AdAttribution.swift` adımları (0 açıldı, 10 karşılama, 20 eser açtı, 40 deneme/aylık, 50 ömür boyu); Info.plist'te Meta'nın SKAdNetwork kimlikleri ve rapor kopyası adresi (`https://dailyclassical.co`); sunucuda `/.well-known/skadnetwork/report-attribution/` ve `/.well-known/appattribution/report-attribution/` (migration 0015). Takip izni (ATT), reklam kimliği ya da SDK yok; gizlilik politikasına "Reklam ölçümü" eklendi.
+
+**Sırayla yapılacaklar:**
+1. **[Oytun, Claude Chrome'da yönlendirir] Meta hesapları:** Business portföyü, reklam hesabı (TRY, İstanbul saat dilimi), ödeme yöntemi; @dailyclassical.co'yu ve bir Facebook sayfasını portföye bağlamak.
+2. **[Oytun + Claude] Kök alan adı → sunucu:** Apple rapor kopyalarını yalnızca `dailyclassical.co`'ya gönderir; bugün kök alan adı GoDaddy'nin yönlendirmesinde (POST'a 405). GoDaddy kök alan adında CNAME/ALIAS desteklemediği için öneri: DNS'i Cloudflare'e taşımak (ücretsiz; alan adı GoDaddy'de kalır). Bütün kayıtlar (www ve api CNAME, e-posta MX, Resend SPF/DKIM TXT) aynen kopyalanır, kök alan adı CNAME (flattening) ile Railway'e, Railway'e `dailyclassical.co` özel alan adı eklenir. Doğrulama: `POST https://dailyclassical.co/.well-known/skadnetwork/report-attribution/` boş gövdeyle 400 döner (bugün 405). Meta'nın kendi raporlaması buna bağlı değil, yalnızca bizim paneldeki sayılar.
+3. **[Claude, Chrome] Meta for Developers'ta uygulama kaydı** (App Store ID 6820556910) ve Events Manager › SKAdNetwork ayarının kontrolü.
+4. **[Claude] İlk kampanyalar, 1.0.1 yayına çıkana kadar:** Trafik kampanyası → App Store bağlantısı, TR ve EN için ayrı `ct` etiketiyle (App Store Connect › Analytics › Campaigns'te bağlantı üretilir). **1.0.1'den sonra:** Uygulama tanıtımı (yükleme) kampanyaları, SKAdNetwork ile; Meta yüklemeye göre optimize eder.
+5. **[Claude] Görseller:** 4:5 akış ve 9:16 hikâye/reels, TR ve EN; mağaza görsellerinden ve Instagram gönderilerinden; kısa bir ekran kaydı (Bugün → eser → tablo). Abonelik ve deneme ifadeleri ödeme ekranındaki kurala uyar (deneme fiyattan önde değil).
+6. **Bütçe:** önce küçük bir test (iki pazar ayrı, 7–10 gün), sonra iyi çalışanı büyütmek; tutarı Oytun belirler. Haftalık değerlendirme: Meta sonuçları + admin + App Store Connect.
+
 ## İçerik
 
 - **Uygulama boyutu (25 Ekim, çözüldü):** Tablo hero'ları yalnızca takvimdeki eserler için gömülüyor; gömülü görseller 135 MB → 39 MB, widget 29 MB → 2,7 MB. Gerisi Railway'den iner.
