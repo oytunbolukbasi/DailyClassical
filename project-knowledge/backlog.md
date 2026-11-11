@@ -107,7 +107,7 @@ Son güncelleme: 11 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 
 - **Debug build:** Premium açık (`EntitlementStore.debugUnlock`), içerik uygulamaya gömülü; production API'ye bağlanır (giriş, favoriler), içerik için `DC_USE_API=1`. Release/TestFlight build'leri StoreKit/RevenueCat ve production API'yi kullanır.
 - **Ayarlar › Test** (yalnızca Xcode'dan kurulan build'lerde): "Karşılamayı yeniden göster", "3 gün deneme teklifini göster". Simülatörde `-debugTrialDays 3`, `-debugPremium NO`.
-- **Premium test hesabı:** `premium-test@dailyclassical.co`; şifresi git'e girmeyen `backend/test-accounts.local.md`'de. Yeni hesap: `npm run test-user -- adres@... [--free]`.
+- **Premium test hesabı:** `premium-test@dailyclassical.co`; şifresi git'e girmeyen `backend/test-accounts.local.md`'de. 11 Kasım: production'daki hesap 9 Kasım'da uygulamadan doğrulanmamış ve Premium'suz olarak açılmıştı (App Review girişte kod isterdi); şifre aynı kalarak doğrulandı ve Premium tanımlandı, API'den giriş denendi. Dikkat: `npm run test-user` `.env`'deki son `DATABASE_URL`'i (dev) kullanır; production için adresi açıkça ver. Yeni hesap: `npm run test-user -- adres@... [--free]`.
 - **Simülatörler (29 Ekim, yeni Mac, Xcode 27.1):** iPhone 17 Pro Max ve iPhone 18 Pro, iOS 27.0 (24A434) ile; mağaza ekranları 6,9 inç (17 Pro Max). iOS 27.1 simülatörü (24A94425) yalnızca iPhone Duo'ya izin veriyor (`restrictedToDeviceTypes`), diğer modeller için 27.0 gerekli. Telefon iOS 27.0.1; cihaz davranışı için iOS 27 simülatörü esas.
 - Telefondaki "Ömür boyu", Xcode'un yerel StoreKit ortamındaki bir test satın almasından; hesaba bağlı değil, uygulama silinince gider.
 
