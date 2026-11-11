@@ -11,7 +11,7 @@ Son güncelleme: 11 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 
 ## 1.1 planı (önce 1.0.1 olarak hazırlanmıştı)
 
-**Durum (11 Kasım):** Oytun'un kararıyla 1.0.1 gönderilmedi; 1.1'e kalan işler de eklenip sürüm **1.1 (build 5)** olarak gönderilecek (build 4 = 1.0.1 yüklü kaldı, kullanılmayacak). Sıra: 1.1'i onaya göndermek → kök alan adı DNS'i (reklam ölçümü kopyaları için) → reklamları uçtan uca kurmak. Sürüm `MARKETING_VERSION` 1.1, build 5 (`ios/project.yml`). Kullanıcıya görünen değişiklikler: widget tanıtımı, e-posta değiştirme, iPhone Duo (karşılama dahil), kısa ekranlar, sözlük terimleri ve giriş formunda dokunma alanları; geri kalanı bakım ve sayaçlar.
+**Durum (11 Kasım akşamı): 1.1 (build 5) App Review'a gönderildi.** Oytun'un kararıyla 1.0.1 gönderilmedi, 1.1'e kalan işler de eklendi (build 4 = 1.0.1 yüklü kaldı, kullanılmayacak). iPhone Duo görselleri: her dilde yalnız iç ekran 01–06 (bölüm başına en fazla 10 görsel). Sıra: onay beklerken → kök alan adı DNS'i (reklam ölçümü kopyaları için) → reklamları uçtan uca kurmak. Sürüm `MARKETING_VERSION` 1.1, build 5 (`ios/project.yml`). Kullanıcıya görünen değişiklikler: widget tanıtımı, e-posta değiştirme, iPhone Duo (karşılama dahil), kısa ekranlar, sözlük terimleri ve giriş formunda dokunma alanları; geri kalanı bakım ve sayaçlar.
 
 **Hazır olanlar**
 
@@ -79,8 +79,9 @@ Son güncelleme: 11 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 2. **[Oytun + Claude] Kök alan adı → sunucu:** Apple rapor kopyalarını yalnızca `dailyclassical.co`'ya gönderir; bugün kök alan adı GoDaddy'nin yönlendirmesinde (POST'a 405). GoDaddy kök alan adında CNAME/ALIAS desteklemediği için öneri: DNS'i Cloudflare'e taşımak (ücretsiz; alan adı GoDaddy'de kalır). Bütün kayıtlar (www ve api CNAME, e-posta MX, Resend SPF/DKIM TXT) aynen kopyalanır, kök alan adı CNAME (flattening) ile Railway'e, Railway'e `dailyclassical.co` özel alan adı eklenir. Doğrulama: `POST https://dailyclassical.co/.well-known/skadnetwork/report-attribution/` boş gövdeyle 400 döner (bugün 405). Meta'nın kendi raporlaması buna bağlı değil, yalnızca bizim paneldeki sayılar.
 3. **[Claude, Chrome] Meta for Developers'ta uygulama kaydı** (App Store ID 6820556910) ve Events Manager › SKAdNetwork ayarının kontrolü.
 4. **[Claude] İlk kampanyalar, 1.1 yayına çıkana kadar:** Trafik kampanyası → App Store bağlantısı, TR ve EN için ayrı `ct` etiketiyle (App Store Connect › Analytics › Campaigns'te bağlantı üretilir). **1.1'den sonra:** Uygulama tanıtımı (yükleme) kampanyaları, SKAdNetwork ile; Meta yüklemeye göre optimize eder.
-5. **[Claude] Görseller:** 4:5 akış ve 9:16 hikâye/reels, TR ve EN; mağaza görsellerinden ve Instagram gönderilerinden; kısa bir ekran kaydı (Bugün → eser → tablo). Abonelik ve deneme ifadeleri ödeme ekranındaki kurala uyar (deneme fiyattan önde değil).
-6. **Bütçe:** önce küçük bir test (iki pazar ayrı, 7–10 gün), sonra iyi çalışanı büyütmek; tutarı Oytun belirler. Haftalık değerlendirme: Meta sonuçları + admin + App Store Connect.
+5. **Promotional Text (App Store Connect › sürüm sayfası):** incelemesiz, istenildiği an değişir; açıklamanın üstünde durur, aramaya etkisi yok (170 karakter). Önerilen (11 Kasım): TR "Her gün bir senfoni, konçerto ya da sonat: dakika dakika bir dinleme rehberi ve aynı dünyadan bir tabloyla. Bugünün eseri her zaman ücretsiz." EN "A symphony, concerto or sonata every day, with a minute-by-minute listening guide and a painting from the same world. Today's piece is always free." Kampanyalar başlayınca reklamın sözüyle aynı yapılır.
+6. **[Claude] Görseller:** 4:5 akış ve 9:16 hikâye/reels, TR ve EN; mağaza görsellerinden ve Instagram gönderilerinden; kısa bir ekran kaydı (Bugün → eser → tablo). Abonelik ve deneme ifadeleri ödeme ekranındaki kurala uyar (deneme fiyattan önde değil).
+7. **Bütçe:** önce küçük bir test (iki pazar ayrı, 7–10 gün), sonra iyi çalışanı büyütmek; tutarı Oytun belirler. Haftalık değerlendirme: Meta sonuçları + admin + App Store Connect.
 
 ## İçerik
 
