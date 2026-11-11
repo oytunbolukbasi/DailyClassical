@@ -17,14 +17,23 @@ struct AccountScreen: View {
             .listLargeTitleRow()
 
             Section {
-                // Changing the address is not supported by the API yet, so the row is informational.
-                SettingsValueRow("account.email", value: session.email.map { Text(verbatim: $0) })
-                    .lineLimit(1)
+                if session.accountHasPassword {
+                    NavigationLink { ChangeEmailScreen() } label: {
+                        SettingsValueRow("account.email", value: session.email.map { Text(verbatim: $0) })
+                            .lineLimit(1)
+                    }
                     .settingsRow()
+                } else {
+                    SettingsValueRow("account.email", value: session.email.map { Text(verbatim: $0) })
+                        .lineLimit(1)
+                        .settingsRow()
+                }
                 NavigationLink { ChangePasswordScreen() } label: {
                     Text("account.changePassword").foregroundStyle(Palette.ink)
                 }
                 .settingsRow()
+            } footer: {
+                if !session.accountHasPassword { SettingsFooter("account.email.apple.footer") }
             }
 
             Section {

@@ -7,14 +7,17 @@ nonisolated struct AccountUser: Decodable, Sendable {
     let premium: Bool
     /// Linked to Sign in with Apple.
     let apple: Bool
+    /// Has a password (false for Sign in with Apple accounts that never set one).
+    let password: Bool
 
-    enum CodingKeys: String, CodingKey { case id, email, premium, apple }
+    enum CodingKeys: String, CodingKey { case id, email, premium, apple, password }
     init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
         id = try c.decode(String.self, forKey: .id)
         email = try c.decode(String.self, forKey: .email)
         premium = try c.decodeIfPresent(Bool.self, forKey: .premium) ?? false
         apple = try c.decodeIfPresent(Bool.self, forKey: .apple) ?? false
+        password = try c.decodeIfPresent(Bool.self, forKey: .password) ?? true
     }
 }
 
@@ -67,6 +70,22 @@ extension APIClient {
 
     func requestPasswordReset(email: String, language: String) async throws {
         let _: Empty = try await send("v1/auth/password-reset", method: "POST", body: ["email": email], language: language)
+    }
+
+    /// Change of address, step 1: checks the password and emails a code to the new address.
+    func requestEmailChange(to email: String, password: String, token: String, language: String) async throws {
+        let _: Empty = try await send("v1/me/email", method: "POST", body: ["email": email, "password": password], language: language, token: token)
+    }
+
+    func resendEmailChangeCode(token: String, language: String) async throws {
+        let _: Empty = try await send("v1/me/email/resend", method: "POST", body: [:], language: language, token: token)
+    }
+
+    /// Step 2: the code from the new inbox; returns the account with its new address.
+    func confirmEmailChange(code: String, token: String, language: String) async throws -> AccountUser {
+        struct R: Decodable { let user: AccountUser }
+        let r: R = try await send("v1/me/email/confirm", method: "POST", body: ["code": code], language: language, token: token)
+        return r.user
     }
 
     func deleteAccount(token: String) async throws {

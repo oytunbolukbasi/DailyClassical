@@ -53,6 +53,13 @@ export const AUTH_RATE_LIMITS = {
     { scope: "email", limit: 5, windowMs: HOUR },
     { scope: "ip", limit: 20, windowMs: HOUR },
   ],
+  emailChange: [
+    // Checks the current password and emails a code to the new address: password guessing on
+    // one account, and mail sent to addresses that aren't the account's.
+    { scope: "ip_email", limit: 10, windowMs: 15 * MINUTE },
+    { scope: "email", limit: 5, windowMs: HOUR },
+    { scope: "ip", limit: 20, windowMs: HOUR },
+  ],
   passwordReset: [
     // Same reasoning as resend: each request emails a link.
     { scope: "email", limit: 5, windowMs: HOUR },

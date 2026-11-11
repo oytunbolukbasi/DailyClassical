@@ -1,6 +1,6 @@
 import type { Locale } from "../db/schema.js";
 import { env } from "../env.js";
-import { adminCodeEmail, type EmailContent, passwordResetEmail, verificationCodeEmail, welcomeEmail } from "./email-templates.js";
+import { adminCodeEmail, emailChangeCodeEmail, emailChangedEmail, type EmailContent, passwordResetEmail, verificationCodeEmail, welcomeEmail } from "./email-templates.js";
 import { CODE_TTL_MS } from "./verification-code.js";
 
 /** The reset page is served by this API (GET /reset-password) until there is a website. */
@@ -41,6 +41,14 @@ export function sendWelcomeEmail(to: string, locale: Locale): Promise<void> {
 
 export function sendVerificationCodeEmail(to: string, code: string, locale: Locale): Promise<void> {
   return send(to, verificationCodeEmail(locale, code, CODE_TTL_MS / 60_000));
+}
+
+export function sendEmailChangeCodeEmail(to: string, code: string, locale: Locale): Promise<void> {
+  return send(to, emailChangeCodeEmail(locale, code, CODE_TTL_MS / 60_000));
+}
+
+export function sendEmailChangedEmail(to: string, newEmail: string, locale: Locale): Promise<void> {
+  return send(to, emailChangedEmail(locale, newEmail));
 }
 
 export function sendAdminCodeEmail(to: string, code: string): Promise<void> {

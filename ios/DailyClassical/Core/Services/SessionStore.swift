@@ -15,6 +15,10 @@ final class SessionStore {
     private(set) var accountPremium = UserDefaults.standard.bool(forKey: "accountPremium") {
         didSet { UserDefaults.standard.set(accountPremium, forKey: "accountPremium") }
     }
+    /// False for Sign in with Apple accounts without a password: their email comes from Apple.
+    private(set) var accountHasPassword = UserDefaults.standard.object(forKey: "accountHasPassword") as? Bool ?? true {
+        didSet { UserDefaults.standard.set(accountHasPassword, forKey: "accountHasPassword") }
+    }
     private var token: String?
     private let api: APIClient
 
@@ -57,10 +61,7 @@ final class SessionStore {
     func refreshAccount() async {
         guard let token else { return }
         do {
-            let user = try await api.me(token: token)
-            email = user.email
-            userID = user.id
-            accountPremium = user.premium
+            apply(try await api.me(token: token))
         } catch APIError.unauthorized {
             signOut()
         } catch {}
@@ -78,6 +79,23 @@ final class SessionStore {
 
     func requestPasswordReset(email: String, language: String) async throws {
         try await api.requestPasswordReset(email: email, language: language)
+    }
+
+    /// Change of address, step 1 (needs the current password).
+    func requestEmailChange(to newEmail: String, password: String, language: String) async throws {
+        guard let token else { throw APIError.unauthorized }
+        try await api.requestEmailChange(to: newEmail, password: password, token: token, language: language)
+    }
+
+    func resendEmailChangeCode(language: String) async throws {
+        guard let token else { return }
+        try await api.resendEmailChangeCode(token: token, language: language)
+    }
+
+    /// Step 2: the session stays; only the address changes.
+    func confirmEmailChange(code: String, language: String) async throws {
+        guard let token else { throw APIError.unauthorized }
+        apply(try await api.confirmEmailChange(code: code, token: token, language: language))
     }
 
     func signOut() {
@@ -116,10 +134,15 @@ final class SessionStore {
 
     private func apply(_ auth: AuthResponse) {
         token = auth.token
-        email = auth.user.email
-        userID = auth.user.id
-        accountPremium = auth.user.premium
         Keychain.set(auth.token, for: "token")
-        UserDefaults.standard.set(auth.user.email, forKey: "accountEmail")
+        apply(auth.user)
+    }
+
+    private func apply(_ user: AccountUser) {
+        email = user.email
+        userID = user.id
+        accountPremium = user.premium
+        accountHasPassword = user.password
+        UserDefaults.standard.set(user.email, forKey: "accountEmail")
     }
 }

@@ -199,6 +199,16 @@ export const emailVerificationCodes = pgTable("email_verification_codes", {
   sentAt: timestamp("sent_at", { withTimezone: true }).notNull().defaultNow(),
 });
 
+/** A signed-in account's pending change of address: the code goes to the new address. */
+export const emailChangeCodes = pgTable("email_change_codes", {
+  userId: uuid("user_id").primaryKey().references(() => users.id, { onDelete: "cascade" }),
+  newEmail: text("new_email").notNull(),
+  codeHash: text("code_hash").notNull(),
+  expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+  attempts: smallint("attempts").notNull().default(0),
+  sentAt: timestamp("sent_at", { withTimezone: true }).notNull().defaultNow(),
+});
+
 export const favourites = pgTable(
   "favourites",
   {

@@ -400,6 +400,39 @@
     "en": "Email",
     "tr": "E-posta"
   },
+  "account.changeEmail.title": {
+    "en": "Change email",
+    "tr": "E-postayı değiştir"
+  },
+  "account.changeEmail.body %@": {
+    "en": "Your account uses %@. We’ll send a code to the new address; nothing changes until you enter it.",
+    "tr": "Hesabınız şu anda %@ adresini kullanıyor. Yeni adrese bir kod göndereceğiz; kodu girene kadar hiçbir şey değişmez.",
+    "comment": "%@ = current email address"
+  },
+  "account.changeEmail.newEmail": {
+    "en": "New email",
+    "tr": "Yeni adres"
+  },
+  "account.changeEmail.cta": {
+    "en": "Send code",
+    "tr": "Kod gönder"
+  },
+  "account.changeEmail.verify.title": {
+    "en": "Confirm your new email",
+    "tr": "Yeni e-postanızı doğrulayın"
+  },
+  "account.email.apple.footer": {
+    "en": "You sign in with Apple, so your email comes from your Apple Account.",
+    "tr": "Apple ile giriş yaptığınız için e-postanız Apple hesabınızdan gelir."
+  },
+  "auth.error.wrongPassword": {
+    "en": "That password isn’t right.",
+    "tr": "Şifre doğru değil."
+  },
+  "auth.error.sameEmail": {
+    "en": "That’s already your account’s email.",
+    "tr": "Bu zaten hesabınızın e-postası."
+  },
   "account.changePassword": {
     "en": "Change password",
     "tr": "Şifreyi değiştir"

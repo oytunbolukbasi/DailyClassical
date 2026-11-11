@@ -163,6 +163,8 @@ enum AuthValidation {
         case .server(400, "invalid_code"): "auth.error.invalidCode"
         case .server(400, "expired"): "auth.error.codeExpired"
         case .server(400, "too_many_attempts"): "auth.error.codeTooManyAttempts"
+        case .server(400, "wrong_password"): "auth.error.wrongPassword"
+        case .server(400, "same_email"): "auth.error.sameEmail"
         case .unauthorized: "auth.error.wrongCredentials"
         case .offline: "auth.error.offline"
         case .server(400, _): "auth.error.invalidEmail"

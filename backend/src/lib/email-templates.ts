@@ -107,6 +107,36 @@ const copy = {
       ignore: "Kaydolmaya siz çalışmadıysanız bu e-postayı yok sayabilirsiniz. Hesap oluşturulmaz.",
     },
   },
+  emailChange: {
+    en: {
+      subject: (code: string) => `${code} is your DailyClassical code`,
+      heading: "Confirm your new email",
+      body: "Enter this code in DailyClassical to use this address for your account.",
+      caption: (minutes: number) => `The code expires in ${minutes} minutes.`,
+      ignore: "If you didn’t ask for this, you can ignore this email. Nothing will change.",
+    },
+    tr: {
+      subject: (code: string) => `DailyClassical kodunuz: ${code}`,
+      heading: "Yeni e-postanızı doğrulayın",
+      body: "Hesabınızda bu adresi kullanmak için bu kodu DailyClassical’a girin.",
+      caption: (minutes: number) => `Kod ${minutes} dakika geçerlidir.`,
+      ignore: "Bunu siz istemediyseniz bu e-postayı yok sayabilirsiniz. Hiçbir şey değişmez.",
+    },
+  },
+  emailChanged: {
+    en: {
+      subject: "Your DailyClassical email was changed",
+      heading: "Your email was changed",
+      body: (to: string) => `Your DailyClassical account now uses ${to}. Sign in with that address from now on.`,
+      ignore: "If you didn’t make this change, write to us at hello@dailyclassical.co.",
+    },
+    tr: {
+      subject: "DailyClassical e-postanız değişti",
+      heading: "E-postanız değişti",
+      body: (to: string) => `DailyClassical hesabınız artık ${to} adresini kullanıyor. Bundan sonra bu adresle giriş yapın.`,
+      ignore: "Bu değişikliği siz yapmadıysanız hello@dailyclassical.co adresine yazın.",
+    },
+  },
   reset: {
     en: {
       subject: "Reset your DailyClassical password",
@@ -152,6 +182,37 @@ export function verificationCodeEmail(locale: Locale, code: string, minutes = 10
       footnote: escapeHtml(c.ignore),
     }),
     text: `${c.heading}\n\n${c.body}\n\n${code}\n\n${c.caption(minutes)}\n\n${c.ignore}\n\nDailyClassical · dailyclassical.co`,
+  };
+}
+
+/** 6-digit code sent to the new address when a signed-in account changes its email. */
+export function emailChangeCodeEmail(locale: Locale, code: string, minutes = 10): EmailContent {
+  const c = copy.emailChange[locale];
+  return {
+    subject: c.subject(code),
+    html: layout(locale, {
+      heading: c.heading,
+      preheader: `${c.body} ${c.caption(minutes)}`,
+      paragraphs: [escapeHtml(c.body)],
+      code: { value: code, caption: escapeHtml(c.caption(minutes)) },
+      footnote: escapeHtml(c.ignore),
+    }),
+    text: `${c.heading}\n\n${c.body}\n\n${code}\n\n${c.caption(minutes)}\n\n${c.ignore}\n\nDailyClassical · dailyclassical.co`,
+  };
+}
+
+/** Notice to the old address after the change. */
+export function emailChangedEmail(locale: Locale, newEmail: string): EmailContent {
+  const c = copy.emailChanged[locale];
+  return {
+    subject: c.subject,
+    html: layout(locale, {
+      heading: c.heading,
+      preheader: c.body(newEmail),
+      paragraphs: [escapeHtml(c.body(newEmail))],
+      footnote: escapeHtml(c.ignore),
+    }),
+    text: `${c.heading}\n\n${c.body(newEmail)}\n\n${c.ignore}\n\nDailyClassical · dailyclassical.co`,
   };
 }
 
