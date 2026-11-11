@@ -10,7 +10,7 @@ struct AuthSheet: View {
         case verify(String)
     }
 
-    private enum Field: Hashable { case email, password }
+    private enum Field: Hashable { case email, password, passwordShown }
 
     @Environment(SessionStore.self) private var session
     @Environment(AppRouter.self) private var router
@@ -80,8 +80,7 @@ struct AuthSheet: View {
                         .onSubmit { focus = .password }
                 }
                 FormRow("auth.field.password", focus: { focus = .password }) {
-                    PasswordField(text: $password, contentType: .newPassword)
-                        .focused($focus, equals: .password)
+                    PasswordField(text: $password, contentType: .newPassword, focus: $focus, secure: .password, plain: .passwordShown)
                         .submitLabel(.go)
                         .onSubmit { Task { await submitCreate() } }
                 }
@@ -126,8 +125,7 @@ struct AuthSheet: View {
                         .onSubmit { focus = .password }
                 }
                 FormRow("auth.field.password", focus: { focus = .password }) {
-                    PasswordField(text: $password, contentType: .password)
-                        .focused($focus, equals: .password)
+                    PasswordField(text: $password, contentType: .password, focus: $focus, secure: .password, plain: .passwordShown)
                         .submitLabel(.go)
                         .onSubmit { Task { await submitSignIn() } }
                 }

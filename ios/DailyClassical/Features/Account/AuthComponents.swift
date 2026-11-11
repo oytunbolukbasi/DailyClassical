@@ -72,27 +72,47 @@ struct EmailField: View {
 }
 
 /// Secure field with the eye toggle; +0.12em tracking for the bullets.
-struct PasswordField: View {
+///
+/// Both fields stay in the view and the eye only swaps which one shows: taking a filled secure
+/// field out of the window makes iOS think the form was sent and offer to save the password.
+/// The screen's focus state names both: `secure` (what the screen focuses) and `plain` (used
+/// while the password is shown; focus is moved to the field that is showing).
+struct PasswordField<Focus: Hashable>: View {
     @Binding var text: String
     var contentType: UITextContentType = .password
+    let focus: FocusState<Focus?>.Binding
+    let secure: Focus
+    let plain: Focus
     @State private var revealed = false
 
     var body: some View {
         HStack(spacing: 8) {
-            Group {
-                if revealed {
-                    TextField(text: $text) { EmptyView() }
-                } else {
-                    SecureField(text: $text) { EmptyView() }.tracking(2)
-                }
+            ZStack(alignment: .leading) {
+                SecureField(text: $text) { EmptyView() }
+                    .tracking(2)
+                    // Only the field that shows carries the type: two password fields read to iOS as
+                    // "new password + confirm" and the hidden one gets in the way.
+                    .textContentType(revealed ? nil : contentType)
+                    .focused(focus, equals: secure)
+                    .opacity(revealed ? 0 : 1)
+                    .allowsHitTesting(!revealed)
+                    .accessibilityHidden(revealed)
+                TextField(text: $text) { EmptyView() }
+                    .textContentType(revealed ? contentType : nil)  // also keeps it out of keyboard suggestions
+                    .focused(focus, equals: plain)
+                    .opacity(revealed ? 1 : 0)
+                    .allowsHitTesting(revealed)
+                    .accessibilityHidden(!revealed)
             }
             .frame(maxWidth: .infinity, minHeight: 44, alignment: .leading)
             .contentShape(.rect)
-            .textContentType(contentType)
             .textInputAutocapitalization(.never)
             .autocorrectionDisabled()
 
-            Button { revealed.toggle() } label: {
+            Button {
+                revealed.toggle()
+                if let now = focus.wrappedValue, now == secure || now == plain { focus.wrappedValue = revealed ? plain : secure }
+            } label: {
                 Icon("eye", size: 20)
                     .foregroundStyle(revealed ? Palette.accent : Palette.ink3)
                     .frame(width: 44, height: 44)
@@ -101,6 +121,10 @@ struct PasswordField: View {
             .buttonStyle(.plain)
             .padding(.trailing, -12)
             .accessibilityLabel(Text(revealed ? "auth.password.hide.accessibilityLabel" : "auth.password.show.accessibilityLabel"))
+        }
+        // The screen always asks for `secure`; while the password is shown, hand it to the plain field.
+        .onChange(of: focus.wrappedValue) { _, now in
+            if revealed, now == secure { focus.wrappedValue = plain }
         }
     }
 }

@@ -13,6 +13,10 @@ nonisolated enum RichText {
         url.scheme == glossaryScheme ? url.host() : nil
     }
 
+    static func glossaryURL(_ id: String) -> URL? {
+        URL(string: "\(glossaryScheme)://\(id)")
+    }
+
     static func attributed(_ source: String) -> AttributedString {
         var result = AttributedString()
         var rest = Substring(source)
