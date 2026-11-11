@@ -7,7 +7,7 @@ import SwiftUI
 ///     -shotTab library              Library tab
 ///     -shotPiece <id>               push a piece on Today
 ///     -shotScroll <points>          scroll that piece's page down
-///     -shotSheet glossary:<term>    a router sheet (also composer:<id>, paywall)
+///     -shotSheet glossary:<term>    a router sheet (also composer:<id>, paywall, auth:signIn)
 ///     -shotArtwork YES              the piece's artwork viewer
 ///     -shotWallpaper YES            …and its wallpaper sheet
 ///     -shotPlan lifetime            the paywall's selected plan (with -debugTrialDays 3 for prices)
@@ -46,6 +46,7 @@ enum ScreenshotScene {
         case ("glossary", let id?): router.present(.glossaryTerm(id))
         case ("composer", let id?): router.present(.composer(ComposerRef(id: id, name: "", shortName: "")))
         case ("paywall", _): router.present(.paywall)
+        case ("auth", let flow?): router.present(.auth(AppRouter.AuthFlow(rawValue: flow) ?? .signIn))
         default: break
         }
     }

@@ -19,14 +19,18 @@ struct FormCard<Content: View>: View {
     }
 }
 
-/// Fixed 84 pt label (SF 15 ink2) and an SF 17 field.
+/// Fixed 84 pt label (SF 15 ink2) and an SF 17 field. A tap anywhere in the row (the label, the
+/// padding, the empty space after the text) calls `focus`, so the keyboard comes up wherever the
+/// person taps, not only on the text field's own frame.
 struct FormRow<Field: View>: View {
     let label: LocalizedStringKey
+    var focus: (() -> Void)?
     @ViewBuilder var field: Field
     @ScaledMetric(relativeTo: .subheadline) private var labelWidth: CGFloat = 84
 
-    init(_ label: LocalizedStringKey, @ViewBuilder field: () -> Field) {
+    init(_ label: LocalizedStringKey, focus: (() -> Void)? = nil, @ViewBuilder field: () -> Field) {
         self.label = label
+        self.focus = focus
         self.field = field()
     }
 
@@ -42,9 +46,12 @@ struct FormRow<Field: View>: View {
                 .foregroundStyle(Palette.ink)
                 .tint(Palette.accent)
                 .accessibilityLabel(Text(label))
+                .frame(maxWidth: .infinity, alignment: .leading)
         }
         .padding(.horizontal, 16)
         .frame(minHeight: 52)
+        .contentShape(.rect)
+        .onTapGesture { focus?() }
     }
 }
 
@@ -55,6 +62,8 @@ struct EmailField: View {
 
     var body: some View {
         TextField(text: $text) { EmptyView() }
+            .frame(maxWidth: .infinity, minHeight: 44, alignment: .leading)
+            .contentShape(.rect)
             .textContentType(contentType)
             .keyboardType(.emailAddress)
             .textInputAutocapitalization(.never)
@@ -77,6 +86,8 @@ struct PasswordField: View {
                     SecureField(text: $text) { EmptyView() }.tracking(2)
                 }
             }
+            .frame(maxWidth: .infinity, minHeight: 44, alignment: .leading)
+            .contentShape(.rect)
             .textContentType(contentType)
             .textInputAutocapitalization(.never)
             .autocorrectionDisabled()

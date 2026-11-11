@@ -1,6 +1,6 @@
 # Yapılacaklar
 
-Son güncelleme: 9 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler. İçerik durumu ve zamanlama `content_status.md`'de, proje bilgisi `project_information.md`'de.
+Son güncelleme: 11 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler. İçerik durumu ve zamanlama `content_status.md`'de, proje bilgisi `project_information.md`'de.
 
 ## Yayın
 
@@ -11,7 +11,7 @@ Son güncelleme: 9 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]**
 
 ## 1.0.1 planı
 
-**Durum (10 Kasım akşamı):** kod hazır (Duo, widget tanıtımı, sayaçlar, çökme raporları, reklam ölçümü). Sıra: 11 Kasım 1.0.1'i onaya göndermek (build 4) → kök alan adı DNS'i (reklam ölçümü kopyaları için) → reklamları uçtan uca kurmak. Sürüm `MARKETING_VERSION` 1.0.1 (`ios/project.yml`); build numarası arşivde 4'e çıkar. Kullanıcıya görünen değişiklikler: widget tanıtımı, iPhone Duo ve kısa ekranlar; geri kalanı bakım ve sayaçlar.
+**Durum (11 Kasım):** kod hazır (Duo, widget tanıtımı, sayaçlar, çökme raporları, reklam ölçümü, giriş formu dokunma alanı); build 4 (Xcode 27.2) App Store Connect'e yüklendi. Sıra: 1.0.1'i onaya göndermek → kök alan adı DNS'i (reklam ölçümü kopyaları için) → reklamları uçtan uca kurmak. Sürüm `MARKETING_VERSION` 1.0.1 (`ios/project.yml`); build numarası arşivde 4'e çıkar. Kullanıcıya görünen değişiklikler: widget tanıtımı, iPhone Duo ve kısa ekranlar; geri kalanı bakım ve sayaçlar.
 
 **Hazır olanlar**
 
@@ -32,6 +32,8 @@ Son güncelleme: 9 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]**
 - **Duo'da açılışta donma (bulundu ve düzeltildi, 9 Kasım):** takvim tek günle başlayınca Bugün'ün sayfa kaydırıcısı Duo'da sonsuz yerleşim döngüsüne giriyordu (yalnızca 1.0.1 kodu; 1.0.0 etkilenmiyor). 1, 2 ve 21 günle Duo'da, iPhone 17 Pro Max'te denendi.
 - **Çökme ve donma raporları (yapıldı, 10 Kasım):** MetricKit (`Core/Services/Diagnostics.swift`) çökme, donma, yavaş açılış, aşırı işlemci ve disk raporlarını kimliksiz olarak `POST /v1/diagnostics`'e gönderir (migration 0014, `diagnostic_reports`, 180 gün). Adminde "Çökmeler ve donmalar": son 30 gün sayıları, imzaya göre gruplanmış hatalar, ham JSON indirme; okumak için `ios/scripts/symbolicate.sh <json>` (arşivdeki dSYM ile dosya ve satır). Test: Ayarlar › Test › "Örnek çökme raporu gönder". PostHog şimdilik yok (9–10 Kasım kararı; kullanıcı sayısı büyüyünce ya da sayacın cevaplayamadığı bir soru çıkınca yeniden bakılır). Gizlilik politikası güncellendi (10 Kasım).
 - **Regresyon turu (yapıldı, simülatör):** iPhone 17 Pro Max değişmedi; iPhone SE'de eser ve ödeme ekranı tablosu kısaldı, fiyat kartları görünüyor; duvar kâğıdı çerçevesi ekran oranında. Telefonda TestFlight turu build'le birlikte.
+- **Giriş formunda dokunma alanı (yapıldı, 11 Kasım; Oytun'un isteği):** E-posta / Şifre satırının herhangi bir yerine (etiket, boşluk, yazının sağı) dokununca o alan odaklanıp klavye açılıyor (`FormRow(focus:)`, `AuthComponents.swift`); göz düğmesi ayrı çalışıyor. Hesap oluşturma, giriş ve şifre sıfırlamada geçerli; doğrulama kodu kutuları zaten tümüyle dokunulabilirdi. Simülatörde denendi. Test: `-shotSheet auth:signIn` (ya da `auth:createAccount`).
+- **"Şeffaflığı Azalt" kontrolü (yapıldı, 11 Kasım, simülatör):** Bugün ve eser sayfasında cam yüzeyler (tarih rozeti, "Dinlemeye başla", sekme çubuğu, "Spotify'da aç", üst düğmeler) opak oluyor ve okunuyor; sorun yok.
 - **Karşılamada Duo:** 1.1'e kaldı (ilk açılış akışını yeniden kurmak gerekiyor, risk kazançtan büyük).
 - **Duo canvas'ını tamamlamak:** açık dikey/yatay ve yarı açık dikey; Device Hub ekrana bağlanamadığı için bekliyor.
 
@@ -49,11 +51,14 @@ Son güncelleme: 9 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]**
 
 **Sürümden bağımsız, sunucu tarafı [Claude]**
 
-- **Haftalık takvim:** 30 Kasım'dan itibaren her hafta ~7 eser `schedule.yaml`'ın sonuna eklenir (yalnız ekleme; sıra değişirse geçmiş günler değişir). Eklenmezse 21 günlük sıra baştan döner.
+- **Instagram gönderileri 6–20:** pazarlama ortamındaki ajan sürdürüyor; reklam görselleri bunlardan da beslenir.
+
+- **Haftalık takvim:** 21 günlük sıra 29 Kasım'da biter; 30 Kasım'dan itibaren her hafta ~7 eser `schedule.yaml`'ın sonuna eklenir (yalnız ekleme; sıra değişirse geçmiş günler değişir). Eklenmezse 21 günlük sıra baştan döner.
 
 **Sonraki sürümlere (1.1)**
 
-- Metin içi sözlük terimlerine 44 pt dokunma alanı; e-posta değiştirme akışı; Beethoven 9 finalinin iki parçalı durak gösterimi; "Şeffaflığı Azalt" ve VoiceOver turu.
+- Metin içi sözlük terimlerine 44 pt dokunma alanı; e-posta değiştirme akışı; Beethoven 9 finalinin iki parçalı durak gösterimi; VoiceOver turu; karşılama ekranlarında Duo.
+- **Şifre göz düğmesi "Parolayı kaydet?" açıyor:** yazılı şifrede göze basınca gizli alan normal alanla değiştiği için iOS bunu formun gönderildiği sanıp parolayı kaydetmeyi öneriyor (1.0.0'dan beri; "Şimdi değil" ile kapanıyor, zararsız). Çözüm: gizli alanı yerinde tutup görünürlüğü değiştirmek; odak bağlantısı yeniden kurulmalı, o yüzden 1.0.1'e alınmadı.
 
 ## Reklam (Instagram / Meta)
 
@@ -80,14 +85,14 @@ Son güncelleme: 9 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]**
 
 - **[Oytun + Claude] Beethoven 9 finali:** Spotify'da iki parça (6:26 + 17:35). Duraklar bölüm toplamı olarak yazılı; uygulamanın bunları toplam mı, ikinci parçaya göre mi göstereceğine karar verilecek.
 - **[Claude] Mozart 41 tablosu:** Hubert Robert, *Dikilitaş* yalnızca 1952 px; daha büyük bir kaynak bulunursa değiştirilecek.
-- **[Oytun] Türkçe native okuma:** İçerik ve arayüz metinleri (paywall başlığı, "y. 1818" gibi ifadeler, "kadans/kadenza").
+- **[Oytun] Türkçe native okuma:** İçerik ve arayüz metinleri (paywall başlığı, "y. 1818" gibi ifadeler, "kadans/kadenza"). Mağaza görseli 2, açıklama ve tanıtım sayfasında "zamansız bir kayda göre" geçiyor; İngilizcesi "timed to a great recording" (büyük bir kayda göre zamanlanmış). Bilinçli bir seçimse kalsın, değilse "seçkin bir kayda göre" gibi bir ifade düşünülebilir.
 - **[Oytun] Resmi Spotify logosu:** "Spotify'da aç" butonları için Spotify'ın marka kurallarına uygun asset. Albüm kapağı gösterilmediği ve butonlar yalnızca metin olduğu için gerekmeyebilir; bilinçli bir karar verilmeli.
 
 ## Tasarım denetiminden kalanlar (küçük)
 
 - **[Claude] Dokunma alanı:** Metin içi sözlük terimlerinin 44 pt dokunma alanı yok (`RichTextView` yalnızca `Text` bağlantısı); TextKit ya da `TextRenderer` sarmalayıcısı gerekir.
 - **[Claude] E-posta değiştirme:** Hesap › E-posta satırı yalnızca bilgi; değiştirme akışı yok (`account.changeEmail.title` anahtarı ayrılmış).
-- **[Oytun + Claude] Kontrol edilmemiş durumlar:** "Şeffaflığı Azalt" açıkken uygulama genelinde; Premium arama sonuçları ve giriş yapılmış ekranların görsel kontrolü.
+- **[Oytun] Kontrol edilmemiş durumlar:** Premium arama sonuçları ve giriş yapılmış ekranların (Hesap, favoriler) cihazda görsel kontrolü; 1.0.1 TestFlight build'iyle bakılabilir. ("Şeffaflığı Azalt" 11 Kasım'da kontrol edildi.)
 
 ## Altyapı ve test
 

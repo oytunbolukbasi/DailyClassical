@@ -73,13 +73,13 @@ struct AuthSheet: View {
 
         VStack(alignment: .leading, spacing: 14) {
             FormCard {
-                FormRow("auth.field.email") {
+                FormRow("auth.field.email", focus: { focus = .email }) {
                     EmailField(text: $email)
                         .focused($focus, equals: .email)
                         .submitLabel(.next)
                         .onSubmit { focus = .password }
                 }
-                FormRow("auth.field.password") {
+                FormRow("auth.field.password", focus: { focus = .password }) {
                     PasswordField(text: $password, contentType: .newPassword)
                         .focused($focus, equals: .password)
                         .submitLabel(.go)
@@ -119,13 +119,13 @@ struct AuthSheet: View {
 
         VStack(alignment: .leading, spacing: 14) {
             FormCard {
-                FormRow("auth.field.email") {
+                FormRow("auth.field.email", focus: { focus = .email }) {
                     EmailField(text: $email, contentType: .username)
                         .focused($focus, equals: .email)
                         .submitLabel(.next)
                         .onSubmit { focus = .password }
                 }
-                FormRow("auth.field.password") {
+                FormRow("auth.field.password", focus: { focus = .password }) {
                     PasswordField(text: $password, contentType: .password)
                         .focused($focus, equals: .password)
                         .submitLabel(.go)
@@ -153,7 +153,7 @@ struct AuthSheet: View {
 
         VStack(alignment: .leading, spacing: 14) {
             FormCard {
-                FormRow("auth.field.email") {
+                FormRow("auth.field.email", focus: { focus = .email }) {
                     EmailField(text: $email, contentType: .username)
                         .focused($focus, equals: .email)
                         .submitLabel(.send)
