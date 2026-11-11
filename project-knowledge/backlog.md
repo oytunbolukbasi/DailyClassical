@@ -47,9 +47,10 @@ Son güncelleme: 11 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 - **Xcode 27.2:** Apple Duo için 27.2 ile derlemeyi öneriyor; Mac'te 27.2 kurulu, 1.1 build'i onunla çıkar.
 - **App Privacy güncellenecek:** Diagnostics › **Crash Data** ve **Performance Data** ekle (kullanıcıya bağlı değil, takip yok, amaç App Functionality). Sayaçlar zaten beyan edilen "Product Interaction" kapsamında.
 - "Yenilikler" metninde widget tanıtımı ve Ayarlar'daki yeni satır da anılabilir.
-- "Yenilikler" metni (aşağıda), iPhone Duo ekran görüntüleri (ürün sayfasında Duo rozeti), App Review notu: satın alma ekranı aynı; yeni: Hesap › E-posta değiştirme (test hesabıyla denenebilir).
-- Yenilikler (TR): "Bugünün eseri artık ana ekranınızda: widget'ı nasıl ekleyeceğinizi gösteren kısa bir rehber (Ayarlar › Ana ekran widget'ı). E-posta adresinizi Hesap › E-posta'dan değiştirebilirsiniz. iPhone Duo için yeniden düzenlendi: tablolar ekranın tamamını kaplıyor, düğmeler katlanma çizgisinden uzak duruyor. Metindeki terimlere dokunmak daha kolay; giriş formunda satırın herhangi bir yerine dokunmak yeterli. Kısa ekranlarda eser sayfası ve Premium ekranı daha derli toplu. Küçük düzeltmeler."
-- What's New (EN): "Today's piece on your Home Screen: a short guide to adding the widget (Settings › Home Screen widget). Change your email in Account › Email. Redesigned for iPhone Duo: paintings fill the whole screen and buttons stay clear of the fold. Terms in the text are easier to tap, and anywhere in a sign-in row now brings up the keyboard. On shorter screens the piece page and the Premium screen are tidier. Small fixes."
+- "Yenilikler" metni (aşağıda), iPhone Duo ekran görüntüleri (ürün sayfasında Duo rozeti), App Review notu aşağıda (EN).
+- Yenilikler (TR, gönderilen metin): "Küçük düzenlemeler yapıldı ve iPhone Duo için yeniden tasarlandı."
+- What's New (EN, gönderilen metin): "Small refinements, and a redesign for iPhone Duo."
+- App Review notu (EN, gönderilen metin): "This version is redesigned for iPhone Duo: paintings run under the side controls column and buttons stay clear of the fold, on both the outer and inner displays. It also adds a short guide to the Home Screen widget and a way to change the account email (Settings › Account › Email: enter the new address and the current password, then the 6-digit code sent to the new address). The purchase screen and the in-app purchases are unchanged. Test account: premium-test@dailyclassical.co, with the password in the Sign-In Information."
 - Yayından sonra Railway'de `LATEST_APP_VERSION=1.1` (eski sürümdekilere bir kez güncelleme önerir).
 
 **Sürümden bağımsız, sunucu tarafı [Claude]**
