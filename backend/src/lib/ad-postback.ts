@@ -40,6 +40,8 @@ export function readPostback(framework: "skadnetwork" | "adattributionkit", body
     if (!payload) return null;
     fields = payload;
   }
+  // Every real postback names its ad network; anything else (an empty probe, a stray POST) is not one.
+  if (typeof fields["ad-network-id"] !== "string" || !fields["ad-network-id"]) return null;
   const redownload = fields["redownload"];
   return {
     adNetworkId: str(fields["ad-network-id"]),

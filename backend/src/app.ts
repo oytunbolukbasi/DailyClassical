@@ -21,6 +21,18 @@ export const app = new Hono();
 
 app.use("*", logger(), secureHeaders());
 
+// The bare domain (dailyclassical.co) points here so Apple can deliver ad attribution copies to
+// /.well-known/... (routes/attribution.ts), which it only sends to the registrable domain. Pages
+// keep their address on www, as with the registrar's forwarding before.
+app.use("*", async (c, next) => {
+  const host = (c.req.header("host") ?? "").toLowerCase().split(":")[0];
+  if (host === "dailyclassical.co" && (c.req.method === "GET" || c.req.method === "HEAD") && !c.req.path.startsWith("/.well-known/")) {
+    const url = new URL(c.req.url);
+    return c.redirect(`https://www.dailyclassical.co${url.pathname}${url.search}`, 301);
+  }
+  await next();
+});
+
 app.get("/health", async (c) => {
   await sql`select 1`;
   // Sign in with Apple configuration (lib/apple.ts): status words only, never the key.

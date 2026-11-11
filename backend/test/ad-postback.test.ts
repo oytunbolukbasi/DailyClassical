@@ -29,3 +29,8 @@ test("an AdAttributionKit postback is read from its JWS payload", () => {
   assert.equal(p?.fineValue, 40);
   assert.equal(readPostback("adattributionkit", { "jws-string": "not-a-jws" }), null);
 });
+
+test("a body without an ad network is not a postback", () => {
+  assert.equal(readPostback("skadnetwork", {}), null);
+  assert.equal(readPostback("skadnetwork", { "source-identifier": "1234" }), null);
+});
