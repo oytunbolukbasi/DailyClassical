@@ -59,15 +59,29 @@ struct WelcomeFlow: View {
     }
 
     var body: some View {
-        TabView(selection: $page) {
-            ForEach(pages, id: \.self) { p in
-                content(for: p).tag(p)
+        // A paging scroll view rather than a page-style TabView, as on Today: on an iPhone Duo the
+        // pages span the whole width, so the paintings run under the side controls column, and the
+        // text and buttons keep clear of it (`welcomeSides`). A TabView there either stopped the
+        // painting at the column or, ignoring it, paged by the wider frame and slid every card off.
+        GeometryReader { geo in
+            let sides = EdgeInsets(top: 0, leading: geo.safeAreaInsets.leading, bottom: 0, trailing: geo.safeAreaInsets.trailing)
+            ScrollView(.horizontal) {
+                LazyHStack(spacing: 0) {
+                    ForEach(pages, id: \.self) { p in
+                        content(for: p)
+                            .environment(\.welcomeSides, sides)
+                            .containerRelativeFrame(.horizontal)
+                    }
+                }
+                .scrollTargetLayout()
             }
+            .scrollTargetBehavior(.paging)
+            .scrollPosition(id: Binding(get: { page }, set: { if let p = $0 { page = p } }))
+            .scrollIndicators(.hidden)
+            .scrollEdgeEffectHidden(true, for: .all)
+            .ignoresSafeArea(edges: .horizontal)
         }
-        .tabViewStyle(.page(indexDisplayMode: .never))
         .background(Palette.background.ignoresSafeArea())
-        // Not `.horizontal` too: the page view then pages by the wider frame and every card sits
-        // off by the iPhone Duo's controls column. The painting stops at the column there.
         .ignoresSafeArea(edges: .top)
         .overlay(alignment: .topTrailing) {
             if page != .reminder {
@@ -177,6 +191,7 @@ private struct WelcomeCard<Overlap: View, TextBlock: View, Controls: View>: View
                     if Overlap.self != EmptyView.self {
                         overlap()
                             .padding(.horizontal, 24)
+                            .welcomeSides()
                             .padding(.top, -56)
                     }
                     Text(painting.caption)
@@ -186,9 +201,11 @@ private struct WelcomeCard<Overlap: View, TextBlock: View, Controls: View>: View
                         .foregroundStyle(Palette.ink3)
                         .fixedSize(horizontal: false, vertical: true)
                         .padding(.horizontal, 24)
+                        .welcomeSides()
                         .padding(.top, 10)
                     text()
                         .padding(.horizontal, 24)
+                        .welcomeSides()
                         .padding(.top, 28)
                 }
             }
@@ -197,6 +214,7 @@ private struct WelcomeCard<Overlap: View, TextBlock: View, Controls: View>: View
 
             VStack(spacing: 16, content: controls)
                 .padding(.horizontal, 24)
+                .welcomeSides()
                 .padding(.top, 16)
                 .padding(.bottom, 8)
         }
@@ -322,6 +340,7 @@ private struct TrialCard: View {
                         .foregroundStyle(Palette.ink3)
                         .fixedSize(horizontal: false, vertical: true)
                         .padding(.horizontal, 24)
+                        .welcomeSides()
                         .padding(.top, 10)
                     Text("onboarding.trial.title")
                         .font(Typography.titleXL)
@@ -331,6 +350,7 @@ private struct TrialCard: View {
                         .fixedSize(horizontal: false, vertical: true)
                         .accessibilityAddTraits(.isHeader)
                         .padding(.horizontal, 24)
+                        .welcomeSides()
                         .padding(.top, 22)
                     // App Review 3.1.2(c): the billed amount is the most prominent price on the card;
                     // the free trial is only in the small terms under the button.
@@ -338,6 +358,7 @@ private struct TrialCard: View {
                         .font(Typography.price)
                         .foregroundStyle(Palette.ink)
                         .padding(.horizontal, 24)
+                        .welcomeSides()
                         .padding(.top, 10)
                     VStack(alignment: .leading, spacing: 10) {
                         BenefitLine("onboarding.trial.benefit.library")
@@ -346,6 +367,7 @@ private struct TrialCard: View {
                         BenefitLine("paywall.benefit.wallpaper")
                     }
                     .padding(.horizontal, 24)
+                    .welcomeSides()
                     .padding(.top, 18)
                 }
             }
@@ -376,6 +398,7 @@ private struct TrialCard: View {
                     .buttonStyle(.dcTextLink)
             }
             .padding(.horizontal, 24)
+            .welcomeSides()
             .padding(.top, 16)
             .padding(.bottom, 8)
         }
@@ -465,8 +488,26 @@ struct OnboardingReminderScreen: View {
             .padding(.top, 16)
             .padding(.bottom, 8)
         }
+        .welcomeSides()
         .background(Palette.background.ignoresSafeArea())
     }
+}
+
+extension EnvironmentValues {
+    /// The iPhone Duo's side controls column, for welcome pages laid out across the whole width.
+    @Entry var welcomeSides = EdgeInsets()
+}
+
+private struct WelcomeSides: ViewModifier {
+    @Environment(\.welcomeSides) private var sides
+    func body(content: Content) -> some View {
+        content.padding(.leading, sides.leading).padding(.trailing, sides.trailing)
+    }
+}
+
+private extension View {
+    /// Keeps text and buttons clear of the iPhone Duo's side column (zero elsewhere).
+    func welcomeSides() -> some View { modifier(WelcomeSides()) }
 }
 
 #Preview("Welcome") {
