@@ -7,7 +7,7 @@ Son güncelleme: 11 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 - **1.0.0 yayında (9 Kasım 2026).** Dördüncü gönderim (build 3, 27 Ekim) onaylandı. Takvim aynı gün sıfırlandı: gün 0 = 9 Kasım, Çaykovski 6 (`content/schedule.yaml`, 21 gün). Hediye Premium `oytunbolukbasi@gmail.com` hesabına tanımlandı (`users.comp_premium_until` = 2099).
 - **Red geçmişi:** 21 Ekim 2.1(b) ürünler gönderilmemiş + 3.1.2(c) açıklamada EULA bağlantısı yok; 23 Ekim 2.3.2 iki üründe aynı tanıtım görseli (görseller silindi); 27 Ekim 3.1.2(c) deneme fiyattan belirgin. Kural: gönderimdeki öğe kilitlidir; düzenlemek için gönderimden çıkar, düzelt, hepsini **Add for Review** ile aynı taslağa ekleyip birlikte gönder. Ürün silinmez (Product ID bir daha kullanılamaz). Ödeme ekranında deneme hiçbir zaman fiyattan büyük yazılmaz, butonda "ücretsiz" geçmez.
 - **1.0.0 (3) içeriği:** 3.1.2(c) ödeme ekranı düzeltmesi; App Store değerlendirme kartı (`Features/Rating/RatePrompt.swift`, tasarım B, yıldızlar 5→0→5; 3 farklı günde eser açıldıktan sonra bir eserden Bugün'e dönüşte, sürüm başına en fazla 1, 365 günde en fazla 3 kez; "Evet" iOS penceresini açar, TestFlight'ta hiç çıkmaz; test: Ayarlar › Test ya da `-shotRatePrompt YES`); anonim sayaç (`Core/Services/Analytics.swift` → `/v1/events`, yönetim panelindeki DAU/WAU/MAU, açılış ve Spotify sayıları); yalnızca takvimdeki eserlerin tablolarını gömen paketleme. Önceki build 1.0.0 (2) 22 Ekim'de yüklenmişti.
-- **[Oytun] Yayından sonra Railway:** `APP_STORE_URL` eklenecek. Güncelleme istemek için `LATEST_APP_VERSION` (bir kez önerir) ya da `MIN_APP_VERSION` (zorunlu ekran); normalde ikisi de boş.
+- **Railway (yapıldı, 13 Kasım):** `APP_STORE_URL` ve `LATEST_APP_VERSION=1.1` yayında (`/v1/config` doğrulandı). Güncelleme istemek için `LATEST_APP_VERSION` (bir kez önerir) ya da `MIN_APP_VERSION` (zorunlu ekran); normalde ikisi de boş.
 
 ## 1.1 planı (önce 1.0.1 olarak hazırlanmıştı)
 
@@ -51,7 +51,7 @@ Son güncelleme: 11 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 - Yenilikler (TR, gönderilen metin): "Küçük düzenlemeler yapıldı ve iPhone Duo için yeniden tasarlandı."
 - What's New (EN, gönderilen metin): "Small refinements, and a redesign for iPhone Duo."
 - App Review notu (EN, gönderilen metin): "This version is redesigned for iPhone Duo: paintings run under the side controls column and buttons stay clear of the fold, on both the outer and inner displays. It also adds a short guide to the Home Screen widget and a way to change the account email (Settings › Account › Email: enter the new address and the current password, then the 6-digit code sent to the new address). The purchase screen and the in-app purchases are unchanged. Test account: premium-test@dailyclassical.co, with the password in the Sign-In Information."
-- Yayından sonra Railway'de `LATEST_APP_VERSION=1.1` (eski sürümdekilere bir kez güncelleme önerir).
+- Railway'de `LATEST_APP_VERSION=1.1` yapıldı (13 Kasım).
 
 **Sürümden bağımsız, sunucu tarafı [Claude]**
 
