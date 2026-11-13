@@ -1,0 +1,84 @@
+<!doctype html>
+<!-- One Meta ad creative: ad.html?lang=tr&n=1&format=feed (1080×1350, 4:5) or format=story (1080×1920, 9:16).
+     Rendered by render-ads.sh into ads/<format>/<lang>/NN.png. Same type, colours and raw screens as the
+     App Store set (frame.html). Story layout keeps the top 250 px and bottom 340 px free of copy
+     (Instagram's profile row and reply/CTA bar sit there). Never names the free trial (App Review 3.1.2(c) spirit). -->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ad creative</title>
+<style>
+  @font-face { font-family: Literata; font-weight: 500; src: url("../../ios/DailyClassical/Resources/Fonts/Literata-Medium.ttf"); }
+  @font-face { font-family: Literata; font-weight: 400; src: url("../../ios/DailyClassical/Resources/Fonts/Literata-Regular.ttf"); }
+  :root { --bg: #F5F2EC; --ink: #1E1B17; --ink2: #5E5852; --accent: #6B4A2B; --bezel: #1E1B17; }
+  html, body { margin: 0; overflow: hidden; }
+  body { background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; position: relative; }
+
+  .brand { position: absolute; display: flex; align-items: center; gap: 18px; }
+  .mark { width: 64px; height: 64px; border-radius: 16px; border: 2px solid rgba(30,27,23,.12); background: var(--bg);
+          display: flex; align-items: center; justify-content: center; font: 500 46px/1 Literata, serif; }
+  .word { font: 500 32px/1 Literata, serif; letter-spacing: -0.005em; }
+  .copy { position: absolute; }
+  .label { font: 600 24px/1 -apple-system, "SF Pro Text", sans-serif; letter-spacing: .12em; text-transform: uppercase;
+           color: var(--accent); margin-bottom: 24px; }
+  h1 { font: 500 78px/1.08 Literata, serif; letter-spacing: -0.012em; margin: 0; text-wrap: balance; }
+  p { font: 400 33px/1.4 -apple-system, "SF Pro Text", sans-serif; color: var(--ink2); margin: 22px 0 0; text-wrap: pretty; }
+  .cta { display: inline-block; margin-top: 30px; padding: 16px 30px; border-radius: 999px; background: var(--accent);
+         color: #fff; font: 600 28px/1 -apple-system, "SF Pro Text", sans-serif; }
+  .phone { position: absolute; left: 50%; transform: translateX(-50%); padding: 11px; border-radius: 104px; background: var(--bezel);
+           box-shadow: 0 40px 90px rgba(30,27,23,.22), 0 12px 30px rgba(30,27,23,.14); }
+  .phone img { display: block; width: 100%; border-radius: 93px; }
+
+  /* 4:5 feed: copy on the left half, phone on the right, bleeding off the bottom. */
+  .feed { width: 1080px; height: 1350px; }
+  .feed .brand { left: 72px; top: 72px; }
+  .feed .copy { left: 72px; top: 210px; width: 470px; }
+  .feed h1 { font-size: 66px; }
+  .feed p { font-size: 30px; }
+  .feed .phone { left: auto; right: 48px; transform: none; top: 150px; width: 470px; }
+
+  /* 9:16 story: brand + copy in the upper middle, phone below. */
+  .story { width: 1080px; height: 1920px; }
+  .story .brand { left: 50%; transform: translateX(-50%); top: 260px; }
+  .story .copy { left: 96px; right: 96px; top: 380px; text-align: center; }
+  .story h1 { font-size: 80px; }
+  .story .phone { top: 860px; width: 640px; }
+  /* The glossary sheet sits at the bottom of its screen: show the whole phone. */
+  .story.whole .phone { top: 840px; width: 500px; }
+</style>
+</head>
+<body>
+  <div class="brand"><div class="mark">d</div><div class="word" lang="en">daily classical</div></div>
+  <div class="copy">
+    <div class="label" id="label"></div>
+    <h1 id="title"></h1>
+    <p id="body"></p>
+    <div class="cta" id="cta"></div>
+  </div>
+  <div class="phone"><img id="shot" alt=""></div>
+<script>
+const ADS = [
+  { file: "01-today",
+    en: { label: "One piece a day", title: "Fall for classical music, one piece a day.", body: "A symphony, concerto or sonata, with a painting from the same world." },
+    tr: { label: "Her gün bir eser", title: "Klasik müziğe her gün bir eserle başlayın.", body: "Bir senfoni, konçerto ya da sonat; aynı dünyadan bir tabloyla." } },
+  { file: "02-piece",
+    en: { label: "Listening guide", title: "Know what to listen for.", body: "Press play on Spotify and follow the guide, minute by minute." },
+    tr: { label: "Dinleme rehberi", title: "Neyi dinleyeceğinizi bilin.", body: "Spotify'da çalmaya başlayın, rehberi dakika dakika takip edin." } },
+  { file: "03-glossary", whole: true,
+    en: { label: "No jargon", title: "No music theory needed.", body: "Written for listeners. Tap any term for a short, plain explanation." },
+    tr: { label: "Terim yok", title: "Müzik bilgisi gerekmez.", body: "Dinleyiciler için yazıldı. Bir terime dokunun, sade bir açıklama açılsın." } },
+];
+const CTA = { en: "Today's piece is free", tr: "Bugünün eseri ücretsiz" };
+const q = new URLSearchParams(location.search);
+const lang = q.get("lang") || "en", format = q.get("format") || "feed";
+const a = ADS[(parseInt(q.get("n"), 10) || 1) - 1], t = a[lang];
+document.documentElement.lang = lang;
+document.body.className = format + (a.whole ? " whole" : "");
+document.getElementById("label").textContent = t.label;
+document.getElementById("title").textContent = t.title;
+document.getElementById("body").textContent = t.body;
+document.getElementById("cta").textContent = CTA[lang];
+document.getElementById("shot").src = `raw/${lang}/${a.file}.png`;
+</script>
+</body>
+</html>
