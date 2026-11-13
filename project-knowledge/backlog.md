@@ -11,7 +11,7 @@ Son güncelleme: 11 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 
 ## 1.1 planı (önce 1.0.1 olarak hazırlanmıştı)
 
-**Durum (11 Kasım akşamı): 1.1 (build 5) App Review'a gönderildi.** Oytun'un kararıyla 1.0.1 gönderilmedi, 1.1'e kalan işler de eklendi (build 4 = 1.0.1 yüklü kaldı, kullanılmayacak). iPhone Duo görselleri: her dilde yalnız iç ekran 01–06 (bölüm başına en fazla 10 görsel). Sıra: onay beklerken → kök alan adı DNS'i (reklam ölçümü kopyaları için) → reklamları uçtan uca kurmak. Sürüm `MARKETING_VERSION` 1.1, build 5 (`ios/project.yml`). Kullanıcıya görünen değişiklikler: widget tanıtımı, e-posta değiştirme, iPhone Duo (karşılama dahil), kısa ekranlar, sözlük terimleri ve giriş formunda dokunma alanları; geri kalanı bakım ve sayaçlar.
+**Durum (13 Kasım): 1.1 (build 5) 12 Kasım'da onaylandı, 13 Kasım'da yayınlandı.** (11 Kasım akşamı gönderilmişti.) Oytun'un kararıyla 1.0.1 gönderilmedi, 1.1'e kalan işler de eklendi (build 4 = 1.0.1 yüklü kaldı, kullanılmayacak). iPhone Duo görselleri: her dilde yalnız iç ekran 01–06 (bölüm başına en fazla 10 görsel). Sıra: onay beklerken → kök alan adı DNS'i (reklam ölçümü kopyaları için) → reklamları uçtan uca kurmak. Sürüm `MARKETING_VERSION` 1.1, build 5 (`ios/project.yml`). Kullanıcıya görünen değişiklikler: widget tanıtımı, e-posta değiştirme, iPhone Duo (karşılama dahil), kısa ekranlar, sözlük terimleri ve giriş formunda dokunma alanları; geri kalanı bakım ve sayaçlar.
 
 **Hazır olanlar**
 
