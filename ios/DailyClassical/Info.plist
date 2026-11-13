@@ -41,6 +41,16 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAdvertiserIDCollectionEnabled</key>
+	<false/>
+	<key>FacebookAppID</key>
+	<string>1661415735766563</string>
+	<key>FacebookAutoLogAppEventsEnabled</key>
+	<true/>
+	<key>FacebookClientToken</key>
+	<string>78ffcf78f6e25e9f356409b783a61b83</string>
+	<key>FacebookDisplayName</key>
+	<string>DailyClassical</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>NSAdvertisingAttributionReportEndpoint</key>

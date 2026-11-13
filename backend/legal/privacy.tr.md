@@ -1,6 +1,6 @@
 # Gizlilik Politikası
 
-Son güncelleme: 10 Kasım 2026
+Son güncelleme: 13 Kasım 2026
 
 DailyClassical (“biz”), her gün bir klasik eseri bir dinleme rehberiyle sunan bir uygulamadır. Bu politika, uygulamanın ve sunucumuzun hangi bilgileri neden işlediğini ve sizin hangi seçeneklere sahip olduğunuzu açıklar.
 
@@ -9,7 +9,7 @@ DailyClassical (“biz”), her gün bir klasik eseri bir dinleme rehberiyle sun
 - DailyClassical’ı hesap açmadan kullanabilirsiniz. Bu durumda sunucularımızda, size bağlanmayan anonim kullanım sayıları ve çökme raporları dışında sizinle ilgili hiçbir bilgi saklamayız.
 - Hesap açarsanız e-posta adresinizi, şifrenizin korunmuş bir biçimini, dilinizi ve favorilerinizi saklarız.
 - Satın almaları Apple yönetir. Ödeme bilgilerinizi hiçbir zaman görmeyiz.
-- Reklam ve üçüncü taraf analitik ya da takip aracı yoktur. Verilerinizi pazarlama amacıyla asla satmaz veya paylaşmayız.
+- Uygulamada reklam ve takip yoktur: tek üçüncü taraf kodu, kendi reklam kampanyalarımızı reklam tanımlayıcısı olmadan ölçen, sınırlı moddaki Meta SDK’dır (bkz. Reklam ölçümü). Verilerinizi asla satmayız.
 
 ## İşlediğimiz bilgiler
 
@@ -21,7 +21,7 @@ Ayarlarınız (dil, tema, günlük hatırlatıcı saati) ve açtığınız eserl
 
 **Çökme ve performans raporları.** Uygulama çöktüğünde, donduğunda, yavaş açıldığında ya da çok fazla işlemci zamanı veya depolama kullandığında iOS teknik bir rapor hazırlar (Apple’ın MetricKit’i) ve bunu uygulamaya daha sonraki bir açılışta verir; uygulama da raporu sunucumuza gönderir. Raporda uygulamanın ve iOS’un sürümü, cihaz modeli (örneğin “iPhone17,2”) ve hatanın programın neresinde olduğu bulunur; yazdığınız ya da okuduğunuz bir şey, herhangi bir tanımlayıcı ya da hesabınıza bağlı bir bilgi bulunmaz. Bu raporları yalnızca hataları bulup düzeltmek için kullanır, 180 gün sonra sileriz.
 
-**Reklam ölçümü.** Uygulama reklamlarımızdan biri aracılığıyla kurulduğunda iOS, Apple’ın gizliliği koruyan reklam ölçümünü (SKAdNetwork ve AdAttributionKit) kullanarak reklam ağına ve bize kurulumun hangi kampanyadan geldiğini ve uygulamanın ilk günlerde ne kadar kullanıldığını (örneğin bir eser sayfasının açılıp açılmadığını ya da aboneliğin başlayıp başlamadığını) bildirir. Apple bu raporları gecikmeli ve herhangi bir tanımlayıcı olmadan gönderir; bu yüzden ne reklam ağı ne de biz uygulamayı kimin kurduğunu bilebiliriz. Reklam tanımlayıcısını kullanmayız, takip izni istemeyiz ve uygulamada reklam yazılımı (SDK) bulunmaz.
+**Reklam ölçümü.** Hangi reklamlarımızın insanları uygulamaya getirdiğini öğrenmek için uygulama, Meta’nın yazılım geliştirme kitini (Meta SDK) sınırlı modda içerir. SDK Meta’ya uygulamanın kurulduğunu ve açıldığını; karşılama ekranlarının bittiğini, bir eser sayfasının ilk kez açıldığını, ücretsiz denemenin başladığını ya da bir satın alma yapıldığını (fiyatıyla) bildirir. Ad, e-posta adresi ya da hesap bilgisi göndermez ve reklam tanımlayıcısını hiç kullanmaz: takip izni istemediğimiz için Meta bu bilgileri yalnızca toplu ve gizliliği koruyan biçimde (Toplu Olay Ölçümü ve Apple’ın SKAdNetwork / AdAttributionKit’i) kampanyalarımızı ölçmek için kullanabilir. Apple ayrıca her reklam kurulum raporunun gecikmeli ve kimliksiz bir kopyasını bize gönderir; kampanyayı ve uygulamanın ilk günlerde ne kadar kullanıldığını gösterir. Meta’nın bu bilgileri nasıl işlediği Meta’nın Gizlilik İlkesi’nde (facebook.com/privacy/policy) anlatılır.
 
 **Hesap açtığınızda.** Şunları saklarız:
 
@@ -46,8 +46,8 @@ E-posta adresinizi doğrulamak ya da şifrenizi sıfırlamak için size kısa bi
 
 ## Yapmadıklarımız
 
-- Reklam göstermeyiz.
-- Üçüncü taraf analitik, reklam ya da takip yazılımı kullanmayız; sizi başka uygulama ve sitelerde takip etmeyiz.
+- Uygulamada reklam göstermeyiz.
+- Üçüncü taraf analitik yazılımı kullanmayız; sizi başka uygulama ve sitelerde takip etmeyiz. Meta SDK yalnızca reklamlarımızı ölçmek için sınırlı modda çalışır (bkz. Reklam ölçümü).
 - Bilgilerinizi satmayız ve başkalarının pazarlaması için kimseyle paylaşmayız.
 
 ## Bilgilerinizi neden kullanıyoruz

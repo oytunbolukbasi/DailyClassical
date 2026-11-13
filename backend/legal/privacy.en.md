@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Last updated: 10 November 2026
+Last updated: 13 November 2026
 
 DailyClassical (“we”, “us”) is an app that offers one classical work a day with a listening guide. This policy explains what information the app and our server handle, why, and the choices you have.
 
@@ -9,7 +9,7 @@ DailyClassical (“we”, “us”) is an app that offers one classical work a d
 - You can use DailyClassical without an account. In that case we store nothing about you on our servers apart from anonymous usage counts and crash reports that are not linked to you.
 - If you create an account, we store your email address, a protected form of your password, your language and your favourites.
 - Purchases are handled by Apple. We never see your payment details.
-- There are no ads and no third-party analytics or tracking tools, and we never sell or share your data for marketing.
+- There are no ads in the app and no tracking: the only third-party code is Meta’s SDK, in a limited mode that measures our own ad campaigns without the advertising identifier (see Ad measurement). We never sell your data.
 
 ## Information we handle
 
@@ -21,7 +21,7 @@ Your settings (language, theme, daily reminder time) and the pieces you have ope
 
 **Crash and performance reports.** When the app crashes, freezes, starts slowly or uses too much processor time or storage, iOS prepares a technical report (Apple’s MetricKit) and hands it to the app on a later launch, and the app sends it to our server. A report contains the app and iOS version, the device model (such as “iPhone17,2”) and where in the program it happened; it contains nothing you wrote or read, no identifier and nothing linked to your account. We use these reports only to find and fix faults and delete them after 180 days.
 
-**Ad measurement.** When the app is installed from one of our ads, iOS uses Apple’s privacy-preserving ad attribution (SKAdNetwork and AdAttributionKit) to tell the ad network, and us, which campaign the install came from and how far the app was used in its first days (for example whether a piece page was opened or a subscription started). Apple sends these reports with a delay and without any identifier, so neither the ad network nor we can tell who installed the app. We do not use the advertising identifier, ask for tracking permission or include an advertising SDK.
+**Ad measurement.** To learn which of our ads bring people to the app, the app includes Meta’s software development kit (the Meta SDK) in its limited mode. It tells Meta that the app was installed and opened, and when the welcome screens were finished, a piece page was first opened, a free trial started or a purchase was made (with its price). It sends no name, email address or account details, and it never uses the advertising identifier: we do not ask for tracking permission, so Meta can only use this information in aggregated, privacy-preserving form (Aggregated Event Measurement and Apple’s SKAdNetwork / AdAttributionKit) to measure our campaigns. Apple also sends us a delayed, anonymous copy of each ad install report, showing the campaign and how far the app was used in its first days. Meta’s handling of this information is described in Meta’s Privacy Policy (facebook.com/privacy/policy).
 
 **When you create an account.** We store:
 
@@ -46,8 +46,8 @@ To confirm your email address or reset your password we send you a short code or
 
 ## What we do not do
 
-- We do not show advertising.
-- We do not use third-party analytics, advertising or tracking software, and we do not track you across other apps or websites.
+- We do not show advertising in the app.
+- We do not use third-party analytics software, and we do not track you across other apps or websites. The Meta SDK runs only in its limited mode to measure our ads (see Ad measurement).
 - We do not sell your information or share it with anyone for their marketing.
 
 ## Why we use your information

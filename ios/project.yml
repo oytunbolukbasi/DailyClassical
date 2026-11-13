@@ -11,8 +11,8 @@ settings:
     SWIFT_STRICT_CONCURRENCY: complete
     SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
     SWIFT_APPROACHABLE_CONCURRENCY: YES
-    MARKETING_VERSION: "1.1"
-    CURRENT_PROJECT_VERSION: "5"
+    MARKETING_VERSION: "1.2"
+    CURRENT_PROJECT_VERSION: "6"
     DEVELOPMENT_TEAM: 3NX95JSKNY
     CODE_SIGN_STYLE: Automatic
     LOCALIZATION_PREFERS_STRING_CATALOGS: YES
@@ -29,6 +29,10 @@ packages:
   RevenueCat:
     url: https://github.com/RevenueCat/purchases-ios-spm.git
     from: 5.93.0
+  # Meta SDK, core only (app events + SKAdNetwork for Meta install campaigns). No login, no ATT prompt.
+  Facebook:
+    url: https://github.com/facebook/facebook-ios-sdk.git
+    from: 18.1.1
 targets:
   DailyClassical:
     type: application
@@ -68,7 +72,7 @@ targets:
         # HTTPS only (exempt): no export-compliance question on every upload.
         ITSAppUsesNonExemptEncryption: false
         CFBundleLocalizations: [en, tr]
-        # Ad attribution without an SDK (Core/Services/AdAttribution.swift): Meta's SKAdNetwork ids, and
+        # Ad attribution (Core/Services/AdAttribution.swift, Meta SDK): Meta's SKAdNetwork ids, and
         # copies of winning install postbacks to https://dailyclassical.co/.well-known/... (backend
         # routes/attribution.ts). iOS uses only the registrable domain, so the apex must reach the API.
         SKAdNetworkItems:
@@ -77,6 +81,13 @@ targets:
         NSAdvertisingAttributionReportEndpoint: https://dailyclassical.co
         AdAttributionKit:
           AttributionCopyEndpoint: https://dailyclassical.co
+        # Meta SDK (Core/Services/MetaEvents.swift). The client token is a public app token, not a secret.
+        # No ATT prompt: the SDK runs without the advertising identifier.
+        FacebookAppID: "1661415735766563"
+        FacebookClientToken: 78ffcf78f6e25e9f356409b783a61b83
+        FacebookDisplayName: DailyClassical
+        FacebookAutoLogAppEventsEnabled: true
+        FacebookAdvertiserIDCollectionEnabled: false
         UIAppFonts: [Literata-Regular.ttf, Literata-Medium.ttf, Literata-SemiBold.ttf, Literata-Italic.ttf, Literata-MediumItalic.ttf]
         NSAppTransportSecurity:
           NSAllowsLocalNetworking: true
@@ -92,6 +103,8 @@ targets:
       - target: DailyClassicalWidget
         embed: true
       - package: RevenueCat
+      - package: Facebook
+        product: FacebookCore
   # Home Screen widgets (small / medium / large). Fetches its own feed (GET /v1/widget) so pieces
   # published after the app shipped appear; falls back to its cached feed, then to the bundled
   # fixtures and artwork, so it always works offline. The language comes from the shared App Group.

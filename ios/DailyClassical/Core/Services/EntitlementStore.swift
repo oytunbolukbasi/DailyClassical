@@ -155,19 +155,25 @@ final class EntitlementStore {
     func purchase(_ plan: Plan) async throws -> Bool {
         if usesRevenueCat {
             guard let package = packages[plan] else { return false }
+            let isTrial = plan == .monthly && trialDays != nil
             let result = try await Purchases.shared.purchase(package: package)
             if result.userCancelled { return false }
             apply(result.customerInfo)
             if plan == .monthly { trialDays = nil }
-            if isPremium { AdAttribution.record(plan == .lifetime ? .lifetime : .trialOrMonthly) }
+            if isPremium {
+                AdAttribution.purchased(isTrial: isTrial, price: package.storeProduct.price, currency: package.storeProduct.currencyCode)
+            }
             return isPremium
         }
         guard let product = storeKitProducts[plan] else { return false }
+        let isTrial = plan == .monthly && trialDays != nil
         switch try await product.purchase() {
         case .success(let result):
             if case .verified(let transaction) = result { await transaction.finish() }
             await refresh()
-            if isPremium { AdAttribution.record(plan == .lifetime ? .lifetime : .trialOrMonthly) }
+            if isPremium {
+                AdAttribution.purchased(isTrial: isTrial, price: product.price, currency: product.priceFormatStyle.currencyCode)
+            }
             return isPremium
         default:
             return false

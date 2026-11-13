@@ -3,6 +3,7 @@ import WidgetKit
 
 @main
 struct DailyClassicalApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @State private var language = LanguageSettings()
     @State private var appearance = AppearanceSettings()
     @State private var content = ContentStore()
@@ -42,8 +43,6 @@ struct DailyClassicalApp: App {
                 .onChange(of: scenePhase, initial: true) { if scenePhase == .active { Analytics.shared.appBecameActive() } }
                 // Crash and hang reports from MetricKit, for the admin page (Core/Services/Diagnostics.swift).
                 .task { Diagnostics.shared.start() }
-                // Starts Apple's ad attribution window on first launch (Core/Services/AdAttribution.swift).
-                .task { AdAttribution.appLaunched() }
         }
     }
 }

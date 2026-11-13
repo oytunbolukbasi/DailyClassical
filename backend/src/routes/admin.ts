@@ -216,8 +216,10 @@ async function loadDashboard() {
     select ad_network_id, coalesce(source_identifier, '—') as source_identifier,
       count(*) filter (where coalesce(postback_index, 0) = 0 and conversion_type is distinct from 'redownload' and conversion_type is distinct from 'reengagement')::int as installs,
       count(*) filter (where coalesce(postback_index, 0) = 0 and conversion_type = 'redownload')::int as redownloads,
-      count(*) filter (where coalesce(postback_index, 0) = 0 and (fine_value >= 20 or coarse_value in ('medium', 'high')))::int as read,
-      count(*) filter (where coalesce(postback_index, 0) = 0 and (fine_value >= 40 or coarse_value = 'high'))::int as paid,
+      -- Coarse values only: since 1.2 the Meta SDK sets fine values from Meta's own schema. Coarse
+      -- values are set in Meta Events Manager to match: medium = read a piece, high = trial or purchase.
+      count(*) filter (where coalesce(postback_index, 0) = 0 and coarse_value in ('medium', 'high'))::int as read,
+      count(*) filter (where coalesce(postback_index, 0) = 0 and coarse_value = 'high')::int as paid,
       max(received_at)::text as last_seen
     from ad_postbacks where received_at > now() - interval '90 days'
     group by ad_network_id, coalesce(source_identifier, '—') order by max(received_at) desc limit 50`;
@@ -384,7 +386,7 @@ async function dashboardView(email: string) {
           <li>Bir reklamdan gelen kurulum, iOS tarafından reklam ağına (Meta) bildirilir; Apple aynı raporun bir kopyasını bize de gönderir. Raporda kullanıcıya ya da cihaza dair bir şey yoktur: reklam ağı, kampanya kimliği ve uygulamanın ilk günlerde ne kadar ilerlediğini gösteren bir değer.</li>
           <li>Raporlar 1–3 gün gecikmeli gelir. Bir kampanyadan gelen kurulum azsa Apple ayrıntıyı gizler (yalnızca kaba değer gelir ya da hiç değer gelmez), bu yüzden "Eser açan" ve "Deneme ya da satın alma" eksik sayılabilir.</li>
           <li><b>Kampanya</b> sütunu, reklam ağının kampanyaya verdiği kısa kimliktir; Meta'daki kampanya adına karşılığı Ads Manager'daki kampanya sonuçlarıyla eşleştirilir. Kampanya başına kurulumları Meta Ads Manager da (kendi tahminiyle) gösterir.</li>
-          <li>Değerler: uygulama açıldı → karşılama bitti → bir eser açıldı → deneme ya da aylık abonelik → ömür boyu. Yalnızca 1.0.1 ve sonrası bildirir.</li>
+          <li>Değerleri 1.2'den itibaren Meta SDK'sı Meta Events Manager'daki şemaya göre verir; panel kaba değere bakar: düşük = açıldı ya da karşılama bitti, orta = bir eser açıldı, yüksek = deneme ya da satın alma.</li>
           <li>Bağlantıyla gelen trafik (Instagram profil bağlantısı, hikâye bağlantısı, trafik kampanyaları) ayrıca App Store Connect › Analytics › Acquisition › Campaigns'te, bağlantıdaki kampanya etiketine (ct) göre görünür.</li>
         </ul>
       </details>
