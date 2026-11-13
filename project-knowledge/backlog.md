@@ -86,7 +86,7 @@ Son güncelleme: 11 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 **13 Kasım ilerleme:**
 - Meta uygulaması **Live** (gizlilik `/privacy`, koşullar `/terms`, kategori Eğitim; Publish'e Oytun bastı).
 - **Kreatifler:** `design/app-store/ad.html` + `render-ads.sh` → `ads/{feed,story}/{tr,en}/01–03.png` (Her gün bir eser / Dinleme rehberi / Müzik bilgisi gerekmez); onay sayfası https://claude.ai/artifact/7pVx6vQfFC7sBmaUYY9F6C (Meta metinleri dahil). Onay bekliyor.
-- **ASC kampanya bağlantıları** (sağlayıcı `pt=129257819`; ASC'de ayrıca kayıt gerekmez, `ct` serbest, en fazla 40 karakter): `https://apps.apple.com/app/apple-store/id6820556910?pt=129257819&ct=<ad>&mt=8`. Kullanılanlar: `ig-bio` (Instagram profil bağlantısı), `ig-story-tr`, `ig-story-en`, `ig-post-tr`, `ig-post-en`, `site` (www.dailyclassical.co). Sonuçlar ASC › Analytics › Acquisition › Campaigns'te, en az 5 kurulumdan sonra.
+- **ASC kampanya bağlantıları** (sağlayıcı `pt=129257819`; ASC'de ayrıca kayıt gerekmez, `ct` serbest, en fazla 30 karakter): `https://apps.apple.com/app/apple-store/id6820556910?pt=129257819&ct=<ad>&mt=8`. Kullanılanlar: `ig-bio` (Instagram profil bağlantısı), `ig-story-tr`, `ig-story-en`, `ig-post-tr`, `ig-post-en`, `site` (www.dailyclassical.co). Sonuçlar ASC › Analytics › Acquisition › Campaigns'te, en az 5 kurulumdan sonra.
 - **Promotional Text:** TR ve EN zaten girilmiş (1.1 gönderiminde), reklam mesajıyla uyumlu.
 
 **Sırayla yapılacaklar:**
