@@ -168,6 +168,16 @@ struct SettingsScreen: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
             .settingsRow()
+            // Lets Meta Events Manager see the trial and purchase events, so they can be added to the
+            // SKAdNetwork schema before a campaign runs (a later schema change pauses live ads for 72 h).
+            Button {
+                AdAttribution.purchased(isTrial: true, price: nil, currency: nil)
+                AdAttribution.purchased(isTrial: false, price: 129.99, currency: "TRY")
+            } label: {
+                Text(verbatim: "Meta'ya deneme ve satın alma test olayı gönder").foregroundStyle(Palette.accent)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .settingsRow()
             #endif
         } header: {
             Text(verbatim: "Test")
