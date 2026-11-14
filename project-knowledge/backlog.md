@@ -108,7 +108,8 @@ Son güncelleme: 11 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 - **DailyClassical EN - Install** (₺250/gün), reklam seti "EN - Instagram" (ABD, BK, Kanada, Avustralya, Yeni Zelanda; İrlanda AB doğrulaması yüzünden çıkarıldı): EN-1 One piece a day, EN-2 Listening guide, EN-3 No music theory.
 - Her reklamda akış grubu `dc-<dil>-feed-0N`, hikâye/reels grubu `dc-<dil>-story-0N` (yükleme dosyaları `design/app-store/ads/upload/`); müzik/animasyon iyileştirmeleri kapalı.
 - Yerleşim Advantage+ (otomatik). Hesap kontrollerinde Audience Network (iki yerleşim) hariç tutuldu (14 Kasım; hesap düzeyinde, iki kampanyaya da geçerli). WhatsApp Durum bu kampanya türünde hariç tutulamıyor (listede yalnız Audience Network, Marketplace, sağ sütun var).
-- **Yayın öncesi [Oytun]:** reklamveren/ödeyen bilgisi (hata #3858152, reklam setinde), telefon doğrulaması, başlangıç/bitiş tarihleri (10 gün). Yayına alma Oytun'un açık onayıyla.
+- Reklamveren/ödeyen bilgisi girildi (14 Kasım). Tarihler: iki reklam setinde başlangıç 14 Kasım, bitiş 25 Kasım 00:00; yayın günü başlangıç ve bitiş birlikte kaydırılır (10 gün).
+- **Yayın öncesi [Oytun]:** telefon doğrulaması (#3858013, Ads Manager'da "Telefon numarası ekle"). Yayına alma Oytun'un açık onayıyla.
 
 **Sırayla yapılacaklar:**
 1. **[Oytun, Claude Chrome'da yönlendirir] Meta hesapları:** Business portföyü, reklam hesabı (TRY, İstanbul saat dilimi), ödeme yöntemi; @dailyclassical.co'yu ve bir Facebook sayfasını portföye bağlamak.
