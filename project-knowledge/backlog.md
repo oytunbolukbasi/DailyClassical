@@ -105,10 +105,10 @@ Son güncelleme: 11 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 
 **14 Kasım, durum:** 1.2 yayında, Railway `LATEST_APP_VERSION=1.2`. SKAdNetwork şeması kuruldu (Facebook SDK yöntemi; hassas: etkinleştirme 1, eğitimi tamamlama 10, içerik görüntüleme 20; kaba: düşük = etkinleştirme + eğitim, orta = içerik). **Deneme/satın alma (hassas 40/50, kaba yüksek) Events Manager'da olay görününce eklenecek** (14 Kasım'da henüz yoktu; yayından sonra değiştirmek reklamları 72 saat duraklatır, o yüzden yayından önce). İki kampanya taslakta, yayınlanmadı:
 - **DailyClassical TR - Yükleme** (₺200/gün), reklam seti "TR - Instagram" (Türkiye): TR-1 Her gün bir eser, TR-2 Dinleme rehberi, TR-3 Müzik bilgisi gerekmez.
-- **DailyClassical EN - Install** (₺250/gün), reklam seti "EN - Instagram" (ABD, BK, Kanada, Avustralya, İrlanda, Yeni Zelanda): EN-1 One piece a day, EN-2 Listening guide, EN-3 No music theory.
+- **DailyClassical EN - Install** (₺250/gün), reklam seti "EN - Instagram" (ABD, BK, Kanada, Avustralya, Yeni Zelanda; İrlanda AB doğrulaması yüzünden çıkarıldı): EN-1 One piece a day, EN-2 Listening guide, EN-3 No music theory.
 - Her reklamda akış grubu `dc-<dil>-feed-0N`, hikâye/reels grubu `dc-<dil>-story-0N` (yükleme dosyaları `design/app-store/ads/upload/`); müzik/animasyon iyileştirmeleri kapalı.
-- Yerleşim Advantage+ (otomatik); yalnız Instagram'a kısıtlamak ancak Hesap kontrollerindeki hariç tutmalarla.
-- **Yayın öncesi [Oytun]:** reklamveren/ödeyen bilgisi (hata #3858152, reklam setinde), telefon doğrulaması, İrlanda için AB reklamveren doğrulaması (ya da İrlanda'yı çıkarmak), başlangıç/bitiş tarihleri (10 gün). Yayına alma Oytun'un açık onayıyla.
+- Yerleşim Advantage+ (otomatik). Hesap kontrollerinde Audience Network (iki yerleşim) hariç tutuldu (14 Kasım; hesap düzeyinde, iki kampanyaya da geçerli). WhatsApp Durum bu kampanya türünde hariç tutulamıyor (listede yalnız Audience Network, Marketplace, sağ sütun var).
+- **Yayın öncesi [Oytun]:** reklamveren/ödeyen bilgisi (hata #3858152, reklam setinde), telefon doğrulaması, başlangıç/bitiş tarihleri (10 gün). Yayına alma Oytun'un açık onayıyla.
 
 **Sırayla yapılacaklar:**
 1. **[Oytun, Claude Chrome'da yönlendirir] Meta hesapları:** Business portföyü, reklam hesabı (TRY, İstanbul saat dilimi), ödeme yöntemi; @dailyclassical.co'yu ve bir Facebook sayfasını portföye bağlamak.
