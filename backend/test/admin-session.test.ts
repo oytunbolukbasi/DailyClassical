@@ -23,7 +23,7 @@ test("no session: back to the sign-in page", async () => {
 });
 
 test("a session older than a day is renewed as a 90-day Lax cookie", async () => {
-  const email = process.env.ADMIN_EMAILS!.split(",")[0];
+  const email = process.env.ADMIN_EMAILS!.split(",")[0]!;
   const old = await token(email, Math.floor(Date.now() / 1000) - 3 * 86_400);
   const res = await probe(`dc_admin=${old}`);
   assert.equal(res.status, 404);
@@ -35,7 +35,7 @@ test("a session older than a day is renewed as a 90-day Lax cookie", async () =>
 });
 
 test("a fresh session is not re-issued on every request", async () => {
-  const email = process.env.ADMIN_EMAILS!.split(",")[0];
+  const email = process.env.ADMIN_EMAILS!.split(",")[0]!;
   const res = await probe(`dc_admin=${await token(email, Math.floor(Date.now() / 1000) - 60)}`);
   assert.equal(res.status, 404);
   assert.equal(res.headers.get("set-cookie"), null);

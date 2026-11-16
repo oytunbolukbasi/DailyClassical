@@ -188,6 +188,20 @@ export const users = pgTable("users", {
   appleSub: text("apple_sub").unique(),
   /** Apple refresh token, kept only to revoke the Apple link when the account is deleted. */
   appleRefreshToken: text("apple_refresh_token"),
+  /**
+   * App Store Premium as RevenueCat reports it (webhook, routes/revenuecat.ts), for reading only:
+   * the app unlocks Premium from the Apple ID, never from these. Null until a purchase is made
+   * while signed in to this account. plan: monthly | lifetime; status: trial | active | cancelled |
+   * billing_issue | expired | refunded (lib/revenuecat.ts).
+   */
+  premiumPlan: text("premium_plan"),
+  premiumStatus: text("premium_status"),
+  /** End of the current period; null for lifetime. */
+  premiumExpiresAt: timestamp("premium_expires_at", { withTimezone: true }),
+  /** Time of the event that set the state; older events arriving late are ignored. */
+  premiumUpdatedAt: timestamp("premium_updated_at", { withTimezone: true }),
+  /** True when the state came from a sandbox (TestFlight / Xcode) purchase. */
+  premiumSandbox: boolean("premium_sandbox").notNull().default(false),
 });
 
 /** One live sign-up code per user; only its hash is stored. */
@@ -358,3 +372,22 @@ export const adminLoginCodes = pgTable("admin_login_codes", {
   attempts: smallint("attempts").notNull().default(0),
   sentAt: timestamp("sent_at", { withTimezone: true }).notNull().defaultNow(),
 });
+
+/**
+ * Every RevenueCat webhook event as received (routes/revenuecat.ts), keyed by RevenueCat's event id
+ * so retries are stored once. user_id is set when the event names one of our accounts.
+ */
+export const revenuecatEvents = pgTable(
+  "revenuecat_events",
+  {
+    id: text("id").primaryKey(),
+    receivedAt: timestamp("received_at", { withTimezone: true }).notNull().defaultNow(),
+    type: text("type").notNull(),
+    appUserId: text("app_user_id"),
+    userId: uuid("user_id").references(() => users.id, { onDelete: "set null" }),
+    productId: text("product_id"),
+    environment: text("environment"),
+    raw: jsonb("raw").notNull(),
+  },
+  (t) => [index("revenuecat_events_user_idx").on(t.userId)],
+);

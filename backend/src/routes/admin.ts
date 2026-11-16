@@ -145,7 +145,7 @@ const todayIn = (tz: string) => new Intl.DateTimeFormat("en-CA", { timeZone: tz 
 
 async function loadDashboard() {
   const today = todayIn(TZ);
-  const [kpi] = await sql<{ dau: number; dau_yesterday: number; mau: number; wau: number; avg_dau_30: number; installs: number; new_7d: number; accounts: number; favourites: number; opens: number; opens_7d: number }[]>`
+  const [kpi] = await sql<{ dau: number; dau_yesterday: number; mau: number; wau: number; avg_dau_30: number; installs: number; new_7d: number; accounts: number; favourites: number; opens: number; opens_7d: number; premium: number; premium_trial: number; premium_monthly: number; premium_lifetime: number }[]>`
     with real_days as (
       select d.install_id, d.day from app_install_days d join app_installs i using (install_id) where not i.is_test
     )
@@ -163,7 +163,12 @@ async function loadDashboard() {
       (select count(*) from app_installs where not is_test)::int as installs,
       (select count(*) from app_installs where not is_test and first_seen > ${today}::date - 7)::int as new_7d,
       (select count(*) from users where email_verified_at is not null or apple_sub is not null)::int as accounts,
-      (select count(*) from favourites)::int as favourites`;
+      (select count(*) from favourites)::int as favourites,
+      -- App Store Premium on accounts, from the RevenueCat webhook (routes/revenuecat.ts); sandbox left out.
+      (select count(*) from users where not premium_sandbox and premium_status in ('trial', 'active', 'cancelled', 'billing_issue'))::int as premium,
+      (select count(*) from users where not premium_sandbox and premium_status = 'trial')::int as premium_trial,
+      (select count(*) from users where not premium_sandbox and premium_plan = 'monthly' and premium_status in ('active', 'cancelled', 'billing_issue'))::int as premium_monthly,
+      (select count(*) from users where not premium_sandbox and premium_plan = 'lifetime' and premium_status = 'active')::int as premium_lifetime`;
   const series = await sql<{ day: string; n: number }[]>`
     select g::date::text as day, count(i.install_id)::int as n
     from generate_series(${today}::date - 29, ${today}::date, interval '1 day') g
@@ -328,12 +333,13 @@ async function dashboardView(email: string) {
         ${pctTile("Stickiness (DAU/MAU)", kpi.mau ? kpi.avg_dau_30 / kpi.mau : null, `bağlılık · ortalama DAU ${fmt.format(Math.round(kpi.avg_dau_30 * 10) / 10)}`)}
         ${tile("Toplam kullanıcı", kpi.installs, `son 7 günde ${fmt.format(kpi.new_7d)} yeni`)}
         ${tile("Hesap açan", kpi.accounts, `${fmt.format(kpi.favourites)} favori`)}
+        ${tile("Premium (hesaplı)", kpi.premium, `${fmt.format(kpi.premium_trial)} deneme · ${fmt.format(kpi.premium_monthly)} aylık · ${fmt.format(kpi.premium_lifetime)} ömür boyu`)}
       </div>
       <div class="card">
         <div class="ct">Günlük aktif kullanıcı, son 30 gün</div>
         ${chart(series)}
       </div>
-      <p class="m small">Kullanıcı = uygulamanın bir kurulumu (anonim). Xcode ve TestFlight build'leri sayılmaz. Gün, kullanıcının kendi tarihine göre. Toplam okunma: tüm kitaplıkta eser sayfalarının kaç kez açıldığı (aynı kişi birden çok sayılır). Stickiness: son 30 günün (yayından bu yana geçen günlerin) ortalama DAU'sunun MAU'ya oranı; aylık kullanıcıların ortalama bir günde ne kadarının uygulamayı açtığı.</p>
+      <p class="m small">Kullanıcı = uygulamanın bir kurulumu (anonim). Xcode ve TestFlight build'leri sayılmaz. Gün, kullanıcının kendi tarihine göre. Toplam okunma: tüm kitaplıkta eser sayfalarının kaç kez açıldığı (aynı kişi birden çok sayılır). Stickiness: son 30 günün (yayından bu yana geçen günlerin) ortalama DAU'sunun MAU'ya oranı; aylık kullanıcıların ortalama bir günde ne kadarının uygulamayı açtığı. Premium (hesaplı): hesabına giriş yapmışken satın alan ve aboneliği süren hesaplar (RevenueCat bildirimiyle; iptal edilip süresi bitmeyenler dahil). Giriş yapmadan satın alanlar yalnızca RevenueCat'te görünür.</p>
     </section>
 
     <section>

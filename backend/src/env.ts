@@ -39,6 +39,11 @@ const schema = z.object({
    */
   ADMIN_EMAILS: z.string().optional().transform((v) =>
     (v ?? "").split(",").map((e) => e.trim().toLowerCase()).filter(Boolean)),
+  /**
+   * RevenueCat webhook: the exact Authorization header value set in RevenueCat › Integrations ›
+   * Webhooks (routes/revenuecat.ts). Unset = the webhook endpoint answers 404.
+   */
+  REVENUECAT_WEBHOOK_AUTH: z.string().optional().transform((v) => v?.trim() || undefined),
 }).superRefine((e, ctx) => {
   if (e.NODE_ENV === "production" && !e.RESEND_API_KEY) {
     ctx.addIssue({ code: "custom", path: ["RESEND_API_KEY"], message: "required in production" });

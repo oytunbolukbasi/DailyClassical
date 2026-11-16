@@ -15,6 +15,7 @@ import { diagnostics } from "./routes/diagnostics.js";
 import { events } from "./routes/events.js";
 import { legal } from "./routes/legal.js";
 import { resetPage } from "./routes/reset-page.js";
+import { revenuecat } from "./routes/revenuecat.js";
 import { site } from "./routes/site.js";
 
 export const app = new Hono();
@@ -53,6 +54,7 @@ app.route("/v1", content);
 app.route("/v1", account);
 app.route("/v1", events);
 app.route("/v1", diagnostics);
+app.route("/v1", revenuecat);
 // Target of the password reset email (no website yet); outside /v1 because it is a web page.
 app.route("/", attribution);
 app.route("/", resetPage);
