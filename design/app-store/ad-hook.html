@@ -1,0 +1,91 @@
+<!doctype html>
+<!-- Alternative Meta ad creative (A/B against ad.html): the "Wait for 4:30" hook from the v3 Instagram post.
+     ad-hook.html?lang=tr&format=feed (1080×1350) or format=story (1080×1920). Rendered by render-ad-hook.sh into
+     ads/hook/<format>/<lang>.png. Dark, cinematic: Levitan's painting full-bleed, the guide's 4:30 stop on the phone.
+     Facts come from content/<lang>/pieces/tchaikovsky-symphony-6.md (the ≈ 4:30 stop). Never names the free trial. -->
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ad creative (hook)</title>
+<style>
+  @font-face { font-family: Lit; font-weight: 400; src: url("../../ios/DailyClassical/Resources/Fonts/Literata-Regular.ttf"); }
+  @font-face { font-family: Lit; font-weight: 500; src: url("../../ios/DailyClassical/Resources/Fonts/Literata-Medium.ttf"); }
+  :root { --ink: #F0EBE3; --ink2: #E2DBD1; --muted: #B3ABA1; --gold: #D4AE84; --bg: #111010; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { overflow: hidden; background: var(--bg); }
+  body { color: var(--ink); font-family: Lit, serif; -webkit-font-smoothing: antialiased; position: relative; }
+  .sans { font-family: -apple-system, "SF Pro Text", "Helvetica Neue", sans-serif; }
+
+  .art { position: absolute; inset: 0; background: url("../../content/images/.originals/paintings/tchaikovsky-symphony-6.jpg") center / cover no-repeat; }
+  .shade { position: absolute; inset: 0; }
+
+  .brand { position: absolute; display: flex; align-items: center; gap: 16px; z-index: 3; }
+  .mark { width: 60px; height: 60px; border-radius: 15px; background: #F5F2EC; color: #1E1B17;
+          display: flex; align-items: center; justify-content: center; font: 500 44px/1 Lit, serif; }
+  .word { font: 500 32px/1 Lit, serif; letter-spacing: -.005em; }
+
+  .copy { position: absolute; z-index: 3; }
+  .label { font: 600 25px/1.2 -apple-system, "Helvetica Neue", sans-serif; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+  h1 { font-weight: 500; line-height: 1; letter-spacing: -.025em; margin-top: 22px; text-shadow: 0 4px 40px rgba(0,0,0,.45); }
+  .sub { font-size: 38px; line-height: 1.32; color: var(--ink2); margin-top: 26px; text-wrap: pretty; text-shadow: 0 2px 20px rgba(0,0,0,.5); }
+  .how { font: 400 28px/1.4 -apple-system, "Helvetica Neue", sans-serif; color: var(--muted); margin-top: 22px; text-wrap: pretty; }
+  .cta { display: inline-block; margin-top: 34px; padding: 18px 34px; border-radius: 999px; background: var(--gold); color: #1E1B17;
+         font: 600 30px/1 -apple-system, "Helvetica Neue", sans-serif; }
+
+  .phone { position: absolute; z-index: 2; padding: 11px; border-radius: 96px; background: #050505;
+           box-shadow: 0 0 0 2px rgba(240,235,227,.16), 0 50px 120px rgba(0,0,0,.75), 0 0 180px rgba(212,174,132,.14); }
+  .phone img { display: block; width: 100%; border-radius: 86px; }
+  /* Gold ring on the 4:30 stop, so the eye goes from the headline to the guide. */
+  .ring { position: absolute; z-index: 4; border: 4px solid var(--gold); border-radius: 26px; box-shadow: 0 0 40px rgba(212,174,132,.45); }
+
+  /* 4:5 feed: copy on the left over the darkened painting, phone on the right running off the bottom. */
+  .feed { width: 1080px; height: 1350px; }
+  .feed .shade { background: linear-gradient(90deg, rgba(10,9,9,.88) 0%, rgba(10,9,9,.62) 48%, rgba(10,9,9,.25) 100%),
+                             linear-gradient(0deg, rgba(10,9,9,.7) 0%, rgba(10,9,9,0) 40%); }
+  .feed .brand { left: 70px; top: 64px; }
+  .feed .copy { left: 70px; top: 250px; width: 500px; }
+  .feed h1 { font-size: 108px; }
+  .feed .phone { right: 50px; top: 320px; width: 430px; }
+  .feed .ring { right: 76px; top: 473px; width: 352px; height: 128px; }
+
+  /* 9:16 story: copy in the upper middle (Instagram's top 250 px and bottom 340 px stay free), phone below. */
+  .story { width: 1080px; height: 1920px; }
+  .story .art { background-position: 38% 50%; }
+  .story .shade { background: linear-gradient(180deg, rgba(10,9,9,.55) 0%, rgba(10,9,9,.78) 45%, rgba(10,9,9,.92) 100%); }
+  .story .brand { left: 50%; transform: translateX(-50%); top: 260px; }
+  .story .copy { left: 90px; right: 90px; top: 380px; text-align: center; }
+  .story h1 { font-size: 150px; }
+  .story .phone { left: 50%; transform: translateX(-50%); top: 1060px; width: 560px; }
+  .story .ring { left: 328px; top: 1261px; width: 458px; height: 162px; }
+</style>
+</head>
+<body>
+  <div class="art"></div><div class="shade"></div>
+  <div class="brand"><div class="mark">d</div><div class="word" lang="en">daily classical</div></div>
+  <div class="copy">
+    <div class="label" id="label"></div>
+    <h1 id="title"></h1>
+    <p class="sub" id="sub"></p>
+    <p class="how" id="how"></p>
+    <div class="cta" id="cta"></div>
+  </div>
+  <div class="phone"><img id="shot" alt=""></div>
+  <div class="ring"></div>
+<script>
+const T = {
+  en: { label: "Tchaikovsky · Symphony No. 6", title: "Wait for 4:30.",
+        sub: "Everything calms: a wide, singing melody on muted strings.",
+        how: "A listening guide timed to the recording, minute by minute.", cta: "Today’s piece is free" },
+  tr: { label: "Çaykovski · 6. Senfoni", title: "4:30’u bekleyin.",
+        sub: "Her şey durulur; sordinli yaylılarda geniş, şarkı gibi bir melodi.",
+        how: "Kayda göre dakika dakika zamanlanmış bir dinleme rehberi.", cta: "Bugünün eseri ücretsiz" },
+};
+const q = new URLSearchParams(location.search);
+const lang = q.get("lang") || "en", format = q.get("format") || "feed", t = T[lang];
+document.documentElement.lang = lang;
+document.body.className = format;
+for (const k of ["label", "title", "sub", "how", "cta"]) document.getElementById(k).textContent = t[k];
+document.getElementById("shot").src = `raw/${lang}/02-piece.png`;
+</script>
+</body>
+</html>
