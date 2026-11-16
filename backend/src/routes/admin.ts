@@ -20,7 +20,9 @@ export const admin = new Hono();
 
 const COOKIE = "dc_admin";
 const AUDIENCE = "dailyclassical-admin";
-const SESSION_DAYS = 7;
+/** The session slides: any visit after a day renews it, so it only ends after 90 days without one. */
+const SESSION_DAYS = 90;
+const RENEW_AFTER_S = 86_400;
 const secret = new TextEncoder().encode(env.JWT_SECRET);
 const TZ = "Europe/Istanbul";
 
@@ -39,10 +41,27 @@ async function sessionEmail(c: Context): Promise<string | null> {
   if (!token) return null;
   try {
     const { payload } = await jwtVerify(token, secret, { audience: AUDIENCE });
-    return payload.sub && isAdmin(payload.sub) ? payload.sub : null;
+    if (!payload.sub || !isAdmin(payload.sub)) return null;
+    if (!payload.iat || Date.now() / 1000 - payload.iat > RENEW_AFTER_S) await startSession(c, payload.sub);
+    return payload.sub;
   } catch {
     return null;
   }
+}
+
+/**
+ * SameSite=Lax, not Strict: with Strict, Safari leaves the cookie off any visit that starts on
+ * another site (a link in Mail, Messages or Notes, an iOS home-screen shortcut), so the code
+ * screen appeared although the session was valid, and a reload "fixed" it. Lax still keeps the
+ * cookie off cross-site POSTs, which is what protects the forms.
+ */
+async function startSession(c: Context, email: string) {
+  const token = await new SignJWT({}).setProtectedHeader({ alg: "HS256" }).setSubject(email)
+    .setAudience(AUDIENCE).setIssuedAt().setExpirationTime(`${SESSION_DAYS}d`).sign(secret);
+  setCookie(c, COOKIE, token, {
+    path: "/admin", httpOnly: true, sameSite: "Lax", secure: env.NODE_ENV === "production",
+    maxAge: SESSION_DAYS * 86_400,
+  });
 }
 
 // ---- Sign-in ----
@@ -90,12 +109,7 @@ admin.post("/admin/verify", async (c) => {
     return c.html(page("Kod", codeView(email, message)), 400);
   }
   await sql`delete from admin_login_codes where email = ${email}`;
-  const token = await new SignJWT({}).setProtectedHeader({ alg: "HS256" }).setSubject(email)
-    .setAudience(AUDIENCE).setIssuedAt().setExpirationTime(`${SESSION_DAYS}d`).sign(secret);
-  setCookie(c, COOKIE, token, {
-    path: "/admin", httpOnly: true, sameSite: "Strict", secure: env.NODE_ENV === "production",
-    maxAge: SESSION_DAYS * 86_400,
-  });
+  await startSession(c, email);
   return c.redirect("/admin", 303);
 });
 
