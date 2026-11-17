@@ -65,7 +65,7 @@ Definition: one or two sentences, written for the pop-over.
 | Minuet | An elegant 18th-century dance in three beats | An elegant 18th-century dance in three beats, used as the third movement of Classical symphonies. |
 | Motet | A sacred choral piece on a Latin text | A sacred piece for choir, usually unaccompanied, on a Latin text; one of the main forms of Renaissance church music. |
 | Motif | A short musical idea that keeps returning | The smallest musical idea, just a few notes, from which a theme is built. |
-| Motto | A short figure that returns through a whole work like a signature | A short, recognisable group of notes that keeps coming back across a work or movement, often at important moments, so that it binds the music together. |
+| Motto | A short figure that returns through a work like a signature | A short, recognisable group of notes that keeps coming back across a work or movement, often at important moments, so that it binds the music together. |
 | Musette | A gentle dance over a bagpipe-like drone | A French country dance named after a small bagpipe, the musette. Its tune is played over a long-held low note that imitates the bagpipe's drone; in Baroque suites it often forms the middle section of a gavotte. |
 | Muted | Played with a device that softens and veils the sound | Played with a small device on the instrument that softens and veils the sound. |
 | Neoclassicism | Modern music that revives 18th-century forms and clarity | A trend of the early twentieth century in which composers such as Prokofiev and Stravinsky borrowed the forms, textures and lightness of eighteenth-century music, while keeping modern harmonies and rhythms. |
