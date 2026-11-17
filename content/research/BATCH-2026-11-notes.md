@@ -4,8 +4,7 @@ Temporary, like the brief. One entry per agent report: what to check or decide a
 
 ## Resume here (17 Nov 2026, session limit)
 
-- Drafts: `python3 content/research/check-drafts.py content/research/BATCH-2026-11.md`. On 17 Nov evening everything was ready except group J's `barber-violin-concerto` and `rodrigo-concierto-de-aranjuez` (agent told to finish its current piece and stop). Missing pieces: give them to a new agent with the same brief and the group J lines below.
-- Group D (Mozart VC 5, Schubert trio 2 and Arpeggione, Rossini, Hebrides) and group J reports may be missing below: read their research notes and shared notes instead.
+- Drafts: `python3 content/research/check-drafts.py content/research/BATCH-2026-11.md`. On 17 Nov evening 51 of 52 were ready. **Only `rodrigo-concierto-de-aranjuez` is not started** (no files): give it to a new agent with the same brief; it owns the new Rodrigo composer entry (portrait CC with credit, or null; he died 1999).
 - Then the merge, as in `project_information.md` §6.11: painting clashes (list below; `swap-painting.py`), `merge-drafts.py <ids>`, images, `content:build`, `fixtures`, commit. Op. 131 is not scheduled until the app build with the 7-segment switcher (commit 31d953a) is live.
 - Ask the product owner: Giorgione *The Tempest* for Vivaldi Summer (nudity); Stravinsky portrait (Anefo CC vs LoC PD vs null); artist repeats (Thomas Cole ×4, Monet ×3, Goya ×3, Turner, Corot, Rubens, Delacroix, Renoir, Wright).
 - Already done today, not part of the merge: Mahler 3 and 5 switched to the product owner's recordings (7da1cac, published).
@@ -89,3 +88,10 @@ Temporary, like the brief. One entry per agent report: what to check or decide a
 - schubert-arpeggione-sonata: Rostropovich / Britten 1968. Painting Erasmus Engert, *Viennese Domestic Garden* (weak link; two alternatives).
 - rossini-william-tell-overture: Karajan · BPO 1971 (venue null). Painting Diday, *Storm on Lake Geneva* (Commons file is a TIFF: convert for the pipeline). New composer Rossini. New terms "Ranz des vaches", "Galop".
 - mendelssohn-hebrides-overture: Abbado · LSO 1985. Painting Turner, *Staffa, Fingal's Cave* (Yale): **Turner third/fourth use with Siegfried Idyll**; this is the stronger Turner match, so swap the Idyll to Zünd.
+
+## Group J (4 of 5 done; Rodrigo not started)
+
+- elgar-serenade-for-strings: Barbirolli · Sinfonia of London 1962. Painting Arthur Hughes, *The Long Engagement* (Birmingham, CC0; tall: check the hero crop).
+- respighi-pines-of-rome: Karajan · BPO 1977–78. Painting Hendrik Voogd, *Italian Landscape with Umbrella Pines* (Rijksmuseum CC0). New composer Respighi (Becker & Maass 1927 photo, PD since 2024 in EU/TR).
+- gershwin-rhapsody-in-blue: Bernstein · Columbia SO 1959 (one track; possible cuts, slow tune ≈ 9:00 ±45 s). Painting Whistler, *Nocturne in Black and Gold: The Falling Rocket* (Detroit). New composer Gershwin (LoC Bain photo, small 1177 × 1536). New terms "Blue note", "Rhapsody". Whistler is also I's alternative for Debussy: if Debussy swaps off Monet, don't pick Whistler there.
+- barber-violin-concerto: Shaham / Previn · LSO 1993. Painting Hodler, *Lake Geneva Seen from Chexbres* (Basel). **Hodler also F's choice for the Brahms Double Concerto.** `key: null`, no key column (written fast at the end of the run: review this piece more closely). New term "Perpetuum mobile".
