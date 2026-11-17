@@ -271,7 +271,7 @@ async function loadDashboard() {
  * previews (bots) are left out. A visitor hash changes daily, so "kişi" counts a person once per day.
  */
 async function loadLinks(today: string, f: LinkFilter) {
-  const since = f.period === "all" ? sql`true` : sql`at > now() - make_interval(days => ${Number(f.period)})`;
+  const since = f.period === "all" ? sql`true` : sql`at > now() - make_interval(days => ${Number(f.period)}::int)`;
   const where = (except?: LinkTag) => {
     let w = sql`device <> 'bot' and ${since}`;
     for (const tag of Object.keys(LINK_TAGS) as LinkTag[]) {

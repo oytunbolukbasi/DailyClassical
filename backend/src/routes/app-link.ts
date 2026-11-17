@@ -43,7 +43,7 @@ async function count(c: Parameters<typeof enforceRateLimit>[0], tags: ReturnType
       insert into link_clicks (source, medium, campaign, content, ct, device, in_app, referrer, visitor)
       values (${tags.source}, ${tags.medium}, ${tags.campaign}, ${tags.content}, ${ct}, ${deviceOf(ua)}, ${inAppOf(ua)},
               ${referrerHost(c.req.header("referer"))}, ${visitor})`;
-    if (Math.random() < 0.01) await sql`delete from link_clicks where at < now() - make_interval(days => ${RETENTION_DAYS})`;
+    if (Math.random() < 0.01) await sql`delete from link_clicks where at < now() - make_interval(days => ${RETENTION_DAYS}::int)`;
   } catch (err) {
     console.error("link click not recorded", err);
   }
