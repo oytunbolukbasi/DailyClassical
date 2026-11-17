@@ -8,22 +8,31 @@ title: Symphony No. 5
 catalogue: null
 key: C-sharp minor (ends in D major)
 year: 1902
-duration_min: 75
+duration_min: 72
 movement_count: 5
 hook: From a funeral march to a love song to laughter.
 reference_recording:
-  conductor: Leonard Bernstein
+  conductor: Pierre Boulez
   orchestra: Wiener Philharmoniker
-  soloists:
-    - { name: Friedrich Pfeiffer, role: horn }
   label: Deutsche Grammophon
-  catalogue_number: "423 608-2"
-  recorded: "6–8 September 1987 (live)"
-  venue: Alte Oper, Frankfurt am Main
-  release_year: 1988
-  year: 1988
-  spotify_url: https://open.spotify.com/album/5ENEAfJFQNuvww1jxjcnbu
+  catalogue_number: "453 416-2"
+  recorded: "March 1996"
+  venue: Musikverein (Großer Saal), Vienna
+  release_year: 1997
+  year: 1997
+  spotify_url: https://open.spotify.com/album/2mxjaerL9JdNbLnGdCfh8Q
 also_recommended:
+  - conductor: Leonard Bernstein
+    orchestra: Wiener Philharmoniker
+    soloists:
+      - { name: Friedrich Pfeiffer, role: horn }
+    label: Deutsche Grammophon
+    catalogue_number: "423 608-2"
+    recorded: "6–8 September 1987 (live)"
+    venue: Alte Oper, Frankfurt am Main
+    release_year: 1988
+    year: 1988
+    spotify_url: https://open.spotify.com/album/5ENEAfJFQNuvww1jxjcnbu
   - conductor: Riccardo Chailly
     orchestra: Royal Concertgebouw Orchestra
     soloists:
@@ -56,11 +65,11 @@ painting:
 
 | | Title or tempo | Key | Duration |
 | --- | --- | --- | --- |
-| I | Trauermarsch (Funeral March) | C-sharp minor | 14:35 |
-| II | Stürmisch bewegt (Stormy, with greatest vehemence) | A minor | 15:01 |
-| III | Scherzo | D major | 19:08 |
-| IV | Adagietto | F major | 11:18 |
-| V | Rondo-Finale | D major | 15:00 |
+| I | Trauermarsch (Funeral March) | C-sharp minor | 12:52 |
+| II | Stürmisch bewegt (Stormy, with greatest vehemence) | A minor | 15:02 |
+| III | Scherzo | D major | 18:12 |
+| IV | Adagietto | F major | 10:59 |
+| V | Rondo-Finale | D major | 15:12 |
 
 ### I. Trauermarsch
 
@@ -71,11 +80,11 @@ painting:
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | A solo trumpet: three short notes and a long one, climbing | The fanfare. Its rhythm recalls the motto of Beethoven's Fifth |
-| ≈ 0:30 | The full orchestra crashes in | The procession begins |
-| ≈ 1:20 | A weary, song-like melody in the violins and cellos | The march theme itself |
-| ≈ 5:30 | A sudden eruption: the trumpet shrieks over churning strings | The first outburst. Mahler marks it "Suddenly faster. Passionate. Wild" |
-| ≈ 7:30 | The trumpet fanfare, then the march in the woodwinds | The procession resumes |
-| ≈ 10:30 | A quieter, grieving melody in the strings that swells to a climax and collapses | The second episode |
+| ≈ 0:25 | The full orchestra crashes in | The procession begins |
+| ≈ 1:10 | A weary, song-like melody in the violins and cellos | The march theme itself |
+| ≈ 5:25 | A sudden eruption: the trumpet shrieks over churning strings | The first outburst. Mahler marks it "Suddenly faster. Passionate. Wild" |
+| ≈ 7:25 | The trumpet fanfare, then the march in the woodwinds | The procession resumes |
+| ≈ 10:00 | A quieter, grieving melody in the strings that swells to a climax and collapses | The second episode |
 | Last minute | The fanfare fades, first on trumpet, then on flute; one soft thud from the low strings | The procession disappears into the distance. The final note is [[pizzicato]] |
 
 ### II. Stürmisch bewegt
@@ -87,11 +96,11 @@ painting:
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | Snarling basses, shrieking woodwinds | The storm |
-| ≈ 1:30 | The tempo drops; cellos sing a slow lament | A melody from the first movement's funeral march returns |
+| ≈ 1:20 | The tempo drops; cellos sing a slow lament | A melody from the first movement's funeral march returns |
 | ≈ 4:30 | Cellos alone, very quietly, over a soft drum roll | A long, bare [[recitative]]. The loneliest passage in the symphony |
 | Middle | Storm and lament keep interrupting each other | The two moods fight for control |
-| ≈ 11:30 | Brass ring out in a bright, glorious hymn | A [[chorale]] in D major. For a moment, victory seems to have arrived |
-| ≈ 12:30 | The hymn crumbles; the storm returns, then scatters into fragments | The vision fails. It will come back in the finale |
+| ≈ 12:05 | Brass ring out in a bright, glorious hymn | A [[chorale]] in D major. For a moment, victory seems to have arrived |
+| ≈ 12:55 | The hymn crumbles; the storm returns, then scatters into fragments | The vision fails. It will come back in the finale |
 | Last seconds | Quiet scraps and a soft drum tap | The movement evaporates |
 
 ### III. Scherzo
@@ -103,10 +112,10 @@ painting:
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | Four horns call out; a solo horn leads a bouncing country dance | The [[scherzo]] theme, a robust [[Ländler]]. The horn has an [[obbligato]] part all the way through |
-| ≈ 2:30 | A softer, more elegant waltz in the strings | The first trio. City manners after country ones |
-| ≈ 6:00 | The music stops; the solo horn calls and others answer across silences | Horn calls echoing as if across mountains |
-| ≈ 8:00 | Strings pluck a shy little waltz | A [[pizzicato]] episode, tentative and intimate |
-| ≈ 11:00 | The dances return and pile on top of one another | Mahler combines his themes with great contrapuntal skill |
+| ≈ 2:35 | A softer, more elegant waltz in the strings | The first trio. City manners after country ones |
+| ≈ 4:45 | The music stops; the solo horn calls and others answer across silences | Horn calls echoing as if across mountains |
+| ≈ 7:05 | Strings pluck a shy little waltz | A [[pizzicato]] episode, tentative and intimate |
+| ≈ 11:20 | The dances return and pile on top of one another | Mahler combines his themes with great contrapuntal skill |
 | Last minute | The pace turns frantic; a wooden clapper rattles | A wild close |
 
 ### IV. Adagietto
@@ -118,12 +127,12 @@ painting:
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | Slow harp notes; violins enter with a melody that hangs in the air | The main theme. Each phrase leans on a note that does not belong, then resolves |
-| ≈ 4:00 | The harp falls silent; the music grows more restless and climbs higher | The middle section, moving through distant keys |
-| ≈ 7:30 | The violins slide slowly downward from a great height | A long [[glissando]] back to the main theme |
-| ≈ 8:00 | The opening melody returns with the harp | The return |
+| ≈ 4:20 | The harp falls silent; the music grows more restless and climbs higher | The middle section, moving through distant keys |
+| ≈ 7:10 | The violins slide slowly downward from a great height | A long [[glissando]] back to the main theme |
+| ≈ 7:25 | The opening melody returns with the harp | The return |
 | Last minute | One last swell, and a long-held chord that takes its time to settle | The final resolution, delayed as long as possible |
 
-**In this recording.** Bernstein takes the movement very slowly. Other conductors play it in under eight minutes, which makes it sound more like a song and less like an elegy.
+**In this recording.** Boulez takes almost eleven minutes over the movement, which is on the slow side. Some conductors play it in under eight minutes, which makes it sound more like a song and less like an elegy.
 
 ### V. Rondo-Finale
 
@@ -134,11 +143,11 @@ painting:
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | One horn note; then bassoon, oboe and clarinet trade little phrases | A pastoral introduction. These scraps are the building blocks of the whole finale |
-| ≈ 1:00 | Horns in a relaxed, genial melody | The main rondo theme |
-| ≈ 1:50 | Cellos start a busy, running tune that the other strings take up in turn | The first [[fugue]] |
-| ≈ 3:20 | A graceful melody in the strings, light on its feet | The Adagietto theme, transformed from a slow love song into a quick dance |
+| ≈ 0:35 | Horns in a relaxed, genial melody | The main rondo theme |
+| ≈ 1:15 | Cellos start a busy, running tune that the other strings take up in turn | The first [[fugue]] |
+| ≈ 3:15 | A graceful melody in the strings, light on its feet | The Adagietto theme, transformed from a slow love song into a quick dance |
 | Middle | The rondo theme, the fugue and the dance tune keep coming round, each time more elaborate | The movement builds in waves |
-| ≈ 13:00 | The brass ring out the glorious hymn | The [[chorale]] that collapsed in the second movement returns, and this time it holds |
+| ≈ 13:20 | The brass ring out the glorious hymn | The [[chorale]] that collapsed in the second movement returns, and this time it holds |
 | Last minute | A breathless, accelerating dash | Laughter at the end of a symphony that began with a funeral |
 
 ### Threads

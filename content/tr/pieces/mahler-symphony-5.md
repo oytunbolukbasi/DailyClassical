@@ -9,22 +9,31 @@ title: 5. Senfoni
 catalogue: null
 key: Do diyez minör (Re majörde biter)
 year: 1902
-duration_min: 75
+duration_min: 72
 movement_count: 5
 hook: Bir cenaze marşından bir aşk şarkısına, oradan kahkahaya.
 reference_recording:
-  conductor: Leonard Bernstein
+  conductor: Pierre Boulez
   orchestra: Wiener Philharmoniker
-  soloists:
-    - { name: Friedrich Pfeiffer, role: horn }
   label: Deutsche Grammophon
-  catalogue_number: "423 608-2"
-  recorded: "6–8 September 1987 (live)"
-  venue: Alte Oper, Frankfurt am Main
-  release_year: 1988
-  year: 1988
-  spotify_url: https://open.spotify.com/album/5ENEAfJFQNuvww1jxjcnbu
+  catalogue_number: "453 416-2"
+  recorded: "March 1996"
+  venue: Musikverein (Großer Saal), Vienna
+  release_year: 1997
+  year: 1997
+  spotify_url: https://open.spotify.com/album/2mxjaerL9JdNbLnGdCfh8Q
 also_recommended:
+  - conductor: Leonard Bernstein
+    orchestra: Wiener Philharmoniker
+    soloists:
+      - { name: Friedrich Pfeiffer, role: horn }
+    label: Deutsche Grammophon
+    catalogue_number: "423 608-2"
+    recorded: "6–8 September 1987 (live)"
+    venue: Alte Oper, Frankfurt am Main
+    release_year: 1988
+    year: 1988
+    spotify_url: https://open.spotify.com/album/5ENEAfJFQNuvww1jxjcnbu
   - conductor: Riccardo Chailly
     orchestra: Royal Concertgebouw Orchestra
     soloists:
@@ -57,11 +66,11 @@ painting:
 
 | | Başlık veya tempo | Ton | Süre |
 | --- | --- | --- | --- |
-| I | Trauermarsch (Cenaze marşı) | Do diyez minör | 14:35 |
-| II | Stürmisch bewegt (Fırtınalı, en büyük şiddetle) | La minör | 15:01 |
-| III | Scherzo | Re majör | 19:08 |
-| IV | Adagietto | Fa majör | 11:18 |
-| V | Rondo-Finale | Re majör | 15:00 |
+| I | Trauermarsch (Cenaze marşı) | Do diyez minör | 12:52 |
+| II | Stürmisch bewegt (Fırtınalı, en büyük şiddetle) | La minör | 15:02 |
+| III | Scherzo | Re majör | 18:12 |
+| IV | Adagietto | Fa majör | 10:59 |
+| V | Rondo-Finale | Re majör | 15:12 |
 
 ### I. Trauermarsch
 
@@ -72,11 +81,11 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Solo bir trompet: üç kısa ve bir uzun nota, tırmanarak | Fanfar. Ritmi, Beethoven'ın Beşinci'sindeki slogan motifi hatırlatıyor |
-| ≈ 0:30 | Tam orkestra gürleyerek girer | Alay başlıyor |
-| ≈ 1:20 | Kemanlarda ve çellolarda yorgun, şarkı gibi bir melodi | Marş temasının kendisi |
-| ≈ 5:30 | Ani bir patlama: trompet çalkalanan yaylıların üzerinde çığlık atar | İlk patlama. Mahler burayı "Birden daha hızlı. Tutkulu. Vahşi" diye işaretler |
-| ≈ 7:30 | Trompet fanfarı, ardından tahta üflemelilerde marş | Alay yeniden yola koyuluyor |
-| ≈ 10:30 | Yaylılarda daha sessiz, yas tutan bir melodi; bir doruğa kabarır ve çöker | İkinci ara bölüm |
+| ≈ 0:25 | Tam orkestra gürleyerek girer | Alay başlıyor |
+| ≈ 1:10 | Kemanlarda ve çellolarda yorgun, şarkı gibi bir melodi | Marş temasının kendisi |
+| ≈ 5:25 | Ani bir patlama: trompet çalkalanan yaylıların üzerinde çığlık atar | İlk patlama. Mahler burayı "Birden daha hızlı. Tutkulu. Vahşi" diye işaretler |
+| ≈ 7:25 | Trompet fanfarı, ardından tahta üflemelilerde marş | Alay yeniden yola koyuluyor |
+| ≈ 10:00 | Yaylılarda daha sessiz, yas tutan bir melodi; bir doruğa kabarır ve çöker | İkinci ara bölüm |
 | Son dakika | Fanfar önce trompette, sonra flütte söner; pes yaylılardan tek, yumuşak bir tok ses | Alay uzaklarda kayboluyor. Son nota [[pizzicato|pizzicato]] |
 
 ### II. Stürmisch bewegt
@@ -88,11 +97,11 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Hırlayan kontrbaslar, çığlık atan tahta üflemeliler | Fırtına |
-| ≈ 1:30 | Tempo düşer; çellolar yavaş bir ağıt söyler | Birinci bölümün cenaze marşından bir melodi geri dönüyor |
+| ≈ 1:20 | Tempo düşer; çellolar yavaş bir ağıt söyler | Birinci bölümün cenaze marşından bir melodi geri dönüyor |
 | ≈ 4:30 | Yumuşak bir davul gümbürtüsünün üzerinde, çok sessiz, yalnız çellolar | Uzun, çıplak bir [[recitative|resitatif]]. Senfoninin en yalnız pasajı |
 | Orta | Fırtına ve ağıt birbirinin sözünü kesip durur | İki ruh hâli üstünlük için çarpışıyor |
-| ≈ 11:30 | Bakırlar parlak, görkemli bir ilahiyle çınlar | Re majörde bir [[chorale|koral]]. Bir an için zafer gelmiş gibi |
-| ≈ 12:30 | İlahi ufalanır; fırtına geri döner, sonra parçalara dağılır | Görüntü tutunamıyor. Finalde geri gelecek |
+| ≈ 12:05 | Bakırlar parlak, görkemli bir ilahiyle çınlar | Re majörde bir [[chorale|koral]]. Bir an için zafer gelmiş gibi |
+| ≈ 12:55 | İlahi ufalanır; fırtına geri döner, sonra parçalara dağılır | Görüntü tutunamıyor. Finalde geri gelecek |
 | Son saniyeler | Sessiz kırıntılar ve yumuşak bir davul vuruşu | Bölüm buharlaşıp gidiyor |
 
 ### III. Scherzo
@@ -104,10 +113,10 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Dört korno seslenir; solo bir korno zıplayan bir köy dansını önden götürür | [[scherzo|Scherzo]] teması, gürbüz bir [[Ländler|ländler]]. Kornonun baştan sona bir [[obbligato|obligato]] partisi var |
-| ≈ 2:30 | Yaylılarda daha yumuşak, daha zarif bir vals | Birinci trio. Köy terbiyesinden sonra şehir terbiyesi |
-| ≈ 6:00 | Müzik durur; solo korno seslenir, diğerleri sessizliklerin ötesinden cevap verir | Dağların arasında yankılanır gibi korno çağrıları |
-| ≈ 8:00 | Yaylılar, telleri parmakla çekerek utangaç, küçük bir vals çalar | Çekingen ve içten bir [[pizzicato|pizzicato]] ara bölümü |
-| ≈ 11:00 | Danslar geri döner ve üst üste yığılır | Mahler temalarını büyük bir kontrpuan ustalığıyla birleştiriyor |
+| ≈ 2:35 | Yaylılarda daha yumuşak, daha zarif bir vals | Birinci trio. Köy terbiyesinden sonra şehir terbiyesi |
+| ≈ 4:45 | Müzik durur; solo korno seslenir, diğerleri sessizliklerin ötesinden cevap verir | Dağların arasında yankılanır gibi korno çağrıları |
+| ≈ 7:05 | Yaylılar, telleri parmakla çekerek utangaç, küçük bir vals çalar | Çekingen ve içten bir [[pizzicato|pizzicato]] ara bölümü |
+| ≈ 11:20 | Danslar geri döner ve üst üste yığılır | Mahler temalarını büyük bir kontrpuan ustalığıyla birleştiriyor |
 | Son dakika | Tempo çılgınca hızlanır; tahta bir çırpıcı takırdar | Vahşi bir kapanış |
 
 ### IV. Adagietto
@@ -119,12 +128,12 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Yavaş arp notaları; kemanlar havada asılı kalan bir melodiyle girer | Ana tema. Her cümle oraya ait olmayan bir notaya yaslanır, sonra çözülür |
-| ≈ 4:00 | Arp susar; müzik daha huzursuz hâle gelir ve daha yükseğe tırmanır | Orta kısım, uzak tonlardan geçerek |
-| ≈ 7:30 | Kemanlar büyük bir yükseklikten yavaşça aşağı kayar | Ana temaya geri dönen uzun bir [[glissando|glissando]] |
-| ≈ 8:00 | Açılış melodisi arpla birlikte geri döner | Dönüş |
+| ≈ 4:20 | Arp susar; müzik daha huzursuz hâle gelir ve daha yükseğe tırmanır | Orta kısım, uzak tonlardan geçerek |
+| ≈ 7:10 | Kemanlar büyük bir yükseklikten yavaşça aşağı kayar | Ana temaya geri dönen uzun bir [[glissando|glissando]] |
+| ≈ 7:25 | Açılış melodisi arpla birlikte geri döner | Dönüş |
 | Son dakika | Son bir kabarma ve yerine oturmak için acele etmeyen, uzun tutulan bir akor | Mümkün olduğunca geciktirilmiş son çözülme |
 
-**Bu kayıtta.** Bernstein bölümü çok yavaş çalıyor. Başka şefler onu sekiz dakikanın altında çalar; o zaman bir ağıttan çok bir şarkı gibi duyulur.
+**Bu kayıtta.** Boulez bölüme neredeyse on bir dakika ayırıyor; bu, yavaş sayılacak bir tempo. Bazı şefler onu sekiz dakikanın altında çalar; o zaman bir ağıttan çok bir şarkı gibi duyulur.
 
 ### V. Rondo-Finale
 
@@ -135,11 +144,11 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Tek bir korno notası; ardından fagot, obua ve klarnet küçük cümleler paslaşır | Pastoral bir giriş. Bu kırıntılar bütün finalin yapı taşları |
-| ≈ 1:00 | Kornolarda rahat, güler yüzlü bir melodi | Ana rondo teması |
-| ≈ 1:50 | Çellolar hareketli, koşturan bir ezgiye başlar; diğer yaylılar sırayla devralır | Birinci [[fugue|füg]] |
-| ≈ 3:20 | Yaylılarda zarif, ayağı hafif bir melodi | Adagietto teması, yavaş bir aşk şarkısından hızlı bir dansa dönüşmüş |
+| ≈ 0:35 | Kornolarda rahat, güler yüzlü bir melodi | Ana rondo teması |
+| ≈ 1:15 | Çellolar hareketli, koşturan bir ezgiye başlar; diğer yaylılar sırayla devralır | Birinci [[fugue|füg]] |
+| ≈ 3:15 | Yaylılarda zarif, ayağı hafif bir melodi | Adagietto teması, yavaş bir aşk şarkısından hızlı bir dansa dönüşmüş |
 | Orta | Rondo teması, füg ve dans ezgisi her seferinde daha süslü biçimde dönüp dolaşır | Bölüm dalga dalga yükseliyor |
-| ≈ 13:00 | Bakırlar görkemli ilahiyi çınlatır | İkinci bölümde çöken [[chorale|koral]] geri dönüyor ve bu kez ayakta kalıyor |
+| ≈ 13:20 | Bakırlar görkemli ilahiyi çınlatır | İkinci bölümde çöken [[chorale|koral]] geri dönüyor ve bu kez ayakta kalıyor |
 | Son dakika | Nefes nefese, hızlanan bir koşu | Bir cenazeyle başlayan senfoninin sonunda kahkaha |
 
 ### Bağlayan ipler

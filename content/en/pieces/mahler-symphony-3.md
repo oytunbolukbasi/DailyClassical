@@ -8,24 +8,37 @@ title: Symphony No. 3 in D minor
 catalogue: null
 key: D minor (ends in D major)
 year: 1896
-duration_min: 100
+duration_min: 99
 movement_count: 6
 hook: A whole summer in six movements, from sleeping rock to flowers, animals, angels and love.
 reference_recording:
-  conductor: Leonard Bernstein
-  orchestra: New York Philharmonic
+  conductor: Gustavo Dudamel
+  orchestra: Berliner Philharmoniker
   soloists:
-    - { name: Martha Lipton, role: mezzo-soprano }
-    - { name: John Ware, role: posthorn }
-  chorus: Women's Chorus of the Schola Cantorum; Boys' Choir of the Church of the Transfiguration
-  label: Columbia Masterworks (now Sony Classical)
-  catalogue_number: "M2S 675 (LP)"
-  recorded: "3 April 1961"
-  venue: Manhattan Center, New York
-  release_year: 1962
-  year: 1962
-  spotify_url: https://open.spotify.com/album/4RvVQ968WriWyWv37Aa99q
+    - { name: Gerhild Romberger, role: contralto }
+    - { name: Gábor Tarkövi, role: posthorn }
+  chorus: Damen des Rundfunkchors Berlin; Knaben des Staats- und Domchors Berlin
+  label: Berliner Philharmoniker Recordings
+  catalogue_number: "BPHR 20036"
+  recorded: "13 June 2014 (live)"
+  venue: Philharmonie, Berlin
+  release_year: 2020
+  year: 2020
+  spotify_url: https://open.spotify.com/album/3XOFx2A5iGm3L99jxWPexS
 also_recommended:
+  - conductor: Leonard Bernstein
+    orchestra: New York Philharmonic
+    soloists:
+      - { name: Martha Lipton, role: mezzo-soprano }
+      - { name: John Ware, role: posthorn }
+    chorus: Women's Chorus of the Schola Cantorum; Boys' Choir of the Church of the Transfiguration
+    label: Columbia Masterworks (now Sony Classical)
+    catalogue_number: "M2S 675 (LP)"
+    recorded: "3 April 1961"
+    venue: Manhattan Center, New York
+    release_year: 1962
+    year: 1962
+    spotify_url: https://open.spotify.com/album/4RvVQ968WriWyWv37Aa99q
   - conductor: Bernard Haitink
     orchestra: Symphonieorchester des Bayerischen Rundfunks
     soloists:
@@ -51,19 +64,19 @@ painting:
 - Composed mainly in the summers of 1895 and 1896 at Steinbach, on the shore of Lake Attersee in Upper Austria, where Mahler had a small composing hut. He conducted the first complete performance in Krefeld on 9 June 1902.
 - The longest symphony in the standard repertoire. The first movement alone lasts over half an hour.
 - Mahler gave each movement a private title, then withdrew them before publication: "Pan awakes, summer marches in", "What the flowers in the meadow tell me", "What the animals in the forest tell me", "What man tells me", "What the angels tell me" and "What love tells me".
-- Two singing movements: a mezzo-soprano sings words by Nietzsche (IV), then women's and boys' voices sing a folk poem about angels (V). The last three movements run on without a break.
+- Two singing movements: a contralto sings words by Nietzsche (IV), then women's and boys' voices sing a folk poem about angels (V). The last three movements run on without a break.
 - In one line: nature wakes and summer marches in (I), flowers (II), animals (III), the human voice at midnight (IV), angels (V), love (VI).
 
 ### Movements
 
 | | Title or tempo | Key | Duration |
 | --- | --- | --- | --- |
-| I | Kräftig. Entschieden. (Strong. Decisive.) | D minor to F major | 33:20 |
-| II | Tempo di Menuetto | A major | 10:10 |
-| III | Comodo. Scherzando. Ohne Hast. | C minor | 17:59 |
-| IV | Sehr langsam. Misterioso. | D major | 8:48 |
-| V | Lustig im Tempo und keck im Ausdruck | F major | 4:13 |
-| VI | Langsam. Ruhevoll. Empfunden. | D major | 25:09 |
+| I | Kräftig. Entschieden. (Strong. Decisive.) | D minor to F major | 33:34 |
+| II | Tempo di Menuetto | A major | 9:57 |
+| III | Comodo. Scherzando. Ohne Hast. | C minor | 17:48 |
+| IV | Sehr langsam. Misterioso. | D major | 9:18 |
+| V | Lustig im Tempo und keck im Ausdruck | F major | 4:18 |
+| VI | Langsam. Ruhevoll. Empfunden. | D major | 24:23 |
 
 ### I. Kräftig. Entschieden.
 
@@ -81,13 +94,13 @@ painting:
 | --- | --- | --- |
 | ≈ 0:00 | Eight horns in unison, loud and proud | The opening call. Its shape recalls the big tune in the finale of Brahms's First Symphony |
 | ≈ 0:45 | A thud of bass drum, then low, groaning brass and long pauses | Nature still asleep: "Pan awakes" |
-| ≈ 4:00 | A trombone solo, slow and declamatory, like a speech | The first of several long trombone solos |
-| ≈ 6:00 | Shrill woodwind trills and distant fanfares | First signs of summer |
+| ≈ 3:50 | A trombone solo, slow and declamatory, like a speech | The first of several long trombone solos |
+| ≈ 5:30 | Shrill woodwind trills and distant fanfares | First signs of summer |
 | ≈ 7:00 | The heavy, dark music returns, with the trombone again | Winter is not over yet |
-| ≈ 9:30 | Piccolos and clarinets start a light march; it slowly gathers players | Summer marches in |
-| ≈ 14:00–20:00 | The march breaks up, regroups and changes key; a solo violin sings | The [[development]] |
-| ≈ 20:30 | The march at full force: snare drums, cymbals, blaring brass | A rowdy procession, Mahler's "Bacchic" march |
-| ≈ 23:30 | Snare drums alone, then the eight horns again | The [[recapitulation]] begins with the opening call |
+| ≈ 9:35 | Piccolos and clarinets start a light march; it slowly gathers players | Summer marches in |
+| ≈ 14:25–20:15 | The march breaks up, regroups and changes key; a solo violin sings | The [[development]] |
+| ≈ 20:35 | The march at full force: snare drums, cymbals, blaring brass | A rowdy procession, Mahler's "Bacchic" march |
+| ≈ 28:30 | Snare drums alone, then the eight horns again | The [[recapitulation]] begins with the opening call |
 | Last minute | Brass fanfares over pounding timpani | A blazing finish in F major |
 
 **Things to notice**
@@ -103,10 +116,10 @@ painting:
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | A solo oboe with a graceful tune over plucked strings | The minuet |
-| ≈ 1:45 | Quicker, rustling music in flutes and violins | The first episode, like wind in the grass |
-| ≈ 3:20 | The oboe's tune returns | The minuet again |
-| ≈ 4:30 | Faster and stormier, with sharp accents | The second episode, now gusty |
-| ≈ 7:00 | The minuet once more, gentler than ever | The flowers settle |
+| ≈ 2:00 | Quicker, rustling music in flutes and violins | The first episode, like wind in the grass |
+| ≈ 3:05 | The oboe's tune returns | The minuet again |
+| ≈ 4:10 | Faster and stormier, with sharp accents | The second episode, now gusty |
+| ≈ 6:40 | The minuet once more, gentler than ever | The flowers settle |
 | Last seconds | A soft pluck of harp and glockenspiel | A light touch to end |
 
 ### III. Comodo. Scherzando. Ohne Hast.
@@ -118,34 +131,34 @@ painting:
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | Clarinets and piccolo chatter over plucked strings | The animals' scherzo, from Mahler's song "Ablösung im Sommer" |
-| ≈ 2:45 | Lighter, bouncing music in a skipping rhythm | A second dance |
-| ≈ 6:00 | Everything stops. A [[posthorn]] plays a long, nostalgic melody from a distance | The first posthorn solo, played [[offstage]] |
-| ≈ 8:30 | A sudden trumpet signal cuts in | An Austrian military call breaks the spell |
-| ≈ 10:45 | The chatter starts up again | The scherzo returns |
-| ≈ 13:50 | The posthorn again, even slower, with soft horns | The second posthorn solo |
+| ≈ 2:30 | Lighter, bouncing music in a skipping rhythm | A second dance |
+| ≈ 5:25 | Everything stops. A [[posthorn]] plays a long, nostalgic melody from a distance | The first posthorn solo, played [[offstage]] |
+| ≈ 10:15 | A sudden trumpet signal cuts in | An Austrian military call breaks the spell |
+| ≈ 10:35 | The chatter starts up again | The scherzo returns |
+| ≈ 13:20 | The posthorn again, even slower, with soft horns | The second posthorn solo |
 | Near the end | A sudden blast from the full orchestra | The animals scatter |
 | Last seconds | A quick, abrupt close | Back into the forest |
 
-**In this recording.** The posthorn solos are played by John Ware.
+**In this recording.** A live concert in the Berlin Philharmonie on 13 June 2014. The posthorn solos are played offstage by Gábor Tarkövi.
 
 ### IV. Sehr langsam. Misterioso.
 
-**Summary.** "What man tells me." Midnight. A mezzo-soprano sings the "Midnight Song" from Nietzsche's *Thus Spoke Zarathustra*: the world is deep, its pain is deep, but joy is deeper still and wants eternity.
+**Summary.** "What man tells me." Midnight. A contralto sings the "Midnight Song" from Nietzsche's *Thus Spoke Zarathustra*: the world is deep, its pain is deep, but joy is deeper still and wants eternity.
 
 **Listening stops**
 
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | Low strings rocking between two notes, very softly | Darkness |
-| ≈ 0:40 | The voice enters, low and slow: "O Mensch! Gib acht!" (O man, take heed!) | Nietzsche's poem begins |
-| ≈ 1:50 | An oboe slides upwards | A night bird. Mahler asks for a [[glissando]] |
-| ≈ 4:30 | A solo violin and horns warm the music a little | The poem turns from pain to joy |
-| ≈ 7:00 | The voice sings its last, long-held line | Joy "wants eternity": the poem's final words |
+| ≈ 0:45 | The voice enters, low and slow: "O Mensch! Gib acht!" (O man, take heed!) | Nietzsche's poem begins |
+| ≈ 1:55 | An oboe slides upwards | A night bird. Mahler asks for a [[glissando]] |
+| ≈ 4:50 | A solo violin and horns warm the music a little | The poem turns from pain to joy |
+| ≈ 7:25 | The voice sings its last, long-held line | Joy "wants eternity": the poem's final words |
 | Last seconds | A soft held chord | The angels' song follows without a pause |
 
 ### V. Lustig im Tempo und keck im Ausdruck
 
-**Summary.** "What the angels tell me." Boys' voices imitate church bells while women sing a folk poem from *Des Knaben Wunderhorn* about three angels. The mezzo-soprano sings the part of a sinner who weeps and is promised heaven.
+**Summary.** "What the angels tell me." Boys' voices imitate church bells while women sing a folk poem from *Des Knaben Wunderhorn* about three angels. The contralto sings the part of a sinner who weeps and is promised heaven.
 
 **Listening stops**
 
@@ -153,7 +166,7 @@ painting:
 | --- | --- | --- |
 | ≈ 0:00 | Boys singing "Bimm bamm" like bells, with real bells and glockenspiel | The bells of heaven |
 | ≈ 0:15 | Women's voices sing a bright, simple tune | "Es sungen drei Engel" (Three angels sang) |
-| ≈ 1:30 | The mezzo-soprano enters, troubled | The sinner's lament: the Ten Commandments have been broken |
+| ≈ 1:30 | The contralto enters, troubled | The sinner's lament: the Ten Commandments have been broken |
 | ≈ 2:00 | The music darkens for a moment; a gong sounds | The plea for mercy |
 | ≈ 2:45 | The bells and the bright tune return | Heavenly joy is promised |
 | Last seconds | The bells fade one by one | The final movement begins at once |
@@ -167,13 +180,13 @@ painting:
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | Strings alone, very softly, a broad melody that rises step by step | The love theme |
-| ≈ 4:10 | The music grows restless and darker, in the minor | The first contrast |
-| ≈ 7:00 | The hymn returns, with woodwinds joining | The theme, warmer |
-| ≈ 11:00 | A long build-up, heavier and heavier | The second contrast, building to a crisis |
-| ≈ 13:30 | A harsh, crushing climax, then near silence | The climax fails |
-| ≈ 15:00 | A flute and piccolo alone, high above quivering strings, then a quiet brass [[chorale]] | Recovery |
-| ≈ 18:00 | The hymn begins its final ascent | The last build |
-| ≈ 21:30 | Trumpets and trombones take the theme, fortissimo | The summit |
+| ≈ 4:00 | The music grows restless and darker, in the minor | The first contrast |
+| ≈ 7:05 | The hymn returns, with woodwinds joining | The theme, warmer |
+| ≈ 10:35 | A long build-up, heavier and heavier | The second contrast, building to a crisis |
+| ≈ 13:40 | A harsh, crushing climax, then near silence | The climax fails |
+| ≈ 14:30 | A flute and piccolo alone, high above quivering strings, then a quiet brass [[chorale]] | Recovery |
+| ≈ 17:25 | The hymn begins its final ascent | The last build |
+| ≈ 21:00 | Trumpets and trombones take the theme, fortissimo | The summit |
 | Last 2 minutes | Repeated D major chords, with solemn strokes on the timpani | A long, unhurried affirmation |
 
 **Things to notice**
