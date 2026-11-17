@@ -136,6 +136,7 @@ admin.get("/admin/diagnostics/:id", async (c) => {
 type Recording = { conductor: string | null; orchestra: string | null; chorus: string | null; soloists: { name: string }[] | null; release_year: number | null; spotify_album_id: string | null };
 type PieceRow = Recording & { piece_id: string; title: string | null; composer: string | null; artist: string | null; painting_title: string | null; image_url: string | null; painting_source: string | null; readers: number; opens: number; taps: number };
 type ScheduleRow = PieceRow & { day: string };
+type LinkGroup = { source: string; medium: string; ct: string; clicks: number; visitors: number; ios: number; instagram: number; last_seen: string };
 type AdGroup = { ad_network_id: string | null; source_identifier: string; installs: number; redownloads: number; read: number; paid: number; last_seen: string };
 type DiagnosticGroup = { signature: string; kind: string; n: number; test_only: boolean; versions: string[]; os: string[]; last_seen: string; latest_id: string };
 const DIAGNOSTIC_KINDS: Record<string, string> = { crash: "Çökme", hang: "Donma", launch: "Yavaş açılış", cpu: "Aşırı işlemci", disk: "Aşırı disk yazma" };
@@ -242,7 +243,23 @@ async function loadDashboard() {
       max(received_at)::text as last_seen
     from ad_postbacks where received_at > now() - interval '90 days'
     group by ad_network_id, coalesce(source_identifier, '—') order by max(received_at) desc limit 50`;
-  return { today, kpi: kpi!, series, schedule, catalogue, prompts, diagTotals, diagGroups, adGroups };
+  // Clicks on dailyclassical.co/app (routes/app-link.ts), last 30 days, link previews left out.
+  // A visitor is counted once per day (the hash changes daily), so "kişi" can overcount across days.
+  const linkGroups = await sql<LinkGroup[]>`
+    select coalesce(source, '—') as source, coalesce(medium, '—') as medium, ct,
+      count(*)::int as clicks,
+      count(distinct (visitor, at::date))::int as visitors,
+      count(*) filter (where device = 'ios')::int as ios,
+      count(*) filter (where in_app = 'instagram')::int as instagram,
+      max(at)::text as last_seen
+    from link_clicks where at > now() - interval '30 days' and device <> 'bot'
+    group by 1, 2, 3 order by count(*) desc limit 50`;
+  const linkDays = await sql<{ day: string; n: number }[]>`
+    select d::date::text as day, count(c.id)::int as n
+    from generate_series(${today}::date - 29, ${today}::date, interval '1 day') d
+    left join link_clicks c on (c.at at time zone ${TZ})::date = d::date and c.device <> 'bot'
+    group by d order by d`;
+  return { today, kpi: kpi!, series, schedule, catalogue, prompts, diagTotals, diagGroups, adGroups, linkGroups, linkDays };
 }
 
 // ---- Views ----
@@ -303,7 +320,8 @@ function chart(series: { day: string; n: number }[]) {
 }
 
 async function dashboardView(email: string) {
-  const { today, kpi, series, schedule, catalogue, prompts, diagTotals, diagGroups, adGroups } = await loadDashboard();
+  const { today, kpi, series, schedule, catalogue, prompts, diagTotals, diagGroups, adGroups, linkGroups, linkDays } = await loadDashboard();
+  const linkTotal = (k: "clicks" | "visitors" | "ios" | "instagram") => linkGroups.reduce((a, g) => a + g[k], 0);
   const adTotal = (k: "installs" | "read" | "paid") => adGroups.reduce((a, g) => a + g[k], 0);
   const diagCount = (...kinds: string[]) => diagTotals.filter((r) => kinds.includes(r.kind)).reduce((a, r) => a + r.n, 0);
   const seen = (t: string) => new Intl.DateTimeFormat("tr-TR", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: TZ }).format(new Date(t));
@@ -408,6 +426,37 @@ async function dashboardView(email: string) {
           <li><b>Kampanya</b> sütunu, reklam ağının kampanyaya verdiği kısa kimliktir; Meta'daki kampanya adına karşılığı Ads Manager'daki kampanya sonuçlarıyla eşleştirilir. Kampanya başına kurulumları Meta Ads Manager da (kendi tahminiyle) gösterir.</li>
           <li>Değerleri 1.2'den itibaren Meta SDK'sı Meta Events Manager'daki şemaya göre verir; panel kaba değere bakar: düşük = açıldı ya da karşılama bitti, orta = bir eser açıldı, yüksek = deneme ya da satın alma.</li>
           <li>Bağlantıyla gelen trafik (Instagram profil bağlantısı, hikâye bağlantısı, trafik kampanyaları) ayrıca App Store Connect › Analytics › Acquisition › Campaigns'te, bağlantıdaki kampanya etiketine (ct) göre görünür.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section>
+      <h2>Bağlantı tıklamaları <span class="m">dailyclassical.co/app, son 30 gün</span></h2>
+      <div class="tiles">
+        ${tile("Tıklama", linkTotal("clicks"), "bağlantı önizlemeleri hariç")}
+        ${tile("Kişi", linkTotal("visitors"), "aynı gün tekrar tıklayan bir kez")}
+        ${tile("iPhone/iPad'den", linkTotal("ios"), "uygulamayı indirebilecek olanlar")}
+        ${tile("Instagram içinden", linkTotal("instagram"), "Instagram'ın tarayıcısında açılan")}
+      </div>
+      ${linkTotal("clicks") > 0 ? chart(linkDays) : ""}
+      ${linkGroups.length === 0
+        ? html`<p class="m small">Henüz tıklama yok.</p>`
+        : html`<div class="scroll" style="margin-top:12px"><table>
+        <thead><tr><th>Kaynak</th><th>Ortam</th><th>App Store kampanyası (ct)</th><th class="n">Tıklama</th><th class="n">Kişi</th><th class="n">iOS</th><th>Son</th></tr></thead>
+        <tbody>${linkGroups.map((g) => html`<tr>
+          <td>${g.source}</td><td>${g.medium}</td><td><code>${g.ct}</code></td>
+          ${num(g.clicks)}${num(g.visitors)}${num(g.ios)}
+          <td class="m">${seen(g.last_seen)}</td>
+        </tr>`)}</tbody>
+      </table></div>`}
+      <details class="note">
+        <summary>Bağlantı nasıl kullanılır, indirmeler nerede?</summary>
+        <ul>
+          <li>Her yerde aynı bağlantı, sonuna nereden geldiğini yazarak: <code>dailyclassical.co/app?utm_source=instagram&amp;utm_medium=profile</code> (profil), <code>…utm_medium=story</code> (hikâye), <code>…utm_source=x&amp;utm_medium=post</code>. İsteğe bağlı <code>utm_campaign</code> (ör. <code>kasim-lansman</code>) ve <code>utm_content</code>.</li>
+          <li>Bağlantı tıklamayı sayar ve kişiyi App Store'a gönderir. Kişi bilgisi tutulmaz: IP ya da cihaz kimliği kaydedilmez; "Kişi" yalnızca aynı gün tekrar tıklayanları ayırmak için günlük değişen bir özetten sayılır.</li>
+          <li><b>İndirmeler:</b> App Store'a giden bağlantı bir App Store kampanya bağlantısıdır (ct sütunundaki ad). Bu bağlantıdan gelen indirmeleri Apple, App Store Connect › Uygulama › Analytics › Acquisition › Campaigns'te bu adla gösterir (1–2 gün gecikmeli, yalnızca verilerini geliştiricilerle paylaşmayı kabul etmiş kullanıcılar).</li>
+          <li>Tıklamayla indirmeyi tek tek eşlemek mümkün değil: App Store araya girdiği için Apple bunu kişi bazında kimseye vermez (IP ya da cihaz parmak iziyle eşleştirmek Apple kurallarına aykırı).</li>
+          <li>Instagram vb. bağlantının önizlemesini almak için sayfayı kendisi açar; bu istekler kaydedilir ama sayılara katılmaz.</li>
         </ul>
       </details>
     </section>

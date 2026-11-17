@@ -78,6 +78,11 @@ export const AUTH_RATE_LIMITS = {
     // Copies of install postbacks from iOS (routes/attribution.ts): one per attributed install.
     { scope: "ip", limit: 120, windowMs: HOUR },
   ],
+  appLink: [
+    // Clicks on dailyclassical.co/app (routes/app-link.ts). Over the limit the visitor is still
+    // sent to the App Store; the click just isn't counted.
+    { scope: "ip", limit: 30, windowMs: 15 * MINUTE },
+  ],
   diagnostics: [
     // MetricKit reports (routes/diagnostics.ts): a handful a day at most from one phone.
     { scope: "ip", limit: 60, windowMs: HOUR },
@@ -190,7 +195,7 @@ export function clientIp(
 
 // ---- Enforcement (Postgres) ----
 
-function requestIp(c: Context): string {
+export function requestIp(c: Context): string {
   let socket: string | undefined;
   try {
     socket = getConnInfo(c).remote.address;

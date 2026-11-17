@@ -8,6 +8,7 @@ import { sql } from "./db/client.js";
 import { appleStatus } from "./lib/apple.js";
 import { account } from "./routes/account.js";
 import { admin } from "./routes/admin.js";
+import { appLink } from "./routes/app-link.js";
 import { attribution } from "./routes/attribution.js";
 import { config } from "./routes/config.js";
 import { content } from "./routes/content.js";
@@ -27,7 +28,8 @@ app.use("*", logger(), secureHeaders());
 // keep their address on www, as with the registrar's forwarding before.
 app.use("*", async (c, next) => {
   const host = (c.req.header("host") ?? "").toLowerCase().split(":")[0];
-  if (host === "dailyclassical.co" && (c.req.method === "GET" || c.req.method === "HEAD") && !c.req.path.startsWith("/.well-known/")) {
+  if (host === "dailyclassical.co" && (c.req.method === "GET" || c.req.method === "HEAD") && !c.req.path.startsWith("/.well-known/")
+      && c.req.path !== "/app") {  // the shared link (routes/app-link.ts) goes straight to the App Store
     const url = new URL(c.req.url);
     return c.redirect(`https://www.dailyclassical.co${url.pathname}${url.search}`, 301);
   }
@@ -60,6 +62,7 @@ app.route("/", attribution);
 app.route("/", resetPage);
 app.route("/", legal);
 app.route("/", admin);
+app.route("/", appLink);
 app.route("/", site);
 
 app.notFound((c) => c.json({ error: "not_found" }, 404));

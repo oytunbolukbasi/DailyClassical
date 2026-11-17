@@ -391,3 +391,26 @@ export const revenuecatEvents = pgTable(
   },
   (t) => [index("revenuecat_events_user_idx").on(t.userId)],
 );
+
+/**
+ * Clicks on dailyclassical.co/app (routes/app-link.ts), with the link's UTM tags. No address or
+ * device id: `visitor` is a keyed hash of address, user agent and day, so it only tells repeat
+ * clicks apart within one day. Link previews (bots) are stored but left out of the counts.
+ */
+export const linkClicks = pgTable(
+  "link_clicks",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    at: timestamp("at", { withTimezone: true }).notNull().defaultNow(),
+    source: text("source"),
+    medium: text("medium"),
+    campaign: text("campaign"),
+    content: text("content"),
+    ct: text("ct").notNull(),                 // the App Store campaign token sent on
+    device: text("device").notNull(),         // ios | android | desktop | bot
+    inApp: text("in_app"),                    // instagram, facebook, … (in-app browser)
+    referrer: text("referrer"),               // host only
+    visitor: text("visitor").notNull(),
+  },
+  (t) => [index("link_clicks_at_idx").on(t.at)],
+);
