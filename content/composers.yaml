@@ -1593,3 +1593,365 @@
     thumb: { width: 300, height: 400, bytes: 15774 }
     full: { width: 2310, height: 3080, bytes: 1051552 }
     placeholder_color: "#979797"
+
+- id: bizet
+  match: Georges Bizet
+  sort_name: Bizet, Georges
+  born: 1838
+  died: 1875
+  era: romantic
+  names:
+    en: { name: Georges Bizet, short: Bizet }
+    tr: { name: Georges Bizet, short: Bizet }
+  nationality: { en: French, tr: Fransız }
+  facts:
+    born: { en: "25 October 1838, Paris", tr: "25 Ekim 1838, Paris" }
+    died: { en: "3 June 1875, Bougival, near Paris", tr: "3 Haziran 1875, Bougival, Paris yakınları" }
+    symphonies: { en: "One, the Symphony in C, and the symphony *Roma*", tr: "Bir, Do Majör Senfoni; bir de *Roma* senfonisi" }
+    best_known_for: { en: "*Carmen*, *L'Arlésienne*, *The Pearl Fishers*", tr: "*Carmen*, *L'Arlésienne*, *İnci Avcıları*" }
+  bio:
+    en: |-
+      Bizet was born in Paris in 1838. He was registered as Alexandre César Léopold but baptised Georges, the name he kept. His father, a former wigmaker, had become a singing teacher, and his mother was a fine pianist. The boy was so gifted that the Paris Conservatoire took him at nine, below the official age. He won first prize for piano, studied composition with Fromental Halévy and became a friend of the young Camille Saint-Saëns. At seventeen he wrote a Symphony in C full of youthful sparkle, but never published it; it was found again in 1933 and first played in 1935.
+
+      In 1857 he won the Prix de Rome and spent nearly three years at the Villa Medici in Rome. Back in Paris, success would not come. The opera houses preferred established names, and he earned his living largely by arranging other composers' music. Neither *The Pearl Fishers* (1863) nor *The Fair Maid of Perth* (1867) succeeded at first. In 1869 he married Geneviève Halévy, his late teacher's daughter; their only son, Jacques, was born in 1872. That year his music for Alphonse Daudet's play *L'Arlésienne* failed in the theatre, but the concert suite he made from it was an immediate success.
+
+      His last opera, *Carmen*, opened at the Opéra-Comique on 3 March 1875, the day his appointment to the Legion of Honour was announced. Its realism and its heroine, who lives and dies by her own rules, shocked the audience, and Bizet believed it had failed. Three months later, on 3 June 1875, his sixth wedding anniversary, he died of a heart attack at Bougival, near Paris, aged 36. Within a few years *Carmen* was being performed all over the world, and it is now one of the most popular operas ever written.
+    tr: |-
+      Bizet 1838'de Paris'te doğdu. Nüfusa Alexandre César Léopold adıyla yazıldı, ama Georges adıyla vaftiz edildi ve hep bu adı kullandı. Eskiden perukçu olan babası şan öğretmenliğine geçmişti; annesi iyi bir piyanistti. Çocuk o kadar yetenekliydi ki Paris Konservatuvarı onu resmî yaşın altında, dokuz yaşında kabul etti. Piyanoda birincilik ödülü kazandı, Fromental Halévy'den kompozisyon dersi aldı ve genç Camille Saint-Saëns ile dost oldu. On yedi yaşında gençlik ışıltısıyla dolu bir Do Majör Senfoni yazdı ama onu hiç yayımlamadı; senfoni 1933'te yeniden bulundu ve ilk kez 1935'te çalındı.
+
+      1857'de Roma Ödülü'nü kazandı ve neredeyse üç yılını Roma'da, Villa Medici'de geçirdi. Paris'e döndüğünde başarı bir türlü gelmedi. Opera binaları tanınmış isimleri yeğliyordu; Bizet geçimini büyük ölçüde başka bestecilerin müziğini düzenleyerek sağladı. Ne *İnci Avcıları* (1863) ne de *Perth'in Güzel Kızı* (1867) ilk başta başarılı oldu. 1869'da ölen hocasının kızı Geneviève Halévy ile evlendi; tek çocukları Jacques 1872'de doğdu. Aynı yıl Alphonse Daudet'nin *L'Arlésienne* oyunu için yazdığı müzik tiyatroda başarısız oldu, ama ondan çıkardığı konser süiti hemen beğenildi.
+
+      Son operası *Carmen*, 3 Mart 1875'te, Legion d'honneur nişanına layık görüldüğünün duyurulduğu gün Opéra-Comique'te sahnelendi. Gerçekçiliği ve kendi kurallarıyla yaşayıp ölen kadın kahramanı seyirciyi sarstı; Bizet operanın başarısız olduğuna inandı. Üç ay sonra, 3 Haziran 1875'te, altıncı evlilik yıldönümünde, Paris yakınlarındaki Bougival'de kalp krizinden öldü; 36 yaşındaydı. Birkaç yıl içinde *Carmen* bütün dünyada sahneleniyordu; bugün yazılmış en sevilen operalardan biridir.
+  portrait:
+    artist: Étienne Carjat
+    title: { en: Georges Bizet, tr: Georges Bizet }
+    year: "1875"
+    collection: null
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Georges_bizet.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Georges_bizet.jpg
+    width: 1182
+    height: 1632
+    license: Public domain (photograph, 1875; photographer d. 1906; PD-old-100-1923)
+    focal_y: 0.25
+    hero: { width: 1182, height: 1632, bytes: 106470 }
+    thumb: { width: 300, height: 414, bytes: 17150 }
+    full: { width: 1182, height: 1632, bytes: 117918 }
+    placeholder_color: "#342c27"
+
+- id: gershwin
+  match: George Gershwin
+  sort_name: Gershwin, George
+  born: 1898
+  died: 1937
+  era: modern
+  names:
+    en: { name: George Gershwin, short: Gershwin }
+    tr: { name: George Gershwin, short: Gershwin }
+  nationality: { en: American, tr: Amerikalı }
+  facts:
+    born: { en: "26 September 1898, Brooklyn, New York", tr: "26 Eylül 1898, Brooklyn, New York" }
+    died: { en: "11 July 1937, Los Angeles", tr: "11 Temmuz 1937, Los Angeles" }
+    symphonies: { en: "None", tr: "Yok" }
+    best_known_for: { en: "*Rhapsody in Blue*, *An American in Paris*, the opera *Porgy and Bess*", tr: "*Rhapsody in Blue*, *Paris'te Bir Amerikalı*, *Porgy and Bess* operası" }
+  bio:
+    en: |-
+      Gershwin was born Jacob Gershwine in Brooklyn in 1898, the second son of Jewish immigrants from the Russian Empire, and grew up in the crowded streets of New York. Music meant nothing to him until he was about ten. Then his parents bought a piano for his older brother Ira, and it was George who could not leave it alone. His teacher Charles Hambitzer taught him a proper technique and took him to orchestral concerts. At fifteen he left school to work as a "song plugger" in Tin Pan Alley, playing a publisher's new songs for customers all day for fifteen dollars a week, and he began to cut piano rolls and write songs of his own. In 1919 Al Jolson sang his "Swanee", and it became a national hit.
+
+      In 1924 the bandleader Paul Whiteman persuaded him to write a concert piece for a jazz band, and *Rhapsody in Blue* made him famous overnight. In the same years he and Ira, who wrote the lyrics, filled Broadway with musicals, among them *Lady, Be Good!*, *Funny Face* and *Girl Crazy*, and songs such as "Fascinating Rhythm", "Embraceable You" and "I Got Rhythm"; their *Of Thee I Sing* was the first musical to win the Pulitzer Prize for Drama. He also kept writing for the concert hall: a Piano Concerto in F (1925) and, after a stay in Paris, *An American in Paris* (1928). There he asked Nadia Boulanger and Ravel for lessons; both declined, fearing that strict training would spoil his style.
+
+      His most ambitious work, the opera *Porgy and Bess* (1935), written with Ira and the novelist DuBose Heyward and set among the Black community of Charleston, was a commercial failure at first; it has since become one of the best-known American operas, and its song "Summertime" a standard. In 1936 he moved to Hollywood to write film music, including *Shall We Dance* for Fred Astaire and Ginger Rogers, and played tennis with Arnold Schoenberg. Early in 1937 he began to suffer headaches and blackouts. On 9 July he collapsed; a brain tumour was found too late, and he died in Los Angeles on 11 July 1937, aged 38.
+    tr: |-
+      Gershwin 1898'de Brooklyn'de, Rus İmparatorluğu'ndan gelmiş Yahudi göçmenlerin ikinci oğlu olarak Jacob Gershwine adıyla doğdu ve New York'un kalabalık sokaklarında büyüdü. On yaşına kadar müzik onun için hiçbir şey ifade etmiyordu. Sonra ailesi ağabeyi Ira için bir piyano aldı; ama piyanonun başından kalkamayan George oldu. Hocası Charles Hambitzer ona sağlam bir teknik öğretti ve onu orkestra konserlerine götürdü. On beş yaşında okulu bırakıp Tin Pan Alley'de "şarkı tanıtıcısı" olarak çalışmaya başladı: haftada on beş dolara, bütün gün bir yayıncının yeni şarkılarını müşterilere çalıyordu. Piyano rulolarına kayıt yapmaya ve kendi şarkılarını yazmaya da başladı. 1919'da Al Jolson onun "Swanee" şarkısını söyledi ve şarkı bütün ülkede sevildi.
+
+      1924'te orkestra şefi Paul Whiteman onu bir caz topluluğu için bir konser eseri yazmaya ikna etti; *Rhapsody in Blue* onu bir gecede ünlü yaptı. Aynı yıllarda sözlerini Ira'nın yazdığı müzikallerle Broadway'i doldurdular: *Lady, Be Good!*, *Funny Face*, *Girl Crazy* ve "Fascinating Rhythm", "Embraceable You", "I Got Rhythm" gibi şarkılar. *Of Thee I Sing*, Pulitzer Drama Ödülü'nü kazanan ilk müzikal oldu. Konser salonu için de yazmayı sürdürdü: Fa majör Piyano Konçertosu (1925) ve bir Paris yolculuğunun ardından *Paris'te Bir Amerikalı* (1928). Paris'te Nadia Boulanger'dan ve Ravel'den ders istedi; ikisi de sıkı bir eğitimin üslubunu bozacağından korkarak geri çevirdi.
+
+      En iddialı eseri, Ira ve romancı DuBose Heyward ile birlikte yazdığı, Charleston'ın siyah topluluğunda geçen *Porgy and Bess* operası (1935), önce ticari bir başarısızlık oldu; bugün en tanınmış Amerikan operalarından biri, "Summertime" şarkısı da bir klasik. 1936'da film müziği yazmak için Hollywood'a taşındı; aralarında Fred Astaire ve Ginger Rogers için *Shall We Dance* da vardı. Arnold Schoenberg'le tenis oynadı. 1937'nin başında baş ağrıları ve bayılmalar başladı. 9 Temmuz'da yere yığıldı; beyin tümörü çok geç fark edildi ve 11 Temmuz 1937'de, 38 yaşında Los Angeles'ta öldü.
+  # Bain News Service press photograph, undated (1920s or early 1930s), Library of Congress, no known
+  # restrictions; published without a copyright notice (PD-Bain, PD-US-no notice). Same basis as the
+  # Rachmaninoff and Prokofiev portraits. See content/research/composers-sources.md.
+  portrait:
+    artist: { en: Bain News Service, tr: Bain News Service }
+    title: { en: George Gershwin, tr: George Gershwin }
+    year: "c. 1925–35"
+    collection: { en: "Library of Congress, Washington, D.C.", tr: "Kongre Kütüphanesi, Washington" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/George_Gershwin,_1898-1937,_half-length_portrait,_standing,_facing_left_LCCN2005678096.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:George_Gershwin,_1898-1937,_half-length_portrait,_standing,_facing_left_LCCN2005678096.jpg
+    width: 1177
+    height: 1536
+    license: Public domain (PD-Bain, PD-US-no notice; Library of Congress, no known restrictions)
+    focal_y: 0.15
+    hero: { width: 1177, height: 1536, bytes: 75811 }
+    thumb: { width: 300, height: 392, bytes: 8473 }
+    full: { width: 1177, height: 1536, bytes: 87748 }
+    placeholder_color: "#929292"
+
+- id: handel
+  match: George Frideric Handel
+  sort_name: Handel, George Frideric
+  born: 1685
+  died: 1759
+  era: baroque
+  names:
+    en: { name: George Frideric Handel, short: Handel }
+    tr: { name: Georg Friedrich Händel, short: Händel }
+  nationality: { en: German-British, tr: Alman-İngiliz }
+  facts:
+    born: { en: "23 February 1685 (Old Style), Halle", tr: "23 Şubat 1685 (eski takvim), Halle" }
+    died: { en: "14 April 1759, London", tr: "14 Nisan 1759, Londra" }
+    symphonies: { en: "None (the form came after his time)", tr: "Yok (bu tür ondan sonra doğdu)" }
+    best_known_for: { en: "*Messiah*, *Water Music*, *Music for the Royal Fireworks*", tr: "*Mesih*, *Su Müziği*, *Kraliyet Havai Fişekleri için Müzik*" }
+  bio:
+    en: |-
+      Handel was born in Halle, in Saxony, in 1685, the same year as Bach. His father, a barber-surgeon who served the local court, wanted him to study law, and in 1702 he enrolled at the University of Halle, but music won. He went to Hamburg, played in the orchestra of its opera house and saw his first operas staged there in 1705. He then spent several years in Italy, writing operas and church music, before becoming music director to the Elector of Hanover in 1710.
+
+      Within months he was in London, where his Italian opera *Rinaldo* was a great success in 1711, and in 1712 he settled there for good. When the Elector became King George I of Great Britain in 1714, Handel was already at home in London. His *Water Music* was played for the king on the Thames in 1717. For years he wrote and produced Italian operas for the London nobility, and in 1727 he became a British subject; in the same year he wrote *Zadok the Priest* for the coronation of George II, an anthem sung at every British coronation since.
+
+      When Italian opera lost its public in the late 1730s, he turned to oratorios, dramatic works in English for soloists and chorus. *Messiah*, first performed in Dublin in 1742, became the most famous, and he gave it for years in aid of the Foundling Hospital, a London home for abandoned children. From 1752 he was blind. He died at his house in Brook Street in April 1759, a rich and respected man, and was given a state funeral in Westminster Abbey.
+    tr: |-
+      Händel 1685'te, Bach'la aynı yıl, Saksonya'daki Halle'de doğdu. Yerel saraya hizmet eden bir berber-cerrah olan babası onun hukuk okumasını istiyordu; 1702'de Halle Üniversitesi'ne yazıldı, ama müzik ağır bastı. Hamburg'a gitti, kentin opera binasının orkestrasında çaldı ve ilk operaları 1705'te orada sahnelendi. Ardından birkaç yıl İtalya'da opera ve kilise müziği yazdı; 1710'da Hannover Seçici Prensi'nin müzik yönetmeni oldu.
+
+      Birkaç ay içinde Londra'ya gitti; İtalyanca operası *Rinaldo* 1711'de orada büyük başarı kazandı ve 1712'de kalıcı olarak İngiltere'ye yerleşti. Seçici Prens 1714'te Büyük Britanya Kralı I. George olduğunda Händel Londra'ya çoktan yerleşmişti. *Su Müziği* 1717'de Thames üzerinde kral için çalındı. Yıllarca Londra soyluları için İtalyanca operalar yazıp sahneledi; 1727'de İngiliz uyruğuna geçti. Aynı yıl II. George'un taç giyme töreni için *Zadok the Priest*'i yazdı; bu ilahi o günden beri her İngiliz taç giyme töreninde söylendi.
+
+      İtalyan operası 1730'ların sonunda dinleyicisini yitirince oratoryolara, solistler ve koro için İngilizce dramatik eserlere yöneldi. İlk kez 1742'de Dublin'de seslendirilen *Mesih* bunların en ünlüsü oldu; Händel onu yıllarca Londra'da terk edilmiş çocuklara bakan Foundling Hospital yararına seslendirdi. 1752'den itibaren kördü. Nisan 1759'da Brook Street'teki evinde, zengin ve saygın biri olarak öldü; Westminster Abbey'de devlet töreniyle gömüldü.
+  portrait:
+    artist: Thomas Hudson
+    title: { en: George Frideric Handel, tr: Georg Friedrich Händel }
+    year: "1756"
+    collection: { en: "National Portrait Gallery, London", tr: "Ulusal Portre Galerisi, Londra" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/George_Frideric_Handel_by_Thomas_Hudson.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:George_Frideric_Handel_by_Thomas_Hudson.jpg
+    width: 2400
+    height: 3030
+    license: Public domain (PD-Art, PD-old-100)
+    focal_y: 0.2
+    hero: { width: 1800, height: 2273, bytes: 513722 }
+    thumb: { width: 300, height: 379, bytes: 11879 }
+    full: { width: 2400, height: 3030, bytes: 774340 }
+    placeholder_color: "#251714"
+
+- id: mussorgsky
+  match: Modest Mussorgsky
+  sort_name: Mussorgsky, Modest
+  born: 1839
+  died: 1881
+  era: romantic
+  names:
+    en: { name: Modest Mussorgsky, short: Mussorgsky }
+    tr: { name: Modest Musorgski, short: Musorgski }
+  nationality: { en: Russian, tr: Rus }
+  facts:
+    born: { en: "21 March 1839, Karevo, Pskov Governorate", tr: "21 Mart 1839, Karevo, Pskov Guberniyası" }
+    died: { en: "28 March 1881, St Petersburg", tr: "28 Mart 1881, St. Petersburg" }
+    symphonies: { en: "None", tr: "Yok" }
+    best_known_for: { en: "*Boris Godunov*, *Pictures at an Exhibition*, *Night on Bald Mountain*", tr: "*Boris Godunov*, *Bir Sergiden Tablolar*, *Kel Dağda Bir Gece*" }
+  bio:
+    en: |-
+      Mussorgsky was born in 1839 at Karevo, a country estate in the Pskov region of western Russia, into a wealthy family of landowning nobles. His mother gave him his first piano lessons when he was six. At ten he was sent to school in St Petersburg, and at thirteen he entered the Cadet School of the Guards, the usual path for a boy of his class. In 1856 he became an officer in the Preobrazhensky Regiment. That winter he met the composer Alexander Dargomyzhsky, and soon afterwards Mily Balakirev, who taught him musical form. In 1858 he resigned his commission to devote himself to music.
+
+      The emancipation of the serfs in 1861 cost his family half its estate, and for most of his life Mussorgsky earned his living as a low-ranking civil servant, composing in the time left over. He belonged to the circle around Balakirev later known as The Five, who wanted a music that sounded Russian. He wanted his vocal music to follow the natural rhythms of Russian speech, and his opera *Boris Godunov* did exactly that. The Mariinsky Theatre rejected its first version in 1871; a revised version reached the stage in February 1874. In the same year he wrote *Pictures at an Exhibition* for piano, in memory of his friend Viktor Hartmann, an architect and painter.
+
+      Heavy drinking, which had begun to trouble him in the 1860s, damaged his health and his work. He left the operas *Khovanshchina* and *The Fair at Sorochyntsi* unfinished. In March 1881, days before his death, Ilya Repin painted his portrait in a St Petersburg military hospital. He died a week after his 42nd birthday. His friend Nikolai Rimsky-Korsakov completed and edited much of his music, smoothing its rough harmonies, and it was mostly in those versions that the world first came to know him. Ravel's orchestration of *Pictures at an Exhibition* (1922) made the suite famous in the concert hall.
+    tr: |-
+      Musorgski 1839'da Rusya'nın batısındaki Pskov bölgesinde, Karevo adlı bir çiftlikte, varlıklı ve toprak sahibi soylu bir ailede doğdu. İlk piyano derslerini altı yaşında annesinden aldı. On yaşında St. Petersburg'da okula gönderildi, on üç yaşında da sınıfından bir çocuk için olağan yol olan Muhafız Harbiye Okulu'na girdi. 1856'da Preobrajenski Alayı'nda subay oldu. O kış besteci Aleksandr Dargomıjski ile, kısa süre sonra da ona müzikal biçimi öğreten Mili Balakirev ile tanıştı. 1858'de kendini müziğe adamak için ordudan ayrıldı.
+
+      1861'de serfliğin kaldırılması ailesine mülkünün yarısına mal oldu; Musorgski hayatının büyük kısmında geçimini alt kademede bir devlet memuru olarak sağladı, beste yapmaya ise geriye kalan zamanda vakit buldu. Rus gibi duyulan bir müzik isteyen ve sonradan "Beşler" diye anılacak olan Balakirev çevresine katıldı. Sesli müziğinin Rusça konuşmanın doğal ritimlerini izlemesini istiyordu ve *Boris Godunov* operası tam da bunu yaptı. Mariinski Tiyatrosu operanın ilk biçimini 1871'de geri çevirdi; düzeltilmiş biçim Şubat 1874'te sahneye çıktı. Aynı yıl, mimar ve ressam dostu Viktor Hartmann'ın anısına piyano için *Bir Sergiden Tablolar*'ı yazdı.
+
+      1860'larda başlayan ağır içki alışkanlığı sağlığını ve çalışmasını yıprattı. *Hovanşçina* ve *Soroçintsi Panayırı* operalarını yarım bıraktı. Mart 1881'de, ölümünden birkaç gün önce, İlya Repin onun portresini St. Petersburg'daki bir askeri hastanede yaptı. 42. doğum gününden bir hafta sonra öldü. Dostu Nikolay Rimski-Korsakov müziğinin büyük bölümünü tamamladı ve düzenledi, pürüzlü armonilerini yumuşattı; dünya onu önce çoğunlukla bu biçimlerle tanıdı. Ravel'in 1922 tarihli orkestrasyonu *Bir Sergiden Tablolar*'ı konser salonlarında ünlü yaptı.
+  portrait:
+    artist: { en: Ilya Repin, tr: İlya Repin }
+    title: { en: Portrait of the Composer Modest Mussorgsky, tr: Besteci Modest Musorgski'nin Portresi }
+    year: "1881"
+    collection: { en: "State Tretyakov Gallery, Moscow", tr: "Devlet Tretyakov Galerisi, Moskova" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Ilya_Repin_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B0_%D0%9C.%D0%9F.%D0%9C%D1%83%D1%81%D0%BE%D1%80%D0%B3%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Ilya_Repin_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B0_%D0%9C.%D0%9F.%D0%9C%D1%83%D1%81%D0%BE%D1%80%D0%B3%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg
+    width: 3205
+    height: 4000
+    license: Public domain (PD-Art, PD-old-100; painter d. 1930)
+    focal_y: 0.3
+    hero: { width: 1800, height: 2246, bytes: 501413 }
+    thumb: { width: 300, height: 374, bytes: 16734 }
+    full: { width: 3205, height: 4000, bytes: 1303836 }
+    placeholder_color: "#786b53"
+
+- id: palestrina
+  match: Giovanni Pierluigi da Palestrina
+  sort_name: Palestrina, Giovanni Pierluigi da
+  born: 1525
+  died: 1594
+  era: renaissance
+  names:
+    en: { name: Giovanni Pierluigi da Palestrina, short: Palestrina }
+    tr: { name: Giovanni Pierluigi da Palestrina, short: Palestrina }
+  nationality: { en: Italian, tr: İtalyan }
+  facts:
+    born: { en: "c. 1525, Palestrina, near Rome", tr: "y. 1525, Palestrina, Roma yakınları" }
+    died: { en: "2 February 1594, Rome", tr: "2 Şubat 1594, Roma" }
+    symphonies: { en: "None (the form did not exist yet)", tr: "Yok (bu tür henüz ortada yoktu)" }
+    best_known_for: { en: "*Missa Papae Marcelli*, more than 100 masses, motets", tr: "*Missa Papae Marcelli*, yüzü aşkın missa, motetler" }
+  bio:
+    en: |-
+      Palestrina took his name from his birthplace, a small town in the hills east of Rome, where he was born around 1525. As a boy he sang in the choir of the basilica of Santa Maria Maggiore in Rome, and from 1544 he was organist of the cathedral of his home town. When its bishop became Pope Julius III, he brought Palestrina to Rome in 1551 as choirmaster of the Cappella Giulia at St Peter's. His first book of masses, dedicated to the pope in 1554, was the first such book by a composer born in Italy; until then the leading church composers in Italy came from the Low Countries, France or Spain.
+
+      In 1555 a new pope ruled that the papal singers must be clergy, and Palestrina, who was married with children, had to leave the papal choir. He went on to lead the music at St John Lateran and then at Santa Maria Maggiore, and in 1571 he returned to St Peter's, where he stayed for the rest of his life. The 1570s brought heavy losses: outbreaks of plague killed his brother, two of his sons and his wife. He then married a wealthy widow, which gave him the security to compose and publish freely.
+
+      He died in Rome in February 1594 and was buried in St Peter's, in a coffin whose lead plate called him "Prince of Music". He left more than a hundred masses and some three hundred [[motet]]s. His calm, carefully controlled way of weaving voices together became the model for teaching [[counterpoint]] for centuries, above all through Johann Joseph Fux's textbook of 1725, and Bach copied and performed his masses. A legend that he saved church music at the Council of Trent kept his name famous, although historians have found no evidence for it.
+    tr: |-
+      Palestrina adını, Roma'nın doğusundaki tepelerde küçük bir kasaba olan doğum yerinden aldı; orada 1525 dolaylarında doğdu. Çocukken Roma'daki Santa Maria Maggiore bazilikasının korosunda şarkı söyledi, 1544'ten itibaren de memleketindeki katedralin orgcusu oldu. Bu katedralin piskoposu Papa III. Julius olunca, 1551'de Palestrina'yı Roma'ya, Aziz Petrus'taki Cappella Giulia'nın koro şefliğine getirdi. 1554'te papaya ithaf ettiği ilk missa kitabı, İtalya'da doğmuş bir bestecinin bu türdeki ilk kitabıydı; o güne dek İtalya'nın önde gelen kilise bestecileri Alçak Ülkeler'den, Fransa'dan ya da İspanya'dan gelirdi.
+
+      1555'te yeni papa, papalık şarkıcılarının din adamı olması gerektiğine hükmetti; evli ve çocuk sahibi olan Palestrina papalık korosundan ayrılmak zorunda kaldı. Ardından önce San Giovanni in Laterano'nun, sonra Santa Maria Maggiore'nin müziğini yönetti ve 1571'de Aziz Petrus'a döndü; hayatının sonuna dek orada kaldı. 1570'ler ağır kayıplar getirdi: veba salgınları kardeşini, iki oğlunu ve karısını aldı. Sonra varlıklı bir dulla evlendi; bu evlilik ona özgürce beste yapıp eserlerini basacak güvenceyi sağladı.
+
+      Şubat 1594'te Roma'da öldü ve Aziz Petrus'a gömüldü; tabutunun kurşun levhasında ona "Müziğin Prensi" deniyordu. Yüzü aşkın missa ve üç yüz kadar [[motet|motet]] bıraktı. Sesleri sakin ve titizlikle denetlenen bir biçimde birbirine örme yolu, başta Johann Joseph Fux'un 1725 tarihli ders kitabı aracılığıyla, yüzyıllar boyunca [[counterpoint|kontrpuan]] öğretiminin modeli oldu; Bach da onun missalarını kopyalayıp seslendirdi. Trento Konsili'nde kilise müziğini kurtardığına dair efsane adını ünlü tuttu; oysa tarihçiler bunu destekleyen bir kanıt bulamadı.
+  portrait:
+    # No portrait from life is certain; this is the traditional likeness, in a later reproduction (see sources).
+    artist: { en: "After Heinrich E. von Winter", tr: "Heinrich E. von Winter'den" }
+    title: { en: Giovanni Pierluigi da Palestrina, tr: Giovanni Pierluigi da Palestrina }
+    year: "c. 1880–1928, after an early 19th-century lithograph"
+    collection: { en: "Bibliothèque nationale de France, Paris", tr: "Fransa Ulusal Kütüphanesi, Paris" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Giovanni_Pierluigi_da_Palestrina_-_d'apr%C3%A8s_H._E._von_Wintter_-_btv1b84233685.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Giovanni_Pierluigi_da_Palestrina_-_d'apr%C3%A8s_H._E._von_Wintter_-_btv1b84233685.jpg
+    width: 3616
+    height: 4800
+    license: Public domain (PD-France; PD-old-auto-expired, model's artist d. 1825)
+    focal_y: 0.3
+    hero: { width: 1800, height: 2389, bytes: 657248 }
+    thumb: { width: 300, height: 398, bytes: 13927 }
+    full: { width: 3013, height: 4000, bytes: 1872058 }
+    placeholder_color: "#d2cbc2"
+
+- id: respighi
+  match: Ottorino Respighi
+  sort_name: Respighi, Ottorino
+  born: 1879
+  died: 1936
+  era: modern
+  names:
+    en: { name: Ottorino Respighi, short: Respighi }
+    tr: { name: Ottorino Respighi, short: Respighi }
+  nationality: { en: Italian, tr: İtalyan }
+  facts:
+    born: { en: "9 July 1879, Bologna", tr: "9 Temmuz 1879, Bologna" }
+    died: { en: "18 April 1936, Rome", tr: "18 Nisan 1936, Roma" }
+    symphonies: { en: "One, the *Sinfonia drammatica* (1914)", tr: "Bir: *Sinfonia drammatica* (1914)" }
+    best_known_for: { en: "*Fountains of Rome*, *Pines of Rome*, *Roman Festivals*, *Ancient Airs and Dances*", tr: "*Roma'nın Çeşmeleri*, *Roma'nın Çamları*, *Roma Şenlikleri*, *Eski Havalar ve Danslar*" }
+  bio:
+    en: |-
+      Respighi was born in Bologna in 1879. His father, a post-office worker, was a fine pianist who taught music, and gave the boy his first lessons on the piano and the violin. At twelve he entered the Liceo Musicale of Bologna, where he studied violin, viola and composition; he took his violin diploma in 1899. The following winter he went to St Petersburg as principal viola of the Imperial opera orchestra, and there he took lessons in orchestration from Rimsky-Korsakov, whose brilliant use of the orchestra shaped his own. When he finished his composition studies in 1901, his teacher Giuseppe Martucci said: "Respighi is not a pupil, Respighi is a master." He was a voracious reader and came to read literature in eleven languages.
+
+      For the next decade he earned his living mainly as a violinist and viola player in Bologna, while composing songs and operas and arranging forgotten Italian music of the 17th and 18th centuries, a lifelong passion. In 1913 he moved to Rome as professor of composition at the Liceo Musicale di Santa Cecilia. One of his pupils was the singer Elsa Olivieri-Sangiacomo; they married in 1919, and she became his closest companion and, after his death, the keeper of his music. *Fountains of Rome* was coolly received at its premiere in 1917, but in 1918 Toscanini conducted it in Milan and it made Respighi famous. His suites *Ancient Airs and Dances*, freely arranged from old lute pieces, and the ballet *La Boutique fantasque*, made from piano pieces by Rossini for Diaghilev's Ballets Russes, followed.
+
+      In 1923 he became the first director of the Conservatorio di Santa Cecilia, but he disliked the paperwork and resigned in 1926, while still teaching composition until 1935. *Pines of Rome* (1924) and *Roman Festivals* (1928) completed his Roman trilogy, and from 1925 he toured the United States and South America as conductor and pianist in his own music. He kept a cautious distance from Mussolini's regime, which nevertheless honoured him and used his music. At the end of 1935, while writing the opera *Lucrezia*, he fell ill with an infection of the heart that could not then be cured, and he died in Rome on 18 April 1936, aged 56. Elsa outlived him by almost sixty years.
+    tr: |-
+      Respighi 1879'da Bologna'da doğdu. Postanede çalışan babası usta bir piyanistti, müzik dersleri de veriyordu; oğluna ilk piyano ve keman derslerini o verdi. On iki yaşında Bologna Liceo Musicale'ye girdi; keman, viyola ve kompozisyon okudu, 1899'da keman diplomasını aldı. Ertesi kış St. Petersburg'a, İmparatorluk opera orkestrasına başviyolacı olarak gitti; orada, orkestrayı parlak biçimde kullanışı onun da üslubunu biçimlendirecek olan Rimski-Korsakov'dan orkestrasyon dersleri aldı. 1901'de kompozisyon öğrenimini bitirdiğinde hocası Giuseppe Martucci, "Respighi bir öğrenci değil, bir ustadır" dedi. Doymak bilmez bir okurdu; zamanla on bir dilde edebiyat okuyabilir hâle geldi.
+
+      Sonraki on yıl boyunca geçimini çoğunlukla Bologna'da kemancı ve viyolacı olarak sağladı; bir yandan şarkılar ve operalar besteledi, bir yandan da ömür boyu tutkusu olacak unutulmuş 17. ve 18. yüzyıl İtalyan müziğini düzenledi. 1913'te Liceo Musicale di Santa Cecilia'da kompozisyon profesörü olarak Roma'ya taşındı. Öğrencilerinden biri şarkıcı Elsa Olivieri-Sangiacomo'ydu; 1919'da evlendiler. Elsa onun en yakın yol arkadaşı, ölümünden sonra da müziğinin bekçisi oldu. *Roma'nın Çeşmeleri* 1917'deki ilk seslendirilişinde soğuk karşılandı; ama 1918'de Toscanini eseri Milano'da yönetti ve Respighi'yi ünlü yaptı. Ardından eski lavta parçalarından serbestçe düzenlediği *Eski Havalar ve Danslar* süitleri ve Diaghilev'in Rus Baleleri için Rossini'nin piyano parçalarından yaptığı *La Boutique fantasque* balesi geldi.
+
+      1923'te Conservatorio di Santa Cecilia'nın ilk müdürü oldu; ama yazışmalardan ve evrak işlerinden hoşlanmadı, 1926'da istifa etti, kompozisyon derslerini ise 1935'e kadar sürdürdü. *Roma'nın Çamları* (1924) ve *Roma Şenlikleri* (1928) Roma üçlemesini tamamladı; 1925'ten itibaren Amerika Birleşik Devletleri'nde ve Güney Amerika'da kendi eserlerini şef ve piyanist olarak seslendirdiği turnelere çıktı. Mussolini rejimine temkinli bir mesafede durdu; rejim yine de onu onurlandırdı ve müziğini kullandı. 1935'in sonunda, *Lucrezia* operası üzerinde çalışırken o dönemde tedavisi olmayan bir kalp enfeksiyonuna yakalandı ve 18 Nisan 1936'da, 56 yaşında Roma'da öldü. Elsa ondan neredeyse altmış yıl fazla yaşadı.
+  # Photograph published 1927 in Germany (front matter of the vocal score of La campana sommersa, Bote & Bock);
+  # photographer Marie Böhm of the Berlin studio Becker & Maass, died 1953: PD in the EU/Turkey since 2024
+  # (life + 70) and in the US since 2023 (95 years from publication). See content/research/composers-sources.md.
+  portrait:
+    artist: { en: Becker & Maass (Marie Böhm), tr: Becker & Maass (Marie Böhm) }
+    title: { en: Ottorino Respighi, tr: Ottorino Respighi }
+    year: "1927"
+    collection: null
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Ottorino_Respighi,_1927_(cropped).jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Ottorino_Respighi,_1927_(cropped).jpg
+    width: 4223
+    height: 5630
+    license: Public domain (PD-old-70-expired; published 1927, PD in the US since 2023)
+    focal_y: 0.2
+    hero: { width: 1800, height: 2400, bytes: 862545 }
+    thumb: { width: 300, height: 400, bytes: 20529 }
+    full: { width: 3000, height: 4000, bytes: 2617864 }
+    placeholder_color: "#737473"
+
+- id: rossini
+  match: Gioachino Rossini
+  sort_name: Rossini, Gioachino
+  born: 1792
+  died: 1868
+  era: romantic
+  names:
+    en: { name: Gioachino Rossini, short: Rossini }
+    tr: { name: Gioachino Rossini, short: Rossini }
+  nationality: { en: Italian, tr: İtalyan }
+  facts:
+    born: { en: "29 February 1792, Pesaro", tr: "29 Şubat 1792, Pesaro" }
+    died: { en: "13 November 1868, Passy (Paris)", tr: "13 Kasım 1868, Passy (Paris)" }
+    symphonies: { en: "None (39 operas)", tr: "Yok (39 opera)" }
+    best_known_for: { en: "*The Barber of Seville*, *William Tell*, overtures", tr: "*Sevil Berberi*, *Wilhelm Tell*, uvertürler" }
+  bio:
+    en: |-
+      Rossini was born in Pesaro, on the Adriatic coast of Italy, in 1792, the son of two musicians: his father played the trumpet and the horn, his mother was a singer. He grew up partly in Lugo, where a priest's library introduced him to the music of Haydn and Mozart, then little known in Italy, and he went on to study at the music school in Bologna. His first opera was staged in Venice in 1810, when he was eighteen.
+
+      Between 1810 and 1823 he wrote 34 operas for Italian theatres, working so fast that he often reused his own music, overtures included. The comedies *L'italiana in Algeri*, *The Barber of Seville* (Rome, 1816; a failure on its first night, then a triumph) and *La Cenerentola* made his name across Europe, and serious operas such as *Tancredi* and *Semiramide* were just as admired. In 1822 he visited Vienna, where his operas caused a craze, and met Beethoven. Two years later he moved to Paris, and there, in 1829, he wrote *Guillaume Tell*, his last opera.
+
+      He then stopped writing operas, at thirty-seven, for reasons that have never been fully explained: ill health, wealth, and a change in taste towards grand spectacle may all have played a part. He went on composing in private: a *Stabat Mater*, songs, and more than 150 small pieces he called "sins of old age", many written for the Saturday salons he held at his villa in Passy, where Liszt and Verdi were among the guests. His last large work was the *Petite messe solennelle*. He died at Passy in 1868; in 1887 his remains were moved to Santa Croce in Florence.
+    tr: |-
+      Rossini 1792'de İtalya'nın Adriyatik kıyısındaki Pesaro'da, iki müzisyenin oğlu olarak doğdu: babası trompet ve korno çalıyor, annesi şarkı söylüyordu. Çocukluğunun bir kısmı Lugo'da geçti; orada bir rahibin kitaplığı sayesinde, o yıllarda İtalya'da pek tanınmayan Haydn ile Mozart'ın müziğini tanıdı, ardından Bologna'daki müzik okulunda okudu. İlk operası 1810'da, on sekiz yaşındayken Venedik'te sahnelendi.
+
+      1810 ile 1823 arasında İtalyan tiyatroları için 34 opera yazdı; o kadar hızlı çalışıyordu ki uvertürler de dahil kendi müziğini sık sık yeniden kullandı. *Cezayir'deki İtalyan Kızı*, *Sevil Berberi* (Roma, 1816; ilk gecesinde başarısız oldu, sonra zafer kazandı) ve *Külkedisi* gibi komedileri adını bütün Avrupa'ya duyurdu; *Tancredi* ve *Semiramide* gibi ciddi operaları da aynı hayranlığı topladı. 1822'de operalarının çılgınlık yarattığı Viyana'yı ziyaret etti ve Beethoven'la tanıştı. İki yıl sonra Paris'e yerleşti ve orada, 1829'da, son operası *Guillaume Tell*'i yazdı.
+
+      Ardından otuz yedi yaşında opera yazmayı bıraktı; nedeni hiçbir zaman tam açıklanamadı: sağlık sorunları, kazandığı servet ve zevklerin büyük gösterilere doğru değişmesi rol oynamış olabilir. Kendi köşesinde beste yapmayı sürdürdü: bir *Stabat Mater*, şarkılar ve "yaşlılık günahları" dediği 150'den fazla küçük parça. Bunların çoğunu, Liszt ile Verdi'nin de konukları arasında olduğu, Passy'deki villasında düzenlediği cumartesi salonları için yazdı. Son büyük eseri *Petite messe solennelle*'dir. 1868'de Passy'de öldü; 1887'de naaşı Floransa'daki Santa Croce Bazilikası'na taşındı.
+  portrait:
+    artist: Hortense Haudebourt-Lescot
+    title: { en: Portrait of Gioachino Rossini, tr: Gioachino Rossini'nin Portresi }
+    year: "1828"
+    collection: { en: "Rocca Estense, Lugo (Comune di Lugo)", tr: "Rocca Estense, Lugo (Lugo Belediyesi)" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Gioachino_Rossini,_1828,_by_Hortense_Haudebourt-Lescot.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Gioachino_Rossini,_1828,_by_Hortense_Haudebourt-Lescot.jpg
+    width: 1628
+    height: 2048
+    license: Public domain (PD-Art, PD-old-auto-expired; painter died 1845)
+    focal_y: 0.25
+    hero: { width: 1628, height: 2048, bytes: 649652 }
+    thumb: { width: 300, height: 377, bytes: 16006 }
+    full: { width: 1628, height: 2048, bytes: 700493 }
+    placeholder_color: "#231f1f"
+
+- id: stravinsky
+  match: Igor Stravinsky
+  sort_name: Stravinsky, Igor
+  born: 1882
+  died: 1971
+  era: modern
+  names:
+    en: { name: Igor Stravinsky, short: Stravinsky }
+    tr: { name: İgor Stravinski, short: Stravinski }
+  nationality: { en: Russian, tr: Rus }
+  facts:
+    born: { en: "17 June 1882, Oranienbaum (now Lomonosov), near St Petersburg", tr: "17 Haziran 1882, Oranienbaum (bugün Lomonosov), St. Petersburg yakınları" }
+    died: { en: "6 April 1971, New York", tr: "6 Nisan 1971, New York" }
+    symphonies: { en: "Four, including the *Symphony of Psalms*", tr: "Dört; *Mezmurlar Senfonisi* de aralarında" }
+    best_known_for: { en: "*The Firebird*, *Petrushka*, *The Rite of Spring*", tr: "*Ateş Kuşu*, *Petruşka*, *Bahar Ayini*" }
+  bio:
+    en: |-
+      Stravinsky was born in 1882 at Oranienbaum, on the Gulf of Finland near St Petersburg. His father, Fyodor, was a leading bass at the Mariinsky Theatre, and the boy grew up among singers, scores and the theatre. His parents wanted him to be a lawyer, and he studied law at St Petersburg University; but in 1902 he met Nikolai Rimsky-Korsakov, who became his teacher and mentor until his death in 1908. In 1906 Stravinsky married his cousin Yekaterina Nosenko.
+
+      In 1909 the impresario Sergei Diaghilev heard two of his orchestral pieces, gave him some orchestrations to do and then, late that year, asked him to write *The Firebird* for the Ballets Russes. Its premiere in Paris in 1910 made him famous overnight. *Petrushka* followed in 1911, and in 1913 *The Rite of Spring*, whose violent rhythms and harsh dissonances caused a near-riot at its premiere. During the First World War he lived in Switzerland, drawing on Russian folk poetry; after the Revolution he never returned to live in Russia. In the 1920s, settled in France, he turned to the clarity of earlier music in works such as *Pulcinella* and the Octet, a style known as [[neoclassicism]]. He became a French citizen in 1934.
+
+      In 1939, after the deaths of his wife, his daughter and his mother, he moved to the United States, where he married Vera de Bosset in 1940 and settled in Los Angeles; he became an American citizen in 1945. With his assistant Robert Craft he went on composing, conducting and recording his own music into old age, and in the 1950s, to general surprise, he adopted Schoenberg's twelve-note technique. He changed styles more than almost any other composer, yet his music is always recognisable by its sharp rhythms and clear, dry sound. He died in New York on 6 April 1971 and was buried in Venice, on the cemetery island of San Michele, near Diaghilev.
+    tr: |-
+      Stravinski 1882'de St. Petersburg yakınlarında, Fin Körfezi kıyısındaki Oranienbaum'da doğdu. Babası Fyodor, Mariinski Tiyatrosu'nun önde gelen baslarındandı; çocuk şarkıcıların, notaların ve tiyatronun arasında büyüdü. Ailesi onun avukat olmasını istiyordu, o da St. Petersburg Üniversitesi'nde hukuk okudu; ama 1902'de Nikolay Rimski-Korsakov ile tanıştı ve Rimski-Korsakov 1908'deki ölümüne dek hocası ve yol göstericisi oldu. 1906'da kuzeni Yekaterina Nosenko ile evlendi.
+
+      1909'da impresaryo Sergey Diaghilev onun iki orkestra eserini dinledi, ona bazı orkestrasyon işleri verdi ve aynı yılın sonunda Rus Baleleri için *Ateş Kuşu*'nu yazmasını istedi. Eserin 1910'da Paris'teki ilk gösterimi onu bir gecede ünlü yaptı. Ardından 1911'de *Petruşka* ve 1913'te, sert ritimleri ve kaba uyumsuzluklarıyla ilk gösteriminde neredeyse bir ayaklanmaya yol açan *Bahar Ayini* geldi. Birinci Dünya Savaşı sırasında İsviçre'de yaşadı ve Rus halk şiirinden beslendi; Devrim'den sonra bir daha Rusya'ya yerleşmek üzere dönmedi. 1920'lerde Fransa'ya yerleşince *Pulcinella* ve Oktet gibi eserlerde eski müziğin berraklığına yöneldi; bu üsluba [[neoclassicism|neoklasisizm]] denir. 1934'te Fransız vatandaşı oldu.
+
+      1939'da karısının, kızının ve annesinin ölümünden sonra Amerika Birleşik Devletleri'ne taşındı; 1940'ta Vera de Bosset ile evlendi ve Los Angeles'a yerleşti, 1945'te Amerikan vatandaşı oldu. Asistanı Robert Craft ile birlikte ileri yaşına dek beste yapmayı, kendi eserlerini yönetmeyi ve kaydetmeyi sürdürdü; 1950'lerde de herkesi şaşırtarak Schoenberg'in on iki ton tekniğini benimsedi. Üslubunu hemen her besteciden daha sık değiştirdi; yine de müziği keskin ritimleri ve berrak, kuru sesiyle her zaman tanınır. 6 Nisan 1971'de New York'ta öldü ve Venedik'te, San Michele mezarlık adasında, Diaghilev'in yakınına gömüldü.
+  # Product owner's choice at merge (17 Nov 2026): the highest-resolution option, the Library of Congress
+  # Bain photo, public domain on the same basis as the Prokofiev portrait (the Anefo 1965 photo was 1627 × 1947).
+  portrait:
+    artist: { en: Bain News Service, tr: Bain News Service }
+    title: { en: Igor Stravinsky, tr: İgor Stravinski }
+    # LOC dates the negative c. 1920–25.
+    year: "c. 1920–25"
+    collection: { en: "Library of Congress, Washington, D.C.", tr: "Kongre Kütüphanesi, Washington" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Igor_Stravinsky_LOC_32392u.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Igor_Stravinsky_LOC_32392u.jpg
+    width: 4477
+    height: 5410
+    license: Public domain (PD-Bain; Library of Congress, no known restrictions)
+    focal_y: 0.2
+    hero: { width: 1800, height: 2175, bytes: 495663 }
+    thumb: { width: 300, height: 363, bytes: 11274 }
+    full: { width: 3310, height: 4000, bytes: 2078261 }
+    placeholder_color: "#5c5d5c"

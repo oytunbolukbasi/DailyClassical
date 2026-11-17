@@ -1921,3 +1921,850 @@ saint-saens-cello-concerto-1:
   thumb: { width: 387, height: 300, bytes: 17431 }
   full: { width: 4000, height: 3103, bytes: 2452366 }
   placeholder_color: "#818375"
+
+bach-double-violin-concerto:
+  # Commons licence: public domain (Google Art Project file; Mercier d. 1760). Landscape, 5379 × 4568.
+  # A colour-"remastered" variant exists (…Google_Art_ProjectFXD.jpg); the original GAP file is used here.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Philippe_Mercier_-_The_Sense_of_Hearing_-_Google_Art_Project.jpg
+  source_url: https://artsandculture.google.com/asset/7gE8uoQto6Sb9A
+  commons_page: https://commons.wikimedia.org/wiki/File:Philippe_Mercier_-_The_Sense_of_Hearing_-_Google_Art_Project.jpg
+  width: 5379
+  height: 4568
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Philippe Mercier, The Sense of Hearing, c. 1744–47. Yale Center for British Art, Paul Mellon Collection (B1974.3.19). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2120, height: 1800, bytes: 421417 }
+  thumb: { width: 353, height: 300, bytes: 20204 }
+  full: { width: 4000, height: 3397, bytes: 1506447 }
+  placeholder_color: "#584939"
+
+barber-violin-concerto:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Ferdinand_Hodler_-_Der_Genfersee_von_Chexbres_aus.jpg
+  source_url: https://www.kunstmuseumbasel.ch/de/programm/blog/2020/8
+  commons_page: https://commons.wikimedia.org/wiki/File:Ferdinand_Hodler_-_Der_Genfersee_von_Chexbres_aus.jpg
+  width: 6425
+  height: 5086
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Ferdinand Hodler, Lake Geneva Seen from Chexbres, 1905. Kunstmuseum Basel. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2274, height: 1800, bytes: 666708 }
+  thumb: { width: 379, height: 300, bytes: 27488 }
+  full: { width: 4000, height: 3166, bytes: 2177220 }
+  placeholder_color: "#96aaaa"
+
+beethoven-piano-concerto-4:
+  # Google Art Project file (7195 × 5897), clean unframed reproduction.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Baptiste-Camille_Corot_-_Orpheus_Leading_Eurydice_from_the_Underworld_-_Google_Art_Project.jpg
+  source_url: https://artsandculture.google.com/asset/orpheus-leading-eurydice-from-the-underworld/1QH79DCxW2Tj3A
+  commons_page: https://commons.wikimedia.org/wiki/File:Jean-Baptiste-Camille_Corot_-_Orpheus_Leading_Eurydice_from_the_Underworld_-_Google_Art_Project.jpg
+  width: 7195
+  height: 5897
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Jean-Baptiste-Camille Corot, Orpheus Leading Eurydice from the Underworld, 1861. Museum of Fine Arts, Houston, Agnes Cullen Arnold Endowment Fund (87.190). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2196, height: 1800, bytes: 823565 }
+  thumb: { width: 366, height: 300, bytes: 26253 }
+  full: { width: 4000, height: 3278, bytes: 3021455 }
+  placeholder_color: "#545546"
+
+beethoven-piano-sonata-17:
+  # 3000 × 2255, unframed. Source of the Commons file is a fan site; colours look saturated, compare with
+  # File:Miranda_-_The_Tempest_JWW.jpg (1999 × 1439, from the Sotheby's 2009 catalogue) before running the image pipeline.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Waterhouse_miranda_the_tempest.jpg
+  source_url: https://www.sothebys.com/en/auctions/ecatalogue/2009/19th-century-european-art-including-orientalist-paintings-drawings-sculpture-n08542/lot.56.html
+  commons_page: https://commons.wikimedia.org/wiki/File:Waterhouse_miranda_the_tempest.jpg
+  width: 3000
+  height: 2255
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: John William Waterhouse, Miranda - The Tempest, 1916. Private collection. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2395, height: 1800, bytes: 1252849 }
+  thumb: { width: 399, height: 300, bytes: 33936 }
+  full: { width: 3000, height: 2255, bytes: 2167411 }
+  placeholder_color: "#7c6f6c"
+
+beethoven-piano-sonata-32:
+  # NGA online-collection file (5100 × 3431). The NGA's own CC0 upload is 4000 × 2691
+  # (File:Thomas_Cole,_The_Voyage_of_Life_-_Old_Age,_1842,_NGA_52453.jpg) if a CC0 file is preferred.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Cole_-_The_Voyage_of_Life_Old_Age,_1842_(National_Gallery_of_Art).jpg
+  source_url: https://www.nga.gov/collection/art-object-page.52453.html
+  commons_page: https://commons.wikimedia.org/wiki/File:Thomas_Cole_-_The_Voyage_of_Life_Old_Age,_1842_(National_Gallery_of_Art).jpg
+  width: 5100
+  height: 3431
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Thomas Cole, The Voyage of Life - Old Age, 1842. National Gallery of Art, Washington, Ailsa Mellon Bruce Fund (1971.16.4). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2676, height: 1800, bytes: 495036 }
+  thumb: { width: 446, height: 300, bytes: 11617 }
+  full: { width: 4000, height: 2691, bytes: 1502588 }
+  placeholder_color: "#5f493a"
+
+beethoven-string-quartet-14:
+  # Google Art Project file (7449 × 9008). Portrait format: crop the hero around the face.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_van_Rijn_-_Zelfportret_met_twee_cirkels_(Kenwood_House).jpg
+  source_url: https://www.english-heritage.org.uk/visit/places/kenwood/history-stories-kenwood/rembrandt-self-portrait/
+  commons_page: https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_Zelfportret_met_twee_cirkels_(Kenwood_House).jpg
+  width: 7449
+  height: 9008
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Rembrandt van Rijn, Self-Portrait with Two Circles, c. 1665–69. Kenwood House, London (English Heritage, Iveagh Bequest, 88028836). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2177, bytes: 610860 }
+  thumb: { width: 300, height: 363, bytes: 11728 }
+  full: { width: 3308, height: 4000, bytes: 3058786 }
+  placeholder_color: "#493c2b"
+
+beethoven-string-quartet-16:
+  # Switched at merge: Goya would be a third painting in the catalogue and this attribution is disputed; the batch's alternative A
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Rudolf_von_Alt_Stein_an_der_Donau_1842.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Rudolf_von_Alt_Stein_an_der_Donau_1842.jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:Rudolf_von_Alt_Stein_an_der_Donau_1842.jpg
+  width: 5000
+  height: 2605
+  medium: Watercolour on paper
+  license: Public domain (PD-Art; artist d. 1905)
+  credit_line: Rudolf von Alt, Stein an der Donau, 1842. Private collection (Dorotheum, Vienna). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 3455, height: 1800, bytes: 964071 }
+  thumb: { width: 576, height: 300, bytes: 25410 }
+  full: { width: 4000, height: 2084, bytes: 1299891 }
+  placeholder_color: "#ded1b5"
+
+bizet-carmen-suite-1:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Edouard_Manet_-_Spanish_Ballet_-_Google_Art_Project.jpg
+  source_url: https://www.phillipscollection.org/collection/spanish-ballet
+  commons_page: https://commons.wikimedia.org/wiki/File:Edouard_Manet_-_Spanish_Ballet_-_Google_Art_Project.jpg
+  width: 4001
+  height: 2697
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100-1923)
+  credit_line: Édouard Manet, Spanish Ballet, 1862. The Phillips Collection, Washington, D.C., acquired 1928 (1250). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2670, height: 1800, bytes: 646247 }
+  thumb: { width: 445, height: 300, bytes: 25647 }
+  full: { width: 4000, height: 2696, bytes: 1108969 }
+  placeholder_color: "#4b4235"
+
+brahms-double-concerto:
+  # Commons scan "repro from artbook", 4650 × 3720 (≈ 1.25:1). The museum's object page was not found; source_url is the Commons page.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Hodler_-_Thunersee_mit_symmetrischer_Spiegelung_-_1905.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Hodler_-_Thunersee_mit_symmetrischer_Spiegelung_-_1905.jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:Hodler_-_Thunersee_mit_symmetrischer_Spiegelung_-_1905.jpg
+  width: 4650
+  height: 3720
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-art-two-auto; artist d. 1918)
+  credit_line: Ferdinand Hodler, Lake Thun with Symmetrical Reflection (Thunersee mit symmetrischer Spiegelung), 1905. Musée d'art et d'histoire, Geneva. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2250, height: 1800, bytes: 1041152 }
+  thumb: { width: 375, height: 300, bytes: 22110 }
+  full: { width: 4000, height: 3200, bytes: 2952055 }
+  placeholder_color: "#9cadb2"
+
+brahms-piano-concerto-1:
+  # Museum photograph (Børre Høstland), 4000 × 3465 (≈ 1.15:1, nearly square): crop top and bottom for the hero.
+  # Commons licence: {{Licensed-PD-Art|PD-old-auto-expired|cc-by-4.0|deathyear=1910}} (painting PD; photo also CC BY 4.0 by the museum).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Andreas_Achenbach_-_Storm_at_the_Coast_-_NG.M.00228_-_National_Museum_of_Art%2C_Architecture_and_Design.jpg
+  source_url: https://www.nasjonalmuseet.no/en/collection/object/NG.M.00228
+  commons_page: https://commons.wikimedia.org/wiki/File:Andreas_Achenbach_-_Storm_at_the_Coast_-_NG.M.00228_-_National_Museum_of_Art,_Architecture_and_Design.jpg
+  width: 4000
+  height: 3465
+  medium: Oil on wood
+  license: Public domain (PD-Art, PD-old-auto-expired; artist d. 1910); photograph also CC BY 4.0 (Nasjonalmuseet)
+  credit_line: Andreas Achenbach, Storm at the Coast (Uvær på kysten), 1855. Nasjonalmuseet, Oslo (NG.M.00228). Image via Wikimedia Commons, public domain (photo Nasjonalmuseet / Børre Høstland, CC BY 4.0).
+  rights_status: public_domain
+  hero: { width: 2078, height: 1800, bytes: 932549 }
+  thumb: { width: 346, height: 300, bytes: 16678 }
+  full: { width: 4000, height: 3465, bytes: 3065207 }
+  placeholder_color: "#635538"
+
+brahms-symphony-3:
+  # Met Open Access image (CC0), landscape ≈ 1.31:1.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Sunset_on_the_Rhine_MET_DP143198.jpg
+  source_url: https://www.metmuseum.org/art/collection/search/436827
+  commons_page: https://commons.wikimedia.org/wiki/File:Sunset_on_the_Rhine_MET_DP143198.jpg
+  width: 3810
+  height: 2911
+  medium: Oil on canvas
+  license: Public domain (Met Open Access, CC0; artist d. 1862)
+  credit_line: Barend Cornelis Koekkoek, Sunset on the Rhine, 1853. The Metropolitan Museum of Art, New York, Catharine Lorillard Wolfe Collection, Bequest of Catharine Lorillard Wolfe, 1887 (87.15.45). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2356, height: 1800, bytes: 1110116 }
+  thumb: { width: 393, height: 300, bytes: 21847 }
+  full: { width: 3810, height: 2911, bytes: 3106218 }
+  placeholder_color: "#735e45"
+
+bruckner-symphony-9:
+  # Switched at merge: Thomas Cole's Old Age is beethoven-piano-sonata-32's painting; the batch's alternative A
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Fran%C3%A7ois_Millet_-_The_Angelus_-_Google_Art_Project.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_-_The_Angelus_-_Google_Art_Project.jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_-_The_Angelus_-_Google_Art_Project.jpg
+  width: 7053
+  height: 5864
+  medium: Oil on canvas
+  license: Public domain (PD-Art; artist d. 1875)
+  credit_line: Jean-François Millet, The Angelus (L'Angélus), 1857–59. Musée d'Orsay, Paris (RF 1877). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2165, height: 1800, bytes: 574612 }
+  thumb: { width: 361, height: 300, bytes: 14683 }
+  full: { width: 4000, height: 3326, bytes: 2375569 }
+  placeholder_color: "#4d4532"
+
+chopin-piano-sonata-3:
+  # The Met's Open Access image (CC0), mirrored on Commons at the same size (3958 × 3268). The scan shows a thin
+  # strip of the canvas edge on all four sides; crop if wanted. Delacroix is already in paintings.yaml once
+  # (Christ Asleep during the Tempest); this one is chosen because it was painted at Nohant itself.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/George_Sand%27s_Garden_at_Nohant_MET_DP-14092-001.jpg
+  source_url: https://www.metmuseum.org/art/collection/search/436177
+  commons_page: https://commons.wikimedia.org/wiki/File:George_Sand%27s_Garden_at_Nohant_MET_DP-14092-001.jpg
+  width: 3958
+  height: 3268
+  medium: Oil on canvas
+  license: Public domain (CC0, The Met Open Access)
+  credit_line: Eugène Delacroix, George Sand's Garden at Nohant, ca. 1842–43. The Metropolitan Museum of Art, New York, Purchase, Dikran G. Kelekian Gift, 1922 (22.27.4). Image via The Met Open Access, public domain.
+  rights_status: public_domain
+  hero: { width: 2180, height: 1800, bytes: 866442 }
+  thumb: { width: 363, height: 300, bytes: 18110 }
+  full: { width: 3958, height: 3268, bytes: 3155156 }
+  placeholder_color: "#2a2a12"
+
+debussy-string-quartet:
+  # Monet is already in this file (Impression, Sunrise); chosen because the Rouen series (1892–93, one
+  # façade in changing light) mirrors the quartet's one theme in four movements. Portrait format.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Claude_Monet,_Rouen_Cathedral,_West_Fa%C3%A7ade,_Sunlight,_1894,_NGA_46654.jpg
+  source_url: https://www.nga.gov/collection/art-object-page.46654.html
+  commons_page: https://commons.wikimedia.org/wiki/File:Claude_Monet,_Rouen_Cathedral,_West_Fa%C3%A7ade,_Sunlight,_1894,_NGA_46654.jpg
+  width: 6030
+  height: 9204
+  medium: Oil on canvas
+  license: Public domain (NGA open access, CC0; PD-Art)
+  credit_line: Claude Monet, Rouen Cathedral, West Façade, Sunlight, 1894. National Gallery of Art, Washington, Chester Dale Collection (1963.10.179). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2747, bytes: 1538249 }
+  thumb: { width: 300, height: 458, bytes: 41697 }
+  full: { width: 2621, height: 4000, bytes: 3116296 }
+  placeholder_color: "#c0bbaa"
+
+dvorak-serenade-for-strings:
+  # Gallery photograph by anagoria, very large (8864 × 12000): a thin strip of frame along the bottom edge,
+  # crop before `npm run images`. Inventory number from Wikidata (Q20724910).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/1875_Renoir_Liebende_Nationalgalerie_Prag_anagoria.jpg
+  source_url: https://sbirky.ngprague.cz/dielo/CZE:NG.O_3201
+  commons_page: https://commons.wikimedia.org/wiki/File:1875_Renoir_Liebende_Nationalgalerie_Prag_anagoria.jpg
+  width: 8864
+  height: 12000
+  medium: Oil on canvas
+  license: Public domain (PD-Art; artist d. 1919)
+  credit_line: Pierre-Auguste Renoir, Lovers (Milenci), 1875. National Gallery Prague (O 3201). Image via Wikimedia Commons (photo anagoria), public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2437, bytes: 504178 }
+  thumb: { width: 300, height: 406, bytes: 26265 }
+  full: { width: 2955, height: 4000, bytes: 1087832 }
+  placeholder_color: "#767061"
+
+dvorak-symphony-7:
+  # Google Art Project scan of the Art Institute of Chicago painting (AIC marks it public domain).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Claude_Monet_-_Arrival_of_the_Normandy_Train,_Gare_Saint-Lazare_-_Google_Art_Project.jpg
+  source_url: https://www.artic.edu/artworks/16571
+  commons_page: https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Arrival_of_the_Normandy_Train,_Gare_Saint-Lazare_-_Google_Art_Project.jpg
+  width: 5890
+  height: 4418
+  medium: Oil on canvas
+  license: Public domain (PD-Art; artist d. 1926)
+  credit_line: Claude Monet, Arrival of the Normandy Train, Gare Saint-Lazare, 1877. The Art Institute of Chicago, Mr. and Mrs. Martin A. Ryerson Collection (1933.1158). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2400, height: 1800, bytes: 815570 }
+  thumb: { width: 400, height: 300, bytes: 25563 }
+  full: { width: 4000, height: 3000, bytes: 2423756 }
+  placeholder_color: "#667b7c"
+
+elgar-serenade-for-strings:
+  # Birmingham Museums Trust releases its own photograph under CC0 (asset 1902P13, TIFF 3400 × 6944).
+  # Tall portrait format (105.4 × 52.1 cm): check the hero crop keeps the couple (middle third).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/LongEngagementAHughes.jpg
+  source_url: https://dams.birminghammuseums.org.uk/asset-bank/action/viewAsset?id=3119
+  commons_page: https://commons.wikimedia.org/wiki/File:LongEngagementAHughes.jpg
+  width: 3400
+  height: 6944
+  medium: Oil on canvas
+  license: Public domain (PD-Art; museum photograph CC0)
+  credit_line: Arthur Hughes, The Long Engagement, 1859. Birmingham Museum and Art Gallery (1902P13). Photo by Birmingham Museums Trust, CC0, via Wikimedia Commons.
+  rights_status: public_domain
+  hero: { width: 1763, height: 3600, bytes: 1218843 }
+  thumb: { width: 300, height: 613, bytes: 51540 }
+  full: { width: 1959, height: 4000, bytes: 1585007 }
+  placeholder_color: "#534f3a"
+
+gershwin-rhapsody-in-blue:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Whistler-Nocturne_in_black_and_gold.jpg
+  source_url: https://dia.org/collection/nocturne-black-and-gold-falling-rocket-64931
+  commons_page: https://commons.wikimedia.org/wiki/File:Whistler-Nocturne_in_black_and_gold.jpg
+  width: 4371
+  height: 5807
+  medium: Oil on panel
+  license: Public domain (PD-Art)
+  credit_line: "James McNeill Whistler, Nocturne in Black and Gold: The Falling Rocket, 1875. Detroit Institute of Arts (46.309), Gift of Dexter M. Ferry, Jr. Image via Wikimedia Commons, public domain."
+  rights_status: public_domain
+  hero: { width: 1800, height: 2391, bytes: 868296 }
+  thumb: { width: 300, height: 399, bytes: 24791 }
+  full: { width: 3011, height: 4000, bytes: 2993762 }
+  placeholder_color: "#213a28"
+
+grieg-holberg-suite:
+  # SMK open image (Public Domain Mark), same size as the Commons copy. Landscape 4:3: check the portrait hero crop.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Wilhelm_Marstrand_-_Scene_from_Ludwig_Holberg%27s_The_Lying-in_Room_-_KMS506_-_Statens_Museum_for_Kunst.jpg
+  source_url: https://open.smk.dk/artwork/image/KMS506
+  commons_page: https://commons.wikimedia.org/wiki/File:Wilhelm_Marstrand_-_Scene_from_Ludwig_Holberg%27s_The_Lying-in_Room_-_KMS506_-_Statens_Museum_for_Kunst.jpg
+  width: 4596
+  height: 3466
+  medium: Oil on canvas
+  license: Public domain (SMK, Public Domain Mark 1.0; artist d. 1873)
+  credit_line: Wilhelm Marstrand, Scene from Ludvig Holberg's The Lying-in Room (Barselstuen), 1845. Statens Museum for Kunst, Copenhagen (KMS506). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2387, height: 1800, bytes: 815322 }
+  thumb: { width: 398, height: 300, bytes: 26463 }
+  full: { width: 4000, height: 3017, bytes: 2327946 }
+  placeholder_color: "#665344"
+
+handel-music-for-the-royal-fireworks:
+  # Commons licence: public domain (Google Art Project file; Wright d. 1797). Landscape, 2767 × 2219: the largest
+  # PD file found. Wright of Derby is already used for mozart-clarinet-concerto; chosen here as the closest subject
+  # (a great 18th-century fireworks display). No painting of the 1749 Green Park display exists on Commons.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Wright_(of_Derby)_-_The_Annual_Girandola_at_the_Castel_Sant%E2%80%99Angelo,_Rome_-_Google_Art_Project.jpg
+  source_url: https://artsandculture.google.com/asset/XQGaIosfH76Fsg
+  commons_page: https://commons.wikimedia.org/wiki/File:Joseph_Wright_(of_Derby)_-_The_Annual_Girandola_at_the_Castel_Sant%E2%80%99Angelo,_Rome_-_Google_Art_Project.jpg
+  width: 2767
+  height: 2219
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Joseph Wright of Derby, The Annual Girandola at the Castel Sant'Angelo, Rome, 1775–76. Walker Art Gallery, National Museums Liverpool (WAG 1428). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2245, height: 1800, bytes: 728459 }
+  thumb: { width: 374, height: 300, bytes: 15621 }
+  full: { width: 2767, height: 2219, bytes: 1024491 }
+  placeholder_color: "#45301e"
+
+haydn-string-quartet-op-76-4:
+  # National Gallery of Art open access, CC0 on Commons ({{CC0}}); artist died 1848. Landscape, 4000 × 2862.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Cole,_Sunrise_in_the_Catskills,_1826,_NGA_71025.jpg
+  source_url: https://www.nga.gov/collection/art-object-page.71025.html
+  commons_page: https://commons.wikimedia.org/wiki/File:Thomas_Cole,_Sunrise_in_the_Catskills,_1826,_NGA_71025.jpg
+  width: 4000
+  height: 2862
+  medium: Oil on canvas
+  license: Public domain (CC0, National Gallery of Art open access)
+  credit_line: Thomas Cole, Sunrise in the Catskills, 1826. National Gallery of Art, Washington, Gift of Mrs. John D. Rockefeller 3rd, in Honor of the 50th Anniversary of the National Gallery of Art (1989.24.1). Image via Wikimedia Commons, public domain (CC0).
+  rights_status: public_domain
+  hero: { width: 2516, height: 1800, bytes: 1066301 }
+  thumb: { width: 419, height: 300, bytes: 18299 }
+  full: { width: 4000, height: 2862, bytes: 3552626 }
+  placeholder_color: "#686052"
+
+haydn-symphony-45:
+  # Commons licence: {{PD-Art|PD-old-100-1923|deathyear=1652}}; Google Art Project file, LACMA's own record marks the
+  # image public domain. Portrait, 4017 × 5121. LACMA dates the painting c. 1635–37 (Google Art Project: c. 1638–40).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Georges_de_La_Tour_-_The_Magdalen_with_the_Smoking_Flame_-_Google_Art_Project.jpg
+  source_url: https://collections.lacma.org/node/238963
+  commons_page: https://commons.wikimedia.org/wiki/File:Georges_de_La_Tour_-_The_Magdalen_with_the_Smoking_Flame_-_Google_Art_Project.jpg
+  width: 4017
+  height: 5121
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Georges de La Tour, The Magdalen with the Smoking Flame, c. 1635–37. Los Angeles County Museum of Art, Gift of The Ahmanson Foundation (M.77.73). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2295, bytes: 445794 }
+  thumb: { width: 300, height: 382, bytes: 12302 }
+  full: { width: 3138, height: 4000, bytes: 1398712 }
+  placeholder_color: "#301f15"
+
+liszt-les-preludes:
+  # NGA Open Access image (CC0), mirrored on Commons. Second set of the series (1842); the 1840 set is in Utica.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Cole,_The_Voyage_of_Life_-_Manhood,_1842,_NGA_52452.jpg
+  source_url: https://www.nga.gov/collection/art-object-page.52452.html
+  commons_page: https://commons.wikimedia.org/wiki/File:Thomas_Cole,_The_Voyage_of_Life_-_Manhood,_1842,_NGA_52452.jpg
+  width: 4000
+  height: 2631
+  medium: Oil on canvas
+  license: Public domain (CC0, National Gallery of Art Open Access)
+  credit_line: "Thomas Cole, The Voyage of Life: Manhood, 1842. National Gallery of Art, Washington, Ailsa Mellon Bruce Fund (1971.16.3). Image via Wikimedia Commons (NGA Open Access), public domain."
+  rights_status: public_domain
+  hero: { width: 2737, height: 1800, bytes: 773326 }
+  thumb: { width: 456, height: 300, bytes: 18428 }
+  full: { width: 4000, height: 2631, bytes: 2044687 }
+  placeholder_color: "#4b3d2d"
+
+mendelssohn-hebrides-overture:
+  # Google Art Project file, 5259 × 3889 (landscape), public domain. YCBA marks the object Public Domain.
+  # Turner is already in this file twice; this is a different painting, chosen as the clearly best match (see research note).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Mallord_William_Turner_-_Staffa,_Fingal%27s_Cave_-_Google_Art_Project.jpg
+  source_url: https://collections.britishart.yale.edu/catalog/tms:5018
+  commons_page: https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_-_Staffa,_Fingal%27s_Cave_-_Google_Art_Project.jpg
+  width: 5259
+  height: 3889
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: J. M. W. Turner, Staffa, Fingal's Cave, 1831–32. Yale Center for British Art, Paul Mellon Collection (B1978.43.14). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2434, height: 1800, bytes: 470548 }
+  thumb: { width: 406, height: 300, bytes: 12730 }
+  full: { width: 4000, height: 2958, bytes: 1400872 }
+  placeholder_color: "#665f55"
+
+mendelssohn-symphony-3:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Louis_Daguerre_-_The_Ruins_of_Holyrood_Chapel_-_Google_Art_Project.jpg
+  source_url: https://www.liverpoolmuseums.org.uk/artifact/ruins-of-holyrood-chapel
+  commons_page: https://commons.wikimedia.org/wiki/File:Louis_Daguerre_-_The_Ruins_of_Holyrood_Chapel_-_Google_Art_Project.jpg
+  width: 3482
+  height: 2844
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Louis Daguerre, The Ruins of Holyrood Chapel, c. 1824. Walker Art Gallery, Liverpool (WAG 3034). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2204, height: 1800, bytes: 1030853 }
+  thumb: { width: 367, height: 300, bytes: 15164 }
+  full: { width: 3482, height: 2844, bytes: 2480505 }
+  placeholder_color: "#515057"
+
+mozart-clarinet-quintet:
+  # Commons licence: {{PD-Art|PD-old-auto-expired|deathyear=1842}}. Gallery photograph (User:Shonagon, 2022): check the
+  # edges for frame and perspective before `npm run images`; fallback File:Self-portrait_with_Her_Daughter_by_
+  # Elisabeth-Louise_Vigée_Le_Brun.jpg (2565 × 3466). Not the 1786 version (Tendresse maternelle, INV 3069).
+  # Medium: Commons says oil on canvas, other catalogues oil on wood, hence null. Portrait, 2682 × 3562.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Madame_Vig%C3%A9e-Le_Brun_et_sa_fille,_Jeanne-Lucie-Louise,_dite_Julie_-_Louise-%C3%89lisabeth_Vig%C3%A9e-Le_Brun_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3068.jpg
+  source_url: https://www.wikidata.org/wiki/Q19273424
+  commons_page: https://commons.wikimedia.org/wiki/File:Madame_Vig%C3%A9e-Le_Brun_et_sa_fille,_Jeanne-Lucie-Louise,_dite_Julie_-_Louise-%C3%89lisabeth_Vig%C3%A9e-Le_Brun_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3068.jpg
+  width: 2682
+  height: 3562
+  medium: null
+  license: Public domain (PD-Art; photograph of a public-domain painting)
+  credit_line: Élisabeth Vigée Le Brun, Madame Vigée Le Brun and her Daughter, Julie (Madame Vigée-Le Brun et sa fille, Jeanne-Lucie-Louise, dite Julie), 1789. Musée du Louvre, Paris (INV 3068). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2391, bytes: 438678 }
+  thumb: { width: 300, height: 398, bytes: 16494 }
+  full: { width: 2682, height: 3562, bytes: 1017691 }
+  placeholder_color: "#61584d"
+
+mozart-piano-concerto-24:
+  # Commons licence: {{PD-old-100-expired}}; photo from the Museo del Prado. 1920 × 1772, near square: at the low end of
+  # the resolutions in this file (smallest 1784 px wide). Goya is already used once (Witches' Sabbath); chosen as the
+  # clearly best match (1786, the bleak scene in a bright Four Seasons series, as K. 491 beside Figaro).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/18_La_nevada_o_El_Invierno.jpg
+  source_url: https://www.museodelprado.es/en/the-collection/art-work/the-snowstorm-or-winter/4792e788-9131-4c68-a5a9-b0ed05063ad8
+  commons_page: https://commons.wikimedia.org/wiki/File:18_La_nevada_o_El_Invierno.jpg
+  width: 1920
+  height: 1772
+  medium: Oil on canvas
+  license: Public domain (photograph of a public-domain painting)
+  credit_line: Francisco de Goya, The Snowstorm, or Winter (La nevada o El invierno), 1786–87. Museo Nacional del Prado, Madrid (P000798). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1920, height: 1772, bytes: 458085 }
+  thumb: { width: 325, height: 300, bytes: 15145 }
+  full: { width: 1920, height: 1772, bytes: 528060 }
+  placeholder_color: "#7b7265"
+
+mozart-symphony-38:
+  # Commons licence: {{Licensed-PD-Art|PD-old-auto-1923|cc-by-sa-4.0|deathyear=1883}} (painting PD; Belvedere photo
+  # also CC BY-SA 4.0), the same situation as haydn-string-quartet-op-76-3 (Brand). Landscape, 3508 × 2579, clean edges.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Ferdinand_Lepi%C3%A9_-_Der_Altst%C3%A4dter_Ring_in_Prag_-_10214_-_%C3%96sterreichische_Galerie_Belvedere.jpg
+  source_url: https://digital.belvedere.at/objects/19060/der-altstadter-ring-in-prag
+  commons_page: https://commons.wikimedia.org/wiki/File:Ferdinand_Lepi%C3%A9_-_Der_Altst%C3%A4dter_Ring_in_Prag_-_10214_-_%C3%96sterreichische_Galerie_Belvedere.jpg
+  width: 3508
+  height: 2579
+  medium: Oil on canvas
+  license: Public domain (PD-Art; photo also CC BY-SA 4.0)
+  credit_line: Ferdinand Lepié, The Old Town Square in Prague (Der Altstädter Ring in Prag), 1864. Belvedere, Vienna (Inv. 10214). Image via Wikimedia Commons, public domain (photo Belvedere, CC BY-SA 4.0).
+  rights_status: public_domain
+  hero: { width: 2448, height: 1800, bytes: 532685 }
+  thumb: { width: 408, height: 300, bytes: 21306 }
+  full: { width: 3508, height: 2579, bytes: 1095844 }
+  placeholder_color: "#715f3d"
+
+mozart-violin-concerto-5:
+  # Commons licence: Public domain (PD-Art); Google Art Project file, 3083 × 2677 (landscape).
+  # Wikidata Q18686531: Uffizi, oil on canvas, 50 × 56 cm, Uffizi catalogue no. 00099697. The Uffizi catalogue page
+  # (https://catalogo.uffizi.it/it/29/ricerca/detailiccd/1396732/) gave HTTP 522, so source_url is the Google A&C record.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Jean_Etienne_L%C3%ACotard_-_Ritratto_di_Maria_Adelaide_di_Francia_vestita_alla_turca_-_Google_Art_Project.jpg
+  source_url: https://artsandculture.google.com/asset/1QF0Filbx--RPQ
+  commons_page: https://commons.wikimedia.org/wiki/File:Jean_Etienne_L%C3%ACotard_-_Ritratto_di_Maria_Adelaide_di_Francia_vestita_alla_turca_-_Google_Art_Project.jpg
+  width: 3083
+  height: 2677
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Jean-Étienne Liotard, Portrait of Marie-Adélaïde of France in Turkish Dress, 1753. Gallerie degli Uffizi, Florence. Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2073, height: 1800, bytes: 664813 }
+  thumb: { width: 345, height: 300, bytes: 19870 }
+  full: { width: 3083, height: 2677, bytes: 1286531 }
+  placeholder_color: "#838a76"
+
+mussorgsky-night-on-bald-mountain:
+  # Round painting (tondo) on a black square; the crop should keep the cauldron and the flying skeleton.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Clevelandart_1977.37.3.jpg
+  source_url: https://clevelandart.org/art/1977.37.3
+  commons_page: https://commons.wikimedia.org/wiki/File:Clevelandart_1977.37.3.jpg
+  width: 3400
+  height: 3383
+  medium: Oil on canvas
+  license: Public domain (CC0, Cleveland Museum of Art Open Access)
+  credit_line: "Salvator Rosa, Scenes of Witchcraft: Evening, c. 1645–49. The Cleveland Museum of Art (1977.37.3). Image via Wikimedia Commons, public domain (CC0)."
+  rights_status: public_domain
+  hero: { width: 1809, height: 1800, bytes: 321613 }
+  thumb: { width: 302, height: 300, bytes: 9625 }
+  full: { width: 3400, height: 3383, bytes: 1282810 }
+  placeholder_color: "#150d0a"
+
+palestrina-missa-papae-marcelli:
+  # Commons licence: {{PD-art-100-expired}} (Raphael d. 1520). Portrait format, 4570 × 7333 (source uffizi.it).
+  # Cover crop: keep the angel choir at the top and Cecilia's face. Painting on panel transferred to canvas in Paris
+  # (Wikipedia); Wikidata gives 220 × 136 cm.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Raffaello_(1483-1520)_-_Pala_di_Santa_Cecilia_-_577_-_Pinacoteca_Nazionale_di_Bologna.jpg
+  source_url: https://pinacotecabologna.cultura.gov.it/opere-darte/estasi-di-santa-cecilia-fra-i-santi-paolo-giovanni-evangelista-agostino-e-maria-maddalena-361
+  commons_page: https://commons.wikimedia.org/wiki/File:Raffaello_(1483-1520)_-_Pala_di_Santa_Cecilia_-_577_-_Pinacoteca_Nazionale_di_Bologna.jpg
+  width: 4570
+  height: 7333
+  medium: Oil on canvas (transferred from panel)
+  license: Public domain (PD-Art)
+  credit_line: Raphael, The Ecstasy of Saint Cecilia, c. 1516–17. Pinacoteca Nazionale, Bologna (inv. 577). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2888, bytes: 1483215 }
+  thumb: { width: 300, height: 481, bytes: 45523 }
+  full: { width: 2493, height: 4000, bytes: 3964242 }
+  placeholder_color: "#756d57"
+
+prokofiev-piano-concerto-3:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Paul_Gauguin,_Breton_Girls_Dancing,_Pont-Aven,_1888,_NGA_61369.jpg
+  source_url: https://www.nga.gov/collection/art-object-page.61369.html
+  commons_page: https://commons.wikimedia.org/wiki/File:Paul_Gauguin,_Breton_Girls_Dancing,_Pont-Aven,_1888,_NGA_61369.jpg
+  width: 4000
+  height: 3135
+  medium: Oil on canvas
+  license: Public domain (CC0, National Gallery of Art Open Access)
+  credit_line: "Paul Gauguin, Breton Girls Dancing, Pont-Aven, 1888. National Gallery of Art, Washington, Collection of Mr. and Mrs. Paul Mellon (1983.1.19). Image via Wikimedia Commons, public domain (CC0)."
+  rights_status: public_domain
+  hero: { width: 2297, height: 1800, bytes: 1144986 }
+  thumb: { width: 383, height: 300, bytes: 23493 }
+  full: { width: 4000, height: 3135, bytes: 4286190 }
+  placeholder_color: "#7e7a5f"
+
+rachmaninoff-symphony-2:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Viktor_Borisov-Musatov_-_%D0%98%D0%B7%D1%83%D0%BC%D1%80%D1%83%D0%B4%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B6%D0%B5%D1%80%D0%B5%D0%BB%D1%8C%D0%B5_-_Google_Art_Project.jpg
+  source_url: https://artsandculture.google.com/asset/BAHwlipCN6gvGQ
+  commons_page: https://commons.wikimedia.org/wiki/File:Viktor_Borisov-Musatov_-_%D0%98%D0%B7%D1%83%D0%BC%D1%80%D1%83%D0%B4%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B6%D0%B5%D1%80%D0%B5%D0%BB%D1%8C%D0%B5_-_Google_Art_Project.jpg
+  width: 5651
+  height: 3258
+  medium: Oil and tempera on canvas
+  license: Public domain (PD-Art)
+  credit_line: "Victor Borisov-Musatov, The Emerald Necklace, 1903–04. State Tretyakov Gallery, Moscow. Image via Wikimedia Commons (Google Art Project), public domain."
+  rights_status: public_domain
+  hero: { width: 3122, height: 1800, bytes: 1495721 }
+  thumb: { width: 520, height: 300, bytes: 42098 }
+  full: { width: 4000, height: 2306, bytes: 2496470 }
+  placeholder_color: "#48624a"
+
+ravel-daphnis-et-chloe-suite-2:
+  # Watercolour stage design (the décor of Parts I and III of the 1912 production). Houghton Library
+  # asks for its citation as credit: "MS Thr 414.4 (9), Howard D. Rothschild Collection on Ballets Russes
+  # of Serge Diaghilev, Harvard Theatre Collection, Houghton Library, Harvard University".
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Harvard_Theatre_Collection_-_Bakst,_MS_Thr_414.4_(9).jpg
+  source_url: http://id.lib.harvard.edu/aleph/002122718/catalog
+  commons_page: https://commons.wikimedia.org/wiki/File:Harvard_Theatre_Collection_-_Bakst,_MS_Thr_414.4_(9).jpg
+  width: 6313
+  height: 4494
+  medium: Watercolour on paper
+  license: Public domain (PD-old; Houghton Library claims no rights in the reproduction)
+  credit_line: Léon Bakst, set design for Daphnis et Chloé, Act I, 1912. Harvard Theatre Collection, Houghton Library, Harvard University (MS Thr 414.4 (9)). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2529, height: 1800, bytes: 885084 }
+  thumb: { width: 421, height: 300, bytes: 37473 }
+  full: { width: 4000, height: 2847, bytes: 2769564 }
+  placeholder_color: "#777c65"
+
+respighi-pines-of-rome:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Italiaans_landschap_met_parasoldennen,_SK-A-4688.jpg
+  source_url: https://www.rijksmuseum.nl/en/collection/SK-A-4688
+  commons_page: https://commons.wikimedia.org/wiki/File:Italiaans_landschap_met_parasoldennen,_SK-A-4688.jpg
+  width: 7058
+  height: 5104
+  medium: Oil on canvas
+  license: Public domain (Rijksmuseum, CC0)
+  credit_line: Hendrik Voogd, Italian Landscape with Umbrella Pines, 1807. Rijksmuseum, Amsterdam (SK-A-4688). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2489, height: 1800, bytes: 909931 }
+  thumb: { width: 415, height: 300, bytes: 30698 }
+  full: { width: 4000, height: 2893, bytes: 2701205 }
+  placeholder_color: "#75715b"
+
+rossini-william-tell-overture:
+  # Commons licence: PD-Art|PD-old-auto-expired (Diday died 1877). Museum-supplied TIFF, 2945 × 2171 (landscape);
+  # convert the master to JPEG if the image pipeline does not read TIFF. Oil on canvas, 116 × 156 cm, inv. 273.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Fran%C3%A7ois_Diday,_Orage_sur_le_L%C3%A9man,_1839.tif
+  source_url: https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_Diday,_Orage_sur_le_L%C3%A9man,_1839.tif
+  commons_page: https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_Diday,_Orage_sur_le_L%C3%A9man,_1839.tif
+  width: 2945
+  height: 2171
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: François Diday, Storm on Lake Geneva (Orage sur le Léman), 1839. Musée des beaux-arts, La Chaux-de-Fonds (inv. 273). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2442, height: 1800, bytes: 659551 }
+  thumb: { width: 407, height: 300, bytes: 20270 }
+  full: { width: 2945, height: 2171, bytes: 1150795 }
+  placeholder_color: "#64675b"
+
+saint-saens-danse-macabre:
+  # Very wide frieze (4370 × 1006, 4.3 : 1): the hero crop shows only part of it; the centre
+  # (Death with the coffin leading the pope, the emperor) crops well. Alternative 1 has a 3:2-like shape.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Bernt_Notke_Danse_Macabre.jpg
+  source_url: https://nigulistemuuseum.ekm.ee/en/dance-of-death/
+  commons_page: https://commons.wikimedia.org/wiki/File:Bernt_Notke_Danse_Macabre.jpg
+  width: 4370
+  height: 1006
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-expired)
+  credit_line: Bernt Notke, Danse Macabre, late 15th century. Art Museum of Estonia, Niguliste Museum, Tallinn (EKM j 18761 M 5174). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 3600, height: 829, bytes: 873208 }
+  thumb: { width: 720, height: 166, bytes: 42092 }
+  full: { width: 4000, height: 921, bytes: 1118140 }
+  placeholder_color: "#736443"
+
+schubert-arpeggione-sonata:
+  # Gallery photo by Sailko, photo licence CC BY 3.0; artwork public domain (Engert died 1871). Portrait, 2502 × 2886:
+  # plan the crop and check the edges for frame. The WGA scan (File:Erasmus Engert - Viennese Domestic Garden - WGA07524.jpg)
+  # is only 900 × 1091. SMB inventory number not recorded; the SMB's own photos are NC, so not used.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Erasmus_ritter_von_engert,_giardino_interno_viennese,_1828-30_ca.jpg
+  source_url: https://www.wga.hu/html/e/engert/garden.html
+  commons_page: https://commons.wikimedia.org/wiki/File:Erasmus_ritter_von_engert,_giardino_interno_viennese,_1828-30_ca.jpg
+  width: 2502
+  height: 2886
+  medium: Oil on canvas
+  license: Public domain (photograph of a public-domain painting)
+  credit_line: Erasmus Engert, Viennese Domestic Garden (Wiener Hausgarten), c. 1828–30. Alte Nationalgalerie, Staatliche Museen zu Berlin. Image via Wikimedia Commons, public domain (photo Sailko, CC BY 3.0).
+  rights_status: public_domain
+  hero: { width: 1800, height: 2076, bytes: 563174 }
+  thumb: { width: 300, height: 346, bytes: 31510 }
+  full: { width: 2502, height: 2886, bytes: 909726 }
+  placeholder_color: "#6a502e"
+
+schubert-piano-trio-2:
+  # Gallery photo by Sailko (Francesco Bini), photo licence CC BY-SA 4.0; artwork PD-old-auto-expired (Fahlcrantz died 1861).
+  # Frame already cropped out in this Commons file (3443 × 2533, landscape). The museum's own scan on Commons is only 964 × 714.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Carl_johan_fahlcrantz,_una_cittadina_al_tramonto,_1833_(cropped).jpg
+  source_url: https://www.nasjonalmuseet.no/en/collection/object/NG.M.03491
+  commons_page: https://commons.wikimedia.org/wiki/File:Carl_johan_fahlcrantz,_una_cittadina_al_tramonto,_1833_(cropped).jpg
+  width: 3443
+  height: 2533
+  medium: Oil on canvas
+  license: Public domain (photograph of a public-domain painting)
+  credit_line: Carl Johan Fahlcrantz, A Town at Sunset, 1833. Nasjonalmuseet, Oslo (NG.M.03491). Image via Wikimedia Commons, public domain (photo Sailko, CC BY-SA 4.0).
+  rights_status: public_domain
+  hero: { width: 2447, height: 1800, bytes: 302339 }
+  thumb: { width: 408, height: 300, bytes: 13707 }
+  full: { width: 3443, height: 2533, bytes: 568060 }
+  placeholder_color: "#643e34"
+
+schumann-cello-concerto:
+  # Oil sketch (oil on paper mounted on card), 47 × 34 cm. Place of painting not recorded.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Hans_Gude_-_By_the_Mill_Pond_-_Google_Art_Project.jpg
+  source_url: http://www.digitaltmuseum.no/things/nm/NMK-B/NG.M.00636-008
+  commons_page: https://commons.wikimedia.org/wiki/File:Hans_Gude_-_By_the_Mill_Pond_-_Google_Art_Project.jpg
+  width: 4014
+  height: 2880
+  medium: Oil on paper mounted on cardboard
+  license: Public domain (PD-Art)
+  credit_line: Hans Gude, By the Mill Pond (En mølledam), 1850. National Museum of Art, Architecture and Design, Oslo (NG.M.00636-008). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2509, height: 1800, bytes: 1532312 }
+  thumb: { width: 418, height: 300, bytes: 30796 }
+  full: { width: 4000, height: 2870, bytes: 3639625 }
+  placeholder_color: "#514a32"
+
+schumann-symphony-1:
+  # Photographer's frontal, cropped reproduction (no frame), tagged CC BY 4.0; a faithful photo of a PD painting
+  # creates no new right (EU DSM art. 14, US), as for the Tina Blau entry. Lower-resolution PD copies:
+  # File:Adrian_Ludwig_Richter_005.jpg (1927 × 1184), File:Ludwig_Richter_-_Bridal_Procession_in_a_Spring_Landscape_-_WGA19454.jpg.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Dresden,_Albertinum,_Ludwig_Richter,_der_Brautzug_im_Fr%C3%BChling.JPG
+  source_url: https://www.wikidata.org/wiki/Q902489
+  commons_page: https://commons.wikimedia.org/wiki/File:Dresden,_Albertinum,_Ludwig_Richter,_der_Brautzug_im_Fr%C3%BChling.JPG
+  width: 4180
+  height: 2639
+  medium: Oil on canvas
+  license: Public domain (photograph of a public-domain painting)
+  credit_line: Ludwig Richter, Bridal Procession in a Spring Landscape (Der Brautzug im Frühling), 1847. Galerie Neue Meister, Staatliche Kunstsammlungen Dresden (Gal.-Nr. 2230). Image via Wikimedia Commons (photo Dguendel), public domain.
+  rights_status: public_domain
+  hero: { width: 2851, height: 1800, bytes: 779848 }
+  thumb: { width: 475, height: 300, bytes: 29320 }
+  full: { width: 4000, height: 2525, bytes: 1538879 }
+  placeholder_color: "#817967"
+
+shostakovich-symphony-10:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Vasily_Surikov_-_%D0%A3%D1%82%D1%80%D0%BE_%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%B5%D1%86%D0%BA%D0%BE%D0%B9_%D0%BA%D0%B0%D0%B7%D0%BD%D0%B8_-_Google_Art_Project.jpg
+  source_url: https://artsandculture.google.com/asset/xAGX5DyRl-AyWw
+  commons_page: https://commons.wikimedia.org/wiki/File:Vasily_Surikov_-_%D0%A3%D1%82%D1%80%D0%BE_%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%B5%D1%86%D0%BA%D0%BE%D0%B9_%D0%BA%D0%B0%D0%B7%D0%BD%D0%B8_-_Google_Art_Project.jpg
+  width: 4000
+  height: 2301
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: "Vasily Surikov, Morning of the Streltsy Execution, 1881. State Tretyakov Gallery, Moscow. Image via Wikimedia Commons (Google Art Project), public domain."
+  rights_status: public_domain
+  hero: { width: 3129, height: 1800, bytes: 815231 }
+  thumb: { width: 522, height: 300, bytes: 45862 }
+  full: { width: 4000, height: 2301, bytes: 1302036 }
+  placeholder_color: "#60584a"
+
+shostakovich-symphony-7:
+  # Google Art Project scan of the State Russian Museum painting (inv. Ж-5048).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Fyodor_Alexeyev_-_View_of_the_Peter_and_Paul_Fortress_and_Palace_Embankment_-_Google_Art_Project.jpg
+  source_url: https://rusmuseumvrm.ru/data/collections/painting/17_19/zh-5048/
+  commons_page: https://commons.wikimedia.org/wiki/File:Fyodor_Alexeyev_-_View_of_the_Peter_and_Paul_Fortress_and_Palace_Embankment_-_Google_Art_Project.jpg
+  width: 4601
+  height: 2946
+  medium: Oil on canvas
+  license: Public domain (PD-Art; artist d. 1824)
+  credit_line: Fyodor Alekseyev, View of the Peter and Paul Fortress and the Palace Embankment, 1799. State Russian Museum, St Petersburg (Ж-5048). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2811, height: 1800, bytes: 629334 }
+  thumb: { width: 469, height: 300, bytes: 22298 }
+  full: { width: 4000, height: 2561, bytes: 1157513 }
+  placeholder_color: "#897f66"
+
+shostakovich-symphony-8:
+  # Google Art Project scan of the State Tretyakov Gallery painting (inv. 183). No museum object page found; source_url is the Wikidata item.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Vasily_Vereshchagin_-_%D0%90%D0%BF%D0%BE%D1%84%D0%B5%D0%BE%D0%B7_%D0%B2%D0%BE%D0%B9%D0%BD%D1%8B_-_Google_Art_Project.jpg
+  source_url: https://www.wikidata.org/wiki/Q4068125
+  commons_page: https://commons.wikimedia.org/wiki/File:Vasily_Vereshchagin_-_%D0%90%D0%BF%D0%BE%D1%84%D0%B5%D0%BE%D0%B7_%D0%B2%D0%BE%D0%B9%D0%BD%D1%8B_-_Google_Art_Project.jpg
+  width: 4000
+  height: 2511
+  medium: Oil on canvas
+  license: Public domain (PD-Art; artist d. 1904)
+  credit_line: Vasily Vereshchagin, The Apotheosis of War, 1871. State Tretyakov Gallery, Moscow (inv. 183). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2867, height: 1800, bytes: 1442564 }
+  thumb: { width: 478, height: 300, bytes: 42845 }
+  full: { width: 4000, height: 2511, bytes: 2637852 }
+  placeholder_color: "#958769"
+
+sibelius-finlandia:
+  # Google Art Project scan of the Ateneum painting (Finnish National Gallery). Landscape (1.41:1): check the hero crop
+  # (the woman and the tub are centre-right).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Pekka_Halonen_-_Washing_on_the_Ice_-_Google_Art_Project.jpg
+  source_url: http://kokoelmat.fng.fi/wandora/w?si=A+II+782%3A11
+  commons_page: https://commons.wikimedia.org/wiki/File:Pekka_Halonen_-_Washing_on_the_Ice_-_Google_Art_Project.jpg
+  width: 4001
+  height: 2837
+  medium: Oil on canvas
+  license: Public domain (PD-Art; artist d. 1933)
+  credit_line: Pekka Halonen, Washing on the Ice, 1900. Finnish National Gallery, Ateneum Art Museum, Helsinki (A II 782:11). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2539, height: 1800, bytes: 741801 }
+  thumb: { width: 423, height: 300, bytes: 16936 }
+  full: { width: 4000, height: 2836, bytes: 1552754 }
+  placeholder_color: "#c5bdac"
+
+smetana-string-quartet-1:
+  # Gallery photograph by anagoria, very large and square (12000 × 12000). Inventory number not on Commons and
+  # no Wikidata item; the NG Prague collection site did not answer from this machine, so source_url is the Commons page.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/1899_Hude%C4%8Dek_Mondlandschaft_Nationalgalerie_Prag_anagoria.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:1899_Hude%C4%8Dek_Mondlandschaft_Nationalgalerie_Prag_anagoria.jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:1899_Hude%C4%8Dek_Mondlandschaft_Nationalgalerie_Prag_anagoria.jpg
+  width: 12000
+  height: 12000
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-expired; artist d. 1941)
+  credit_line: Antonín Hudeček, Moonscape (Měsíčná krajina), 1899. National Gallery Prague. Image via Wikimedia Commons (photo anagoria), public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 1800, bytes: 334057 }
+  thumb: { width: 300, height: 300, bytes: 16940 }
+  full: { width: 4000, height: 4000, bytes: 1144179 }
+  placeholder_color: "#64583f"
+
+stravinsky-firebird-suite:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Moscou,_galerie_Tretiakov_Ivan-Tsarevitch_at_the_Grey_Wolf_(Vasnetsov).jpg
+  source_url: https://www.wikidata.org/wiki/Q4195524
+  commons_page: https://commons.wikimedia.org/wiki/File:Moscou,_galerie_Tretiakov_Ivan-Tsarevitch_at_the_Grey_Wolf_(Vasnetsov).jpg
+  width: 2099
+  height: 2761
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-1923)
+  credit_line: Viktor Vasnetsov, Ivan Tsarevich on the Grey Wolf, 1889. State Tretyakov Gallery, Moscow. Image via Wikimedia Commons (photo Pierre André Leclercq), public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2368, bytes: 765833 }
+  thumb: { width: 300, height: 395, bytes: 30421 }
+  full: { width: 2099, height: 2761, bytes: 1149247 }
+  placeholder_color: "#585d5b"
+
+tchaikovsky-romeo-and-juliet:
+  # Faithful gallery photo (Ad Meskens, 2009) of a public-domain painting, cropped to the canvas; the
+  # uploader's CC BY-SA tag is not needed for a faithful reproduction (US Bridgeman; EU DSM art. 14).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Madox_Brown-Romeo_%26_Juliet.JPG
+  source_url: https://emuseum.delart.org/objects/9508/romeo-and-juliet
+  commons_page: https://commons.wikimedia.org/wiki/File:Madox_Brown-Romeo_%26_Juliet.JPG
+  width: 1968
+  height: 2795
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: "Ford Madox Brown, Romeo and Juliet, 1869–70. Delaware Art Museum, Wilmington, Samuel and Mary R. Bancroft Memorial, 1935 (DAM 1935-1). Photo: Ad Meskens, via Wikimedia Commons, public domain."
+  rights_status: public_domain
+  hero: { width: 1800, height: 2556, bytes: 560470 }
+  thumb: { width: 300, height: 426, bytes: 26708 }
+  full: { width: 1968, height: 2795, bytes: 754876 }
+  placeholder_color: "#624136"
+
+vivaldi-four-seasons-autumn:
+  # Commons licence: {{PD-Art|PD-old-auto-expired|deathyear=1640}}; source nationalgallery.org.uk. Wide landscape,
+  # 7233 × 4226 (a 21256 × 12628 file also exists: File:Peter_Paul_Rubens_-_View_of_Het_Steen_in_the_Early_Morning.jpg).
+  # Cover crop: keep the hunter (lower centre) and the sunrise; the cart is at the far left.
+  # Rubens is already in paintings.yaml as co-painter of haydn-trumpet-concerto (Hearing); proposed here as the
+  # clearest match (autumn, dawn, a hunter with gun and dog).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Peter_Paul_Rubens_-_A_View_of_Het_Steen_in_the_Early_Morning.jpg
+  source_url: https://www.nationalgallery.org.uk/paintings/peter-paul-rubens-a-view-of-het-steen-in-the-early-morning
+  commons_page: https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_A_View_of_Het_Steen_in_the_Early_Morning.jpg
+  width: 7233
+  height: 4226
+  medium: Oil on oak
+  license: Public domain (PD-Art)
+  credit_line: Peter Paul Rubens, An Autumn Landscape with a View of Het Steen in the Early Morning, probably 1636. The National Gallery, London (NG66). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 3081, height: 1800, bytes: 1037493 }
+  thumb: { width: 513, height: 300, bytes: 38596 }
+  full: { width: 4000, height: 2337, bytes: 1958438 }
+  placeholder_color: "#5d594f"
+
+vivaldi-four-seasons-summer:
+  # Commons licence: {{PD-art|PD-old-auto-expired|deathyear=1510}}; source gallerieaccademia.it. Near-square portrait,
+  # 3241 × 3624. Content note: the seated woman on the right is partly nude (nursing); flag for the product owner.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione,_The_tempest.jpg
+  source_url: http://www.gallerieaccademia.it/en/tempest
+  commons_page: https://commons.wikimedia.org/wiki/File:Giorgione,_The_tempest.jpg
+  width: 3241
+  height: 3624
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Giorgione, The Tempest, c. 1506–08. Gallerie dell'Accademia, Venice (Cat. 915). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2013, bytes: 874796 }
+  thumb: { width: 300, height: 335, bytes: 23952 }
+  full: { width: 3241, height: 3624, bytes: 2688442 }
+  placeholder_color: "#514b32"
+
+wagner-siegfried-idyll:
+  # Switched at merge: Turner already has two paintings and takes a third for the Hebrides; the batch's alternative B
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Robert_Z%C3%BCnd_Abend_am_Vierwaldst%C3%A4ttersee_1851.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Robert_Z%C3%BCnd_Abend_am_Vierwaldst%C3%A4ttersee_1851.jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:Robert_Z%C3%BCnd_Abend_am_Vierwaldst%C3%A4ttersee_1851.jpg
+  width: 4720
+  height: 3000
+  medium: Oil on canvas
+  license: Public domain (PD-Art; artist d. 1909)
+  credit_line: Robert Zünd, Evening on Lake Lucerne (Abend am Vierwaldstättersee), 1851. Private collection. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2832, height: 1800, bytes: 732775 }
+  thumb: { width: 472, height: 300, bytes: 19476 }
+  full: { width: 4000, height: 2542, bytes: 1351303 }
+  placeholder_color: "#8b7059"

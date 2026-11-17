@@ -101,6 +101,31 @@
         "hash": "2da9457179"
       }
     },
+    "composers/bizet": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Georges_bizet.jpg",
+      "color": "#342c27",
+      "hero": {
+        "path": "composers/bizet-hero.heic",
+        "width": 1182,
+        "height": 1632,
+        "bytes": 106470,
+        "hash": "485ea0520a"
+      },
+      "thumb": {
+        "path": "composers/bizet-thumb.heic",
+        "width": 300,
+        "height": 414,
+        "bytes": 17150,
+        "hash": "e9a4a808c8"
+      },
+      "full": {
+        "path": "composers/bizet-full.heic",
+        "width": 1182,
+        "height": 1632,
+        "bytes": 117918,
+        "hash": "3cfdfc80ec"
+      }
+    },
     "composers/borodin": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Alexandre_Borodine_-_d%27apr%C3%A8s_le_tableau_de_A._Levinstein_-_btv1b8415940h.jpg",
       "color": "#967072",
@@ -331,6 +356,31 @@
         "hash": "8867c0ad0a"
       }
     },
+    "composers/gershwin": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/George_Gershwin,_1898-1937,_half-length_portrait,_standing,_facing_left_LCCN2005678096.jpg",
+      "color": "#929292",
+      "hero": {
+        "path": "composers/gershwin-hero.heic",
+        "width": 1177,
+        "height": 1536,
+        "bytes": 75811,
+        "hash": "cf37a980de"
+      },
+      "thumb": {
+        "path": "composers/gershwin-thumb.heic",
+        "width": 300,
+        "height": 392,
+        "bytes": 8473,
+        "hash": "c7ed3ee2e8"
+      },
+      "full": {
+        "path": "composers/gershwin-full.heic",
+        "width": 1177,
+        "height": 1536,
+        "bytes": 87748,
+        "hash": "d524536361"
+      }
+    },
     "composers/grieg": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Eilif_Peterssen_-_Portrait_of_the_Composer_Edvard_Grieg_-_NG.M.00396_-_National_Museum_of_Art,_Architecture_and_Design.jpg",
       "color": "#1e1d15",
@@ -359,6 +409,31 @@
         "height": 3632,
         "bytes": 1812937,
         "hash": "bda57052e4"
+      }
+    },
+    "composers/handel": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/George_Frideric_Handel_by_Thomas_Hudson.jpg",
+      "color": "#251714",
+      "hero": {
+        "path": "composers/handel-hero.heic",
+        "width": 1800,
+        "height": 2273,
+        "bytes": 513722,
+        "hash": "4b56c2673b"
+      },
+      "thumb": {
+        "path": "composers/handel-thumb.heic",
+        "width": 300,
+        "height": 379,
+        "bytes": 11879,
+        "hash": "6526f717d5"
+      },
+      "full": {
+        "path": "composers/handel-full.heic",
+        "width": 2400,
+        "height": 3030,
+        "bytes": 774340,
+        "hash": "980149de85"
       }
     },
     "composers/haydn": {
@@ -486,6 +561,56 @@
         "hash": "1eb3ce4f2a"
       }
     },
+    "composers/mussorgsky": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Ilya_Repin_-_%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B0_%D0%9C.%D0%9F.%D0%9C%D1%83%D1%81%D0%BE%D1%80%D0%B3%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_-_Google_Art_Project.jpg",
+      "color": "#786b53",
+      "hero": {
+        "path": "composers/mussorgsky-hero.heic",
+        "width": 1800,
+        "height": 2246,
+        "bytes": 501413,
+        "hash": "92a98e62bd"
+      },
+      "thumb": {
+        "path": "composers/mussorgsky-thumb.heic",
+        "width": 300,
+        "height": 374,
+        "bytes": 16734,
+        "hash": "54340c340b"
+      },
+      "full": {
+        "path": "composers/mussorgsky-full.heic",
+        "width": 3205,
+        "height": 4000,
+        "bytes": 1303836,
+        "hash": "daa1667fa2"
+      }
+    },
+    "composers/palestrina": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Giovanni_Pierluigi_da_Palestrina_-_d'apr%C3%A8s_H._E._von_Wintter_-_btv1b84233685.jpg",
+      "color": "#d2cbc2",
+      "hero": {
+        "path": "composers/palestrina-hero.heic",
+        "width": 1800,
+        "height": 2389,
+        "bytes": 657248,
+        "hash": "62f5e4a382"
+      },
+      "thumb": {
+        "path": "composers/palestrina-thumb.heic",
+        "width": 300,
+        "height": 398,
+        "bytes": 13927,
+        "hash": "28500e4368"
+      },
+      "full": {
+        "path": "composers/palestrina-full.heic",
+        "width": 3013,
+        "height": 4000,
+        "bytes": 1872058,
+        "hash": "b1bdc6e32a"
+      }
+    },
     "composers/prokofiev": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Sergei_Prokofiev_circa_1918_over_Chair_Bain.jpg",
       "color": "#707170",
@@ -561,6 +686,31 @@
         "hash": "caecf29712"
       }
     },
+    "composers/respighi": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Ottorino_Respighi,_1927_(cropped).jpg",
+      "color": "#737473",
+      "hero": {
+        "path": "composers/respighi-hero.heic",
+        "width": 1800,
+        "height": 2400,
+        "bytes": 862545,
+        "hash": "26423e58c0"
+      },
+      "thumb": {
+        "path": "composers/respighi-thumb.heic",
+        "width": 300,
+        "height": 400,
+        "bytes": 20529,
+        "hash": "1b7d4f1c1f"
+      },
+      "full": {
+        "path": "composers/respighi-full.heic",
+        "width": 3000,
+        "height": 4000,
+        "bytes": 2617864,
+        "hash": "ab2d27e653"
+      }
+    },
     "composers/rimsky-korsakov": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Walentin_Alexandrowitsch_Serow_004.jpg",
       "color": "#5a5042",
@@ -584,6 +734,31 @@
         "height": 3159,
         "bytes": 2280894,
         "hash": "3276c701a3"
+      }
+    },
+    "composers/rossini": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Gioachino_Rossini,_1828,_by_Hortense_Haudebourt-Lescot.jpg",
+      "color": "#231f1f",
+      "hero": {
+        "path": "composers/rossini-hero.heic",
+        "width": 1628,
+        "height": 2048,
+        "bytes": 649652,
+        "hash": "92a957cf85"
+      },
+      "thumb": {
+        "path": "composers/rossini-thumb.heic",
+        "width": 300,
+        "height": 377,
+        "bytes": 16006,
+        "hash": "464943a204"
+      },
+      "full": {
+        "path": "composers/rossini-full.heic",
+        "width": 1628,
+        "height": 2048,
+        "bytes": 700493,
+        "hash": "c7148942ee"
       }
     },
     "composers/saint-saens": {
@@ -739,6 +914,31 @@
         "height": 4000,
         "bytes": 1375854,
         "hash": "d4673095fd"
+      }
+    },
+    "composers/stravinsky": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Igor_Stravinsky_LOC_32392u.jpg",
+      "color": "#5c5d5c",
+      "hero": {
+        "path": "composers/stravinsky-hero.heic",
+        "width": 1800,
+        "height": 2175,
+        "bytes": 495663,
+        "hash": "f1be4dc260"
+      },
+      "thumb": {
+        "path": "composers/stravinsky-thumb.heic",
+        "width": 300,
+        "height": 363,
+        "bytes": 11274,
+        "hash": "b3eb3d187b"
+      },
+      "full": {
+        "path": "composers/stravinsky-full.heic",
+        "width": 3310,
+        "height": 4000,
+        "bytes": 2078261,
+        "hash": "205e3fac3c"
       }
     },
     "composers/tchaikovsky": {
@@ -959,6 +1159,31 @@
         "hash": "1a94a584a9"
       }
     },
+    "paintings/bach-double-violin-concerto": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Philippe_Mercier_-_The_Sense_of_Hearing_-_Google_Art_Project.jpg",
+      "color": "#584939",
+      "hero": {
+        "path": "paintings/bach-double-violin-concerto-hero.heic",
+        "width": 2120,
+        "height": 1800,
+        "bytes": 421417,
+        "hash": "901e45e398"
+      },
+      "thumb": {
+        "path": "paintings/bach-double-violin-concerto-thumb.heic",
+        "width": 353,
+        "height": 300,
+        "bytes": 20204,
+        "hash": "9f328a8d37"
+      },
+      "full": {
+        "path": "paintings/bach-double-violin-concerto-full.heic",
+        "width": 4000,
+        "height": 3397,
+        "bytes": 1506447,
+        "hash": "540d0c803b"
+      }
+    },
     "paintings/bach-keyboard-concerto-1": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Canaletto_-_Dresden_seen_from_the_Right_Bank_of_the_Elbe,_beneath_the_Augusts_Bridge_-_Google_Art_Project.jpg",
       "color": "#8f9da1",
@@ -1059,6 +1284,31 @@
         "hash": "7228cb7bf8"
       }
     },
+    "paintings/barber-violin-concerto": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Ferdinand_Hodler_-_Der_Genfersee_von_Chexbres_aus.jpg",
+      "color": "#96aaaa",
+      "hero": {
+        "path": "paintings/barber-violin-concerto-hero.heic",
+        "width": 2274,
+        "height": 1800,
+        "bytes": 666708,
+        "hash": "4ba5f30401"
+      },
+      "thumb": {
+        "path": "paintings/barber-violin-concerto-thumb.heic",
+        "width": 379,
+        "height": 300,
+        "bytes": 27488,
+        "hash": "3f8c99c628"
+      },
+      "full": {
+        "path": "paintings/barber-violin-concerto-full.heic",
+        "width": 4000,
+        "height": 3166,
+        "bytes": 2177220,
+        "hash": "d10c676530"
+      }
+    },
     "paintings/beethoven-piano-concerto-3": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Martin_von_Molitor_-_Landschaft_mit_Hammerwerk_-_9694_-_%C3%96sterreichische_Galerie_Belvedere.jpg",
       "color": "#696856",
@@ -1082,6 +1332,31 @@
         "height": 2679,
         "bytes": 3868356,
         "hash": "13f206fc6a"
+      }
+    },
+    "paintings/beethoven-piano-concerto-4": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Baptiste-Camille_Corot_-_Orpheus_Leading_Eurydice_from_the_Underworld_-_Google_Art_Project.jpg",
+      "color": "#545546",
+      "hero": {
+        "path": "paintings/beethoven-piano-concerto-4-hero.heic",
+        "width": 2196,
+        "height": 1800,
+        "bytes": 823565,
+        "hash": "4489adfb52"
+      },
+      "thumb": {
+        "path": "paintings/beethoven-piano-concerto-4-thumb.heic",
+        "width": 366,
+        "height": 300,
+        "bytes": 26253,
+        "hash": "09350ca972"
+      },
+      "full": {
+        "path": "paintings/beethoven-piano-concerto-4-full.heic",
+        "width": 4000,
+        "height": 3278,
+        "bytes": 3021455,
+        "hash": "5f993d5966"
       }
     },
     "paintings/beethoven-piano-concerto-5": {
@@ -1134,6 +1409,31 @@
         "hash": "6adb11c7fb"
       }
     },
+    "paintings/beethoven-piano-sonata-17": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Waterhouse_miranda_the_tempest.jpg",
+      "color": "#7c6f6c",
+      "hero": {
+        "path": "paintings/beethoven-piano-sonata-17-hero.heic",
+        "width": 2395,
+        "height": 1800,
+        "bytes": 1252849,
+        "hash": "c874d5cda9"
+      },
+      "thumb": {
+        "path": "paintings/beethoven-piano-sonata-17-thumb.heic",
+        "width": 399,
+        "height": 300,
+        "bytes": 33936,
+        "hash": "0a73883199"
+      },
+      "full": {
+        "path": "paintings/beethoven-piano-sonata-17-full.heic",
+        "width": 3000,
+        "height": 2255,
+        "bytes": 2167411,
+        "hash": "71e01d046f"
+      }
+    },
     "paintings/beethoven-piano-sonata-21": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Mallord_William_Turner_049.jpg",
       "color": "#675d48",
@@ -1182,6 +1482,31 @@
         "height": 2629,
         "bytes": 1653447,
         "hash": "7824111fbc"
+      }
+    },
+    "paintings/beethoven-piano-sonata-32": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Cole_-_The_Voyage_of_Life_Old_Age,_1842_(National_Gallery_of_Art).jpg",
+      "color": "#5f493a",
+      "hero": {
+        "path": "paintings/beethoven-piano-sonata-32-hero.heic",
+        "width": 2676,
+        "height": 1800,
+        "bytes": 495036,
+        "hash": "6164d862ab"
+      },
+      "thumb": {
+        "path": "paintings/beethoven-piano-sonata-32-thumb.heic",
+        "width": 446,
+        "height": 300,
+        "bytes": 11617,
+        "hash": "834d3f5c1c"
+      },
+      "full": {
+        "path": "paintings/beethoven-piano-sonata-32-full.heic",
+        "width": 4000,
+        "height": 2691,
+        "bytes": 1502588,
+        "hash": "1bece99357"
       }
     },
     "paintings/beethoven-piano-sonata-8": {
@@ -1234,6 +1559,31 @@
         "hash": "93965362f4"
       }
     },
+    "paintings/beethoven-string-quartet-14": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Rembrandt_van_Rijn_-_Zelfportret_met_twee_cirkels_(Kenwood_House).jpg",
+      "color": "#493c2b",
+      "hero": {
+        "path": "paintings/beethoven-string-quartet-14-hero.heic",
+        "width": 1800,
+        "height": 2177,
+        "bytes": 610860,
+        "hash": "e8c509bd0b"
+      },
+      "thumb": {
+        "path": "paintings/beethoven-string-quartet-14-thumb.heic",
+        "width": 300,
+        "height": 363,
+        "bytes": 11728,
+        "hash": "fcd2cb3670"
+      },
+      "full": {
+        "path": "paintings/beethoven-string-quartet-14-full.heic",
+        "width": 3308,
+        "height": 4000,
+        "bytes": 3058786,
+        "hash": "2cff802767"
+      }
+    },
     "paintings/beethoven-string-quartet-15": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Constable_-_Salisbury_Cathedral_from_the_Bishop%27s_Garden_-_Google_Art_Project.jpg",
       "color": "#5f5544",
@@ -1257,6 +1607,31 @@
         "height": 3159,
         "bytes": 3972055,
         "hash": "11394d3a21"
+      }
+    },
+    "paintings/beethoven-string-quartet-16": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Rudolf_von_Alt_Stein_an_der_Donau_1842.jpg",
+      "color": "#ded1b5",
+      "hero": {
+        "path": "paintings/beethoven-string-quartet-16-hero.heic",
+        "width": 3455,
+        "height": 1800,
+        "bytes": 964071,
+        "hash": "3110e5c289"
+      },
+      "thumb": {
+        "path": "paintings/beethoven-string-quartet-16-thumb.heic",
+        "width": 576,
+        "height": 300,
+        "bytes": 25410,
+        "hash": "912688fe8a"
+      },
+      "full": {
+        "path": "paintings/beethoven-string-quartet-16-full.heic",
+        "width": 4000,
+        "height": 2084,
+        "bytes": 1299891,
+        "hash": "9c06ea2cbc"
       }
     },
     "paintings/beethoven-symphony-3": {
@@ -1459,6 +1834,31 @@
         "hash": "8afd1cb5a1"
       }
     },
+    "paintings/bizet-carmen-suite-1": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Edouard_Manet_-_Spanish_Ballet_-_Google_Art_Project.jpg",
+      "color": "#4b4235",
+      "hero": {
+        "path": "paintings/bizet-carmen-suite-1-hero.heic",
+        "width": 2670,
+        "height": 1800,
+        "bytes": 646247,
+        "hash": "e2e574a934"
+      },
+      "thumb": {
+        "path": "paintings/bizet-carmen-suite-1-thumb.heic",
+        "width": 445,
+        "height": 300,
+        "bytes": 25647,
+        "hash": "26f2d59a46"
+      },
+      "full": {
+        "path": "paintings/bizet-carmen-suite-1-full.heic",
+        "width": 4000,
+        "height": 2696,
+        "bytes": 1108969,
+        "hash": "a81b06faed"
+      }
+    },
     "paintings/borodin-string-quartet-2": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Ivan_Kramskoi_-_Moonlit_Night(%D0%9B%D1%83%D0%BD%D0%BD%D0%B0%D1%8F_%D0%BD%D0%BE%D1%87%D1%8C)_(1880).jpg",
       "color": "#242421",
@@ -1507,6 +1907,56 @@
         "height": 2955,
         "bytes": 919419,
         "hash": "e51853bc01"
+      }
+    },
+    "paintings/brahms-double-concerto": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Hodler_-_Thunersee_mit_symmetrischer_Spiegelung_-_1905.jpg",
+      "color": "#9cadb2",
+      "hero": {
+        "path": "paintings/brahms-double-concerto-hero.heic",
+        "width": 2250,
+        "height": 1800,
+        "bytes": 1041152,
+        "hash": "cf95ee39c7"
+      },
+      "thumb": {
+        "path": "paintings/brahms-double-concerto-thumb.heic",
+        "width": 375,
+        "height": 300,
+        "bytes": 22110,
+        "hash": "764353e9a0"
+      },
+      "full": {
+        "path": "paintings/brahms-double-concerto-full.heic",
+        "width": 4000,
+        "height": 3200,
+        "bytes": 2952055,
+        "hash": "a90332d072"
+      }
+    },
+    "paintings/brahms-piano-concerto-1": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Andreas_Achenbach_-_Storm_at_the_Coast_-_NG.M.00228_-_National_Museum_of_Art%2C_Architecture_and_Design.jpg",
+      "color": "#635538",
+      "hero": {
+        "path": "paintings/brahms-piano-concerto-1-hero.heic",
+        "width": 2078,
+        "height": 1800,
+        "bytes": 932549,
+        "hash": "9cfd961f18"
+      },
+      "thumb": {
+        "path": "paintings/brahms-piano-concerto-1-thumb.heic",
+        "width": 346,
+        "height": 300,
+        "bytes": 16678,
+        "hash": "d6fdfbcc49"
+      },
+      "full": {
+        "path": "paintings/brahms-piano-concerto-1-full.heic",
+        "width": 4000,
+        "height": 3465,
+        "bytes": 3065207,
+        "hash": "c196d7ac28"
       }
     },
     "paintings/brahms-piano-concerto-2": {
@@ -1582,6 +2032,31 @@
         "height": 3202,
         "bytes": 2801449,
         "hash": "cbb59f25e4"
+      }
+    },
+    "paintings/brahms-symphony-3": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunset_on_the_Rhine_MET_DP143198.jpg",
+      "color": "#735e45",
+      "hero": {
+        "path": "paintings/brahms-symphony-3-hero.heic",
+        "width": 2356,
+        "height": 1800,
+        "bytes": 1110116,
+        "hash": "d3fc3f2748"
+      },
+      "thumb": {
+        "path": "paintings/brahms-symphony-3-thumb.heic",
+        "width": 393,
+        "height": 300,
+        "bytes": 21847,
+        "hash": "87394973d6"
+      },
+      "full": {
+        "path": "paintings/brahms-symphony-3-full.heic",
+        "width": 3810,
+        "height": 2911,
+        "bytes": 3106218,
+        "hash": "b53136b95f"
       }
     },
     "paintings/brahms-symphony-4": {
@@ -1709,6 +2184,31 @@
         "hash": "a6895fe297"
       }
     },
+    "paintings/bruckner-symphony-9": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Fran%C3%A7ois_Millet_-_The_Angelus_-_Google_Art_Project.jpg",
+      "color": "#4d4532",
+      "hero": {
+        "path": "paintings/bruckner-symphony-9-hero.heic",
+        "width": 2165,
+        "height": 1800,
+        "bytes": 574612,
+        "hash": "69642cfafe"
+      },
+      "thumb": {
+        "path": "paintings/bruckner-symphony-9-thumb.heic",
+        "width": 361,
+        "height": 300,
+        "bytes": 14683,
+        "hash": "072c4f71d2"
+      },
+      "full": {
+        "path": "paintings/bruckner-symphony-9-full.heic",
+        "width": 4000,
+        "height": 3326,
+        "bytes": 2375569,
+        "hash": "6975a6cf6e"
+      }
+    },
     "paintings/chopin-piano-concerto-1": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Kasprzycki_View_of_Morysinek_near_Wilanow.jpg",
       "color": "#5f6057",
@@ -1784,6 +2284,31 @@
         "hash": "86a3e92c34"
       }
     },
+    "paintings/chopin-piano-sonata-3": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/George_Sand%27s_Garden_at_Nohant_MET_DP-14092-001.jpg",
+      "color": "#2a2a12",
+      "hero": {
+        "path": "paintings/chopin-piano-sonata-3-hero.heic",
+        "width": 2180,
+        "height": 1800,
+        "bytes": 866442,
+        "hash": "ec24c25851"
+      },
+      "thumb": {
+        "path": "paintings/chopin-piano-sonata-3-thumb.heic",
+        "width": 363,
+        "height": 300,
+        "bytes": 18110,
+        "hash": "aa7e370cde"
+      },
+      "full": {
+        "path": "paintings/chopin-piano-sonata-3-full.heic",
+        "width": 3958,
+        "height": 3268,
+        "bytes": 3155156,
+        "hash": "5c10fc1a7a"
+      }
+    },
     "paintings/debussy-la-mer": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Tsunami_by_hokusai_19th_century.jpg",
       "color": "#c1c2b7",
@@ -1832,6 +2357,31 @@
         "height": 2986,
         "bytes": 2297484,
         "hash": "6d4bed6700"
+      }
+    },
+    "paintings/debussy-string-quartet": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Claude_Monet,_Rouen_Cathedral,_West_Fa%C3%A7ade,_Sunlight,_1894,_NGA_46654.jpg",
+      "color": "#c0bbaa",
+      "hero": {
+        "path": "paintings/debussy-string-quartet-hero.heic",
+        "width": 1800,
+        "height": 2747,
+        "bytes": 1538249,
+        "hash": "6c324bea22"
+      },
+      "thumb": {
+        "path": "paintings/debussy-string-quartet-thumb.heic",
+        "width": 300,
+        "height": 458,
+        "bytes": 41697,
+        "hash": "061a499148"
+      },
+      "full": {
+        "path": "paintings/debussy-string-quartet-full.heic",
+        "width": 2621,
+        "height": 4000,
+        "bytes": 3116296,
+        "hash": "9ec2a299a4"
       }
     },
     "paintings/dvorak-cello-concerto": {
@@ -1884,6 +2434,31 @@
         "hash": "ceb517117f"
       }
     },
+    "paintings/dvorak-serenade-for-strings": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/1875_Renoir_Liebende_Nationalgalerie_Prag_anagoria.jpg",
+      "color": "#767061",
+      "hero": {
+        "path": "paintings/dvorak-serenade-for-strings-hero.heic",
+        "width": 1800,
+        "height": 2437,
+        "bytes": 504178,
+        "hash": "66fedd08c1"
+      },
+      "thumb": {
+        "path": "paintings/dvorak-serenade-for-strings-thumb.heic",
+        "width": 300,
+        "height": 406,
+        "bytes": 26265,
+        "hash": "fbf4d18ee3"
+      },
+      "full": {
+        "path": "paintings/dvorak-serenade-for-strings-full.heic",
+        "width": 2955,
+        "height": 4000,
+        "bytes": 1087832,
+        "hash": "c38648ac40"
+      }
+    },
     "paintings/dvorak-string-quartet-12": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Theodore_Robinson_-_Canal_Scene_(1893).jpg",
       "color": "#867a55",
@@ -1907,6 +2482,31 @@
         "height": 2375,
         "bytes": 2313624,
         "hash": "704c2f1b75"
+      }
+    },
+    "paintings/dvorak-symphony-7": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Claude_Monet_-_Arrival_of_the_Normandy_Train,_Gare_Saint-Lazare_-_Google_Art_Project.jpg",
+      "color": "#667b7c",
+      "hero": {
+        "path": "paintings/dvorak-symphony-7-hero.heic",
+        "width": 2400,
+        "height": 1800,
+        "bytes": 815570,
+        "hash": "ae1ca7dafc"
+      },
+      "thumb": {
+        "path": "paintings/dvorak-symphony-7-thumb.heic",
+        "width": 400,
+        "height": 300,
+        "bytes": 25563,
+        "hash": "1ec9183e0f"
+      },
+      "full": {
+        "path": "paintings/dvorak-symphony-7-full.heic",
+        "width": 4000,
+        "height": 3000,
+        "bytes": 2423756,
+        "hash": "15ee5c78fb"
       }
     },
     "paintings/dvorak-symphony-8": {
@@ -1984,6 +2584,31 @@
         "hash": "af3590b918"
       }
     },
+    "paintings/elgar-serenade-for-strings": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/LongEngagementAHughes.jpg",
+      "color": "#534f3a",
+      "hero": {
+        "path": "paintings/elgar-serenade-for-strings-hero.heic",
+        "width": 1763,
+        "height": 3600,
+        "bytes": 1218843,
+        "hash": "a904215fb1"
+      },
+      "thumb": {
+        "path": "paintings/elgar-serenade-for-strings-thumb.heic",
+        "width": 300,
+        "height": 613,
+        "bytes": 51540,
+        "hash": "a0ea45c376"
+      },
+      "full": {
+        "path": "paintings/elgar-serenade-for-strings-full.heic",
+        "width": 1959,
+        "height": 4000,
+        "bytes": 1585007,
+        "hash": "428fcfa087"
+      }
+    },
     "paintings/elgar-violin-concerto": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Everett_Millais_-_Sisters,_1868.jpg",
       "color": "#7f7462",
@@ -2032,6 +2657,56 @@
         "height": 3288,
         "bytes": 2016656,
         "hash": "89479fb821"
+      }
+    },
+    "paintings/gershwin-rhapsody-in-blue": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Whistler-Nocturne_in_black_and_gold.jpg",
+      "color": "#213a28",
+      "hero": {
+        "path": "paintings/gershwin-rhapsody-in-blue-hero.heic",
+        "width": 1800,
+        "height": 2391,
+        "bytes": 868296,
+        "hash": "0498cfdd6b"
+      },
+      "thumb": {
+        "path": "paintings/gershwin-rhapsody-in-blue-thumb.heic",
+        "width": 300,
+        "height": 399,
+        "bytes": 24791,
+        "hash": "c8861af105"
+      },
+      "full": {
+        "path": "paintings/gershwin-rhapsody-in-blue-full.heic",
+        "width": 3011,
+        "height": 4000,
+        "bytes": 2993762,
+        "hash": "e67d8e1270"
+      }
+    },
+    "paintings/grieg-holberg-suite": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Wilhelm_Marstrand_-_Scene_from_Ludwig_Holberg%27s_The_Lying-in_Room_-_KMS506_-_Statens_Museum_for_Kunst.jpg",
+      "color": "#665344",
+      "hero": {
+        "path": "paintings/grieg-holberg-suite-hero.heic",
+        "width": 2387,
+        "height": 1800,
+        "bytes": 815322,
+        "hash": "96d9f07917"
+      },
+      "thumb": {
+        "path": "paintings/grieg-holberg-suite-thumb.heic",
+        "width": 398,
+        "height": 300,
+        "bytes": 26463,
+        "hash": "4cad5541c4"
+      },
+      "full": {
+        "path": "paintings/grieg-holberg-suite-full.heic",
+        "width": 4000,
+        "height": 3017,
+        "bytes": 2327946,
+        "hash": "d765fcf7f0"
       }
     },
     "paintings/grieg-peer-gynt-suite-1": {
@@ -2084,6 +2759,31 @@
         "hash": "c84189d76a"
       }
     },
+    "paintings/handel-music-for-the-royal-fireworks": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Wright_(of_Derby)_-_The_Annual_Girandola_at_the_Castel_Sant%E2%80%99Angelo,_Rome_-_Google_Art_Project.jpg",
+      "color": "#45301e",
+      "hero": {
+        "path": "paintings/handel-music-for-the-royal-fireworks-hero.heic",
+        "width": 2245,
+        "height": 1800,
+        "bytes": 728459,
+        "hash": "58f9aef208"
+      },
+      "thumb": {
+        "path": "paintings/handel-music-for-the-royal-fireworks-thumb.heic",
+        "width": 374,
+        "height": 300,
+        "bytes": 15621,
+        "hash": "2eb79e3a69"
+      },
+      "full": {
+        "path": "paintings/handel-music-for-the-royal-fireworks-full.heic",
+        "width": 2767,
+        "height": 2219,
+        "bytes": 1024491,
+        "hash": "e51a6038ae"
+      }
+    },
     "paintings/haydn-cello-concerto-1": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Johan_Joseph_Zoffany_-_The_Gore_Family_with_George,_3rd_Earl_Cowper_-_Google_Art_Project.jpg",
       "color": "#7a634f",
@@ -2134,6 +2834,31 @@
         "hash": "8ba00283ac"
       }
     },
+    "paintings/haydn-string-quartet-op-76-4": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Cole,_Sunrise_in_the_Catskills,_1826,_NGA_71025.jpg",
+      "color": "#686052",
+      "hero": {
+        "path": "paintings/haydn-string-quartet-op-76-4-hero.heic",
+        "width": 2516,
+        "height": 1800,
+        "bytes": 1066301,
+        "hash": "3c864bdb51"
+      },
+      "thumb": {
+        "path": "paintings/haydn-string-quartet-op-76-4-thumb.heic",
+        "width": 419,
+        "height": 300,
+        "bytes": 18299,
+        "hash": "6ac5b2ed02"
+      },
+      "full": {
+        "path": "paintings/haydn-string-quartet-op-76-4-full.heic",
+        "width": 4000,
+        "height": 2862,
+        "bytes": 3552626,
+        "hash": "d48275ecde"
+      }
+    },
     "paintings/haydn-symphony-104": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Canaletto_-_Westminster_Bridge,_with_the_Lord_Mayor%27s_Procession_on_the_Thames_-_Google_Art_Project.jpg",
       "color": "#86887d",
@@ -2157,6 +2882,31 @@
         "height": 3008,
         "bytes": 1030780,
         "hash": "fb021e9494"
+      }
+    },
+    "paintings/haydn-symphony-45": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Georges_de_La_Tour_-_The_Magdalen_with_the_Smoking_Flame_-_Google_Art_Project.jpg",
+      "color": "#301f15",
+      "hero": {
+        "path": "paintings/haydn-symphony-45-hero.heic",
+        "width": 1800,
+        "height": 2295,
+        "bytes": 445794,
+        "hash": "52b3973d28"
+      },
+      "thumb": {
+        "path": "paintings/haydn-symphony-45-thumb.heic",
+        "width": 300,
+        "height": 382,
+        "bytes": 12302,
+        "hash": "6846bfd960"
+      },
+      "full": {
+        "path": "paintings/haydn-symphony-45-full.heic",
+        "width": 3138,
+        "height": 4000,
+        "bytes": 1398712,
+        "hash": "82ea46a249"
       }
     },
     "paintings/haydn-symphony-94": {
@@ -2207,6 +2957,31 @@
         "height": 1836,
         "bytes": 2008840,
         "hash": "2c640255c9"
+      }
+    },
+    "paintings/liszt-les-preludes": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Cole,_The_Voyage_of_Life_-_Manhood,_1842,_NGA_52452.jpg",
+      "color": "#4b3d2d",
+      "hero": {
+        "path": "paintings/liszt-les-preludes-hero.heic",
+        "width": 2737,
+        "height": 1800,
+        "bytes": 773326,
+        "hash": "d8eadbb902"
+      },
+      "thumb": {
+        "path": "paintings/liszt-les-preludes-thumb.heic",
+        "width": 456,
+        "height": 300,
+        "bytes": 18428,
+        "hash": "a8d70583b2"
+      },
+      "full": {
+        "path": "paintings/liszt-les-preludes-full.heic",
+        "width": 4000,
+        "height": 2631,
+        "bytes": 2044687,
+        "hash": "43391deea9"
       }
     },
     "paintings/liszt-piano-concerto-1": {
@@ -2409,6 +3184,31 @@
         "hash": "483893a445"
       }
     },
+    "paintings/mendelssohn-hebrides-overture": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Mallord_William_Turner_-_Staffa,_Fingal%27s_Cave_-_Google_Art_Project.jpg",
+      "color": "#665f55",
+      "hero": {
+        "path": "paintings/mendelssohn-hebrides-overture-hero.heic",
+        "width": 2434,
+        "height": 1800,
+        "bytes": 470548,
+        "hash": "56ba603e46"
+      },
+      "thumb": {
+        "path": "paintings/mendelssohn-hebrides-overture-thumb.heic",
+        "width": 406,
+        "height": 300,
+        "bytes": 12730,
+        "hash": "4a6c8cfb3b"
+      },
+      "full": {
+        "path": "paintings/mendelssohn-hebrides-overture-full.heic",
+        "width": 4000,
+        "height": 2958,
+        "bytes": 1400872,
+        "hash": "02c5a69a86"
+      }
+    },
     "paintings/mendelssohn-octet": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Eduard_Gaertner_(1801-1877)_-_The_Friedrichsgracht,_Berlin_-_NG6524_-_National_Gallery.jpg",
       "color": "#9c938b",
@@ -2432,6 +3232,31 @@
         "height": 2258,
         "bytes": 2177481,
         "hash": "18c9e5932d"
+      }
+    },
+    "paintings/mendelssohn-symphony-3": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Louis_Daguerre_-_The_Ruins_of_Holyrood_Chapel_-_Google_Art_Project.jpg",
+      "color": "#515057",
+      "hero": {
+        "path": "paintings/mendelssohn-symphony-3-hero.heic",
+        "width": 2204,
+        "height": 1800,
+        "bytes": 1030853,
+        "hash": "05b31ff8a5"
+      },
+      "thumb": {
+        "path": "paintings/mendelssohn-symphony-3-thumb.heic",
+        "width": 367,
+        "height": 300,
+        "bytes": 15164,
+        "hash": "becffff206"
+      },
+      "full": {
+        "path": "paintings/mendelssohn-symphony-3-full.heic",
+        "width": 3482,
+        "height": 2844,
+        "bytes": 2480505,
+        "hash": "c098f4e965"
       }
     },
     "paintings/mendelssohn-symphony-4": {
@@ -2532,6 +3357,31 @@
         "height": 2258,
         "bytes": 1089740,
         "hash": "8575233b1f"
+      }
+    },
+    "paintings/mozart-clarinet-quintet": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Madame_Vig%C3%A9e-Le_Brun_et_sa_fille,_Jeanne-Lucie-Louise,_dite_Julie_-_Louise-%C3%89lisabeth_Vig%C3%A9e-Le_Brun_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3068.jpg",
+      "color": "#61584d",
+      "hero": {
+        "path": "paintings/mozart-clarinet-quintet-hero.heic",
+        "width": 1800,
+        "height": 2391,
+        "bytes": 438678,
+        "hash": "5a15c2565d"
+      },
+      "thumb": {
+        "path": "paintings/mozart-clarinet-quintet-thumb.heic",
+        "width": 300,
+        "height": 398,
+        "bytes": 16494,
+        "hash": "4d2adb5330"
+      },
+      "full": {
+        "path": "paintings/mozart-clarinet-quintet-full.heic",
+        "width": 2682,
+        "height": 3562,
+        "bytes": 1017691,
+        "hash": "0971b943c1"
       }
     },
     "paintings/mozart-eine-kleine-nachtmusik": {
@@ -2659,6 +3509,31 @@
         "hash": "09e025b169"
       }
     },
+    "paintings/mozart-piano-concerto-24": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/18_La_nevada_o_El_Invierno.jpg",
+      "color": "#7b7265",
+      "hero": {
+        "path": "paintings/mozart-piano-concerto-24-hero.heic",
+        "width": 1920,
+        "height": 1772,
+        "bytes": 458085,
+        "hash": "e5563a7211"
+      },
+      "thumb": {
+        "path": "paintings/mozart-piano-concerto-24-thumb.heic",
+        "width": 325,
+        "height": 300,
+        "bytes": 15145,
+        "hash": "8470182fc0"
+      },
+      "full": {
+        "path": "paintings/mozart-piano-concerto-24-full.heic",
+        "width": 1920,
+        "height": 1772,
+        "bytes": 528060,
+        "hash": "2cee7137d8"
+      }
+    },
     "paintings/mozart-piano-sonata-11": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Cornelis_Calkoen_op_weg_naar_de_audi%C3%ABntie_bij_sultan_Ahmed_III,_SK-A-4076.jpg",
       "color": "#3e3523",
@@ -2707,6 +3582,31 @@
         "height": 2989,
         "bytes": 2743806,
         "hash": "0a295f9a06"
+      }
+    },
+    "paintings/mozart-symphony-38": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Ferdinand_Lepi%C3%A9_-_Der_Altst%C3%A4dter_Ring_in_Prag_-_10214_-_%C3%96sterreichische_Galerie_Belvedere.jpg",
+      "color": "#715f3d",
+      "hero": {
+        "path": "paintings/mozart-symphony-38-hero.heic",
+        "width": 2448,
+        "height": 1800,
+        "bytes": 532685,
+        "hash": "b7abf08be5"
+      },
+      "thumb": {
+        "path": "paintings/mozart-symphony-38-thumb.heic",
+        "width": 408,
+        "height": 300,
+        "bytes": 21306,
+        "hash": "35ded8728c"
+      },
+      "full": {
+        "path": "paintings/mozart-symphony-38-full.heic",
+        "width": 3508,
+        "height": 2579,
+        "bytes": 1095844,
+        "hash": "fc032e927d"
       }
     },
     "paintings/mozart-symphony-40": {
@@ -2759,6 +3659,56 @@
         "hash": "ee0ab52716"
       }
     },
+    "paintings/mozart-violin-concerto-5": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Jean_Etienne_L%C3%ACotard_-_Ritratto_di_Maria_Adelaide_di_Francia_vestita_alla_turca_-_Google_Art_Project.jpg",
+      "color": "#838a76",
+      "hero": {
+        "path": "paintings/mozart-violin-concerto-5-hero.heic",
+        "width": 2073,
+        "height": 1800,
+        "bytes": 664813,
+        "hash": "02754ea337"
+      },
+      "thumb": {
+        "path": "paintings/mozart-violin-concerto-5-thumb.heic",
+        "width": 345,
+        "height": 300,
+        "bytes": 19870,
+        "hash": "c35e747521"
+      },
+      "full": {
+        "path": "paintings/mozart-violin-concerto-5-full.heic",
+        "width": 3083,
+        "height": 2677,
+        "bytes": 1286531,
+        "hash": "7273eef9fb"
+      }
+    },
+    "paintings/mussorgsky-night-on-bald-mountain": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Clevelandart_1977.37.3.jpg",
+      "color": "#150d0a",
+      "hero": {
+        "path": "paintings/mussorgsky-night-on-bald-mountain-hero.heic",
+        "width": 1809,
+        "height": 1800,
+        "bytes": 321613,
+        "hash": "031b5cd892"
+      },
+      "thumb": {
+        "path": "paintings/mussorgsky-night-on-bald-mountain-thumb.heic",
+        "width": 302,
+        "height": 300,
+        "bytes": 9625,
+        "hash": "06cc8adebb"
+      },
+      "full": {
+        "path": "paintings/mussorgsky-night-on-bald-mountain-full.heic",
+        "width": 3400,
+        "height": 3383,
+        "bytes": 1282810,
+        "hash": "42dc45c58c"
+      }
+    },
     "paintings/pachelbel-canon": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Gerard_ter_Borch_(der_J%C3%BCngere)_(1617_-_1681)_-_The_Concert_-_791G_-_Gem%C3%A4ldegalerie.jpg",
       "color": "#483715",
@@ -2782,6 +3732,56 @@
         "height": 4000,
         "bytes": 3660893,
         "hash": "bddabe16ff"
+      }
+    },
+    "paintings/palestrina-missa-papae-marcelli": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Raffaello_(1483-1520)_-_Pala_di_Santa_Cecilia_-_577_-_Pinacoteca_Nazionale_di_Bologna.jpg",
+      "color": "#756d57",
+      "hero": {
+        "path": "paintings/palestrina-missa-papae-marcelli-hero.heic",
+        "width": 1800,
+        "height": 2888,
+        "bytes": 1483215,
+        "hash": "d1b5d89587"
+      },
+      "thumb": {
+        "path": "paintings/palestrina-missa-papae-marcelli-thumb.heic",
+        "width": 300,
+        "height": 481,
+        "bytes": 45523,
+        "hash": "984826a5ae"
+      },
+      "full": {
+        "path": "paintings/palestrina-missa-papae-marcelli-full.heic",
+        "width": 2493,
+        "height": 4000,
+        "bytes": 3964242,
+        "hash": "941abc6604"
+      }
+    },
+    "paintings/prokofiev-piano-concerto-3": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Paul_Gauguin,_Breton_Girls_Dancing,_Pont-Aven,_1888,_NGA_61369.jpg",
+      "color": "#7e7a5f",
+      "hero": {
+        "path": "paintings/prokofiev-piano-concerto-3-hero.heic",
+        "width": 2297,
+        "height": 1800,
+        "bytes": 1144986,
+        "hash": "4ccf8126c0"
+      },
+      "thumb": {
+        "path": "paintings/prokofiev-piano-concerto-3-thumb.heic",
+        "width": 383,
+        "height": 300,
+        "bytes": 23493,
+        "hash": "da1b1e24b0"
+      },
+      "full": {
+        "path": "paintings/prokofiev-piano-concerto-3-full.heic",
+        "width": 4000,
+        "height": 3135,
+        "bytes": 4286190,
+        "hash": "093456875b"
       }
     },
     "paintings/prokofiev-symphony-1": {
@@ -2859,6 +3859,31 @@
         "hash": "dd6b867c80"
       }
     },
+    "paintings/rachmaninoff-symphony-2": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Viktor_Borisov-Musatov_-_%D0%98%D0%B7%D1%83%D0%BC%D1%80%D1%83%D0%B4%D0%BD%D0%BE%D0%B5_%D0%BE%D0%B6%D0%B5%D1%80%D0%B5%D0%BB%D1%8C%D0%B5_-_Google_Art_Project.jpg",
+      "color": "#48624a",
+      "hero": {
+        "path": "paintings/rachmaninoff-symphony-2-hero.heic",
+        "width": 3122,
+        "height": 1800,
+        "bytes": 1495721,
+        "hash": "caf77408ee"
+      },
+      "thumb": {
+        "path": "paintings/rachmaninoff-symphony-2-thumb.heic",
+        "width": 520,
+        "height": 300,
+        "bytes": 42098,
+        "hash": "d2ca22ad57"
+      },
+      "full": {
+        "path": "paintings/rachmaninoff-symphony-2-full.heic",
+        "width": 4000,
+        "height": 2306,
+        "bytes": 2496470,
+        "hash": "83905a01cc"
+      }
+    },
     "paintings/ravel-bolero": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/EL_JALEO-SINGER.jpg",
       "color": "#474238",
@@ -2882,6 +3907,31 @@
         "height": 2028,
         "bytes": 1447912,
         "hash": "14e3ecc130"
+      }
+    },
+    "paintings/ravel-daphnis-et-chloe-suite-2": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Harvard_Theatre_Collection_-_Bakst,_MS_Thr_414.4_(9).jpg",
+      "color": "#777c65",
+      "hero": {
+        "path": "paintings/ravel-daphnis-et-chloe-suite-2-hero.heic",
+        "width": 2529,
+        "height": 1800,
+        "bytes": 885084,
+        "hash": "7be131bc84"
+      },
+      "thumb": {
+        "path": "paintings/ravel-daphnis-et-chloe-suite-2-thumb.heic",
+        "width": 421,
+        "height": 300,
+        "bytes": 37473,
+        "hash": "6ee72f0d6e"
+      },
+      "full": {
+        "path": "paintings/ravel-daphnis-et-chloe-suite-2-full.heic",
+        "width": 4000,
+        "height": 2847,
+        "bytes": 2769564,
+        "hash": "44a2dd615d"
       }
     },
     "paintings/ravel-piano-concerto-g": {
@@ -2934,6 +3984,31 @@
         "hash": "eb0d9b1b16"
       }
     },
+    "paintings/respighi-pines-of-rome": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Italiaans_landschap_met_parasoldennen,_SK-A-4688.jpg",
+      "color": "#75715b",
+      "hero": {
+        "path": "paintings/respighi-pines-of-rome-hero.heic",
+        "width": 2489,
+        "height": 1800,
+        "bytes": 909931,
+        "hash": "99f9878c1a"
+      },
+      "thumb": {
+        "path": "paintings/respighi-pines-of-rome-thumb.heic",
+        "width": 415,
+        "height": 300,
+        "bytes": 30698,
+        "hash": "10ae8c3075"
+      },
+      "full": {
+        "path": "paintings/respighi-pines-of-rome-full.heic",
+        "width": 4000,
+        "height": 2893,
+        "bytes": 2701205,
+        "hash": "5c1c5dba35"
+      }
+    },
     "paintings/rimsky-korsakov-scheherazade": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Hovhannes_Aivazovsky_-_The_Ninth_Wave_-_Google_Art_Project.jpg",
       "color": "#896d55",
@@ -2957,6 +4032,31 @@
         "height": 2688,
         "bytes": 846306,
         "hash": "a388107904"
+      }
+    },
+    "paintings/rossini-william-tell-overture": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Fran%C3%A7ois_Diday,_Orage_sur_le_L%C3%A9man,_1839.tif",
+      "color": "#64675b",
+      "hero": {
+        "path": "paintings/rossini-william-tell-overture-hero.heic",
+        "width": 2442,
+        "height": 1800,
+        "bytes": 659551,
+        "hash": "f610ab5dfc"
+      },
+      "thumb": {
+        "path": "paintings/rossini-william-tell-overture-thumb.heic",
+        "width": 407,
+        "height": 300,
+        "bytes": 20270,
+        "hash": "9c640c6bf4"
+      },
+      "full": {
+        "path": "paintings/rossini-william-tell-overture-full.heic",
+        "width": 2945,
+        "height": 2171,
+        "bytes": 1150795,
+        "hash": "aa88af8eaa"
       }
     },
     "paintings/saint-saens-cello-concerto-1": {
@@ -2984,6 +4084,31 @@
         "hash": "3e663fdf4b"
       }
     },
+    "paintings/saint-saens-danse-macabre": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Bernt_Notke_Danse_Macabre.jpg",
+      "color": "#736443",
+      "hero": {
+        "path": "paintings/saint-saens-danse-macabre-hero.heic",
+        "width": 3600,
+        "height": 829,
+        "bytes": 873208,
+        "hash": "6297d91241"
+      },
+      "thumb": {
+        "path": "paintings/saint-saens-danse-macabre-thumb.heic",
+        "width": 720,
+        "height": 166,
+        "bytes": 42092,
+        "hash": "46858f2754"
+      },
+      "full": {
+        "path": "paintings/saint-saens-danse-macabre-full.heic",
+        "width": 4000,
+        "height": 921,
+        "bytes": 1118140,
+        "hash": "e5a4696978"
+      }
+    },
     "paintings/saint-saens-symphony-3": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Organ_Rehearsal_MET_DP160223.jpg",
       "color": "#685948",
@@ -3007,6 +4132,31 @@
         "height": 2622,
         "bytes": 1244745,
         "hash": "c482f8270d"
+      }
+    },
+    "paintings/schubert-arpeggione-sonata": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Erasmus_ritter_von_engert,_giardino_interno_viennese,_1828-30_ca.jpg",
+      "color": "#6a502e",
+      "hero": {
+        "path": "paintings/schubert-arpeggione-sonata-hero.heic",
+        "width": 1800,
+        "height": 2076,
+        "bytes": 563174,
+        "hash": "cdaf7d3654"
+      },
+      "thumb": {
+        "path": "paintings/schubert-arpeggione-sonata-thumb.heic",
+        "width": 300,
+        "height": 346,
+        "bytes": 31510,
+        "hash": "f4c236d2b6"
+      },
+      "full": {
+        "path": "paintings/schubert-arpeggione-sonata-full.heic",
+        "width": 2502,
+        "height": 2886,
+        "bytes": 909726,
+        "hash": "ae9c4c6eeb"
       }
     },
     "paintings/schubert-piano-quintet-trout": {
@@ -3057,6 +4207,31 @@
         "height": 2114,
         "bytes": 1973652,
         "hash": "b1e606fdca"
+      }
+    },
+    "paintings/schubert-piano-trio-2": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Carl_johan_fahlcrantz,_una_cittadina_al_tramonto,_1833_(cropped).jpg",
+      "color": "#643e34",
+      "hero": {
+        "path": "paintings/schubert-piano-trio-2-hero.heic",
+        "width": 2447,
+        "height": 1800,
+        "bytes": 302339,
+        "hash": "1857cd4568"
+      },
+      "thumb": {
+        "path": "paintings/schubert-piano-trio-2-thumb.heic",
+        "width": 408,
+        "height": 300,
+        "bytes": 13707,
+        "hash": "ad81d247d4"
+      },
+      "full": {
+        "path": "paintings/schubert-piano-trio-2-full.heic",
+        "width": 3443,
+        "height": 2533,
+        "bytes": 568060,
+        "hash": "b06ce906d4"
       }
     },
     "paintings/schubert-string-quartet-14": {
@@ -3184,6 +4359,31 @@
         "hash": "65f5d5f31d"
       }
     },
+    "paintings/schumann-cello-concerto": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Hans_Gude_-_By_the_Mill_Pond_-_Google_Art_Project.jpg",
+      "color": "#514a32",
+      "hero": {
+        "path": "paintings/schumann-cello-concerto-hero.heic",
+        "width": 2509,
+        "height": 1800,
+        "bytes": 1532312,
+        "hash": "bae49b4224"
+      },
+      "thumb": {
+        "path": "paintings/schumann-cello-concerto-thumb.heic",
+        "width": 418,
+        "height": 300,
+        "bytes": 30796,
+        "hash": "2a2bf6fd8e"
+      },
+      "full": {
+        "path": "paintings/schumann-cello-concerto-full.heic",
+        "width": 4000,
+        "height": 2870,
+        "bytes": 3639625,
+        "hash": "721231f2cd"
+      }
+    },
     "paintings/schumann-piano-concerto": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Carl_Gustav_Carus_-_Barge_Trip_on_the_Elbe_near_Dresden_(Morning_on_the_Elbe)_-_Google_Art_Project.jpg",
       "color": "#46524b",
@@ -3232,6 +4432,31 @@
         "height": 4000,
         "bytes": 2863753,
         "hash": "c817c373a0"
+      }
+    },
+    "paintings/schumann-symphony-1": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Dresden,_Albertinum,_Ludwig_Richter,_der_Brautzug_im_Fr%C3%BChling.JPG",
+      "color": "#817967",
+      "hero": {
+        "path": "paintings/schumann-symphony-1-hero.heic",
+        "width": 2851,
+        "height": 1800,
+        "bytes": 779848,
+        "hash": "2daee4937f"
+      },
+      "thumb": {
+        "path": "paintings/schumann-symphony-1-thumb.heic",
+        "width": 475,
+        "height": 300,
+        "bytes": 29320,
+        "hash": "12f4d3e085"
+      },
+      "full": {
+        "path": "paintings/schumann-symphony-1-full.heic",
+        "width": 4000,
+        "height": 2525,
+        "bytes": 1538879,
+        "hash": "4d2205b2c9"
       }
     },
     "paintings/schumann-symphony-3": {
@@ -3309,6 +4534,31 @@
         "hash": "3ab836077e"
       }
     },
+    "paintings/shostakovich-symphony-10": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Vasily_Surikov_-_%D0%A3%D1%82%D1%80%D0%BE_%D1%81%D1%82%D1%80%D0%B5%D0%BB%D0%B5%D1%86%D0%BA%D0%BE%D0%B9_%D0%BA%D0%B0%D0%B7%D0%BD%D0%B8_-_Google_Art_Project.jpg",
+      "color": "#60584a",
+      "hero": {
+        "path": "paintings/shostakovich-symphony-10-hero.heic",
+        "width": 3129,
+        "height": 1800,
+        "bytes": 815231,
+        "hash": "2c9a0501f0"
+      },
+      "thumb": {
+        "path": "paintings/shostakovich-symphony-10-thumb.heic",
+        "width": 522,
+        "height": 300,
+        "bytes": 45862,
+        "hash": "2f899d2b0e"
+      },
+      "full": {
+        "path": "paintings/shostakovich-symphony-10-full.heic",
+        "width": 4000,
+        "height": 2301,
+        "bytes": 1302036,
+        "hash": "627d23428e"
+      }
+    },
     "paintings/shostakovich-symphony-5": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Ilya_Repin_-_Barge_Haulers_on_the_Volga_-_Google_Art_Project.jpg",
       "color": "#af9d83",
@@ -3332,6 +4582,81 @@
         "height": 1872,
         "bytes": 1821538,
         "hash": "6f251445ab"
+      }
+    },
+    "paintings/shostakovich-symphony-7": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Fyodor_Alexeyev_-_View_of_the_Peter_and_Paul_Fortress_and_Palace_Embankment_-_Google_Art_Project.jpg",
+      "color": "#897f66",
+      "hero": {
+        "path": "paintings/shostakovich-symphony-7-hero.heic",
+        "width": 2811,
+        "height": 1800,
+        "bytes": 629334,
+        "hash": "ef3c29a4f3"
+      },
+      "thumb": {
+        "path": "paintings/shostakovich-symphony-7-thumb.heic",
+        "width": 469,
+        "height": 300,
+        "bytes": 22298,
+        "hash": "1a11698fc5"
+      },
+      "full": {
+        "path": "paintings/shostakovich-symphony-7-full.heic",
+        "width": 4000,
+        "height": 2561,
+        "bytes": 1157513,
+        "hash": "129c2fbe15"
+      }
+    },
+    "paintings/shostakovich-symphony-8": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Vasily_Vereshchagin_-_%D0%90%D0%BF%D0%BE%D1%84%D0%B5%D0%BE%D0%B7_%D0%B2%D0%BE%D0%B9%D0%BD%D1%8B_-_Google_Art_Project.jpg",
+      "color": "#958769",
+      "hero": {
+        "path": "paintings/shostakovich-symphony-8-hero.heic",
+        "width": 2867,
+        "height": 1800,
+        "bytes": 1442564,
+        "hash": "1588ae50a2"
+      },
+      "thumb": {
+        "path": "paintings/shostakovich-symphony-8-thumb.heic",
+        "width": 478,
+        "height": 300,
+        "bytes": 42845,
+        "hash": "be4e706922"
+      },
+      "full": {
+        "path": "paintings/shostakovich-symphony-8-full.heic",
+        "width": 4000,
+        "height": 2511,
+        "bytes": 2637852,
+        "hash": "1b2c7b2c9e"
+      }
+    },
+    "paintings/sibelius-finlandia": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Pekka_Halonen_-_Washing_on_the_Ice_-_Google_Art_Project.jpg",
+      "color": "#c5bdac",
+      "hero": {
+        "path": "paintings/sibelius-finlandia-hero.heic",
+        "width": 2539,
+        "height": 1800,
+        "bytes": 741801,
+        "hash": "97cfe201c9"
+      },
+      "thumb": {
+        "path": "paintings/sibelius-finlandia-thumb.heic",
+        "width": 423,
+        "height": 300,
+        "bytes": 16936,
+        "hash": "36a6004165"
+      },
+      "full": {
+        "path": "paintings/sibelius-finlandia-full.heic",
+        "width": 4000,
+        "height": 2836,
+        "bytes": 1552754,
+        "hash": "06e8afba57"
       }
     },
     "paintings/sibelius-symphony-2": {
@@ -3409,6 +4734,31 @@
         "hash": "603dab54b6"
       }
     },
+    "paintings/smetana-string-quartet-1": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/1899_Hude%C4%8Dek_Mondlandschaft_Nationalgalerie_Prag_anagoria.jpg",
+      "color": "#64583f",
+      "hero": {
+        "path": "paintings/smetana-string-quartet-1-hero.heic",
+        "width": 1800,
+        "height": 1800,
+        "bytes": 334057,
+        "hash": "0c804154cc"
+      },
+      "thumb": {
+        "path": "paintings/smetana-string-quartet-1-thumb.heic",
+        "width": 300,
+        "height": 300,
+        "bytes": 16940,
+        "hash": "8b127f0f15"
+      },
+      "full": {
+        "path": "paintings/smetana-string-quartet-1-full.heic",
+        "width": 4000,
+        "height": 4000,
+        "bytes": 1144179,
+        "hash": "cf8cd42b54"
+      }
+    },
     "paintings/smetana-vltava": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Zdenka_Braunerov%C3%A1_-_Z%C3%A1toka_Vltavy_v_Roztok%C3%A1ch_(1885).jpg",
       "color": "#7b715d",
@@ -3432,6 +4782,31 @@
         "height": 2370,
         "bytes": 2201874,
         "hash": "38a71f39b2"
+      }
+    },
+    "paintings/stravinsky-firebird-suite": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Moscou,_galerie_Tretiakov_Ivan-Tsarevitch_at_the_Grey_Wolf_(Vasnetsov).jpg",
+      "color": "#585d5b",
+      "hero": {
+        "path": "paintings/stravinsky-firebird-suite-hero.heic",
+        "width": 1800,
+        "height": 2368,
+        "bytes": 765833,
+        "hash": "9c25c67b79"
+      },
+      "thumb": {
+        "path": "paintings/stravinsky-firebird-suite-thumb.heic",
+        "width": 300,
+        "height": 395,
+        "bytes": 30421,
+        "hash": "3b849d03fa"
+      },
+      "full": {
+        "path": "paintings/stravinsky-firebird-suite-full.heic",
+        "width": 2099,
+        "height": 2761,
+        "bytes": 1149247,
+        "hash": "0555cbda23"
       }
     },
     "paintings/tallis-spem-in-alium": {
@@ -3482,6 +4857,31 @@
         "height": 4000,
         "bytes": 2463691,
         "hash": "ffc0d6266b"
+      }
+    },
+    "paintings/tchaikovsky-romeo-and-juliet": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Madox_Brown-Romeo_%26_Juliet.JPG",
+      "color": "#624136",
+      "hero": {
+        "path": "paintings/tchaikovsky-romeo-and-juliet-hero.heic",
+        "width": 1800,
+        "height": 2556,
+        "bytes": 560470,
+        "hash": "2a60839bee"
+      },
+      "thumb": {
+        "path": "paintings/tchaikovsky-romeo-and-juliet-thumb.heic",
+        "width": 300,
+        "height": 426,
+        "bytes": 26708,
+        "hash": "39f71a4f71"
+      },
+      "full": {
+        "path": "paintings/tchaikovsky-romeo-and-juliet-full.heic",
+        "width": 1968,
+        "height": 2795,
+        "bytes": 754876,
+        "hash": "89596bf1f1"
       }
     },
     "paintings/tchaikovsky-serenade-for-strings": {
@@ -3634,6 +5034,31 @@
         "hash": "2c7975dcf0"
       }
     },
+    "paintings/vivaldi-four-seasons-autumn": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Peter_Paul_Rubens_-_A_View_of_Het_Steen_in_the_Early_Morning.jpg",
+      "color": "#5d594f",
+      "hero": {
+        "path": "paintings/vivaldi-four-seasons-autumn-hero.heic",
+        "width": 3081,
+        "height": 1800,
+        "bytes": 1037493,
+        "hash": "382a4a7bf0"
+      },
+      "thumb": {
+        "path": "paintings/vivaldi-four-seasons-autumn-thumb.heic",
+        "width": 513,
+        "height": 300,
+        "bytes": 38596,
+        "hash": "a9f3b412c7"
+      },
+      "full": {
+        "path": "paintings/vivaldi-four-seasons-autumn-full.heic",
+        "width": 4000,
+        "height": 2337,
+        "bytes": 1958438,
+        "hash": "ffccdea08e"
+      }
+    },
     "paintings/vivaldi-four-seasons-spring": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Antoine_Watteau_-_F%C3%AAtes_Venitiennes_-_Google_Art_Project.jpg",
       "color": "#494230",
@@ -3659,6 +5084,31 @@
         "hash": "6772766263"
       }
     },
+    "paintings/vivaldi-four-seasons-summer": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgione,_The_tempest.jpg",
+      "color": "#514b32",
+      "hero": {
+        "path": "paintings/vivaldi-four-seasons-summer-hero.heic",
+        "width": 1800,
+        "height": 2013,
+        "bytes": 874796,
+        "hash": "9d7d6c5506"
+      },
+      "thumb": {
+        "path": "paintings/vivaldi-four-seasons-summer-thumb.heic",
+        "width": 300,
+        "height": 335,
+        "bytes": 23952,
+        "hash": "1dda84bdd0"
+      },
+      "full": {
+        "path": "paintings/vivaldi-four-seasons-summer-full.heic",
+        "width": 3241,
+        "height": 3624,
+        "bytes": 2688442,
+        "hash": "3aa1162e7a"
+      }
+    },
     "paintings/vivaldi-four-seasons-winter": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Avercamp,_Hendrick_-_Winterlandschap_met_schaatsers_-_SK-A-1718.jpg",
       "color": "#a2987b",
@@ -3682,6 +5132,31 @@
         "height": 2310,
         "bytes": 2313903,
         "hash": "59085f1e5f"
+      }
+    },
+    "paintings/wagner-siegfried-idyll": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Robert_Z%C3%BCnd_Abend_am_Vierwaldst%C3%A4ttersee_1851.jpg",
+      "color": "#8b7059",
+      "hero": {
+        "path": "paintings/wagner-siegfried-idyll-hero.heic",
+        "width": 2832,
+        "height": 1800,
+        "bytes": 732775,
+        "hash": "14789a31f0"
+      },
+      "thumb": {
+        "path": "paintings/wagner-siegfried-idyll-thumb.heic",
+        "width": 472,
+        "height": 300,
+        "bytes": 19476,
+        "hash": "851e832de0"
+      },
+      "full": {
+        "path": "paintings/wagner-siegfried-idyll-full.heic",
+        "width": 4000,
+        "height": 2542,
+        "bytes": 1351303,
+        "hash": "42e6c567c1"
       }
     },
     "paintings/wagner-tristan-prelude-and-liebestod": {
