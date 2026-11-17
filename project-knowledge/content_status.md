@@ -19,6 +19,7 @@ Oytun zamanlamayı bıraktı: çok vakit alıyor. Kulakla zamanlanan 7 eser (Ero
 
 - **Yayın (9 Kasım 2026):** `start` 2026-11-09, gün 0 Çaykovski 6; 9–22 Kasım incelemedeki 14 eser, 23–29 Kasım ilk hafta (aşağıda). Takvime yalnız sondan eklenir.
 - **15. günden itibaren** haftada yaklaşık 7 eser takvime girer; 30 Kasım'dan sonrası her hafta eklenecek. İlk hafta (takvimde): Beethoven 3, Vivaldi İlkbahar, Ay Işığı, Dvořák Çello, Boléro, Mozart 41, Chopin 1. Piyano Konçertosu.
+- **30 Kasım – 27 Aralık (17 Kasım'da eklendi, 28 gün):** tanınmış eserler önce; özel günler: 6 Ara Finlandia (Finlandiya bağımsızlık günü), 16 Ara Beethoven 5. Piyano Konçertosu (doğum günü), 21 Ara Vivaldi Kış (gündönümü), 24 Ara Ave verum corpus, 25 Ara Handel Havai Fişek Müziği. Sıradaki ekleme 28 Aralık'tan itibaren; Kasım partisinin zayıf zamanlamalı eserleri (bkz. Kasım 2026 partisi) sona bırakılsın, Op. 131 yeni uygulama sürümünü bekler.
 
 ## Kasım 2026 partisi (52 eser): tamamlandı
 

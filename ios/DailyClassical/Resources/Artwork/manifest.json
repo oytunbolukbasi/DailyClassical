@@ -707,8 +707,8 @@
         "path": "composers/respighi-full.heic",
         "width": 3000,
         "height": 4000,
-        "bytes": 2617864,
-        "hash": "ab2d27e653"
+        "bytes": 2617547,
+        "hash": "3107f39398"
       }
     },
     "composers/rimsky-korsakov": {
@@ -1180,8 +1180,8 @@
         "path": "paintings/bach-double-violin-concerto-full.heic",
         "width": 4000,
         "height": 3397,
-        "bytes": 1506447,
-        "hash": "540d0c803b"
+        "bytes": 1505991,
+        "hash": "52e27c536e"
       }
     },
     "paintings/bach-keyboard-concerto-1": {
@@ -1605,8 +1605,8 @@
         "path": "paintings/beethoven-string-quartet-15-full.heic",
         "width": 4000,
         "height": 3159,
-        "bytes": 3972055,
-        "hash": "11394d3a21"
+        "bytes": 3970763,
+        "hash": "3ab7a80a4a"
       }
     },
     "paintings/beethoven-string-quartet-16": {
@@ -2080,8 +2080,8 @@
         "path": "paintings/brahms-symphony-4-full.heic",
         "width": 4000,
         "height": 2131,
-        "bytes": 1173046,
-        "hash": "d40a80ecbb"
+        "bytes": 1173877,
+        "hash": "4ed7b58502"
       }
     },
     "paintings/brahms-violin-concerto": {
@@ -2155,8 +2155,8 @@
         "path": "paintings/bruckner-symphony-4-full.heic",
         "width": 4000,
         "height": 2625,
-        "bytes": 1601792,
-        "hash": "0c0513b9dd"
+        "bytes": 1600385,
+        "hash": "627d07051f"
       }
     },
     "paintings/bruckner-symphony-7": {
@@ -2355,8 +2355,8 @@
         "path": "paintings/debussy-prelude-faune-full.heic",
         "width": 4000,
         "height": 2986,
-        "bytes": 2297484,
-        "hash": "6d4bed6700"
+        "bytes": 2297867,
+        "hash": "621490d23a"
       }
     },
     "paintings/debussy-string-quartet": {
@@ -2805,8 +2805,8 @@
         "path": "paintings/haydn-cello-concerto-1-full.heic",
         "width": 4000,
         "height": 3153,
-        "bytes": 2101206,
-        "hash": "4fe3744f37"
+        "bytes": 2101725,
+        "hash": "6a29952a33"
       }
     },
     "paintings/haydn-string-quartet-op-76-3": {
@@ -3205,8 +3205,8 @@
         "path": "paintings/mendelssohn-hebrides-overture-full.heic",
         "width": 4000,
         "height": 2958,
-        "bytes": 1400872,
-        "hash": "02c5a69a86"
+        "bytes": 1400678,
+        "hash": "51769e7318"
       }
     },
     "paintings/mendelssohn-octet": {
@@ -3555,8 +3555,8 @@
         "path": "paintings/mozart-piano-sonata-11-full.heic",
         "width": 4000,
         "height": 2879,
-        "bytes": 2545498,
-        "hash": "2c55afdc08"
+        "bytes": 2542919,
+        "hash": "d7383dae70"
       }
     },
     "paintings/mozart-sinfonia-concertante-k364": {
@@ -3630,8 +3630,8 @@
         "path": "paintings/mozart-symphony-40-full.heic",
         "width": 4000,
         "height": 2792,
-        "bytes": 2663877,
-        "hash": "f495274b51"
+        "bytes": 2664083,
+        "hash": "698177de74"
       }
     },
     "paintings/mozart-symphony-41": {
@@ -3755,8 +3755,8 @@
         "path": "paintings/palestrina-missa-papae-marcelli-full.heic",
         "width": 2493,
         "height": 4000,
-        "bytes": 3964242,
-        "hash": "941abc6604"
+        "bytes": 3963997,
+        "hash": "ae6796d877"
       }
     },
     "paintings/prokofiev-piano-concerto-3": {
@@ -3880,8 +3880,8 @@
         "path": "paintings/rachmaninoff-symphony-2-full.heic",
         "width": 4000,
         "height": 2306,
-        "bytes": 2496470,
-        "hash": "83905a01cc"
+        "bytes": 2498152,
+        "hash": "af2cbd871e"
       }
     },
     "paintings/ravel-bolero": {
@@ -3930,8 +3930,8 @@
         "path": "paintings/ravel-daphnis-et-chloe-suite-2-full.heic",
         "width": 4000,
         "height": 2847,
-        "bytes": 2769564,
-        "hash": "44a2dd615d"
+        "bytes": 2768359,
+        "hash": "40099398de"
       }
     },
     "paintings/ravel-piano-concerto-g": {
@@ -3955,8 +3955,8 @@
         "path": "paintings/ravel-piano-concerto-g-full.heic",
         "width": 4000,
         "height": 2901,
-        "bytes": 3672354,
-        "hash": "85a5335678"
+        "bytes": 3672593,
+        "hash": "41a249a0ea"
       }
     },
     "paintings/ravel-string-quartet": {
@@ -3980,8 +3980,8 @@
         "path": "paintings/ravel-string-quartet-full.heic",
         "width": 4000,
         "height": 2819,
-        "bytes": 3972551,
-        "hash": "eb0d9b1b16"
+        "bytes": 3973748,
+        "hash": "d72ff8f197"
       }
     },
     "paintings/respighi-pines-of-rome": {
@@ -4005,8 +4005,8 @@
         "path": "paintings/respighi-pines-of-rome-full.heic",
         "width": 4000,
         "height": 2893,
-        "bytes": 2701205,
-        "hash": "5c1c5dba35"
+        "bytes": 2705422,
+        "hash": "93811cb268"
       }
     },
     "paintings/rimsky-korsakov-scheherazade": {
@@ -4055,8 +4055,8 @@
         "path": "paintings/rodrigo-concierto-de-aranjuez-full.heic",
         "width": 4000,
         "height": 2960,
-        "bytes": 1574994,
-        "hash": "c3f36027c4"
+        "bytes": 1574956,
+        "hash": "5dc2364e1c"
       }
     },
     "paintings/rossini-william-tell-overture": {
@@ -4455,8 +4455,8 @@
         "path": "paintings/schumann-piano-quintet-full.heic",
         "width": 2668,
         "height": 4000,
-        "bytes": 2863753,
-        "hash": "c817c373a0"
+        "bytes": 2862034,
+        "hash": "2167780a82"
       }
     },
     "paintings/schumann-symphony-1": {
@@ -4480,8 +4480,8 @@
         "path": "paintings/schumann-symphony-1-full.heic",
         "width": 4000,
         "height": 2525,
-        "bytes": 1538879,
-        "hash": "4d2205b2c9"
+        "bytes": 1539396,
+        "hash": "51265bb9a0"
       }
     },
     "paintings/schumann-symphony-3": {
@@ -4505,8 +4505,8 @@
         "path": "paintings/schumann-symphony-3-full.heic",
         "width": 3134,
         "height": 4000,
-        "bytes": 2054296,
-        "hash": "490a29eeb0"
+        "bytes": 2052429,
+        "hash": "b35a184906"
       }
     },
     "paintings/shostakovich-piano-concerto-2": {
@@ -4605,8 +4605,8 @@
         "path": "paintings/shostakovich-symphony-5-full.heic",
         "width": 4000,
         "height": 1872,
-        "bytes": 1821538,
-        "hash": "6f251445ab"
+        "bytes": 1821185,
+        "hash": "36c61d75c4"
       }
     },
     "paintings/shostakovich-symphony-7": {
@@ -4630,8 +4630,8 @@
         "path": "paintings/shostakovich-symphony-7-full.heic",
         "width": 4000,
         "height": 2561,
-        "bytes": 1157513,
-        "hash": "129c2fbe15"
+        "bytes": 1157098,
+        "hash": "726ac718c0"
       }
     },
     "paintings/shostakovich-symphony-8": {
