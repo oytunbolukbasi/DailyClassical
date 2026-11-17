@@ -47,7 +47,7 @@ def status(pid):
 
 
 def main(brief):
-    rows = re.findall(r"^\| ([A-J]) \| `([a-z0-9-]+)` \|", read(brief) or "", re.M)
+    rows = re.findall(r"^\| ([A-Z]) \| `([a-z0-9-]+)` \|", read(brief) or "", re.M)
     if not rows:
         sys.exit(f"no ids found in {brief}")
     by_group = {}
