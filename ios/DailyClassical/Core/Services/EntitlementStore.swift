@@ -64,6 +64,10 @@ final class EntitlementStore {
             Purchases.logLevel = .info
             #endif
             Purchases.configure(withAPIKey: key)
+            // Apple Ads: RevenueCat reads the AdServices attribution token and asks Apple which
+            // campaign, ad group and keyword led to the install, so trials and purchases show up per
+            // keyword. Anonymous (no ATT, no IDFA); installs not from Apple Ads simply match nothing.
+            Purchases.shared.attribution.enableAdServicesAttributionTokenCollection()
             usesRevenueCat = true
             updates = Task { [weak self] in
                 for await info in Purchases.shared.customerInfoStream { self?.apply(info) }
