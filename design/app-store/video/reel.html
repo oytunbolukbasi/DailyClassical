@@ -1,0 +1,123 @@
+<!doctype html>
+<!-- 15-second app-install video for Meta (Reels/Stories 9:16 and feed 4:5). reel.html?lang=en&format=story&t=3.2
+     renders the frame at t seconds; render-reel.mjs steps t at 30 fps through Chrome and encode-reel.swift makes the MP4.
+     Scenes: hook over a painting mosaic → Today → the guide scrolling to 4:30 (a real simulator recording, frames in
+     rec-<lang>/) → glossary → library → end card. Silent by design: every message is on screen. -->
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @font-face { font-family: Lit; font-weight: 400; src: url("../../../ios/DailyClassical/Resources/Fonts/Literata-Regular.ttf"); }
+  @font-face { font-family: Lit; font-weight: 500; src: url("../../../ios/DailyClassical/Resources/Fonts/Literata-Medium.ttf"); }
+  @font-face { font-family: Lit; font-weight: 400; font-style: italic; src: url("../../../ios/DailyClassical/Resources/Fonts/Literata-Italic.ttf"); }
+  :root { --ink: #F0EBE3; --ink2: #D9D1C6; --gold: #D4AE84; --bg: #111010; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { overflow: hidden; background: var(--bg); }
+  body { position: relative; color: var(--ink); font-family: Lit, serif; -webkit-font-smoothing: antialiased; }
+  .story { width: 1080px; height: 1920px; }
+  .feed { width: 1080px; height: 1350px; }
+  .scene { position: absolute; inset: 0; opacity: 0; }
+
+  /* Mosaic of paintings (hook and library scenes). */
+  .mosaic { position: absolute; inset: -60px; display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+  .mosaic div { aspect-ratio: 3 / 4; background-size: cover; background-position: center; border-radius: 6px; }
+  .veil { position: absolute; inset: 0; }
+
+  .brand { position: absolute; left: 0; right: 0; display: flex; align-items: center; justify-content: center; gap: 16px; }
+  .mark { width: 64px; height: 64px; border-radius: 16px; background: #F5F2EC; color: #1E1B17; display: flex;
+          align-items: center; justify-content: center; font: 500 46px/1 Lit, serif; }
+  .word { font: 500 34px/1 Lit, serif; }
+
+  .title { position: absolute; left: 70px; right: 70px; text-align: center; font-weight: 500; line-height: 1.04;
+           letter-spacing: -0.02em; text-wrap: balance; text-shadow: 0 4px 40px rgba(0,0,0,.5); }
+  .sub { position: absolute; left: 90px; right: 90px; text-align: center; font-size: 40px; line-height: 1.3;
+         color: var(--ink2); text-wrap: balance; }
+  .label { font: 600 26px/1 -apple-system, "Helvetica Neue", sans-serif; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
+
+  .phone { position: absolute; left: 50%; padding: 12px; border-radius: 100px; background: #050505;
+           box-shadow: 0 0 0 2px rgba(240,235,227,.16), 0 60px 140px rgba(0,0,0,.75), 0 0 200px rgba(212,174,132,.16); }
+  .phone .screen { position: relative; overflow: hidden; border-radius: 88px; aspect-ratio: 1206 / 2622; background: #F5F2EC; }
+  .phone img { position: absolute; left: 0; top: 0; width: 100%; display: block; }
+  .ring { position: absolute; border: 5px solid var(--gold); border-radius: 30px; box-shadow: 0 0 50px rgba(212,174,132,.55); }
+
+  .cta { display: inline-block; padding: 22px 44px; border-radius: 999px; background: var(--gold); color: #1E1B17;
+         font: 600 38px/1 -apple-system, "Helvetica Neue", sans-serif; }
+  .store { display: inline-flex; align-items: center; gap: 14px; padding: 18px 34px; border-radius: 18px; border: 2px solid rgba(240,235,227,.5);
+           font: 500 30px/1 -apple-system, "Helvetica Neue", sans-serif; color: var(--ink); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+const q = new URLSearchParams(location.search);
+const lang = q.get("lang") || "en", format = q.get("format") || "story";
+const T = {
+  en: { hook: "Never quite <i>got</i> classical music?", s1: "One masterpiece a day.", s1b: "A symphony, concerto or sonata, with a painting from the same world.",
+        s2: "Know exactly what to listen for.", s2b: "A guide timed to the recording, minute by minute.",
+        s3: "No music theory needed.", s3b: "Tap any term for a plain explanation.",
+        s4: "114 works · 36 composers", end1: "Today’s piece is free.", store: "Download on the App Store" },
+  tr: { hook: "Klasik müzik size hep <i>uzak</i> mı geldi?", s1: "Her gün bir başyapıt.", s1b: "Bir senfoni, konçerto ya da sonat; aynı dünyadan bir tabloyla.",
+        s2: "Neyi dinleyeceğinizi bilin.", s2b: "Kayda göre dakika dakika zamanlanmış bir rehber.",
+        s3: "Müzik bilgisi gerekmez.", s3b: "Bir terime dokunun, sade bir açıklama açılsın.",
+        s4: "114 eser · 36 besteci", end1: "Bugünün eseri ücretsiz.", store: "App Store’dan indirin" },
+}[lang];
+const THUMBS = (q.get("thumbs") || "").split(",").filter(Boolean);
+const story = format === "story", H = story ? 1920 : 1350;
+document.body.className = format;
+
+// Timeline (seconds): hook 0–2.4, today 2.4–5, guide 5–9.6, glossary 9.6–11.6, library 11.6–13, end 13–15.
+const ease = (x) => x < 0 ? 0 : x > 1 ? 1 : 0.5 - Math.cos(Math.PI * x) / 2;
+const fade = (t, a, b, d = 0.35) => Math.min(ease((t - a) / d), 1 - ease((t - (b - d)) / d));
+
+function mosaicHTML(offset) {
+  let s = "";
+  for (let i = 0; i < 36; i++) s += `<div style="background-image:url('thumbs/${THUMBS[(i + offset) % THUMBS.length]}')"></div>`;
+  return `<div class="mosaic">${s}</div>`;
+}
+const phoneW = story ? 600 : 470;
+const phone = (id, src, top) => `<div class="phone" id="${id}" style="width:${phoneW}px;top:${top}px;transform:translateX(-50%)"><div class="screen"><img src="${src}"></div></div>`;
+
+const titleTop = story ? 330 : 120, subTop = story ? 560 : 300, phoneTop = story ? 760 : 470;
+const root = document.getElementById("root");
+root.innerHTML = `
+  <div class="scene" id="hook">${mosaicHTML(0)}<div class="veil" style="background:linear-gradient(180deg,rgba(10,9,9,.55),rgba(10,9,9,.82))"></div>
+    <div class="title" style="top:${story ? 760 : 470}px;font-size:${story ? 112 : 96}px">${T.hook}</div></div>
+  <div class="scene" id="today"><div class="title" style="top:${titleTop}px;font-size:${story ? 92 : 74}px">${T.s1}</div>
+    <div class="sub" style="top:${subTop - (story ? 0 : 10)}px;font-size:${story ? 40 : 34}px">${T.s1b}</div>${phone("p1", `../raw/${lang}/01-today.png`, phoneTop)}</div>
+  <div class="scene" id="guide"><div class="title" style="top:${titleTop}px;font-size:${story ? 92 : 74}px">${T.s2}</div>
+    <div class="sub" style="top:${subTop}px;font-size:${story ? 40 : 34}px">${T.s2b}</div>${phone("p2", "", phoneTop)}<div class="ring" id="ring" style="opacity:0"></div></div>
+  <div class="scene" id="gloss"><div class="title" style="top:${titleTop}px;font-size:${story ? 92 : 74}px">${T.s3}</div>
+    <div class="sub" style="top:${subTop}px;font-size:${story ? 40 : 34}px">${T.s3b}</div>${phone("p3", `../raw/${lang}/03-glossary.png`, phoneTop)}</div>
+  <div class="scene" id="lib">${mosaicHTML(11)}<div class="veil" style="background:rgba(10,9,9,.62)"></div>
+    <div class="title" style="top:${story ? 820 : 540}px;font-size:${story ? 104 : 88}px">${T.s4}</div></div>
+  <div class="scene" id="end"><div class="veil" style="background:#111010"></div>
+    <div class="brand" style="top:${story ? 640 : 380}px"><div class="mark">d</div><div class="word" lang="en">daily classical</div></div>
+    <div class="title" style="top:${story ? 760 : 490}px;font-size:${story ? 96 : 80}px">${T.end1}</div>
+    <div style="position:absolute;left:0;right:0;top:${story ? 1020 : 720}px;text-align:center"><span class="store"> ${T.store}</span></div></div>`;
+
+const recCount = parseInt(q.get("rec") || "0", 10);
+const RING_TR = [0.132, 0.475, 0.807, 0.172];
+function render(t) {
+  const set = (id, o, extra = "") => { const e = document.getElementById(id); e.style.opacity = o; if (extra) e.style.transform = extra; };
+  set("hook", fade(t, -1, 2.6), `scale(${1.06 - 0.06 * ease(t / 2.6)})`);
+  set("today", fade(t, 2.3, 5.1));
+  document.getElementById("p1").style.transform = `translateX(-50%) translateY(${(1 - ease((t - 2.3) / 0.6)) * 80}px)`;
+  set("guide", fade(t, 5.0, 9.7));
+  // Recording frames, played at real speed from 5.2 s.
+  const fi = Math.max(0, Math.min(recCount - 1, Math.round((t - 5.2) * 30)));
+  document.querySelector("#p2 img").src = `rec-${lang}/${String(fi).padStart(4, "0")}.jpg`;
+  // The 4:30 card in the recording's last frame, as fractions of the screen (measured per language).
+  const card = { en: [0.132, 0.395, 0.807, 0.170], tr: RING_TR }[lang];
+  const ringOn = fade(t, 8.95, 9.75, 0.2), sw = phoneW - 24, sh = sw * 2622 / 1206, pad = 8;
+  const r = document.getElementById("ring");
+  r.style.cssText = `left:${540 - sw / 2 + card[0] * sw - pad}px;top:${phoneTop + 12 + card[1] * sh - pad}px;` +
+    `width:${card[2] * sw + 2 * pad}px;height:${card[3] * sh + 2 * pad}px;opacity:${ringOn}`;
+  set("gloss", fade(t, 9.6, 11.7));
+  set("lib", fade(t, 11.6, 13.1), `scale(${1 + 0.05 * ease((t - 11.6) / 1.5)})`);
+  set("end", fade(t, 13.0, 16));
+}
+window.render = render;
+render(parseFloat(q.get("t") || "0"));
+</script>
+</body>
+</html>
