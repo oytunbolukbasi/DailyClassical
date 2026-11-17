@@ -70,7 +70,7 @@ admin.get("/admin", async (c) => {
   if (env.ADMIN_EMAILS.length === 0) return c.html(page("Yönetim", closedView()), 404);
   const email = await sessionEmail(c);
   if (!email) return c.html(page("Giriş", loginView()));
-  return c.html(page("Yönetim", await dashboardView(email)));
+  return c.html(page("Yönetim", await dashboardView(email, linkFilterOf((k) => c.req.query(k)))));
 });
 
 admin.post("/admin/login", async (c) => {
@@ -136,7 +136,27 @@ admin.get("/admin/diagnostics/:id", async (c) => {
 type Recording = { conductor: string | null; orchestra: string | null; chorus: string | null; soloists: { name: string }[] | null; release_year: number | null; spotify_album_id: string | null };
 type PieceRow = Recording & { piece_id: string; title: string | null; composer: string | null; artist: string | null; painting_title: string | null; image_url: string | null; painting_source: string | null; readers: number; opens: number; taps: number };
 type ScheduleRow = PieceRow & { day: string };
-type LinkGroup = { source: string; medium: string; ct: string; clicks: number; visitors: number; ios: number; instagram: number; last_seen: string };
+type LinkGroup = { source: string | null; medium: string | null; campaign: string | null; content: string | null; clicks: number; visitors: number; ios: number; instagram: number; last_seen: string };
+type LinkOption = { tag: LinkTag; value: string | null; n: number };
+
+/** UTM tags the link section filters on: query key → link_clicks column. */
+const LINK_TAGS = { source: "ls", medium: "lm", campaign: "lc", content: "lt" } as const;
+type LinkTag = keyof typeof LINK_TAGS;
+/** The "(boş)" choice: clicks without that tag. */
+const NONE = "-";
+const LINK_PERIODS = { "7": "Son 7 gün", "30": "Son 30 gün", "90": "Son 90 gün", all: "Tümü" } as const;
+type LinkPeriod = keyof typeof LINK_PERIODS;
+type LinkFilter = { period: LinkPeriod } & Partial<Record<LinkTag, string>>;
+
+function linkFilterOf(q: (k: string) => string | undefined): LinkFilter {
+  const p = q("ld") ?? "30";
+  const f: LinkFilter = { period: p in LINK_PERIODS ? (p as LinkPeriod) : "30" };
+  for (const [tag, key] of Object.entries(LINK_TAGS) as [LinkTag, string][]) {
+    const v = q(key)?.slice(0, 60);
+    if (v) f[tag] = v;
+  }
+  return f;
+}
 type AdGroup = { ad_network_id: string | null; source_identifier: string; installs: number; redownloads: number; read: number; paid: number; last_seen: string };
 type DiagnosticGroup = { signature: string; kind: string; n: number; test_only: boolean; versions: string[]; os: string[]; last_seen: string; latest_id: string };
 const DIAGNOSTIC_KINDS: Record<string, string> = { crash: "Çökme", hang: "Donma", launch: "Yavaş açılış", cpu: "Aşırı işlemci", disk: "Aşırı disk yazma" };
@@ -243,23 +263,49 @@ async function loadDashboard() {
       max(received_at)::text as last_seen
     from ad_postbacks where received_at > now() - interval '90 days'
     group by ad_network_id, coalesce(source_identifier, '—') order by max(received_at) desc limit 50`;
-  // Clicks on dailyclassical.co/app (routes/app-link.ts), last 30 days, link previews left out.
-  // A visitor is counted once per day (the hash changes daily), so "kişi" can overcount across days.
-  const linkGroups = await sql<LinkGroup[]>`
-    select coalesce(source, '—') as source, coalesce(medium, '—') as medium, ct,
+  return { today, kpi: kpi!, series, schedule, catalogue, prompts, diagTotals, diagGroups, adGroups };
+}
+
+/**
+ * Clicks on dailyclassical.co/app (routes/app-link.ts) for the chosen period and UTM tags; link
+ * previews (bots) are left out. A visitor hash changes daily, so "kişi" counts a person once per day.
+ */
+async function loadLinks(today: string, f: LinkFilter) {
+  const since = f.period === "all" ? sql`true` : sql`at > now() - make_interval(days => ${Number(f.period)})`;
+  const where = (except?: LinkTag) => {
+    let w = sql`device <> 'bot' and ${since}`;
+    for (const tag of Object.keys(LINK_TAGS) as LinkTag[]) {
+      const v = f[tag];
+      if (v === undefined || tag === except) continue;
+      w = v === NONE ? sql`${w} and ${sql(tag)} is null` : sql`${w} and ${sql(tag)} = ${v}`;
+    }
+    return w;
+  };
+  const groups = await sql<LinkGroup[]>`
+    select source, medium, campaign, content,
       count(*)::int as clicks,
       count(distinct (visitor, at::date))::int as visitors,
       count(*) filter (where device = 'ios')::int as ios,
       count(*) filter (where in_app = 'instagram')::int as instagram,
       max(at)::text as last_seen
-    from link_clicks where at > now() - interval '30 days' and device <> 'bot'
-    group by 1, 2, 3 order by count(*) desc limit 50`;
-  const linkDays = await sql<{ day: string; n: number }[]>`
+    from link_clicks where ${where()}
+    group by 1, 2, 3, 4 order by count(*) desc limit 500`;
+  // Each menu lists the values left under the other filters (and the period), with their clicks.
+  const options: LinkOption[] = [];
+  for (const tag of Object.keys(LINK_TAGS) as LinkTag[]) {
+    const rows = await sql<{ value: string | null; n: number }[]>`
+      select ${sql(tag)} as value, count(*)::int as n from link_clicks where ${where(tag)}
+      group by 1 order by 2 desc, 1 limit 200`;
+    options.push(...rows.map((r) => ({ tag, ...r })));
+  }
+  // Daily clicks: the period's days (at most the last 90 for "Tümü").
+  const days = f.period === "all" ? 90 : Number(f.period);
+  const daily = await sql<{ day: string; n: number }[]>`
     select d::date::text as day, count(c.id)::int as n
-    from generate_series(${today}::date - 29, ${today}::date, interval '1 day') d
-    left join link_clicks c on (c.at at time zone ${TZ})::date = d::date and c.device <> 'bot'
+    from generate_series(${today}::date - ${days - 1}::int, ${today}::date, interval '1 day') d
+    left join link_clicks c on (c.at at time zone ${TZ})::date = d::date and ${where()}
     group by d order by d`;
-  return { today, kpi: kpi!, series, schedule, catalogue, prompts, diagTotals, diagGroups, adGroups, linkGroups, linkDays };
+  return { groups, options, daily };
 }
 
 // ---- Views ----
@@ -300,8 +346,33 @@ function thumbCell(r: PieceRow) {
   return href ? html`<a class="thumb" href="${href}" target="_blank" rel="noopener" title="${r.artist ?? ""}: ${r.painting_title ?? ""}">${img}</a>` : html`<span class="thumb">${img}</span>`;
 }
 const num = (n: number) => html`<td class="n">${n ? fmt.format(n) : html`<span class="m">0</span>`}</td>`;
+const tagCell = (v: string | null) => html`<td>${v ?? html`<span class="m">—</span>`}</td>`;
 
-function chart(series: { day: string; n: number }[]) {
+/** GET form for the link section: period and one menu per UTM tag; a change reloads at #links. */
+function linkFilterForm(f: LinkFilter, options: LinkOption[]) {
+  const names: Record<LinkTag, string> = { source: "Kaynak", medium: "Ortam", campaign: "Kampanya", content: "İçerik" };
+  const menu = (tag: LinkTag) => {
+    const current = f[tag];
+    const list = options.filter((o) => o.tag === tag);
+    // A chosen value with no clicks left in the period still shows, so the menu reflects the URL.
+    const known = current === undefined || list.some((o) => (o.value ?? NONE) === current);
+    return html`<label>${names[tag]}<select name="${LINK_TAGS[tag]}">
+      <option value="">Tümü</option>
+      ${list.map((o) => html`<option value="${o.value ?? NONE}" ${(o.value ?? NONE) === current ? "selected" : ""}>${o.value ?? "(boş)"} · ${fmt.format(o.n)}</option>`)}
+      ${known ? "" : html`<option value="${current}" selected>${current === NONE ? "(boş)" : current} · 0</option>`}
+    </select></label>`;
+  };
+  const any = f.period !== "30" || (Object.keys(LINK_TAGS) as LinkTag[]).some((t) => f[t] !== undefined);
+  return html`<form class="filters" method="get" action="/admin#links">
+    <label>Dönem<select name="ld">${(Object.entries(LINK_PERIODS) as [LinkPeriod, string][]).map(([k, v]) =>
+      html`<option value="${k}" ${k === f.period ? "selected" : ""}>${v}</option>`)}</select></label>
+    ${(Object.keys(LINK_TAGS) as LinkTag[]).map(menu)}
+    <noscript><button class="link">Uygula</button></noscript>
+    ${any ? html`<a class="clear" href="/admin#links">Temizle</a>` : ""}
+  </form>`;
+}
+
+function chart(series: { day: string; n: number }[], unit = "aktif kullanıcı", label = "Son 30 günde günlük aktif kullanıcı") {
   const w = 720, h = 160, gap = 2, bw = w / series.length - gap;
   const max = Math.max(1, ...series.map((s) => s.n));
   const bars = series.map((s, i) => {
@@ -309,19 +380,22 @@ function chart(series: { day: string; n: number }[]) {
     const x = i * (bw + gap), y = h - bh;
     return `<g class="bar"><rect class="hit" x="${x}" y="0" width="${bw + gap}" height="${h}"/>`
       + (bh ? `<path d="M${x},${h} V${y + 4} q0,-4 4,-4 h${bw - 8} q4,0 4,4 V${h} Z"/>` : "")
-      + (s.n ? `<text x="${x + bw / 2}" y="${y - 4}" class="val">${fmt.format(s.n)}</text>` : "")
-      + `<title>${dayLabel(s.day)}: ${fmt.format(s.n)} aktif kullanıcı</title></g>`;
+      + (s.n && series.length <= 31 ? `<text x="${x + bw / 2}" y="${y - 4}" class="val">${fmt.format(s.n)}</text>` : "")
+      + `<title>${dayLabel(s.day)}: ${fmt.format(s.n)} ${unit}</title></g>`;
   }).join("");
-  return raw(`<svg viewBox="0 0 ${w} ${h + 18}" role="img" aria-label="Son 30 günde günlük aktif kullanıcı" class="chart">
+  return raw(`<svg viewBox="0 0 ${w} ${h + 18}" role="img" aria-label="${label}" class="chart">
     <line x1="0" y1="${h + 0.5}" x2="${w}" y2="${h + 0.5}" class="axis"/>${bars}
     <text x="0" y="${h + 14}" class="tick">${dayLabel(series[0]!.day)}</text>
     <text x="${w}" y="${h + 14}" class="tick" text-anchor="end">${dayLabel(series.at(-1)!.day)}</text>
     <text x="0" y="10" class="tick">en çok ${fmt.format(max)}</text></svg>`);
 }
 
-async function dashboardView(email: string) {
-  const { today, kpi, series, schedule, catalogue, prompts, diagTotals, diagGroups, adGroups, linkGroups, linkDays } = await loadDashboard();
+async function dashboardView(email: string, linkFilter: LinkFilter) {
+  const { today, kpi, series, schedule, catalogue, prompts, diagTotals, diagGroups, adGroups } = await loadDashboard();
+  const links = await loadLinks(today, linkFilter);
+  const linkGroups = links.groups;
   const linkTotal = (k: "clicks" | "visitors" | "ios" | "instagram") => linkGroups.reduce((a, g) => a + g[k], 0);
+  const filtered = (Object.keys(LINK_TAGS) as LinkTag[]).some((t) => linkFilter[t] !== undefined);
   const adTotal = (k: "installs" | "read" | "paid") => adGroups.reduce((a, g) => a + g[k], 0);
   const diagCount = (...kinds: string[]) => diagTotals.filter((r) => kinds.includes(r.kind)).reduce((a, r) => a + r.n, 0);
   const seen = (t: string) => new Intl.DateTimeFormat("tr-TR", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: TZ }).format(new Date(t));
@@ -430,33 +504,33 @@ async function dashboardView(email: string) {
       </details>
     </section>
 
-    <section>
-      <h2>Bağlantı tıklamaları <span class="m">dailyclassical.co/app, son 30 gün</span></h2>
+    <section id="links">
+      <h2>Bağlantı tıklamaları <span class="m">dailyclassical.co/app</span></h2>
+      ${linkFilterForm(linkFilter, links.options)}
       <div class="tiles">
-        ${tile("Tıklama", linkTotal("clicks"), "bağlantı önizlemeleri hariç")}
+        ${tile("Tıklama", linkTotal("clicks"), filtered ? "seçili etiketlerle" : "bağlantı önizlemeleri hariç")}
         ${tile("Kişi", linkTotal("visitors"), "aynı gün tekrar tıklayan bir kez")}
         ${tile("iPhone/iPad'den", linkTotal("ios"), "uygulamayı indirebilecek olanlar")}
         ${tile("Instagram içinden", linkTotal("instagram"), "Instagram'ın tarayıcısında açılan")}
       </div>
-      ${linkTotal("clicks") > 0 ? chart(linkDays) : ""}
+      ${linkTotal("clicks") > 0 ? chart(links.daily, "tıklama", "Günlük bağlantı tıklamaları") : ""}
       ${linkGroups.length === 0
-        ? html`<p class="m small">Henüz tıklama yok.</p>`
+        ? html`<p class="m small">${filtered || linkFilter.period !== "all" ? "Bu seçimde tıklama yok." : "Henüz tıklama yok."}</p>`
         : html`<div class="scroll" style="margin-top:12px"><table>
-        <thead><tr><th>Kaynak</th><th>Ortam</th><th>App Store kampanyası (ct)</th><th class="n">Tıklama</th><th class="n">Kişi</th><th class="n">iOS</th><th>Son</th></tr></thead>
+        <thead><tr><th>Kaynak</th><th>Ortam</th><th>Kampanya</th><th>İçerik</th><th class="n">Tıklama</th><th class="n">Kişi</th><th class="n">iOS</th><th>Son</th></tr></thead>
         <tbody>${linkGroups.map((g) => html`<tr>
-          <td>${g.source}</td><td>${g.medium}</td><td><code>${g.ct}</code></td>
+          ${tagCell(g.source)}${tagCell(g.medium)}${tagCell(g.campaign)}${tagCell(g.content)}
           ${num(g.clicks)}${num(g.visitors)}${num(g.ios)}
           <td class="m">${seen(g.last_seen)}</td>
         </tr>`)}</tbody>
       </table></div>`}
       <details class="note">
-        <summary>Bağlantı nasıl kullanılır, indirmeler nerede?</summary>
+        <summary>Bağlantı nasıl kullanılır?</summary>
         <ul>
-          <li>Her yerde aynı bağlantı, sonuna nereden geldiğini yazarak: <code>dailyclassical.co/app?utm_source=instagram&amp;utm_medium=profile</code> (profil), <code>…utm_medium=story</code> (hikâye), <code>…utm_source=x&amp;utm_medium=post</code>. İsteğe bağlı <code>utm_campaign</code> (ör. <code>kasim-lansman</code>) ve <code>utm_content</code>.</li>
-          <li>Bağlantı tıklamayı sayar ve kişiyi App Store'a gönderir. Kişi bilgisi tutulmaz: IP ya da cihaz kimliği kaydedilmez; "Kişi" yalnızca aynı gün tekrar tıklayanları ayırmak için günlük değişen bir özetten sayılır.</li>
-          <li><b>İndirmeler:</b> App Store'a giden bağlantı bir App Store kampanya bağlantısıdır (ct sütunundaki ad). Bu bağlantıdan gelen indirmeleri Apple, App Store Connect › Uygulama › Analytics › Acquisition › Campaigns'te bu adla gösterir (1–2 gün gecikmeli, yalnızca verilerini geliştiricilerle paylaşmayı kabul etmiş kullanıcılar).</li>
-          <li>Tıklamayla indirmeyi tek tek eşlemek mümkün değil: App Store araya girdiği için Apple bunu kişi bazında kimseye vermez (IP ya da cihaz parmak iziyle eşleştirmek Apple kurallarına aykırı).</li>
-          <li>Instagram vb. bağlantının önizlemesini almak için sayfayı kendisi açar; bu istekler kaydedilir ama sayılara katılmaz.</li>
+          <li>Her yerde aynı bağlantı, sonuna nereden geldiğini yazarak: <code>dailyclassical.co/app?utm_source=instagram&amp;utm_medium=profile</code> (profil), <code>…utm_medium=story</code> (hikâye), <code>…utm_source=x&amp;utm_medium=post</code>. İsteğe bağlı <code>utm_campaign</code> (ör. <code>kasim-lansman</code>) ve <code>utm_content</code>. Etiketler küçük harfe çevrilir, Türkçe harfler sadeleşir.</li>
+          <li>Yukarıdaki menülerle dönem ve etiket seçilir; her menü, öteki seçimlerle kalan değerleri tıklama sayılarıyla gösterir. "(boş)" o etiketi olmayan tıklamalardır.</li>
+          <li>Bağlantı tıklamayı sayar ve kişiyi App Store'a gönderir. IP ya da cihaz kimliği kaydedilmez; "Kişi" yalnızca aynı gün tekrar tıklayanları ayırmak için günlük değişen bir özetten sayılır. Bağlantı önizlemeleri (Instagram, WhatsApp vb.) sayılmaz.</li>
+          <li>Tıklayanların kaçının indirdiği bilinmez: App Store araya girdiği için Apple bunu kişi bazında vermez.</li>
         </ul>
       </details>
     </section>
@@ -598,6 +672,10 @@ a{color:var(--accent)}
 .card{margin-top:12px}
 .note{margin-top:12px;background:var(--surface);border-radius:16px;box-shadow:0 0 0 .5px var(--rule);padding:12px 18px;font-size:14px;line-height:1.5}
 .note summary{cursor:pointer;color:var(--accent);font-weight:500}
+.filters{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px;margin:0 0 12px}
+.filters label{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1 1 140px;max-width:220px}
+.filters select{font:inherit;font-size:15px;padding:8px 10px;border-radius:10px;border:0;box-shadow:inset 0 0 0 .5px var(--rule);background:var(--surface);color:var(--ink);min-width:0;width:100%}
+.filters .clear{font-size:14px;padding:10px 0}
 code{font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-all}
 .note ul{margin:10px 0 4px;padding-left:20px}
 .note li{margin:6px 0}
@@ -743,6 +821,15 @@ const ADMIN_JS = `
   document.getElementById("cal-today").onclick = () => { month = new Date(data.today.slice(0, 7) + "-01T00:00:00Z"); render(); };
   document.getElementById("dlg").addEventListener("click", (e) => { if (e.target.id === "dlg") e.target.close(); });
   render();
+
+  // Link filters: a change reloads with only the chosen tags in the address (and the default period left out).
+  const lf = document.querySelector(".filters");
+  if (lf) for (const s of lf.querySelectorAll("select")) s.addEventListener("change", () => {
+    for (const x of lf.querySelectorAll("select")) x.disabled = !x.value || (x.name === "ld" && x.value === "30");
+    lf.submit();
+  });
+  // Back/forward restores the page as it was left, menus disabled for the submit included.
+  addEventListener("pageshow", () => { if (lf) for (const x of lf.querySelectorAll("select")) x.disabled = false; });
 
   const q = document.getElementById("cat-q"), rows = [...document.querySelectorAll("#cat tr")];
   q.addEventListener("input", () => {
