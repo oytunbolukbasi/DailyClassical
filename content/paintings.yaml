@@ -2768,3 +2768,20 @@ wagner-siegfried-idyll:
   thumb: { width: 472, height: 300, bytes: 19476 }
   full: { width: 4000, height: 2542, bytes: 1351303 }
   placeholder_color: "#8b7059"
+
+rodrigo-concierto-de-aranjuez:
+  # Gallery photo by User:anagoria, cropped to the canvas. The "1907" in the Commons file name is wrong:
+  # the museum, Wikidata (Q27667826) and the file page give 1911.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/1907_Rusinol_Garten_von_Aranjuez_anagoria.JPG
+  source_url: https://www.museoreinasofia.es/en/collection/artwork/faune-vell-old-faun
+  commons_page: https://commons.wikimedia.org/wiki/File:1907_Rusinol_Garten_von_Aranjuez_anagoria.JPG
+  width: 4752
+  height: 3516
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Santiago Rusiñol, The Old Faun (Faune vell), 1911. Museo Nacional Centro de Arte Reina Sofía, Madrid (AS12047). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2433, height: 1800, bytes: 675469 }
+  thumb: { width: 405, height: 300, bytes: 31355 }
+  full: { width: 4000, height: 2960, bytes: 1574994 }
+  placeholder_color: "#503d2d"

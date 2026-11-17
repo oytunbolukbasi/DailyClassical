@@ -4034,6 +4034,31 @@
         "hash": "a388107904"
       }
     },
+    "paintings/rodrigo-concierto-de-aranjuez": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/1907_Rusinol_Garten_von_Aranjuez_anagoria.JPG",
+      "color": "#503d2d",
+      "hero": {
+        "path": "paintings/rodrigo-concierto-de-aranjuez-hero.heic",
+        "width": 2433,
+        "height": 1800,
+        "bytes": 675469,
+        "hash": "1cf21b6ab8"
+      },
+      "thumb": {
+        "path": "paintings/rodrigo-concierto-de-aranjuez-thumb.heic",
+        "width": 405,
+        "height": 300,
+        "bytes": 31355,
+        "hash": "2517ae8cf4"
+      },
+      "full": {
+        "path": "paintings/rodrigo-concierto-de-aranjuez-full.heic",
+        "width": 4000,
+        "height": 2960,
+        "bytes": 1574994,
+        "hash": "c3f36027c4"
+      }
+    },
     "paintings/rossini-william-tell-overture": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Fran%C3%A7ois_Diday,_Orage_sur_le_L%C3%A9man,_1839.tif",
       "color": "#64675b",

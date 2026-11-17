@@ -85,6 +85,7 @@ Definition: one or two sentences, written for the pop-over.
 | Posthorn | A small valveless horn once blown on mail coaches | A small brass horn without valves, once blown by coachmen to announce the mail coach. It plays only a few notes, which gives it a simple, nostalgic sound. |
 | Programme music | Instrumental music that tells a story or paints a scene | Instrumental music that tells a story or depicts a scene described by the composer. |
 | Ranz des vaches | A Swiss herdsman's call to the cattle | A traditional melody that Swiss herdsmen sang or played on the alphorn to call their cows. Composers used it as a sign of the Alps and of pastoral calm, as Rossini did in the *William Tell* overture. |
+| Rasgueado | Strumming the guitar strings with the fingers | A Spanish guitar technique in which the fingers of the right hand strike the strings in quick, rolling strokes, giving the bright, rhythmic chords of flamenco. |
 | Recapitulation | The return of the opening themes near the end of sonata form | The last stage of sonata form, where the opening themes return. |
 | Recitative | Music that follows the free rhythm of speech | Music that imitates the rhythm of speech, free and unmeasured. |
 | Rhapsody | A free, one-movement piece of contrasting episodes | A single-movement work that moves freely from one mood and tempo to the next, often sounding improvised, instead of following a set form. |

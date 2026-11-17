@@ -1,6 +1,6 @@
 # İçerik durumu
 
-Son güncelleme: 25 Ekim 2026. Katalog: **114 eser** (14'ü takvimde ve yayında, 100'ü takvim dışı: Ekim 2026'nın iki partisi), 99 sözlük terimi, 36 besteci. Proje bilgisi ve içerik yazım rehberi `project_information.md`'de, açık işler `backlog.md`'de.
+Son güncelleme: 17 Kasım 2026. Katalog: **166 eser** (takvimdekiler `schedule.yaml`'da; gerisi takvim dışı: Ekim 2026'nın iki partisi ve Kasım 2026 partisi), 119 sözlük terimi, 45 besteci. Proje bilgisi ve içerik yazım rehberi `project_information.md`'de, açık işler `backlog.md`'de.
 
 ## Aşamalar
 
@@ -19,6 +19,20 @@ Oytun zamanlamayı bıraktı: çok vakit alıyor. Kulakla zamanlanan 7 eser (Ero
 
 - **Yayın (9 Kasım 2026):** `start` 2026-11-09, gün 0 Çaykovski 6; 9–22 Kasım incelemedeki 14 eser, 23–29 Kasım ilk hafta (aşağıda). Takvime yalnız sondan eklenir.
 - **15. günden itibaren** haftada yaklaşık 7 eser takvime girer; 30 Kasım'dan sonrası her hafta eklenecek. İlk hafta (takvimde): Beethoven 3, Vivaldi İlkbahar, Ay Işığı, Dvořák Çello, Boléro, Mozart 41, Chopin 1. Piyano Konçertosu.
+
+## Kasım 2026 partisi (52 eser): tamamlandı
+
+17 Kasım 2026'da 12 agent'la yazıldı ve aynı gün birleştirildi (commit 8418fab ve Rodrigo). Brief ve birleştirme notları silindi (git geçmişinde: `content/research/BATCH-2026-11*.md`).
+
+- **Oytun'un kayıtları:** Bruckner 9 (Haitink · LSO), Rahmaninov 2 (Rattle · LSO), Şostakoviç 7 (V. Petrenko · RLPO), Şostakoviç 8 (K. Petrenko · BPO). Aynı gün Mahler 3 (Dudamel · BPO) ve Mahler 5 (Boulez · WPh) da onun kayıtlarına geçti, duraklar yeniden yerleştirildi (7da1cac).
+- **Op. 131 (`beethoven-string-quartet-14`) 7 bölüm:** bölüm seçicisinin 7 bölümü sığdırdığı uygulama sürümü (31d953a) yayına çıkmadan takvime girmez.
+- **Birleştirmede değişen tablolar:** Bruckner 9 → Millet, *Angelus* (Cole'un *Old Age*'i Op. 111'de); Op. 135 → Rudolf von Alt, *Stein an der Donau* (Goya atfı tartışmalı); Siegfried İdili → Zünd (dördüncü Turner yerine). Stravinski portresi: Kongre Kütüphanesi Bain fotoğrafı (en yüksek çözünürlük, Oytun'un seçimi). Rodrigo portresi yok (özgür lisanslı fotoğraf bulunmadı). Giorgione, *Fırtına* (Vivaldi Yaz) Oytun'un onayıyla.
+- **Bilerek kalan ressam tekrarları:** Thomas Cole 3 (Op. 111, Op. 76/4 "Sunrise", Les préludes), Monet 3, Turner 3, Hodler 2; ayrıca Goya, Corot, Delacroix, Renoir, Wright of Derby, Rubens birer yeni.
+- **Takvime koymadan önce bakılacaklar (agent notlarından):**
+  - En zayıf zamanlamalar: Siegfried İdili, Bruckner 9 I–II, Beethoven 4. Piyano Konçertosu (ölçü numaraları partisyonsuz), Haydn 45, Mozart K. 491, Barber Keman Konçertosu (son anda yazıldı, `key: null`), Rhapsody in Blue (yavaş tema ≈ 9:00 ±45 sn), Les préludes (fırtına ve marş ±30–60 sn), Op. 131 IV (varyasyon sınırları ±35 sn).
+  - Tekrar varsayımları: Mozart 38 II'nin ikinci yarısı (≈ 7:50 durağı), Smetana I serim tekrarı, Op. 111 I, Op. 135 finali.
+  - Kontrol edilecek gerçekler: Beethoven 4'te "trompet ve timpani finale kadar susar" (3 yerde), Handel'de iki menüetin sırası (Spotify "Menuet II-I" diyor; tersse V'teki iki durak yer değiştirir), Dvořák Serenadı'nda Larghetto ölçüsü (2/4?).
+  - Görseller: Renoir *Lovers* (Dvořák Serenadı) galeri fotoğrafı, alt kenarda çerçeve izi; Notke *Danse Macabre* çok geniş (4,3 : 1); Elgar (Hughes) çok uzun; Pekka Halonen ve Marstrand yatay.
 
 ## Ekim 2026 ikinci parti (50 eser): tamamlandı
 
@@ -40,7 +54,7 @@ Takvimdekiler yayın sırasıyla, ardından takvim dışı parti. Spotify sütun
 | 8 | berlioz-symphonie-fantastique | symphony | 5 | Sir Colin Davis · Royal Concertgebouw Orchestra, 1974 | `28YsKbzTM2Sa8A7hcoT2D0` | Francisco Goya, *Witches’ Sabbath, or the Great He-Goat* | Takvimde (yayında, 8. sırada) · duraklar ≈ |
 | 9 | beethoven-symphony-9 | symphony | 4 | Gundula Janowitz / Hilde Rössel-Majdan / Waldemar Kmentt / Walter Berry / Herbert von Karajan · Berliner Philharmoniker, 1963 | `1xrUldRtz5tcUQ6KrIOS2e` | Philipp Otto Runge, *Morning (first version), also called The Small Morning* | Takvimde (yayında, 9. sırada) · duraklar ≈ |
 | 10 | beethoven-piano-concerto-3 | piano-concerto | 3 | Sviatoslav Richter / Kurt Sanderling · Wiener Symphoniker, 1963 | `7b75e8aayuYU0sTYjnfFTl` | Martin von Molitor, *Landscape with Hammer Mill* | Takvimde (yayında, 10. sırada) · duraklar ≈ |
-| 11 | mahler-symphony-5 | symphony | 5 | Friedrich Pfeiffer / Leonard Bernstein · Wiener Philharmoniker, 1988 | `5ENEAfJFQNuvww1jxjcnbu` | Gustav Klimt, *Death and Life* | Takvimde (yayında, 11. sırada) · duraklar ≈ |
+| 11 | mahler-symphony-5 | symphony | 5 | Pierre Boulez · Wiener Philharmoniker, 1997 | `2mxjaerL9JdNbLnGdCfh8Q` | Gustav Klimt, *Death and Life* | Takvimde (yayında, 11. sırada) · duraklar ≈ · kayıt 17 Kas'ta değişti (Oytun'un seçimi) |
 | 12 | shostakovich-symphony-5 | symphony | 4 | Leonard Bernstein · New York Philharmonic, 1959 | `00d6wTUJHGsrxPmbETXGWm` | Ilya Repin, *Barge Haulers on the Volga* | Takvimde (yayında, 12. sırada) · duraklar ≈ |
 | 13 | tchaikovsky-symphony-6 | symphony | 4 | Teodor Currentzis · musicAeterna, 2017 | `4K1qDDbKEYVGF4jQIZyyJI` | Isaac Levitan, *Above Eternal Peace* | Takvimde (yayında, 13. sırada) · duraklar ≈ |
 | 14 | rachmaninoff-piano-concerto-2 | piano-concerto | 3 | Sviatoslav Richter / Stanisław Wisłocki · Warsaw Philharmonic Orchestra, 1959 | `44eOy7bLDpoOZx5A9a1GEJ` | Arkhyp Kuindzhi, *Red Sunset* | Takvimde (yayında, 14. sırada) · duraklar ≈ |
@@ -60,7 +74,7 @@ Takvimdekiler yayın sırasıyla, ardından takvim dışı parti. Spotify sütun
 | 28 | haydn-string-quartet-op-76-3 | string-quartet | 4 | Takács Quartet, 1988 | `2ZNZLJE9S7WvMb23HVfRu4` | Johann Christian Brand, *Laxenburg from the Münkendorf Pavilion, looking south-west* | Takvim dışı · duraklar ≈ |
 | 29 | allegri-miserere | choral | 1 | Harry Christophers · The Sixteen, 1989 | `0lSeYO6mLZIngXj5NPS3Hl` | Jean-Auguste-Dominique Ingres, *Pope Pius VII in the Sistine Chapel* | Takvim dışı · duraklar ≈ |
 | 30 | mahler-symphony-2 | symphony | 5 | Elisabeth Schwarzkopf / Otto Klemperer · Philharmonia Orchestra, 1963 | `1oXL9ONCxCGF7ctG6gnjrI` | Matthias Grünewald, *The Resurrection (Isenheim Altarpiece)* | Takvim dışı · duraklar ≈ |
-| 31 | mahler-symphony-3 | symphony | 6 | Martha Lipton / Leonard Bernstein · New York Philharmonic, 1962 | `4RvVQ968WriWyWv37Aa99q` | Giovanni Segantini, *Spring in the Alps* | Takvim dışı · duraklar ≈ |
+| 31 | mahler-symphony-3 | symphony | 6 | Gerhild Romberger / Gábor Tarkövi / Gustavo Dudamel · Berliner Philharmoniker, 2020 | `3XOFx2A5iGm3L99jxWPexS` | Giovanni Segantini, *Spring in the Alps* | Takvim dışı · duraklar ≈ · kayıt 17 Kas'ta değişti (Oytun'un seçimi) |
 | 32 | mahler-symphony-9 | symphony | 4 | Sir John Barbirolli · Berliner Philharmoniker, 1964 | `3mb7iASlTwepiLCXODCnme` | Egon Schiele, *Small Tree in Late Autumn* | Takvim dışı · duraklar ≈ |
 | 33 | bruckner-symphony-7 | symphony | 4 | Herbert von Karajan · Wiener Philharmoniker, 1990 | `641TZuqNeVpzvWgoy6Rbp2` | Wilhelm Leibl, *Three Women in Church* | Takvim dışı · duraklar ≈ |
 | 34 | brahms-symphony-1 | symphony | 4 | Michel Schwalbé / Karl Böhm · Berliner Philharmoniker, 1960 | `2F7kYdoAGsxxK9fSUiJixg` | Alexandre Calame, *The Lake of Thun* | Takvim dışı · duraklar ≈ |
@@ -144,6 +158,58 @@ Takvimdekiler yayın sırasıyla, ardından takvim dışı parti. Spotify sütun
 | 112 | prokofiev-symphony-1 | symphony | 4 | Claudio Abbado · Chamber Orchestra of Europe, 1986 | `2Z9WmnUhN1lmSbetmXVCYt` | Konstantin Somov, *Lady in Blue* | Takvim dışı (ikinci parti) · duraklar ≈ |
 | 113 | shostakovich-piano-concerto-2 | piano-concerto | 3 | Leonard Bernstein · New York Philharmonic, 1958 | `0YSnkZkvWTkevBOMuxkTp4` | Pierre-Auguste Renoir, *Two Young Girls at the Piano* | Takvim dışı (ikinci parti) · duraklar ≈ |
 | 114 | barber-adagio-for-strings | orchestral | 1 | Neville Marriner · Academy of St Martin in the Fields, 1975 | `1jHCQAIIv27FHRoLl0cxgb` | George Inness, *The Home of the Heron* | Takvim dışı (ikinci parti) · duraklar ≈ |
+| 115 | beethoven-string-quartet-14 | string-quartet | 7 | Takács Quartet, 2004 | `6tFl4rPDztyza1TSAOZP8i` | Rembrandt van Rijn, *Self-Portrait with Two Circles* | Takvim dışı (Kasım partisi) · duraklar ≈ · 7 bölüm: yeni uygulama sürümünden önce takvime girmez |
+| 116 | beethoven-string-quartet-16 | string-quartet | 4 | Takács Quartet, 2004 | `6tFl4rPDztyza1TSAOZP8i` | Rudolf von Alt, *Stein an der Donau* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 117 | beethoven-piano-sonata-32 | piano-sonata | 2 | Wilhelm Kempff, 1964 | `3cS6w1hujyiNMpBFZfJtRO` | Thomas Cole, *The Voyage of Life: Old Age* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 118 | beethoven-piano-concerto-4 | piano-concerto | 3 | Maurizio Pollini / Karl Böhm · Wiener Philharmoniker, 1976 | `6yrmsnaFoj5wqcpVpuZRmm` | Jean-Baptiste-Camille Corot, *Orpheus Leading Eurydice from the Underworld* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 119 | beethoven-piano-sonata-17 | piano-sonata | 3 | Maurizio Pollini, 1989 | `5sZTnaIepkONvTzlmrb755` | John William Waterhouse, *Miranda – The Tempest* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 120 | palestrina-missa-papae-marcelli | choral | 6 | Harry Christophers · The Sixteen, 1990 | `0lSeYO6mLZIngXj5NPS3Hl` | Raphael, *The Ecstasy of Saint Cecilia* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 121 | bach-double-violin-concerto | concerto | 3 | Simon Standage / Elizabeth Wilcock / Trevor Pinnock · The English Concert, 1983 | `2Byuw15sX8R9CtbvKduqH6` | Philippe Mercier, *The Sense of Hearing* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 122 | handel-music-for-the-royal-fireworks | orchestral | 5 | Trevor Pinnock · The English Concert, 1997 | `0TXylndVvQEFxBPJUC0ZJ7` | Joseph Wright of Derby, *The Annual Girandola at the Castel Sant’Angelo, Rome* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 123 | vivaldi-four-seasons-summer | violin-concerto | 3 | Simon Standage / Trevor Pinnock · The English Concert, 1982 | `5tgFFNHTrkzpihDgYvpXEL` | Giorgione, *The Tempest* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 124 | vivaldi-four-seasons-autumn | violin-concerto | 3 | Simon Standage / Trevor Pinnock · The English Concert, 1982 | `5tgFFNHTrkzpihDgYvpXEL` | Peter Paul Rubens, *An Autumn Landscape with a View of Het Steen in the Early Morning* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 125 | haydn-symphony-45 | symphony | 4 | Antal Doráti · Philharmonia Hungarica, 1970 | `3eu3putbIawJBFE4HNS4WP` | Georges de La Tour, *The Magdalen with the Smoking Flame* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 126 | haydn-string-quartet-op-76-4 | string-quartet | 4 | Takács Quartet, 1989 | `7gzecPIO5a81VLq9ikLtyJ` | Thomas Cole, *Sunrise in the Catskills* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 127 | mozart-clarinet-quintet | chamber | 4 | Sabine Meyer · Wiener Streichsextett, 1988 | `0wqakzt5l7vHpPiaf87E2x` | Élisabeth Vigée Le Brun, *Madame Vigée Le Brun and her Daughter, Julie* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 128 | mozart-piano-concerto-24 | piano-concerto | 3 | Clifford Curzon / István Kertész · London Symphony Orchestra, 1967 | `1BrTUemQeJj8K5JJFeGQPZ` | Francisco de Goya, *The Snowstorm (Winter)* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 129 | mozart-symphony-38 | symphony | 3 | Sir Charles Mackerras · Scottish Chamber Orchestra, 2007 | `1EsOER6UdNfA5Lliol1o73` | Ferdinand Lepié, *The Old Town Square in Prague* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 130 | mozart-violin-concerto-5 | violin-concerto | 3 | Anne-Sophie Mutter / Herbert von Karajan · Berliner Philharmoniker, 1978 | `73jn6JBJSoRq6Ogmv7aias` | Jean-Étienne Liotard, *Portrait of Marie-Adélaïde of France in Turkish Dress* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 131 | schubert-piano-trio-2 | chamber | 4 | Beaux Arts Trio, 1984 | `4m8CWc8ZLyyYwAOzNlHtzk` | Carl Johan Fahlcrantz, *A Town at Sunset* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 132 | schubert-arpeggione-sonata | sonata | 3 | Mstislav Rostropovich / Benjamin Britten, 1968 | `6neCSxdb3EaVeJRlDmY23M` | Erasmus Engert, *Viennese Domestic Garden* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 133 | rossini-william-tell-overture | orchestral | 1 | Herbert von Karajan · Berliner Philharmoniker, 1971 | `7l3RoBOqR3g7mBZDbSDpGE` | François Diday, *Storm on Lake Geneva* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 134 | mendelssohn-hebrides-overture | orchestral | 1 | Claudio Abbado · London Symphony Orchestra, 1985 | `641f61jKbTKyIPudb6NyeM` | J. M. W. Turner, *Staffa, Fingal’s Cave* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 135 | mendelssohn-symphony-3 | symphony | 4 | Herbert von Karajan · Berliner Philharmoniker, 1971 | `2p0J7mp6cSmy9YXvALHWZR` | Louis Daguerre, *The Ruins of Holyrood Chapel* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 136 | schumann-symphony-1 | symphony | 4 | John Eliot Gardiner · Orchestre Révolutionnaire et Romantique, 1997 | `2cJNQTyyuHjW0bT82nmUr5` | Ludwig Richter, *Bridal Procession in a Spring Landscape* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 137 | schumann-cello-concerto | cello-concerto | 3 | Jacqueline du Pré / Daniel Barenboim · New Philharmonia Orchestra, 1968 | `328q1jo6FtjAEzT6Leyxdl` | Hans Gude, *By the Mill Pond* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 138 | chopin-piano-sonata-3 | piano-sonata | 4 | Martha Argerich, 1967 | `1C2rxi7B3RVbOSoEPBqW9a` | Eugène Delacroix, *George Sand’s Garden at Nohant* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 139 | liszt-les-preludes | orchestral | 1 | Herbert von Karajan · Berliner Philharmoniker, 1967 | `1QeIJD5zMkoSF1PloNt4fy` | Thomas Cole, *The Voyage of Life: Manhood* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 140 | brahms-symphony-3 | symphony | 4 | Otto Klemperer · Philharmonia Orchestra, 1957 | `1W21kPx7uF3ZbiYmHdqyoa` | Barend Cornelis Koekkoek, *Sunset on the Rhine* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 141 | brahms-piano-concerto-1 | piano-concerto | 3 | Clifford Curzon / George Szell · London Symphony Orchestra, 1962 | `6brgSGvfTw48Eg5E0MtA7z` | Andreas Achenbach, *Storm at the Coast* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 142 | brahms-double-concerto | concerto | 3 | David Oistrakh / Mstislav Rostropovich / George Szell · The Cleveland Orchestra, 1969 | `3b87E3xY6FMT9JTQB6rCVI` | Ferdinand Hodler, *Lake Thun with Symmetrical Reflection* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 143 | wagner-siegfried-idyll | orchestral | 1 | Georg Solti · Members of the Wiener Philharmoniker, 1965 | `6aVM7CJlfiajQm8dWNJmDB` | Robert Zünd, *Evening on Lake Lucerne* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 144 | bruckner-symphony-9 | symphony | 3 | Bernard Haitink · London Symphony Orchestra, 2013 | `5RTT3u47O2STV96RBGA8S5` | Jean-François Millet, *The Angelus* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 145 | tchaikovsky-romeo-and-juliet | orchestral | 1 | Semyon Bychkov · Czech Philharmonic, 2016 | `5fwJsuDni3pB8aVfTGZzNE` | Ford Madox Brown, *Romeo and Juliet* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 146 | mussorgsky-night-on-bald-mountain | orchestral | 1 | Fritz Reiner · Chicago Symphony Orchestra, 1959 | `59KBkW6AikOOlCzv2pZSwM` | Salvator Rosa, *Scenes of Witchcraft: Evening* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 147 | rachmaninoff-symphony-2 | symphony | 4 | Sir Simon Rattle · London Symphony Orchestra, 2019 | `1uh1I6EHvgQtcdct9irk6A` | Victor Borisov-Musatov, *The Emerald Necklace* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 148 | prokofiev-piano-concerto-3 | piano-concerto | 3 | Martha Argerich / Claudio Abbado · Berliner Philharmoniker, 1967 | `5xQ0xhJd18EflGs49V0P5q` | Paul Gauguin, *Breton Girls Dancing, Pont-Aven* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 149 | shostakovich-symphony-10 | symphony | 4 | Herbert von Karajan · Berliner Philharmoniker, 1981 | `7hZVPlCdPrM43os3eK40Sb` | Vasily Surikov, *Morning of the Streltsy Execution* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 150 | dvorak-symphony-7 | symphony | 4 | George Szell · The Cleveland Orchestra, 1960 | `1YvOecSRk79eZrbqw7A5WH` | Claude Monet, *Arrival of the Normandy Train, Gare Saint-Lazare* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 151 | dvorak-serenade-for-strings | orchestral | 5 | Sir Neville Marriner · Academy of St Martin in the Fields, 1970 | `6tmJfuzKADjHbMG3zxGSCK` | Pierre-Auguste Renoir, *Lovers* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 152 | smetana-string-quartet-1 | string-quartet | 4 | Pavel Haas Quartet, 2015 | `0dDcIutzbFgzAy5u58H9o8` | Antonín Hudeček, *Moonscape* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 153 | grieg-holberg-suite | orchestral | 5 | Sir Neville Marriner · Academy of St Martin in the Fields, 1970 | `6tmJfuzKADjHbMG3zxGSCK` | Wilhelm Marstrand, *Scene from Ludvig Holberg’s The Lying-in Room* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 154 | sibelius-finlandia | orchestral | 1 | Herbert von Karajan · Berliner Philharmoniker, 1984 | `4EHR0kyDonVmJw4FeHUsWi` | Pekka Halonen, *Washing on the Ice* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 155 | saint-saens-danse-macabre | orchestral | 1 | Charles Dutoit · Philharmonia Orchestra, 1980 | `7fiMXZiz7AAMuFWwUjki55` | Bernt Notke, *Danse Macabre* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 156 | bizet-carmen-suite-1 | orchestral | 5 | Charles Dutoit · Orchestre Symphonique de Montréal, 1986 | `3MHXMoe8tGfheDCfH6lUFn` | Édouard Manet, *Spanish Ballet* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 157 | debussy-string-quartet | string-quartet | 4 | Quatuor Ébène, 2008 | `2ZzP0NJ3dB7SNYT7zhO5pn` | Claude Monet, *Rouen Cathedral, West Façade, Sunlight* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 158 | ravel-daphnis-et-chloe-suite-2 | orchestral | 3 | Paul Paray · Detroit Symphony Orchestra, 1961 | `6vpFLMK4oDZ2wgB34RI7Jz` | Léon Bakst, *Set design for Daphnis et Chloé, Act I* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 159 | stravinsky-firebird-suite | orchestral | 6 | Robert Shaw · Atlanta Symphony Orchestra, 1978 | `2B98DCpQulWq5m8Vt9iGki` | Viktor Vasnetsov, *Ivan Tsarevich on the Grey Wolf* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 160 | elgar-serenade-for-strings | orchestral | 3 | Sir John Barbirolli · Sinfonia of London, 1962 | `2pS2J5uHihljcuevwgEhB0` | Arthur Hughes, *The Long Engagement* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 161 | respighi-pines-of-rome | orchestral | 4 | Herbert von Karajan · Berliner Philharmoniker, 1978 | `5RXVBRRT8aYNWjcUquKfmg` | Hendrik Voogd, *Italian Landscape with Umbrella Pines* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 162 | gershwin-rhapsody-in-blue | concerto | 1 | Leonard Bernstein · Columbia Symphony Orchestra, 1959 | `7y2gHGuQhJmesRiNO8d8fK` | James McNeill Whistler, *Nocturne in Black and Gold: The Falling Rocket* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 163 | barber-violin-concerto | violin-concerto | 3 | Gil Shaham / André Previn · London Symphony Orchestra, 1993 | `6DUUsUNtrwWvFwnMbrzfyN` | Ferdinand Hodler, *Lake Geneva Seen from Chexbres* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 164 | rodrigo-concierto-de-aranjuez | concerto | 3 | Narciso Yepes / Luis Antonio García Navarro · Philharmonia Orchestra, 1979 | `3q15IyNTqYwESGJMbsYP93` | Santiago Rusiñol, *The Old Faun* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 165 | shostakovich-symphony-7 | symphony | 4 | Vasily Petrenko · Royal Liverpool Philharmonic Orchestra, 2012 | `5C1sWm4XThvQleTYMHn8NP` | Fyodor Alekseyev, *View of the Peter and Paul Fortress and the Palace Embankment* | Takvim dışı (Kasım partisi) · duraklar ≈ |
+| 166 | shostakovich-symphony-8 | symphony | 5 | Kirill Petrenko · Berliner Philharmoniker, 2020 | `7JgviswtUhPRsuN5wzytlK` | Vasily Vereshchagin, *The Apotheosis of War* | Takvim dışı (Kasım partisi) · duraklar ≈ |
 
 ## Zamanlanacak duraklar
 
@@ -534,6 +600,9 @@ Written from the score, published analyses and the exact track lengths; none wer
 | Vivaldi – The Four Seasons: Autumn, Concerto in F major | all | – | – | – | Standage / Pinnock, Spotify `5tgFFNHTrkzpihDgYvpXEL`, tracks 7–9 (4:55 / 2:32 / 3:01) | every stop (≈) | New piece, never timed by ear: sections placed in the sonnet's order at the usual proportions of a performance, scaled to the track lengths (no score opened). Least certain: I ≈ 3:45 (the drunk falls asleep), III ≈ 1:35–2:35 (guns and dogs, the animal's death). Details in `research/vivaldi-four-seasons-autumn.md` |
 | Vivaldi – The Four Seasons: Summer, Concerto in G minor | all | – | – | – | Standage / Pinnock, Spotify `5tgFFNHTrkzpihDgYvpXEL`, tracks 4–6 (4:48 / 2:17 / 2:46) | every stop (≈) | New piece, never timed by ear: sections placed in the sonnet's order at the usual proportions of a performance, scaled to the track lengths (no score opened). Least certain: I ≈ 1:25 (turtledove), ≈ 2:15/2:30 (breezes, north wind). Details in `research/vivaldi-four-seasons-summer.md` |
 | Wagner – Siegfried Idyll | I Siegfried Idyll | – | 18:25 | – | Solti / Members of the Vienna Philharmonic, Spotify `6aVM7CJlfiajQm8dWNJmDB` (track 5) | 0:00, 1:30, 4:50, 7:00, 11:00, 12:00–13:00, 14:00, Last 2 minutes | New piece, weakest-sourced timings of the batch: only the lullaby and birdsong were anchored (Listeners' Club guide to Klemperer: 4:39, ≈ 10:32); the rest placed by the order of events in the score. Re-time all by ear |
+| Rodrigo – Concierto de Aranjuez | I Allegro con spirito | – | 6:08 | – | Yepes / García Navarro / Philharmonia 1979, Spotify `3q15IyNTqYwESGJMbsYP93` (track 1) | 0:00, 0:25, 0:45, 1:20–2:00, 2:00–3:40, 3:40, Last 30 seconds | Nov 2026: estimated from programme notes, the movement's structure and the track length, not heard. Least certain: the orchestral entry ≈ 0:25 and the return of the opening ≈ 3:40 (± 30 s) |
+| Rodrigo – Concierto de Aranjuez | II Adagio | – | 11:15 | – | same (track 2) | 0:00, 1:00, 2:15–3:30, 3:30–5:00, 5:00–8:30, 8:30–9:30, Last minute | Least certain: start of the guitar's solo statement and cadenza ≈ 5:00 (± 1 min) and the orchestral climax ≈ 8:30 (± 45 s) |
+| Rodrigo – Concierto de Aranjuez | III Allegro gentile | – | 5:15 | – | same (track 3) | 0:00, 0:10, 0:20–1:30, 1:30–2:30, 2:30, 3:00–4:30, Last 15 seconds | Least certain: the contrasting episode ≈ 1:30 and the theme's return ≈ 2:30 |
 
 ## Birleştirme günlüğü (Ekim 2026 partisi)
 

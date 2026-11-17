@@ -1955,3 +1955,36 @@
     thumb: { width: 300, height: 363, bytes: 11274 }
     full: { width: 3310, height: 4000, bytes: 2078261 }
     placeholder_color: "#5c5d5c"
+
+- id: rodrigo
+  match: Joaquín Rodrigo
+  sort_name: Rodrigo, Joaquín
+  born: 1901
+  died: 1999
+  era: modern
+  names:
+    en: { name: Joaquín Rodrigo, short: Rodrigo }
+    tr: { name: Joaquín Rodrigo, short: Rodrigo }
+  nationality: { en: Spanish, tr: İspanyol }
+  facts:
+    born: { en: "22 November 1901, Sagunto, Valencia", tr: "22 Kasım 1901, Sagunto, Valensiya" }
+    died: { en: "6 July 1999, Madrid", tr: "6 Temmuz 1999, Madrid" }
+    symphonies: { en: "None", tr: "Yok" }
+    best_known_for: { en: "*Concierto de Aranjuez*, *Fantasía para un gentilhombre*", tr: "*Concierto de Aranjuez*, *Fantasía para un gentilhombre*" }
+  bio:
+    en: |-
+      Rodrigo was born in 1901 in Sagunto, near Valencia. At the age of three he caught diphtheria and lost his sight almost completely. He began to study music at eight, the piano and the violin first, then harmony and composition in Valencia; all his life he wrote his music in Braille, and it was copied out for publication. In 1927 he went to Paris to study composition with Paul Dukas at the École Normale de Musique. There he met the pianist Victoria Kamhi, born in Istanbul, and they married in 1933. She gave up her own career to work at his side for the rest of her life.
+
+      During the Spanish Civil War the couple lived abroad, in France and Germany. In Paris, early in 1939, Rodrigo wrote the *Concierto de Aranjuez* for the guitarist Regino Sainz de la Maza, although he was a pianist and never played the guitar himself. He returned to Spain that year, and the concerto's premiere in Barcelona in November 1940 made him famous almost overnight. From 1947 he taught the history of music at the University of Madrid, in a chair named after Manuel de Falla; among his students was the Turkish composer and pianist Yüksel Koptagel.
+
+      The success of the concerto brought requests from famous soloists: *Fantasía para un gentilhombre* (1954) for Andrés Segovia, and concertos for the harpist Nicanor Zabaleta, the flautist James Galway, the cellist Julian Lloyd Webber and the guitar family of the Romeros. His music, melodious and full of the dances and colours of old Spain, stayed close to tradition, and the fame of the *Concierto de Aranjuez* overshadowed almost everything else he wrote. In 1991 King Juan Carlos I made him Marquess of the Gardens of Aranjuez. Victoria died in 1997; Rodrigo died at home in Madrid on 6 July 1999, aged 97, and they are buried together in Aranjuez.
+    tr: |-
+      Rodrigo 1901'de Valensiya yakınlarındaki Sagunto'da doğdu. Üç yaşında difteriye yakalandı ve görme yetisini neredeyse tamamen yitirdi. Müzik eğitimine sekiz yaşında, önce piyano ve kemanla başladı; ardından Valensiya'da armoni ve kompozisyon okudu. Ömrü boyunca eserlerini Braille alfabesiyle yazdı; bunlar yayımlanmak üzere notaya geçirildi. 1927'de Paris'e gitti ve École Normale de Musique'te Paul Dukas'tan kompozisyon dersi aldı. Orada İstanbul doğumlu piyanist Victoria Kamhi ile tanıştı; 1933'te evlendiler. Kamhi kendi kariyerini bırakarak hayatının sonuna dek onun yanında çalıştı.
+
+      İspanya İç Savaşı sırasında çift yurt dışında, Fransa'da ve Almanya'da yaşadı. Rodrigo *Concierto de Aranjuez*'i 1939'un başında Paris'te gitarist Regino Sainz de la Maza için yazdı; oysa kendisi piyanistti ve hiç gitar çalmadı. Aynı yıl İspanya'ya döndü; konçertonun Kasım 1940'ta Barselona'daki ilk seslendirilişi onu neredeyse bir gecede ünlü yaptı. 1947'den itibaren Madrid Üniversitesi'nde, Manuel de Falla'nın adını taşıyan kürsüde müzik tarihi okuttu; öğrencileri arasında Türk besteci ve piyanist Yüksel Koptagel de vardı.
+
+      Konçertonun başarısı ünlü solistlerden siparişler getirdi: Andrés Segovia için *Fantasía para un gentilhombre* (1954), arpçı Nicanor Zabaleta, flütçü James Galway, çellist Julian Lloyd Webber ve gitarcı Romero ailesi için konçertolar. Melodik, eski İspanya'nın danslarıyla ve renkleriyle dolu müziği geleneğe yakın kaldı; *Concierto de Aranjuez*'in ünü yazdığı hemen her şeyi gölgede bıraktı. 1991'de Kral I. Juan Carlos ona "Aranjuez Bahçeleri Markisi" unvanını verdi. Victoria 1997'de öldü; Rodrigo 6 Temmuz 1999'da, 97 yaşında Madrid'deki evinde öldü. İkisi Aranjuez'de yan yana gömülüdür.
+  # No portrait: Rodrigo died in 1999, so the brief requires a CC-licensed photo with credit, or null.
+  # Commons has no freely licensed photograph of him (only monuments, busts, plaques and his grave,
+  # whose sculptures are themselves recent works). See content/research/composers-sources.md.
+  portrait: null

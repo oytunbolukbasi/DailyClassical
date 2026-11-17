@@ -85,6 +85,7 @@ Tanım: bir iki cümle; açılır pencere için yazıldı.
 | Posthorn | Posta borusu | Posta arabalarında çalınan küçük, pistonsuz boru | Pistonsuz, küçük bir bakır boru; eskiden arabacılar posta arabasının gelişini duyurmak için çalardı. Yalnızca birkaç nota çalabildiği için sade, nostaljik bir sesi vardır. |
 | Programme music | Programlı müzik | Bir öykü anlatan ya da bir sahne betimleyen çalgı müziği | Bestecinin anlattığı bir öyküyü aktaran ya da bir sahneyi betimleyen çalgı müziği. |
 | Ranz des vaches | Ranz des vaches | İsviçreli çobanların inekleri çağırma ezgisi | İsviçreli çobanların ineklerini çağırmak için söylediği ya da alp borusuyla çaldığı geleneksel ezgi. Besteciler onu Alplerin ve kır sükûnetinin simgesi olarak kullandı; Rossini de *Wilhelm Tell* uvertüründe böyle yaptı. |
+| Rasgueado | Rasgueado | Gitar tellerine parmaklarla vurarak akor çalmak | Sağ elin parmaklarının tellere hızlı, yuvarlanan vuruşlarla çarptığı bir İspanyol gitar tekniği; flamenkonun parlak, ritmik akorlarını verir. |
 | Recapitulation | Yeniden serim | Sonat formunun sonunda açılış temalarının dönüşü | Sonat formunun son evresi; açılış temaları geri döner. |
 | Recitative | Resitatif | Konuşmanın serbest ritmini izleyen müzik | Konuşmanın ritmini taklit eden, serbest ve ölçüsüz müzik. |
 | Rhapsody | Rapsodi | Zıt bölümlerden kurulu, serbest, tek bölümlük eser | Belirli bir formu izlemek yerine bir havadan ve tempodan ötekine serbestçe geçen, çoğu zaman doğaçlama gibi duyulan tek bölümlük eser. |
