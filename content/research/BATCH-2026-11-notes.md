@@ -81,3 +81,11 @@ Temporary, like the brief. One entry per agent report: what to check or decide a
 - mozart-clarinet-quintet: Sabine Meyer / Wiener Streichsextett 1988. Painting Vigée Le Brun, *Self-portrait with her Daughter Julie* (Louvre; gallery photo, check edges).
 - mozart-piano-concerto-24: Curzon / Kertész · LSO 1967. Painting Goya, *The Snowstorm (Winter)* (Prado, only 1920 px). **Goya now picked twice in this batch** (also A's Op. 135) on top of the existing one.
 - mozart-symphony-38: Mackerras · SCO (same album as Symphony 40). Painting Lepié, *The Old Town Square in Prague* (1864; place link only). `year` 2007 here vs 2008 for 40 on the same set: settle the convention. Check whether Mackerras repeats the second half of II (≈ 7:50 stop).
+
+## Group D (done)
+
+- mozart-violin-concerto-5: Mutter / Karajan · BPO 1978. Painting Liotard, *Marie-Adélaïde of France in Turkish Dress* (Uffizi). New term "Alla turca". Alla turca episode described as European imitation of the mehter (col legno "drum"), consistent with mozart-piano-sonata-11.
+- schubert-piano-trio-2: Beaux Arts Trio 1984. Painting Fahlcrantz, *A Town at Sunset* (CC BY-SA gallery photo of a PD painting).
+- schubert-arpeggione-sonata: Rostropovich / Britten 1968. Painting Erasmus Engert, *Viennese Domestic Garden* (weak link; two alternatives).
+- rossini-william-tell-overture: Karajan · BPO 1971 (venue null). Painting Diday, *Storm on Lake Geneva* (Commons file is a TIFF: convert for the pipeline). New composer Rossini. New terms "Ranz des vaches", "Galop".
+- mendelssohn-hebrides-overture: Abbado · LSO 1985. Painting Turner, *Staffa, Fingal's Cave* (Yale): **Turner third/fourth use with Siegfried Idyll**; this is the stronger Turner match, so swap the Idyll to Zünd.
