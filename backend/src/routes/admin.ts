@@ -350,7 +350,7 @@ const tagCell = (v: string | null) => html`<td>${v ?? html`<span class="m">—</
 
 /** GET form for the link section: period and one menu per UTM tag; a change reloads at #links. */
 function linkFilterForm(f: LinkFilter, options: LinkOption[]) {
-  const names: Record<LinkTag, string> = { source: "Kaynak", medium: "Ortam", campaign: "Kampanya", content: "İçerik" };
+  const names: Record<LinkTag, string> = { source: "utm_source", medium: "utm_medium", campaign: "utm_campaign", content: "utm_content" };
   const menu = (tag: LinkTag) => {
     const current = f[tag];
     const list = options.filter((o) => o.tag === tag);
@@ -517,7 +517,7 @@ async function dashboardView(email: string, linkFilter: LinkFilter) {
       ${linkGroups.length === 0
         ? html`<p class="m small">${filtered || linkFilter.period !== "all" ? "Bu seçimde tıklama yok." : "Henüz tıklama yok."}</p>`
         : html`<div class="scroll" style="margin-top:12px"><table>
-        <thead><tr><th>Kaynak</th><th>Ortam</th><th>Kampanya</th><th>İçerik</th><th class="n">Tıklama</th><th class="n">Kişi</th><th class="n">iOS</th><th>Son</th></tr></thead>
+        <thead><tr><th>utm_source</th><th>utm_medium</th><th>utm_campaign</th><th>utm_content</th><th class="n">Tıklama</th><th class="n">Kişi</th><th class="n">iOS</th><th>Son</th></tr></thead>
         <tbody>${linkGroups.map((g) => html`<tr>
           ${tagCell(g.source)}${tagCell(g.medium)}${tagCell(g.campaign)}${tagCell(g.content)}
           ${num(g.clicks)}${num(g.visitors)}${num(g.ios)}
