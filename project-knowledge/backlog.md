@@ -11,6 +11,11 @@ Son güncelleme: 18 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 
 - **1.2.1 (8) yayında (18 Kasım 2026).** Apple Ads atıflaması (AdServices token RevenueCat'e). **[Claude]** İlk Apple Ads kurulumlarında RevenueCat'te kampanya/anahtar kelime görünüyor mu, kontrol et.
 
+## 1.3 (9): kodda, cihaz testinde (18 Kasım)
+
+- İçinde: besteci doğum günleri (hediye dahil), paylaşım (koda + durağa uzun basma, müze etiketi kartı, /app OG), eser başına günlük bildirim, Op. 131 için 7 bölümlü seçici, Ayarlar › Test › Bildirim ve doğum günü testi (TestFlight'ta Hakkında › Sürüm'e 7 dokunuş). Sunucu/içerik yayında (afd4d0e; migration 0019). 18 Kasım akşamı Oytun'un iPhone'una geliştirici imzalı Release build kuruldu (`xcodebuild -configuration Release -destination id=<udid> -allowProvisioningUpdates`, `xcrun devicectl device install app`). Oytun onaylayınca: archive + TestFlight.
+- Açık: paylaşım kartındaki durak kuralı tuvaldeki ≈ 4:30'dan farklı durak seçebiliyor (EN/TR farklı uzunluk); gerekirse `share_stop` içerik alanı. OG görseli şimdilik widget JPEG'i (1200×630 değil). Paylaşım için analitik olayı yok.
+
 ## Sonraki sürüm planı (1.2.2 / 1.3)
 
 - **Besteci doğum günleri (Oytun'un isteği, 18 Kasım):** bir bestecinin doğum gününde uygulama bunu kutlasın. Önce tasarım (Claude Design'da, 1:1), sonra kod. Düşünülecekler:
