@@ -14,11 +14,16 @@ enum BirthdayCopy {
         String(format: L10n.string(String.LocalizationValue(key), code: code), locale: Locale(identifier: code), arguments: args)
     }
 
-    /// Today's line: "Mozart’s birthday · 271 years", or both names when two composers share the day.
+    /// "Brahms and Tchaikovsky" / "Brahms ve Çaykovski".
+    static func names(_ list: [Composer], code: String) -> String {
+        list.map(\.shortName).formatted(.list(type: .and).locale(Locale(identifier: code)))
+    }
+
+    /// Today's line: "Mozart’s birthday · 271 years", or the names when composers share the day.
     static func todayLine(_ list: [Composer], code: String) -> String? {
         guard let first = list.first else { return nil }
         if list.count > 1 {
-            return format("birthday.line.two %@ %@", code: code, first.shortName, list[1].shortName)
+            return format("birthday.line.many %@", code: code, names(list, code: code))
         }
         return format("birthday.line %@ %lld", code: code, possessive(first, code: code), Birthdays.years(first) ?? 0)
     }
@@ -111,6 +116,8 @@ struct BirthdaySheet: View {
                             RichTextView(source: note)
                                 .padding(.top, 20)
                         }
+                        SignatureView(composer: composer)
+                            .padding(.top, 22)
                         if !entitlements.isPremium, !pieces.isEmpty {
                             Text(verbatim: BirthdayCopy.format("birthday.gift %@", code: code, composer.shortName))
                                 .font(Typography.body15.weight(.medium))
@@ -237,7 +244,7 @@ struct BirthdayChooserSheet: View {
                 }
                 .padding(.top, 12)
                 if !entitlements.isPremium, list.count > 1 {
-                    Text(verbatim: BirthdayCopy.format("birthday.gift.two %@ %@", code: code, list[0].shortName, list[1].shortName))
+                    Text(verbatim: BirthdayCopy.format("birthday.gift.many %@", code: code, BirthdayCopy.names(list, code: code)))
                         .font(Typography.body15.weight(.medium))
                         .foregroundStyle(Palette.accent)
                         .padding(.top, 18)
@@ -256,4 +263,42 @@ struct BirthdayChooserSheet: View {
     }
 
     private struct ChosenComposer: Identifiable { let id: String }
+}
+
+/// The composer's autograph signature, written on from left to right when the sheet opens (A2;
+/// Reduce Motion shows it at once). Public-domain SVGs from Wikimedia Commons in
+/// Assets.xcassets/Signatures (`signature-<composer id>`, sources in content/research/
+/// composers-sources.md › Signatures); composers without one show nothing.
+struct SignatureView: View {
+    let composer: Composer
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @State private var progress: CGFloat = 0
+
+    private var name: String { "signature-\(composer.id)" }
+
+    var body: some View {
+        if UIImage(named: name) != nil {
+            Image(name)
+                .renderingMode(.template)
+                .resizable()
+                .scaledToFit()
+                .frame(maxWidth: 260, maxHeight: 64, alignment: .leading)
+                .foregroundStyle(Palette.ink)
+                .mask(alignment: .leading) {
+                    GeometryReader { g in
+                        Rectangle().frame(width: g.size.width * progress)
+                    }
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .accessibilityElement()
+                .accessibilityLabel(Text("birthday.signature.accessibilityLabel \(composer.shortName)"))
+                .onAppear {
+                    if reduceMotion {
+                        progress = 1
+                    } else {
+                        withAnimation(.easeInOut(duration: 2.2).delay(0.5)) { progress = 1 }
+                    }
+                }
+        }
+    }
 }

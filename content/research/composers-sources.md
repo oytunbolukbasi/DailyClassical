@@ -487,3 +487,16 @@ Rejected: File:Sergei_Rachmaninoff_LOC_33968.jpg (2500 × 3824, PD-Bain) is date
 - **rossini** 02-29, null. Wikipedia; Britannica (Gioachino-Rossini); Wikidata Q9726. Stored as 02-29; the app celebrates on 28 February in non-leap years.
 - **stravinsky** 06-17, null (Gregorian; 5 June O.S.). Wikipedia; Britannica ("June 5 [June 17, New Style], 1882, Oranienbaum"); Wikidata Q7314. The 1911 Britannica's "June 18" is a wrong conversion. Note: Tcherepnin withdrew, Diaghilev then sought Lyadov and considered Glazunov and Sokolov before Stravinsky (Wikipedia, "The Firebird", after Taruskin 1996).
 - **rodrigo** 11-22, null. Wikipedia; Britannica (Joaquin-Rodrigo); Fundación Victoria y Joaquín Rodrigo, joaquin-rodrigo.com ("complete biography": born on St Cecilia's Day); Wikidata Q151084.
+
+## Signatures (added 2026-11-18)
+
+Autograph signatures shown on the birthday sheet (ios Assets.xcassets/Signatures). Signatures are public domain by age; the vector files on Wikimedia Commons:
+
+- mozart: File:Wolfgang Amadeus Mozart Signature.svg (public domain)
+- beethoven: File:Beethoven Signature.svg (public domain)
+- bach: File:Johann Sebastian Bach signature.svg (public domain)
+- tchaikovsky: File:Tchaikovsky Signature.svg (public domain)
+- chopin: File:Chopin signature (cleaner).svg (public domain)
+- dvorak: File:Antonin dvorak signature.svg (CC0)
+- vivaldi: File:Antonio Vivaldi signature.svg (public domain)
+- Not used: File:Brahms Signature.svg is CC BY-SA 4.0 (the vector trace); would need a credit line.

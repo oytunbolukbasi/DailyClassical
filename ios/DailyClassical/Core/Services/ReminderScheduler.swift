@@ -120,6 +120,11 @@ enum ReminderScheduler {
             } else if !premium {
                 body.append(f("birthday.notification.giftOnly %@", [c.shortName]))
             }
+            // Two or three composers share the day: name the others too.
+            let others = ordered.dropFirst().map(\.shortName)
+            if !others.isEmpty {
+                body.append(f("birthday.notification.also %@", [others.formatted(.list(type: .and).locale(Locale(identifier: language)))]))
+            }
             content.body = body.joined(separator: " ")
             if let attachment = portraitAttachment(c) { content.attachments = [attachment] }
         } else if let piece {

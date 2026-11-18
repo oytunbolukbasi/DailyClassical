@@ -8,7 +8,7 @@ import Foundation
 /// 29 February is celebrated on 28 February outside leap years. Two composers can share a day
 /// (Brahms and Tchaikovsky, 7 May): the composer of today's piece comes first, otherwise the elder.
 nonisolated enum Birthdays {
-    /// Settings › Test: pretend today is this composer's birthday (composer id), or nil.
+    /// Settings › Test: pretend today is these composers' birthday (comma-separated ids), or nil.
     static let simulateKey = "debugBirthdayComposer"
     /// The last day a free reader opened a gift piece ("YYYY-MM-DD|composerId"), for the next day's
     /// Library line; and the day that line was dismissed.
@@ -32,8 +32,9 @@ nonisolated enum Birthdays {
                            simulated: String? = Birthdays.simulatedComposerID) -> [Composer] {
         let calendar = Calendar.current
         let list: [Composer]
-        if let simulated, calendar.isDateInToday(date) {
-            list = composers.filter { $0.id == simulated }
+        if let simulated, !simulated.isEmpty, calendar.isDateInToday(date) {
+            let ids = Set(simulated.split(separator: ",").map(String.init))
+            list = composers.filter { ids.contains($0.id) }
         } else {
             let c = calendar.dateComponents([.year, .month, .day], from: date)
             guard let year = c.year, let month = c.month, let day = c.day else { return [] }

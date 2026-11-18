@@ -1523,22 +1523,23 @@
         }
       }
     },
-    "birthday.gift.two %@ %@": {
+    "birthday.gift.many %@": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "A birthday gift: all %1$@ and %2$@ pieces are open today."
+            "value": "A birthday gift: all %@ pieces are open today."
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Doğum günü armağanı: bugün bütün %1$@ ve %2$@ eserleri açık."
+            "value": "Doğum günü armağanı: bugün bütün %@ eserleri açık."
           }
         }
-      }
+      },
+      "comment": "A list of short names."
     },
     "birthday.library.ended %@": {
       "extractionState": "manual",
@@ -1626,23 +1627,41 @@
       },
       "comment": "Today, under the date chip. %1$@ is the possessive short name (Mozart’s / Mozart’ın)."
     },
-    "birthday.line.two %@ %@": {
+    "birthday.line.many %@": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ and %2$@ · birthdays"
+            "value": "%@ · birthdays"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$@ ve %2$@ · doğum günleri"
+            "value": "%@ · doğum günleri"
           }
         }
       },
-      "comment": "Today, two composers share the day (short names)."
+      "comment": "Today, two or three composers share the day: a list of short names (“Brahms and Tchaikovsky”)."
+    },
+    "birthday.notification.also %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Also born on this day: %@."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugün ayrıca %@ doğdu."
+          }
+        }
+      },
+      "comment": "A list of short names."
     },
     "birthday.notification.giftOnly %@": {
       "extractionState": "manual",
@@ -1814,6 +1833,24 @@
         }
       },
       "comment": "%1$@ short name (EN), %2$@ possessive (TR: Mozart’ın)."
+    },
+    "birthday.signature.accessibilityLabel %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@’s signature"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ imzası"
+          }
+        }
+      },
+      "comment": "%@: EN short name, TR genitive is not needed (“Mozart imzası”)."
     },
     "birthday.today": {
       "extractionState": "manual",

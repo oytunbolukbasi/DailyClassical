@@ -4,11 +4,6 @@
     "tr": "%1$@ doğum günü · %2$lld yıl",
     "comment": "Today, under the date chip. %1$@ is the possessive short name (Mozart’s / Mozart’ın)."
   },
-  "birthday.line.two %@ %@": {
-    "en": "%1$@ and %2$@ · birthdays",
-    "tr": "%1$@ ve %2$@ · doğum günleri",
-    "comment": "Today, two composers share the day (short names)."
-  },
   "birthday.overline %lld": {
     "en": "Born on this day · %lld years ago",
     "tr": "Bugün doğdu · %lld yıl önce"
@@ -16,10 +11,6 @@
   "birthday.overline.baptism %lld": {
     "en": "Baptised on this day · %lld years ago",
     "tr": "Bugün vaftiz edildi · %lld yıl önce"
-  },
-  "birthday.gift.two %@ %@": {
-    "en": "A birthday gift: all %1$@ and %2$@ pieces are open today.",
-    "tr": "Doğum günü armağanı: bugün bütün %1$@ ve %2$@ eserleri açık."
   },
   "birthday.pieces %@ %@": {
     "en": "Pieces by %1$@",
@@ -94,5 +85,25 @@
   "birthday.library.line %@ %@": {
     "en": "%1$@ birthday: all %2$@ pieces are open today.",
     "tr": "%1$@ doğum günü: bugün bütün %2$@ eserleri açık."
+  },
+  "birthday.line.many %@": {
+    "en": "%@ · birthdays",
+    "tr": "%@ · doğum günleri",
+    "comment": "Today, two or three composers share the day: a list of short names (“Brahms and Tchaikovsky”)."
+  },
+  "birthday.gift.many %@": {
+    "en": "A birthday gift: all %@ pieces are open today.",
+    "tr": "Doğum günü armağanı: bugün bütün %@ eserleri açık.",
+    "comment": "A list of short names."
+  },
+  "birthday.notification.also %@": {
+    "en": "Also born on this day: %@.",
+    "tr": "Bugün ayrıca %@ doğdu.",
+    "comment": "A list of short names."
+  },
+  "birthday.signature.accessibilityLabel %@": {
+    "en": "%@’s signature",
+    "tr": "%@ imzası",
+    "comment": "%@: EN short name, TR genitive is not needed (“Mozart imzası”)."
   }
 }

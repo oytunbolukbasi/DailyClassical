@@ -14,6 +14,25 @@ struct TestNotificationsScreen: View {
     @State private var sent: String?
     @State private var pending: Int?
 
+    /// Ready-made cases, including real shared days.
+    private let presets: [(String, [String])] = [
+        ("Mozart (tek besteci)", ["mozart"]),
+        ("Beethoven (vaftiz tarihi)", ["beethoven"]),
+        ("Brahms + Çaykovski (7 Mayıs, gerçek)", ["brahms", "tchaikovsky"]),
+        ("Bach + Musorgski (21 Mart, gerçek)", ["bach", "mussorgsky"]),
+        ("Üç besteci: Mozart + Brahms + Çaykovski", ["mozart", "brahms", "tchaikovsky"]),
+    ]
+
+    private var selected: [String] {
+        (content.simulatedBirthday ?? "").split(separator: ",").map(String.init)
+    }
+
+    private func toggle(_ id: String) {
+        var list = selected
+        if let i = list.firstIndex(of: id) { list.remove(at: i) } else if list.count < 3 { list.append(id) }
+        simulate(list)
+    }
+
     private var birthdayComposers: [Composer] {
         content.composers.values.filter { $0.birthday != nil }.sorted { ($0.birthday ?? "") < ($1.birthday ?? "") }
     }
@@ -40,32 +59,39 @@ struct TestNotificationsScreen: View {
             }
 
             Section {
-                Picker(selection: Binding(
-                    get: { content.simulatedBirthday ?? "" },
-                    set: { simulate($0.isEmpty ? nil : $0) }
-                )) {
-                    Text(verbatim: "Kapalı").tag("")
-                    ForEach(birthdayComposers) { c in
-                        Text(verbatim: "\(c.shortName) · \(c.birthday ?? "")\(c.birthdayBasis.map { " (\($0))" } ?? "")").tag(c.id)
-                    }
-                } label: {
-                    Text(verbatim: "Bugün kimin doğum günü").foregroundStyle(Palette.ink)
+                ForEach(presets, id: \.0) { preset in
+                    button(preset.0) { simulate(preset.1) }
                 }
-                .tint(Palette.accent)
-                if let id = content.simulatedBirthday, let c = content.composers[id] {
-                    button("Doğum günü bildirimi (ücretsiz metni)") { await sendBirthday(c, premium: false) }
-                    button("Doğum günü bildirimi (Premium metni)") { await sendBirthday(c, premium: true) }
+                if !selected.isEmpty {
+                    button("Simülasyonu kapat") { simulate([]) }
+                    let list = selected.compactMap { content.composers[$0] }
+                    button("Doğum günü bildirimi (ücretsiz metni)") { await sendBirthday(list, premium: false) }
+                    button("Doğum günü bildirimi (Premium metni)") { await sendBirthday(list, premium: true) }
                     button("Ertesi gün Kitaplık satırını göster") {
                         let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: .now) ?? .now
-                        UserDefaults.standard.set("\(APIClient.day(yesterday))|\(c.id)", forKey: Birthdays.giftOpenedKey)
+                        UserDefaults.standard.set("\(APIClient.day(yesterday))|\(selected[0])", forKey: Birthdays.giftOpenedKey)
                         UserDefaults.standard.removeObject(forKey: Birthdays.giftLineDismissedKey)
-                        simulate(nil)  // the gift line shows only once the birthday is over
+                        simulate([])  // the gift line shows only once the birthday is over
                         sent = "Kitaplık'ta ertesi gün satırı (ücretsiz kullanıcı görür)."
                     }
                 }
-            } header: { header("Doğum günü") } footer: {
-                footer("Seçilen bestecinin doğum günü bugünmüş gibi davranır: Bugün satırı, doğum günü sayfası, besteci sayfası, Kitaplık'ta hediye ve widget. Hediye yalnızca ücretsiz kullanıcıda görünür; Debug build'lerde Premium açıktır (Ayarlar › Test'te değil, `debugPremium`).")
+            } header: { header("Doğum günü · \(selected.isEmpty ? "kapalı" : selected.joined(separator: ", "))") } footer: {
+                footer("Seçilen bestecilerin doğum günü bugünmüş gibi davranır: Bugün satırı, doğum günü sayfası (iki ya da üç bestecide seçim sayfası), besteci sayfası, Kitaplık'ta hediye ve widget. En fazla üç besteci; aşağıdan tek tek de seçilir. Hediye yalnızca ücretsiz kullanıcıda görünür.")
             }
+
+            Section {
+                ForEach(birthdayComposers) { c in
+                    Button { toggle(c.id) } label: {
+                        HStack {
+                            Text(verbatim: "\(c.shortName) · \(c.birthday ?? "")\(c.birthdayBasis.map { " (\($0))" } ?? "")")
+                                .foregroundStyle(Palette.ink)
+                            Spacer()
+                            if selected.contains(c.id) { Icon("checkmark", size: 16).foregroundStyle(Palette.accent) }
+                        }
+                    }
+                    .settingsRow()
+                }
+            } header: { header("Besteci seç (en fazla 3)") }
 
             Section {
                 TextField(text: $query) { Text(verbatim: "Eser ara") }
@@ -106,18 +132,18 @@ struct TestNotificationsScreen: View {
         sent = "5 sn içinde: \(piece.composer.shortName)"
     }
 
-    private func sendBirthday(_ c: Composer, premium: Bool) async {
+    private func sendBirthday(_ list: [Composer], premium: Bool) async {
         let today = content.library.value?.first { $0.id == content.todayID }
-        let note = await ReminderScheduler.notification(piece: today.map(ReminderScheduler.upcomingPiece), birthdays: [c],
+        let note = await ReminderScheduler.notification(piece: today.map(ReminderScheduler.upcomingPiece), birthdays: list,
                                                         language: language.code, premium: premium)
         await ReminderScheduler.sendTest(note)
-        sent = "5 sn içinde: \(c.shortName) doğum günü"
+        sent = "5 sn içinde: doğum günü bildirimi"
     }
 
-    private func simulate(_ id: String?) {
-        content.simulatedBirthday = id
+    private func simulate(_ ids: [String]) {
+        content.simulatedBirthday = ids.isEmpty ? nil : ids.joined(separator: ",")
         let group = UserDefaults(suiteName: LanguageSettings.appGroup)
-        if let id, let c = content.composers[id], let years = Birthdays.years(c) {
+        if let id = ids.first, let c = content.composers[id], let years = Birthdays.years(c) {
             group?.set("\(c.shortName)|\(years)", forKey: "debugBirthday")
         } else {
             group?.removeObject(forKey: "debugBirthday")
