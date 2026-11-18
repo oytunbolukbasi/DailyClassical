@@ -12,15 +12,11 @@ enum DailyReminder {
 
     static func snap(_ minute: Int) -> Int { (minute / minuteStep) * minuteStep }
 
-    /// Schedules the daily notification with text in the app's language.
-    /// Returns false if notifications are not allowed.
+    /// Schedules the daily notifications in the app's language (ReminderScheduler: each day's
+    /// piece by name). Returns false if notifications are not allowed.
     @discardableResult
     static func schedule(hour: Int, minute: Int, languageCode: String) async -> Bool {
-        await ReminderScheduler.schedule(
-            at: DateComponents(hour: hour, minute: minute),
-            title: L10n.string("reminder.notification.title", code: languageCode),
-            body: L10n.string("reminder.notification.body", code: languageCode)
-        )
+        await ReminderScheduler.schedule(at: DateComponents(hour: hour, minute: minute), language: languageCode)
     }
 }
 

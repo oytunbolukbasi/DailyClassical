@@ -66,6 +66,14 @@ nonisolated struct APIClient: Sendable {
         return r.days.elements
     }
 
+    /// Upcoming days from `day` (GET /v1/widget): each day's piece with its hook and painting JPEG.
+    /// Used by the daily reminder (Core/Services/ReminderScheduler.swift).
+    func upcoming(from day: String, days: Int, language: String) async throws -> [UpcomingDay] {
+        struct R: Decodable { let days: LossyList<UpcomingDay> }
+        let r: R = try await get("v1/widget", query: ["date": day, "days": String(days)], language: language, cacheKey: "upcoming")
+        return r.days.elements
+    }
+
     func piece(id: String, language: String) async throws -> Piece {
         try await get("v1/pieces/\(id)", language: language, cacheKey: "piece-\(id)")
     }

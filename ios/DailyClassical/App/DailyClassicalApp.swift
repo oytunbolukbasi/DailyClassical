@@ -25,7 +25,11 @@ struct DailyClassicalApp: App {
                 .environment(\.locale, language.locale)
                 .preferredColorScheme(appearance.theme.colorScheme)
                 .tint(Palette.accent)
-                .task(id: language.code) { await content.reload(language: language.code) }
+                .task(id: language.code) {
+                    await content.reload(language: language.code)
+                    // Reminders name each day's piece in the app's language.
+                    await ReminderScheduler.refresh(language: language.code)
+                }
                 .task {
                     // The widget fetches its own feed only when this build reads the API (debug builds
                     // default to bundled fixtures), so app and widget show the same plan.
@@ -40,7 +44,12 @@ struct DailyClassicalApp: App {
                 // Purchases show up against the signed-in account in RevenueCat.
                 .task(id: session.userID) { await entitlements.identify(userID: session.userID) }
                 // Anonymous usage counts for the admin page (Core/Services/Analytics.swift).
-                .onChange(of: scenePhase, initial: true) { if scenePhase == .active { Analytics.shared.appBecameActive() } }
+                .onChange(of: scenePhase, initial: true) {
+                    guard scenePhase == .active else { return }
+                    Analytics.shared.appBecameActive()
+                    // Keep the next days' reminders in step with the schedule (at most hourly).
+                    Task { await ReminderScheduler.refresh(language: language.code) }
+                }
                 // Crash and hang reports from MetricKit, for the admin page (Core/Services/Diagnostics.swift).
                 .task { Diagnostics.shared.start() }
         }

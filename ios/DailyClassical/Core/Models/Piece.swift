@@ -265,3 +265,24 @@ nonisolated struct Composer: Codable, Hashable, Identifiable, Sendable {
 // Years are labels, not quantities: never "1,893".
 extension PieceSummary { var yearText: String { String(year) } }
 extension Piece { var yearText: String { String(year) } }
+
+/// One day of GET /v1/widget: the piece scheduled for `day` ("YYYY-MM-DD").
+nonisolated struct UpcomingDay: Codable, Hashable, Sendable {
+    nonisolated struct Piece: Codable, Hashable, Sendable {
+        let id: String
+        let composer: ComposerRef.Short
+        let title: String
+        let hook: String
+        let widgetImageUrl: URL?
+    }
+    let day: String
+    let piece: Piece
+}
+
+extension ComposerRef {
+    /// The composer as /v1/widget sends it (no id).
+    nonisolated struct Short: Codable, Hashable, Sendable {
+        let name: String
+        let shortName: String
+    }
+}

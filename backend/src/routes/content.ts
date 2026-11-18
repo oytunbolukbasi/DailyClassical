@@ -49,11 +49,11 @@ content.get("/schedule", async (c) => {
 });
 
 /**
- * Home Screen widget feed: today (`date`) and the next `days - 1` days (default 4, at most 7), so the
+ * Home Screen widget feed: today (`date`) and the next `days - 1` days (default 4, at most 31; the app's daily reminder asks for two weeks), so the
  * widget can show pieces published after the app shipped and roll over at midnight on its own.
  */
 content.get("/widget", async (c) => {
-  const count = Math.min(7, Math.max(1, Number(c.req.query("days")) || 4));
+  const count = Math.min(31, Math.max(1, Number(c.req.query("days")) || 4));
   const locale = requestLocale(c), d = clientDay(c.req.query("date"));
   return c.json({ days: await memo(`widget:${d}:${count}:${locale}`, TTL, () => widgetDays(db, locale, d, count)) });
 });
