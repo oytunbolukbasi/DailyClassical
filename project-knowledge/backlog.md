@@ -1,6 +1,6 @@
 # Yapılacaklar
 
-Son güncelleme: 11 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler. İçerik durumu ve zamanlama `content_status.md`'de, proje bilgisi `project_information.md`'de.
+Son güncelleme: 18 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]** karar ya da hesap erişimi gereken işler. İçerik durumu ve zamanlama `content_status.md`'de, proje bilgisi `project_information.md`'de.
 
 ## Yayın
 
@@ -8,6 +8,17 @@ Son güncelleme: 11 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 - **Red geçmişi:** 21 Ekim 2.1(b) ürünler gönderilmemiş + 3.1.2(c) açıklamada EULA bağlantısı yok; 23 Ekim 2.3.2 iki üründe aynı tanıtım görseli (görseller silindi); 27 Ekim 3.1.2(c) deneme fiyattan belirgin. Kural: gönderimdeki öğe kilitlidir; düzenlemek için gönderimden çıkar, düzelt, hepsini **Add for Review** ile aynı taslağa ekleyip birlikte gönder. Ürün silinmez (Product ID bir daha kullanılamaz). Ödeme ekranında deneme hiçbir zaman fiyattan büyük yazılmaz, butonda "ücretsiz" geçmez.
 - **1.0.0 (3) içeriği:** 3.1.2(c) ödeme ekranı düzeltmesi; App Store değerlendirme kartı (`Features/Rating/RatePrompt.swift`, tasarım B, yıldızlar 5→0→5; 3 farklı günde eser açıldıktan sonra bir eserden Bugün'e dönüşte, sürüm başına en fazla 1, 365 günde en fazla 3 kez; "Evet" iOS penceresini açar, TestFlight'ta hiç çıkmaz; test: Ayarlar › Test ya da `-shotRatePrompt YES`); anonim sayaç (`Core/Services/Analytics.swift` → `/v1/events`, yönetim panelindeki DAU/WAU/MAU, açılış ve Spotify sayıları); yalnızca takvimdeki eserlerin tablolarını gömen paketleme. Önceki build 1.0.0 (2) 22 Ekim'de yüklenmişti.
 - **Railway (yapıldı, 13 Kasım):** `APP_STORE_URL` ve `LATEST_APP_VERSION=1.1` yayında (`/v1/config` doğrulandı). Güncelleme istemek için `LATEST_APP_VERSION` (bir kez önerir) ya da `MIN_APP_VERSION` (zorunlu ekran); normalde ikisi de boş.
+
+- **1.2.1 (8) yayında (18 Kasım 2026).** Apple Ads atıflaması (AdServices token RevenueCat'e). **[Claude]** İlk Apple Ads kurulumlarında RevenueCat'te kampanya/anahtar kelime görünüyor mu, kontrol et.
+
+## Sonraki sürüm planı (1.2.2 / 1.3)
+
+- **Besteci doğum günleri (Oytun'un isteği, 18 Kasım):** bir bestecinin doğum gününde uygulama bunu kutlasın. Önce tasarım (Claude Design'da, 1:1), sonra kod. Düşünülecekler:
+  - Veri: `composers.yaml`'a makinece okunur `born_date` (ör. `1756-01-27`); bugün `facts.born` yalnız metin. Rus besteciler için Jülyen/Gregoryen farkı (Çaykovski 25 Nisan / 7 Mayıs 1840): Gregoryen tarih esas, notta ikisi.
+  - Nerede: Bugün ekranında küçük, sakin bir şerit ya da etiket ("Bugün Mozart'ın 270. doğum günü"), besteci sayfasında işaret, belki widget. Tasarım ilkeleri: rozet/oyunlaştırma yok, müze etiketi tonu (§8.1).
+  - İçerik: o gün takvime o bestecinin bir eseri konabilir (takvim yalnız eklemeyle ilerlediği için haftalık eklemelerde doğum günlerine bakılır; 2026–27 için liste çıkarılsın).
+  - Doğum günü olmayan ama ölüm yıldönümü gibi başka günler kapsam dışı (ileride).
+- **Op. 131 için 7 bölümlü seçici** (commit 31d953a, kodda hazır): bu sürüm yayına çıkınca `beethoven-string-quartet-14` takvime eklenebilir.
 
 ## 1.1 planı (önce 1.0.1 olarak hazırlanmıştı)
 
