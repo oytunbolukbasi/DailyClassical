@@ -490,7 +490,7 @@ Rejected: File:Sergei_Rachmaninoff_LOC_33968.jpg (2500 × 3824, PD-Bain) is date
 
 ## Signatures (added 2026-11-18)
 
-Autograph signatures shown on the birthday sheet (ios Assets.xcassets/Signatures). Signatures are public domain by age; the vector files on Wikimedia Commons:
+Autograph signatures shown on the birthday sheet (ios Assets.xcassets/Signatures). Signatures are public domain by age; the files on Wikimedia Commons (SVG used as vector; "png" = raster scan converted by us to a transparent, trimmed PNG; SVGs cleaned of editor metadata and trimmed to the signature):
 
 - mozart: File:Wolfgang Amadeus Mozart Signature.svg (public domain)
 - beethoven: File:Beethoven Signature.svg (public domain)
@@ -499,4 +499,32 @@ Autograph signatures shown on the birthday sheet (ios Assets.xcassets/Signatures
 - chopin: File:Chopin signature (cleaner).svg (public domain)
 - dvorak: File:Antonin dvorak signature.svg (CC0)
 - vivaldi: File:Antonio Vivaldi signature.svg (public domain)
-- Not used: File:Brahms Signature.svg is CC BY-SA 4.0 (the vector trace); would need a credit line.
+- schubert: File:Franz Schubert Signature.svg (public domain)
+- berlioz: File:Signature Hector Berlioz.png (public domain; png)
+- brahms: File:Signatur Johannes Brahms.PNG (public domain; png, small 251 px source)
+- mahler: File:Mahler-signature.svg (public domain)
+- rachmaninoff: File:Rachmaninoff signature 1899 (transparent).png (public domain; png)
+- bruckner: File:Signatur Anton Bruckner.JPG (public domain; png)
+- haydn: File:Joseph Haydn Signature.svg (public domain; "di me giuseppe Haydn")
+- schumann: File:Robert Schumann - Signatur.svg (public domain)
+- mendelssohn: File:Felix Mendelssohn Signature.png (public domain; png)
+- liszt: File:Liszt's signature (transparent).png (public domain; png)
+- bruch: File:Signature Max Bruch.png (CC0; png)
+- elgar: File:Elgar.png (public domain; png, a cleaned copy of File:Edward Elgar signature.jpg)
+- franck: File:Franck César signature.svg (public domain; the SVG only wraps a raster, so used as png)
+- smetana: File:Bedřich Smetana signature.svg (public domain)
+- debussy: File:Signature de Claude Debussy - Bibliothèque nationale de France, Gallica (btv1b531897534).svg (public domain)
+- ravel: File:Maurice Ravel signature.svg (CC0)
+- rimsky-korsakov: File:Rimsky-Korsakov Signature.png (public domain; png)
+- wagner: File:Richard Wagner Signature.svg (public domain)
+- prokofiev: File:Sergei Prokofiev Signature.svg (public domain)
+- saint-saens: File:Camille Saint-Saens signature.svg (public domain)
+- bizet: File:Georges Bizet signature.png (public domain; png)
+- gershwin: File:George Gershwin signature.svg (public domain)
+- handel: File:George Frideric Handel Signature.svg (public domain)
+- respighi: File:Ottorino Respighi's published signature, 1927.jpg (public domain; png, printed "Berlin." removed)
+- rossini: File:Signature Gioachino Rossini.jpg (public domain; png)
+- stravinsky: File:Igor Stravinsky 1946 (v).svg (public domain)
+- Not used, licence: File:Brahms Signature.svg (CC BY-SA 4.0), File:Hector Berlioz Signature.svg (CC BY-SA 3.0), File:E Grieg signature.svg and File:Grieg signature.png (CC BY-SA 4.0), File:Jean Sibelius signature.svg (CC BY-SA 4.0), File:JSibelius BHcard Signature 1902.jpg (CC BY 4.0), File:Samuel Barber autograph.png (CC BY-SA 4.0), File:Respighi signature (vect).svg (CC BY-SA 4.0), File:Shostakovich signature.svg (file page licence is self GFDL / CC BY-SA, with PD-signature only as the permission note), File:Bedřich Smetana vektorizovaný podpis.svg (CC BY-SA 4.0), File:Borodin's sign on his tomb..JPG (CC BY-SA 3.0, a photo of the tomb).
+- Not used, quality or identity: File:Mendelssohn-signature.svg (Moses Mendelssohn, not Felix); File:Borodin Signature.jpg (Nikolai Borodin, Duma member, not the composer); File:MussorgskySignature.png (diagonal, oval flourish larger than the name); File:Unterschrift Georges Bizet … .svg and File:Unterschrift Felix Mendelssohn Bartholdy … .svg (hollow outline traces over an embedded scan); File:RavelSignature.svg (white knock-out shape).
+- No signature found on Commons: vaughan-williams, rodrigo; borodin (composer); grieg, sibelius, barber, shostakovich only under the licences above.
