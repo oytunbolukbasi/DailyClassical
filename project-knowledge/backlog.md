@@ -76,6 +76,8 @@ Son güncelleme: 18 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 
 ## Reklam (Instagram / Meta)
 
+- **18 Kasım, EN optimizasyonu (Oytun'un onayıyla):** 16–18 Kas EN: 825 TL, 13 yükleme (CPI 140 → 48 → 52 TL, öğrenme sürüyor). Harcamanın çoğu ABD/Kanada/Avustralya/YZ'ye gidiyordu, Avrupa neredeyse hiç almıyordu: sebep dil hedeflemesi "İngilizce (ABD/İngiltere)" (Avrupa'da arayüzü İngilizce olanlar çok az). Tek seferde: dil kısıtı kaldırıldı (konumlar aynı: Avrupa + ABD/CA/AU/NZ, Türkiye hariç), günlük bütçe 250 → 350 TL, EN-3 durduruldu (189 TL, 0 yükleme; 13 yüklemenin hepsi EN-1'den). **7 gün dokunulmayacak** (25 Kas'a kadar; her düzenleme öğrenmeyi sıfırlıyor). Bakılacaklar: Avrupa ülkelerinin payı, CPI, EN-1 dışı reklamların dağıtımı. Not: EN ilişkilendirmesi Meta'nın AEM'i (TR: SKAN).
+
 **Kararlar (10 Kasım):** Meta Ads Manager'ı Claude, Claude in Chrome ile yönetir (üçüncü taraf bağlantı yok). Pazar: Türkiye ve İngilizce konuşulan ülkeler, ayrı kampanyalar. Ölçüm için reklam SDK'sı ya da MMP (Adjust vb.) yok; Apple'ın SKAdNetwork / AdAttributionKit'i ve App Store Connect kampanya bağlantıları. Para harcatan her adım (yayına alma, bütçe) Oytun'un onayıyla; ödeme yöntemi ve girişler Oytun'da.
 
 **Ölçüm, üç yerden:**
