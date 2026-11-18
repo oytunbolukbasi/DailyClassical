@@ -18,6 +18,8 @@ Son güncelleme: 18 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
   - Nerede: Bugün ekranında küçük, sakin bir şerit ya da etiket ("Bugün Mozart'ın 270. doğum günü"), besteci sayfasında işaret, belki widget. Tasarım ilkeleri: rozet/oyunlaştırma yok, müze etiketi tonu (§8.1).
   - İçerik: o gün takvime o bestecinin bir eseri konabilir (takvim yalnız eklemeyle ilerlediği için haftalık eklemelerde doğum günlerine bakılır; 2026–27 için liste çıkarılsın).
   - Doğum günü olmayan ama ölüm yıldönümü gibi başka günler kapsam dışı (ileride).
+  - **Karar (18 Kasım):** Fable'ın canvas'ındaki doğum günü akışının hepsi onaylandı; **doğum gününde o bestecinin bütün eserleri ücretsiz kullanıcılara o gün için açılır** (hediye).
+- **Paylaşım (Oytun'un isteği, 18 Kasım):** başlıktaki ikonlara dokunulmaz. Onaylanan iki giriş: (1) eser sonunda, son bölüm ve Bağlayan ipler'den sonra, kaynaklardan önce bir kapanış bloğu; (2) dinleme durağı kartına uzun basınca "Bu anı paylaş" (durağın cümlesi kartta). Cihazda üretilen görsel (9:16 ve 4:5; tablo, besteci, eser, özet, bir rehber cümlesi, wordmark): Fable'la üzerinde çalışılıyor. Link `dailyclassical.co/app?utm_source=app-share&utm_medium=piece&utm_content=<eser>` (App Store'a gider; panelde eser başına tıklama). İleride link önizleme botlarına eser başına OG görseli.
 - **Op. 131 için 7 bölümlü seçici** (commit 31d953a, kodda hazır): bu sürüm yayına çıkınca `beethoven-string-quartet-14` takvime eklenebilir.
 
 ## 1.1 planı (önce 1.0.1 olarak hazırlanmıştı)
