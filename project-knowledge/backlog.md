@@ -14,6 +14,7 @@ Son güncelleme: 18 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 ## 1.3 (9): kodda, cihaz testinde (18 Kasım)
 
 - İçinde: besteci doğum günleri (hediye dahil), paylaşım (koda + durağa uzun basma, müze etiketi kartı, /app OG), eser başına günlük bildirim, Op. 131 için 7 bölümlü seçici, Ayarlar › Test › Bildirim ve doğum günü testi (TestFlight'ta Hakkında › Sürüm'e 7 dokunuş). Sunucu/içerik yayında (afd4d0e; migration 0019). 18 Kasım akşamı Oytun'un iPhone'una geliştirici imzalı Release build kuruldu (`xcodebuild -configuration Release -destination id=<udid> -allowProvisioningUpdates`, `xcrun devicectl device install app`). Oytun onaylayınca: archive + TestFlight.
+- **İmzalar (18 Kasım):** doğum günü sayfasında soldan sağa yazılan imza (Assets.xcassets/Signatures, kaynaklar composers-sources.md › Signatures). İlk 7 besteci elle; kalanlar bir agent'la toplanıyor, bitince hepsi 1.3'e eklenip TestFlight'a yüklenecek (Oytun'un kararı). **Süreç:** yeni partilerle gelen bestecilerin imzası ilk etapta olmaz (alan görünmez); yeni besteciler biriktirilir, 2–3 haftada bir çıkan sürümle eklenir, sıradaki doğum günlerinden önce yetişecek şekilde (doğum günü yaklaşan besteciler öncelikli).
 - Açık: paylaşım kartındaki durak kuralı tuvaldeki ≈ 4:30'dan farklı durak seçebiliyor (EN/TR farklı uzunluk); gerekirse `share_stop` içerik alanı. OG görseli şimdilik widget JPEG'i (1200×630 değil). Paylaşım için analitik olayı yok.
 
 ## Sonraki sürüm planı (1.2.2 / 1.3)
