@@ -11,7 +11,7 @@ Son güncelleme: 18 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 
 - **1.2.1 (8) yayında (18 Kasım 2026).** Apple Ads atıflaması (AdServices token RevenueCat'e). **[Claude]** İlk Apple Ads kurulumlarında RevenueCat'te kampanya/anahtar kelime görünüyor mu, kontrol et.
 
-## 1.3 (9): TestFlight'a yüklendi (18 Kasım akşamı)
+## 1.3 (9): App Review'a gönderildi (18 Kasım akşamı, manuel yayın)
 
 - İçinde: besteci doğum günleri (hediye dahil), paylaşım (koda + durağa uzun basma, müze etiketi kartı, /app OG), eser başına günlük bildirim, Op. 131 için 7 bölümlü seçici, Ayarlar › Test › Bildirim ve doğum günü testi (TestFlight'ta Hakkında › Sürüm'e 7 dokunuş). Sunucu/içerik yayında (afd4d0e; migration 0019). 18 Kasım akşamı Oytun'un iPhone'una geliştirici imzalı Release build kuruldu (`xcodebuild -configuration Release -destination id=<udid> -allowProvisioningUpdates`, `xcrun devicectl device install app`). Oytun onaylayınca: archive + TestFlight.
 - **TestFlight:** 1.3 (9) yüklendi (c0dec07 + imzalar: 41 doğum günlü bestecinin 33'ünde imza; eksik: Şostakoviç, Grieg, Sibelius, Barber (yalnız CC BY/BY-SA), Borodin, Vaughan Williams, Rodrigo (dosya yok), Musorgski (kalite)). Oytun paylaşımı test ediyor; onaydan sonra App Store'a gönderim (What's New metni yazılacak).
