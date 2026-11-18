@@ -11,7 +11,10 @@ struct WidgetFeed: Codable {
     struct Day: Codable {
         let day: String
         let piece: Piece
+        /// Composers whose birthday this day is (since 1.3; absent from older responses).
+        var birthdays: [Birthday]?
     }
+    struct Birthday: Codable { let id: String; let shortName: String; let years: Int? }
     struct Piece: Codable {
         struct Composer: Codable { let name: String; let shortName: String }
         struct Painting: Codable { let artist: String; let title: String }

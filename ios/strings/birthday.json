@@ -1,0 +1,98 @@
+{
+  "birthday.line %@ %lld": {
+    "en": "%1$@ birthday · %2$lld years",
+    "tr": "%1$@ doğum günü · %2$lld yıl",
+    "comment": "Today, under the date chip. %1$@ is the possessive short name (Mozart’s / Mozart’ın)."
+  },
+  "birthday.line.two %@ %@": {
+    "en": "%1$@ and %2$@ · birthdays",
+    "tr": "%1$@ ve %2$@ · doğum günleri",
+    "comment": "Today, two composers share the day (short names)."
+  },
+  "birthday.overline %lld": {
+    "en": "Born on this day · %lld years ago",
+    "tr": "Bugün doğdu · %lld yıl önce"
+  },
+  "birthday.overline.baptism %lld": {
+    "en": "Baptised on this day · %lld years ago",
+    "tr": "Bugün vaftiz edildi · %lld yıl önce"
+  },
+  "birthday.gift.two %@ %@": {
+    "en": "A birthday gift: all %1$@ and %2$@ pieces are open today.",
+    "tr": "Doğum günü armağanı: bugün bütün %1$@ ve %2$@ eserleri açık."
+  },
+  "birthday.pieces %@ %@": {
+    "en": "Pieces by %1$@",
+    "tr": "%2$@ eserleri",
+    "comment": "%1$@ short name (EN), %2$@ possessive (TR: Mozart’ın)."
+  },
+  "birthday.openToday": {
+    "en": "Open today",
+    "tr": "Bugün açık"
+  },
+  "birthday.today": {
+    "en": "Today",
+    "tr": "Bugün"
+  },
+  "birthday.two.title": {
+    "en": "Born on this day",
+    "tr": "Bugün doğdular"
+  },
+  "birthday.two.footnote": {
+    "en": "Each opens that composer’s birthday page.",
+    "tr": "Her biri o bestecinin doğum günü sayfasını açar."
+  },
+  "birthday.library.show": {
+    "en": "Show them",
+    "tr": "Göster"
+  },
+  "birthday.library.ended %@": {
+    "en": "%@ birthday is over, and those pieces have closed again.",
+    "tr": "%@ doğum günü bitti; o eserler yeniden kilitlendi."
+  },
+  "birthday.library.premium": {
+    "en": "They stay open with Premium",
+    "tr": "Premium ile açık kalırlar"
+  },
+  "birthday.notification.title %@ %lld": {
+    "en": "%1$@, %2$lld years",
+    "tr": "%1$@ %2$lld yaşında"
+  },
+  "birthday.notification.sameFree %@ %@": {
+    "en": "Today’s piece is %1$@, and all %2$@ pieces are open today.",
+    "tr": "Bugünün eseri %1$@; bugün bütün %2$@ eserleri açık."
+  },
+  "birthday.notification.samePremium %@": {
+    "en": "Today’s piece is %@.",
+    "tr": "Bugünün eseri: %@."
+  },
+  "birthday.notification.otherFree %@ %@ %@": {
+    "en": "All %1$@ pieces are open today. Today’s piece: %2$@, %3$@.",
+    "tr": "Bugün bütün %1$@ eserleri açık. Bugünün eseri: %2$@, %3$@."
+  },
+  "birthday.notification.otherPremium %@ %@ %@": {
+    "en": "Today’s piece: %2$@, %3$@. %1$@ is in the Library.",
+    "tr": "Bugünün eseri: %2$@, %3$@. %1$@ Kitaplık’ta."
+  },
+  "birthday.notification.giftOnly %@": {
+    "en": "All %@ pieces are open today.",
+    "tr": "Bugün bütün %@ eserleri açık."
+  },
+  "widget.birthday %@ %lld": {
+    "en": "%1$@ birthday · %2$lld",
+    "tr": "%1$@ %2$lld yaşında",
+    "comment": "Widget overline. EN %1$@ is the possessive (Mozart’s), TR the plain short name."
+  },
+  "birthday.gift %@": {
+    "en": "A birthday gift: all %@ pieces are open today.",
+    "tr": "Doğum günü armağanı: bugün bütün %@ eserleri açık."
+  },
+  "birthday.composer.gift %@": {
+    "en": "All %@ pieces are open today",
+    "tr": "Bugün bütün %@ eserleri açık"
+  },
+  "birthday.library.line %@ %@": {
+    "en": "%1$@ birthday: all %2$@ pieces are open today.",
+    "tr": "%1$@ doğum günü: bugün bütün %2$@ eserleri açık."
+  }
+}

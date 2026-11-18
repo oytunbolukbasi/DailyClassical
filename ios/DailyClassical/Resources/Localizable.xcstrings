@@ -1489,6 +1489,383 @@
         }
       }
     },
+    "birthday.composer.gift %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All %@ pieces are open today"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugün bütün %@ eserleri açık"
+          }
+        }
+      }
+    },
+    "birthday.gift %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A birthday gift: all %@ pieces are open today."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Doğum günü armağanı: bugün bütün %@ eserleri açık."
+          }
+        }
+      }
+    },
+    "birthday.gift.two %@ %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A birthday gift: all %1$@ and %2$@ pieces are open today."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Doğum günü armağanı: bugün bütün %1$@ ve %2$@ eserleri açık."
+          }
+        }
+      }
+    },
+    "birthday.library.ended %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ birthday is over, and those pieces have closed again."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ doğum günü bitti; o eserler yeniden kilitlendi."
+          }
+        }
+      }
+    },
+    "birthday.library.line %@ %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ birthday: all %2$@ pieces are open today."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ doğum günü: bugün bütün %2$@ eserleri açık."
+          }
+        }
+      }
+    },
+    "birthday.library.premium": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "They stay open with Premium"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Premium ile açık kalırlar"
+          }
+        }
+      }
+    },
+    "birthday.library.show": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show them"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Göster"
+          }
+        }
+      }
+    },
+    "birthday.line %@ %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ birthday · %2$lld years"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ doğum günü · %2$lld yıl"
+          }
+        }
+      },
+      "comment": "Today, under the date chip. %1$@ is the possessive short name (Mozart’s / Mozart’ın)."
+    },
+    "birthday.line.two %@ %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ and %2$@ · birthdays"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ ve %2$@ · doğum günleri"
+          }
+        }
+      },
+      "comment": "Today, two composers share the day (short names)."
+    },
+    "birthday.notification.giftOnly %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All %@ pieces are open today."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugün bütün %@ eserleri açık."
+          }
+        }
+      }
+    },
+    "birthday.notification.otherFree %@ %@ %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All %1$@ pieces are open today. Today’s piece: %2$@, %3$@."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugün bütün %1$@ eserleri açık. Bugünün eseri: %2$@, %3$@."
+          }
+        }
+      }
+    },
+    "birthday.notification.otherPremium %@ %@ %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today’s piece: %2$@, %3$@. %1$@ is in the Library."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugünün eseri: %2$@, %3$@. %1$@ Kitaplık’ta."
+          }
+        }
+      }
+    },
+    "birthday.notification.sameFree %@ %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today’s piece is %1$@, and all %2$@ pieces are open today."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugünün eseri %1$@; bugün bütün %2$@ eserleri açık."
+          }
+        }
+      }
+    },
+    "birthday.notification.samePremium %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today’s piece is %@."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugünün eseri: %@."
+          }
+        }
+      }
+    },
+    "birthday.notification.title %@ %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@, %2$lld years"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ %2$lld yaşında"
+          }
+        }
+      }
+    },
+    "birthday.openToday": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open today"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugün açık"
+          }
+        }
+      }
+    },
+    "birthday.overline %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Born on this day · %lld years ago"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugün doğdu · %lld yıl önce"
+          }
+        }
+      }
+    },
+    "birthday.overline.baptism %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Baptised on this day · %lld years ago"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugün vaftiz edildi · %lld yıl önce"
+          }
+        }
+      }
+    },
+    "birthday.pieces %@ %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pieces by %1$@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%2$@ eserleri"
+          }
+        }
+      },
+      "comment": "%1$@ short name (EN), %2$@ possessive (TR: Mozart’ın)."
+    },
+    "birthday.today": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugün"
+          }
+        }
+      }
+    },
+    "birthday.two.footnote": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Each opens that composer’s birthday page."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Her biri o bestecinin doğum günü sayfasını açar."
+          }
+        }
+      }
+    },
+    "birthday.two.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Born on this day"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bugün doğdular"
+          }
+        }
+      }
+    },
     "common.close.accessibilityLabel": {
       "extractionState": "manual",
       "localizations": {
@@ -5044,6 +5421,258 @@
         }
       }
     },
+    "share.coda.button": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share this piece"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eseri paylaş"
+          }
+        }
+      },
+      "comment": "Solid button in the coda block; opens the share preview."
+    },
+    "share.coda.label": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coda"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Koda"
+          }
+        }
+      },
+      "comment": "Section label of the share block at the end of the piece page (shown uppercase)."
+    },
+    "share.coda.line": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If it stayed with you, pass it on."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aklınızda kaldıysa, birine de gönderin."
+          }
+        }
+      },
+      "comment": "Line beside the share card preview in the coda block."
+    },
+    "share.coda.preview.accessibilityLabel": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preview of the share image"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paylaşım görselinin önizlemesi"
+          }
+        }
+      },
+      "comment": "VoiceOver label of the small card preview in the coda block (opens the share preview)."
+    },
+    "share.moment.menu": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share this moment"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu anı paylaş"
+          }
+        }
+      },
+      "comment": "Menu item on a long-press of a listening stop card."
+    },
+    "share.preview.format.post": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Post 4:5"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gönderi 4:5"
+          }
+        }
+      },
+      "comment": "Share preview format choice: feed image (the default)."
+    },
+    "share.preview.format.story": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Story 9:16"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hikâye 9:16"
+          }
+        }
+      },
+      "comment": "Share preview format choice: tall image for stories."
+    },
+    "share.preview.image.accessibilityLabel": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share image: the painting with the piece’s label"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paylaşım görseli: tablo ve eserin etiketi"
+          }
+        }
+      },
+      "comment": "VoiceOver label of the card preview in the share preview sheet."
+    },
+    "share.preview.share": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paylaş"
+          }
+        }
+      },
+      "comment": "Share preview button; opens the iOS share sheet."
+    },
+    "share.preview.title.moment": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share this moment"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu anı paylaş"
+          }
+        }
+      },
+      "comment": "Title of the share preview sheet for one listening stop."
+    },
+    "share.preview.title.piece": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share this piece"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eseri paylaş"
+          }
+        }
+      },
+      "comment": "Title of the share preview sheet for a piece."
+    },
+    "share.text.moment %@ %@ %@ %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@, %2$@, at about %3$@: “%4$@” Listen with the guide on DailyClassical:"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@, %2$@, yaklaşık %3$@: “%4$@” DailyClassical’daki rehberle dinleyin:"
+          }
+        }
+      },
+      "comment": "Share text for one listening stop, followed by the link. 1: composer short name, 2: short title (“Symphony No. 6”), 3: time (“8:00”; Turkish adds the locative suffix in code, “8:00’de”), 4: the stop’s “What you hear” line as a sentence."
+    },
+    "share.text.moment.untimed %@ %@ %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@, %2$@: “%3$@” Listen with the guide on DailyClassical:"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@, %2$@: “%3$@” DailyClassical’daki rehberle dinleyin:"
+          }
+        }
+      },
+      "comment": "Share text for a listening stop without a time (“Towards the end”), followed by the link. 1: composer short name, 2: short title, 3: the “What you hear” line as a sentence."
+    },
+    "share.text.piece %@ %@ %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@, %2$@. %3$@ Listen with the guide on DailyClassical:"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@, %2$@. %3$@ DailyClassical’daki rehberle dinleyin:"
+          }
+        }
+      },
+      "comment": "Share text for a piece, followed by the link. 1: composer short name, 2: title, 3: hook (a full sentence)."
+    },
     "sources.footer": {
       "extractionState": "manual",
       "localizations": {
@@ -5702,6 +6331,24 @@
           }
         }
       }
+    },
+    "widget.birthday %@ %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ birthday · %2$lld"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ %2$lld yaşında"
+          }
+        }
+      },
+      "comment": "Widget overline. EN %1$@ is the possessive (Mozart’s), TR the plain short name."
     },
     "widget.description": {
       "extractionState": "manual",

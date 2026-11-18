@@ -1,4 +1,5 @@
 import { existsSync, readFileSync } from "node:fs";
+import { birthdaysOn } from "../lib/birthday.js";
 import { fileURLToPath } from "node:url";
 import { and, asc, eq, inArray, lte } from "drizzle-orm";
 import type { DB } from "../db/client.js";
@@ -230,11 +231,12 @@ export async function widgetDays(db: DB, locale: Locale, from: string, count: nu
   const ids = await Promise.all(days.map((d) => pieceIdForDay(db, d)));
   const unique = [...new Set(ids.filter((id): id is string => id !== null))];
   if (unique.length === 0) return [];
-  const [summaries, docRows] = await Promise.all([
+  const [summaries, docRows, composerList] = await Promise.all([
     listPieces(db, locale, unique),
     db.select({ pieceId: pieceLocalizations.pieceId, locale: pieceLocalizations.locale, document: pieceLocalizations.document })
       .from(pieceLocalizations)
       .where(and(inArray(pieceLocalizations.pieceId, unique), inArray(pieceLocalizations.locale, localesFor(locale)))),
+    listComposers(db, locale),
   ]);
   return days.flatMap((day, i) => {
     const s = summaries.find((p) => p.id === ids[i]);
@@ -242,6 +244,8 @@ export async function widgetDays(db: DB, locale: Locale, from: string, count: nu
     const doc = pick(docRows.filter((r) => r.pieceId === s.id), locale);
     return [{
       day,
+      // Composers whose birthday is this day (lib/birthday.ts), for the widget's overline.
+      birthdays: birthdaysOn(day, composerList).map((c) => ({ id: c.id, shortName: c.shortName, years: c.years })),
       piece: {
         id: s.id,
         composer: { name: s.composer.name, shortName: s.composer.shortName },
@@ -279,6 +283,8 @@ export async function listComposers(db: DB, locale: Locale) {
       const en = rows.find((r) => r.locale === DEFAULT_LOCALE);
       return composerResponse({
         id: c.id, sortName: c.sortName, birthYear: c.birthYear, deathYear: c.deathYear, era: c.era, portrait: c.portrait,
+        birthday: c.birthday, birthdayBasis: c.birthdayBasis, birthdayNote: l?.birthdayNote ?? en?.birthdayNote,
+        birthdayLine: l?.birthdayLine ?? en?.birthdayLine, shortGenitive: l?.shortGenitive,
         name: l?.name, shortName: l?.shortName,
         // Each field group falls back to English on its own, so a partial translation never blanks the sheet.
         nationality: l?.nationality ?? en?.nationality, facts: l?.facts ?? en?.facts, bio: l?.bio ?? en?.bio,
@@ -294,6 +300,8 @@ export const composerFactKeys = ["born", "died", "symphonies", "bestKnownFor"] a
 export function composerResponse(c: {
   id: string; sortName: string; birthYear: number | null; deathYear: number | null; era: string | null;
   portrait: ComposerPortraitAsset | null; name?: string | null; shortName?: string | null;
+  birthday?: string | null; birthdayBasis?: string | null; birthdayNote?: string | null;
+  birthdayLine?: string | null; shortGenitive?: string | null;
   nationality?: string | null; facts?: ComposerFacts | null; bio?: string | null; portraitCaption?: ComposerPortraitCaption | null;
   locale?: string;
 }) {
@@ -313,6 +321,12 @@ export function composerResponse(c: {
     nationality: c.nationality ?? null,
     facts, // [{ label: "born" | "died" | "symphonies" | "bestKnownFor", value }], in display order
     bio: c.bio ?? null,
+    // Birthdays (since 1.3): "MM-DD" or null, its basis (null | "baptism" | "old_style") and the sheet's note.
+    birthday: c.birthday ?? null,
+    birthdayBasis: c.birthdayBasis ?? null,
+    birthdayNote: c.birthdayNote ?? null,
+    birthdayLine: c.birthdayLine ?? null,
+    shortGenitive: c.shortGenitive ?? null, // TR only
     portrait: p && caption
       ? {
           ...imageFields(`composers/${c.id}`, p), sourceUrl: p.sourceUrl, focalY: p.focalY,

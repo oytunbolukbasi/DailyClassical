@@ -51,6 +51,10 @@ export const composers = pgTable("composers", {
   sortName: text("sort_name").notNull(), // "Tchaikovsky, Pyotr Ilyich"
   era: era("era"),
   portrait: jsonb("portrait").$type<ComposerPortraitAsset>(), // null = no safely public-domain portrait
+  // The day the app celebrates ("MM-DD", content/composers.yaml); null when unknown. basis: null = a
+  // documented (Gregorian) birth date, "baptism", or "old_style" (the traditional Julian date).
+  birthday: text("birthday"),
+  birthdayBasis: text("birthday_basis"),
 });
 
 export const composerLocalizations = pgTable(
@@ -63,6 +67,9 @@ export const composerLocalizations = pgTable(
     nationality: text("nationality"), // "Russian" / "Rus"
     facts: jsonb("facts").$type<ComposerFacts>(),
     bio: text("bio"), // three paragraphs separated by "\n\n"; [[glossary-id|surface]] and *italics*
+    birthdayNote: text("birthday_note"), // one or two sentences for the birthday sheet
+    birthdayLine: text("birthday_line"), // "Born on this day in 1756, in Salzburg." (hand-written: Turkish suffixes)
+    shortGenitive: text("short_genitive"), // TR only: "Mozart’ın", for "Mozart’ın doğum günü"
     portraitCaption: jsonb("portrait_caption").$type<ComposerPortraitCaption>(),
   },
   (t) => [primaryKey({ columns: [t.composerId, t.locale] })],

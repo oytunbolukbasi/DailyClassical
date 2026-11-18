@@ -25,6 +25,13 @@ final class ContentStore {
     private(set) var glossaryError: APIError?
     private(set) var composers: [String: Composer] = [:]
     private(set) var language = "en"
+    /// Settings › Test: today is this composer's birthday (Birthdays.simulatedComposerID), observed so
+    /// every screen updates at once.
+    var simulatedBirthday: String? = Birthdays.simulatedComposerID {
+        didSet { Birthdays.simulatedComposerID = simulatedBirthday }
+    }
+    /// Piece id → composer id for the published pieces, for the birthday gift.
+    @ObservationIgnored private var composerOfPiece: [String: String] = [:]
 
     @ObservationIgnored private var pieceCache: [String: Piece] = [:]
     private let source: ContentSource
@@ -55,6 +62,8 @@ final class ContentStore {
         switch Self.loadable(await l) {
         case .loaded(let pieces):
             ImagePipeline.shared.register(pieces.map { $0.painting?.artwork })
+            composerOfPiece = Dictionary(pieces.map { ($0.id, $0.composer.id) }, uniquingKeysWith: { a, _ in a })
+            if let todayPiece { composerOfPiece[todayPiece.id] = todayPiece.composer.id }
             library = .loaded(Self.published(pieces, today: todayPiece, day: day))
         case let other: library = other
         }
@@ -79,14 +88,57 @@ final class ContentStore {
 
     var todayID: String? { today.value?.id }
 
-    /// Free users get today's piece; everything else in the library needs Premium.
+    /// Free users get today's piece, and on a composer's birthday every piece by that composer
+    /// (the birthday gift); everything else in the library needs Premium.
     func isLocked(_ pieceID: String, premium: Bool) -> Bool {
-        !premium && pieceID != todayID
+        !premium && pieceID != todayID && !isBirthdayGift(pieceID)
     }
+
+    // MARK: Birthdays (Core/Services/Birthdays.swift)
+
+    /// Composers celebrating today, in display order (today's piece's composer first).
+    var birthdayComposers: [Composer] {
+        _ = simulatedBirthday  // observed: a simulated birthday redraws every screen
+        return Birthdays.celebrated(on: .now, in: composers.values, todayComposerID: today.value?.composer.id,
+                                    simulated: simulatedBirthday)
+    }
+
+    /// Whether `pieceID` is open today because its composer has a birthday (not today's piece).
+    func isBirthdayGift(_ pieceID: String) -> Bool {
+        guard pieceID != todayID, let composer = composerOfPiece[pieceID] else { return false }
+        return birthdayComposers.contains { $0.id == composer }
+    }
+
+    /// Published pieces by `composerID`, newest first.
+    func pieces(by composerID: String) -> [PieceSummary] {
+        (library.value ?? []).filter { $0.composer.id == composerID }
+    }
+
+    /// The composer whose birthday gift a free reader used yesterday, for Library's one-line note
+    /// the day after; nil once dismissed.
+    var giftEndedComposer: Composer? {
+        let d = UserDefaults.standard
+        guard let opened = d.string(forKey: Birthdays.giftOpenedKey)?.split(separator: "|"), opened.count == 2,
+              let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: .now),
+              String(opened[0]) == APIClient.day(yesterday),
+              d.string(forKey: Birthdays.giftLineDismissedKey) != APIClient.day()
+        else { return nil }
+        return composers[String(opened[1])]
+    }
+
+    func dismissGiftEndedLine() {
+        UserDefaults.standard.set(APIClient.day(), forKey: Birthdays.giftLineDismissedKey)
+        giftLineRevision += 1
+    }
+    /// Bumped when the gift line is dismissed, so Library redraws.
+    var giftLineRevision = 0
 
     func retry() async { await reload(language: language) }
 
     func piece(id: String) async throws -> Piece {
+        if isBirthdayGift(id), let composer = composerOfPiece[id] {
+            UserDefaults.standard.set("\(APIClient.day())|\(composer)", forKey: Birthdays.giftOpenedKey)
+        }
         if let p = cachedPiece(id: id) { return p }
         let language = language
         let p = try await source.piece(id, language)

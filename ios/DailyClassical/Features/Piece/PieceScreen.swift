@@ -65,6 +65,8 @@ struct PieceContent: View {
     @State private var showRecordings = false
     @State private var showArtwork = false
     @State private var showPieceGlossary = false
+    /// The share preview: from the coda block (piece) or a long-press on a stop (moment).
+    @State private var shareSubject: ShareSubject?
 
     private static let contentSpace = "pieceContent"
 
@@ -129,6 +131,7 @@ struct PieceContent: View {
         .environment(\.activeGlossaryTerm, { if case .glossaryTerm(let id) = router.sheet { id } else { nil } }())
         .sheet(isPresented: $showRecordings) { RecordingsSheet(recordings: piece.recordings, pieceId: piece.id) }
         .sheet(isPresented: $showPieceGlossary) { PieceGlossarySheet(document: piece.document) }
+        .sheet(item: $shareSubject) { SharePreviewSheet(piece: piece, subject: $0) }
         .fullScreenCover(isPresented: $showArtwork) {
             if let painting = piece.painting { ArtworkViewer(painting: painting) }
         }
@@ -148,6 +151,8 @@ struct PieceContent: View {
                 if let y = ScreenshotScene.scroll { position.scrollTo(y: y) }
             }
             if ScreenshotScene.artwork { showArtwork = true }
+            await ShareDebug.export(piece: piece)
+            if let subject = ShareDebug.subject { shareSubject = subject }
         }
         #endif
         .onDisappear { UIApplication.shared.isIdleTimerDisabled = false }
@@ -294,11 +299,13 @@ struct PieceContent: View {
         case .stopsHeader: stopsHeader
         case .stop(let m, let i):
             let stops = movements[m - 1].stops
-            ListeningStopRow(stop: stops[i], focus: focus(for: block), isLast: i == stops.count - 1)
+            ListeningStopRow(stop: stops[i], focus: focus(for: block), isLast: i == stops.count - 1,
+                             onShare: { shareSubject = .moment(movement: m, stop: i) })
                 .padding(.top, i == 0 ? 0 : 14).gutter()
         case .notice(let m): notice(movements[m - 1])
         case .notes(let m): notes(movements[m - 1])
         case .threads: threads
+        case .coda: ShareCoda(piece: piece) { shareSubject = .piece }
         case .recordings: recordingsCard
         case .sources: sources
         }

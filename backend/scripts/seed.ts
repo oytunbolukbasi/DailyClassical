@@ -24,8 +24,9 @@ const db = drizzle(sql, { schema: s });
 type Localized = Record<string, string>;
 type ComposerEntry = {
   id: string; match: string; sort_name: string; born: number; died: number;
+  birthday?: string | null; birthday_basis?: string | null; birthday_note?: Localized | null; birthday_line?: Localized | null;
   era: (typeof s.era.enumValues)[number];
-  names: Record<string, { name: string; short: string }>;
+  names: Record<string, { name: string; short: string; short_genitive?: string }>;
   nationality?: Localized;
   facts?: { born?: Localized; died?: Localized; symphonies?: Localized; best_known_for?: Localized };
   bio?: Localized;
@@ -59,7 +60,8 @@ await db.transaction(async (tx) => {
       ? { imageUrl: p.image_url, sourceUrl: p.source_url ?? null, width: p.width ?? null, height: p.height ?? null,
           license: p.license ?? null, focalY: p.focal_y ?? 0.5, year: p.year == null ? null : String(p.year) }
       : null;
-    const base = { sortName: c.sort_name, birthYear: c.born, deathYear: c.died, era: c.era, portrait };
+    const base = { sortName: c.sort_name, birthYear: c.born, deathYear: c.died, era: c.era, portrait,
+      birthday: c.birthday ?? null, birthdayBasis: c.birthday_basis ?? null };
     await tx.insert(s.composers).values({ id: c.id, ...base })
       .onConflictDoUpdate({ target: s.composers.id, set: base });
     for (const [locale, n] of Object.entries(c.names)) {
@@ -76,6 +78,9 @@ await db.transaction(async (tx) => {
         nationality: loc(c.nationality, locale),
         facts: hasFacts ? facts : null,
         bio: bio ? normalizeRich(bio) : null,
+        birthdayNote: loc(c.birthday_note, locale),
+        birthdayLine: loc(c.birthday_line, locale),
+        shortGenitive: n.short_genitive ?? null,
         portraitCaption: p && artist && title ? { artist, title, collection: loc(p.collection, locale) } : null,
       };
       await tx.insert(s.composerLocalizations).values({ composerId: c.id, locale, ...row })

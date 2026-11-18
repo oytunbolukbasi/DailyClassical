@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Share text in English and Turkish</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./dc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+@font-face{font-family:Literata;font-weight:400;src:url(/_blob/17cdf410b78c2e2988e54149e19d7c62)}
+@font-face{font-family:Literata;font-weight:500;src:url(/_blob/aeb70d6bb7f7073e20ee776dfd7f9f36)}
+.tx{font:400 16px/1.5 var(--serif)}
+.ln{font:400 12px/1.45 ui-monospace,Menlo,monospace;color:var(--ink2);word-break:break-all;margin-top:8px}
+</style>
+</helmet>
+<div class="dc col" style="width: 640px; height: 874px; padding: 36px 36px; gap: 14px">
+<h1 class="t-24">Share text</h1>
+<p class="t-sec">Pattern: {composer short name}, {title}. {hook} {call to listen}: {link}. One string, no hashtags, no emoji.</p>
+<div class="card col" style="gap: 4px"><p class="t-label">Piece · EN</p>
+<p class="tx">Tchaikovsky, Symphony No. 6 in B minor, “Pathétique”. A symphony that ends not in triumph but in silence. Listen with the guide on DailyClassical:</p>
+<p class="ln">https://dailyclassical.co/app?utm_source=app-share&amp;utm_medium=piece&amp;utm_content=tchaikovsky-symphony-6</p></div>
+<div class="card col" style="gap: 4px"><p class="t-label">Piece · TR</p>
+<p class="tx">Çaykovski, Si minör 6. Senfoni, “Patetik”. Zaferle değil, sessizlikle biten bir senfoni. DailyClassical’daki rehberle dinleyin:</p>
+<p class="ln">https://dailyclassical.co/app?utm_source=app-share&amp;utm_medium=piece&amp;utm_content=tchaikovsky-symphony-6</p></div>
+<div class="card col" style="gap: 4px"><p class="t-label">Moment · EN</p>
+<p class="tx">Tchaikovsky, Symphony No. 6, at about 8:00: “The famous melody returns in the full orchestra.” Listen with the guide on DailyClassical:</p>
+<p class="ln">https://dailyclassical.co/app?utm_source=app-share&amp;utm_medium=moment&amp;utm_content=tchaikovsky-symphony-6</p></div>
+<div class="card col" style="gap: 4px"><p class="t-label">Moment · TR</p>
+<p class="tx">Çaykovski, 6. Senfoni, yaklaşık 8:00’de: “Ünlü melodi tam orkestrayla geri döner.” DailyClassical’daki rehberle dinleyin:</p>
+<p class="ln">https://dailyclassical.co/app?utm_source=app-share&amp;utm_medium=moment&amp;utm_content=tchaikovsky-symphony-6</p></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":640,"height":874}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

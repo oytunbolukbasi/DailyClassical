@@ -111,6 +111,11 @@ struct TodayWidgetView: View {
         let style = short
             ? Date.FormatStyle(locale: locale).weekday(.abbreviated).day().month(.abbreviated)
             : Date.FormatStyle(locale: locale).weekday(.wide).day().month(.wide)
+        // A composer's birthday replaces the date (A6): "Mozart’s birthday · 271" / "Mozart 271 yaşında".
+        if let b = entry.birthday {
+            let name = entry.language == "tr" ? b.name : "\(b.name)’s"
+            return Text("widget.birthday \(name) \(b.years)").modifier(Overline(color: Palette.accent))
+        }
         return Text("widget.today \(entry.date.formatted(style))").modifier(Overline(color: Palette.ink3))
     }
 }

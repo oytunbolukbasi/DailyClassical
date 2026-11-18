@@ -26,13 +26,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Saves the painting you choose as a wallpaper to your photos."
+            "value": "Saves paintings and share cards you choose to your photos."
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "Seçtiğiniz tabloyu duvar kâğıdı olarak fotoğraflarınıza kaydeder."
+            "value": "Seçtiğiniz tabloları ve paylaşım kartlarını fotoğraflarınıza kaydeder."
           }
         }
       },

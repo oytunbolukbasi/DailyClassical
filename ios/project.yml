@@ -11,8 +11,8 @@ settings:
     SWIFT_STRICT_CONCURRENCY: complete
     SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
     SWIFT_APPROACHABLE_CONCURRENCY: YES
-    MARKETING_VERSION: "1.2.1"
-    CURRENT_PROJECT_VERSION: "8"
+    MARKETING_VERSION: "1.3"
+    CURRENT_PROJECT_VERSION: "9"
     DEVELOPMENT_TEAM: 3NX95JSKNY
     CODE_SIGN_STYLE: Automatic
     LOCALIZATION_PREFERS_STRING_CATALOGS: YES
@@ -94,7 +94,7 @@ targets:
         # Translated in Resources/InfoPlist.xcstrings (from strings/infoplist.json; build-strings.py),
         # which the DailyClassical source folder adds to the app's resources.
         NSLocalNetworkUsageDescription: "Debug builds connect to the development server on this network."
-        NSPhotoLibraryAddUsageDescription: "Saves the painting you choose as a wallpaper to your photos."
+        NSPhotoLibraryAddUsageDescription: "Saves paintings and share cards you choose to your photos."
         # Widget taps open dailyclassical://piece/<id>
         CFBundleURLTypes:
           - CFBundleURLName: co.dailyclassical.app

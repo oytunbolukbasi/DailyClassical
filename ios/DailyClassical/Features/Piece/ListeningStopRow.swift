@@ -9,6 +9,8 @@ struct ListeningStopRow: View {
     let stop: ListeningStop
     var focus: Focus = .none
     var isLast = false
+    /// Long-press → "Share this moment" (design B1-Share-moment); nil: no menu.
+    var onShare: (() -> Void)? = nil
     @Environment(\.locale) private var locale
 
     var body: some View {
@@ -18,6 +20,9 @@ struct ListeningStopRow: View {
         }
         .accessibilityElement(children: .combine)
         .accessibilityValue(focus == .current ? Text("piece.stop.current.accessibilityValue") : Text(verbatim: ""))
+        .accessibilityActions {
+            if let onShare { Button("share.moment.menu", action: onShare) }
+        }
     }
 
     private var isTimed: Bool { stop.startSec != nil }
@@ -63,6 +68,7 @@ struct ListeningStopRow: View {
         .padding(.horizontal, Spacing.cardPaddingH)
         .card()
         .shadow(color: .black.opacity(focus == .current ? 0.06 : 0), radius: 10, y: 6)
+        .modifier(ShareMomentMenu(onShare: onShare))
     }
 
     @ViewBuilder private var timeLabel: some View {
@@ -94,5 +100,24 @@ struct ListeningStopRow: View {
         }
         if let end { return Text("piece.stop.time.range.accessibilityLabel \(spoken(start)) \(spoken(end))") }
         return Text("piece.stop.time.single.accessibilityLabel \(spoken(start))")
+    }
+}
+
+/// The card lifts and a one-item menu offers "Share this moment".
+private struct ShareMomentMenu: ViewModifier {
+    let onShare: (() -> Void)?
+
+    func body(content: Content) -> some View {
+        if let onShare {
+            content
+                .contentShape(.contextMenuPreview, .rect(cornerRadius: Radius.card, style: .continuous))
+                .contextMenu {
+                    Button(action: onShare) {
+                        Label { Text("share.moment.menu") } icon: { Image("share").renderingMode(.template) }
+                    }
+                }
+        } else {
+            content
+        }
     }
 }

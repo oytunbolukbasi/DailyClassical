@@ -21,6 +21,13 @@ enum ReminderScheduler {
     private static let plannedKey = "reminderPlannedAt"
     private static let plannedLanguageKey = "reminderPlannedLanguage"
 
+    /// Whether the reader has Premium, for the birthday gift sentence (set by the app; a change
+    /// replans).
+    static var premium: Bool {
+        get { UserDefaults.standard.bool(forKey: "reminderPremium") }
+        set { UserDefaults.standard.set(newValue, forKey: "reminderPremium") }
+    }
+
     static var savedTime: DateComponents? {
         let d = UserDefaults.standard
         guard d.object(forKey: "reminderHour") != nil else { return nil }
@@ -68,22 +75,16 @@ enum ReminderScheduler {
             start = calendar.date(byAdding: .day, value: 1, to: start) ?? start
         }
         let pieces = await upcoming(from: start, language: language)
+        let composers = await composerList(language: language)
 
         await removePending()
         let center = UNUserNotificationCenter.current()
         for offset in 0..<daysAhead {
             guard let date = calendar.date(byAdding: .day, value: offset, to: start) else { continue }
             let key = APIClient.day(date)
-            let content = UNMutableNotificationContent()
-            content.sound = .default
-            if offset < namedDays, let day = pieces[key] {
-                content.title = "\(day.piece.composer.shortName): \(day.piece.title)"
-                content.body = day.piece.hook
-                if let attachment = await paintingAttachment(day.piece) { content.attachments = [attachment] }
-            } else {
-                content.title = L10n.string("reminder.notification.title", code: language)
-                content.body = L10n.string("reminder.notification.body", code: language)
-            }
+            let piece = offset < namedDays ? pieces[key]?.piece : nil
+            let birthdays = Birthdays.celebrated(on: date, in: composers, simulated: nil)
+            let content = await notification(piece: piece, birthdays: birthdays, on: date, language: language, premium: premium)
             var when = calendar.dateComponents([.year, .month, .day], from: date)
             when.hour = hour
             when.minute = minute
@@ -94,7 +95,62 @@ enum ReminderScheduler {
         UserDefaults.standard.set(language, forKey: plannedLanguageKey)
     }
 
-    /// Pending reminders, including the repeating one builds before 1.2.2 scheduled ("daily-piece").
+    /// One day's reminder: a composer's birthday (portrait, "Mozart, 271 years"), else the day's
+    /// piece by name with its hook and painting, else the generic text.
+    static func notification(piece: UpcomingDay.Piece?, birthdays: [Composer], on date: Date = .now,
+                             language: String, premium: Bool) async -> UNMutableNotificationContent {
+        let content = UNMutableNotificationContent()
+        content.sound = .default
+        // The composer of the day's piece first (two composers can share a birthday).
+        let ordered = birthdays.filter { $0.name == piece?.composer.name } + birthdays.filter { $0.name != piece?.composer.name }
+        if let c = ordered.first, let years = Birthdays.years(c, on: date) {
+            let f = { (key: String, args: [CVarArg]) in
+                String(format: L10n.string(String.LocalizationValue(key), code: language), locale: Locale(identifier: language), arguments: args)
+            }
+            content.title = f("birthday.notification.title %@ %lld", [c.shortName, years])
+            var body = c.birthdayLine.map { [$0] } ?? []
+            if let piece {
+                if piece.composer.name == c.name {
+                    body.append(premium ? f("birthday.notification.samePremium %@", [piece.title])
+                                        : f("birthday.notification.sameFree %@ %@", [piece.title, c.shortName]))
+                } else {
+                    body.append(premium ? f("birthday.notification.otherPremium %@ %@ %@", [c.shortName, piece.composer.shortName, piece.title])
+                                        : f("birthday.notification.otherFree %@ %@ %@", [c.shortName, piece.composer.shortName, piece.title]))
+                }
+            } else if !premium {
+                body.append(f("birthday.notification.giftOnly %@", [c.shortName]))
+            }
+            content.body = body.joined(separator: " ")
+            if let attachment = portraitAttachment(c) { content.attachments = [attachment] }
+        } else if let piece {
+            content.title = "\(piece.composer.shortName): \(piece.title)"
+            content.body = piece.hook
+            if let attachment = await paintingAttachment(piece) { content.attachments = [attachment] }
+        } else {
+            content.title = L10n.string("reminder.notification.title", code: language)
+            content.body = L10n.string("reminder.notification.body", code: language)
+        }
+        return content
+    }
+
+    // MARK: Test builds (Settings › Test)
+
+    /// Delivers `content` in five seconds (leave the app to see it as a banner).
+    static func sendTest(_ content: UNMutableNotificationContent) async {
+        let center = UNUserNotificationCenter.current()
+        _ = try? await center.requestAuthorization(options: [.alert, .sound])
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        try? await center.add(UNNotificationRequest(identifier: "test-\(UUID().uuidString)", content: content, trigger: trigger))
+    }
+
+    /// A piece as the reminder names it, from a Library summary (painting from the server or the bundle).
+    static func upcomingPiece(_ p: PieceSummary) -> UpcomingDay.Piece {
+        UpcomingDay.Piece(id: p.id, composer: .init(name: p.composer.name, shortName: p.composer.shortName),
+                          title: p.title, hook: p.hook,
+                          widgetImageUrl: APIClient.shared.baseURL.appending(path: "images/widget/\(p.id).jpg"))
+    }
+
+    /// Pending reminders, including the repeating one builds before 1.3 scheduled ("daily-piece").
     private static func removePending() async {
         let center = UNUserNotificationCenter.current()
         let ids = await center.pendingNotificationRequests().map(\.identifier).filter { $0.hasPrefix(prefix) }
@@ -120,6 +176,31 @@ enum ReminderScheduler {
             }
         }
         return Dictionary(days.map { ($0.day, $0) }, uniquingKeysWith: { a, _ in a })
+    }
+
+    /// All composers (birthdays): the API (or its offline cache), else the bundled list.
+    private static func composerList(language: String) async -> [Composer] {
+        if ContentSource.isAPI, let list = try? await APIClient.shared.composers(language: language) { return list }
+        return (try? Fixtures.load([Composer].self, "composers", language)) ?? []
+    }
+
+    // MARK: Portrait attachment
+
+    /// The composer's bundled portrait as a face-centred square JPEG (crop centre at `focalY`).
+    private static func portraitAttachment(_ c: Composer) -> UNNotificationAttachment? {
+        guard let url = Bundle.main.url(forResource: "\(c.id)-hero", withExtension: "heic", subdirectory: "Artwork/composers")
+                ?? Bundle.main.url(forResource: "\(c.id)-thumb", withExtension: "heic", subdirectory: "Artwork/composers"),
+              let image = UIImage(contentsOfFile: url.path), let cg = image.cgImage else { return nil }
+        let w = CGFloat(cg.width), h = CGFloat(cg.height), side = min(w, h)
+        let focal = CGFloat(c.portrait?.focalY ?? 0.3)
+        // object-position semantics: the share of the overflow cropped from the top.
+        let y = (h - side) * focal, x = (w - side) / 2
+        guard let square = cg.cropping(to: CGRect(x: x, y: y, width: side, height: side)),
+              let jpeg = UIImage(cgImage: square).jpegData(compressionQuality: 0.85) else { return nil }
+        let file = FileManager.default.temporaryDirectory.appending(path: "reminder-\(UUID().uuidString).jpg")
+        guard (try? jpeg.write(to: file)) != nil else { return nil }
+        return try? UNNotificationAttachment(identifier: "portrait", url: file,
+                                             options: [UNNotificationAttachmentOptionsTypeHintKey: UTType.jpeg.identifier])
     }
 
     // MARK: Painting attachment

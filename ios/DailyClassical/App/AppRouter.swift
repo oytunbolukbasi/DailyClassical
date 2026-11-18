@@ -10,6 +10,8 @@ final class AppRouter {
         case auth(AuthFlow)
         case composer(ComposerRef)
         case glossaryTerm(String)
+        /// Composer birthday sheet (Features/Birthday): one composer, or the chooser for a shared day.
+        case birthday([String])
 
         var id: String {
             switch self {
@@ -18,6 +20,7 @@ final class AppRouter {
             case .auth(let f): "auth-\(f)"
             case .composer(let c): "composer-\(c.id)"
             case .glossaryTerm(let id): "term-\(id)"
+            case .birthday(let ids): "birthday-\(ids.joined(separator: "-"))"
             }
         }
     }

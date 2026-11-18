@@ -71,6 +71,18 @@ enum WidgetData {
         return (piece, paintingURL(for: piece.id, large: large), large ? inOneLine(for: piece.id) : nil)
     }
 
+    /// A composer's birthday on `date` from the feed; on today, a birthday simulated in the app's
+    /// Settings › Test ("Mozart|271" in the App Group) wins.
+    static func birthday(_ date: Date, feed: WidgetFeed?) -> (name: String, years: Int)? {
+        if Calendar.current.isDateInToday(date),
+           let parts = UserDefaults(suiteName: appGroup)?.string(forKey: "debugBirthday")?.split(separator: "|"),
+           parts.count == 2, let years = Int(parts[1]) {
+            return (String(parts[0]), years)
+        }
+        guard let b = feed?.day(dayKey(date))?.birthdays?.first, let years = b.years else { return nil }
+        return (b.shortName, years)
+    }
+
     /// The bundled plan's piece for `date` in the current language.
     static func piece(on date: Date) -> WidgetPiece? {
         let lang = languageCode

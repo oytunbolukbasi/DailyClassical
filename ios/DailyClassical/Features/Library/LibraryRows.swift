@@ -38,6 +38,8 @@ struct LibraryRow: View {
     let piece: PieceSummary
     let isToday: Bool
     let isLocked: Bool
+    /// Open today because it is the composer's birthday (Features/Birthday, A3).
+    var isBirthdayGift = false
     let action: () -> Void
 
     var body: some View {
@@ -45,7 +47,14 @@ struct LibraryRow: View {
             HStack(spacing: 14) {
                 PieceThumbnail(url: piece.painting?.imageUrl)
                 VStack(alignment: .leading, spacing: 3) {
-                    PieceMetaLine(piece: piece, isToday: isToday)
+                    HStack(spacing: 0) {
+                        PieceMetaLine(piece: piece, isToday: isToday)
+                        if isBirthdayGift {
+                            (Text(verbatim: " · ") + Text("birthday.openToday"))
+                                .font(Typography.meta13)
+                                .foregroundStyle(Palette.accent)
+                        }
+                    }
                     Text(verbatim: piece.title)
                         .font(Typography.rowTitleS)
                         .lineHeight(1.3)

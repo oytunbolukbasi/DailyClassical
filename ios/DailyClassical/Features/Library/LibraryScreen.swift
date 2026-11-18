@@ -10,6 +10,7 @@ struct LibraryScreen: View {
     @Environment(SessionStore.self) private var session
     @Environment(EntitlementStore.self) private var entitlements
     @Environment(AppRouter.self) private var router
+    @Environment(\.locale) private var locale
 
     @State private var segment: Segment = .all
     @State private var formFilter: PieceForm?
@@ -201,6 +202,9 @@ struct LibraryScreen: View {
                 .libraryRowChrome()
         case .loaded:
             let pieces = filteredPieces
+            if segment == .all, !entitlements.isPremium {
+                birthdayNotes.libraryRowChrome()
+            }
             if pieces.isEmpty {
                 EmptyStateView(title: Text("library.filtered.empty.title"),
                                message: Text("library.filtered.empty.body"),
@@ -215,12 +219,59 @@ struct LibraryScreen: View {
             } else {
                 ForEach(pieces) { piece in
                     let locked = content.isLocked(piece.id, premium: entitlements.isPremium)
-                    LibraryRow(piece: piece, isToday: piece.id == content.todayID, isLocked: locked) {
+                    LibraryRow(piece: piece, isToday: piece.id == content.todayID, isLocked: locked,
+                               isBirthdayGift: !entitlements.isPremium && content.isBirthdayGift(piece.id)) {
                         open(piece, locked: locked)
                     }
                     .libraryRowChrome()
                 }
             }
+        }
+    }
+
+    /// Free readers only (Features/Birthday, A3): on a birthday, one line under the filters with
+    /// "Show them" (filters to the composer); the day after a reader opened a gift piece, one
+    /// dismissible line that the pieces closed again.
+    @ViewBuilder private var birthdayNotes: some View {
+        let code = BirthdayCopy.code(locale)
+        if let c = content.birthdayComposers.first {
+            VStack(alignment: .leading, spacing: 6) {
+                Text(verbatim: BirthdayCopy.format("birthday.library.line %@ %@", code: code,
+                                                   BirthdayCopy.possessive(c, code: code), c.shortName))
+                    .font(Typography.body15)
+                    .foregroundStyle(Palette.ink)
+                    .fixedSize(horizontal: false, vertical: true)
+                Button { withAnimation { composerFilter = c.id } } label: {
+                    HStack(spacing: 4) { Text("birthday.library.show"); Icon("chevron-forward-small", size: 12) }
+                        .font(Typography.body15.weight(.medium))
+                        .foregroundStyle(Palette.accent)
+                }
+                .buttonStyle(.plain)
+            }
+            .padding(.vertical, 12)
+        } else if let c = { _ = content.giftLineRevision; return content.giftEndedComposer }() {
+            HStack(alignment: .top, spacing: 12) {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(verbatim: BirthdayCopy.format("birthday.library.ended %@", code: code, BirthdayCopy.possessive(c, code: code)))
+                        .font(Typography.body15)
+                        .foregroundStyle(Palette.ink)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Button { router.present(.paywall) } label: {
+                        HStack(spacing: 4) { Text("birthday.library.premium"); Icon("chevron-forward-small", size: 12) }
+                            .font(Typography.body15.weight(.medium))
+                            .foregroundStyle(Palette.accent)
+                    }
+                    .buttonStyle(.plain)
+                }
+                Spacer(minLength: 0)
+                Button { withAnimation { content.dismissGiftEndedLine() } } label: {
+                    Icon("close", size: 14).foregroundStyle(Palette.ink3).frame(width: 44, height: 44)
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(Text("common.close.accessibilityLabel"))
+                .padding(.top, -12)
+            }
+            .padding(.vertical, 12)
         }
     }
 

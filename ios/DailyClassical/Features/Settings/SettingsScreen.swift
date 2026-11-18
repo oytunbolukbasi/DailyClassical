@@ -125,6 +125,10 @@ struct SettingsScreen: View {
     /// Never in App Store or TestFlight builds, so not localized.
     private var testSection: some View {
         Section {
+            NavigationLink { TestNotificationsScreen() } label: {
+                Text(verbatim: "Bildirim ve doğum günü testi").foregroundStyle(Palette.ink)
+            }
+            .settingsRow()
             Button { hasCompletedOnboarding = false } label: {
                 Text(verbatim: "Karşılamayı yeniden göster").foregroundStyle(Palette.accent)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -187,7 +191,7 @@ struct SettingsScreen: View {
                 .foregroundStyle(Palette.ink2)
                 .listRowInsets(EdgeInsets(top: 0, leading: 16, bottom: 3, trailing: 16))
         } footer: {
-            Text(verbatim: "Yalnızca test build'lerinde görünür. Deneme önizlemesi gerçek bir ürün yokken satın alma yapmaz.")
+            Text(verbatim: "Yalnızca test build'lerinde görünür (TestFlight'ta Hakkında › Sürüm satırına 7 kez dokununca açılır). Deneme önizlemesi gerçek bir ürün yokken satın alma yapmaz.")
                 .font(Typography.meta13)
                 .foregroundStyle(Palette.ink3)
         }

@@ -22,17 +22,35 @@
 #     hero/thumb/full, placeholder_color  Written by `npm run images` (backend/): our optimized HEIC copies in
 #                 backend/public/images/composers/<id>-hero|thumb|full.heic and the image's average colour.
 #                 After changing one image_url: `npm run images -- --only <composer id>` then `npm run fixtures`.
+#   birthday      "MM-DD", the day the app celebrates; null when no day is reliably known (then no
+#                 birthday_note or birthday_line). "02-29" (Rossini) is celebrated on 28 February in non-leap years.
+#   birthday_basis  null = a documented birth date (Gregorian, also for Russian composers); "baptism" = only
+#                 the baptism date is known (Beethoven); "old_style" = the traditional Old Style (Julian) date
+#                 that sources print (Bach, Handel).
+#   birthday_note {en, tr}: one or two sentences for the birthday sheet (EN ≤ 220 characters); *italics* for titles.
+#   birthday_line {en, tr}: first sentence of the birthday notification and sheet; written by hand because
+#                 Turkish suffixes on years and foreign place names cannot be generated reliably.
+#   names.tr.short_genitive  Turkish genitive of the short name ("Mozart’ın", "Çaykovski’nin"), for "… doğum günü".
 # Sources: content/research/composers-sources.md (checked 2026-10-04).
+# Birthday dates and their sources: content/research/composers-sources.md, section "Birthdays".
 
 - id: mozart
   match: Wolfgang Amadeus Mozart
   sort_name: Mozart, Wolfgang Amadeus
   born: 1756
+  birthday: "01-27"
+  birthday_basis: null
+  birthday_note:
+    en: "In 1784 Mozart bought a pet starling that could whistle a tune from a new piano concerto, and wrote it into the household accounts. When the bird died three years later, Mozart buried it in the garden, with a poem."
+    tr: "Mozart 1784’te, yeni bir piyano konçertosundan bir ezgiyi ıslıkla çalabilen bir sığırcık aldı ve bunu ev hesaplarına not etti. Kuş üç yıl sonra ölünce Mozart onu bahçeye gömdü, bir de şiir yazdı."
+  birthday_line:
+    en: "Born on this day in 1756, in Salzburg."
+    tr: "1756’da bugün Salzburg’da doğdu."
   died: 1791
   era: classical
   names:
     en: { name: Wolfgang Amadeus Mozart, short: Mozart }
-    tr: { name: Wolfgang Amadeus Mozart, short: Mozart }
+    tr: { name: Wolfgang Amadeus Mozart, short: Mozart, short_genitive: Mozart’ın }
   nationality: { en: Austrian, tr: Avusturyalı }
   facts:
     born: { en: "27 January 1756, Salzburg", tr: "27 Ocak 1756, Salzburg" }
@@ -72,11 +90,19 @@
   match: Ludwig van Beethoven
   sort_name: Beethoven, Ludwig van
   born: 1770
+  birthday: "12-17"
+  birthday_basis: "baptism"
+  birthday_note:
+    en: "Only the baptism was recorded, in Bonn on 17 December 1770, so this is Beethoven’s day. Posters for the first public concert, in 1778, gave the young performer’s age as six. The real age was seven."
+    tr: "Yalnızca vaftiz kayda geçti: 17 Aralık 1770, Bonn. Beethoven’ın günü bu yüzden bugün. 1778’deki ilk halka açık konserin afişleri küçük müzisyeni altı yaşında gösteriyordu; gerçekte yedi yaşındaydı."
+  birthday_line:
+    en: "Baptised on this day in 1770, in Bonn."
+    tr: "1770’te bugün Bonn’da vaftiz edildi."
   died: 1827
   era: classical
   names:
     en: { name: Ludwig van Beethoven, short: Beethoven }
-    tr: { name: Ludwig van Beethoven, short: Beethoven }
+    tr: { name: Ludwig van Beethoven, short: Beethoven, short_genitive: Beethoven’ın }
   nationality: { en: German, tr: Alman }
   facts:
     born: { en: "December 1770, Bonn", tr: "Aralık 1770, Bonn" }
@@ -116,11 +142,19 @@
   match: Franz Schubert
   sort_name: Schubert, Franz
   born: 1797
+  birthday: "01-31"
+  birthday_basis: null
+  birthday_note:
+    en: "Schubert’s friends used the nickname “Schwammerl”, little mushroom, and gathered for evenings of the composer’s music that they called Schubertiades. Today is a good day for one."
+    tr: "Schubert’in arkadaşları ona “Schwammerl”, yani küçük mantar derdi; onun müziğiyle geçen akşamlara da Schubertiade adını verdiler. Bugün bunlardan biri için iyi bir gün."
+  birthday_line:
+    en: "Born on this day in 1797, in Vienna."
+    tr: "1797’de bugün Viyana’da doğdu."
   died: 1828
   era: romantic
   names:
     en: { name: Franz Schubert, short: Schubert }
-    tr: { name: Franz Schubert, short: Schubert }
+    tr: { name: Franz Schubert, short: Schubert, short_genitive: Schubert’in }
   nationality: { en: Austrian, tr: Avusturyalı }
   facts:
     born: { en: "31 January 1797, Vienna", tr: "31 Ocak 1797, Viyana" }
@@ -160,11 +194,19 @@
   match: Hector Berlioz
   sort_name: Berlioz, Hector
   born: 1803
+  birthday: "12-11"
+  birthday_basis: null
+  birthday_note:
+    en: "Berlioz was 26 when the *Symphonie fantastique* was written: a love story told with harps, church bells and a witches’ dance on the old *Dies irae* chant. Nearly two centuries on, it still sounds wild."
+    tr: "Berlioz *Fantastik Senfoni*’yi yazdığında 26 yaşındaydı: arplar, kilise çanları ve eski *Dies irae* ilahisi üzerine bir cadı dansıyla anlatılan bir aşk hikâyesi. Aradan neredeyse iki yüzyıl geçti, hâlâ çılgınca duyuluyor."
+  birthday_line:
+    en: "Born on this day in 1803, in La Côte-Saint-André."
+    tr: "1803’te bugün La Côte-Saint-André’de doğdu."
   died: 1869
   era: romantic
   names:
     en: { name: Hector Berlioz, short: Berlioz }
-    tr: { name: Hector Berlioz, short: Berlioz }
+    tr: { name: Hector Berlioz, short: Berlioz, short_genitive: Berlioz’un }
   nationality: { en: French, tr: Fransız }
   facts:
     born: { en: "11 December 1803, La Côte-Saint-André", tr: "11 Aralık 1803, La Côte-Saint-André" }
@@ -204,11 +246,19 @@
   match: Johannes Brahms
   sort_name: Brahms, Johannes
   born: 1833
+  birthday: "05-07"
+  birthday_basis: null
+  birthday_note:
+    en: "The famous Brahms lullaby was a present, written in 1868 for a friend’s new baby. Today Brahms shares a birthday with Tchaikovsky, born seven years later."
+    tr: "Ünlü Brahms ninnisi bir armağandı: 1868’de bir arkadaşın yeni doğan bebeği için yazıldı. Brahms bugün doğum gününü, yedi yıl sonra doğan Çaykovski’yle paylaşıyor."
+  birthday_line:
+    en: "Born on this day in 1833, in Hamburg."
+    tr: "1833’te bugün Hamburg’da doğdu."
   died: 1897
   era: romantic
   names:
     en: { name: Johannes Brahms, short: Brahms }
-    tr: { name: Johannes Brahms, short: Brahms }
+    tr: { name: Johannes Brahms, short: Brahms, short_genitive: Brahms’ın }
   nationality: { en: German, tr: Alman }
   facts:
     born: { en: "7 May 1833, Hamburg", tr: "7 Mayıs 1833, Hamburg" }
@@ -248,11 +298,19 @@
   match: Pyotr Ilyich Tchaikovsky
   sort_name: Tchaikovsky, Pyotr Ilyich
   born: 1840
+  birthday: "05-07"
+  birthday_basis: null
+  birthday_note:
+    en: "Tchaikovsky expected the *1812 Overture* to be “very loud and noisy” and doubted its artistic worth. Audiences have disagreed ever since. Today’s birthday is shared with Brahms, seven years older."
+    tr: "Çaykovski *1812 Uvertürü*’nün “çok gürültülü” olacağını yazmış, sanat değerinden de şüphe etmişti. Dinleyiciler o günden beri aynı fikirde değil. Bugün doğum gününü kendisinden yedi yaş büyük Brahms’la paylaşıyor."
+  birthday_line:
+    en: "Born on this day in 1840, in Votkinsk."
+    tr: "1840’ta bugün Votkinsk’te doğdu."
   died: 1893
   era: late_romantic
   names:
     en: { name: Pyotr Ilyich Tchaikovsky, short: Tchaikovsky }
-    tr: { name: Pyotr İlyiç Çaykovski, short: Çaykovski }
+    tr: { name: Pyotr İlyiç Çaykovski, short: Çaykovski, short_genitive: Çaykovski’nin }
   nationality: { en: Russian, tr: Rus }
   facts:
     born: { en: "7 May 1840, Votkinsk", tr: "7 Mayıs 1840, Votkinsk" }
@@ -292,11 +350,19 @@
   match: Antonín Dvořák
   sort_name: Dvořák, Antonín
   born: 1841
+  birthday: "09-08"
+  birthday_basis: null
+  birthday_note:
+    en: "Dvořák loved trains all life long and is quoted as saying, “I’d give all my symphonies if I could have invented the locomotive.” Luckily for us, nobody took up the offer."
+    tr: "Dvořák ömür boyu trenlere bayıldı; “Lokomotifi ben icat edebilseydim, bütün senfonilerimi verirdim” dediği aktarılır. Neyse ki kimse bu teklifi kabul etmedi."
+  birthday_line:
+    en: "Born on this day in 1841, in Nelahozeves."
+    tr: "1841’de bugün Nelahozeves’te doğdu."
   died: 1904
   era: late_romantic
   names:
     en: { name: Antonín Dvořák, short: Dvořák }
-    tr: { name: Antonín Dvořák, short: Dvořák }
+    tr: { name: Antonín Dvořák, short: Dvořák, short_genitive: Dvořák’ın }
   nationality: { en: Czech, tr: Çek }
   facts:
     born: { en: "8 September 1841, Nelahozeves", tr: "8 Eylül 1841, Nelahozeves" }
@@ -336,11 +402,19 @@
   match: Gustav Mahler
   sort_name: Mahler, Gustav
   born: 1860
+  birthday: "07-07"
+  birthday_basis: null
+  birthday_note:
+    en: "The Fourth Symphony ends with a soprano singing a child’s picture of heaven: a great feast, with angels baking the bread. A gentle way into Mahler’s music on the composer’s birthday."
+    tr: "4. Senfoni, bir sopranonun söylediği, çocuk gözüyle bir cennet tasviriyle biter: büyük bir şölen, ekmeği melekler pişirir. Mahler’in doğum gününde müziğine yumuşak bir giriş."
+  birthday_line:
+    en: "Born on this day in 1860, in Kaliště."
+    tr: "1860’ta bugün Kaliště’de doğdu."
   died: 1911
   era: late_romantic
   names:
     en: { name: Gustav Mahler, short: Mahler }
-    tr: { name: Gustav Mahler, short: Mahler }
+    tr: { name: Gustav Mahler, short: Mahler, short_genitive: Mahler’in }
   nationality: { en: Austrian, tr: Avusturyalı }
   facts:
     born: { en: "7 July 1860, Kaliště", tr: "7 Temmuz 1860, Kaliště" }
@@ -380,11 +454,19 @@
   match: Sergei Rachmaninoff
   sort_name: Rachmaninoff, Sergei
   born: 1873
+  birthday: "04-01"
+  birthday_basis: null
+  birthday_note:
+    en: "Stravinsky is said to have called Rachmaninoff “a six-and-a-half-foot scowl”. The music tells a warmer story: try the slow movement of the Second Piano Concerto."
+    tr: "Stravinski’nin, Rahmaninov’u “iki metrelik bir asık surat” diye tarif ettiği söylenir. Müzik çok daha sıcak bir şey anlatır: 2. Piyano Konçertosu’nun ağır bölümünü dinleyin."
+  birthday_line:
+    en: "Born on this day in 1873, in the Novgorod Governorate."
+    tr: "1873’te bugün Novgorod Guberniyası’nda doğdu."
   died: 1943
   era: late_romantic
   names:
     en: { name: Sergei Rachmaninoff, short: Rachmaninoff }
-    tr: { name: Sergey Rahmaninov, short: Rahmaninov }
+    tr: { name: Sergey Rahmaninov, short: Rahmaninov, short_genitive: Rahmaninov’un }
   nationality: { en: Russian, tr: Rus }
   facts:
     born: { en: "1 April 1873, Novgorod Governorate", tr: "1 Nisan 1873, Novgorod Guberniyası" }
@@ -425,11 +507,19 @@
   match: Dmitri Shostakovich
   sort_name: Shostakovich, Dmitri
   born: 1906
+  birthday: "09-25"
+  birthday_basis: null
+  birthday_note:
+    en: "Shostakovich loved football, qualified as a referee and kept careful notes of matches and scores. The ballet *The Golden Age* even puts a football team on stage."
+    tr: "Şostakoviç futbol tutkunuydu: hakemlik belgesi almış, maçları ve skorları özenle not ederdi. *Altın Çağ* balesinde sahneye bir futbol takımı bile çıkar."
+  birthday_line:
+    en: "Born on this day in 1906, in St Petersburg."
+    tr: "1906’da bugün St. Petersburg’da doğdu."
   died: 1975
   era: modern
   names:
     en: { name: Dmitri Shostakovich, short: Shostakovich }
-    tr: { name: Dmitri Şostakoviç, short: Şostakoviç }
+    tr: { name: Dmitri Şostakoviç, short: Şostakoviç, short_genitive: Şostakoviç’in }
   nationality: { en: Russian, tr: Rus }
   facts:
     born: { en: "25 September 1906, St Petersburg", tr: "25 Eylül 1906, St. Petersburg" }
@@ -474,11 +564,19 @@
   match: Anton Bruckner
   sort_name: Bruckner, Anton
   born: 1824
+  birthday: "09-04"
+  birthday_basis: null
+  birthday_note:
+    en: "Bruckner is said to have dedicated the Ninth Symphony “to the beloved God”. Its slow third movement, which ends in peace, was the last movement Bruckner completed."
+    tr: "Bruckner’in 9. Senfoni’yi “sevgili Tanrı’ya” adadığı söylenir. Huzurla biten ağır üçüncü bölüm, Bruckner’in tamamlayabildiği son bölümdü."
+  birthday_line:
+    en: "Born on this day in 1824, in Ansfelden."
+    tr: "1824’te bugün Ansfelden’de doğdu."
   died: 1896
   era: late_romantic
   names:
     en: { name: Anton Bruckner, short: Bruckner }
-    tr: { name: Anton Bruckner, short: Bruckner }
+    tr: { name: Anton Bruckner, short: Bruckner, short_genitive: Bruckner’in }
   nationality: { en: Austrian, tr: Avusturyalı }
   facts:
     born: { en: "4 September 1824, Ansfelden", tr: "4 Eylül 1824, Ansfelden" }
@@ -520,11 +618,19 @@
   match: Joseph Haydn
   sort_name: Haydn, Joseph
   born: 1732
+  birthday: "03-31"
+  birthday_basis: null
+  birthday_note:
+    en: "In the *Farewell* Symphony the players stop one by one and leave, until two violins remain: Haydn’s hint to the prince that the musicians wanted to go home. The story goes that the court left the next day."
+    tr: "*Veda* Senfonisi’nde çalgıcılar birer birer susup çıkar, geriye iki keman kalır: Haydn’ın, müzisyenlerin eve dönmek istediğini prense sezdirme yolu. Anlatılana göre saray ertesi gün yola çıktı."
+  birthday_line:
+    en: "Born on this day in 1732, in Rohrau."
+    tr: "1732’de bugün Rohrau’da doğdu."
   died: 1809
   era: classical
   names:
     en: { name: Joseph Haydn, short: Haydn }
-    tr: { name: Joseph Haydn, short: Haydn }
+    tr: { name: Joseph Haydn, short: Haydn, short_genitive: Haydn’ın }
   nationality: { en: Austrian, tr: Avusturyalı }
   facts:
     born: { en: "31 March 1732, Rohrau", tr: "31 Mart 1732, Rohrau" }
@@ -564,6 +670,8 @@
   match: Gregorio Allegri
   sort_name: Allegri, Gregorio
   born: 1582
+  birthday: null
+  birthday_basis: null
   died: 1652
   era: renaissance
   names:
@@ -608,11 +716,19 @@
   match: Robert Schumann
   sort_name: Schumann, Robert
   born: 1810
+  birthday: "06-08"
+  birthday_basis: null
+  birthday_note:
+    en: "Schumann sketched the *Spring* Symphony in four days in January 1841, in the first winter after marrying Clara. Outside it was still winter; in the music, spring has already come."
+    tr: "Schumann *Bahar* Senfonisi’nin taslağını Ocak 1841’de, Clara’yla evlendikten sonraki ilk kışta dört günde çıkardı. Dışarıda hâlâ kış vardı; müzikte bahar çoktan gelmişti."
+  birthday_line:
+    en: "Born on this day in 1810, in Zwickau."
+    tr: "1810’da bugün Zwickau’da doğdu."
   died: 1856
   era: romantic
   names:
     en: { name: Robert Schumann, short: Schumann }
-    tr: { name: Robert Schumann, short: Schumann }
+    tr: { name: Robert Schumann, short: Schumann, short_genitive: Schumann’ın }
   nationality: { en: German, tr: Alman }
   facts:
     born: { en: "8 June 1810, Zwickau", tr: "8 Haziran 1810, Zwickau" }
@@ -652,11 +768,19 @@
   match: Felix Mendelssohn
   sort_name: Mendelssohn, Felix
   born: 1809
+  birthday: "02-03"
+  birthday_basis: null
+  birthday_note:
+    en: "Travelling in the Scottish islands in 1829, Mendelssohn sent home a letter with a few bars of music in it: the opening of what became *The Hebrides*. You hear them in its first seconds."
+    tr: "Mendelssohn 1829’da İskoç adalarını gezerken eve yazdığı bir mektuba birkaç ölçü müzik ekledi: sonradan *Hebrid Adaları* uvertürünün açılışı olacak ölçüler. Onları eserin ilk saniyelerinde duyarsınız."
+  birthday_line:
+    en: "Born on this day in 1809, in Hamburg."
+    tr: "1809’da bugün Hamburg’da doğdu."
   died: 1847
   era: romantic
   names:
     en: { name: Felix Mendelssohn, short: Mendelssohn }
-    tr: { name: Felix Mendelssohn, short: Mendelssohn }
+    tr: { name: Felix Mendelssohn, short: Mendelssohn, short_genitive: Mendelssohn’un }
   nationality: { en: German, tr: Alman }
   facts:
     born: { en: "3 February 1809, Hamburg", tr: "3 Şubat 1809, Hamburg" }
@@ -698,11 +822,19 @@
   match: Frédéric Chopin
   sort_name: Chopin, Frédéric
   born: 1810
+  birthday: "03-01"
+  birthday_basis: null
+  birthday_note:
+    en: "The Chopin family kept this day, though the parish register says 22 February. At 20, Chopin played the E minor Piano Concerto at a farewell concert in Warsaw, weeks before leaving Poland for good."
+    tr: "Kilise kaydında 22 Şubat yazsa da Chopin ailesi bu günü kutlardı. Chopin 20 yaşında, Polonya’dan temelli ayrılmadan birkaç hafta önce, Varşova’daki bir veda konserinde Mi minör Piyano Konçertosu’nu çaldı."
+  birthday_line:
+    en: "Born on this day in 1810, in Żelazowa Wola."
+    tr: "1810’da bugün Żelazowa Wola’da doğdu."
   died: 1849
   era: romantic
   names:
     en: { name: Frédéric Chopin, short: Chopin }
-    tr: { name: Frédéric Chopin, short: Chopin }
+    tr: { name: Frédéric Chopin, short: Chopin, short_genitive: Chopin’in }
   nationality: { en: Polish, tr: Polonyalı }
   facts:
     born: { en: "1 March 1810, Żelazowa Wola, near Warsaw", tr: "1 Mart 1810, Żelazowa Wola, Varşova yakınları" }
@@ -742,11 +874,19 @@
   match: Franz Liszt
   sort_name: Liszt, Franz
   born: 1811
+  birthday: "10-22"
+  birthday_basis: null
+  birthday_note:
+    en: "At the height of “Lisztomania”, fans fought over Liszt’s gloves and handkerchiefs, and one admirer had a discarded cigar stump set in a locket. The pop concert is older than it looks."
+    tr: "“Lisztomani” doruktayken hayranlar Liszt’in eldivenleri ve mendilleri için kapışırdı; bir hayran, sokağa atılmış bir puro izmaritini madalyon içinde saklattı. Pop konserinin geçmişi göründüğünden eski."
+  birthday_line:
+    en: "Born on this day in 1811, in Raiding."
+    tr: "1811’de bugün Raiding’de doğdu."
   died: 1886
   era: romantic
   names:
     en: { name: Franz Liszt, short: Liszt }
-    tr: { name: Franz Liszt, short: Liszt }
+    tr: { name: Franz Liszt, short: Liszt, short_genitive: Liszt’in }
   nationality: { en: Hungarian, tr: Macar }
   facts:
     born: { en: "22 October 1811, Raiding (Doborján), Hungary", tr: "22 Ekim 1811, Raiding (Doborján), Macaristan" }
@@ -786,11 +926,19 @@
   match: Edvard Grieg
   sort_name: Grieg, Edvard
   born: 1843
+  birthday: "06-15"
+  birthday_basis: null
+  birthday_note:
+    en: "Grieg could not bear to hear “In the Hall of the Mountain King”, a piece that, in the composer’s words, “reeks of cowpats”. Listeners have never agreed: it closes the *Peer Gynt* Suite No. 1."
+    tr: "Grieg, “Dağ Kralının Sarayında” parçasını dinlemeye dayanamıyordu; kendi deyişiyle parça “inek tezeği kokuyordu”. Dinleyiciler hiç aynı fikirde olmadı: *Peer Gynt* 1. Süit bu parçayla biter."
+  birthday_line:
+    en: "Born on this day in 1843, in Bergen."
+    tr: "1843’te bugün Bergen’de doğdu."
   died: 1907
   era: late_romantic
   names:
     en: { name: Edvard Grieg, short: Grieg }
-    tr: { name: Edvard Grieg, short: Grieg }
+    tr: { name: Edvard Grieg, short: Grieg, short_genitive: Grieg’in }
   nationality: { en: Norwegian, tr: Norveçli }
   facts:
     born: { en: "15 June 1843, Bergen", tr: "15 Haziran 1843, Bergen" }
@@ -832,11 +980,19 @@
   match: Max Bruch
   sort_name: Bruch, Max
   born: 1838
+  birthday: "01-06"
+  birthday_basis: null
+  birthday_note:
+    en: "Bruch sold the First Violin Concerto outright and earned nothing from its huge later success, a lasting grievance. Violinists, and listeners, have been grateful for it ever since."
+    tr: "Bruch 1. Keman Konçertosu’nu tek seferlik bir ödemeyle sattı ve eserin sonraki büyük başarısından hiçbir şey kazanmadı; bu hep içinde ukde kaldı. Kemancılar da dinleyiciler de o günden beri bu konçertoya minnettar."
+  birthday_line:
+    en: "Born on this day in 1838, in Cologne."
+    tr: "1838’de bugün Köln’de doğdu."
   died: 1920
   era: romantic
   names:
     en: { name: Max Bruch, short: Bruch }
-    tr: { name: Max Bruch, short: Bruch }
+    tr: { name: Max Bruch, short: Bruch, short_genitive: Bruch’un }
   nationality: { en: German, tr: Alman }
   facts:
     born: { en: "6 January 1838, Cologne", tr: "6 Ocak 1838, Köln" }
@@ -876,11 +1032,19 @@
   match: Jean Sibelius
   sort_name: Sibelius, Jean
   born: 1865
+  birthday: "12-08"
+  birthday_basis: null
+  birthday_note:
+    en: "In April 1915 Sibelius watched sixteen swans circle overhead and called it one of the great experiences of a lifetime. They fly on in the finale of the Fifth Symphony."
+    tr: "Nisan 1915’te Sibelius başının üzerinde dönen on altı kuğuyu izledi ve bunu hayatının en büyük deneyimlerinden biri saydı. O kuğular 5. Senfoni’nin finalinde uçmayı sürdürüyor."
+  birthday_line:
+    en: "Born on this day in 1865, in Hämeenlinna."
+    tr: "1865’te bugün Hämeenlinna’da doğdu."
   died: 1957
   era: late_romantic
   names:
     en: { name: Jean Sibelius, short: Sibelius }
-    tr: { name: Jean Sibelius, short: Sibelius }
+    tr: { name: Jean Sibelius, short: Sibelius, short_genitive: Sibelius’un }
   nationality: { en: Finnish, tr: Fin }
   facts:
     born: { en: "8 December 1865, Hämeenlinna", tr: "8 Aralık 1865, Hämeenlinna" }
@@ -920,11 +1084,19 @@
   match: Edward Elgar
   sort_name: Elgar, Edward
   born: 1857
+  birthday: "06-02"
+  birthday_basis: null
+  birthday_note:
+    en: "In 1932, aged 75, Elgar recorded the Violin Concerto with the 16-year-old Yehudi Menuhin. The old composer and the young violinist became friends."
+    tr: "Elgar 1932’de, 75 yaşındayken, Keman Konçertosu’nu 16 yaşındaki Yehudi Menuhin’le kaydetti. Yaşlı besteciyle genç kemancı dost oldular."
+  birthday_line:
+    en: "Born on this day in 1857, in Lower Broadheath."
+    tr: "1857’de bugün Lower Broadheath’te doğdu."
   died: 1934
   era: late_romantic
   names:
     en: { name: Edward Elgar, short: Elgar }
-    tr: { name: Edward Elgar, short: Elgar }
+    tr: { name: Edward Elgar, short: Elgar, short_genitive: Elgar’ın }
   nationality: { en: English, tr: İngiliz }
   facts:
     born: { en: "2 June 1857, Lower Broadheath", tr: "2 Haziran 1857, Lower Broadheath" }
@@ -967,11 +1139,19 @@
   match: Antonio Vivaldi
   sort_name: Vivaldi, Antonio
   born: 1678
+  birthday: "03-04"
+  birthday_basis: null
+  birthday_note:
+    en: "In the slow movement of *Spring*, the violas play a loud, rough figure over and over. Vivaldi marked it in the score: the barking dog, keeping watch over a sleeping goatherd."
+    tr: "*İlkbahar*’ın ağır bölümünde viyolalar sert ve yüksek bir figürü durmadan tekrarlar. Vivaldi partisyona not düşmüştü: uyuyan keçi çobanını bekleyen, havlayan köpek."
+  birthday_line:
+    en: "Born on this day in 1678, in Venice."
+    tr: "1678’de bugün Venedik’te doğdu."
   died: 1741
   era: baroque
   names:
     en: { name: Antonio Vivaldi, short: Vivaldi }
-    tr: { name: Antonio Vivaldi, short: Vivaldi }
+    tr: { name: Antonio Vivaldi, short: Vivaldi, short_genitive: Vivaldi’nin }
   nationality: { en: Italian, tr: İtalyan }
   facts:
     born: { en: "4 March 1678, Venice", tr: "4 Mart 1678, Venedik" }
@@ -1013,11 +1193,19 @@
   match: Johann Sebastian Bach
   sort_name: Bach, Johann Sebastian
   born: 1685
+  birthday: "03-21"
+  birthday_basis: "old_style"
+  birthday_note:
+    en: "In 1705 Bach travelled about 450 km from Arnstadt to Lübeck, reportedly on foot, to hear the organist Dieterich Buxtehude, and stayed some three months longer than the leave allowed."
+    tr: "Bach 1705’te orgcu Dieterich Buxtehude’yi dinlemek için Arnstadt’tan Lübeck’e 450 km kadar yol gitti, anlatılana göre yürüyerek; izninden üç ay kadar fazla kaldı."
+  birthday_line:
+    en: "Born on this day in 1685 (Old Style), in Eisenach."
+    tr: "1685’te bugün (eski takvimle) Eisenach’ta doğdu."
   died: 1750
   era: baroque
   names:
     en: { name: Johann Sebastian Bach, short: Bach }
-    tr: { name: Johann Sebastian Bach, short: Bach }
+    tr: { name: Johann Sebastian Bach, short: Bach, short_genitive: Bach’ın }
   nationality: { en: German, tr: Alman }
   facts:
     born: { en: "21 March 1685 (Old Style), Eisenach", tr: "21 Mart 1685 (eski takvim), Eisenach" }
@@ -1057,11 +1245,19 @@
   match: César Franck
   sort_name: Franck, César
   born: 1822
+  birthday: "12-10"
+  birthday_basis: null
+  birthday_note:
+    en: "The Violin Sonata was a wedding present for Eugène Ysaÿe. At its public premiere, in a Brussels gallery where no lamps were allowed, the last movements were played from memory in the fading light."
+    tr: "Keman Sonatı, Eugène Ysaÿe’ye bir düğün armağanıydı. Lamba yakılmasına izin verilmeyen bir Brüksel galerisindeki ilk halka açık seslendirmede son bölümler, kararan ışıkta ezberden çalındı."
+  birthday_line:
+    en: "Born on this day in 1822, in Liège."
+    tr: "1822’de bugün Liège’de doğdu."
   died: 1890
   era: romantic
   names:
     en: { name: César Franck, short: Franck }
-    tr: { name: César Franck, short: Franck }
+    tr: { name: César Franck, short: Franck, short_genitive: Franck’ın }
   nationality: { en: French, tr: Fransız }
   facts:
     born: { en: "10 December 1822, Liège", tr: "10 Aralık 1822, Liège" }
@@ -1104,6 +1300,8 @@
   match: Thomas Tallis
   sort_name: Tallis, Thomas
   born: 1505
+  birthday: null
+  birthday_basis: null
   died: 1585
   era: renaissance
   names:
@@ -1134,11 +1332,19 @@
   match: Bedřich Smetana
   sort_name: Smetana, Bedřich
   born: 1824
+  birthday: "03-02"
+  birthday_basis: null
+  birthday_note:
+    en: "*Vltava* follows the river from two small springs, past a hunt, a village wedding and nymphs dancing by moonlight, all the way to Prague. Smetana wrote it after going completely deaf."
+    tr: "*Vltava* nehri iki küçük kaynaktan başlayıp bir avın, bir köy düğününün ve ay ışığında dans eden su perilerinin yanından geçerek Prag’a kadar izler. Smetana bu eseri tamamen sağır olduktan sonra yazdı."
+  birthday_line:
+    en: "Born on this day in 1824, in Litomyšl."
+    tr: "1824’te bugün Litomyšl’de doğdu."
   died: 1884
   era: romantic
   names:
     en: { name: Bedřich Smetana, short: Smetana }
-    tr: { name: Bedřich Smetana, short: Smetana }
+    tr: { name: Bedřich Smetana, short: Smetana, short_genitive: Smetana’nın }
   nationality: { en: Czech, tr: Çek }
   facts:
     born: { en: "2 March 1824, Litomyšl", tr: "2 Mart 1824, Litomyšl" }
@@ -1179,11 +1385,19 @@
   match: Claude Debussy
   sort_name: Debussy, Claude
   born: 1862
+  birthday: "08-22"
+  birthday_basis: null
+  birthday_note:
+    en: "Debussy asked for Hokusai’s *Great Wave* on the cover of the first edition of *La mer*. Much of the music was begun far from any coast, inland in Burgundy."
+    tr: "Debussy, *Deniz*’in ilk baskısının kapağına Hokusai’nin *Büyük Dalga*’sının konmasını istedi. Müziğin büyük kısmına ise kıyıdan çok uzakta, Burgonya’nın içlerinde başlanmıştı."
+  birthday_line:
+    en: "Born on this day in 1862, in Saint-Germain-en-Laye."
+    tr: "1862’de bugün Saint-Germain-en-Laye’de doğdu."
   died: 1918
   era: late_romantic
   names:
     en: { name: Claude Debussy, short: Debussy }
-    tr: { name: Claude Debussy, short: Debussy }
+    tr: { name: Claude Debussy, short: Debussy, short_genitive: Debussy’nin }
   nationality: { en: French, tr: Fransız }
   facts:
     born: { en: "22 August 1862, Saint-Germain-en-Laye", tr: "22 Ağustos 1862, Saint-Germain-en-Laye" }
@@ -1223,11 +1437,19 @@
   match: Maurice Ravel
   sort_name: Ravel, Maurice
   born: 1875
+  birthday: "03-07"
+  birthday_basis: null
+  birthday_note:
+    en: "Ravel called *Boléro* an experiment in “orchestral tissue without music”: one tune, one rhythm, one long crescendo. It became Ravel’s most famous work, to the composer’s own surprise."
+    tr: "Ravel *Bolero*’yu bir deney sayıyor, “müziksiz bir orkestra dokusu” diyordu: tek ezgi, tek ritim, upuzun bir kreşendo. Eser, bestecisini de şaşırtarak Ravel’in en ünlü yapıtı oldu."
+  birthday_line:
+    en: "Born on this day in 1875, in Ciboure."
+    tr: "1875’te bugün Ciboure’da doğdu."
   died: 1937
   era: modern
   names:
     en: { name: Maurice Ravel, short: Ravel }
-    tr: { name: Maurice Ravel, short: Ravel }
+    tr: { name: Maurice Ravel, short: Ravel, short_genitive: Ravel’in }
   nationality: { en: French, tr: Fransız }
   facts:
     born: { en: "7 March 1875, Ciboure", tr: "7 Mart 1875, Ciboure" }
@@ -1267,11 +1489,19 @@
   match: Nikolai Rimsky-Korsakov
   sort_name: Rimsky-Korsakov, Nikolai
   born: 1844
+  birthday: "03-18"
+  birthday_basis: null
+  birthday_note:
+    en: "In *Scheherazade* the solo violin is the storyteller, returning between the tales. Rimsky-Korsakov later dropped the movement titles, so that listeners could imagine the stories for themselves."
+    tr: "*Şehrazat*’ta solo keman hikâye anlatıcısıdır, masalların arasında tekrar tekrar döner. Rimski-Korsakov sonradan bölüm başlıklarını kaldırdı; hikâyeleri dinleyici kendisi hayal etsin istedi."
+  birthday_line:
+    en: "Born on this day in 1844, in Tikhvin."
+    tr: "1844’te bugün Tihvin’de doğdu."
   died: 1908
   era: late_romantic
   names:
     en: { name: Nikolai Rimsky-Korsakov, short: Rimsky-Korsakov }
-    tr: { name: Nikolay Rimski-Korsakov, short: Rimski-Korsakov }
+    tr: { name: Nikolay Rimski-Korsakov, short: Rimski-Korsakov, short_genitive: Rimski-Korsakov’un }
   nationality: { en: Russian, tr: Rus }
   facts:
     born: { en: "18 March 1844, Tikhvin", tr: "18 Mart 1844, Tihvin" }
@@ -1311,11 +1541,19 @@
   match: Richard Wagner
   sort_name: Wagner, Richard
   born: 1813
+  birthday: "05-22"
+  birthday_basis: null
+  birthday_note:
+    en: "*Siegfried Idyll* was a birthday surprise: on Christmas morning 1870 a small orchestra on the stairs at Tribschen played it to wake Cosima, Wagner’s wife. A fitting piece for a birthday."
+    tr: "*Siegfried İdili* bir doğum günü sürpriziydi: 1870’in Noel sabahı Tribschen’deki evin merdivenlerine yerleşen küçük bir orkestra, Wagner’in eşi Cosima’yı bu müzikle uyandırdı. Doğum günü için yerinde bir eser."
+  birthday_line:
+    en: "Born on this day in 1813, in Leipzig."
+    tr: "1813’te bugün Leipzig’de doğdu."
   died: 1883
   era: romantic
   names:
     en: { name: Richard Wagner, short: Wagner }
-    tr: { name: Richard Wagner, short: Wagner }
+    tr: { name: Richard Wagner, short: Wagner, short_genitive: Wagner’in }
   nationality: { en: German, tr: Alman }
   facts:
     born: { en: "22 May 1813, Leipzig", tr: "22 Mayıs 1813, Leipzig" }
@@ -1355,6 +1593,8 @@
   match: Johann Pachelbel
   sort_name: Pachelbel, Johann
   born: 1653
+  birthday: null
+  birthday_basis: null
   died: 1706
   era: baroque
   names:
@@ -1385,11 +1625,19 @@
   match: Alexander Borodin
   sort_name: Borodin, Alexander
   born: 1833
+  birthday: "11-12"
+  birthday_basis: null
+  birthday_note:
+    en: "A professor of chemistry all along, Borodin took up the name “Sunday composer”, writing music when the laboratory allowed. The String Quartet No. 2 shows what those Sundays could hold."
+    tr: "Ömrü boyunca kimya profesörü olan Borodin kendine “pazar bestecisi” derdi; laboratuvar izin verdikçe beste yapardı. 2. Yaylı Dörtlü, o pazarlara neler sığabildiğini gösteriyor."
+  birthday_line:
+    en: "Born on this day in 1833, in St Petersburg."
+    tr: "1833’te bugün St. Petersburg’da doğdu."
   died: 1887
   era: romantic
   names:
     en: { name: Alexander Borodin, short: Borodin }
-    tr: { name: Aleksandr Borodin, short: Borodin }
+    tr: { name: Aleksandr Borodin, short: Borodin, short_genitive: Borodin’in }
   nationality: { en: Russian, tr: Rus }
   facts:
     born: { en: "12 November 1833, St Petersburg", tr: "12 Kasım 1833, St. Petersburg" }
@@ -1430,11 +1678,19 @@
   match: Ralph Vaughan Williams
   sort_name: Vaughan Williams, Ralph
   born: 1872
+  birthday: "10-12"
+  birthday_basis: null
+  birthday_note:
+    en: "In 1914, the year of *The Lark Ascending*, Vaughan Williams was at Margate and later told how a Boy Scout made a citizen’s arrest, taking the jottings in a notebook for maps for the enemy."
+    tr: "Vaughan Williams, *Yükselen Tarlakuşu*’nu yazdığı 1914 yılında Margate’teydi. Sonradan anlattığına göre bir izci, defterdeki notları düşmana gidecek haritalar sanıp besteciyi “tutuklamıştı”."
+  birthday_line:
+    en: "Born on this day in 1872, in Down Ampney."
+    tr: "1872’de bugün Down Ampney’de doğdu."
   died: 1958
   era: modern
   names:
     en: { name: Ralph Vaughan Williams, short: Vaughan Williams }
-    tr: { name: Ralph Vaughan Williams, short: Vaughan Williams }
+    tr: { name: Ralph Vaughan Williams, short: Vaughan Williams, short_genitive: Vaughan Williams’ın }
   nationality: { en: English, tr: İngiliz }
   facts:
     born: { en: "12 October 1872, Down Ampney, Gloucestershire", tr: "12 Ekim 1872, Down Ampney, Gloucestershire" }
@@ -1475,11 +1731,19 @@
   match: Sergei Prokofiev
   sort_name: Prokofiev, Sergei
   born: 1891
+  birthday: "04-27"
+  birthday_basis: null
+  birthday_note:
+    en: "Prokofiev celebrated on 23 April all life long. The birth certificate, found only after the composer’s death, says 27 April: four days later, and the day we keep."
+    tr: "Prokofyev doğum gününü ömrü boyunca 23 Nisan’da kutladı. Ölümünden sonra bulunan doğum belgesinde ise 27 Nisan yazıyor: dört gün sonrası. Biz bu günü tutuyoruz."
+  birthday_line:
+    en: "Born on this day in 1891, in Sontsovka."
+    tr: "1891’de bugün Sontsovka’da doğdu."
   died: 1953
   era: modern
   names:
     en: { name: Sergei Prokofiev, short: Prokofiev }
-    tr: { name: Sergey Prokofyev, short: Prokofyev }
+    tr: { name: Sergey Prokofyev, short: Prokofyev, short_genitive: Prokofyev’in }
   nationality: { en: Russian, tr: Rus }
   facts:
     born: { en: "27 April 1891, Sontsovka (now Ukraine)", tr: "27 Nisan 1891, Sontsovka (bugün Ukrayna)" }
@@ -1520,11 +1784,19 @@
   match: Samuel Barber
   sort_name: Barber, Samuel
   born: 1910
+  birthday: "03-09"
+  birthday_basis: null
+  birthday_note:
+    en: "The *Adagio for Strings* began as the slow movement of a string quartet, written in 1936 when Barber was 26. Two years later Toscanini conducted it on the radio, and it has hardly been silent since."
+    tr: "*Yaylılar için Adagio*, Barber’ın 1936’da, 26 yaşında yazdığı bir yaylı dörtlünün ağır bölümü olarak doğdu. İki yıl sonra Toscanini onu radyoda yönetti; o günden beri pek susmadı."
+  birthday_line:
+    en: "Born on this day in 1910, in West Chester."
+    tr: "1910’da bugün West Chester’da doğdu."
   died: 1981
   era: modern
   names:
     en: { name: Samuel Barber, short: Barber }
-    tr: { name: Samuel Barber, short: Barber }
+    tr: { name: Samuel Barber, short: Barber, short_genitive: Barber’ın }
   nationality: { en: American, tr: Amerikalı }
   facts:
     born: { en: "9 March 1910, West Chester, Pennsylvania", tr: "9 Mart 1910, West Chester, Pensilvanya" }
@@ -1554,11 +1826,19 @@
   match: Camille Saint-Saëns
   sort_name: Saint-Saëns, Camille
   born: 1835
+  birthday: "10-09"
+  birthday_basis: null
+  birthday_note:
+    en: "In *Danse macabre* Death plays a violin with its top string tuned down, so the open strings clash. The skeletons dance until a cockerel, played by the oboe, sends them back to their graves."
+    tr: "*Danse macabre*’da Ölüm, en ince teli pese akort edilmiş bir keman çalar; boş teller birbiriyle çatışır. İskeletler, obuanın çaldığı horoz ötüp onları mezarlarına geri gönderene kadar dans eder."
+  birthday_line:
+    en: "Born on this day in 1835, in Paris."
+    tr: "1835’te bugün Paris’te doğdu."
   died: 1921
   era: romantic
   names:
     en: { name: Camille Saint-Saëns, short: Saint-Saëns }
-    tr: { name: Camille Saint-Saëns, short: Saint-Saëns }
+    tr: { name: Camille Saint-Saëns, short: Saint-Saëns, short_genitive: Saint-Saëns’ın }
   nationality: { en: French, tr: Fransız }
   facts:
     born: { en: "9 October 1835, Paris", tr: "9 Ekim 1835, Paris" }
@@ -1598,11 +1878,19 @@
   match: Georges Bizet
   sort_name: Bizet, Georges
   born: 1838
+  birthday: "10-25"
+  birthday_basis: null
+  birthday_note:
+    en: "The Habanera in *Carmen* borrows a tune by the Spanish composer Sebastián Yradier. Bizet took it for a folk song, and added a credit to the score once the truth came out."
+    tr: "*Carmen*’deki Habanera, İspanyol besteci Sebastián Yradier’in bir ezgisinden ödünç alınmıştır. Bizet onu bir halk şarkısı sanmış, gerçeği öğrenince partisyona Yradier’in adını eklemişti."
+  birthday_line:
+    en: "Born on this day in 1838, in Paris."
+    tr: "1838’de bugün Paris’te doğdu."
   died: 1875
   era: romantic
   names:
     en: { name: Georges Bizet, short: Bizet }
-    tr: { name: Georges Bizet, short: Bizet }
+    tr: { name: Georges Bizet, short: Bizet, short_genitive: Bizet’nin }
   nationality: { en: French, tr: Fransız }
   facts:
     born: { en: "25 October 1838, Paris", tr: "25 Ekim 1838, Paris" }
@@ -1642,11 +1930,19 @@
   match: George Gershwin
   sort_name: Gershwin, George
   born: 1898
+  birthday: "09-26"
+  birthday_basis: null
+  birthday_note:
+    en: "The clarinet glissando that opens *Rhapsody in Blue* began, the story goes, as a joke in rehearsal by the clarinettist Ross Gorman. Gershwin liked it and kept it."
+    tr: "Anlatılana göre *Rhapsody in Blue*’yu açan klarnet glisandosu, klarnetçi Ross Gorman’ın provada yaptığı bir şakaydı. Gershwin bunu sevdi ve eserde bıraktı."
+  birthday_line:
+    en: "Born on this day in 1898, in Brooklyn."
+    tr: "1898’de bugün Brooklyn’de doğdu."
   died: 1937
   era: modern
   names:
     en: { name: George Gershwin, short: Gershwin }
-    tr: { name: George Gershwin, short: Gershwin }
+    tr: { name: George Gershwin, short: Gershwin, short_genitive: Gershwin’in }
   nationality: { en: American, tr: Amerikalı }
   facts:
     born: { en: "26 September 1898, Brooklyn, New York", tr: "26 Eylül 1898, Brooklyn, New York" }
@@ -1689,11 +1985,19 @@
   match: George Frideric Handel
   sort_name: Handel, George Frideric
   born: 1685
+  birthday: "02-23"
+  birthday_basis: "old_style"
+  birthday_note:
+    en: "The public rehearsal of the *Music for the Royal Fireworks* in 1749 drew a crowd said to number twelve thousand and jammed London Bridge for hours. On the night itself, a pavilion caught fire."
+    tr: "*Kraliyet Havai Fişekleri için Müzik*’in 1749’daki halka açık provası, on iki bin kişi olduğu söylenen bir kalabalık topladı ve London Bridge saatlerce tıkandı. Asıl gece ise bir köşk alev aldı."
+  birthday_line:
+    en: "Born on this day in 1685 (Old Style), in Halle."
+    tr: "1685’te bugün (eski takvimle) Halle’de doğdu."
   died: 1759
   era: baroque
   names:
     en: { name: George Frideric Handel, short: Handel }
-    tr: { name: Georg Friedrich Händel, short: Händel }
+    tr: { name: Georg Friedrich Händel, short: Händel, short_genitive: Händel’in }
   nationality: { en: German-British, tr: Alman-İngiliz }
   facts:
     born: { en: "23 February 1685 (Old Style), Halle", tr: "23 Şubat 1685 (eski takvim), Halle" }
@@ -1733,11 +2037,19 @@
   match: Modest Mussorgsky
   sort_name: Mussorgsky, Modest
   born: 1839
+  birthday: "03-21"
+  birthday_basis: null
+  birthday_note:
+    en: "Mussorgsky finished the first *Night on Bald Mountain* on St John’s Eve 1867, the very night of the witches’ sabbath it depicts. The version we usually hear is Rimsky-Korsakov’s, made after Mussorgsky died."
+    tr: "Musorgski *Kel Dağda Bir Gece*’nin ilk versiyonunu 1867’de Aziz Yahya arifesinde, yani anlattığı cadılar şabatının gecesinde bitirdi. Bugün genellikle duyduğumuz ise Rimski-Korsakov’un, bestecinin ölümünden sonra hazırladığı versiyon."
+  birthday_line:
+    en: "Born on this day in 1839, in Karevo."
+    tr: "1839’da bugün Karevo’da doğdu."
   died: 1881
   era: romantic
   names:
     en: { name: Modest Mussorgsky, short: Mussorgsky }
-    tr: { name: Modest Musorgski, short: Musorgski }
+    tr: { name: Modest Musorgski, short: Musorgski, short_genitive: Musorgski’nin }
   nationality: { en: Russian, tr: Rus }
   facts:
     born: { en: "21 March 1839, Karevo, Pskov Governorate", tr: "21 Mart 1839, Karevo, Pskov Guberniyası" }
@@ -1777,6 +2089,8 @@
   match: Giovanni Pierluigi da Palestrina
   sort_name: Palestrina, Giovanni Pierluigi da
   born: 1525
+  birthday: null
+  birthday_basis: null
   died: 1594
   era: renaissance
   names:
@@ -1822,11 +2136,19 @@
   match: Ottorino Respighi
   sort_name: Respighi, Ottorino
   born: 1879
+  birthday: "07-09"
+  birthday_basis: null
+  birthday_note:
+    en: "In *Pines of Rome* Respighi asks for a gramophone record of a real nightingale, singing in the moonlit pines: one of the first uses of recorded sound in a concert work."
+    tr: "Respighi *Roma’nın Çamları*’nda gerçek bir bülbülün plak kaydını ister; bülbül ay ışığındaki çamlarda öter. Bu, konser müziğinde kayıtlı sesin ilk kullanımlarından biridir."
+  birthday_line:
+    en: "Born on this day in 1879, in Bologna."
+    tr: "1879’da bugün Bologna’da doğdu."
   died: 1936
   era: modern
   names:
     en: { name: Ottorino Respighi, short: Respighi }
-    tr: { name: Ottorino Respighi, short: Respighi }
+    tr: { name: Ottorino Respighi, short: Respighi, short_genitive: Respighi’nin }
   nationality: { en: Italian, tr: İtalyan }
   facts:
     born: { en: "9 July 1879, Bologna", tr: "9 Temmuz 1879, Bologna" }
@@ -1862,18 +2184,26 @@
     focal_y: 0.2
     hero: { width: 1800, height: 2400, bytes: 862545 }
     thumb: { width: 300, height: 400, bytes: 20529 }
-    full: { width: 3000, height: 4000, bytes: 2617864 }
+    full: { width: 3000, height: 4000, bytes: 2617547 }
     placeholder_color: "#737473"
 
 - id: rossini
   match: Gioachino Rossini
   sort_name: Rossini, Gioachino
   born: 1792
+  birthday: "02-29"
+  birthday_basis: null
+  birthday_note:
+    en: "Rossini was born on 29 February, so the real birthday comes round only once every four years. In other years we celebrate a day early, with the gallop that ends the *William Tell* Overture."
+    tr: "Rossini 29 Şubat’ta doğdu; gerçek doğum günü dört yılda bir gelir. Öbür yıllarda bir gün erken kutluyoruz, *Guillaume Tell* Uvertürü’nü bitiren dörtnala koşuyla."
+  birthday_line:
+    en: "Born on this day in 1792, in Pesaro."
+    tr: "1792’de bugün Pesaro’da doğdu."
   died: 1868
   era: romantic
   names:
     en: { name: Gioachino Rossini, short: Rossini }
-    tr: { name: Gioachino Rossini, short: Rossini }
+    tr: { name: Gioachino Rossini, short: Rossini, short_genitive: Rossini’nin }
   nationality: { en: Italian, tr: İtalyan }
   facts:
     born: { en: "29 February 1792, Pesaro", tr: "29 Şubat 1792, Pesaro" }
@@ -1913,11 +2243,19 @@
   match: Igor Stravinsky
   sort_name: Stravinsky, Igor
   born: 1882
+  birthday: "06-17"
+  birthday_basis: null
+  birthday_note:
+    en: "*The Firebird* went to Stravinsky, then 27, after Diaghilev had first approached older composers, Anatoly Lyadov among them. The 1910 premiere made the young composer famous overnight."
+    tr: "Diaghilev *Ateş Kuşu* için önce daha deneyimli bestecilere, aralarında Anatoli Lyadov’un da olduğu isimlere gitmişti; eser sonunda 27 yaşındaki Stravinski’ye kaldı. 1910’daki prömiyer genç besteciyi bir gecede ünlü yaptı."
+  birthday_line:
+    en: "Born on this day in 1882, in Oranienbaum."
+    tr: "1882’de bugün Oranienbaum’da doğdu."
   died: 1971
   era: modern
   names:
     en: { name: Igor Stravinsky, short: Stravinsky }
-    tr: { name: İgor Stravinski, short: Stravinski }
+    tr: { name: İgor Stravinski, short: Stravinski, short_genitive: Stravinski’nin }
   nationality: { en: Russian, tr: Rus }
   facts:
     born: { en: "17 June 1882, Oranienbaum (now Lomonosov), near St Petersburg", tr: "17 Haziran 1882, Oranienbaum (bugün Lomonosov), St. Petersburg yakınları" }
@@ -1960,11 +2298,19 @@
   match: Joaquín Rodrigo
   sort_name: Rodrigo, Joaquín
   born: 1901
+  birthday: "11-22"
+  birthday_basis: null
+  birthday_note:
+    en: "Rodrigo was born on St Cecilia’s Day, the feast of the patron saint of music. A fitting start for a composer who never played the guitar, yet wrote the *Concierto de Aranjuez*."
+    tr: "Rodrigo, müziğin koruyucu azizesi Cecilia’nın yortu gününde doğdu. Gitar çalmadığı hâlde *Concierto de Aranjuez*’i yazacak bir besteci için yerinde bir başlangıç."
+  birthday_line:
+    en: "Born on this day in 1901, in Sagunto."
+    tr: "1901’de bugün Sagunto’da doğdu."
   died: 1999
   era: modern
   names:
     en: { name: Joaquín Rodrigo, short: Rodrigo }
-    tr: { name: Joaquín Rodrigo, short: Rodrigo }
+    tr: { name: Joaquín Rodrigo, short: Rodrigo, short_genitive: Rodrigo’nun }
   nationality: { en: Spanish, tr: İspanyol }
   facts:
     born: { en: "22 November 1901, Sagunto, Valencia", tr: "22 Kasım 1901, Sagunto, Valensiya" }

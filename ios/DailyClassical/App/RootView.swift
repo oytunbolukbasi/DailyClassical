@@ -82,6 +82,8 @@ private struct AppSheetView: View {
             ComposerSheet(composer: composer)
         case .glossaryTerm(let id):
             GlossaryTermSheet(termID: id)
+        case .birthday(let ids):
+            if ids.count > 1 { BirthdayChooserSheet(composerIDs: ids) } else { BirthdaySheet(composerID: ids.first ?? "") }
         }
     }
 }

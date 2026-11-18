@@ -1,0 +1,72 @@
+{
+  "share.coda.label": {
+    "en": "Coda",
+    "tr": "Koda",
+    "comment": "Section label of the share block at the end of the piece page (shown uppercase)."
+  },
+  "share.coda.line": {
+    "en": "If it stayed with you, pass it on.",
+    "tr": "Aklınızda kaldıysa, birine de gönderin.",
+    "comment": "Line beside the share card preview in the coda block."
+  },
+  "share.coda.button": {
+    "en": "Share this piece",
+    "tr": "Eseri paylaş",
+    "comment": "Solid button in the coda block; opens the share preview."
+  },
+  "share.coda.preview.accessibilityLabel": {
+    "en": "Preview of the share image",
+    "tr": "Paylaşım görselinin önizlemesi",
+    "comment": "VoiceOver label of the small card preview in the coda block (opens the share preview)."
+  },
+  "share.moment.menu": {
+    "en": "Share this moment",
+    "tr": "Bu anı paylaş",
+    "comment": "Menu item on a long-press of a listening stop card."
+  },
+  "share.preview.title.piece": {
+    "en": "Share this piece",
+    "tr": "Eseri paylaş",
+    "comment": "Title of the share preview sheet for a piece."
+  },
+  "share.preview.title.moment": {
+    "en": "Share this moment",
+    "tr": "Bu anı paylaş",
+    "comment": "Title of the share preview sheet for one listening stop."
+  },
+  "share.preview.format.story": {
+    "en": "Story 9:16",
+    "tr": "Hikâye 9:16",
+    "comment": "Share preview format choice: tall image for stories."
+  },
+  "share.preview.format.post": {
+    "en": "Post 4:5",
+    "tr": "Gönderi 4:5",
+    "comment": "Share preview format choice: feed image (the default)."
+  },
+  "share.preview.share": {
+    "en": "Share",
+    "tr": "Paylaş",
+    "comment": "Share preview button; opens the iOS share sheet."
+  },
+  "share.preview.image.accessibilityLabel": {
+    "en": "Share image: the painting with the piece’s label",
+    "tr": "Paylaşım görseli: tablo ve eserin etiketi",
+    "comment": "VoiceOver label of the card preview in the share preview sheet."
+  },
+  "share.text.piece %@ %@ %@": {
+    "en": "%1$@, %2$@. %3$@ Listen with the guide on DailyClassical:",
+    "tr": "%1$@, %2$@. %3$@ DailyClassical’daki rehberle dinleyin:",
+    "comment": "Share text for a piece, followed by the link. 1: composer short name, 2: title, 3: hook (a full sentence)."
+  },
+  "share.text.moment %@ %@ %@ %@": {
+    "en": "%1$@, %2$@, at about %3$@: “%4$@” Listen with the guide on DailyClassical:",
+    "tr": "%1$@, %2$@, yaklaşık %3$@: “%4$@” DailyClassical’daki rehberle dinleyin:",
+    "comment": "Share text for one listening stop, followed by the link. 1: composer short name, 2: short title (“Symphony No. 6”), 3: time (“8:00”; Turkish adds the locative suffix in code, “8:00’de”), 4: the stop’s “What you hear” line as a sentence."
+  },
+  "share.text.moment.untimed %@ %@ %@": {
+    "en": "%1$@, %2$@: “%3$@” Listen with the guide on DailyClassical:",
+    "tr": "%1$@, %2$@: “%3$@” DailyClassical’daki rehberle dinleyin:",
+    "comment": "Share text for a listening stop without a time (“Towards the end”), followed by the link. 1: composer short name, 2: short title, 3: the “What you hear” line as a sentence."
+  }
+}

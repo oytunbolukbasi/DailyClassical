@@ -5,8 +5,8 @@
     "comment": "Local network permission prompt (Info.plist). Only debug builds ask; release builds use the public API."
   },
   "NSPhotoLibraryAddUsageDescription": {
-    "en": "Saves the painting you choose as a wallpaper to your photos.",
-    "tr": "Seçtiğiniz tabloyu duvar kâğıdı olarak fotoğraflarınıza kaydeder.",
+    "en": "Saves paintings and share cards you choose to your photos.",
+    "tr": "Seçtiğiniz tabloları ve paylaşım kartlarını fotoğraflarınıza kaydeder.",
     "comment": "Photo library add-only permission (Info.plist)."
   }
 }

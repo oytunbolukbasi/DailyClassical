@@ -187,9 +187,15 @@ private struct TodayContent: View {
                     .accessibilityAddTraits(.isButton)
                     .overlay {
                         FoldAware(alignment: .top) {
-                            DateChip(date: date)
-                                .dayNavigation(previous: previous, next: next)
-                                .padding(.top, metrics.top + 11)
+                            VStack(spacing: 8) {
+                                DateChip(date: date)
+                                    .dayNavigation(previous: previous, next: next)
+                                // A composer's birthday, on today's page only (Features/Birthday, A1).
+                                if Calendar.current.isDateInToday(date), !content.birthdayComposers.isEmpty {
+                                    BirthdayCapsule(composers: content.birthdayComposers)
+                                }
+                            }
+                            .padding(.top, metrics.top + 11)
                         }
                         .padding(.leading, metrics.leading).padding(.trailing, metrics.trailing)
                     }

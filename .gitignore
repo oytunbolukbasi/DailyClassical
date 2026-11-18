@@ -30,3 +30,4 @@ content/images/.staging/
 # App Store raw simulator captures (ios/scripts/app-store-shots.sh)
 /design/app-store/raw/
 /design/app-store/raw-duo/
+design/birthdays-sharing/out/

@@ -18,6 +18,8 @@ nonisolated enum PieceBlock: Hashable, Identifiable, Sendable {
     case notice(Int)
     case notes(Int)
     case threads
+    /// "Coda": the share card and "Share this piece" (Features/Share).
+    case coda
     case recordings
     case sources
 
@@ -45,7 +47,7 @@ nonisolated enum PieceBlock: Hashable, Identifiable, Sendable {
             if !m.notes.isEmpty { out.append(.notes(m.index)) }
         }
         if !document.threads.isEmpty { out.append(.threads) }
-        out += [.recordings, .sources]
+        out += [.coda, .recordings, .sources]
         return out
     }
 }

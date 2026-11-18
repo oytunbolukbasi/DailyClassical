@@ -75,3 +75,71 @@ export function referrerHost(ref: string | undefined): string | null {
     return null;
   }
 }
+
+/**
+ * A shared piece as a link preview shows it (iMessage, WhatsApp, Facebook…): the app's share
+ * links (utm_source=app-share, utm_content=<piece id>) get an Open Graph page instead of the
+ * redirect when a preview bot asks (routes/app-link.ts). Design: design/birthdays-sharing/B3-Link-preview.
+ */
+export type PiecePreview = {
+  /** The language the texts are in ("en" or "tr"). */
+  locale: string;
+  composerShortName: string;
+  title: string;
+  hook: string;
+  /** The painting alone, as a JPEG preview bots can read (the widget image); null when there is none. */
+  imageUrl: string | null;
+  /** "Isaac Levitan, Above Eternal Peace" */
+  imageAlt: string | null;
+};
+
+/** "Tchaikovsky: Symphony No. 6 in B minor, “Pathétique”" */
+export function previewTitle(p: PiecePreview): string {
+  return `${p.composerShortName}: ${p.title}`;
+}
+
+/** The hook, then what the link is: "… A listening guide on DailyClassical." */
+export function previewDescription(p: PiecePreview): string {
+  const tail = p.locale === "tr" ? "DailyClassical’da bir dinleme rehberi." : "A listening guide on DailyClassical.";
+  return `${p.hook.trim()} ${tail}`;
+}
+
+/** The shared link as og:url, rebuilt from the cleaned tags (never the raw query). */
+export function shareLinkUrl(t: Tags): string {
+  const url = new URL("https://dailyclassical.co/app");
+  const pairs: [string, string | null][] = [
+    ["utm_source", t.source], ["utm_medium", t.medium], ["utm_campaign", t.campaign], ["utm_content", t.content],
+  ];
+  for (const [k, v] of pairs) if (v) url.searchParams.set(k, v);
+  return url.toString();
+}
+
+const escapeHtml = (s: string) =>
+  s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+
+/**
+ * A small page that only link previews read: title, description and the painting (og:image,
+ * large Twitter card), with a refresh and a link to the App Store for anything that renders it.
+ */
+export function previewPage(p: PiecePreview, pageUrl: string, appStore: string): string {
+  const title = escapeHtml(previewTitle(p));
+  const description = escapeHtml(previewDescription(p));
+  const store = escapeHtml(appStore);
+  const meta = (attr: "property" | "name", key: string, value: string | null) =>
+    value === null ? "" : `<meta ${attr}="${key}" content="${value}">\n`;
+  const image = p.imageUrl ? escapeHtml(p.imageUrl) : null;
+  const alt = p.imageAlt ? escapeHtml(p.imageAlt) : null;
+  return `<!doctype html>
+<html lang="${p.locale === "tr" ? "tr" : "en"}">
+<head>
+<meta charset="utf-8">
+<title>${title}</title>
+<meta name="description" content="${description}">
+${meta("property", "og:type", "website")}${meta("property", "og:site_name", "DailyClassical")}${meta("property", "og:locale", p.locale === "tr" ? "tr_TR" : "en_US")}${meta("property", "og:title", title)}${meta("property", "og:description", description)}${meta("property", "og:url", escapeHtml(pageUrl))}${meta("property", "og:image", image)}${meta("property", "og:image:alt", image && alt)}${meta("name", "twitter:card", "summary_large_image")}${meta("name", "twitter:title", title)}${meta("name", "twitter:description", description)}${meta("name", "twitter:image", image)}<meta http-equiv="refresh" content="0; url=${store}">
+</head>
+<body>
+<p><a href="${store}">${title}</a></p>
+</body>
+</html>
+`;
+}

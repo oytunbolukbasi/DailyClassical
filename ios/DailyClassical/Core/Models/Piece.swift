@@ -242,9 +242,18 @@ nonisolated struct Composer: Codable, Hashable, Identifiable, Sendable {
     let facts: [Fact]
     let bio: String?
     let portrait: Portrait?
+    /// Birthdays (1.3): the day the app celebrates ("MM-DD"), its basis (nil, "baptism",
+    /// "old_style"), the sheet's tribute, the hand-written first sentence ("Born on this day in
+    /// 1756, in Salzburg.") and, in Turkish, the genitive of the short name ("Mozart’ın").
+    var birthday: String? = nil
+    var birthdayBasis: String? = nil
+    var birthdayNote: String? = nil
+    var birthdayLine: String? = nil
+    var shortGenitive: String? = nil
 
     private enum CodingKeys: String, CodingKey {
         case id, name, shortName, birthYear, deathYear, era, nationality, facts, bio, portrait
+        case birthday, birthdayBasis, birthdayNote, birthdayLine, shortGenitive
     }
 
     init(from decoder: Decoder) throws {
@@ -259,6 +268,11 @@ nonisolated struct Composer: Codable, Hashable, Identifiable, Sendable {
         facts = (try? c.decodeIfPresent([Fact].self, forKey: .facts)) ?? []
         bio = try? c.decodeIfPresent(String.self, forKey: .bio)
         portrait = try? c.decodeIfPresent(Portrait.self, forKey: .portrait)
+        birthday = try? c.decodeIfPresent(String.self, forKey: .birthday)
+        birthdayBasis = try? c.decodeIfPresent(String.self, forKey: .birthdayBasis)
+        birthdayNote = try? c.decodeIfPresent(String.self, forKey: .birthdayNote)
+        birthdayLine = try? c.decodeIfPresent(String.self, forKey: .birthdayLine)
+        shortGenitive = try? c.decodeIfPresent(String.self, forKey: .shortGenitive)
     }
 }
 

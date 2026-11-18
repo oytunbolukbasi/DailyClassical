@@ -4,6 +4,8 @@ import SwiftUI
 struct AboutScreen: View {
     @Environment(\.locale) private var locale
 
+    @State private var versionTaps = 0
+
     private var version: String {
         let info = Bundle.main.infoDictionary
         let short = info?["CFBundleShortVersionString"] as? String ?? "–"
@@ -42,6 +44,12 @@ struct AboutScreen: View {
 
             Section {
                 SettingsValueRow("about.version", value: Text(verbatim: version)).settingsRow()
+                    // TestFlight only: seven taps turn on Settings › Test (Core/Services/TestBuild.swift).
+                    .onTapGesture {
+                        guard TestBuild.isTestFlight else { return }
+                        versionTaps += 1
+                        if versionTaps >= 7 { UserDefaults.standard.set(true, forKey: TestBuild.unlockKey) }
+                    }
             }
         }
         .settingsList()

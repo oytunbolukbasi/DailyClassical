@@ -39,6 +39,11 @@ struct DailyClassicalApp: App {
                     await session.refreshAccount()
                     await session.refreshFavourites()
                 }
+                // The reminder's birthday sentence differs for Premium (no gift line): replan on a change.
+                .onChange(of: entitlements.isPremium, initial: true) { old, new in
+                    ReminderScheduler.premium = new
+                    if old != new { Task { await ReminderScheduler.refresh(language: language.code, force: true) } }
+                }
                 // Account-level (comp) Premium unlocks the same things as a purchase.
                 .onChange(of: session.accountPremium, initial: true) { entitlements.accountPremium = session.accountPremium }
                 // Purchases show up against the signed-in account in RevenueCat.

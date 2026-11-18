@@ -18,6 +18,7 @@ const out = join(here, "../../ios/DailyClassical/Resources/Fixtures");
 type Localized = Record<string, string>;
 type Composer = {
   id: string; match: string; sort_name: string; era: string; born?: number; died?: number; names: Record<string, { name: string; short: string }>;
+  birthday?: string | null; birthday_basis?: string | null; birthday_note?: Localized | null; birthday_line?: Localized | null;
   nationality?: Localized;
   facts?: { born?: Localized; died?: Localized; symphonies?: Localized; best_known_for?: Localized };
   bio?: Localized;
@@ -83,6 +84,8 @@ for (const locale of ["en", "tr"]) {
     const title = p ? loc(p.title, locale) : null;
     return composerResponse({
       id: c.id, sortName: c.sort_name, birthYear: c.born ?? null, deathYear: c.died ?? null, era: c.era,
+      birthday: c.birthday ?? null, birthdayBasis: c.birthday_basis ?? null, birthdayNote: loc(c.birthday_note, locale),
+      birthdayLine: loc(c.birthday_line, locale), shortGenitive: (n as { short_genitive?: string }).short_genitive ?? null,
       portrait: p?.image_url
         ? { imageUrl: p.image_url, sourceUrl: p.source_url ?? null, width: p.width ?? null, height: p.height ?? null,
             license: p.license ?? null, focalY: p.focal_y ?? 0.5, year: p.year == null ? null : String(p.year) }

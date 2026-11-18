@@ -8,6 +8,8 @@ struct TodayEntry: TimelineEntry {
     let imageURL: URL?
     let inOneLine: String?
     let language: String
+    /// A composer's birthday this day: short name and years ("Mozart", 271).
+    var birthday: (name: String, years: Int)? = nil
 }
 
 struct TodayProvider: TimelineProvider {
@@ -49,7 +51,8 @@ struct TodayProvider: TimelineProvider {
             piece: content?.piece,
             imageURL: content?.imageURL,
             inOneLine: content?.inOneLine,
-            language: WidgetData.languageCode
+            language: WidgetData.languageCode,
+            birthday: WidgetData.birthday(date, feed: feed)
         )
     }
 }

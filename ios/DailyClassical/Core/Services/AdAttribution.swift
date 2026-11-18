@@ -1,3 +1,4 @@
+import UserNotifications
 import FacebookCore
 import UIKit
 
@@ -44,9 +45,17 @@ enum AdAttribution {
 }
 
 /// Lets the SDK see the launch (it needs the application object, which SwiftUI's App doesn't hand out).
-final class AppDelegate: NSObject, UIApplicationDelegate {
+final class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         AdAttribution.start(application, options: launchOptions)
+        UNUserNotificationCenter.current().delegate = self
         return true
+    }
+
+    /// Settings › Test sends notifications while the app is open: show those as banners too. The
+    /// daily reminder arrives while the app is closed and needs nothing here.
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification)
+        async -> UNNotificationPresentationOptions {
+        notification.request.identifier.hasPrefix("test-") ? [.banner, .list, .sound] : []
     }
 }

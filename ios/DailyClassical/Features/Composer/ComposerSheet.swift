@@ -101,8 +101,18 @@ struct ComposerSheet: View {
 
     private var name: String { details?.name ?? composer.name }
 
+    /// Celebrating today (Features/Birthday, A4): an accent overline above the name and, for free
+    /// readers, the gift line under the meta.
+    private var birthday: Composer? {
+        content.birthdayComposers.first { $0.id == composer.id }
+    }
+
     private var nameBlock: some View {
         VStack(alignment: .leading, spacing: 6) {
+            if let birthday {
+                SectionLabel(verbatim: BirthdayCopy.overline(birthday, code: BirthdayCopy.code(locale)), color: Palette.accent)
+                    .padding(.bottom, 2)
+            }
             Text(verbatim: name)
                 .font(Typography.titleXL)
                 .tracking(-0.3)
@@ -115,6 +125,18 @@ struct ComposerSheet: View {
                     .font(Typography.body15)
                     .foregroundStyle(Palette.ink2)
                     .fixedSize(horizontal: false, vertical: true)
+            }
+            if let birthday, !entitlements.isPremium, !pieces.isEmpty {
+                Button { router.present(.birthday([birthday.id])) } label: {
+                    HStack(spacing: 4) {
+                        Text(verbatim: BirthdayCopy.format("birthday.composer.gift %@", code: BirthdayCopy.code(locale), birthday.shortName))
+                        Icon("chevron-forward-small", size: 12)
+                    }
+                    .font(Typography.body15.weight(.medium))
+                    .foregroundStyle(Palette.accent)
+                }
+                .buttonStyle(.plain)
+                .padding(.top, 6)
             }
         }
     }
@@ -231,7 +253,7 @@ struct ComposerSheet: View {
 /// Identifiable wrapper so a glossary term can stack its sheet on top of the composer sheet.
 /// The portrait as a CSS `object-fit: cover; object-position: 50% <focalY>` crop, over its average
 /// colour: our optimized copy (bundled, or from the API's /images), never the Commons original.
-private struct ComposerPortraitImage: View {
+struct ComposerPortraitImage: View {
     let portrait: Composer.Portrait
 
     var body: some View {
@@ -241,7 +263,7 @@ private struct ComposerPortraitImage: View {
 
 /// "— Nikolai Kuznetsov, *Portrait of Tchaikovsky*, 1893. State Tretyakov Gallery, Moscow."
 /// SF 12/1.4 `ink3` with the 14 × 1 pt dash (SPEC §3.10).
-private struct ComposerPortraitCaption: View {
+struct ComposerPortraitCaption: View {
     let portrait: Composer.Portrait
     @Environment(\.locale) private var locale
 
@@ -277,7 +299,7 @@ private struct ComposerPortraitCaption: View {
 }
 
 /// 34 pt dark-glass close circle over the portrait (G4): dark glass in both themes, icon `#F0EBE3`.
-private struct DarkGlassCloseButton: View {
+struct DarkGlassCloseButton: View {
     let action: () -> Void
 
     var body: some View {
