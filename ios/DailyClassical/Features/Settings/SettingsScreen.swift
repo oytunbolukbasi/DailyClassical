@@ -111,6 +111,7 @@ struct SettingsScreen: View {
             // The Literata title lives in the list; the bar title only feeds the back button.
             .navigationTitle(Text("settings.title"))
             .toolbar(.hidden, for: .navigationBar)
+            .topBounceDisabled()  // DesignSystem/Components/TopBounce.swift
             .manageSubscriptionsSheet(isPresented: $showManageSubscription)
             .onChange(of: language.code) { _, code in
                 // Keep the scheduled notification in the language the app now speaks.

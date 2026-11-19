@@ -18,6 +18,10 @@ Son güncelleme: 18 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 - **İmzalar (18 Kasım):** doğum günü sayfasında soldan sağa yazılan imza (Assets.xcassets/Signatures, kaynaklar composers-sources.md › Signatures). İlk 7 besteci elle; kalanlar bir agent'la toplanıyor, bitince hepsi 1.3'e eklenip TestFlight'a yüklenecek (Oytun'un kararı). **Süreç:** yeni partilerle gelen bestecilerin imzası ilk etapta olmaz (alan görünmez); yeni besteciler biriktirilir, 2–3 haftada bir çıkan sürümle eklenir, sıradaki doğum günlerinden önce yetişecek şekilde (doğum günü yaklaşan besteciler öncelikli).
 - Açık: paylaşım kartındaki durak kuralı tuvaldeki ≈ 4:30'dan farklı durak seçebiliyor (EN/TR farklı uzunluk); gerekirse `share_stop` içerik alanı. OG görseli şimdilik widget JPEG'i (1200×630 değil). Paylaşım için analitik olayı yok.
 
+## Sonraki sürüm (1.3.1 / 1.4)
+
+- **Üst esneme kapatıldı (kodda, 19 Kasım):** Kitaplık ve Ayarlar'da üstten çekince başlığın üstünde açılan boşluk (Oytun'un ekran kaydı; iOS'un esnemesi, başlık listenin içinde olduğu için "yenileme" gibi görünüyordu). `DesignSystem/Components/TopBounce.swift` › `.topBounceDisabled()`; alttaki esneme duruyor. Simülatörde video kaydıyla doğrulandı.
+
 ## Sonraki sürüm planı (1.2.2 / 1.3)
 
 - **Besteci doğum günleri (Oytun'un isteği, 18 Kasım):** bir bestecinin doğum gününde uygulama bunu kutlasın. Önce tasarım (Claude Design'da, 1:1), sonra kod. Düşünülecekler:
@@ -88,6 +92,7 @@ Son güncelleme: 18 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 
 ## Reklam (Instagram / Meta)
 
+- **19 Kasım, video reklamlar düzeltildi (Oytun'un onayıyla, EN dahil):** Reels'te kenarları kesik görünen video. (1) EN-5'in Hikayeler/Reels grubunda video yerine EN-1'in hikâye görseli (`dc-en-story-01.png`) duruyordu; Reels'te büyük ihtimalle 4:5 video büyütülüp kesiliyordu. (2) 9:16 videonun başlıkları Reels'in uzun ekranlarda kestiği ~%9'luk kenarlara taşıyordu. `reel.html` story düzeni güvenli alana alındı (yazılar ortadaki ~800 px'te), iki 9:16 video yeniden üretildi ve TR-5 ile EN-5'in Hikayeler/Reels grubuna kondu (EN-5'in öğrenmesi sıfırlandı). Açık soru: videodaki "114 eser · 36 besteci" güncel değil.
 - **18 Kasım, EN optimizasyonu (Oytun'un onayıyla):** 16–18 Kas EN: 825 TL, 13 yükleme (CPI 140 → 48 → 52 TL, öğrenme sürüyor). Harcamanın çoğu ABD/Kanada/Avustralya/YZ'ye gidiyordu, Avrupa neredeyse hiç almıyordu: sebep dil hedeflemesi "İngilizce (ABD/İngiltere)" (Avrupa'da arayüzü İngilizce olanlar çok az). Tek seferde: dil kısıtı kaldırıldı (konumlar aynı: Avrupa + ABD/CA/AU/NZ, Türkiye hariç), günlük bütçe 250 → 350 TL, EN-3 durduruldu (189 TL, 0 yükleme; 13 yüklemenin hepsi EN-1'den). **7 gün dokunulmayacak** (25 Kas'a kadar; her düzenleme öğrenmeyi sıfırlıyor). Bakılacaklar: Avrupa ülkelerinin payı, CPI, EN-1 dışı reklamların dağıtımı. Not: EN ilişkilendirmesi Meta'nın AEM'i (TR: SKAN).
 
 **Kararlar (10 Kasım):** Meta Ads Manager'ı Claude, Claude in Chrome ile yönetir (üçüncü taraf bağlantı yok). Pazar: Türkiye ve İngilizce konuşulan ülkeler, ayrı kampanyalar. Ölçüm için reklam SDK'sı ya da MMP (Adjust vb.) yok; Apple'ın SKAdNetwork / AdAttributionKit'i ve App Store Connect kampanya bağlantıları. Para harcatan her adım (yayına alma, bütçe) Oytun'un onayıyla; ödeme yöntemi ve girişler Oytun'da.

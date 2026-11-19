@@ -40,6 +40,7 @@ struct LibraryScreen: View {
             // screens show "‹ Library" in their back button.
             .navigationTitle(Text("library.title"))
             .toolbar(.hidden, for: .navigationBar)
+            .topBounceDisabled()  // DesignSystem/Components/TopBounce.swift
             .navigationDestination(for: PieceRoute.self) { PieceScreen(id: $0.id) }
             .navigationDestination(for: GlossaryListRoute.self) { _ in GlossaryListScreen() }
         }
