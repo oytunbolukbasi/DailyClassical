@@ -32,6 +32,10 @@
            letter-spacing: -0.02em; text-wrap: balance; text-shadow: 0 4px 40px rgba(0,0,0,.5); }
   .sub { position: absolute; left: 90px; right: 90px; text-align: center; font-size: 40px; line-height: 1.3;
          color: var(--ink2); text-wrap: balance; }
+  /* Reels safe area (story format): on tall phones Reels fills the screen and crops about 9% from each
+     side of a 9:16 video, so every text line stays inside the central ~800 px. */
+  .story .title { left: 150px; right: 150px; }
+  .story .sub { left: 160px; right: 160px; }
   .label { font: 600 26px/1 -apple-system, "Helvetica Neue", sans-serif; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
 
   .phone { position: absolute; left: 50%; padding: 12px; border-radius: 100px; background: #050505;
@@ -81,18 +85,18 @@ const titleTop = story ? 330 : 120, subTop = story ? 560 : 300, phoneTop = story
 const root = document.getElementById("root");
 root.innerHTML = `
   <div class="scene" id="hook">${mosaicHTML(0)}<div class="veil" style="background:linear-gradient(180deg,rgba(10,9,9,.55),rgba(10,9,9,.82))"></div>
-    <div class="title" style="top:${story ? 760 : 470}px;font-size:${story ? 112 : 96}px">${T.hook}</div></div>
-  <div class="scene" id="today"><div class="title" style="top:${titleTop}px;font-size:${story ? 92 : 74}px">${T.s1}</div>
-    <div class="sub" style="top:${subTop - (story ? 0 : 10)}px;font-size:${story ? 40 : 34}px">${T.s1b}</div>${phone("p1", `../raw/${lang}/01-today.png`, phoneTop)}</div>
-  <div class="scene" id="guide"><div class="title" style="top:${titleTop}px;font-size:${story ? 92 : 74}px">${T.s2}</div>
-    <div class="sub" style="top:${subTop}px;font-size:${story ? 40 : 34}px">${T.s2b}</div>${phone("p2", "", phoneTop)}<div class="ring" id="ring" style="opacity:0"></div></div>
-  <div class="scene" id="gloss"><div class="title" style="top:${titleTop}px;font-size:${story ? 92 : 74}px">${T.s3}</div>
-    <div class="sub" style="top:${subTop}px;font-size:${story ? 40 : 34}px">${T.s3b}</div>${phone("p3", `../raw/${lang}/03-glossary.png`, phoneTop)}</div>
+    <div class="title" style="top:${story ? 760 : 470}px;font-size:${story ? 100 : 96}px">${T.hook}</div></div>
+  <div class="scene" id="today"><div class="title" style="top:${titleTop}px;font-size:${story ? 80 : 74}px">${T.s1}</div>
+    <div class="sub" style="top:${subTop - (story ? 0 : 10)}px;font-size:${story ? 36 : 34}px">${T.s1b}</div>${phone("p1", `../raw/${lang}/01-today.png`, phoneTop)}</div>
+  <div class="scene" id="guide"><div class="title" style="top:${titleTop}px;font-size:${story ? 80 : 74}px">${T.s2}</div>
+    <div class="sub" style="top:${subTop}px;font-size:${story ? 36 : 34}px">${T.s2b}</div>${phone("p2", "", phoneTop)}<div class="ring" id="ring" style="opacity:0"></div></div>
+  <div class="scene" id="gloss"><div class="title" style="top:${titleTop}px;font-size:${story ? 80 : 74}px">${T.s3}</div>
+    <div class="sub" style="top:${subTop}px;font-size:${story ? 36 : 34}px">${T.s3b}</div>${phone("p3", `../raw/${lang}/03-glossary.png`, phoneTop)}</div>
   <div class="scene" id="lib">${mosaicHTML(11)}<div class="veil" style="background:rgba(10,9,9,.62)"></div>
-    <div class="title" style="top:${story ? 820 : 540}px;font-size:${story ? 104 : 88}px">${T.s4}</div></div>
+    <div class="title" style="top:${story ? 820 : 540}px;font-size:${story ? 92 : 88}px">${T.s4}</div></div>
   <div class="scene" id="end"><div class="veil" style="background:#111010"></div>
     <div class="brand" style="top:${story ? 640 : 380}px"><div class="mark">d</div><div class="word" lang="en">daily classical</div></div>
-    <div class="title" style="top:${story ? 760 : 490}px;font-size:${story ? 96 : 80}px">${T.end1}</div>
+    <div class="title" style="top:${story ? 760 : 490}px;font-size:${story ? 84 : 80}px">${T.end1}</div>
     <div style="position:absolute;left:0;right:0;top:${story ? 1020 : 720}px;text-align:center"><span class="store"> ${T.store}</span></div></div>`;
 
 const recCount = parseInt(q.get("rec") || "0", 10);
