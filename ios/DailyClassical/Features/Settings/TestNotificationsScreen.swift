@@ -109,7 +109,7 @@ struct TestNotificationsScreen: View {
         }
         .navigationTitle(Text(verbatim: "Bildirim ve doğum günü"))
         .navigationBarTitleDisplayMode(.inline)
-        .toolbarVisibility(.hidden, for: .tabBar)
+        .hidesTabBar()
         .overlay(alignment: .bottom) {
             if let sent {
                 Text(verbatim: sent)

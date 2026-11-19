@@ -1,20 +1,29 @@
 import SwiftUI
 import UIKit
 
-/// Hides the tab bar while a piece is on screen by animating UIKit's tab bar alongside the
-/// navigation transition itself. SwiftUI's `.toolbarVisibility(.hidden, for: .tabBar)` defers the
-/// tab bar's return until a pop has completely finished, so after a back swipe Today sat without
-/// its tab bar for a moment. Animated alongside the transition coordinator, the tab bar follows the
-/// finger during an interactive back swipe.
-struct PieceTabBarHider: UIViewControllerRepresentable {
+extension View {
+    /// Hides the tab bar while this pushed screen is on screen, moving it with the navigation
+    /// transition (see TabBarHider). For screens that push nothing that also hides the tab bar.
+    func hidesTabBar() -> some View {
+        background { TabBarHider() }
+    }
+}
+
+/// Hides the tab bar while a pushed screen (a piece, a Settings detail) is on screen by animating
+/// UIKit's tab bar alongside the navigation transition itself. SwiftUI's
+/// `.toolbarVisibility(.hidden, for: .tabBar)` defers the tab bar's return until a pop has
+/// completely finished, so after a back swipe the root screen sat without its tab bar for a moment
+/// and the tab bar then popped in. Animated alongside the transition coordinator, the tab bar
+/// follows the finger during an interactive back swipe.
+struct TabBarHider: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> Controller { Controller() }
     func updateUIViewController(_ controller: Controller, context: Context) {}
 
     final class Controller: UIViewController {
-        /// Whether the piece is the settled top screen. When a transition ends, the tab bar is set
-        /// from this, not from the transition's direction: a cancelled back swipe also sends the
-        /// piece a fresh viewWillAppear, so per-transition guesses contradicted each other.
-        private var pieceOnScreen = false
+        /// Whether this screen is the settled top screen. When a transition ends, the tab bar is
+        /// set from this, not from the transition's direction: a cancelled back swipe also sends
+        /// the screen a fresh viewWillAppear, so per-transition guesses contradicted each other.
+        private var onScreen = false
 
         override func loadView() {
             view = UIView()
@@ -28,7 +37,7 @@ struct PieceTabBarHider: UIViewControllerRepresentable {
 
         override func viewDidAppear(_ animated: Bool) {
             super.viewDidAppear(animated)
-            pieceOnScreen = true
+            onScreen = true
             settle()
         }
 
@@ -39,7 +48,7 @@ struct PieceTabBarHider: UIViewControllerRepresentable {
 
         override func viewDidDisappear(_ animated: Bool) {
             super.viewDidDisappear(animated)
-            pieceOnScreen = false
+            onScreen = false
             settle()
         }
 
@@ -53,8 +62,8 @@ struct PieceTabBarHider: UIViewControllerRepresentable {
 
         /// The settled state: the tab bar belongs to whatever is on screen once nothing is moving.
         private func settle() {
-            apply(visible: !pieceOnScreen)
-            tabBar?.isHidden = pieceOnScreen
+            apply(visible: !onScreen)
+            tabBar?.isHidden = onScreen
         }
 
         private func animateTabBar(visible: Bool) {

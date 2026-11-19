@@ -20,8 +20,8 @@ struct PieceScreen: View {
             }
         }
         .background(Palette.background)
-        // Not `.toolbarVisibility(.hidden, for: .tabBar)`: see PieceTabBarHider.
-        .background { PieceTabBarHider() }
+        // Not `.toolbarVisibility(.hidden, for: .tabBar)`: see TabBarHider.
+        .hidesTabBar()
         .task(id: language.code) { await load() }
     }
 

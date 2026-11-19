@@ -48,7 +48,7 @@ struct SourcesScreen: View {
         .settingsList()
         .navigationTitle(Text("settings.about.sources"))
         .navigationBarTitleDisplayMode(.inline)
-        .toolbarVisibility(.hidden, for: .tabBar)  // every pushed Settings detail, as Account (SPEC §7.15)
+        .hidesTabBar()  // every pushed Settings detail, as Account (SPEC §7.15)
         .task(id: "\(content.language)-\(content.library.value?.count ?? 0)") { await loadRecordings() }
     }
 

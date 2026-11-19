@@ -108,6 +108,10 @@ struct SettingsScreen: View {
                 if TestBuild.isActive { testSection }
             }
             .settingsList()
+            // A grouped List adds a top margin while the navigation bar shows. Coming back from a
+            // detail, SwiftUI hides the bar only after the pop has finished, so the list arrived
+            // 35 pt low and then jumped up. Pinned to zero, it arrives where it rests.
+            .contentMargins(.top, 0, for: .scrollContent)
             // The Literata title lives in the list; the bar title only feeds the back button.
             .navigationTitle(Text("settings.title"))
             .toolbar(.hidden, for: .navigationBar)
