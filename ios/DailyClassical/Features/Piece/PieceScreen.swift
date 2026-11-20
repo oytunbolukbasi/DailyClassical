@@ -380,6 +380,7 @@ struct PieceContent: View {
         VStack(alignment: .leading, spacing: 6) {
             HStack {
                 SectionLabel("piece.movement.label \(m.numeral)")
+                    .fixedSize()  // never wrapped by the movement menu capsule beside it
                 Spacer()
                 if m.index == 1 {
                     MovementSwitcher(movements: movements, current: jumpTarget ?? (inMovements ? trackedMovement : 1), segmentWidth: 40) { jump(to: $0) }
