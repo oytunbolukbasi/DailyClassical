@@ -2334,3 +2334,367 @@
   # Commons has no freely licensed photograph of him (only monuments, busts, plaques and his grave,
   # whose sculptures are themselves recent works). See content/research/composers-sources.md.
   portrait: null
+
+- id: corelli
+  match: Arcangelo Corelli
+  sort_name: Corelli, Arcangelo
+  born: 1653
+  birthday: "02-17"
+  birthday_basis: null
+  birthday_note:
+    en: "Corelli wanted a whole orchestra to bow as one, all up or all down. Francesco Geminiani, probably his pupil, said he would stop a rehearsal if he saw a single bow out of line."
+    tr: "Corelli bütün orkestranın yayları tek bir kişi gibi, hep birlikte yukarı ya da aşağı çekmesini isterdi. Büyük olasılıkla öğrencisi olan Francesco Geminiani, tek bir yay bile ters gitse provayı durdurduğunu anlatır."
+  birthday_line:
+    en: "Born on this day in 1653, in Fusignano."
+    tr: "1653’te bugün Fusignano’da doğdu."
+  died: 1713
+  era: baroque
+  names:
+    en: { name: Arcangelo Corelli, short: Corelli }
+    tr: { name: Arcangelo Corelli, short: Corelli, short_genitive: Corelli’nin }
+  nationality: { en: Italian, tr: İtalyan }
+  facts:
+    born: { en: "17 February 1653, Fusignano", tr: "17 Şubat 1653, Fusignano" }
+    died: { en: "8 January 1713, Rome", tr: "8 Ocak 1713, Roma" }
+    symphonies: { en: "None (the form came after his time)", tr: "Yok (bu tür ondan sonra doğdu)" }
+    best_known_for: { en: "*Christmas Concerto*, concerti grossi Op. 6, violin sonatas Op. 5 (with *La Folia*)", tr: "*Noel Konçertosu*, Op. 6 concerti grossi, Op. 5 keman sonatları (*La Folia* ile)" }
+  bio:
+    en: |-
+      Corelli was born in 1653 in Fusignano, a small town in Romagna, then part of the Papal States; his father had died five weeks before. He had his first music lessons in nearby towns and in 1666 moved to Bologna, a city with a famous school of violinists, and the title pages of his first three published collections still call him "il Bolognese". Many stories about his youth, such as a trip to Paris from which the jealous Lully is said to have chased him, are legends without contemporary evidence.
+
+      By 1675 he was playing in Rome, which became his home. The city had no permanent orchestra, but its cardinals and princes staged lavish performances, and Corelli became the man who led them, sometimes with more than a hundred players. He directed music for Queen Christina of Sweden, worked for Cardinal Benedetto Pamphili and then for Cardinal Pietro Ottoboni, in whose palace he lived and led celebrated Monday concerts. He was admired as a violinist and as a strict leader who wanted every bow in the orchestra to move together.
+
+      He published little: five sets of sonatas between 1681 and 1700, the last of them, Op. 5, ending with variations on *La Folia*, and the twelve concertos of Op. 6, each a [[concerto grosso]], which appeared in Amsterdam in 1714. They became models for a whole generation; Handel, Vivaldi, Bach and Couperin all learned from them, and Bach based an organ fugue on one of his themes. Corelli died in Rome on 8 January 1713, a wealthy man with a collection of paintings and fine violins, and was buried in the Pantheon.
+    tr: |-
+      Corelli 1653'te, o sırada Papalık Devleti'ne bağlı Romagna bölgesindeki küçük Fusignano kasabasında doğdu; babası doğumundan beş hafta önce ölmüştü. İlk müzik derslerini yakın kasabalarda aldı ve 1666'da, ünlü bir kemancılar okulu olan Bologna'ya taşındı; yayımlanan ilk üç derlemesinin başlık sayfaları onu hâlâ "il Bolognese" (Bolonyalı) diye anar. Gençliğine dair pek çok öykü, örneğin kıskanç Lully'nin onu Paris'ten kovduğu söylenen bir yolculuk, döneminden hiçbir kanıtı olmayan efsanelerdir.
+
+      1675'e gelindiğinde Roma'da çalıyordu ve bu kent onun yurdu oldu. Roma'nın kalıcı bir orkestrası yoktu, ama kardinalleri ve prensleri görkemli gösteriler düzenliyordu; Corelli bunları yöneten kişi oldu, kimi zaman yüzü aşkın çalıcıyla. İsveç Kraliçesi Christina için müzik yönetti, önce Kardinal Benedetto Pamphili, sonra Kardinal Pietro Ottoboni için çalıştı; Ottoboni'nin sarayında yaşadı ve oradaki ünlü pazartesi konserlerini yönetti. Hem kemancı olarak hem de orkestradaki her yayın birlikte hareket etmesini isteyen titiz bir yönetici olarak hayranlık uyandırdı.
+
+      Az yayımladı: 1681 ile 1700 arasında beş sonat derlemesi (sonuncusu olan Op. 5, *La Folia* üzerine varyasyonlarla biter) ve 1714'te Amsterdam'da çıkan on iki [[concerto grosso|concerto grosso]], Op. 6. Bunlar bütün bir kuşağa örnek oldu; Händel, Vivaldi, Bach ve Couperin onlardan öğrendi, Bach da onun temalarından birine dayanan bir org fügü yazdı. Corelli 8 Ocak 1713'te Roma'da, bir resim ve değerli keman koleksiyonuna sahip varlıklı bir adam olarak öldü ve Pantheon'a gömüldü.
+  portrait:
+    # Engraving by Jacob Folkema (1692–1767), Rijksmuseum RP-P-OB-52.009 (Rijksmuseum dates it 1702–1767).
+    # Half-length, holding a sheet of music; Latin caption "Arcangelus Corellius de Fusignano dictus Bononiensis".
+    artist: Jacob Folkema
+    title: { en: Portrait of Arcangelo Corelli, tr: Arcangelo Corelli’nin Portresi }
+    year: "1702–1767"
+    collection: { en: "Rijksmuseum, Amsterdam", tr: "Rijksmuseum, Amsterdam" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Portret_van_Arcangelo_Corelli,_RP-P-OB-52.009.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Portret_van_Arcangelo_Corelli,_RP-P-OB-52.009.jpg
+    width: 4238
+    height: 5588
+    license: Public domain (18th-century engraving; Rijksmuseum image CC0)
+    focal_y: 0.2
+    hero: { width: 1800, height: 2373, bytes: 1663962 }
+    thumb: { width: 300, height: 396, bytes: 32777 }
+    full: { width: 3034, height: 4000, bytes: 5040651 }
+    placeholder_color: "#78766c"
+
+- id: faure
+  match: Gabriel Fauré
+  sort_name: Fauré, Gabriel
+  born: 1845
+  birthday: "05-12"
+  birthday_basis: null
+  birthday_note:
+    en: "As a small boy in the south of France, Fauré slipped away to play the harmonium in a school chapel whenever he could. An old blind woman who came to listen told his father that the boy had a gift."
+    tr: "Fauré küçük bir çocukken, Fransa’nın güneyinde, fırsat buldukça bir okul şapelindeki harmoniyuma kaçardı. Onu dinlemeye gelen yaşlı, kör bir kadın babasına oğlunun yetenekli olduğunu söyledi."
+  birthday_line:
+    en: "Born on this day in 1845, in Pamiers."
+    tr: "1845’te bugün Pamiers’de doğdu."
+  died: 1924
+  era: late_romantic
+  names:
+    en: { name: Gabriel Fauré, short: Fauré }
+    tr: { name: Gabriel Fauré, short: Fauré, short_genitive: Fauré’nin }
+  nationality: { en: French, tr: Fransız }
+  facts:
+    born: { en: "12 May 1845, Pamiers", tr: "12 Mayıs 1845, Pamiers" }
+    died: { en: "4 November 1924, Paris", tr: "4 Kasım 1924, Paris" }
+    symphonies: { en: "None published", tr: "Yayımlanmış senfonisi yok" }
+    best_known_for: { en: "*Requiem*, *Pavane*, songs", tr: "*Requiem*, *Pavane*, şarkıları" }
+  bio:
+    en: |-
+      Fauré was born in 1845 in Pamiers, in the foothills of the Pyrenees, the youngest of six children of a schoolmaster. He was the only one of them with a gift for music, and he found it on the harmonium of the chapel at his father's teacher-training college. At nine he was sent to Paris, to the École Niedermeyer, a boarding school that trained church organists and choirmasters. There, from 1861, his piano teacher was Camille Saint-Saëns, who showed his pupils the music of Schumann, Liszt and Wagner and became Fauré's friend for life. Fauré left in 1865 with a prize for his *Cantique de Jean Racine*.
+
+      For decades he earned his living at the organ and by teaching. His first post, in Rennes, ended when he arrived to play at Mass one Sunday still in evening clothes after a ball. After serving in the Franco-Prussian War he helped to found the Société nationale de musique in 1871, and in 1877 he became choirmaster of the Madeleine in Paris, where he later became chief organist. His publisher bought his songs outright for small sums, and composition had to wait for the summer holidays. Yet these years produced the songs that made him a master of the French mélodie, among them *Après un rêve* and *Clair de lune*, the *Pavane* and the [[requiem|Requiem]]. In 1896 he became professor of composition at the Paris Conservatoire, where his pupils included Ravel and Nadia Boulanger.
+
+      In 1905 he was made director of the Conservatoire, and he modernised it so firmly that the old guard called him "Robespierre". From around this time he was slowly going deaf, and high and low notes reached him painfully out of tune. He still wrote some of his finest music, the opera *Pénélope* (1913), late songs, piano pieces and chamber music, much of it composed in hotels by the Swiss lakes. He retired in 1920, was honoured with a national tribute in 1922, and finished his only string quartet in September 1924. He died in Paris on 4 November 1924, aged 79, and was given a state funeral at the Madeleine. Aaron Copland called him "the Brahms of France".
+    tr: |-
+      Fauré 1845’te Pirene eteklerindeki Pamiers’de, bir öğretmenin altı çocuğunun en küçüğü olarak doğdu. Çocuklar arasında müzik yeteneği olan tek kişi oydu ve bunu babasının yönettiği öğretmen okulunun şapelindeki harmoniyumda keşfetti. Dokuz yaşında Paris’e, kilise orgcusu ve koro şefi yetiştiren yatılı bir okul olan École Niedermeyer’e gönderildi. Orada 1861’den itibaren piyano öğretmeni Camille Saint-Saëns’dı; Saint-Saëns öğrencilerine Schumann’ı, Liszt’i ve Wagner’i tanıttı ve Fauré’nin ömür boyu dostu oldu. Fauré okuldan 1865’te, *Cantique de Jean Racine* ile kazandığı bir ödülle ayrıldı.
+
+      Onlarca yıl geçimini org çalarak ve ders vererek sağladı. Rennes’deki ilk görevi, bir pazar günü ayine bir balodan çıkıp gece kıyafetiyle gelince sona erdi. Fransa-Prusya Savaşı’nda askerlik yaptıktan sonra 1871’de Société nationale de musique’in kurucuları arasında yer aldı; 1877’de Paris’teki La Madeleine Kilisesi’nin koro şefi oldu, sonradan baş orgcusu da olacaktı. Yayıncısı şarkılarını küçük paralara bir kerede satın alıyordu; beste yapmak yaz tatillerini bekliyordu. Yine de bu yıllar onu Fransız mélodie’sinin ustası yapan şarkıları, aralarında *Après un rêve* ve *Clair de lune*’ü, *Pavane*’ı ve [[requiem|Requiem]]’i verdi. 1896’da Paris Konservatuvarı’nda kompozisyon profesörü oldu; öğrencileri arasında Ravel ve Nadia Boulanger vardı.
+
+      1905’te Konservatuvar’ın müdürü oldu ve okulu öyle kararlılıkla yeniledi ki eski kuşak ona “Robespierre” dedi. Aşağı yukarı bu sıralarda işitmesi yavaş yavaş zayıflamaya başladı; tiz ve pes notalar kulağına acı verecek kadar akortsuz geliyordu. Yine de en güzel eserlerinden bazılarını yazdı: *Pénélope* operası (1913), son şarkıları, piyano parçaları ve oda müziği; çoğunu İsviçre göllerinin kıyısındaki otellerde besteledi. 1920’de emekli oldu, 1922’de ulusal bir törenle onurlandırıldı ve tek yaylı çalgılar dörtlüsünü Eylül 1924’te bitirdi. 4 Kasım 1924’te, 79 yaşında Paris’te öldü ve La Madeleine’de devlet töreniyle uğurlandı. Aaron Copland ona “Fransa’nın Brahms’ı” demişti.
+  portrait:
+    artist: John Singer Sargent
+    title: { en: Portrait of Gabriel Fauré, tr: Gabriel Fauré’nin Portresi }
+    year: "c. 1889"
+    collection: { en: "Musée de la Musique, Philharmonie de Paris", tr: "Musée de la Musique, Philharmonie de Paris" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Sargent_-_Portrait_de_Gabriel_Faur%C3%A9_(1845-1924),_vers_1889,_E.995.6.201,_CMIM000032985.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Sargent_-_Portrait_de_Gabriel_Faur%C3%A9_(1845-1924),_vers_1889,_E.995.6.201,_CMIM000032985.jpg
+    width: 4351
+    height: 5000
+    license: Public domain (PD-Art; painter d. 1925)
+    focal_y: 0.3
+    hero: { width: 1800, height: 2068, bytes: 798763 }
+    thumb: { width: 300, height: 345, bytes: 15596 }
+    full: { width: 3481, height: 4000, bytes: 2718095 }
+    placeholder_color: "#64554d"
+
+- id: dukas
+  match: Paul Dukas
+  sort_name: Dukas, Paul
+  born: 1865
+  birthday: "10-01"
+  birthday_basis: null
+  birthday_note:
+    en: "Dukas was so hard on his own music that he destroyed many of his manuscripts. *The Sorcerer’s Apprentice* survived, and became so popular that it came to irritate him."
+    tr: "Dukas kendi müziğine o kadar acımasızdı ki birçok el yazmasını yok etti. *Büyücünün Çırağı* kurtuldu ve öyle sevildi ki zamanla onu sinirlendirmeye başladı."
+  birthday_line:
+    en: "Born on this day in 1865, in Paris."
+    tr: "1865’te bugün Paris’te doğdu."
+  died: 1935
+  era: late_romantic
+  names:
+    en: { name: Paul Dukas, short: Dukas }
+    tr: { name: Paul Dukas, short: Dukas, short_genitive: Dukas’ın }
+  nationality: { en: French, tr: Fransız }
+  facts:
+    born: { en: "1 October 1865, Paris", tr: "1 Ekim 1865, Paris" }
+    died: { en: "17 May 1935, Paris", tr: "17 Mayıs 1935, Paris" }
+    symphonies: { en: "One, in C major", tr: "Bir, Do majör" }
+    best_known_for: { en: "*The Sorcerer’s Apprentice*, *Ariane et Barbe-bleue*, *La Péri*", tr: "*Büyücünün Çırağı*, *Ariane et Barbe-bleue*, *La Péri*" }
+  bio:
+    en: |-
+      Dukas was born in Paris in 1865 into a Jewish family. His father was a banker; his mother, a pianist, died when he was five. He entered the Paris Conservatoire at the end of 1881 and studied composition with Ernest Guiraud; Claude Debussy, a fellow student, became a close friend. In 1888 he came second in the Prix de Rome with his cantata *Velléda*, and the next year he left the Conservatoire.
+
+      From 1892 he earned a name as a music critic, writing regularly for at least five French journals, and with Camille Saint-Saëns he worked on a new edition of the music of Rameau. His own works appeared slowly: the overture *Polyeucte* (1891), a Symphony in C (1895–96) and, in 1897, the [[scherzo]] *The Sorcerer’s Apprentice*, after a ballad by Goethe. It became so popular that it overshadowed everything else he wrote, which irritated him. His opera *Ariane et Barbe-bleue*, on a text by Maurice Maeterlinck, was staged at the Opéra-Comique in 1907, and the ballet *La Péri* followed in 1912.
+
+      *La Péri* was his last large work. Dukas was fiercely self-critical and destroyed many of his compositions; after 1912 he finished only a few short pieces, among them a tribute to Debussy in 1920. He became an influential teacher instead: from 1927 he taught composition at the Conservatoire and at the École Normale de Musique, and his pupils included Olivier Messiaen, Maurice Duruflé and Joaquín Rodrigo. He was elected to the Académie des Beaux-Arts in 1934 and died in Paris on 17 May 1935, aged 69.
+    tr: |-
+      Dukas 1865’te Paris’te, Yahudi bir ailede doğdu. Babası bankacıydı; piyanist olan annesi o beş yaşındayken öldü. 1881’in sonunda Paris Konservatuvarı’na girdi ve Ernest Guiraud ile kompozisyon çalıştı; okul arkadaşı Claude Debussy yakın dostu oldu. 1888’de *Velléda* kantatıyla Roma Ödülü’nde ikinci oldu, ertesi yıl da Konservatuvar’dan ayrıldı.
+
+      1892’den itibaren müzik eleştirmeni olarak ün kazandı; en az beş Fransız dergisine düzenli yazdı ve Camille Saint-Saëns ile birlikte Rameau’nun eserlerinin yeni bir basımı üzerinde çalıştı. Kendi eserleri ağır ağır geldi: *Polyeucte* uvertürü (1891), Do majör Senfoni (1895–96) ve 1897’de, Goethe’nin bir baladına dayanan [[scherzo|scherzo]] *Büyücünün Çırağı*. Bu eser öyle sevildi ki yazdığı her şeyi gölgede bıraktı; bu da onu sinirlendirdi. Maurice Maeterlinck’in metni üzerine yazdığı *Ariane et Barbe-bleue* operası 1907’de Opéra-Comique’te sahnelendi, *La Péri* balesi de 1912’de geldi.
+
+      *La Péri* son büyük eseri oldu. Dukas kendine karşı son derece acımasızdı ve bestelerinin birçoğunu yok etti; 1912’den sonra yalnızca birkaç kısa parça tamamladı, aralarında 1920’de Debussy’ye yazdığı bir saygı duruşu da vardı. Bunun yerine etkili bir öğretmen oldu: 1927’den itibaren Konservatuvar’da ve École Normale de Musique’te kompozisyon okuttu; öğrencileri arasında Olivier Messiaen, Maurice Duruflé ve Joaquín Rodrigo vardı. 1934’te Académie des Beaux-Arts’a seçildi ve 17 Mayıs 1935’te, 69 yaşında Paris’te öldü.
+  portrait:
+    artist: { en: Unknown photographer, tr: Fotoğrafçısı bilinmiyor }
+    title: { en: Paul Dukas, tr: Paul Dukas }
+    # Undated in the BnF record (white hair and beard: probably 1920s, not confirmed). Dated alternative:
+    # File:Paul_Dukas_-_btv1b8417391c.jpg (1934, Dukas in a beret, outdoors; 2952 × 3920, also PD-France).
+    year: null
+    collection: { en: "Bibliothèque nationale de France, Paris", tr: "Bibliothèque nationale de France, Paris" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Paul_Dukas_-_btv1b8417379x.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Paul_Dukas_-_btv1b8417379x.jpg
+    width: 2176
+    height: 3472
+    license: Public domain (anonymous photograph, BnF Est.DukasP.035; PD-France)
+    focal_y: 0.25
+    hero: { width: 1800, height: 2872, bytes: 568286 }
+    thumb: { width: 300, height: 479, bytes: 17906 }
+    full: { width: 2176, height: 3472, bytes: 826728 }
+    placeholder_color: "#816a54"
+
+- id: holst
+  match: Gustav Holst
+  sort_name: Holst, Gustav
+  born: 1874
+  birthday: "09-21"
+  birthday_basis: null
+  birthday_note:
+    en: "Holst called astrology his “pet vice” and cast his friends’ horoscopes. *The Planets* grew out of that hobby: each movement is a planet’s character in astrology, not in astronomy."
+    tr: "Holst astrolojiye “küçük kusurum” derdi ve dostlarının yıldız haritalarını çıkarırdı. *Gezegenler* bu merakın ürünüdür: her bölüm bir gezegenin gökbilimdeki değil, astrolojideki karakteridir."
+  birthday_line:
+    en: "Born on this day in 1874, in Cheltenham."
+    tr: "1874’te bugün Cheltenham’da doğdu."
+  died: 1934
+  era: modern
+  names:
+    en: { name: Gustav Holst, short: Holst }
+    tr: { name: Gustav Holst, short: Holst, short_genitive: Holst’un }
+  nationality: { en: English, tr: İngiliz }
+  facts:
+    born: { en: "21 September 1874, Cheltenham", tr: "21 Eylül 1874, Cheltenham" }
+    died: { en: "25 May 1934, London", tr: "25 Mayıs 1934, Londra" }
+    symphonies: { en: "Two: the *Cotswolds* Symphony and the *Choral Symphony*", tr: "İki: *Cotswolds* Senfonisi ve *Koral Senfoni*" }
+    best_known_for: { en: "*The Planets*, *St Paul’s Suite*, the carol tune for *In the Bleak Midwinter*", tr: "*Gezegenler*, *St Paul’s Süiti*, *In the Bleak Midwinter* ilahisinin ezgisi" }
+  bio:
+    en: |-
+      Holst was born Gustavus Theodore von Holst in Cheltenham in 1874. His father's family, of Swedish, Latvian and German descent, had produced a professional musician in each of the three previous generations; his father, Adolph, was an organist, choirmaster and teacher. Holst hoped to become a pianist, but neuritis in his right arm stopped him, and he turned to composition. At the Royal College of Music he studied with Charles Villiers Stanford, and in 1895 he met Ralph Vaughan Williams, who became his lifelong friend and closest critic. To earn a living he played the trombone, as first trombone of the Carl Rosa Opera Company from 1898 and with the Scottish Orchestra.
+
+      Teaching filled most of his life. From 1905 until his death he was director of music at St Paul's Girls' School in London, where a soundproof music room gave him a place to compose, and from 1907 to 1924 he led the music at Morley College, an evening college for working adults. He learned Sanskrit to make his own translations of Hindu texts for the chamber opera *Savitri* and the *Rig Veda* hymns, and the writer Clifford Bax introduced him to astrology, the starting point of *The Planets* (1914–16). In 1918 he dropped the "von" from his name and went to Salonica as a music organiser for the YMCA, working with soldiers waiting to go home.
+
+      After the war *The Planets* made him internationally famous, a fame he found unwelcome and struggled against for the rest of his life. His later music grew sparer and more austere: *The Hymn of Jesus* (1917), the *Choral Symphony* and *Egdon Heath* (1927), a bleak picture of Thomas Hardy's moorland. His daughter Imogen, born in 1907, became a musician and his biographer. He died in London on 25 May 1934, aged 59, after an operation, and his ashes lie in Chichester Cathedral.
+    tr: |-
+      Holst 1874’te Cheltenham’da Gustavus Theodore von Holst adıyla doğdu. İsveç, Letonya ve Alman kökenli baba tarafı, kendisinden önceki üç kuşağın her birinde profesyonel bir müzisyen yetiştirmişti; babası Adolph orgcu, koro şefi ve öğretmendi. Holst piyanist olmak istiyordu ama sağ kolundaki nevrit buna engel oldu ve besteciliğe yöneldi. Kraliyet Müzik Koleji’nde Charles Villiers Stanford ile çalıştı; 1895’te ömür boyu dostu ve en yakın eleştirmeni olacak Ralph Vaughan Williams ile tanıştı. Geçimini trombon çalarak sağladı: 1898’den itibaren Carl Rosa Opera Topluluğu’nun birinci trombonu oldu, İskoç Orkestrası’nda da çaldı.
+
+      Hayatının büyük bölümünü öğretmenlik doldurdu. 1905’ten ölümüne dek Londra’daki St Paul’s Kız Okulu’nun müzik direktörüydü; okuldaki ses yalıtımlı müzik odası ona beste yapacak bir yer verdi. 1907’den 1924’e kadar da çalışan yetişkinler için bir akşam okulu olan Morley College’ın müziğini yönetti. Oda operası *Savitri* ve *Rig Veda* ilahileri için Hint metinlerini kendisi çevirebilmek amacıyla Sanskritçe öğrendi; yazar Clifford Bax ise onu *Gezegenler*’in (1914–16) çıkış noktası olan astrolojiyle tanıştırdı. 1918’de adındaki “von”u bıraktı ve YMCA’nın müzik organizatörü olarak, eve dönmeyi bekleyen askerlerle çalışmak üzere Selanik’e gitti.
+
+      Savaştan sonra *Gezegenler* onu uluslararası ölçekte ünlü yaptı; bu ünü istenmeyen bir yük olarak gördü ve ömrünün sonuna dek onunla boğuştu. Sonraki müziği daha yalın ve daha sert bir hal aldı: *İsa’nın İlahisi* (1917), *Koral Senfoni* ve Thomas Hardy’nin bozkırının kasvetli bir resmi olan *Egdon Heath* (1927). 1907’de doğan kızı Imogen müzisyen ve babasının biyografi yazarı oldu. Holst 25 Mayıs 1934’te, 59 yaşında, geçirdiği bir ameliyatın ardından Londra’da öldü; külleri Chichester Katedrali’nde yatıyor.
+  portrait:
+    artist: { en: Herbert Lambert, tr: Herbert Lambert }
+    title: { en: Gustav Holst, tr: Gustav Holst }
+    year: "c. 1921"
+    collection: { en: "National Portrait Gallery, London", tr: "National Portrait Gallery, Londra" }
+    # Only 731 × 1025 on Commons (the NPG's own downloads are CC BY-NC, not usable). Alternative with more pixels:
+    # Millicent Woodforde's oil painting of Holst at his desk, c. 1910 (NPG 4273), 1536 × 1237, PD-Art (d. 1923),
+    # but landscape and the face is small.
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Gustav_Holst.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Gustav_Holst.jpg
+    width: 731
+    height: 1025
+    license: Public domain (photographer Herbert Lambert d. 1936; PD-old-auto)
+    focal_y: 0.3
+    hero: { width: 731, height: 1025, bytes: 53197 }
+    thumb: { width: 300, height: 421, bytes: 13746 }
+    full: { width: 731, height: 1025, bytes: 58043 }
+    placeholder_color: "#525252"
+
+- id: falla
+  match: Manuel de Falla
+  sort_name: Falla, Manuel de
+  born: 1876
+  birthday: "11-23"
+  birthday_basis: null
+  birthday_note:
+    en: "In 1922 Falla organised a contest of *cante jondo*, the “deep song” of Andalusian flamenco, in the grounds of the Alhambra, hoping to save an art he feared was dying."
+    tr: "Falla 1922’de Elhamra’nın bahçesinde, Endülüs flamenkosunun “derin şarkısı” *cante jondo* için bir yarışma düzenledi; yok olmakta olduğundan korktuğu bir sanatı kurtarmak istiyordu."
+  birthday_line:
+    en: "Born on this day in 1876, in Cádiz."
+    tr: "1876’da bugün Cádiz’de doğdu."
+  died: 1946
+  era: modern
+  names:
+    en: { name: Manuel de Falla, short: Falla }
+    tr: { name: Manuel de Falla, short: Falla, short_genitive: Falla’nın }
+  nationality: { en: Spanish, tr: İspanyol }
+  facts:
+    born: { en: "23 November 1876, Cádiz", tr: "23 Kasım 1876, Cádiz" }
+    died: { en: "14 November 1946, Alta Gracia, Argentina", tr: "14 Kasım 1946, Alta Gracia, Arjantin" }
+    symphonies: { en: "None", tr: "Yok" }
+    best_known_for: { en: "*Nights in the Gardens of Spain*, *El amor brujo*, *The Three-Cornered Hat*", tr: "*İspanya Bahçelerinde Geceler*, *El amor brujo*, *Üç Köşeli Şapka*" }
+  bio:
+    en: |-
+      Falla was born in Cádiz, in the far south of Spain, in 1876. At the Madrid Conservatory he studied the piano with José Tragó and composition with Felipe Pedrell, who encouraged his interest in the music of Andalusia, above all flamenco and *cante jondo*, its "deep song". His one-act opera *La vida breve* won a national competition in 1905, but the promised production at the Teatro Real in Madrid never came.
+
+      In 1907 he moved to Paris, where he stayed for seven years. There he came to know Debussy, Ravel, Paul Dukas, Stravinsky and the Spanish composer Isaac Albéniz, and *La vida breve* was finally staged, in Nice, in 1913. When the First World War broke out he returned to Madrid, and the next years brought his best-known works: the ballet with songs *El amor brujo* (1915), *Nights in the Gardens of Spain* (1916) and *The Three-Cornered Hat*, staged by Sergei Diaghilev's Ballets Russes with sets and costumes by Pablo Picasso.
+
+      From 1921 he lived in Granada, below the Alhambra. In 1922, with the young poet Federico García Lorca, he organised a festival of *cante jondo* there to save the old songs, and his music grew leaner and more classical: the puppet opera *El retablo de maese Pedro* (1923) and a Harpsichord Concerto (1926). He spent his last twenty years on *Atlántida*, a vast cantata he never finished. After the Spanish Civil War he left for Argentina in 1939 and refused offers to come back. He died in Alta Gracia on 14 November 1946, nine days before his 70th birthday, and was buried in the crypt of Cádiz Cathedral.
+    tr: |-
+      Falla 1876’da İspanya’nın en güneyindeki Cádiz’de doğdu. Madrid Konservatuvarı’nda José Tragó’dan piyano, Felipe Pedrell’den kompozisyon dersi aldı; Pedrell onun Endülüs müziğine, özellikle flamenkoya ve “derin şarkı” *cante jondo*’ya ilgisini yüreklendirdi. Tek perdelik operası *La vida breve* 1905’te ulusal bir yarışmayı kazandı, ama Madrid’deki Teatro Real’de vaat edilen sahneleme hiç gerçekleşmedi.
+
+      1907’de Paris’e taşındı ve orada yedi yıl kaldı. Debussy, Ravel, Paul Dukas, Stravinsky ve İspanyol besteci Isaac Albéniz ile tanıştı; *La vida breve* nihayet 1913’te Nice’te sahnelendi. Birinci Dünya Savaşı çıkınca Madrid’e döndü ve sonraki yıllar en tanınmış eserlerini getirdi: şarkılı bale *El amor brujo* (1915), *İspanya Bahçelerinde Geceler* (1916) ve Sergey Diyagilev’in Rus Baleleri tarafından, dekor ve kostümleri Pablo Picasso’ya ait olarak sahnelenen *Üç Köşeli Şapka*.
+
+      1921’den itibaren Granada’da, Elhamra’nın eteklerinde yaşadı. 1922’de genç şair Federico García Lorca ile birlikte eski şarkıları kurtarmak için orada bir *cante jondo* festivali düzenledi; müziği de daha yalın ve daha klasik bir hal aldı: kukla operası *El retablo de maese Pedro* (1923) ve bir Klavsen Konçertosu (1926). Son yirmi yılını hiçbir zaman bitiremediği büyük bir kantat olan *Atlántida*’ya verdi. İspanya İç Savaşı’ndan sonra 1939’da Arjantin’e gitti ve geri dönme tekliflerini geri çevirdi. 14 Kasım 1946’da, 70. doğum gününden dokuz gün önce Alta Gracia’da öldü ve Cádiz Katedrali’nin mahzenine gömüldü.
+  portrait:
+    artist: { en: "Unknown photographer (Archivo Manuel de Falla)", tr: "Fotoğrafçısı bilinmiyor (Archivo Manuel de Falla)" }
+    title: { en: Manuel de Falla, tr: Manuel de Falla }
+    year: null
+    collection: { en: "Archivo Manuel de Falla, Granada", tr: "Archivo Manuel de Falla, Granada" }
+    # Released into the public domain by the Archivo Manuel de Falla through the Wikimedia permissions queue
+    # (VRT ticket 2013012510007831): {{PD-author|Archivo Manuel de Falla}}. Undated (Falla in hat and bow tie,
+    # probably 1920s–30s). Cropped version of File:Manuel_de_Falla_con_bastón.jpg (1378 × 2685, three-quarter length).
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Manuel_de_Falla_con_bast%C3%B3n_(cropped).jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Manuel_de_Falla_con_bast%C3%B3n_(cropped).jpg
+    width: 1161
+    height: 1549
+    license: Public domain (released by the Archivo Manuel de Falla; PD-author, VRT ticket 2013012510007831)
+    focal_y: 0.2
+    hero: { width: 1161, height: 1549, bytes: 182636 }
+    thumb: { width: 300, height: 400, bytes: 17250 }
+    full: { width: 1161, height: 1549, bytes: 194737 }
+    placeholder_color: "#414141"
+
+- id: bartok
+  match: Béla Bartók
+  sort_name: Bartók, Béla
+  born: 1881
+  birthday: "03-25"
+  birthday_basis: null
+  birthday_note:
+    en: "In November 1936 Bartók travelled to southern Turkey to record folk songs. With Ahmed Adnan Saygun and two young Ankara teachers, Ulvi Cemal Erkin and Necil Kazım Akses, he went from village to village around Osmaniye."
+    tr: "Bartók Kasım 1936’da halk ezgisi kaydetmek için Türkiye’nin güneyine gitti. Ahmed Adnan Saygun ve Ankara’dan iki genç öğretmen, Ulvi Cemal Erkin ile Necil Kâzım Akses ile birlikte Osmaniye çevresinde köy köy dolaştı."
+  birthday_line:
+    en: "Born on this day in 1881, in Nagyszentmiklós."
+    tr: "1881’de bugün Nagyszentmiklós’ta doğdu."
+  died: 1945
+  era: modern
+  names:
+    en: { name: Béla Bartók, short: Bartók }
+    tr: { name: Béla Bartók, short: Bartók, short_genitive: Bartók’un }
+  nationality: { en: Hungarian, tr: Macar }
+  facts:
+    born: { en: "25 March 1881, Nagyszentmiklós, Hungary (now Sânnicolau Mare, Romania)", tr: "25 Mart 1881, Nagyszentmiklós, Macaristan (bugün Sânnicolau Mare, Romanya)" }
+    died: { en: "26 September 1945, New York", tr: "26 Eylül 1945, New York" }
+    symphonies: { en: "None numbered; the *Concerto for Orchestra* fills the role", tr: "Numaralı senfonisi yok; *Orkestra için Konçerto* bu yeri tutar" }
+    best_known_for: { en: "*Concerto for Orchestra*, six string quartets, *Music for Strings, Percussion and Celesta*", tr: "*Orkestra için Konçerto*, altı yaylı dörtlü, *Yaylılar, Vurmalılar ve Çelesta için Müzik*" }
+  bio:
+    en: |-
+      Bartók was born in 1881 in Nagyszentmiklós, then in Hungary and now in Romania. His father, the director of an agricultural school, died when he was seven, and his mother moved the family several times before settling in Pozsony (now Bratislava). He gave his first public recital at eleven and from 1899 to 1903 studied the piano and composition at the Academy of Music in Budapest, where he met Zoltán Kodály. His early works, such as the symphonic poem *Kossuth* (1903), were written in a late-Romantic style.
+
+      In 1904 he heard a young woman, Lidi Dósa, singing folk songs, and soon he and Kodály were travelling from village to village, collecting Hungarian, Slovak and Romanian songs, many of them with a phonograph; later he collected in Algeria (1913) and Turkey (1936). The old peasant tunes, with their unusual modes and irregular rhythms, transformed his own music. From 1907 to 1934 he taught the piano at the Budapest Academy. He wrote the opera *Duke Bluebeard's Castle* (1911), the ballets *The Wooden Prince* and *The Miraculous Mandarin*, six string quartets, *Music for Strings, Percussion and Celesta* (1936) and *Mikrokosmos*, a cycle of piano pieces written partly for his son Péter.
+
+      As Hungary drew closer to Nazi Germany, he emigrated to the United States in October 1940 with his second wife, the pianist Ditta Pásztory. Life there was hard: little money, few performances and, from 1943, the leukaemia that would kill him. A commission from Serge Koussevitzky led to the *Concerto for Orchestra* (1943), his most popular work. He died in New York on 26 September 1945, leaving his Third Piano Concerto almost finished and a Viola Concerto in sketches. In 1988 his remains were brought back to Budapest and reburied after a state funeral.
+    tr: |-
+      Bartók 1881’de, o zaman Macaristan’da, bugün Romanya’da bulunan Nagyszentmiklós’ta doğdu. Bir ziraat okulunun müdürü olan babası o yedi yaşındayken öldü; annesi aileyle birkaç kez taşındı ve sonunda Pozsony’ye (bugün Bratislava) yerleşti. On bir yaşında ilk konserini verdi; 1899–1903 arasında Budapeşte Müzik Akademisi’nde piyano ve kompozisyon okudu ve orada Zoltán Kodály ile tanıştı. Senfonik şiir *Kossuth* (1903) gibi ilk eserleri geç Romantik bir üslupla yazılmıştı.
+
+      1904’te Lidi Dósa adlı genç bir kadının halk şarkıları söylediğini duydu; kısa süre sonra Kodály ile birlikte köy köy dolaşıp Macar, Slovak ve Rumen şarkıları derlemeye, bunların çoğunu fonografla kaydetmeye başladı. Daha sonra Cezayir’de (1913) ve Türkiye’de (1936) de derleme yaptı. Alışılmadık dizileri ve düzensiz ritimleriyle eski köylü ezgileri onun müziğini kökten değiştirdi. 1907’den 1934’e kadar Budapeşte Akademisi’nde piyano öğretti. *Mavi Sakal’ın Şatosu* operasını (1911), *Tahta Prens* ve *Mucizevi Mandarin* balelerini, altı yaylı dörtlüyü, *Yaylılar, Vurmalılar ve Çelesta için Müzik*’i (1936) ve bir kısmını oğlu Péter için yazdığı piyano parçaları dizisi *Mikrokosmos*’u yazdı.
+
+      Macaristan Nazi Almanyası’na yaklaşırken, Ekim 1940’ta ikinci eşi piyanist Ditta Pásztory ile Amerika Birleşik Devletleri’ne göç etti. Oradaki hayat zordu: az para, az konser ve 1943’ten itibaren onu öldürecek olan lösemi. Serge Koussevitzky’nin bir siparişi, en sevilen eseri olan *Orkestra için Konçerto*’yu (1943) doğurdu. 26 Eylül 1945’te New York’ta öldü; Üçüncü Piyano Konçertosu neredeyse bitmiş, bir Viyola Konçertosu da taslak halinde kalmıştı. 1988’de naaşı Budapeşte’ye getirildi ve devlet töreniyle yeniden toprağa verildi.
+  portrait:
+    artist: { en: Unknown photographer, tr: Fotoğrafçısı bilinmiyor }
+    title: { en: Béla Bartók, tr: Béla Bartók }
+    year: "1922"
+    collection: { en: "United Nations Office at Geneva Library (League of Nations archives)", tr: "Birleşmiş Milletler Cenevre Ofisi Kütüphanesi (Milletler Cemiyeti arşivi)" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%A9la_Bart%C3%B3k_WDL11594.png
+    source_url: https://commons.wikimedia.org/wiki/File:B%C3%A9la_Bart%C3%B3k_WDL11594.png
+    width: 1024
+    height: 1383
+    license: Public domain (anonymous photograph, 1922; PD-old-70; via the World Digital Library)
+    focal_y: 0.3
+    hero: { width: 1024, height: 1383, bytes: 554081 }
+    thumb: { width: 300, height: 405, bytes: 33932 }
+    full: { width: 1024, height: 1383, bytes: 596209 }
+    placeholder_color: "#877f64"
+
+- id: erkin
+  match: Ulvi Cemal Erkin
+  sort_name: Erkin, Ulvi Cemal
+  born: 1906
+  birthday: "03-14"
+  birthday_basis: null
+  birthday_note:
+    en: "When Erkin won a place at the Paris Conservatoire, the musicologist Mahmut Ragıp Gazimihal hailed it as a first: a young Turk had got in through the entrance competition."
+    tr: "Erkin Paris Konservatuvarı’na girdiğinde müzikolog Mahmut Ragıp Gazimihal bunu bir ilk olarak selamladı: genç bir Türk bu okula ilk kez yarışmayla girmişti."
+  birthday_line:
+    en: "Born on this day in 1906, in Istanbul."
+    tr: "1906’da bugün İstanbul’da doğdu."
+  died: 1972
+  era: modern
+  names:
+    en: { name: Ulvi Cemal Erkin, short: Erkin }
+    tr: { name: Ulvi Cemal Erkin, short: Erkin, short_genitive: Erkin’in }
+  nationality: { en: Turkish, tr: Türk }
+  facts:
+    born: { en: "14 March 1906, Istanbul", tr: "14 Mart 1906, İstanbul" }
+    died: { en: "15 September 1972, Ankara", tr: "15 Eylül 1972, Ankara" }
+    symphonies: { en: "Two", tr: "İki" }
+    best_known_for: { en: "*Köçekçe*, Piano Concerto, Violin Concerto", tr: "*Köçekçe*, Piyano Konçertosu, Keman Konçertosu" }
+  bio:
+    en: |-
+      Erkin was born in Istanbul in 1906, in the last years of the Ottoman Empire. His mother played the piano and his elder brother the violin; he lost his father at the age of seven, and the family went to live with his grandfather. He had piano lessons from childhood and studied at the Galatasaray Lycée. In 1925, at 19, he won a scholarship from the young Republic to study in Paris. There he studied the piano with Isidor Philipp and Camille Decreus at the Conservatoire, harmony and counterpoint with Jean and Noël Gallon, and composition with Nadia Boulanger at the École Normale de Musique.
+
+      In 1930 he returned to teach the piano and harmony at the Musiki Muallim Mektebi in Ankara, a school for music teachers that became the Ankara State Conservatory in 1936. He taught there for the rest of his life, more than forty years, was its director from 1949 to 1951 and trained generations of Turkish pianists. In 1932 he married the pianist Ferhunde Remzi, who became the leading interpreter of his piano music. In November 1936 he travelled with Béla Bartók, Ahmed Adnan Saygun and Necil Kazım Akses to collect folk songs around Adana and Osmaniye. With Saygun, Akses, Cemal Reşit Rey and Hasan Ferit Alnar he is counted among the "Turkish Five", composers born within a few years of one another who joined European forms with the modes of Turkish music and the uneven rhythms of Anatolian folk dance.
+
+      His dance rhapsody *Köçekçe* (1943), inspired by the köçek dancers of Ottoman entertainments and built from dance tunes from across Anatolia, is still his most performed work. His Piano Concerto, with Ferhunde Erkin as soloist, shared a national composition prize in 1943, and his Violin Concerto (1946–47) was first heard at the opening of Ankara’s opera house in 1948; he also wrote two symphonies and chamber and piano music, and conducted his works at home and abroad. His early music shows the influence of Debussy and Ravel; later he found a voice of his own, with clear forms, chords built on fourths and fifths, and melodies and rhythms drawn from Anatolia. In 1971 he was named a State Artist. He died of a heart attack in Ankara on 15 September 1972, still teaching, and is buried in the city’s Karşıyaka Cemetery.
+    tr: |-
+      Erkin 1906’da, Osmanlı İmparatorluğu’nun son yıllarında İstanbul’da doğdu. Annesi piyano, ağabeyi keman çalıyordu; yedi yaşında babasını kaybetti ve aile dedesinin yanına taşındı. Çocukluğundan itibaren piyano dersleri aldı ve Galatasaray Lisesi’nde okudu. 1925’te, 19 yaşındayken genç Cumhuriyet’in bursunu kazanarak Paris’e gitti. Orada Konservatuvar’da Isidor Philipp ve Camille Decreus ile piyano, Jean ve Noël Gallon ile armoni ve kontrpuan, École Normale de Musique’te Nadia Boulanger ile kompozisyon çalıştı.
+
+      1930’da yurda döndü ve Ankara’daki Musiki Muallim Mektebi’nde piyano ve armoni öğretmeni oldu; müzik öğretmeni yetiştiren bu okul 1936’da Ankara Devlet Konservatuvarı’na dönüştü. Ömrünün sonuna kadar, kırk yılı aşkın bir süre burada ders verdi; 1949–1951 arasında okulun müdürlüğünü yaptı ve kuşaklar boyu Türk piyanisti yetiştirdi. 1932’de piyanist Ferhunde Remzi ile evlendi; Ferhunde Erkin, eşinin piyano eserlerinin en önemli yorumcusu oldu. Kasım 1936’da Béla Bartók, Ahmed Adnan Saygun ve Necil Kâzım Akses ile birlikte Adana ve Osmaniye yörelerinde halk ezgisi derlemeye gitti. Saygun, Akses, Cemal Reşit Rey ve Hasan Ferit Alnar ile birlikte “Türk Beşleri”nden sayılır: birkaç yıl arayla doğmuş, Avrupa’nın biçimlerini Türk müziğinin makamlarıyla ve Anadolu halk danslarının aksak ritimleriyle buluşturan besteciler.
+
+      Osmanlı eğlencelerinin köçek dansçılarından esinlenen ve Anadolu’nun dört bir yanından dans ezgileriyle örülen *Köçekçe* (1943) bugün de en çok çalınan eseridir. Solistliğini Ferhunde Erkin’in yaptığı Piyano Konçertosu 1943’te bir ulusal beste ödülünü paylaştı; Keman Konçertosu (1946–47) ise ilk kez 1948’de Ankara’daki opera binasının açılışında seslendirildi. Bunların yanı sıra iki senfoni, oda müziği ve piyano eserleri yazdı; eserlerini yurt içinde ve yurt dışında kendisi yönetti. İlk eserlerinde Debussy ile Ravel’in etkisi duyulur; sonra berrak biçimleri, dörtlü ve beşli aralıklara dayanan akorları, Anadolu’dan gelen ezgi ve ritimleriyle kendine özgü bir dil buldu. 1971’de Devlet Sanatçısı unvanını aldı. 15 Eylül 1972’de, hâlâ ders verirken Ankara’da bir kalp krizi sonucu öldü; şehrin Karşıyaka Mezarlığı’nda yatıyor.
+  # No portrait: Erkin died in 1972, so the brief requires a CC-licensed photo with credit, or null.
+  # The only photograph on Commons (File:Ulvi_Cemal_Erkin.jpg, 255 × 395) is tagged {{PD-old}} with an
+  # impossible date (1896) and no traceable source; it is neither CC-licensed nor safely public domain.
+  # See content/research/composers-sources.md.
+  portrait: null

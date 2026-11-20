@@ -5,11 +5,14 @@ Definition: one or two sentences, written for the pop-over.
 
 | Term | Short | Definition |
 | --- | --- | --- |
+| Alborada | A Spanish morning song, a dance to greet the sunrise | Spanish for "dawn song": a lively folk piece played or sung at daybreak, typical of Galicia and Asturias in northern Spain, often for bagpipe or pipe and drum. |
 | Alla turca | In the "Turkish" style, imitating Janissary bands | Italian for "in the Turkish manner": music that imitates, often only distantly, the Ottoman Janissary bands (mehter), with a march rhythm, loud unison tunes, repeated figures and the sound of drums and cymbals. It was a European fashion of the 18th century, not real Ottoman music. |
 | Allemande | A moderate German dance in four, often first in a suite | A dance of German origin in a moderate four beats, usually the first dance of a Baroque suite, with a flowing line of quick notes. |
 | Arpeggio | The notes of a chord played one after another | The notes of a chord played one after another instead of together. |
 | Attacca | Go straight on into the next movement, without a pause | Italian for "attack": the next movement begins at once, with no break, so the two are heard as one continuous piece. |
+| Bariolage | Rapid rocking across strings, often with an open string | A string-playing effect in which the bow moves quickly back and forth across two or more strings, alternating a changing note with a repeated one, often an open string, so that the line seems to shimmer. |
 | Basset clarinet | A clarinet extended downwards, with extra low notes | A clarinet with a longer body that reaches four semitones lower than the ordinary instrument. Mozart wrote his Clarinet Concerto for it. |
+| Basset horn | A low clarinet with a soft, dark, veiled tone | A member of the clarinet family, pitched lower than the ordinary clarinet, with a bent body and a soft, dark sound. Mozart used a pair of them in the Requiem and in music for his Masonic lodge. |
 | Bitonality | Two keys sounding at the same time | Music in two different keys at once, for example one hand of the piano in one key and the other hand in another. The clash gives a bright, slightly sour sparkle. |
 | Blue note | A note bent slightly flat, borrowed from the blues | A note played or sung a little lower than the major scale would have it, usually the third, fifth or seventh. It gives blues and jazz their bittersweet, slightly sour colour. |
 | Bourrée | A quick, lively French dance in two beats | A lively French dance in two quick beats, starting with a short upbeat. A favourite dance movement of Baroque suites. |
@@ -22,6 +25,8 @@ Definition: one or two sentences, written for the pop-over.
 | Chromatic scale | A scale that moves by every semitone, the smallest step | A scale that climbs or falls through all twelve notes of the octave, each a semitone (the smallest step on the piano) from the next, so that it seems to slide rather than step. |
 | Coda | The closing section that rounds off a movement | A closing section added to the end of a movement. |
 | Col legno | Tapping the strings with the wood of the bow | Tapping the strings with the wooden back of the bow, which makes a dry, clicking sound. |
+| Concert overture | An overture written as a stand-alone concert piece | A one-movement orchestral piece called an overture but written for the concert hall, not to open an opera or a play. It may paint a mood or a scene, as Mendelssohn's *The Hebrides* does, or celebrate an occasion. |
+| Concerto grosso | A small group of soloists set against the full band | A Baroque concerto in which a small group of soloists, the concertino (in Corelli two violins and a cello), alternates and combines with the full string orchestra, the ripieno. |
 | Continuo | The bass line and chords that underpin Baroque music | The accompaniment that runs under almost all Baroque music: a bass line played by a cello, bassoon or double bass, with a harpsichord, organ or lute filling in the chords. |
 | Counterpoint | Two or more independent melodies combined at once | The art of combining two or more independent melodies so that they sound together as one texture, each keeping its own shape. |
 | Courante | A lively "running" dance in three | A "running" dance in three beats. The Italian corrente is quick and light; the French courante is more stately. |
@@ -37,6 +42,8 @@ Definition: one or two sentences, written for the pop-over.
 | Dumka | A Slavic lament that swings between gloom and joy | A Slavic word, from Ukrainian, for a brooding folk ballad. In Dvořák's music it means a piece that switches suddenly between melancholy and high spirits. |
 | Entr'acte | Music played between the acts of an opera or play | French for "between the acts": a piece the orchestra plays while the curtain is down, before the next act begins. Bizet's preludes to Acts II–IV of *Carmen* are entr'actes. |
 | Exposition | The opening of sonata form, where the themes are introduced | The first stage of sonata form, where the main themes are introduced. It is often repeated. |
+| Fandango | A lively Spanish couple dance in three beats | A Spanish dance in quick triple time for a couple, accompanied by guitar and castanets, which grows faster and more intense as it goes on. |
+| Forlane | A lilting Italian dance in six beats | A lively dance from Friuli, in north-east Italy, in a skipping 6/8 rhythm, popular in Venice and at the French court around 1700. Couperin and Bach both wrote forlanes. |
 | Four hands | Two pianists sharing one keyboard | Music for two pianists sitting side by side at one piano, one playing the upper part and the other the lower. |
 | French overture | A slow, stately opening in jerky rhythms, then a fast section | An opening piece in the style of the French court: a slow, grand section in jerky dotted rhythms, then a quick section in which the instruments enter one after another, often ending with a short return of the slow music. |
 | Fugato | A passage that begins like a fugue, then moves on | A passage that starts like a fugue, with instruments entering one by one on the same tune, without being a full fugue. |
@@ -60,6 +67,7 @@ Definition: one or two sentences, written for the pop-over.
 | Lydian mode | An old church scale: like a major scale with a raised fourth | One of the old church modes. It sounds like a major scale with its fourth note raised a half step (F to F with B natural), which gives a bright, floating sound. |
 | Ländler | A rustic Austrian dance in three, ancestor of the waltz | A rustic Austrian country dance in three beats, a slower, heavier ancestor of the waltz. |
 | Major | The kind of key that sounds bright or settled | The kind of key that generally sounds bright or settled. Its darker counterpart is the minor. |
+| Makam | A Turkish mode: a scale with its own melodic path | In Turkish and Middle Eastern classical music, a type of melody: each makam has its own scale, often with intervals smaller than a semitone, and its own typical way of moving, resting and ending. The composers of the Turkish Five drew on makams for their melodies and harmonies. |
 | Mannheim rocket | A fast figure shooting up the notes of a chord | A quick, bold melody that rises through the notes of a chord, named after the orchestra of Mannheim, which made it a trademark in the 18th century. |
 | Mass | The main Catholic service, and music for its fixed texts | The central service of the Catholic Church. In music, a setting of its five fixed sung texts: Kyrie, Gloria, Credo, Sanctus with Benedictus, and Agnus Dei. |
 | Minuet | An elegant 18th-century dance in three beats | An elegant 18th-century dance in three beats, used as the third movement of Classical symphonies. |
@@ -68,19 +76,25 @@ Definition: one or two sentences, written for the pop-over.
 | Motto | A short figure that returns through a work like a signature | A short, recognisable group of notes that keeps coming back across a work or movement, often at important moments, so that it binds the music together. |
 | Musette | A gentle dance over a bagpipe-like drone | A French country dance named after a small bagpipe, the musette. Its tune is played over a long-held low note that imitates the bagpipe's drone; in Baroque suites it often forms the middle section of a gavotte. |
 | Muted | Played with a device that softens and veils the sound | Played with a small device on the instrument that softens and veils the sound. |
+| Natural horn | A horn without valves, played with lips and hand | The horn of Mozart's and Beethoven's time, a coiled tube without valves. The player gets the notes of its natural series with the lips alone and the notes in between by moving the hand in the bell, which also muffles them. |
 | Neoclassicism | Modern music that revives 18th-century forms and clarity | A trend of the early twentieth century in which composers such as Prokofiev and Stravinsky borrowed the forms, textures and lightness of eighteenth-century music, while keeping modern harmonies and rhythms. |
+| Night music | Bartók's hushed music of night sounds | A style Bartók developed from "The Night's Music" in his piano suite *Out of Doors* (1926): soft, scattered sounds like birds, insects and frogs on a summer night, around a slow, lonely melody. |
 | Nobilmente | "Nobly": a marking Elgar loved | Italian for "nobly". Elgar used the marking often, for broad, dignified melodies. |
 | Nocturne | A dreamy "night piece", usually for piano | A "night piece": a slow, dreamy piece with a singing melody over a flowing accompaniment, a form Chopin made famous. |
 | Obbligato | An essential, prominent solo instrumental part | A solo instrumental part that is essential and prominent throughout a movement. |
 | Offstage | Players placed out of sight, heard from a distance | Instruments placed behind the stage or outside the hall, so that they sound far away. |
+| Ophicleide | Keyed bass brass instrument, later replaced by the tuba | A deep brass instrument with keys over holes in its tube, invented in Paris around 1817. It played the bass of 19th-century orchestras and bands until the tuba took its place; today its parts are usually played on a tuba. |
 | Ostinato | A short pattern repeated over and over | A short rhythm or melody repeated persistently, often underneath changing music. |
+| Pas d'action | A ballet scene in which the dance tells the story | French for "dance of action": a number in a ballet in which the dancers act out part of the plot, often a long duet with mime, rather than simply showing off steps. |
 | Passacaglia | A short theme repeated while the music around it changes | A form in which a short theme repeats over and over while the music around it keeps changing. |
+| Pastorale | Gentle, rocking shepherds' music over a drone | In Baroque music, a slow, rocking piece in 6/8 or 12/8 with a tune in thirds over a long-held bass, recalling the bagpipes and reed pipes played at Christmas in Italy. |
 | Pedal note | One note held in the bass under changing harmony | A single note held or repeated, usually in the bass, while the harmony changes above it. |
 | Pentatonic scale | A five-note scale heard in folk music worldwide | A scale of five notes instead of the usual seven, with no semitone steps between them. It gives melodies an open, folk-like sound found in music all over the world. |
 | Perpetuum mobile | "Perpetual motion": fast, even notes without a break | A fast piece or movement in which one line runs on in rapid, even notes from start to finish, with hardly a pause. |
 | Pizzicato | Plucking the strings instead of using the bow | Plucking the strings of a string instrument with the finger instead of using the bow. |
 | Plainchant | Ancient unaccompanied church melody, in free rhythm | The ancient melody of the Western Church, sung without accompaniment in a free, speech-like rhythm by one voice or many in unison. Also called plainsong or Gregorian chant. |
 | Polka | A lively Bohemian couple dance in two beats | A lively dance for couples in two beats, with a little hop, that began in Bohemia around 1830 and swept the ballrooms of Europe. Czech composers such as Smetana and Dvořák brought it into concert music. |
+| Polonaise | A stately Polish dance in three, with a proud gait | A Polish processional dance in a moderate three beats, stately and proud, with a characteristic pattern of quick notes at the start of the bar. Bach and Telemann wrote polonaises into their suites; Chopin made it a concert piece for the piano. |
 | Polyphony | Several independent melodies sounding together | Music made of several independent melodic lines sung or played at once, each with its own shape, instead of one tune with accompaniment. |
 | Posthorn | A small valveless horn once blown on mail coaches | A small brass horn without valves, once blown by coachmen to announce the mail coach. It plays only a few notes, which gives it a simple, nostalgic sound. |
 | Programme music | Instrumental music that tells a story or paints a scene | Instrumental music that tells a story or depicts a scene described by the composer. |
@@ -88,6 +102,7 @@ Definition: one or two sentences, written for the pop-over.
 | Rasgueado | Strumming the guitar strings with the fingers | A Spanish guitar technique in which the fingers of the right hand strike the strings in quick, rolling strokes, giving the bright, rhythmic chords of flamenco. |
 | Recapitulation | The return of the opening themes near the end of sonata form | The last stage of sonata form, where the opening themes return. |
 | Recitative | Music that follows the free rhythm of speech | Music that imitates the rhythm of speech, free and unmeasured. |
+| Requiem | The Catholic Mass for the dead, and music for it | The Mass for the dead in the Catholic Church, named after its first words, "Requiem aeternam" ("eternal rest"). Unlike the ordinary Mass it leaves out the joyful Gloria and the Credo, and adds texts such as the Dies irae. |
 | Rhapsody | A free, one-movement piece of contrasting episodes | A single-movement work that moves freely from one mood and tempo to the next, often sounding improvised, instead of following a set form. |
 | Rigaudon | A lively old French dance in two beats | A quick, cheerful dance in duple time from southern France, popular at the French court in the late seventeenth and early eighteenth centuries, with short, bouncing phrases. |
 | Ritornello | The returning refrain of a Baroque concerto | In a Baroque concerto, the passage the whole ensemble plays at the start and brings back, often shortened or in new keys, between the soloist's episodes. |
@@ -111,16 +126,20 @@ Definition: one or two sentences, written for the pop-over.
 | Sustain pedal | The piano pedal that keeps notes ringing after release | The piano's right-hand pedal. It lifts the dampers off the strings, so notes keep ringing after the keys are let go and blend into one another. |
 | Symphonic poem | A one-movement orchestral piece that tells a story | A single-movement orchestral work that describes a story, a place or a scene. The form was pioneered by Liszt. |
 | Syncopation | Accents off the beat that pull against the pulse | Accents placed off the main beats, which makes the rhythm feel as if it is floating or pulling against the pulse. |
+| Taksim | A free, unmeasured improvisation in Turkish music | In Turkish music, an improvisation by a single instrument without a regular beat, exploring a makam before or between composed pieces. |
+| Tam-tam | A large, untuned gong with a deep, shimmering roar | A large bronze gong without a definite pitch. Struck softly it gives a dark, humming tone; struck hard it swells into a shimmering roar that hangs in the air. |
 | Tarantella | A whirling Italian dance in fast 6/8 time | A fast, whirling folk dance from southern Italy in 6/8 time. Legend linked it to the bite of the tarantula spider. |
 | Thematic transformation | One theme reshaped to take on a new character | Changing a theme's speed, rhythm, harmony or mood so that the same notes come back with a different character: a fierce idea, for example, reborn as a love song. |
 | Toccata | A fast, driving piece of unbroken even notes | From the Italian "toccare", to touch: originally a keyboard piece showing off the player's fingers in rapid, continuous figures. In an orchestral work, a movement driven by an unbroken stream of fast, even notes. |
 | Tremolo | A rapid shimmer between two notes, or on one | A rapid back-and-forth between two notes, or the fast repetition of one, which makes a shimmering or rumbling sound. On the piano it is often an octave in the left hand. |
 | Trill | A rapid shake between two neighbouring notes | A rapid alternation between a note and the note just above it, which makes the sound shimmer or, low on the piano, rumble. |
 | Trio | The gentler middle section of a minuet or scherzo | The contrasting middle section of a minuet or scherzo, usually gentler. |
+| Triplet | Three equal notes in the time of two | Three notes of equal length played in the time normally taken by two, so that the beat is divided into three instead of two. |
 | Tristan chord | Wagner's unresolved chord that opens *Tristan und Isolde* | The first chord of Wagner's *Tristan und Isolde*. It hangs in the air instead of resolving as the ear expects, and became a symbol of musical longing and of modern harmony. |
 | Tutti | The whole orchestra playing together | Italian for "all": the whole orchestra playing together, as opposed to the soloist. |
 | Unison | Everyone playing the same notes at once | Everyone playing the same notes at the same time. |
 | Variation | A theme repeated with something changed | A repeat of a theme in which something is changed: the decoration, the rhythm, the harmony or the instruments. |
+| Vocalise | A melody sung on a vowel, without words | A melody sung on a vowel sound, with no words: an exercise for singers, or, as in Debussy's *Sirènes*, a way of using voices as a colour of the orchestra. |
 | Wagner tuba | A horn-like brass instrument with a dark, soft tone | A brass instrument made for Wagner's Ring operas and played by horn players. Its tone is darker and rounder than a horn's. |
 | Waltz | A dance in three beats, with a strong first beat | A dance in three-four time that turns on a strong first beat followed by two lighter ones. It was the great ballroom dance of the nineteenth century. |
 | Whole-tone scale | A six-note scale of equal steps, with no home note | A scale made only of whole steps, six notes to the octave. Because every step is the same size, no note sounds like home, which gives the music a floating, dreamlike quality. Debussy used it often. |

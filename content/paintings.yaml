@@ -2785,3 +2785,604 @@ rodrigo-concierto-de-aranjuez:
   thumb: { width: 405, height: 300, bytes: 31355 }
   full: { width: 4000, height: 2960, bytes: 1574956 }
   placeholder_color: "#503d2d"
+
+bach-keyboard-concerto-5:
+  # Google Art Project file (10100 × 11371). The National Gallery's own title is "A Young Woman seated at a Virginal".
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Jan_Vermeer_van_Delft_-_Jonge_vrouw_aan_een_virginaal_(ca._1670-72).jpg
+  source_url: https://www.nationalgallery.org.uk/paintings/johannes-vermeer-a-young-woman-seated-at-a-virginal
+  commons_page: https://commons.wikimedia.org/wiki/File:Jan_Vermeer_van_Delft_-_Jonge_vrouw_aan_een_virginaal_(ca._1670-72).jpg
+  width: 10100
+  height: 11371
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Johannes Vermeer, A Young Woman seated at a Virginal, about 1670–72. The National Gallery, London (NG2568). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2027, bytes: 398133 }
+  thumb: { width: 300, height: 338, bytes: 13756 }
+  full: { width: 3553, height: 4000, bytes: 1900483 }
+  placeholder_color: "#353025"
+
+bach-orchestral-suite-2:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Concert_Champ%C3%AAtre_MET_DP317730.jpg
+  source_url: https://www.metmuseum.org/art/collection/search/437256
+  commons_page: https://commons.wikimedia.org/wiki/File:Concert_Champ%C3%AAtre_MET_DP317730.jpg
+  width: 3917
+  height: 3054
+  medium: Oil on canvas
+  license: Public domain (Met Open Access, CC0)
+  credit_line: Jean-Baptiste Pater, Concert Champêtre, ca. 1734. The Metropolitan Museum of Art, New York, Purchase, Joseph Pulitzer Bequest, 1937 (37.27). Image via Wikimedia Commons, CC0.
+  rights_status: public_domain
+  hero: { width: 2309, height: 1800, bytes: 646943 }
+  thumb: { width: 385, height: 300, bytes: 17982 }
+  full: { width: 3917, height: 3054, bytes: 2087030 }
+  placeholder_color: "#4a3d2f"
+
+bach-violin-concerto-1:
+  # Google Art Project file (Getty Open Content). Dated on the painting "MDCCXI L.C.".
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Luca_Carlevarijs_(Italian_-_Regatta_on_the_Grand_Canal_in_Honor_of_Frederick_IV,_King_of_Denmark_-_Google_Art_Project.jpg
+  source_url: https://www.getty.edu/art/collection/objects/796/luca-carlevarijs-regatta-on-the-grand-canal-in-honor-of-frederick-iv-king-of-denmark-italian-1711/
+  commons_page: https://commons.wikimedia.org/wiki/File:Luca_Carlevarijs_(Italian_-_Regatta_on_the_Grand_Canal_in_Honor_of_Frederick_IV,_King_of_Denmark_-_Google_Art_Project.jpg
+  width: 9775
+  height: 5273
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Luca Carlevarijs, Regatta on the Grand Canal in Honor of Frederick IV, King of Denmark, 1711. The J. Paul Getty Museum, Los Angeles (86.PA.599). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 3337, height: 1800, bytes: 986401 }
+  thumb: { width: 556, height: 300, bytes: 31736 }
+  full: { width: 4000, height: 2158, bytes: 1579890 }
+  placeholder_color: "#605645"
+
+corelli-concerto-grosso-op-6-8:
+  # Google Art Project file; photograph Hans Peter Klut / Elke Estel (SKD). No SKD object page opened: Wikidata as source.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Correggio_-_The_Holy_Night_-_Google_Art_Project.jpg
+  source_url: https://www.wikidata.org/wiki/Q1527541
+  commons_page: https://commons.wikimedia.org/wiki/File:Correggio_-_The_Holy_Night_-_Google_Art_Project.jpg
+  width: 3179
+  height: 4332
+  medium: Oil on poplar panel
+  license: Public domain (PD-Art)
+  credit_line: Correggio, The Holy Night (Adoration of the Shepherds), c. 1528–30. Gemäldegalerie Alte Meister, Staatliche Kunstsammlungen Dresden (Gal.-Nr. 152). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2453, bytes: 287715 }
+  thumb: { width: 300, height: 409, bytes: 21330 }
+  full: { width: 2935, height: 4000, bytes: 618059 }
+  placeholder_color: "#341e13"
+
+haydn-symphony-101:
+  # Master in the originals cache is CROPPED (the TIFF shows dark strips at the canvas edges: haydn-symphony-101.source.tiff cropped to 6590 × 3769 at offset 137,78, with scratchpad cropjpg). Do not pass --refresh for this id.
+  # The Commons original is a TIFF (6834 × 3940); convert to JPEG for the image pipeline if it does not read TIFF.
+  # Signed and dated 1792 (the "2" unclear); exhibited at the Royal Academy in 1793 (RMG catalogue text).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Greenwich_from_the_Isle_of_Dogs_RMG_BHC3867.tiff
+  source_url: http://collections.rmg.co.uk/collections/objects/15340
+  commons_page: https://commons.wikimedia.org/wiki/File:Greenwich_from_the_Isle_of_Dogs_RMG_BHC3867.tiff
+  width: 6590
+  height: 3769
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Robert Dodd, Greenwich from the Isle of Dogs, 1792. National Maritime Museum, Greenwich, London (BHC3867). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 3147, height: 1800, bytes: 806665 }
+  thumb: { width: 525, height: 300, bytes: 19149 }
+  full: { width: 4000, height: 2288, bytes: 1705473 }
+  placeholder_color: "#8c8b7f"
+
+mozart-requiem:
+  # Commons licence: {{PD-Art|PD-old-100-1923}} (Memling d. 1494). Straight-on photo of the open triptych in its
+  # frames, 3543 × 2359 (landscape). Cover crop: the central panel, Michael weighing the souls with the trumpeting
+  # angels above him. Fallback: File:Gdansk_National_Museum_2019_P01_Hans_Memling_The_Last_Judgment.jpg
+  # (5184 × 3456, PD-Art, but an angled gallery photo with reflections).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Das_J%C3%BCngste_Gericht_(Memling).jpg
+  source_url: http://sadostateczny.mng.gda.pl/en
+  commons_page: https://commons.wikimedia.org/wiki/File:Das_J%C3%BCngste_Gericht_(Memling).jpg
+  width: 3543
+  height: 2359
+  medium: Tempera and oil on oak panel
+  license: Public domain (PD-Art)
+  credit_line: Hans Memling, The Last Judgment, c. 1467–71. National Museum in Gdańsk. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2703, height: 1800, bytes: 1526385 }
+  thumb: { width: 451, height: 300, bytes: 54113 }
+  full: { width: 3543, height: 2359, bytes: 3042647 }
+  placeholder_color: "#8a6942"
+
+haydn-string-quartet-op-33-2:
+  # NGA open-access file donated to Commons (CC0), portrait 3239 × 4000. A larger copy of the same painting is
+  # File:Jean_Siméon_Chardin_-_Soap_Bubbles_-_Google_Art_Project.jpg (7366 × 9117, PD-Art) if more pixels are wanted.
+  # Cover crop: the bubble, the young man's face and the small boy at the ledge.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Jean_Sim%C3%A9on_Chardin,_Soap_Bubbles,_probably_1733-1734,_NGA_994.jpg
+  source_url: https://purl.org/nga/collection/artobject/994
+  commons_page: https://commons.wikimedia.org/wiki/File:Jean_Sim%C3%A9on_Chardin,_Soap_Bubbles,_probably_1733-1734,_NGA_994.jpg
+  width: 3239
+  height: 4000
+  medium: Oil on canvas
+  license: Public domain (CC0, National Gallery of Art open access)
+  credit_line: Jean Siméon Chardin, Soap Bubbles, probably 1733–34. National Gallery of Art, Washington, Gift of Mrs. John W. Simpson (1942.5.1). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2223, bytes: 687494 }
+  thumb: { width: 300, height: 370, bytes: 13244 }
+  full: { width: 3239, height: 4000, bytes: 2902023 }
+  placeholder_color: "#5b503d"
+
+mozart-horn-concerto-4:
+  # Google Art Project file, {{PD-Art}} (Wootton d. 1764). Landscape 5456 × 3540. Cover crop: the riders and
+  # hounds in the lower half with the open valley behind. YCBA accession number not confirmed (catalogue unreachable).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/John_Wootton_-_A_Fox_Hunt_-_Google_Art_Project.jpg
+  source_url: https://artsandculture.google.com/asset/ogFTsjYTfW4W9g
+  commons_page: https://commons.wikimedia.org/wiki/File:John_Wootton_-_A_Fox_Hunt_-_Google_Art_Project.jpg
+  width: 5456
+  height: 3540
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: John Wootton, A Fox Hunt, ca. 1735. Yale Center for British Art, Paul Mellon Collection, New Haven. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2774, height: 1800, bytes: 897124 }
+  thumb: { width: 462, height: 300, bytes: 16489 }
+  full: { width: 4000, height: 2595, bytes: 2379539 }
+  placeholder_color: "#615e48"
+
+beethoven-symphony-4:
+  # Paris Musées open content, {{cc-zero}}; portrait 3501 × 5106, the whole canvas with its frame edge.
+  # Other Commons files of the same painting (-2 … -6) are details or framed views.
+  # Cover crop: Juliette Récamier's figure and face; the arch and trees above can be trimmed.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Fran%C3%A7ois_G%C3%A9rard_-_Portrait_de_Juliette_R%C3%A9camier,_n%C3%A9e_Bernard_(1777-1849)_-_mus%C3%A9e_Carnavalet.jpg
+  source_url: https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/portrait-de-juliette-recamier-nee-bernard-1777-1849
+  commons_page: https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_G%C3%A9rard_-_Portrait_de_Juliette_R%C3%A9camier,_n%C3%A9e_Bernard_(1777-1849)_-_mus%C3%A9e_Carnavalet.jpg
+  width: 3501
+  height: 5106
+  medium: Oil on canvas
+  license: Public domain (CC0, Paris Musées)
+  credit_line: François Gérard, Portrait of Juliette Récamier, c. 1802–05. Musée Carnavalet, Paris (P1581). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2625, bytes: 665139 }
+  thumb: { width: 300, height: 438, bytes: 24214 }
+  full: { width: 2743, height: 4000, bytes: 1457841 }
+  placeholder_color: "#694e30"
+
+beethoven-violin-sonata-5:
+  # Master in the originals cache is CROPPED (the Met photo shows a black backdrop: beethoven-violin-sonata-5.source.jpg cropped to 2258 × 3836 at offset 80,80, with scratchpad cropjpg). Do not pass --refresh for this id.
+  # Switched at merge: Botticelli's Primavera is in the Uffizi, and Italy's Cultural Heritage Code claims fees for commercial reproductions of state-museum works; Cot's Springtime is a CC0 Met image.
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-33707-001.jpg
+  source_url: https://www.metmuseum.org/art/collection/search/438158
+  commons_page: None
+  width: 2258
+  height: 3836
+  medium: Oil on canvas
+  license: Public domain (CC0, The Met Open Access)
+  credit_line: Pierre-Auguste Cot, Springtime, 1873. The Metropolitan Museum of Art, New York, Gift of Steven and Alexandra Cohen, 2012 (2012.575). Image via The Met Open Access, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 3058, bytes: 962049 }
+  thumb: { width: 300, height: 510, bytes: 22006 }
+  full: { width: 2258, height: 3836, bytes: 2228529 }
+  placeholder_color: "#2e2b1d"
+
+beethoven-egmont-overture:
+  # Commons file 1920 × 1586 (landscape), PD-Art (Gallait died 1887). Hermitage; Wikidata has two items for this
+  # painting with different inventory numbers (Q27978205: ГЭ-6855; Q21715947: ГЭ-3835, 65 × 78 cm), so the
+  # credit line leaves the number out. The Hermitage's own object page was not reached; source_url is the Commons page.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/The_Last_Moments_of_Count_Egmont_(Count_Egmont_Before_His_Death).jpg
+  source_url: https://commons.wikimedia.org/wiki/File:The_Last_Moments_of_Count_Egmont_(Count_Egmont_Before_His_Death).jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:The_Last_Moments_of_Count_Egmont_(Count_Egmont_Before_His_Death).jpg
+  width: 1920
+  height: 1586
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Louis Gallait, The Last Moments of Count Egmont, 1848. State Hermitage Museum, St Petersburg. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1920, height: 1586, bytes: 435959 }
+  thumb: { width: 363, height: 300, bytes: 16072 }
+  full: { width: 1920, height: 1586, bytes: 485549 }
+  placeholder_color: "#34241e"
+
+mendelssohn-piano-trio-1:
+  # Watercolour by the composer, 2230 × 1605 (landscape), PD-Art (Mendelssohn died 1847). Commons source:
+  # "Archiv Mendelssohn-Haus" (mendelssohn-stiftung.de); the sheet's physical owner is not stated on Commons,
+  # so source_url is the Commons page. Light, cream paper tones: check the placeholder colour.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Blick_aus_Reichels_Garten_auf_das_winterliche_Leipzig.jpg
+  source_url: https://commons.wikimedia.org/wiki/File:Blick_aus_Reichels_Garten_auf_das_winterliche_Leipzig.jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:Blick_aus_Reichels_Garten_auf_das_winterliche_Leipzig.jpg
+  width: 2230
+  height: 1605
+  medium: Watercolour on paper
+  license: Public domain (PD-Art)
+  credit_line: Felix Mendelssohn Bartholdy, View from Reichels Garten over Leipzig in Winter, 1836. Archive of the Mendelssohn-Haus, Leipzig. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2230, height: 1605, bytes: 909084 }
+  thumb: { width: 417, height: 300, bytes: 43414 }
+  full: { width: 2230, height: 1605, bytes: 1006305 }
+  placeholder_color: "#d2c5a8"
+
+mendelssohn-midsummer-nights-dream-overture:
+  # Google Art Project file, 4001 × 2600 (landscape), PD-Art (Paton died 1901). Many small nude fairy figures
+  # (see research note). Wide format: plan the hero crop around Titania (centre left) and Oberon.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Sir_Joseph_Noel_Paton_-_The_Quarrel_of_Oberon_and_Titania_-_Google_Art_Project.jpg
+  source_url: https://www.nationalgalleries.org/collection/artists-a-z/p/artist/sir-joseph-noel-paton/object/the-quarrel-of-oberon-and-titania-ng-293
+  commons_page: https://commons.wikimedia.org/wiki/File:Sir_Joseph_Noel_Paton_-_The_Quarrel_of_Oberon_and_Titania_-_Google_Art_Project.jpg
+  width: 4001
+  height: 2600
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Sir Joseph Noel Paton, The Quarrel of Oberon and Titania, 1849. Scottish National Gallery, Edinburgh (NG 293). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2770, height: 1800, bytes: 670945 }
+  thumb: { width: 462, height: 300, bytes: 32350 }
+  full: { width: 4000, height: 2599, bytes: 1189630 }
+  placeholder_color: "#53432e"
+
+schumann-symphony-4:
+  # Switched at merge: Leutze's Washington shared only place and year with the symphony; a dark lake by torchlight from the same Düsseldorf circle, the same year, fits its D minor drama.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Hans_Gude,_Adolph_Tidemand_-_Lystring_p%C3%A5_Kr%C3%B8deren_-_NG.M.04309_-_National_Museum_of_Art,_Architecture_and_Design.jpg
+  source_url: https://www.nasjonalmuseet.no/en/collection/object/NG.M.04309
+  commons_page: https://commons.wikimedia.org/wiki/File:Hans_Gude,_Adolph_Tidemand_-_Lystring_p%C3%A5_Kr%C3%B8deren_-_NG.M.04309_-_National_Museum_of_Art,_Architecture_and_Design.jpg
+  width: 7416
+  height: 5328
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old)
+  credit_line: Hans Gude and Adolph Tidemand, Fishing by Torchlight on the Krøderen, 1851. Nasjonalmuseet, Oslo (NG.M.04309). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2505, height: 1800, bytes: 436298 }
+  thumb: { width: 418, height: 300, bytes: 13819 }
+  full: { width: 4000, height: 2874, bytes: 1517247 }
+  placeholder_color: "#323226"
+
+brahms-ein-deutsches-requiem:
+  # Google Art Project / DIA file, 2700 × 2079 (landscape), PD-Art (Ruisdael died 1682). Detroit Institute of Arts
+  # version (the larger of Ruisdael's two; the other is in Dresden). Keep the rainbow (upper left) in the hero crop.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Jacob_Isaackszoon_van_Ruisdael_-_The_Jewish_Cemetery_(1654_or_1655).jpg
+  source_url: https://dia.org/collection/jewish-cemetery-60034
+  commons_page: https://commons.wikimedia.org/wiki/File:Jacob_Isaackszoon_van_Ruisdael_-_The_Jewish_Cemetery_(1654_or_1655).jpg
+  width: 2700
+  height: 2079
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Jacob van Ruisdael, The Jewish Cemetery, c. 1654–55. Detroit Institute of Arts, Gift of Julius H. Haass in memory of his brother Dr. Ernest W. Haass (26.3). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2338, height: 1800, bytes: 949257 }
+  thumb: { width: 390, height: 300, bytes: 33979 }
+  full: { width: 2700, height: 2079, bytes: 1130885 }
+  placeholder_color: "#43443c"
+
+tchaikovsky-swan-lake:
+  # Google Art Project file supplied with the museum's data (RF 1976, Camondo bequest 1911).
+  # Dating differs between sources (museum/Google 1871–1874, Wikidata 1871, en.wikipedia 1874–76); the guide uses 1871–74.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Edgar_Degas_-_The_Ballet_Class_-_Google_Art_Project.jpg
+  source_url: https://www.musee-orsay.fr/fr/oeuvres/1151
+  commons_page: https://commons.wikimedia.org/wiki/File:Edgar_Degas_-_The_Ballet_Class_-_Google_Art_Project.jpg
+  width: 3950
+  height: 4535
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Edgar Degas, The Ballet Class (La Classe de danse), 1871–74. Musée d'Orsay, Paris (RF 1976). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2067, bytes: 887938 }
+  thumb: { width: 300, height: 344, bytes: 20265 }
+  full: { width: 3484, height: 4000, bytes: 3380174 }
+  placeholder_color: "#746d5a"
+
+tchaikovsky-1812-overture:
+  # Museum-supplied image (Hermitage Amsterdam, 2015 exhibition). No Hermitage object page or inventory
+  # number was found in this session; source_url is the page the Commons file cites.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Crossing_the_Berezina_River,_by_Peter_von_Hess.jpg
+  source_url: http://www.hermitage.nl/nl/activiteiten/2015/april.htm
+  commons_page: https://commons.wikimedia.org/wiki/File:Crossing_the_Berezina_River,_by_Peter_von_Hess.jpg
+  width: 3748
+  height: 2482
+  medium: Oil on canvas
+  license: Public domain (PD-old-100)
+  credit_line: Peter von Hess, Crossing the Berezina River on 17 (29) November 1812, 1844. State Hermitage Museum, St Petersburg. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2718, height: 1800, bytes: 761387 }
+  thumb: { width: 453, height: 300, bytes: 29082 }
+  full: { width: 3748, height: 2482, bytes: 1301160 }
+  placeholder_color: "#594e48"
+
+borodin-polovtsian-dances:
+  # Gallery photo by User:anagoria (Tretyakov Gallery); check the crop to the canvas before the image pipeline.
+  # Vasnetsov is already in the catalogue (stravinsky-firebird-suite); this work is the direct match for Prince Igor.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/1880_Vasnetsov_Nach_der_Schlacht_von_Igor_anagoria.JPG
+  source_url: https://www.wikidata.org/wiki/Q11819873
+  commons_page: https://commons.wikimedia.org/wiki/File:1880_Vasnetsov_Nach_der_Schlacht_von_Igor_anagoria.JPG
+  width: 3308
+  height: 1776
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Viktor Vasnetsov, After Prince Igor's Battle with the Polovtsy, 1880. State Tretyakov Gallery, Moscow. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 3308, height: 1776, bytes: 955561 }
+  thumb: { width: 559, height: 300, bytes: 33042 }
+  full: { width: 3308, height: 1776, bytes: 1055055 }
+  placeholder_color: "#6b6c6e"
+
+rimsky-korsakov-capriccio-espagnol:
+  # Image from the Prado's collection site (Commons source line). Goya is already in the catalogue twice;
+  # this tapestry cartoon is a different work, chosen as the clearest match for the Spanish dances.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/El_baile_a_orillas_del_Manzanares.jpg
+  source_url: https://www.museodelprado.es/coleccion/obra-de-arte/baile-a-orillas-del-manzanares/9a7fd0ca-37d4-40d5-8b1c-8d86394dd729
+  commons_page: https://commons.wikimedia.org/wiki/File:El_baile_a_orillas_del_Manzanares.jpg
+  width: 2556
+  height: 2362
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Francisco de Goya, The Dance on the Banks of the Manzanares (El baile de San Antonio de la Florida), 1777. Museo Nacional del Prado, Madrid (P000769). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1948, height: 1800, bytes: 539619 }
+  thumb: { width: 325, height: 300, bytes: 20176 }
+  full: { width: 2556, height: 2362, bytes: 856540 }
+  placeholder_color: "#8e836a"
+
+rachmaninoff-symphonic-dances:
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Edvard_Munch_-_The_Dance_of_Life_-_NG.M.00941_-_National_Museum_of_Art%2C_Architecture_and_Design.jpg
+  source_url: https://www.nasjonalmuseet.no/en/collection/object/NG.M.00941
+  commons_page: https://commons.wikimedia.org/wiki/File:Edvard_Munch_-_The_Dance_of_Life_-_NG.M.00941_-_National_Museum_of_Art,_Architecture_and_Design.jpg
+  width: 10526
+  height: 6856
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-expired; artist d. 1944); photograph also CC BY 4.0 (Nasjonalmuseet)
+  credit_line: Edvard Munch, The Dance of Life (Livets dans), 1899–1900. Nasjonalmuseet, Oslo (NG.M.00941). Image via Wikimedia Commons, public domain (photo Nasjonalmuseet / Børre Høstland, CC BY 4.0).
+  rights_status: public_domain
+  hero: { width: 2764, height: 1800, bytes: 914990 }
+  thumb: { width: 461, height: 300, bytes: 23882 }
+  full: { width: 4000, height: 2605, bytes: 2528579 }
+  placeholder_color: "#655f52"
+
+faure-requiem:
+  # Master in the originals cache is CROPPED (the Clark's TIFF carries a colour target, caption strip and black surround (the Clark asks for it to be cropped): faure-requiem.source.tiff cropped to 7000 × 9760 at offset 200,175, with scratchpad cropjpg). Do not pass --refresh for this id.
+  # The Clark's own photo: a colour target and caption strip run along the bottom and a line of small text
+  # along the top. Crop both before use (keep the canvas edge to edge). Portrait format (≈ 0.71:1): plan the
+  # hero crop to keep the dancing women and, if possible, Death asleep at the lower left.
+  # Cleaner but smaller fallback (no target): File:Pierre-Cécile Puvis de Chavannes 002.jpg (Yorck Project, 2024 × 2816, PD).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Pierre_Puvis_De_Chavannes_-_Death_and_the_Maidens_-_1955.54_-_Clark_Art_Institute.tiff
+  source_url: https://www.clarkart.edu/ArtPiece/Detail/Death-and-the-Maidens
+  commons_page: https://commons.wikimedia.org/wiki/File:Pierre_Puvis_De_Chavannes_-_Death_and_the_Maidens_-_1955.54_-_Clark_Art_Institute.tiff
+  width: 7000
+  height: 9760
+  medium: Oil on canvas
+  license: Public domain (PD-Art; painter d. 1898)
+  credit_line: Pierre Puvis de Chavannes, Death and the Maidens, 1872. Clark Art Institute, Williamstown, Massachusetts (1955.54). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2510, bytes: 675992 }
+  thumb: { width: 300, height: 418, bytes: 26623 }
+  full: { width: 2869, height: 4000, bytes: 1822654 }
+  placeholder_color: "#636951"
+
+saint-saens-introduction-and-rondo-capriccioso:
+  # Portrait format (≈ 0.72:1): plan the hero crop to keep Pagans's face and the guitar.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Edgar_Degas_-_Lorenzo_Pagans_and_Auguste_de_Gas_-_Google_Art_Project.jpg
+  source_url: https://www.musee-orsay.fr/fr/oeuvres/9996
+  commons_page: https://commons.wikimedia.org/wiki/File:Edgar_Degas_-_Lorenzo_Pagans_and_Auguste_de_Gas_-_Google_Art_Project.jpg
+  width: 5802
+  height: 8059
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Edgar Degas, Lorenzo Pagans and Auguste De Gas, c. 1871–72. Musée d'Orsay, Paris (RF 3736). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2500, bytes: 1016081 }
+  thumb: { width: 300, height: 417, bytes: 18862 }
+  full: { width: 2880, height: 4000, bytes: 2641124 }
+  placeholder_color: "#342416"
+
+debussy-nocturnes:
+  # Landscape (≈ 1.38:1): plan the hero crop around the far shore with the chimneys and spire on the left.
+  # Whistler is already in this file (gershwin-rhapsody-in-blue); kept because Debussy named the work after Whistler's nocturnes.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/James_Abbott_McNeill_Whistler_-_Nocturne_in_Blue_and_Silver_-_1943.176_-_Fogg_Museum.jpg
+  source_url: https://harvardartmuseums.org/collections/object/299838
+  commons_page: https://commons.wikimedia.org/wiki/File:James_Abbott_McNeill_Whistler_-_Nocturne_in_Blue_and_Silver_-_1943.176_-_Fogg_Museum.jpg
+  width: 5636
+  height: 4094
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: James McNeill Whistler, Nocturne in Blue and Silver, c. 1871–72. Harvard Art Museums/Fogg Museum, Cambridge, Massachusetts, Bequest of Grenville L. Winthrop (1943.176). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 2478, height: 1800, bytes: 600331 }
+  thumb: { width: 413, height: 300, bytes: 12083 }
+  full: { width: 4000, height: 2906, bytes: 2027770 }
+  placeholder_color: "#82a0a6"
+
+ravel-le-tombeau-de-couperin:
+  # Gallery photo of the canvas in the town hall of Saint-Jean-de-Luz (Commons user Koulstremvonplotto, 2015).
+  # Uploader's tag is CC BY-SA 4.0; as a frontal photo of a 2D public-domain painting it carries no new right
+  # (EU DSM art. 14; Bridgeman v. Corel). Flagged in research/ravel-le-tombeau-de-couperin.md.
+  # Thin strips of frame at the top and bottom: crop slightly. Very wide (≈ 2.3:1): plan the hero crop around
+  # the goatherd and goats on the left with the bay behind.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Gabriel_Deluc_-_Le_Chevrier.jpeg
+  source_url: https://commons.wikimedia.org/wiki/File:Gabriel_Deluc_-_Le_Chevrier.jpeg
+  commons_page: https://commons.wikimedia.org/wiki/File:Gabriel_Deluc_-_Le_Chevrier.jpeg
+  width: 3327
+  height: 1456
+  medium: Oil on canvas
+  license: Public domain (painter d. 1916; faithful photo of a 2D work, no new right; uploader's tag CC BY-SA 4.0)
+  credit_line: Gabriel Deluc, Le Chevrier (The Goatherd), 1908. Town hall, Saint-Jean-de-Luz. Photo via Wikimedia Commons; the painting is in the public domain.
+  rights_status: public_domain
+  hero: { width: 3327, height: 1456, bytes: 570785 }
+  thumb: { width: 686, height: 300, bytes: 37073 }
+  full: { width: 3327, height: 1456, bytes: 627841 }
+  placeholder_color: "#4f5851"
+
+brahms-academic-festival-overture:
+  # Very wide (≈ 2.06:1): plan the hero crop. Alcibiades and the revellers enter from the left; the philosophers
+  # sit on the right. Feuerbach is already in this file (bruch-violin-concerto-1); kept as Brahms's friend (see research note).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Plato%27s_Symposium_-_Anselm_Feuerbach_-_Google_Cultural_Institute.jpg
+  source_url: https://www.kunsthalle-karlsruhe.de/kunstwerke/Anselm-Feuerbach/Das-Gastmahl-des-Plato/364DB1734E6F3CAFBF8667934AE87CB6/
+  commons_page: https://commons.wikimedia.org/wiki/File:Plato%27s_Symposium_-_Anselm_Feuerbach_-_Google_Cultural_Institute.jpg
+  width: 6472
+  height: 3142
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Anselm Feuerbach, Plato's Symposium (Das Gastmahl des Platon), 1869. Staatliche Kunsthalle Karlsruhe (inv. 813). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 3600, height: 1748, bytes: 1082932 }
+  thumb: { width: 618, height: 300, bytes: 41270 }
+  full: { width: 4000, height: 1942, bytes: 1519199 }
+  placeholder_color: "#585553"
+
+dukas-the-sorcerers-apprentice:
+  # Science History Institute's own photograph, uploaded to Commons with the Institute's permission (Wikipedian in
+  # Residence). Commons licence {{Licensed-PD-Art|PD-old-100-1923|cc-by-3.0|attribution=Science History Institute}};
+  # the Institute's digital collection marks the image Public Domain Mark 1.0. Faithful photo of a 2D PD work: no new
+  # rights in the EU (DSM art. 14) or the US. Portrait format (6200 × 7635, ≈ 0.81:1): the alchemist and the burst
+  # of flame sit in the middle third; a centred crop keeps both.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/The_Alchemist%E2%80%99s_Experiment_Takes_Fire_1687_CHF_fa_2000.001.276.JPG
+  source_url: https://digital.sciencehistory.org/works/w3763731m
+  commons_page: https://commons.wikimedia.org/wiki/File:The_Alchemist%E2%80%99s_Experiment_Takes_Fire_1687_CHF_fa_2000.001.276.JPG
+  width: 6200
+  height: 7635
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-100; Public Domain Mark 1.0, Science History Institute)
+  credit_line: Hendrick Heerschop, The Alchemist's Experiment Takes Fire, 1687. Science History Institute, Philadelphia (Fisher Collection). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2217, bytes: 639890 }
+  thumb: { width: 300, height: 369, bytes: 16383 }
+  full: { width: 3248, height: 4000, bytes: 2149119 }
+  placeholder_color: "#443520"
+
+holst-the-planets:
+  # Vatican Museums' own image (IIIF, retrieved with Dezoomify), cropped and white-balanced by User:Avelludo.
+  # {{PD-Art|PD-old-auto-expired|deathyear=1749}}. Portrait format (3015 × 4440, ≈ 0.68:1): Jupiter is in the top
+  # fifth and the astronomers at the bottom; a square hero crop must choose (Jupiter and sky is the better choice).
+  # Higher-resolution gallery photo: File:Donato_Creti,_Le_osservazioni_astronomiche,_Giove,_1711_-FG.jpg
+  # (3200 × 4560, Fabrizio Garrisi, also PD-Art), taken through glass, slightly less even.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Le_osservazioni_astronomiche_-_Giove.jpg
+  source_url: https://catalogo.museivaticani.va/index.php/Detail/objects/MV.40437.0.0
+  commons_page: https://commons.wikimedia.org/wiki/File:Le_osservazioni_astronomiche_-_Giove.jpg
+  width: 3015
+  height: 4440
+  medium: Oil on canvas
+  license: Public domain (PD-Art, PD-old-auto-expired; artist d. 1749)
+  credit_line: "Donato Creti, Astronomical Observations: Jupiter, 1711. Pinacoteca Vaticana, Vatican City (MV.40437.0.0). Image via Wikimedia Commons, public domain."
+  rights_status: public_domain
+  hero: { width: 1800, height: 2651, bytes: 1178155 }
+  thumb: { width: 300, height: 442, bytes: 26067 }
+  full: { width: 2716, height: 4000, bytes: 2367673 }
+  placeholder_color: "#354156"
+
+vaughan-williams-tallis-fantasia:
+  # Master in the originals cache is CROPPED (the gallery photo shows the gilt frame: vaughan-williams-tallis-fantasia.source.jpg cropped to 2083 × 3285 at offset 452,452, with scratchpad cropjpg). Do not pass --refresh for this id.
+  # Gallery photo by Sailko (Francesco Bini), Tate Britain, 28 February 2017; photo licence CC BY 3.0; artwork PD
+  # (Palmer died 1881). Faithful photo of a 2D work: no new rights in the EU (DSM art. 14) or the US; same treatment
+  # as schubert-piano-trio-2 and the Engert entry. The file INCLUDES THE GILT FRAME: crop the master to the painted
+  # surface (roughly the inner 80 % of width and height) before `npm run images`. Tate's own images are CC BY-NC-ND
+  # and are not used. Portrait format (3000 × 4224 with frame).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Samuel_palmer,_tornando_dalla_chiesa_di_sera,_1830.jpg
+  source_url: https://www.tate.org.uk/art/artworks/palmer-coming-from-evening-church-n03697
+  commons_page: https://commons.wikimedia.org/wiki/File:Samuel_palmer,_tornando_dalla_chiesa_di_sera,_1830.jpg
+  width: 2083
+  height: 3285
+  medium: Mixed media on gesso on paper
+  license: Public domain (photograph of a public-domain painting)
+  credit_line: Samuel Palmer, Coming from Evening Church, 1830. Tate, London (N03697). Image via Wikimedia Commons, public domain (photo Sailko, CC BY 3.0).
+  rights_status: public_domain
+  hero: { width: 1800, height: 2839, bytes: 596537 }
+  thumb: { width: 300, height: 473, bytes: 49529 }
+  full: { width: 2083, height: 3285, bytes: 808930 }
+  placeholder_color: "#604a23"
+
+falla-nights-in-the-gardens-of-spain:
+  # Google Arts & Culture image supplied by the MNAC (Partage Plus / Europeana project). MNAC object page: "Public
+  # domain". Rusiñol died 1931. Portrait format (3266 × 4100, ≈ 0.8:1): the cypress walk is centred; a centred crop
+  # keeps the avenue and the steps. Rusiñol already has one painting in paintings.yaml (rodrigo-concierto-de-aranjuez,
+  # Aranjuez); this second one is kept because it shows the Generalife itself, painted in 1909, the year Falla began
+  # the work (see the research note).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Santiago_Rusi%C3%B1ol_-_Gardens_of_the_Generalife_-_Google_Art_Project_(8AF4AAxKEZmchg).jpg
+  source_url: https://www.museunacional.cat/en/colleccio/gardens-generalife/santiago-rusinol/004047-000
+  commons_page: https://commons.wikimedia.org/wiki/File:Santiago_Rusi%C3%B1ol_-_Gardens_of_the_Generalife_-_Google_Art_Project_(8AF4AAxKEZmchg).jpg
+  width: 3266
+  height: 4100
+  medium: Oil on canvas
+  license: Public domain (PD-Art; MNAC, public domain)
+  credit_line: Santiago Rusiñol, Gardens of the Generalife (Jardí del Generalife), 1909. Museu Nacional d'Art de Catalunya, Barcelona (004047-000). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2260, bytes: 1119102 }
+  thumb: { width: 300, height: 377, bytes: 32995 }
+  full: { width: 3186, height: 4000, bytes: 2936161 }
+  placeholder_color: "#525541"
+
+mahler-das-lied-von-der-erde:
+  # Master in the originals cache is CROPPED (the scan includes the scroll's brocade mounting: mahler-das-lied-von-der-erde.source.jpg cropped to 2743 × 7559 at offset 156,112, with scratchpad cropjpg). Do not pass --refresh for this id.
+  # Hanging scroll, ink on paper, 81.1 × 30.5 cm; image from the Japanese national museums' e-museum (source given
+  # on Commons: https://emuseum.nich.go.jp/detail/100834/000/000), {{PD-Art|PD-old-100-expired}} (13th century).
+  # Very tall (3055 × 7808, ≈ 0.39:1) and includes the brocade mounting and a large seal at the top right. The
+  # figure fills the lower two-thirds: crop the master to the painted paper, and centre the hero/thumb crops on the
+  # poet (head at about 40 % of the height). Lower-resolution, warmer copy from the TNM site:
+  # File:Liang_Kai_-_Li_Bai_Strolling.jpg (1137 × 3000).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Li_Bai_in_stroll.jpg
+  source_url: https://emuseum.nich.go.jp/detail/100834/000/000
+  commons_page: https://commons.wikimedia.org/wiki/File:Li_Bai_in_stroll.jpg
+  width: 2743
+  height: 7559
+  medium: Hanging scroll, ink on paper
+  license: Public domain (PD-Art, PD-old-100-expired)
+  credit_line: Liang Kai, Li Bai Strolling, 13th century. Tokyo National Museum (TA-164), Important Cultural Property. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1306, height: 3600, bytes: 687942 }
+  thumb: { width: 261, height: 720, bytes: 21160 }
+  full: { width: 1452, height: 4000, bytes: 1005045 }
+  placeholder_color: "#b4a889"
+
+bartok-concerto-for-orchestra:
+  # Scan from hung-art.hu (Web Gallery of Hungarian art); the museum page could not be reached. Commons also has
+  # File:The_Lonely_Cedar.jpg (3162 × 2519, a gallery photo by User:Szilas) as a fallback.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Maganyoscedrus.jpg
+  source_url: http://www.hung-art.hu/frames-e.html?/english/c/csontvar/muvek/1/index.html
+  commons_page: https://commons.wikimedia.org/wiki/File:Maganyoscedrus.jpg
+  width: 3404
+  height: 2735
+  medium: Oil on canvas
+  license: Public domain (PD-old)
+  credit_line: Tivadar Csontváry Kosztka, The Solitary Cedar (Magányos cédrus), 1907. Csontváry Museum, Pécs. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2240, height: 1800, bytes: 707532 }
+  thumb: { width: 373, height: 300, bytes: 31660 }
+  full: { width: 3404, height: 2735, bytes: 1353596 }
+  placeholder_color: "#8d9397"
+
+prokofiev-symphony-5:
+  # 1923 × 1400 is the largest faithful copy on Commons (a "FXD" version with altered colours exists; not used).
+  # Wikidata Q18237141 (English label "In High Azure"); Tretyakov inventory number not found.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Rylov_Blue_Expanse.jpg
+  source_url: https://www.wikidata.org/wiki/Q18237141
+  commons_page: https://commons.wikimedia.org/wiki/File:Rylov_Blue_Expanse.jpg
+  width: 1923
+  height: 1400
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Arkady Rylov, In the Blue Expanse (V golubom prostore), 1918. State Tretyakov Gallery, Moscow. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1923, height: 1400, bytes: 270229 }
+  thumb: { width: 412, height: 300, bytes: 20219 }
+  full: { width: 1923, height: 1400, bytes: 287199 }
+  placeholder_color: "#6d7b87"
+
+sibelius-symphony-7:
+  # Google Art Project file supplied by the Finnish National Gallery (portrait format, 83 × 116.5 cm).
+  # Ateneum inventory number not recorded.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Albert_Edelfelt_-_Kaukola_Ridge_at_Sunset_-_Google_Art_Project.jpg
+  # Museum object page not found; the Commons page carries the GAP / Finnish National Gallery provenance.
+  source_url: https://commons.wikimedia.org/wiki/File:Albert_Edelfelt_-_Kaukola_Ridge_at_Sunset_-_Google_Art_Project.jpg
+  commons_page: https://commons.wikimedia.org/wiki/File:Albert_Edelfelt_-_Kaukola_Ridge_at_Sunset_-_Google_Art_Project.jpg
+  width: 4001
+  height: 5613
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Albert Edelfelt, Kaukola Ridge at Sunset, 1889–90. Finnish National Gallery, Ateneum Art Museum, Helsinki. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2525, bytes: 694626 }
+  thumb: { width: 300, height: 421, bytes: 22068 }
+  full: { width: 2851, height: 4000, bytes: 1775518 }
+  placeholder_color: "#948665"
+
+erkin-violin-concerto:
+  # Google Art Project file supplied by the Sakıp Sabancı Museum. Dates differ: Commons (from the GAP data
+  # at upload) 1919, the GAP page today 1918, the museum's own page 1922 (used, as the holding museum).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Hoca_Ali_R%C4%B1za_-_Istanbul,_Istanbul_-_Google_Art_Project.jpg
+  source_url: https://sakipsabancimuzesi.org/en/exhibitions-and-events/exhibition/64/624
+  commons_page: https://commons.wikimedia.org/wiki/File:Hoca_Ali_R%C4%B1za_-_Istanbul,_Istanbul_-_Google_Art_Project.jpg
+  width: 4501
+  height: 3181
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Hoca Ali Rıza, Istanbul (İstanbul), 1922. Sakıp Sabancı Museum, Istanbul (200-0010-HAR). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2547, height: 1800, bytes: 1123988 }
+  thumb: { width: 424, height: 300, bytes: 21703 }
+  full: { width: 4000, height: 2827, bytes: 2673073 }
+  placeholder_color: "#909684"
