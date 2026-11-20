@@ -35,11 +35,11 @@ also_recommended:
     year: 1972
     spotify_url: https://open.spotify.com/album/0an9Tqz3JBjGG04MvM1l3x
 painting:
-  artist: Gabriel Deluc
-  title: Keçi Çobanı
-  year: 1908
-  collection: Saint-Jean-de-Luz Belediye Binası
-  pairing_note: Ravel'in Forlane'ı adadığı, 1916'da cephede ölen Bask ressam Gabriel Deluc'ün tablosu; Saint-Jean-de-Luz kıyısında bir keçi çobanı. Limanın öbür yakasında, Ciboure'da Ravel doğmuştu.
+  artist: Jean-Antoine Watteau
+  title: Venedik Şenlikleri
+  year: 1718–19
+  collection: İskoçya Ulusal Galerisi, Edinburgh
+  pairing_note: Bir bahçe eğlencesinde Venedik usulü bir dans; Couperin'in sağlığında boyandı. Forlane de Venedik'ten gelir ve Ravel kendi forlane'ını hazırlarken Couperin'inkini elle kopyalamıştı.
 ```
 
 ### Genel bakış

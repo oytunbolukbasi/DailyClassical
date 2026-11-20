@@ -34,11 +34,11 @@ also_recommended:
     year: 1972
     spotify_url: https://open.spotify.com/album/0an9Tqz3JBjGG04MvM1l3x
 painting:
-  artist: Gabriel Deluc
-  title: The Goatherd
-  year: 1908
-  collection: Town Hall, Saint-Jean-de-Luz
-  pairing_note: Painted by Gabriel Deluc, the Basque painter to whom Ravel dedicated the Forlane, killed at the front in 1916; a goatherd on the coast at Saint-Jean-de-Luz, across the harbour from Ciboure, where Ravel was born.
+  artist: Jean-Antoine Watteau
+  title: Fêtes vénitiennes
+  year: 1718–19
+  collection: Scottish National Gallery, Edinburgh
+  pairing_note: A garden party breaks into a Venetian dance, painted in Couperin's own lifetime; the forlane, too, came from Venice, and Ravel prepared his by copying out one of Couperin's.
 ```
 
 ### The big picture

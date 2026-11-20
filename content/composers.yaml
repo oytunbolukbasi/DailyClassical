@@ -2695,8 +2695,22 @@
       1930’da yurda döndü ve Ankara’daki Musiki Muallim Mektebi’nde piyano ve armoni öğretmeni oldu; müzik öğretmeni yetiştiren bu okul 1936’da Ankara Devlet Konservatuvarı’na dönüştü. Ömrünün sonuna kadar, kırk yılı aşkın bir süre burada ders verdi; 1949–1951 arasında okulun müdürlüğünü yaptı ve kuşaklar boyu Türk piyanisti yetiştirdi. 1932’de piyanist Ferhunde Remzi ile evlendi; Ferhunde Erkin, eşinin piyano eserlerinin en önemli yorumcusu oldu. Kasım 1936’da Béla Bartók, Ahmed Adnan Saygun ve Necil Kâzım Akses ile birlikte Adana ve Osmaniye yörelerinde halk ezgisi derlemeye gitti. Saygun, Akses, Cemal Reşit Rey ve Hasan Ferit Alnar ile birlikte “Türk Beşleri”nden sayılır: birkaç yıl arayla doğmuş, Avrupa’nın biçimlerini Türk müziğinin makamlarıyla ve Anadolu halk danslarının aksak ritimleriyle buluşturan besteciler.
 
       Osmanlı eğlencelerinin köçek dansçılarından esinlenen ve Anadolu’nun dört bir yanından dans ezgileriyle örülen *Köçekçe* (1943) bugün de en çok çalınan eseridir. Solistliğini Ferhunde Erkin’in yaptığı Piyano Konçertosu 1943’te bir ulusal beste ödülünü paylaştı; Keman Konçertosu (1946–47) ise ilk kez 1948’de Ankara’daki opera binasının açılışında seslendirildi. Bunların yanı sıra iki senfoni, oda müziği ve piyano eserleri yazdı; eserlerini yurt içinde ve yurt dışında kendisi yönetti. İlk eserlerinde Debussy ile Ravel’in etkisi duyulur; sonra berrak biçimleri, dörtlü ve beşli aralıklara dayanan akorları, Anadolu’dan gelen ezgi ve ritimleriyle kendine özgü bir dil buldu. 1971’de Devlet Sanatçısı unvanını aldı. 15 Eylül 1972’de, hâlâ ders verirken Ankara’da bir kalp krizi sonucu öldü; şehrin Karşıyaka Mezarlığı’nda yatıyor.
-  # No portrait: Erkin died in 1972, so the brief requires a CC-licensed photo with credit, or null.
-  # The only photograph on Commons (File:Ulvi_Cemal_Erkin.jpg, 255 × 395) is tagged {{PD-old}} with an
-  # impossible date (1896) and no traceable source; it is neither CC-licensed nor safely public domain.
-  # See content/research/composers-sources.md.
-  portrait: null
+  # Press photograph from the official Ulvi Cemal Erkin website (images/portreler/basin1.jpg), chosen by Oytun
+  # on 2026-11-20 instead of the 255 × 395 Wikipedia file. Not freely licensed: shown with credit; ask the site's
+  # owners for permission. Photographer and date unknown (late in life, reading a score).
+  portrait:
+    artist: { en: Unknown photographer, tr: Fotoğrafçısı bilinmiyor }
+    title: { en: Ulvi Cemal Erkin, tr: Ulvi Cemal Erkin }
+    year: null
+    collection: null
+    image_url: http://www.ulvicemalerkin.com/images/portreler/basin1.jpg
+    source_url: http://www.ulvicemalerkin.com/
+    width: 1417
+    height: 2125
+    license: Press photograph, official Ulvi Cemal Erkin website (ulvicemalerkin.com)
+    credit_line: { en: "Photo: ulvicemalerkin.com", tr: "Fotoğraf: ulvicemalerkin.com" }
+    focal_y: 0.25
+    hero: { width: 1417, height: 2125, bytes: 314993 }
+    thumb: { width: 300, height: 450, bytes: 13554 }
+    full: { width: 1417, height: 2125, bytes: 370485 }
+    placeholder_color: "#444b48"

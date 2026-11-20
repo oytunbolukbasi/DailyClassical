@@ -23,13 +23,14 @@ Oytun zamanlamayı bıraktı: çok vakit alıyor. Kulakla zamanlanan 7 eser (Ero
 
 ## Kasım 2026 ikinci parti (34 eser): tamamlandı
 
-20 Kasım 2026'da 7 agent'la yazıldı (brief `content/research/BATCH-2026-11b.md`, birleştirmeden sonra silinecek) ve aynı gün birleştirildi; katalog 200 esere çıktı. Yeni besteciler: Corelli, Fauré, Dukas, Holst, Falla, Bartók ve ilk Türk besteci Ulvi Cemal Erkin (portresi yok: özgür lisanslı fotoğraf bulunamadı). İmzaları yok (sonraki sürümde).
+20 Kasım 2026'da 7 agent'la yazıldı (brief `content/research/BATCH-2026-11b.md`, birleştirmeden sonra silinecek) ve aynı gün birleştirildi; katalog 200 esere çıktı. Yeni besteciler: Corelli, Fauré, Dukas, Holst, Falla, Bartók ve ilk Türk besteci Ulvi Cemal Erkin (portre: resmi sitenin basın fotoğrafı, kaynak gösterilerek; site sahiplerinden izin istenmeli). İmzaları yok (sonraki sürümde).
 
 - **Oytun'un kayıtları:** Mozart Requiem (Pichon · Pygmalion, 14 bölüm), Haydn 101 (Karajan · BPO, 1971), Kuğu Gölü (Previn · LSO; 6 numaralık bir dinleme yolu: albümde 2, 10, 13, 24, 26, 31), Erkin Keman Konçertosu (Buswell · İDSO · Kuchar). Bach BWV 1056 klavsenle (Pinnock), Oytun'un isteği.
 - **Mozart Requiem 14 bölüm:** 8 ve üzeri bölümde kapsül + bölüm listesi sayfası 1.3.1 (12) ile geliyor; eski sürümler 14 rakamı sığdıramaz, takvime 1.3.1 yaygınlaşınca.
 - **Birleştirmede değişen tablolar:** Schumann 4 → Gude & Tidemand, *Krøderen'de Meşale Işığında Balık Avı* (Leutze'nin *Washington*'ı yerine); Bahar Sonatı → Cot, *Springtime* (Met CC0; Uffizi'deki Botticelli yerine, İtalya'nın ticari çoğaltma ücreti nedeniyle).
 - **Bilerek kalan tekrarlar:** Goya 3 (Capriccio espagnol), Whistler 2 (Nocturnes), Feuerbach 2 (Akademik Festival), Rusiñol 2 (Falla), Vasnetsov 2 (Polovets).
-- **Takvime koymadan önce bakılacaklar:** Ravel Tombeau'daki Deluc tablosunun tek fotoğrafına yükleyen CC BY-SA demiş (faithful photo gerekçesiyle kamu malı sayıldı; Oytun'un onayı bekleniyor). Erkin'in ilk seslendirmesi 2 Nisan 1948 (Naxos kitapçığı 1949 der). En zayıf zamanlamalar: Saint-Saëns Introduction et Rondo, Sirènes, Forlane, Horn Konçertosu 4, Bahar Sonatı II–IV, Requiem Dies irae/Tuba mirum. Hafızadan yazılan ve partisyonla doğrulanmayan ayrıntılar araştırma notlarında işaretli.
+- **20 Kasım kararları (Oytun):** Ravel Tombeau → Watteau, *Fêtes vénitiennes* (Deluc'ün tek fotoğrafı CC BY-SA etiketliydi); Paton (Yaz Gecesi Rüyası) kalıyor; Erkin'in ilk seslendirmesi Türk kaynaklarına göre 2 Nisan 1948 (Naxos kitapçığı 1949 der).
+- **Takvime koymadan önce bakılacaklar:** En zayıf zamanlamalar: Saint-Saëns Introduction et Rondo, Sirènes, Forlane, Horn Konçertosu 4, Bahar Sonatı II–IV, Requiem Dies irae/Tuba mirum. Hafızadan yazılan ve partisyonla doğrulanmayan ayrıntılar araştırma notlarında işaretli.
 
 ## Kasım 2026 partisi (52 eser): tamamlandı
 

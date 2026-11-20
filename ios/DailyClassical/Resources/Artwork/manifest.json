@@ -406,6 +406,35 @@
         "hash": "7d0baddd45"
       }
     },
+    "composers/erkin": {
+      "source": "http://www.ulvicemalerkin.com/images/portreler/basin1.jpg",
+      "color": "#444b48",
+      "credit": {
+        "en": "Photo: ulvicemalerkin.com",
+        "tr": "Fotoğraf: ulvicemalerkin.com"
+      },
+      "hero": {
+        "path": "composers/erkin-hero.heic",
+        "width": 1417,
+        "height": 2125,
+        "bytes": 314993,
+        "hash": "101d2cd25e"
+      },
+      "thumb": {
+        "path": "composers/erkin-thumb.heic",
+        "width": 300,
+        "height": 450,
+        "bytes": 13554,
+        "hash": "6f25e25465"
+      },
+      "full": {
+        "path": "composers/erkin-full.heic",
+        "width": 1417,
+        "height": 2125,
+        "bytes": 370485,
+        "hash": "7505e3b91c"
+      }
+    },
     "composers/falla": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Manuel_de_Falla_con_bast%C3%B3n_(cropped).jpg",
       "color": "#414141",
@@ -4735,28 +4764,28 @@
       }
     },
     "paintings/ravel-le-tombeau-de-couperin": {
-      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Gabriel_Deluc_-_Le_Chevrier.jpeg",
-      "color": "#4f5851",
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Antoine_Watteau_-_F%C3%AAtes_Venitiennes_-_Google_Art_Project.jpg",
+      "color": "#494230",
       "hero": {
         "path": "paintings/ravel-le-tombeau-de-couperin-hero.heic",
-        "width": 3327,
-        "height": 1456,
-        "bytes": 570785,
-        "hash": "a5350de650"
+        "width": 1800,
+        "height": 2224,
+        "bytes": 671741,
+        "hash": "d92dbe905b"
       },
       "thumb": {
         "path": "paintings/ravel-le-tombeau-de-couperin-thumb.heic",
-        "width": 686,
-        "height": 300,
-        "bytes": 37073,
-        "hash": "28f888a43e"
+        "width": 300,
+        "height": 371,
+        "bytes": 21618,
+        "hash": "42f96ce601"
       },
       "full": {
         "path": "paintings/ravel-le-tombeau-de-couperin-full.heic",
-        "width": 3327,
-        "height": 1456,
-        "bytes": 627841,
-        "hash": "3546465983"
+        "width": 3237,
+        "height": 4000,
+        "bytes": 1796709,
+        "hash": "6772766263"
       }
     },
     "paintings/ravel-piano-concerto-g": {

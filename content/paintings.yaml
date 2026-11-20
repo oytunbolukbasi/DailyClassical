@@ -3179,24 +3179,22 @@ debussy-nocturnes:
   placeholder_color: "#82a0a6"
 
 ravel-le-tombeau-de-couperin:
-  # Gallery photo of the canvas in the town hall of Saint-Jean-de-Luz (Commons user Koulstremvonplotto, 2015).
-  # Uploader's tag is CC BY-SA 4.0; as a frontal photo of a 2D public-domain painting it carries no new right
-  # (EU DSM art. 14; Bridgeman v. Corel). Flagged in research/ravel-le-tombeau-de-couperin.md.
-  # Thin strips of frame at the top and bottom: crop slightly. Very wide (≈ 2.3:1): plan the hero crop around
-  # the goatherd and goats on the left with the bay behind.
-  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Gabriel_Deluc_-_Le_Chevrier.jpeg
-  source_url: https://commons.wikimedia.org/wiki/File:Gabriel_Deluc_-_Le_Chevrier.jpeg
-  commons_page: https://commons.wikimedia.org/wiki/File:Gabriel_Deluc_-_Le_Chevrier.jpeg
-  width: 3327
-  height: 1456
+  # Switched on 2026-11-20 (Oytun): Deluc's Le Chevrier survives only as a gallery photo its uploader tagged
+  # CC BY-SA. Watteau is the painter of Couperin's own time, and the scene is a Venetian dance, as the Forlane is.
+  # Watteau's third painting in the catalogue (Vivaldi Spring, Eine kleine Nachtmusik).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Jean-Antoine_Watteau_-_F%C3%AAtes_Venitiennes_-_Google_Art_Project.jpg
+  source_url: http://www.nationalgalleries.org/object/NG%20439
+  commons_page: https://commons.wikimedia.org/wiki/File:Jean-Antoine_Watteau_-_F%C3%AAtes_Venitiennes_-_Google_Art_Project.jpg
+  width: 3238
+  height: 4001
   medium: Oil on canvas
-  license: Public domain (painter d. 1916; faithful photo of a 2D work, no new right; uploader's tag CC BY-SA 4.0)
-  credit_line: Gabriel Deluc, Le Chevrier (The Goatherd), 1908. Town hall, Saint-Jean-de-Luz. Photo via Wikimedia Commons; the painting is in the public domain.
+  license: Public domain (PD-Art)
+  credit_line: Jean-Antoine Watteau, Fêtes vénitiennes, 1718–19. Scottish National Gallery, Edinburgh (NG 439). Image via Wikimedia Commons (Google Art Project), public domain.
   rights_status: public_domain
-  hero: { width: 3327, height: 1456, bytes: 570785 }
-  thumb: { width: 686, height: 300, bytes: 37073 }
-  full: { width: 3327, height: 1456, bytes: 627841 }
-  placeholder_color: "#4f5851"
+  hero: { width: 1800, height: 2224, bytes: 671741 }
+  thumb: { width: 300, height: 371, bytes: 21618 }
+  full: { width: 3237, height: 4000, bytes: 1796709 }
+  placeholder_color: "#494230"
 
 brahms-academic-festival-overture:
   # Very wide (≈ 2.06:1): plan the hero crop. Alcibiades and the revellers enter from the left; the philosophers
