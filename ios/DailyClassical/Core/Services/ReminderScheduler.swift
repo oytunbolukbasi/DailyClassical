@@ -56,6 +56,9 @@ enum ReminderScheduler {
     /// another language. Called when the app becomes active and when the language changes.
     static func refresh(language: String, force: Bool = false) async {
         guard savedTime != nil else { return }
+        // Launch asks three times at once (content load, becoming active, Premium resolved); the
+        // plan under way already covers the first two.
+        if !force, planning != nil { return }
         let d = UserDefaults.standard
         if !force, d.string(forKey: plannedLanguageKey) == language,
            let last = d.object(forKey: plannedKey) as? Date, Date.now.timeIntervalSince(last) < 3600 { return }
@@ -66,7 +69,22 @@ enum ReminderScheduler {
 
     // MARK: Planning
 
+    /// The plan being built, if any. Plans run one after another: at launch two or three ran at
+    /// once, each removing the others' requests and downloading the same paintings.
+    private static var planning: Task<Void, Never>?
+
     private static func plan(language: String) async {
+        let previous = planning
+        let task = Task {
+            await previous?.value
+            await buildPlan(language: language)
+        }
+        planning = task
+        await task.value
+        if planning == task { planning = nil }
+    }
+
+    private static func buildPlan(language: String) async {
         guard let time = savedTime, let hour = time.hour, let minute = time.minute else { return }
         let calendar = Calendar.current
         // The first reminder: today if its time is still ahead, else tomorrow.
@@ -79,6 +97,9 @@ enum ReminderScheduler {
 
         await removePending()
         let center = UNUserNotificationCenter.current()
+        // Each plan's identifiers are new, so a removed request's attachment (which iOS deletes
+        // asynchronously) can never be confused with its replacement's.
+        let run = UUID().uuidString.prefix(8)
         for offset in 0..<daysAhead {
             guard let date = calendar.date(byAdding: .day, value: offset, to: start) else { continue }
             let key = APIClient.day(date)
@@ -89,7 +110,7 @@ enum ReminderScheduler {
             when.hour = hour
             when.minute = minute
             let trigger = UNCalendarNotificationTrigger(dateMatching: when, repeats: false)
-            try? await center.add(UNNotificationRequest(identifier: "\(prefix)-\(key)", content: content, trigger: trigger))
+            try? await center.add(UNNotificationRequest(identifier: "\(prefix)-\(key)-\(run)", content: content, trigger: trigger))
         }
         UserDefaults.standard.set(Date.now, forKey: plannedKey)
         UserDefaults.standard.set(language, forKey: plannedLanguageKey)
@@ -140,12 +161,26 @@ enum ReminderScheduler {
 
     // MARK: Test builds (Settings › Test)
 
-    /// Delivers `content` in five seconds (leave the app to see it as a banner).
-    static func sendTest(_ content: UNMutableNotificationContent) async {
+    /// Delivers `content` in `seconds` (leave the app to see it as a banner).
+    static func sendTest(_ content: UNMutableNotificationContent, after seconds: TimeInterval = 5) async {
         let center = UNUserNotificationCenter.current()
         _ = try? await center.requestAuthorization(options: [.alert, .sound])
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: false)
         try? await center.add(UNNotificationRequest(identifier: "test-\(UUID().uuidString)", content: content, trigger: trigger))
+    }
+
+    /// The scheduled reminders as iOS holds them, soonest first: "20.11 09:00 · ✓ · Mahler: …"
+    /// (✓ = the request carries an image attachment).
+    static func pendingSummary() async -> [String] {
+        let requests = await UNUserNotificationCenter.current().pendingNotificationRequests()
+            .filter { $0.identifier.hasPrefix(prefix) }
+        let dated = requests.map { r in
+            ((r.trigger as? UNCalendarNotificationTrigger)?.nextTriggerDate() ?? .distantFuture, r)
+        }.sorted { $0.0 < $1.0 }
+        return dated.map { date, r in
+            let when = date.formatted(.dateTime.day(.twoDigits).month(.twoDigits).hour().minute())
+            return "\(when) · \(r.content.attachments.isEmpty ? "✗" : "✓") · \(r.content.title)"
+        }
     }
 
     /// A piece as the reminder names it, from a Library summary (painting from the server or the bundle).

@@ -13,6 +13,7 @@ struct TestNotificationsScreen: View {
     @State private var query = ""
     @State private var sent: String?
     @State private var pending: Int?
+    @State private var planned: [String] = []
 
     /// Ready-made cases, including real shared days.
     private let presets: [(String, [String])] = [
@@ -54,8 +55,23 @@ struct TestNotificationsScreen: View {
                     pending = await UNUserNotificationCenter.current().pendingNotificationRequests().count
                 }
                 if let pending { row("Bekleyen bildirim: \(pending)") }
+                button("Yarının bildirimi 1 dk sonra (telefonu kilitle)") {
+                    let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: .now) ?? .now
+                    let day = try? await APIClient.shared.upcoming(from: APIClient.day(tomorrow), days: 1, language: language.code).first
+                    let note = await ReminderScheduler.notification(piece: day?.piece, birthdays: [], on: tomorrow,
+                                                                    language: language.code, premium: entitlements.isPremium)
+                    await ReminderScheduler.sendTest(note, after: 60)
+                    sent = "60 sn içinde · görsel \(note.attachments.isEmpty ? "YOK" : "eklendi")"
+                }
             } header: { header("Günlük bildirim") } footer: {
-                footer("Bildirimler 5 saniye sonra gelir; uygulama açıkken de banner olarak görünür. Günlük hatırlatma Ayarlar › Günlük hatırlatma açıkken kurulur.")
+                footer("Bildirimler 5 saniye sonra gelir; uygulama açıkken de banner olarak görünür. Günlük hatırlatma Ayarlar › Günlük hatırlatma açıkken kurulur. \"1 dk sonra\" planlı bildirimle aynı yoldan hazırlanır: kilit ekranında görmek için telefonu kilitle.")
+            }
+
+            Section {
+                button("Planlanan bildirimleri listele") { planned = await ReminderScheduler.pendingSummary() }
+                ForEach(planned, id: \.self) { row($0) }
+            } header: { header("Planlanan bildirimler") } footer: {
+                footer("Tarih · görsel (✓ var, ✗ yok) · başlık. Eser adı olan ilk 14 günde ✓ beklenir; sonraki günler genel metindir.")
             }
 
             Section {
