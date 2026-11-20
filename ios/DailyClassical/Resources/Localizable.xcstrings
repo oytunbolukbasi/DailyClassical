@@ -4481,6 +4481,23 @@
         }
       }
     },
+    "piece.switcher.menu.accessibilityLabel": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Movement"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bölüm"
+          }
+        }
+      }
+    },
     "rate.body": {
       "extractionState": "manual",
       "localizations": {

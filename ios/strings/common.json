@@ -212,6 +212,10 @@
     "en": "Movement %@",
     "tr": "%@. Bölüm"
   },
+  "piece.switcher.menu.accessibilityLabel": {
+    "en": "Movement",
+    "tr": "Bölüm"
+  },
   "piece.stop.current.accessibilityValue": {
     "en": "Current",
     "tr": "Şu anki durak"
