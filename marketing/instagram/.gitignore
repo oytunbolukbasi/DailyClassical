@@ -1,0 +1,4 @@
+out/
+__pycache__/
+stories/*.mp4
+daily/out/

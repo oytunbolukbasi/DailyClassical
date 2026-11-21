@@ -1,0 +1,138 @@
+<!doctype html>
+<meta charset="utf-8">
+<!-- Animated 9:16 stories for 23–27 Nov 2026, one per scheduled piece. ?d=E|V|M|D|B picks the day.
+     A story is a run of beats (label, headline, line) over a slowly moving painting, an optional special scene,
+     and the Today's-piece end card. Rendered by render-frames.mjs; text stays out of IG's top 250 / bottom 340 px. -->
+<style>
+@font-face { font-family: Lit; src: url('../../../ios/DailyClassical/Resources/Fonts/Literata-Regular.ttf'); font-weight: 400; }
+@font-face { font-family: Lit; src: url('../../../ios/DailyClassical/Resources/Fonts/Literata-Medium.ttf'); font-weight: 500; }
+@font-face { font-family: Lit; src: url('../../../ios/DailyClassical/Resources/Fonts/Literata-Italic.ttf'); font-weight: 400; font-style: italic; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #111010; }
+body { font-family: Lit, serif; color: #F0EBE3; -webkit-font-smoothing: antialiased; }
+.sans { font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', sans-serif; }
+.abs { position: absolute; }
+.bg { position: absolute; inset: 0; background-repeat: no-repeat; will-change: transform, opacity; }
+.label { font-size: 30px; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; color: #D4AE84; }
+.big { font-weight: 500; letter-spacing: -.015em; line-height: 1.06; text-wrap: balance; }
+.body { font-size: 46px; line-height: 1.34; color: #E6DFD5; text-wrap: pretty; }
+.mark { font-size: 32px; color: #B3ABA1; }
+.credit { font-size: 24px; color: #8A837B; }
+.pill { display: inline-block; padding: 18px 34px; border-radius: 999px; background: #D4AE84; color: #1E1B17; font-size: 32px; font-weight: 600; }
+</style>
+<body><div id="root"></div>
+<script>
+const D = {
+  E: { bg1: ['img/gros.jpg', '50% 30%'], credit1: 'Antoine-Jean Gros, Bonaparte at the Pont d’Arcole, c. 1796. Louvre',
+       end: 'Beethoven<br>Symphony No. 3, “Eroica”', special: 'strike', specialAt: [6.4, 9.4],
+       beats: [[0.3, 'Vienna · 1803–04', 'A symphony for Bonaparte.', 'Beethoven meant to name his Third after Napoleon, then First Consul of France.'],
+               [3.3, 'May 1804', 'Napoleon proclaims himself emperor.', 'The story told by his pupil Ferdinand Ries: Beethoven tore the title page in half.'],
+               [9.6, '1806', 'Sinfonia eroica.', '“Composed to celebrate the memory of a great man.”']] },
+  V: { bg1: ['img/watteau.jpg', '60% 80%'], credit1: 'Jean-Antoine Watteau, Fêtes vénitiennes, c. 1718–19. Scottish National Gallery',
+       end: 'Vivaldi<br>The Four Seasons: Spring',
+       beats: [[0.3, 'Vivaldi · Spring · 1725', 'A poem inside the score.', 'Each season came with a sonnet. Vivaldi printed its lines next to the music that paints them.'],
+               [3.6, 'I · Allegro', 'Birds, a stream, a storm.', 'The solo violin paints each scene between the returns of the full band.'],
+               [6.8, 'II · Largo', 'A goatherd asleep.', 'And a dog barking: Vivaldi even marked the part.'],
+               [9.8, 'III · Danza pastorale', 'A country dance.', 'Nymphs and shepherds, to a bagpipe. Watteau’s musician on the right plays one.']] },
+  M: { bg1: ['img/friedrich.jpg', '55% 50%'], credit1: 'Caspar David Friedrich, Two Men Contemplating the Moon, c. 1825–30. The Met',
+       end: 'Beethoven<br>“Moonlight” Sonata', moon: true,
+       beats: [[0.3, 'Beethoven · 1801', 'He never called it “Moonlight”.', 'His title: Sonata quasi una fantasia, a sonata in the manner of a fantasy.'],
+               [3.6, 'The 1820s', 'A critic hears moonlight on water.', 'Ludwig Rellstab’s image stuck. By the late 1830s publishers were using the name.'],
+               [6.8, 'Senza sordino', 'Hold the pedal down.', 'Very delicately, Beethoven writes, and let the notes keep ringing.'],
+               [9.8, 'Its fame wore on him.', 'He had written better things.', 'Or so he is said to have told his pupil Carl Czerny.']] },
+  D: { bg1: ['img/c-dvorak.jpg', '50% 25%', 'grayscale(1) brightness(.55)'], bg2: ['img/slavicek.jpg', '40% 50%'], crossAt: 9.6,
+       credit1: 'Antonín Dvořák, 1882. Photographer unknown', credit2: 'Antonín Slavíček, Birch Mood, 1897. National Gallery Prague',
+       end: 'Dvořák<br>Cello Concerto',
+       beats: [[0.3, 'New York · 1894', 'He didn’t believe in cello concertos.', 'Fine in the orchestra, he thought, but weak as a soloist: a nasal top, a mumbling bass.'],
+               [3.6, '1894', 'Then he heard Victor Herbert’s.', 'Herbert’s Second Cello Concerto, in New York, changed his mind.'],
+               [6.8, 'Winter 1894–95', 'A song for Josefina.', 'His first love was seriously ill. He quoted her favourite of his songs, “Leave Me Alone”.'],
+               [9.8, 'May 1895', 'She died. He rewrote the ending.', 'The finale, he wrote, should die away “like a breath”.']] },
+  B: { bg1: ['img/sargent.jpg', '55% 50%'], credit1: 'John Singer Sargent, El Jaleo, 1882. Isabella Stewart Gardner Museum',
+       end: 'Ravel<br>Boléro', special: 'count', specialAt: [3.3, 9.4],
+       beats: [[0.3, 'Ravel · Paris Opéra · 1928', 'One rhythm. Two tunes.', 'And fifteen minutes of crescendo.'],
+               [9.6, 'C major', 'It never changes key…', '…until a few seconds before the end. Ravel called it an experiment. It became his most famous piece.']] },
+};
+const d = D[new URLSearchParams(location.search).get('d') || 'E'];
+window.DURATION = 16;
+const END_AT = 12.8;
+const clamp = (x) => Math.max(0, Math.min(1, x));
+const ease = (x) => { x = clamp(x); return x < .5 ? 2*x*x : 1 - Math.pow(-2*x + 2, 2) / 2; };
+const win = (t, a, b, f = .45) => ease((t - a) / f) * (b == null ? 1 : 1 - ease((t - b) / f));
+const rise = (t, a) => (1 - ease((t - a) / .6)) * 40;
+const bgCss = (b) => `background-image:url(${b[0]});background-size:cover;background-position:${b[1]};${b[2] ? `filter:${b[2]};` : ''}`;
+
+document.getElementById('root').innerHTML = `
+  <div class="bg" id="bg1" style="${bgCss(d.bg1)}"></div>
+  ${d.bg2 ? `<div class="bg" id="bg2" style="${bgCss(d.bg2)};opacity:0"></div>` : ''}
+  ${d.moon ? `<div class="abs" id="moon" style="width:220px;height:220px;border-radius:50%;left:640px;background:radial-gradient(circle,#FFF6D8 0%,#F3E2A8 45%,rgba(243,226,168,0) 72%)"></div>` : ''}
+  <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(17,16,16,.4) 0%,rgba(17,16,16,.1) 28%,rgba(17,16,16,.88) 58%,#111010 100%)"></div>
+  <div class="abs mark" style="left:90px;top:270px">DailyClassical</div>
+  <div class="abs" id="beat" style="left:90px;right:90px;bottom:480px">
+    <div class="label sans" id="b0"></div>
+    <div class="big" id="b1" style="font-size:96px;margin-top:28px"></div>
+    <div class="body" id="b2" style="margin-top:32px"></div>
+  </div>
+  <div class="abs" id="sp" style="left:90px;right:90px;bottom:480px;opacity:0">
+    ${d.special === 'strike' ? `
+      <div class="label sans">A surviving copy of the score</div>
+      <div style="position:relative;display:inline-block;margin-top:30px">
+        <div class="big" style="font-size:150px;font-style:italic">Bonaparte</div>
+        <svg class="abs" style="left:-20px;top:20px" width="760" height="170" viewBox="0 0 760 170" aria-hidden="true">
+          <path id="s1" d="M10 70 C 200 40, 420 110, 750 60" stroke="#D4AE84" stroke-width="14" fill="none" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+          <path id="s2" d="M20 120 C 260 80, 470 140, 740 100" stroke="#D4AE84" stroke-width="12" fill="none" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+        </svg>
+      </div>
+      <div class="body" style="margin-top:30px">still shows the name scratched out.</div>` : ''}
+    ${d.special === 'count' ? `
+      <div class="label sans">The snare drum</div>
+      <div class="big sans" id="cnt" style="font-size:300px;font-weight:600;letter-spacing:-.04em;margin-top:10px;color:#F0EBE3">1</div>
+      <div class="body">plays the same two-bar rhythm. 169 times.</div>
+      <div id="bars" style="display:flex;gap:10px;align-items:flex-end;height:120px;margin-top:40px"></div>` : ''}
+  </div>
+  <div class="abs credit sans" id="cr" style="left:90px;right:90px;bottom:380px">${d.credit1}</div>
+  <div class="abs" id="end" style="inset:0;background:#111010;opacity:0">
+    <div class="abs" style="left:90px;right:90px;top:560px">
+      <div class="label sans">Today’s piece</div>
+      <div class="big" style="font-size:92px;margin-top:30px">${d.end}</div>
+      <div class="body" style="margin-top:34px">With a minute-by-minute listening guide and a painting, in DailyClassical.</div>
+      <div style="margin-top:60px"><span class="pill sans">Today’s piece is free</span></div>
+    </div>
+    <div class="abs mark" style="left:90px;bottom:380px">DailyClassical</div>
+  </div>`;
+const $ = (id) => document.getElementById(id);
+if ($('bars')) $('bars').innerHTML = Array.from({ length: 24 }, (_, i) => `<div class="b" style="width:26px;background:#D4AE84;border-radius:4px;height:8px"></div>`).join('');
+
+window.render = (t) => {
+  const z = 1.06 + .08 * t / window.DURATION;
+  $('bg1').style.transform = `scale(${z}) translateX(${-t * 3}px)`;
+  if ($('bg2')) { const g = ease((t - d.crossAt) / 1.2); $('bg2').style.opacity = g; $('bg2').style.transform = `scale(${z})`; $('bg1').style.opacity = 1 - g * .9;
+    $('cr').textContent = t < d.crossAt ? d.credit1 : d.credit2; }
+  if ($('moon')) { const m = ease(t / 9); $('moon').style.top = `${560 - 260 * m}px`; $('moon').style.opacity = .25 + .6 * m; }
+  // beats
+  let k = -1; d.beats.forEach((b, i) => { if (t >= b[0]) k = i; });
+  const inSpecial = d.special && t >= d.specialAt[0] - .2 && t < d.specialAt[1] + .2;
+  if (k >= 0 && !inSpecial) {
+    const b = d.beats[k];
+    let next = d.beats[k + 1] ? d.beats[k + 1][0] : END_AT;
+    if (d.special && b[0] < d.specialAt[0] && next > d.specialAt[0]) next = d.specialAt[0];
+    const o = win(t, b[0], next - .5);
+    $('b0').textContent = b[1]; $('b1').textContent = b[2]; $('b2').textContent = b[3];
+    ['b0', 'b1', 'b2'].forEach((id, j) => { $(id).style.opacity = o; $(id).style.transform = `translateY(${rise(t, b[0] + j * .15)}px)`; });
+  } else ['b0', 'b1', 'b2'].forEach((id) => { $(id).style.opacity = 0; });
+  // special scene
+  if (d.special) {
+    const [a, z2] = d.specialAt;
+    $('sp').style.opacity = win(t, a, z2 - .3);
+    if (d.special === 'strike') {
+      $('s1').style.strokeDashoffset = 1 - ease((t - a - .9) / .7);
+      $('s2').style.strokeDashoffset = 1 - ease((t - a - 1.6) / .7);
+    } else {
+      const p = clamp((t - a - .3) / (z2 - a - 1.4));
+      $('cnt').textContent = Math.max(1, Math.round(169 * p * p * (3 - 2 * p)));
+      [...document.querySelectorAll('#bars .b')].forEach((el, i) => { el.style.height = `${8 + 112 * clamp(p * 24 - i) * (0.35 + 0.65 * (i + 1) / 24)}px`; });
+    }
+  }
+  $('end').style.opacity = ease((t - END_AT) / .6);
+};
+render(0);
+</script>

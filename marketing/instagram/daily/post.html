@@ -1,0 +1,121 @@
+<!doctype html>
+<meta charset="utf-8">
+<!-- Static 4:5 Instagram post for 21 Nov 2026 (Shostakovich 5). ?v=A|B|C picks the alternative. -->
+<style>
+@font-face { font-family: Lit; src: url('../../../ios/DailyClassical/Resources/Fonts/Literata-Regular.ttf'); font-weight: 400; }
+@font-face { font-family: Lit; src: url('../../../ios/DailyClassical/Resources/Fonts/Literata-Medium.ttf'); font-weight: 500; }
+@font-face { font-family: Lit; src: url('../../../ios/DailyClassical/Resources/Fonts/Literata-Italic.ttf'); font-weight: 400; font-style: italic; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1350px; overflow: hidden; background: #111010; }
+body { font-family: Lit, serif; color: #F0EBE3; -webkit-font-smoothing: antialiased; }
+.sans { font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', sans-serif; }
+.abs { position: absolute; }
+.label { font-size: 27px; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; color: #D4AE84; }
+.big { font-weight: 500; letter-spacing: -.015em; line-height: 1.06; text-wrap: balance; }
+.body { font-size: 40px; line-height: 1.36; color: #E6DFD5; text-wrap: pretty; }
+.mark { font-size: 26px; color: #B3ABA1; }
+.credit { font-size: 22px; color: #8A837B; }
+</style>
+<body><div id="root"></div>
+<script>
+const v = new URLSearchParams(location.search).get('v') || 'A';
+const R = 'img/repin.jpg', P = 'img/shostakovich.jpg', K = 'img/kuindzhi.jpg';
+const header = (label) => `<div class="abs" style="left:80px;right:80px;top:64px;display:flex;justify-content:space-between">
+  <div class="mark">DailyClassical</div><div class="label sans" style="font-size:22px">${label}</div></div>`;
+document.getElementById('root').innerHTML = {
+  A: `
+    <div class="abs" style="inset:0 0 auto 0;height:880px;background:url(${R}) 32% 50%/auto 900px no-repeat"></div>
+    <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(17,16,16,.6) 0%,rgba(17,16,16,0) 22%,rgba(17,16,16,.85) 58%,#111010 68%)"></div>
+    ${header('Today’s piece')}
+    <div class="abs" style="left:80px;right:80px;bottom:92px">
+      <div class="label sans">On this day · 21 November 1937</div>
+      <div class="big" style="font-size:96px;margin-top:22px">Leningrad hears Shostakovich’s Fifth.</div>
+      <div class="body" style="margin-top:26px">People wept during the slow movement. The ovation reportedly lasted half an hour.</div>
+      <div class="credit sans" style="margin-top:26px">Ilya Repin, Barge Haulers on the Volga, 1870–73. State Russian Museum.</div>
+    </div>`,
+  B: `
+    <div class="abs" style="inset:0;background:url(${P}) 70% 30%/auto 1350px no-repeat;filter:grayscale(1) brightness(.62)"></div>
+    <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(17,16,16,.2) 0%,rgba(17,16,16,.15) 35%,rgba(17,16,16,.9) 64%,#111010 80%)"></div>
+    ${header('Shostakovich · 1937')}
+    <div class="abs" style="left:80px;right:80px;bottom:92px">
+      <div class="label sans">Symphony No. 5 · the ending</div>
+      <div class="big" style="font-size:112px;margin-top:22px">Triumph, or forced to cheer?</div>
+      <div class="body" style="margin-top:26px">Written at the height of the Great Terror. Listeners have argued ever since about what its triumphant ending really means.</div>
+      <div class="credit sans" style="margin-top:26px">Photo: Leonid Dorensky / Moscow Main Archive (mos.ru), CC BY 4.0</div>
+    </div>`,
+  C: `
+    <div class="abs" style="left:0;right:0;top:0;height:560px;background:#E9E2D4;color:#1E1B17">
+      <div class="abs" style="left:80px;right:80px;top:64px;display:flex;justify-content:space-between">
+        <div class="mark" style="color:#8A837B">DailyClassical</div><div class="sans" style="font-size:22px;letter-spacing:.16em;font-weight:600;color:#9B2C22">PRAVDA · JANUARY 1936</div></div>
+      <div class="big" style="position:absolute;left:80px;right:80px;top:170px;font-size:104px;color:#1E1B17">“Muddle Instead of Music”</div>
+      <div class="sans" style="position:absolute;left:80px;bottom:40px;font-size:27px;color:#5E5852">The headline that put his career and his life in danger.</div>
+    </div>
+    <div class="abs" style="left:0;right:0;top:560px;bottom:0;background:url(${R}) 32% 60%/auto 1000px no-repeat"></div>
+    <div class="abs" style="left:0;right:0;top:560px;bottom:0;background:linear-gradient(180deg,rgba(17,16,16,.35),rgba(17,16,16,.92) 62%,#111010)"></div>
+    <div class="abs" style="left:80px;right:80px;bottom:92px">
+      <div class="label sans">21 November 1937</div>
+      <div class="big" style="font-size:88px;margin-top:20px">His Fifth Symphony is a sensation.</div>
+      <div class="credit sans" style="margin-top:24px">Ilya Repin, Barge Haulers on the Volga, 1870–73. State Russian Museum.</div>
+    </div>`,
+  R: `
+    <div class="abs" style="inset:0 0 auto 0;height:960px;background:url(${K}) 45% 40%/auto 1000px no-repeat"></div>
+    <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(17,16,16,.55) 0%,rgba(17,16,16,0) 22%,rgba(17,16,16,.85) 60%,#111010 72%)"></div>
+    ${header('Today’s piece')}
+    <div class="abs" style="left:80px;right:80px;bottom:92px">
+      <div class="label sans">Rachmaninoff · Piano Concerto No. 2 · 1901</div>
+      <div class="big" style="font-size:108px;margin-top:22px">Dedicated to his doctor.</div>
+      <div class="body" style="margin-top:26px">After three silent years, the concerto that brought Rachmaninoff back. He dedicated it to Nikolai Dahl, the physician who treated him.</div>
+      <div class="credit sans" style="margin-top:26px">Arkhyp Kuindzhi, Red Sunset, 1905–8. The Metropolitan Museum of Art, New York.</div>
+    </div>`,
+  E: `
+    <div class="abs" style="inset:0 0 auto 0;height:980px;background:url(img/gros.jpg) 50% 18%/1080px auto no-repeat"></div>
+    <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(17,16,16,.55) 0%,rgba(17,16,16,0) 22%,rgba(17,16,16,.86) 58%,#111010 72%)"></div>
+    ${header('Today’s piece')}
+    <div class="abs" style="left:80px;right:80px;bottom:92px">
+      <div class="label sans">Beethoven · Symphony No. 3, “Eroica” · 1804</div>
+      <div class="big" style="font-size:84px;margin-top:22px">Written for Napoleon. Then he tore the name off.</div>
+      <div class="body" style="margin-top:26px">A surviving copy of the score still shows “Bonaparte” scratched out.</div>
+      <div class="credit sans" style="margin-top:26px">Antoine-Jean Gros, Bonaparte at the Pont d’Arcole, c. 1796. Musée du Louvre, Paris.</div>
+    </div>`,
+  V: `
+    <div class="abs" style="inset:0 0 auto 0;height:980px;background:url(img/watteau.jpg) 50% 62%/1080px auto no-repeat"></div>
+    <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(17,16,16,.55) 0%,rgba(17,16,16,0) 22%,rgba(17,16,16,.86) 58%,#111010 72%)"></div>
+    ${header('Today’s piece')}
+    <div class="abs" style="left:80px;right:80px;bottom:92px">
+      <div class="label sans">Vivaldi · The Four Seasons: Spring · 1725</div>
+      <div class="big" style="font-size:92px;margin-top:22px">He printed the poem in the score.</div>
+      <div class="body" style="margin-top:26px">Birds, a storm, a sleeping goatherd, a country dance: the sonnet’s lines sit next to the music that paints them.</div>
+      <div class="credit sans" style="margin-top:26px">Jean-Antoine Watteau, Fêtes vénitiennes, c. 1718–19. Scottish National Gallery, Edinburgh.</div>
+    </div>`,
+  M: `
+    <div class="abs" style="inset:0 0 auto 0;height:980px;background:url(img/friedrich.jpg) 50% 40%/auto 1000px no-repeat"></div>
+    <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(17,16,16,.55) 0%,rgba(17,16,16,0) 22%,rgba(17,16,16,.86) 58%,#111010 72%)"></div>
+    ${header('Today’s piece')}
+    <div class="abs" style="left:80px;right:80px;bottom:92px">
+      <div class="label sans">Beethoven · “Moonlight” Sonata · 1801</div>
+      <div class="big" style="font-size:92px;margin-top:22px">He said he had written better things.</div>
+      <div class="body" style="margin-top:26px">“Moonlight” is not Beethoven’s word: a critic heard moonlight on water in the 1820s. Its fame wore on him.</div>
+      <div class="credit sans" style="margin-top:26px">Caspar David Friedrich, Two Men Contemplating the Moon, c. 1825–30. The Metropolitan Museum of Art, New York.</div>
+    </div>`,
+  D: `
+    <div class="abs" style="inset:0 0 auto 0;height:980px;background:url(img/slavicek.jpg) 50% 50%/auto 1000px no-repeat"></div>
+    <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(17,16,16,.55) 0%,rgba(17,16,16,0) 22%,rgba(17,16,16,.86) 58%,#111010 72%)"></div>
+    ${header('Today’s piece')}
+    <div class="abs" style="left:80px;right:80px;bottom:92px">
+      <div class="label sans">Dvořák · Cello Concerto · 1895</div>
+      <div class="big" style="font-size:84px;margin-top:22px">Her favourite song, hidden in the slow movement.</div>
+      <div class="body" style="margin-top:26px">His first love, Josefina, was seriously ill. He quoted her favourite of his songs; after her death he rewrote the ending.</div>
+      <div class="credit sans" style="margin-top:26px">Antonín Slavíček, Birch Mood, 1897. National Gallery Prague.</div>
+    </div>`,
+  B: `
+    <div class="abs" style="inset:0 0 auto 0;height:980px;background:url(img/sargent.jpg) 55% 45%/auto 1000px no-repeat"></div>
+    <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(17,16,16,.55) 0%,rgba(17,16,16,0) 22%,rgba(17,16,16,.86) 58%,#111010 72%)"></div>
+    ${header('Today’s piece')}
+    <div class="abs" style="left:80px;right:80px;bottom:92px">
+      <div class="label sans">Ravel · Boléro · 1928</div>
+      <div class="big" style="font-size:88px;margin-top:22px">One rhythm. Two tunes. One long crescendo.</div>
+      <div class="body" style="margin-top:26px">A snare drum plays the same two-bar rhythm 169 times. Ravel called it an experiment. It became his most famous piece.</div>
+      <div class="credit sans" style="margin-top:26px">John Singer Sargent, El Jaleo, 1882. Isabella Stewart Gardner Museum, Boston.</div>
+    </div>`,
+}[v];
+</script>

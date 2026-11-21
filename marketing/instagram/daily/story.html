@@ -1,0 +1,157 @@
+<!doctype html>
+<meta charset="utf-8">
+<!-- Animated 9:16 Instagram story. render(t) draws the frame at t seconds; ?v=A|B|C picks the variant.
+     Rendered by render-frames.mjs (Chrome DevTools, 30 fps) and encoded with ../../../design/app-store/video/encode.swift. -->
+<style>
+@font-face { font-family: Lit; src: url('../../../ios/DailyClassical/Resources/Fonts/Literata-Regular.ttf'); font-weight: 400; }
+@font-face { font-family: Lit; src: url('../../../ios/DailyClassical/Resources/Fonts/Literata-Medium.ttf'); font-weight: 500; }
+@font-face { font-family: Lit; src: url('../../../ios/DailyClassical/Resources/Fonts/Literata-Italic.ttf'); font-weight: 400; font-style: italic; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #111010; }
+body { font-family: Lit, serif; color: #F0EBE3; -webkit-font-smoothing: antialiased; }
+.sans { font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', sans-serif; }
+.abs { position: absolute; }
+.bg { position: absolute; inset: 0; background-repeat: no-repeat; will-change: transform; }
+.veil { position: absolute; inset: 0; }
+.label { font-size: 30px; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; color: #D4AE84; }
+.big { font-weight: 500; letter-spacing: -.015em; line-height: 1.06; text-wrap: balance; }
+.body { font-size: 46px; line-height: 1.34; color: #E6DFD5; text-wrap: pretty; }
+.mark { font-size: 32px; color: #B3ABA1; }
+.line { opacity: 0; }
+.pill { display: inline-block; padding: 18px 34px; border-radius: 999px; background: #D4AE84; color: #1E1B17; font-size: 32px; font-weight: 600; }
+</style>
+<body>
+<div id="root"></div>
+<script>
+const v = new URLSearchParams(location.search).get('v') || 'A';
+const R = 'img/repin.jpg', P = 'img/shostakovich.jpg', K = 'img/kuindzhi.jpg', RP = 'img/rachmaninoff.jpg';
+const clamp = (x) => Math.max(0, Math.min(1, x));
+const ease = (x) => { x = clamp(x); return x < .5 ? 2*x*x : 1 - Math.pow(-2*x + 2, 2) / 2; };
+// fade in over [a, a+d], fade out over [b, b+d]
+const win = (t, a, b, d = .5) => ease((t - a) / d) * (b == null ? 1 : 1 - ease((t - b) / d));
+const rise = (t, a, d = .6) => (1 - ease((t - a) / d)) * 40;
+
+const END = (title, pill = "Today's piece is free · link in bio") => `
+  <div class="abs" id="end" style="inset:0;background:#111010;opacity:0">
+    <div class="abs" style="left:90px;right:90px;top:560px">
+      <div class="label sans">Today's piece</div>
+      <div class="big" style="font-size:92px;margin-top:30px">${title}</div>
+      <div class="body" style="margin-top:34px">With a minute-by-minute listening guide and a painting, in DailyClassical.</div>
+      <div style="margin-top:60px"><span class="pill sans">${pill}</span></div>
+    </div>
+    <div class="abs mark" style="left:90px;bottom:380px">DailyClassical</div>
+  </div>`;
+
+const scenes = {
+  // A: the anniversary
+  A: `
+    <div class="bg" id="bg" style="background-image:url(${R});background-size:auto 1920px;background-position:30% 50%"></div>
+    <div class="veil" style="background:linear-gradient(180deg,rgba(17,16,16,.35) 0%,rgba(17,16,16,.15) 35%,rgba(17,16,16,.9) 62%,#111010 100%)"></div>
+    <div class="abs mark" style="left:90px;top:270px">DailyClassical</div>
+    <div class="abs" style="left:90px;right:90px;bottom:480px">
+      <div class="line label sans" id="a1">On this day · 21 November 1937</div>
+      <div class="line big" id="a2" style="font-size:104px;margin-top:30px">Leningrad hears Shostakovich's Fifth.</div>
+      <div class="line body" id="a3" style="margin-top:36px">People wept during the slow movement.</div>
+      <div class="line body" id="a4" style="margin-top:18px">The ovation reportedly lasted half an hour.</div>
+    </div>
+    <div class="abs sans" style="left:90px;right:90px;bottom:380px;font-size:24px;color:#8A837B">Ilya Repin, Barge Haulers on the Volga, 1870–73</div>
+    ${END('Shostakovich<br>Symphony No. 5')}`,
+  // B: what to listen for, as a running clock
+  B: `
+    <div class="bg" id="bg" style="background-image:url(${P});background-size:auto 1920px;background-position:62% 50%;filter:brightness(.55)"></div>
+    <div class="veil" style="background:linear-gradient(180deg,rgba(17,16,16,.2),rgba(17,16,16,.92) 48%,#111010)"></div>
+    <div class="abs mark" style="left:90px;top:270px">DailyClassical</div>
+    <div class="abs" style="left:90px;right:90px;top:600px">
+      <div class="line label sans" id="b0">Shostakovich · Symphony No. 5</div>
+      <div class="line big" id="b1" style="font-size:96px;margin-top:26px">Listen for these three moments.</div>
+      <div id="stops" style="margin-top:56px"></div>
+    </div>
+    <div class="abs sans" style="left:90px;right:90px;bottom:380px;font-size:24px;color:#8A837B">Times from Bernstein · New York Philharmonic. Photo: Leonid Dorensky / Moscow Main Archive, CC BY 4.0</div>
+    ${END('Shostakovich<br>Symphony No. 5')}`,
+  // C: Pravda, then the Fifth
+  C: `
+    <div class="abs" style="inset:0;background:#E9E2D4"></div>
+    <div class="abs" id="paper" style="left:90px;right:90px;top:360px;color:#1E1B17">
+      <div class="line sans" id="c0" style="font-size:30px;letter-spacing:.16em;font-weight:600;color:#9B2C22">PRAVDA · JANUARY 1936</div>
+      <div class="big" id="c1" style="font-size:124px;margin-top:30px;color:#1E1B17;font-weight:500"></div>
+      <div class="line body" id="c2" style="margin-top:44px;color:#3A342E">In Stalin's Soviet Union, that put his career and his life in danger.</div>
+    </div>
+    <div class="abs" id="dark" style="inset:0;background:#111010;opacity:0">
+      <div class="bg" id="bg" style="background-image:url(${R});background-size:auto 1920px;background-position:30% 50%;opacity:.5"></div>
+      <div class="veil" style="background:linear-gradient(180deg,rgba(17,16,16,.3),rgba(17,16,16,.92) 60%,#111010)"></div>
+      <div class="abs" style="left:90px;right:90px;bottom:480px">
+        <div class="line label sans" id="c3">21 November 1937</div>
+        <div class="line big" id="c4" style="font-size:100px;margin-top:28px">His Fifth Symphony ends in triumph.</div>
+        <div class="line big" id="c5" style="font-size:72px;margin-top:40px;font-style:italic;color:#D4AE84">Or the sound of being forced to cheer?</div>
+      </div>
+    </div>
+    ${END('Shostakovich<br>Symphony No. 5')}`,
+  // R: Rachmaninoff 2 (22 Nov), three silent years; gloom (portrait) to glow (Kuindzhi)
+  R: `
+    <div class="bg" id="bg" style="background-image:url(${RP});background-size:auto 1920px;background-position:50% 30%;filter:grayscale(1) brightness(.5)"></div>
+    <div class="bg" id="bg2" style="background-image:url(${K});background-size:auto 1920px;background-position:45% 50%;opacity:0"></div>
+    <div class="veil" style="background:linear-gradient(180deg,rgba(17,16,16,.3) 0%,rgba(17,16,16,.1) 30%,rgba(17,16,16,.88) 60%,#111010 100%)"></div>
+    <div class="abs mark" style="left:90px;top:270px">DailyClassical</div>
+    <div class="abs" style="left:90px;right:90px;bottom:480px">
+      <div class="label sans" id="r0" style="opacity:0"></div>
+      <div class="big" id="r1" style="font-size:100px;margin-top:28px;opacity:0"></div>
+      <div class="body" id="r2" style="margin-top:32px;opacity:0"></div>
+    </div>
+    <div class="abs sans" id="rc" style="left:90px;right:90px;bottom:380px;font-size:24px;color:#8A837B">Sergei Rachmaninoff, c. 1920. Bain News Service</div>
+    ${END('Rachmaninoff<br>Piano Concerto No. 2', "Today's piece is free")}`,
+};
+document.getElementById('root').innerHTML = scenes[v];
+const $ = (id) => document.getElementById(id);
+const show = (id, o, y = 0) => { const e = $(id); if (e) { e.style.opacity = o; e.style.transform = `translateY(${y}px)`; } };
+
+const STOPS = [['III', '5:30', 'A solo oboe over a single thread of trembling violins.'],
+               ['III', '9:00', 'The cellos cry out at the top of their range.'],
+               ['IV', '5:00', 'He quotes his own song on a Pushkin poem, “Rebirth”.']];
+if (v === 'B') $('stops').innerHTML = STOPS.map((s, i) => `
+  <div class="line" id="s${i}" style="display:flex;gap:34px;padding:30px 0;border-top:2px solid rgba(240,235,227,.16)">
+    <div class="sans" style="width:200px;flex:none;color:#D4AE84;font-size:34px;font-weight:600">${s[0]} · ≈ ${s[1]}</div>
+    <div class="body" style="font-size:44px">${s[2]}</div></div>`).join('');
+
+const HEAD = 'Muddle Instead of Music';
+const BASE = { A: 13, B: 14, C: 14, R: 14 }[v];
+// ?noend=1 stops before the end card (for joining A, B and C into one reel).
+const NOEND = new URLSearchParams(location.search).get('noend');
+window.DURATION = NOEND ? BASE - 3.2 + .6 : BASE;
+const RB = [[0.3, 'March 1897', 'His First Symphony fails.', 'The critics savage it. He is 23.'],
+  [3.2, '1897–1900', 'Three years of almost no music.', 'Depression, and a blank page.'],
+  [6.0, 'January 1900', 'Dr Nikolai Dahl.', 'Almost daily sessions, including hypnosis.'],
+  [8.4, 'November 1901 · Moscow', 'The Second Piano Concerto.', 'A success, dedicated to Dahl. Still his most popular work.']];
+window.render = (t) => {
+  const endAt = BASE - 3.2;
+  const bg = $('bg'); if (bg) bg.style.transform = `scale(${1.08 + .08 * t / window.DURATION}) translateX(${-t * 4}px)`;
+  if (v === 'A') {
+    show('a1', win(t, .4, endAt), rise(t, .4)); show('a2', win(t, 1.2, endAt), rise(t, 1.2));
+    show('a3', win(t, 4.2, endAt), rise(t, 4.2)); show('a4', win(t, 6.0, endAt), rise(t, 6.0));
+  } else if (v === 'B') {
+    show('b0', win(t, .3, endAt), rise(t, .3)); show('b1', win(t, .9, endAt), rise(t, .9));
+    STOPS.forEach((_, i) => show('s' + i, win(t, 2.8 + i * 1.9, endAt), rise(t, 2.8 + i * 1.9)));
+  } else if (v === 'R') {
+    const endAt2 = endAt;
+    let k = 0; RB.forEach((b, i) => { if (t >= b[0]) k = i; });
+    const b = RB[k], next = RB[k + 1] ? RB[k + 1][0] : endAt2;
+    const o = win(t, b[0], next - .45, .4) * (t < endAt2 ? 1 : 0);
+    $('r0').textContent = b[1]; $('r1').textContent = b[2]; $('r2').textContent = b[3];
+    ['r0', 'r1', 'r2'].forEach((id, j) => show(id, o, rise(t, b[0] + j * .15)));
+    const glow = ease((t - 8.2) / 1.2);
+    $('bg2').style.opacity = glow; $('bg').style.opacity = 1 - glow * .9;
+    $('bg2').style.transform = `scale(${1.08 + .05 * t / window.DURATION})`;
+    $('rc').textContent = t < 8.2 ? 'Sergei Rachmaninoff, c. 1920. Bain News Service' : 'Arkhyp Kuindzhi, Red Sunset, 1905–8. The Met';
+  } else {
+    show('c0', win(t, .3, 5.6), 0);
+    const n = Math.round(clamp((t - .9) / 1.6) * HEAD.length);
+    $('c1').textContent = HEAD.slice(0, n) + (t < 2.6 && Math.floor(t * 3) % 2 ? '|' : '');
+    $('c1').style.opacity = 1 - ease((t - 5.6) / .5);
+    show('c2', win(t, 3.0, 5.6), rise(t, 3.0));
+    $('dark').style.opacity = ease((t - 5.8) / .6);
+    show('c3', win(t, 6.4, endAt), rise(t, 6.4)); show('c4', win(t, 7.0, endAt), rise(t, 7.0));
+    show('c5', win(t, 8.6, endAt), rise(t, 8.6));
+  }
+  $('end').style.opacity = NOEND ? 0 : ease((t - endAt) / .6);
+};
+render(0);
+</script>
