@@ -18,7 +18,11 @@ Son güncelleme: 18 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 - **İmzalar (18 Kasım):** doğum günü sayfasında soldan sağa yazılan imza (Assets.xcassets/Signatures, kaynaklar composers-sources.md › Signatures). İlk 7 besteci elle; kalanlar bir agent'la toplanıyor, bitince hepsi 1.3'e eklenip TestFlight'a yüklenecek (Oytun'un kararı). **Süreç:** yeni partilerle gelen bestecilerin imzası ilk etapta olmaz (alan görünmez); yeni besteciler biriktirilir, 2–3 haftada bir çıkan sürümle eklenir, sıradaki doğum günlerinden önce yetişecek şekilde (doğum günü yaklaşan besteciler öncelikli).
 - Açık: paylaşım kartındaki durak kuralı tuvaldeki ≈ 4:30'dan farklı durak seçebiliyor (EN/TR farklı uzunluk); gerekirse `share_stop` içerik alanı. OG görseli şimdilik widget JPEG'i (1200×630 değil). Paylaşım için analitik olayı yok.
 
-## Sonraki sürüm (1.3.1 / 1.4)
+## 1.3.1 (12): yayında (21 Kasım 2026)
+
+Kaydırma düzeltmeleri (Kitaplık/Ayarlar üst esneme b39ea16, Ayarlar alt sayfa dönüş sıçraması 57c6187), günlük bildirimde tablonun kaybolması (planlar sırayla, her planda yeni kimlik; 0993b20) ve 7'den fazla bölüm için kapsül + bölüm listesi sayfası (64ce8d9). Build 10 ve 11 kullanılmadı. **Sonuç:** Mozart Requiem (14 bölüm) kullanıcıların çoğu 1.3.1'e geçince takvime girebilir (App Store Connect › Analytics'te sürüm dağılımına bak; eski sürümde 14 bölüm seçiciye sığmaz).
+
+## Sonraki sürüm (1.4)
 
 - **Üst esneme kapatıldı (kodda, 19 Kasım):** Kitaplık ve Ayarlar'da üstten çekince başlığın üstünde açılan boşluk (Oytun'un ekran kaydı; iOS'un esnemesi, başlık listenin içinde olduğu için "yenileme" gibi görünüyordu). `DesignSystem/Components/TopBounce.swift` › `.topBounceDisabled()`; alttaki esneme duruyor. Simülatörde video kaydıyla doğrulandı.
 
