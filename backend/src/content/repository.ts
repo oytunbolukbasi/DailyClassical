@@ -272,10 +272,17 @@ export async function listGlossary(db: DB, locale: Locale) {
 }
 
 export async function listComposers(db: DB, locale: Locale) {
-  const [base, ls] = await Promise.all([
+  // A birthday is celebrated only for a composer with a piece readers can open: one scheduled on or
+  // before tomorrow (UTC, so every time zone's today is covered). Otherwise the app showed the
+  // birthday line, sheet and reminder with no piece of theirs in the Library (Rodrigo, 22 Nov 2026).
+  const until = addDays(new Date().toISOString().slice(0, 10), 1);
+  const [base, ls, live] = await Promise.all([
     db.select().from(composers),
     db.select().from(composerLocalizations).where(inArray(composerLocalizations.locale, localesFor(locale))),
+    db.selectDistinct({ composerId: pieces.composerId }).from(dailySchedule)
+      .innerJoin(pieces, eq(pieces.id, dailySchedule.pieceId)).where(lte(dailySchedule.day, until)),
   ]);
+  const celebrated = new Set(live.map((r) => r.composerId));
   return base
     .map((c) => {
       const rows = ls.filter((r) => r.composerId === c.id);
@@ -283,7 +290,7 @@ export async function listComposers(db: DB, locale: Locale) {
       const en = rows.find((r) => r.locale === DEFAULT_LOCALE);
       return composerResponse({
         id: c.id, sortName: c.sortName, birthYear: c.birthYear, deathYear: c.deathYear, era: c.era, portrait: c.portrait,
-        birthday: c.birthday, birthdayBasis: c.birthdayBasis, birthdayNote: l?.birthdayNote ?? en?.birthdayNote,
+        birthday: celebrated.has(c.id) ? c.birthday : null, birthdayBasis: c.birthdayBasis, birthdayNote: l?.birthdayNote ?? en?.birthdayNote,
         birthdayLine: l?.birthdayLine ?? en?.birthdayLine, shortGenitive: l?.shortGenitive,
         name: l?.name, shortName: l?.shortName,
         // Each field group falls back to English on its own, so a partial translation never blanks the sheet.

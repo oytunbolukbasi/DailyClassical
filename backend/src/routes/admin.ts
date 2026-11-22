@@ -190,6 +190,22 @@ async function loadDashboard() {
       (select count(*) from users where not premium_sandbox and premium_status = 'trial')::int as premium_trial,
       (select count(*) from users where not premium_sandbox and premium_plan = 'monthly' and premium_status in ('active', 'cancelled', 'billing_issue'))::int as premium_monthly,
       (select count(*) from users where not premium_sandbox and premium_plan = 'lifetime' and premium_status = 'active')::int as premium_lifetime`;
+  // Every App Store sale RevenueCat reported (routes/revenuecat.ts), with or without an account:
+  // most buyers never sign in, so "Premium (hesaplı)" alone missed them. Sandbox left out.
+  const [sales] = await sql<{ lifetime: number; monthly: number; trials: number; refunds: number; revenue: number | null; last_event: Date | null; events: number }[]>`
+    with e as (select type, product_id, raw from revenuecat_events where coalesce(environment, '') <> 'SANDBOX')
+    select
+      (select count(*) from e where product_id = 'co.dailyclassical.premium.lifetime'
+        and type in ('INITIAL_PURCHASE', 'NON_RENEWING_PURCHASE'))::int as lifetime,
+      (select count(*) from e where product_id = 'co.dailyclassical.premium.monthly' and type = 'INITIAL_PURCHASE'
+        and coalesce(raw->'event'->>'period_type', '') <> 'TRIAL')::int as monthly,
+      (select count(*) from e where type = 'INITIAL_PURCHASE' and raw->'event'->>'period_type' = 'TRIAL')::int as trials,
+      (select count(*) from e where type = 'CANCELLATION' and raw->'event'->>'cancel_reason' = 'CUSTOMER_SUPPORT')::int as refunds,
+      (select sum((raw->'event'->>'price')::numeric) from e
+        where type in ('INITIAL_PURCHASE', 'NON_RENEWING_PURCHASE', 'RENEWAL', 'PRODUCT_CHANGE')
+          and raw->'event'->>'price' ~ '^-?[0-9.]+$')::float as revenue,
+      (select max(received_at) from revenuecat_events) as last_event,
+      (select count(*) from revenuecat_events)::int as events`;
   const series = await sql<{ day: string; n: number }[]>`
     select g::date::text as day, count(i.install_id)::int as n
     from generate_series(${today}::date - 29, ${today}::date, interval '1 day') g
@@ -263,7 +279,7 @@ async function loadDashboard() {
       max(received_at)::text as last_seen
     from ad_postbacks where received_at > now() - interval '90 days'
     group by ad_network_id, coalesce(source_identifier, '—') order by max(received_at) desc limit 50`;
-  return { today, kpi: kpi!, series, schedule, catalogue, prompts, diagTotals, diagGroups, adGroups };
+  return { today, kpi: kpi!, sales: sales!, series, schedule, catalogue, prompts, diagTotals, diagGroups, adGroups };
 }
 
 /**
@@ -391,7 +407,7 @@ function chart(series: { day: string; n: number }[], unit = "aktif kullanıcı",
 }
 
 async function dashboardView(email: string, linkFilter: LinkFilter) {
-  const { today, kpi, series, schedule, catalogue, prompts, diagTotals, diagGroups, adGroups } = await loadDashboard();
+  const { today, kpi, sales, series, schedule, catalogue, prompts, diagTotals, diagGroups, adGroups } = await loadDashboard();
   const links = await loadLinks(today, linkFilter);
   const linkGroups = links.groups;
   const linkTotal = (k: "clicks" | "visitors" | "ios" | "instagram") => linkGroups.reduce((a, g) => a + g[k], 0);
@@ -405,6 +421,16 @@ async function dashboardView(email: string, linkFilter: LinkFilter) {
   const shareOf = (shown: { installs: number }) => (n: number) =>
     shown.installs ? `gösterilenlerin %${Math.round((n / shown.installs) * 100)}'i` : "henüz gösterilmedi";
   const share = shareOf(rateShown), widgetShare = shareOf(widgetShown);
+  const salesNote = (x: typeof sales, onAccounts: number) => {
+    const parts = [`${fmt.format(x.lifetime)} ömür boyu`, `${fmt.format(x.monthly)} aylık`, `${fmt.format(x.trials)} deneme`];
+    if (x.refunds) parts.push(`${fmt.format(x.refunds)} iade`);
+    if (x.revenue) parts.push(`≈ ${fmt.format(Math.round(x.revenue))} USD`);
+    parts.push(`${fmt.format(onAccounts)} hesaplı`);
+    parts.push(x.last_event
+      ? `son bildirim ${new Intl.DateTimeFormat("tr-TR", { timeZone: TZ, day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }).format(x.last_event)}`
+      : "RevenueCat bildirimi yok");
+    return parts.join(" · ");
+  };
   const tile = (label: string, value: number, note?: string) =>
     html`<div class="tile"><div class="k">${label}</div><div class="v">${fmt.format(value)}</div>${note ? html`<div class="m">${note}</div>` : ""}</div>`;
   const pctTile = (label: string, ratio: number | null, note: string) =>
@@ -425,13 +451,13 @@ async function dashboardView(email: string, linkFilter: LinkFilter) {
         ${pctTile("Stickiness (DAU/MAU)", kpi.mau ? kpi.avg_dau_30 / kpi.mau : null, `bağlılık · ortalama DAU ${fmt.format(Math.round(kpi.avg_dau_30 * 10) / 10)}`)}
         ${tile("Toplam kullanıcı", kpi.installs, `son 7 günde ${fmt.format(kpi.new_7d)} yeni`)}
         ${tile("Hesap açan", kpi.accounts, `${fmt.format(kpi.favourites)} favori`)}
-        ${tile("Premium (hesaplı)", kpi.premium, `${fmt.format(kpi.premium_trial)} deneme · ${fmt.format(kpi.premium_monthly)} aylık · ${fmt.format(kpi.premium_lifetime)} ömür boyu`)}
+        ${tile("Premium", sales.lifetime + sales.monthly, salesNote(sales, kpi.premium))}
       </div>
       <div class="card">
         <div class="ct">Günlük aktif kullanıcı, son 30 gün</div>
         ${chart(series)}
       </div>
-      <p class="m small">Kullanıcı = uygulamanın bir kurulumu (anonim). Xcode ve TestFlight build'leri sayılmaz. Gün, kullanıcının kendi tarihine göre. Toplam okunma: tüm kitaplıkta eser sayfalarının kaç kez açıldığı (aynı kişi birden çok sayılır). Stickiness: son 30 günün (yayından bu yana geçen günlerin) ortalama DAU'sunun MAU'ya oranı; aylık kullanıcıların ortalama bir günde ne kadarının uygulamayı açtığı. Premium (hesaplı): hesabına giriş yapmışken satın alan ve aboneliği süren hesaplar (RevenueCat bildirimiyle; iptal edilip süresi bitmeyenler dahil). Giriş yapmadan satın alanlar yalnızca RevenueCat'te görünür.</p>
+      <p class="m small">Kullanıcı = uygulamanın bir kurulumu (anonim). Xcode ve TestFlight build'leri sayılmaz. Gün, kullanıcının kendi tarihine göre. Toplam okunma: tüm kitaplıkta eser sayfalarının kaç kez açıldığı (aynı kişi birden çok sayılır). Stickiness: son 30 günün (yayından bu yana geçen günlerin) ortalama DAU'sunun MAU'ya oranı; aylık kullanıcıların ortalama bir günde ne kadarının uygulamayı açtığı. Premium: RevenueCat'in bildirdiği bütün App Store satışları, giriş yapan ya da yapmayan (sandbox hariç): ömür boyu ve aylık satın almalar, deneme başlatmalar, iadeler; tutar RevenueCat'in USD fiyatı, Apple komisyonu düşülmeden. "Hesaplı": bugün Premium'u süren, giriş yapmış hesaplar.</p>
     </section>
 
     <section>
