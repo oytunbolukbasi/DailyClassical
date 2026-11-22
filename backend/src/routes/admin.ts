@@ -430,17 +430,10 @@ async function dashboardView(email: string, linkFilter: LinkFilter) {
   const shareOf = (shown: { installs: number }) => (n: number) =>
     shown.installs ? `gösterilenlerin %${Math.round((n / shown.installs) * 100)}'i` : "henüz gösterilmedi";
   const share = shareOf(rateShown), widgetShare = shareOf(widgetShown);
-  const salesNote = (x: typeof sales, onAccounts: number) => {
-    const parts = [`${fmt.format(x.lifetime + LIFETIME_BEFORE_WEBHOOK)} ömür boyu (${fmt.format(LIFETIME_BEFORE_WEBHOOK)} bildirim öncesi)`,
-      `${fmt.format(x.monthly)} aylık`, `${fmt.format(x.trials)} deneme`];
-    if (x.refunds) parts.push(`${fmt.format(x.refunds)} iade`);
-    if (x.revenue) parts.push(`bildirimlerde ≈ ${fmt.format(Math.round(x.revenue))} USD`);
-    parts.push(`${fmt.format(onAccounts)} hesaplı`);
-    parts.push(x.last_event_ms
-      ? `son bildirim ${new Intl.DateTimeFormat("tr-TR", { timeZone: TZ, day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }).format(new Date(x.last_event_ms))}`
-      : "RevenueCat bildirimi yok");
-    return parts.join(" · ");
-  };
+  // Only when the last RevenueCat event arrived; the breakdown lives in RevenueCat itself.
+  const salesNote = (x: typeof sales) => x.last_event_ms
+    ? new Intl.DateTimeFormat("tr-TR", { timeZone: TZ, day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }).format(new Date(x.last_event_ms))
+    : "RevenueCat bildirimi yok";
   const tile = (label: string, value: number, note?: string) =>
     html`<div class="tile"><div class="k">${label}</div><div class="v">${fmt.format(value)}</div>${note ? html`<div class="m">${note}</div>` : ""}</div>`;
   const pctTile = (label: string, ratio: number | null, note: string) =>
@@ -461,13 +454,13 @@ async function dashboardView(email: string, linkFilter: LinkFilter) {
         ${pctTile("Stickiness (DAU/MAU)", kpi.mau ? kpi.avg_dau_30 / kpi.mau : null, `bağlılık · ortalama DAU ${fmt.format(Math.round(kpi.avg_dau_30 * 10) / 10)}`)}
         ${tile("Toplam kullanıcı", kpi.installs, `son 7 günde ${fmt.format(kpi.new_7d)} yeni`)}
         ${tile("Hesap açan", kpi.accounts, `${fmt.format(kpi.favourites)} favori`)}
-        ${tile("Premium", sales.lifetime + LIFETIME_BEFORE_WEBHOOK + sales.monthly, salesNote(sales, kpi.premium))}
+        ${tile("Premium", sales.lifetime + LIFETIME_BEFORE_WEBHOOK + sales.monthly, salesNote(sales))}
       </div>
       <div class="card">
         <div class="ct">Günlük aktif kullanıcı, son 30 gün</div>
         ${chart(series)}
       </div>
-      <p class="m small">Kullanıcı = uygulamanın bir kurulumu (anonim). Xcode ve TestFlight build'leri sayılmaz. Gün, kullanıcının kendi tarihine göre. Toplam okunma: tüm kitaplıkta eser sayfalarının kaç kez açıldığı (aynı kişi birden çok sayılır). Stickiness: son 30 günün (yayından bu yana geçen günlerin) ortalama DAU'sunun MAU'ya oranı; aylık kullanıcıların ortalama bir günde ne kadarının uygulamayı açtığı. Premium: RevenueCat'in bildirdiği bütün App Store satışları, giriş yapan ya da yapmayan (sandbox hariç): ömür boyu ve aylık satın almalar, deneme başlatmalar, iadeler; tutar RevenueCat'in USD fiyatı, Apple komisyonu düşülmeden. "Hesaplı": bugün Premium'u süren, giriş yapmış hesaplar.</p>
+      <p class="m small">Kullanıcı = uygulamanın bir kurulumu (anonim). Xcode ve TestFlight build'leri sayılmaz. Gün, kullanıcının kendi tarihine göre. Toplam okunma: tüm kitaplıkta eser sayfalarının kaç kez açıldığı (aynı kişi birden çok sayılır). Stickiness: son 30 günün (yayından bu yana geçen günlerin) ortalama DAU'sunun MAU'ya oranı; aylık kullanıcıların ortalama bir günde ne kadarının uygulamayı açtığı. Premium: bütün App Store satışları (RevenueCat; sandbox hariç), altında son bildirimin zamanı; ayrıntı RevenueCat'te.</p>
     </section>
 
     <section>
