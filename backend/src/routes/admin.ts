@@ -192,8 +192,11 @@ async function loadDashboard() {
       (select count(*) from users where not premium_sandbox and premium_plan = 'lifetime' and premium_status = 'active')::int as premium_lifetime`;
   // Every App Store sale RevenueCat reported (routes/revenuecat.ts), with or without an account:
   // most buyers never sign in, so "Premium (hesaplı)" alone missed them. Sandbox left out.
-  const [sales] = await sql<{ lifetime: number; monthly: number; trials: number; refunds: number; revenue: number | null; last_event: Date | null; events: number }[]>`
-    with e as (select type, product_id, raw from revenuecat_events where coalesce(environment, '') <> 'SANDBOX')
+  const [sales] = await sql<{ lifetime: number; monthly: number; trials: number; refunds: number; revenue: number | null; last_event_ms: number | null; events: number }[]>`
+    -- raw holds the webhook body; older rows may hold it as a JSON string, so unwrap that first.
+    with e as (select type, product_id,
+        case when jsonb_typeof(raw) = 'string' then (raw #>> '{}')::jsonb else raw end as raw
+      from revenuecat_events where coalesce(environment, '') <> 'SANDBOX')
     select
       (select count(*) from e where product_id = 'co.dailyclassical.premium.lifetime'
         and type in ('INITIAL_PURCHASE', 'NON_RENEWING_PURCHASE'))::int as lifetime,
@@ -204,7 +207,8 @@ async function loadDashboard() {
       (select sum((raw->'event'->>'price')::numeric) from e
         where type in ('INITIAL_PURCHASE', 'NON_RENEWING_PURCHASE', 'RENEWAL', 'PRODUCT_CHANGE')
           and raw->'event'->>'price' ~ '^-?[0-9.]+$')::float as revenue,
-      (select max(received_at) from revenuecat_events) as last_event,
+      -- Epoch ms: this client returns timestamps as text, which Intl.DateTimeFormat rejects.
+      (select extract(epoch from max(received_at)) * 1000 from revenuecat_events)::float as last_event_ms,
       (select count(*) from revenuecat_events)::int as events`;
   const series = await sql<{ day: string; n: number }[]>`
     select g::date::text as day, count(i.install_id)::int as n
@@ -426,8 +430,8 @@ async function dashboardView(email: string, linkFilter: LinkFilter) {
     if (x.refunds) parts.push(`${fmt.format(x.refunds)} iade`);
     if (x.revenue) parts.push(`≈ ${fmt.format(Math.round(x.revenue))} USD`);
     parts.push(`${fmt.format(onAccounts)} hesaplı`);
-    parts.push(x.last_event
-      ? `son bildirim ${new Intl.DateTimeFormat("tr-TR", { timeZone: TZ, day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }).format(x.last_event)}`
+    parts.push(x.last_event_ms
+      ? `son bildirim ${new Intl.DateTimeFormat("tr-TR", { timeZone: TZ, day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }).format(new Date(x.last_event_ms))}`
       : "RevenueCat bildirimi yok");
     return parts.join(" · ");
   };
