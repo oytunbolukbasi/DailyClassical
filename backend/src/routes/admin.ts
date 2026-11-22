@@ -25,6 +25,11 @@ const SESSION_DAYS = 90;
 const RENEW_AFTER_S = 86_400;
 const secret = new TextEncoder().encode(env.JWT_SECRET);
 const TZ = "Europe/Istanbul";
+/**
+ * Lifetime sales RevenueCat counted before its webhook reached us (none of them is in
+ * revenuecat_events). 22 Nov 2026: RevenueCat showed 6 lifetime sales, the webhook had 4.
+ */
+const LIFETIME_BEFORE_WEBHOOK = 2;
 
 admin.use("/admin/*", noStore);
 admin.use("/admin", noStore);
@@ -426,9 +431,10 @@ async function dashboardView(email: string, linkFilter: LinkFilter) {
     shown.installs ? `gösterilenlerin %${Math.round((n / shown.installs) * 100)}'i` : "henüz gösterilmedi";
   const share = shareOf(rateShown), widgetShare = shareOf(widgetShown);
   const salesNote = (x: typeof sales, onAccounts: number) => {
-    const parts = [`${fmt.format(x.lifetime)} ömür boyu`, `${fmt.format(x.monthly)} aylık`, `${fmt.format(x.trials)} deneme`];
+    const parts = [`${fmt.format(x.lifetime + LIFETIME_BEFORE_WEBHOOK)} ömür boyu (${fmt.format(LIFETIME_BEFORE_WEBHOOK)} bildirim öncesi)`,
+      `${fmt.format(x.monthly)} aylık`, `${fmt.format(x.trials)} deneme`];
     if (x.refunds) parts.push(`${fmt.format(x.refunds)} iade`);
-    if (x.revenue) parts.push(`≈ ${fmt.format(Math.round(x.revenue))} USD`);
+    if (x.revenue) parts.push(`bildirimlerde ≈ ${fmt.format(Math.round(x.revenue))} USD`);
     parts.push(`${fmt.format(onAccounts)} hesaplı`);
     parts.push(x.last_event_ms
       ? `son bildirim ${new Intl.DateTimeFormat("tr-TR", { timeZone: TZ, day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }).format(new Date(x.last_event_ms))}`
@@ -455,7 +461,7 @@ async function dashboardView(email: string, linkFilter: LinkFilter) {
         ${pctTile("Stickiness (DAU/MAU)", kpi.mau ? kpi.avg_dau_30 / kpi.mau : null, `bağlılık · ortalama DAU ${fmt.format(Math.round(kpi.avg_dau_30 * 10) / 10)}`)}
         ${tile("Toplam kullanıcı", kpi.installs, `son 7 günde ${fmt.format(kpi.new_7d)} yeni`)}
         ${tile("Hesap açan", kpi.accounts, `${fmt.format(kpi.favourites)} favori`)}
-        ${tile("Premium", sales.lifetime + sales.monthly, salesNote(sales, kpi.premium))}
+        ${tile("Premium", sales.lifetime + LIFETIME_BEFORE_WEBHOOK + sales.monthly, salesNote(sales, kpi.premium))}
       </div>
       <div class="card">
         <div class="ct">Günlük aktif kullanıcı, son 30 gün</div>
