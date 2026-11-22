@@ -19,4 +19,6 @@ Story'ler 9:16 biçiminde, 13–16 saniye ve sessiz; istersen paylaşırken Inst
 | Per 26 Kas | Dvořák · Cello Concerto | `2026-11-26 Per - Dvorak Cello Concerto` | Viyolonsel konçertosuna inanmıyordu, sonra Herbert ve Josefina | "Her favourite song, hidden in the slow movement." |
 | Cum 27 Kas | Ravel · Boléro | `2026-11-27 Cum - Ravel Bolero` | Trampet sayacı: 169 kez | "One rhythm. Two tunes. One long crescendo." |
 
+**Reel kuralı (Oytun, 22 Kasım):** Reel'ler en az 30 saniye. Sessiz üretilir, müziği Instagram'da Oytun ekler. Metin Reels arayüzünün dışında kalır: üstte 250, altta 420, sağda 150 px boş.
+
 İçerik planının tamamı: https://claude.ai/artifact/9gZEtHFv6tYdDACESs7scH
