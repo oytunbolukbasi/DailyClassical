@@ -1,0 +1,136 @@
+<!doctype html>
+<meta charset="utf-8">
+<!-- 20 s Instagram reel for Beethoven's Eroica (Today on 23 Nov 2026), silent: the user adds music in Instagram.
+     Story beats from days.html (?d=E), plus a phone with the app's listening guide (img/app/eroica-*.jpg,
+     simulator screenshots). Rendered by render-frames.mjs (1080 × 1920, 30 fps). Text stays clear of Reels'
+     overlays: top 250 px, bottom 420 px (caption, audio line), right 150 px (buttons). -->
+<style>
+@font-face { font-family: Lit; src: url('../../../ios/DailyClassical/Resources/Fonts/Literata-Regular.ttf'); font-weight: 400; }
+@font-face { font-family: Lit; src: url('../../../ios/DailyClassical/Resources/Fonts/Literata-Medium.ttf'); font-weight: 500; }
+@font-face { font-family: Lit; src: url('../../../ios/DailyClassical/Resources/Fonts/Literata-Italic.ttf'); font-weight: 400; font-style: italic; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #111010; }
+body { font-family: Lit, serif; color: #F0EBE3; -webkit-font-smoothing: antialiased; }
+.sans { font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', sans-serif; }
+.abs { position: absolute; }
+.bg { position: absolute; inset: 0; background-repeat: no-repeat; background-size: cover; will-change: transform, opacity; }
+.label { font-size: 30px; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; color: #D4AE84; }
+.big { font-weight: 500; letter-spacing: -.015em; line-height: 1.06; text-wrap: balance; }
+.body { font-size: 46px; line-height: 1.34; color: #E6DFD5; text-wrap: pretty; }
+.mark { font-size: 32px; color: #B3ABA1; }
+.credit { font-size: 24px; color: #8A837B; }
+.pill { display: inline-block; padding: 18px 34px; border-radius: 999px; background: #D4AE84; color: #1E1B17; font-size: 32px; font-weight: 600; }
+.fade { opacity: 0; }
+.phone { position: absolute; left: 50%; padding: 12px; border-radius: 96px; background: #050505;
+         box-shadow: 0 0 0 2px rgba(240,235,227,.16), 0 60px 140px rgba(0,0,0,.75), 0 0 200px rgba(212,174,132,.16); }
+.phone .screen { position: relative; overflow: hidden; border-radius: 84px; aspect-ratio: 1206 / 2622; background: #F5F2EC; }
+.phone img { position: absolute; left: 0; top: 0; width: 100%; display: block; will-change: transform, opacity; }
+</style>
+<body>
+<!-- 1–3: the story, over Gros's Bonaparte -->
+<div id="story" class="abs" style="inset:0">
+  <div class="bg" id="bg" style="background-image:url(img/gros.jpg);background-position:50% 30%"></div>
+  <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(17,16,16,.45) 0%,rgba(17,16,16,.1) 26%,rgba(17,16,16,.88) 56%,#111010 100%)"></div>
+  <div class="abs mark" style="left:90px;top:270px">DailyClassical</div>
+  <div class="abs" style="left:90px;right:150px;bottom:560px">
+    <div class="label sans fade" id="a0">Beethoven · Symphony No. 3</div>
+    <div class="big fade" id="a1" style="font-size:108px;margin-top:28px">Two chords. Then music changed.</div>
+    <div class="body fade" id="a2" style="margin-top:32px">No symphony this long had ever been written.</div>
+  </div>
+  <div class="abs fade" id="b" style="left:90px;right:150px;bottom:560px">
+    <div class="label sans">Vienna · 1804</div>
+    <div class="body" style="margin-top:26px">He wrote it for</div>
+    <div style="position:relative;display:inline-block;margin-top:6px">
+      <div class="big" style="font-size:150px;font-style:italic">Bonaparte</div>
+      <svg class="abs" style="left:-20px;top:20px" width="760" height="170" viewBox="0 0 760 170" aria-hidden="true">
+        <path id="s1" d="M10 70 C 200 40, 420 110, 750 60" stroke="#D4AE84" stroke-width="14" fill="none" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+        <path id="s2" d="M20 120 C 260 80, 470 140, 740 100" stroke="#D4AE84" stroke-width="12" fill="none" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
+      </svg>
+    </div>
+    <div class="body fade" id="b2" style="margin-top:22px">Then Napoleon crowned himself emperor. Beethoven scratched out the name.</div>
+  </div>
+  <div class="abs fade" id="c" style="left:90px;right:150px;bottom:560px">
+    <div class="label sans">Published 1806</div>
+    <div class="big" style="font-size:120px;margin-top:28px;font-style:italic">Sinfonia eroica.</div>
+    <div class="body" style="margin-top:32px">“To celebrate the memory of a great man.”</div>
+  </div>
+  <div class="abs credit sans" style="left:90px;right:150px;bottom:470px">Antoine-Jean Gros, Bonaparte at the Pont d’Arcole, c. 1796. Louvre</div>
+</div>
+
+<!-- 4: the listening guide in the app -->
+<div id="app" class="abs fade" style="inset:0;background:#111010">
+  <div class="abs" style="left:90px;right:150px;top:270px">
+    <div class="label sans" id="d0">In DailyClassical</div>
+    <div class="big" id="d1" style="font-size:72px;margin-top:22px">Know what to listen for.</div>
+  </div>
+  <div class="phone" id="phone" style="width:470px;top:560px;transform:translateX(-50%)">
+    <div class="screen">
+      <img id="p1" src="img/app/eroica-1-top.jpg">
+      <img id="p2" src="img/app/eroica-3-stops.jpg" style="opacity:0">
+      <img id="p3" src="img/app/eroica-4-horn.jpg" style="opacity:0">
+    </div>
+  </div>
+</div>
+
+<!-- 5: end card -->
+<div id="end" class="abs fade" style="inset:0;background:#111010">
+  <div class="abs" style="left:90px;right:150px;top:560px">
+    <div class="label sans">Today’s piece · Monday 23 November</div>
+    <div class="big" style="font-size:92px;margin-top:30px">Beethoven<br>Symphony No. 3, “Eroica”</div>
+    <div class="body" style="margin-top:34px">With a minute-by-minute listening guide and a painting.</div>
+    <div style="margin-top:60px"><span class="pill sans">Free today · link in bio</span></div>
+  </div>
+  <div class="abs mark" style="left:90px;bottom:470px">DailyClassical</div>
+</div>
+
+<script>
+window.DURATION = 20;
+const clamp = (x) => Math.max(0, Math.min(1, x));
+const ease = (x) => { x = clamp(x); return x < .5 ? 2*x*x : 1 - Math.pow(-2*x + 2, 2) / 2; };
+const win = (t, a, b, f = .45) => ease((t - a) / f) * (b == null ? 1 : 1 - ease((t - b) / f));
+const rise = (t, a) => (1 - ease((t - a) / .6)) * 40;
+const $ = (id) => document.getElementById(id);
+const show = (id, o, y = 0) => { const e = $(id); e.style.opacity = o; e.style.transform = `translateY(${y}px)`; };
+
+// timeline (s)
+const B = 3.4, C = 7.6, APP = 10.0, END = 17.0;
+window.render = (t) => {
+  $('bg').style.transform = `scale(${1.06 + .1 * t / APP}) translateX(${-t * 3}px)`;
+  // 1: hook
+  show('a0', win(t, .2, B - .5), rise(t, .2));
+  show('a1', win(t, .5, B - .5), rise(t, .5));
+  show('a2', win(t, 1.4, B - .5), rise(t, 1.4));
+  // 2: the name scratched out
+  $('b').style.opacity = win(t, B, C - .5);
+  $('s1').style.strokeDashoffset = 1 - ease((t - B - 1.0) / .6);
+  $('s2').style.strokeDashoffset = 1 - ease((t - B - 1.6) / .6);
+  show('b2', win(t, B + 2.0, C - .5), rise(t, B + 2.0));
+  // 3: Sinfonia eroica
+  $('c').style.opacity = win(t, C, APP - .6);
+  $('c').style.transform = `translateY(${rise(t, C)}px)`;
+  // 4: the app
+  const a = ease((t - APP + .3) / .6);
+  $('story').style.opacity = 1 - a;
+  $('app').style.opacity = a * (1 - ease((t - END) / .6));
+  $('phone').style.transform = `translateX(-50%) translateY(${(1 - ease((t - APP + .3) / .9)) * 120}px)`;
+  // screens: top (with a small scroll), then the stops, then the 7:40 horn
+  const s1 = ease((t - APP - 1.4) / 1.0);
+  $('p1').style.transform = `translateY(${-s1 * 18}%)`;
+  $('p1').style.opacity = 1 - ease((t - APP - 2.2) / .5);
+  const s2 = ease((t - APP - 2.2) / .5);
+  $('p2').style.opacity = s2 * (1 - ease((t - APP - 4.2) / .5));
+  $('p2').style.transform = `translateY(${(1 - s2) * 6 - ease((t - APP - 2.8) / 1.4) * 8}%)`;
+  const s3 = ease((t - APP - 4.2) / .5);
+  $('p3').style.opacity = s3;
+  $('p3').style.transform = `translateY(${(1 - s3) * 6}%)`;
+  // the headline names the moment the last screen shows
+  const horn = t >= APP + 4.4;
+  $('d0').textContent = horn ? 'I · ≈ 7:40' : 'In DailyClassical';
+  $('d1').textContent = horn ? 'A horn comes in too early. On purpose.' : 'Know what to listen for.';
+  const o = horn ? ease((t - APP - 4.4) / .4) : 1;
+  $('d0').style.opacity = o; $('d1').style.opacity = o;
+  // 5: end card
+  $('end').style.opacity = ease((t - END) / .6);
+};
+render(0);
+</script>
