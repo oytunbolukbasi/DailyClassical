@@ -440,8 +440,10 @@ async function dashboardView(email: string, linkFilter: LinkFilter) {
     html`<div class="tile"><div class="k">${label}</div><div class="v">${ratio === null ? "—" : `%${fmt.format(Math.round(ratio * 1000) / 10)}`}</div><div class="m">${note}</div></div>`;
   return html`
     <header class="top">
-      <div><div class="brand" lang="en">DailyClassical</div><h1>Yönetim</h1></div>
-      <form method="post" action="/admin/logout"><span class="m">${email}</span> <button class="link">Çıkış</button></form>
+      <a class="wordmark" href="/admin" lang="en"><span class="icon" aria-hidden="true">d</span><span>DailyClassical</span></a>
+      <form method="post" action="/admin/logout">
+        <button class="out" title="Çıkış · ${email}" aria-label="Çıkış (${email})">${raw(DOOR_ICON)}</button>
+      </form>
     </header>
 
     <section>
@@ -573,7 +575,7 @@ async function dashboardView(email: string, linkFilter: LinkFilter) {
       </div>
       ${diagGroups.length === 0
         ? html`<p class="m small">Henüz rapor yok.</p>`
-        : html`<div class="scroll" style="margin-top:12px"><table>
+        : html`<div class="scroll" style="margin-top:12px"><table class="diag">
         <thead><tr><th>Tür</th><th>İmza</th><th class="n">Rapor</th><th>Sürüm</th><th>iOS</th><th>Son</th><th></th></tr></thead>
         <tbody>${diagGroups.map((g) => html`<tr>
           <td>${DIAGNOSTIC_KINDS[g.kind] ?? g.kind}${g.test_only ? html` <span class="m">(test)</span>` : ""}</td>
@@ -638,7 +640,7 @@ function calendarJson(today: string, schedule: ScheduleRow[], catalogue: Catalog
 
 function loginView(error?: string) {
   return html`<main class="narrow">
-    <div class="brand" lang="en">DailyClassical</div><h1>Yönetim</h1>
+    <a class="wordmark" href="/admin" lang="en" style="margin-bottom:28px"><span class="icon" aria-hidden="true">d</span><span>DailyClassical</span></a><h1>Yönetim</h1>
     <form method="post" action="/admin/login" class="stack">
       <label for="email">E-posta</label>
       <input id="email" name="email" type="email" autocomplete="email" required autofocus>
@@ -649,7 +651,7 @@ function loginView(error?: string) {
 
 function codeView(email: string, error?: string) {
   return html`<main class="narrow">
-    <div class="brand" lang="en">DailyClassical</div><h1>Kodu girin</h1>
+    <a class="wordmark" href="/admin" lang="en" style="margin-bottom:28px"><span class="icon" aria-hidden="true">d</span><span>DailyClassical</span></a><h1>Kodu girin</h1>
     <p class="m">${email} yönetici adresiyse, 6 haneli bir kod gönderdik. Kod 10 dakika geçerli.</p>
     <form method="post" action="/admin/verify" class="stack">
       <input type="hidden" name="email" value="${email}">
@@ -663,7 +665,7 @@ function codeView(email: string, error?: string) {
 }
 
 function closedView() {
-  return html`<main class="narrow"><div class="brand" lang="en">DailyClassical</div><h1>Yönetim kapalı</h1>
+  return html`<main class="narrow"><a class="wordmark" href="/admin" lang="en" style="margin-bottom:28px"><span class="icon" aria-hidden="true">d</span><span>DailyClassical</span></a><h1>Yönetim kapalı</h1>
     <p class="m">Sunucuda ADMIN_EMAILS tanımlı değil.</p></main>`;
 }
 
@@ -687,11 +689,10 @@ h1,h2{font-family:Literata,Georgia,serif;font-weight:500;margin:0}
 h1{font-size:32px;line-height:1.15}
 h2{font-size:22px;margin:40px 0 14px;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
 h2 .m{font:13px -apple-system,system-ui,sans-serif}
-.brand{font:600 12px -apple-system,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);margin-bottom:4px}
 .m{color:var(--ink2)}
 .small{font-size:13px;margin:10px 0 0}
 a{color:var(--accent)}
-.top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px}.wordmark{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:500 18px Literata,Georgia,serif;letter-spacing:-.01em}.wordmark .icon{width:28px;height:28px;border-radius:6.16px;background:#F5F2EC;box-shadow:inset 0 0 0 1px rgba(30,27,23,.12);display:flex;align-items:center;justify-content:center;font:500 22px/1 Literata,Georgia,serif;color:#1E1B17;padding-bottom:2px;flex:none}button.out{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:0;background:transparent;color:var(--ink2);cursor:pointer}button.out:hover{background:var(--surface);color:var(--ink);box-shadow:0 0 0 .5px var(--rule)}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:10px}
 .tile,.card{background:var(--surface);border-radius:16px;box-shadow:0 0 0 .5px var(--rule);padding:16px 18px}
 .tile{padding:13px 14px;min-width:0}
@@ -705,7 +706,7 @@ a{color:var(--accent)}
 .filters label{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1 1 140px;max-width:220px}
 .filters select{font:inherit;font-size:15px;padding:8px 10px;border-radius:10px;border:0;box-shadow:inset 0 0 0 .5px var(--rule);background:var(--surface);color:var(--ink);min-width:0;width:100%}
 .filters .clear{font-size:14px;padding:10px 0}
-code{font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-all}
+code{font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;word-break:break-all}.diag{min-width:720px}.diag td{white-space:nowrap}.diag td:nth-child(2){min-width:220px;white-space:normal}.diag code{word-break:normal;overflow-wrap:anywhere}
 .note ul{margin:10px 0 4px;padding-left:20px}
 .note li{margin:6px 0}
 .ct{font-size:13px;color:var(--ink2);margin-bottom:8px}
@@ -782,6 +783,9 @@ button{font:inherit;cursor:pointer}
 
 /** Calendar (month grid, piece per day, modal with counts) and catalogue search. Builds DOM nodes
  *  with textContent only, never innerHTML with data. */
+/** Sign-out: an open door with an arrow leaving it. */
+const DOOR_ICON = `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4H6.5A1.5 1.5 0 0 0 5 5.5v13A1.5 1.5 0 0 0 6.5 20H14"/><path d="M10 12h10"/><path d="M17 8.5 20.5 12 17 15.5"/></svg>`;
+
 const ADMIN_JS = `
 (() => {
   const data = JSON.parse(document.getElementById("cal-data").textContent);
