@@ -544,7 +544,7 @@ async function dashboardView(email: string, linkFilter: LinkFilter) {
         ${tile("iPhone/iPad'den", linkTotal("ios"), "uygulamayı indirebilecek olanlar")}
         ${tile("Instagram içinden", linkTotal("instagram"), "Instagram'ın tarayıcısında açılan")}
       </div>
-      ${linkTotal("clicks") > 0 ? chart(links.daily, "tıklama", "Günlük bağlantı tıklamaları") : ""}
+      ${linkTotal("clicks") > 0 ? html`<div class="card" style="margin-top:10px"><div class="ct">Günlük bağlantı tıklamaları</div>${chart(links.daily, "tıklama", "Günlük bağlantı tıklamaları")}</div>` : ""}
       ${linkGroups.length === 0
         ? html`<p class="m small">${filtered || linkFilter.period !== "all" ? "Bu seçimde tıklama yok." : "Henüz tıklama yok."}</p>`
         : html`<div class="scroll" style="margin-top:12px"><table>
@@ -747,7 +747,7 @@ td:has(.t){min-width:170px}
 .cal .out{background:rgba(127,127,127,.04)}
 .cal .out .dn,.cal .out .pc{opacity:.45}
 .cal .dn{font-size:13px;color:var(--ink2);text-align:right;padding:2px 4px}
-.cal .now .dn{color:var(--onaccent);background:var(--accent);border-radius:12px;align-self:flex-end;min-width:24px;text-align:center}
+.cal .now .dn{color:var(--onaccent);background:var(--accent);border-radius:12px;align-self:flex-end;min-width:24px;text-align:center}.cal .now{background:var(--today);box-shadow:inset 0 0 0 2px var(--accent)}.cal .now .pc{background:var(--surface)}
 .cal .pc{all:unset;cursor:pointer;display:grid;grid-template-columns:34px 1fr;column-gap:6px;align-items:start;padding:4px;border-radius:8px;background:var(--today)}
 .cal .pc:hover,.cal .pc:focus-visible{outline:2px solid var(--accent)}
 .cal .pc img{width:34px;height:34px;border-radius:6px;object-fit:cover;grid-row:span 3}
