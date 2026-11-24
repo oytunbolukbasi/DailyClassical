@@ -8,7 +8,7 @@ Bu bağlantı App Store'a `ct=story` etiketiyle gider; yüklemeler App Store Con
 
 Story'ler 9:16 biçiminde, 13–16 saniye ve sessiz; istersen paylaşırken Instagram'dan müzik ekleyebilirsin. Çıkartmayı son karttaki "Today's piece is free" yazısının altına koy. Üstte ~250 px, altta ~340 px boşluk bırakıldı.
 
-| Tarih | Eser | Dosya | Story | O günün postu (Business Suite'te 10:00'a planlı, 22–27 Kas hepsi planlandı) |
+| Tarih | Eser | Dosya | Story | O günün postu (Business Suite'te 18:00'e planlı (24 Kasım'dan beri), 22–27 Kas hepsi planlandı) |
 | --- | --- | --- | --- | --- |
 | Cmt 21 Kas | Shostakovich · Symphony No. 5 | `2026-11-21 … 1 of 3`, `2 of 3`, `3 of 3` | Üçü bu sırayla: prömiyerin 89. yıl dönümü, üç dinleme anı, Pravda'dan Beşinci Senfoni'ye | "Triumph, or forced to cheer?" (yayında) |
 | Cmt 21 Kas · Reel | Shostakovich · Symphony No. 5 | `2026-11-21 … REEL (A+B+C, link in bio only at end)` | Üç story arka arkaya, 36 sn; "link in bio" yalnızca sondaki kartta | — |
