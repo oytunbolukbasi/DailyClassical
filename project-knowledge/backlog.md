@@ -22,7 +22,12 @@ Son güncelleme: 18 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 
 Kaydırma düzeltmeleri (Kitaplık/Ayarlar üst esneme b39ea16, Ayarlar alt sayfa dönüş sıçraması 57c6187), günlük bildirimde tablonun kaybolması (planlar sırayla, her planda yeni kimlik; 0993b20) ve 7'den fazla bölüm için kapsül + bölüm listesi sayfası (64ce8d9). Build 10 ve 11 kullanılmadı. **Sonuç:** Mozart Requiem (14 bölüm) kullanıcıların çoğu 1.3.1'e geçince takvime girebilir (App Store Connect › Analytics'te sürüm dağılımına bak; eski sürümde 14 bölüm seçiciye sığmaz).
 
-## 1.4: kendi push ve uygulama içi mesaj sistemimiz (plan, 25 Kasım 2026)
+## 1.4 (14): kendi push ve uygulama içi mesaj sistemimiz (25 Kasım 2026, gönderime hazır)
+
+**Durum (25 Kasım akşam):** backend ve /admin/messages (sekme adı Engage) canlıda; Railway'de APNS_KEY_ID/APNS_PRIVATE_KEY tanımlı. Oytun'un iPhone'u davetle test cihazı; Ad Hoc 1.4 (14) ile P1–P4 geçti (ön plan, arka plan, kilit ekranı, tamamen kapalı; webp görsel, deeplink ile eser), iki gerçek gönderi de cihaza ulaştı. Uygulama içi kart simülatörde (webp görsel, Premium deeplink) doğrulandı. Gizlilik metni "Bildirimler ve mesajlar" (kendi sunucumuz) ile güncel, PrivacyInfo App Privacy cevaplarıyla aynı. 1.4 (14) App Store Connect'e yüklendi; sürüm sayfasında inceleme notu güncel, What's New "Küçük düzenlemeler ve iyileştirmeler." Gönderim Oytun'da. Test listesi: project-knowledge/push-test-plan.md. Ertesi gün Premium mesajı (yerel bildirim) henüz yok, metin onayı bekliyor; Black Friday kurgusu onaydan sonra Engage'den.
+
+Yan bulgu (düzeltildi, 8b2a225): content router'ın "*" middleware'i bütün /v1 cevaplarına `public, max-age=300` koyuyordu (/v1/me, /v1/favourites dahil).
+
 
 **Karar (Oytun, 25 Kasım):** OneSignal'ın ücretsiz katmanı push'u 1k aboneyle sınırladı. 1.4 (13) incelemeden geri çekildi, OneSignal uygulamadan çıkarıldı (2305f0a); OneSignal'lı bir sürüm yayımlanmadı. Yerine çok basit, kendi sistemimiz: amaç e-ticaret gibi sık push değil; ara sıra duyuru, kampanya, ertesi gün Premium mesajı. Sürüm numarası 1.4 kalır (build 14+).
 
