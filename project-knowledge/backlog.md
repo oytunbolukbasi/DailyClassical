@@ -24,6 +24,12 @@ Kaydırma düzeltmeleri (Kitaplık/Ayarlar üst esneme b39ea16, Ayarlar alt sayf
 
 ## Sonraki sürüm (1.4)
 
+- **OneSignal (25 Kasım, Oytun'un kararı):** kampanya planlamak ve uygulama içi iletişim için (push + in-app mesaj). Black Friday'de ödeme ekranında rozet gösteremediğimiz için fiyat indirimi yapılmadı; OneSignal'ın in-app mesajları bu tür duyuruları güncelleme gerekmeden gösterebilecek.
+  - **Kod (başladı):** SDK (OneSignal-XCFramework), `Core/Services/PushMessaging.swift`; `ONESIGNAL_APP_ID` boşsa tamamen kapalı. Kullanıcı hesabı varsa `login(userID)`; etiketler: `premium`, `plan`, `reminder`, `test` (TestFlight/Debug); dil uygulamanın dili. İzin istemi OneSignal'dan değil, mevcut hatırlatma akışından (çift istem yok). Görselli push için Notification Service Extension.
+  - **Oytun'da:** OneSignal hesabı ve uygulama (iOS), APNs .p8 anahtarını OneSignal'a yüklemek (ya da OneSignal'ın otomatik kurulumu), App ID'yi bana vermek.
+  - **Yayından önce:** App Store Connect › App Privacy güncellenmeli (OneSignal: cihaz kimliği, kullanım verisi; IP'den kaba konum kapalı tutulacak), gizlilik metni (dailyclassical.co/privacy) ve PrivacyInfo; TestFlight'ta gerçek cihazda push ve in-app mesaj denemesi.
+  - **İlk kurgu:** yeni kullanıcıya ilk açılıştan 1 gün sonra "DailyClassical Premium ile daha iyi" (OneSignal Journey; `premium` ≠ 1). Push izni olmayanlara aynı mesaj in-app olarak bir sonraki açılışta. Not: mevcut sürümde uzaktan push yok; bu mesaj 1.4'e güncelleyenlere gider.
+
 - **Besteci sayfası (25 Kasım, Oytun):** alttaki bölüm başlığı büyük harfe çevrilmiyor: "DailyClassical’da" / "In DailyClassical" (Türkçe büyük harfte "DAİLYCLASSİCAL’DA" oluyordu). `SectionLabel(…, keepsCase: true)`.
 
 - **Üst esneme kapatıldı (kodda, 19 Kasım):** Kitaplık ve Ayarlar'da üstten çekince başlığın üstünde açılan boşluk (Oytun'un ekran kaydı; iOS'un esnemesi, başlık listenin içinde olduğu için "yenileme" gibi görünüyordu). `DesignSystem/Components/TopBounce.swift` › `.topBounceDisabled()`; alttaki esneme duruyor. Simülatörde video kaydıyla doğrulandı.
