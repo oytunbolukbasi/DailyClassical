@@ -87,6 +87,11 @@ export const AUTH_RATE_LIMITS = {
     // MetricKit reports (routes/diagnostics.ts): a handful a day at most from one phone.
     { scope: "ip", limit: 60, windowMs: HOUR },
   ],
+  push: [
+    // Push device registration, opens and in-app messages (routes/push.ts): an app calls these
+    // a few times a day.
+    { scope: "ip", limit: 120, windowMs: 15 * MINUTE },
+  ],
   adminLogin: [
     // Each request may email a code to an admin address.
     { scope: "email", limit: 5, windowMs: HOUR },

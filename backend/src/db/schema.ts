@@ -421,3 +421,84 @@ export const linkClicks = pgTable(
   },
   (t) => [index("link_clicks_at_idx").on(t.at)],
 );
+
+/**
+ * Push notifications from our own server (lib/apns.ts, routes/push.ts). One row per APNs device
+ * token: the app sends it when the reader has allowed notifications (the permission is asked only
+ * in the reminder flow). `environment` is where the token is valid: Xcode builds get sandbox
+ * tokens, TestFlight and App Store builds production ones. A token Apple reports as no longer
+ * valid is deleted.
+ */
+export const pushDevices = pgTable(
+  "push_devices",
+  {
+    token: text("token").primaryKey(),
+    environment: text("environment").notNull(),   // production | sandbox
+    installId: uuid("install_id"),
+    userId: uuid("user_id").references(() => users.id, { onDelete: "set null" }),
+    locale: text("locale").notNull(),             // en | tr
+    isPremium: boolean("is_premium").notNull().default(false),
+    appVersion: text("app_version"),
+    isTest: boolean("is_test").notNull().default(false),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+  },
+  (t) => [index("push_devices_user_idx").on(t.userId)],
+);
+
+/**
+ * A push sent from /admin/messages: the same message in each language (a device gets its
+ * language's text; a language left empty is not sent), an optional link (dailyclassical://… or
+ * https://…) and image. `status`: scheduled → sending → sent, or cancelled. The sender takes a
+ * campaign with one UPDATE … WHERE status = 'scheduled', so two instances never both send it.
+ */
+export const pushCampaigns = pgTable(
+  "push_campaigns",
+  {
+    id: uuid("id").primaryKey().defaultRandom(),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+    createdBy: text("created_by").notNull(),
+    titleEn: text("title_en"),
+    bodyEn: text("body_en"),
+    titleTr: text("title_tr"),
+    bodyTr: text("body_tr"),
+    link: text("link"),
+    imageUrl: text("image_url"),
+    audience: text("audience").notNull(),         // all | free | premium
+    testOnly: boolean("test_only").notNull().default(false),
+    sendAt: timestamp("send_at", { withTimezone: true }).notNull(),
+    status: text("status").notNull().default("scheduled"),
+    sentAt: timestamp("sent_at", { withTimezone: true }),
+    sentCount: integer("sent_count").notNull().default(0),
+    failedCount: integer("failed_count").notNull().default(0),
+    openedCount: integer("opened_count").notNull().default(0),
+  },
+  (t) => [index("push_campaigns_status_idx").on(t.status, t.sendAt)],
+);
+
+/**
+ * In-app messages: a card the app shows once per message when it opens (GET /v1/messages),
+ * between `startsAt` and `endsAt`, to its audience and from `minAppVersion`. Text per language;
+ * a language left empty is not shown in that language.
+ */
+export const inAppMessages = pgTable("in_app_messages", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+  createdBy: text("created_by").notNull(),
+  titleEn: text("title_en"),
+  bodyEn: text("body_en"),
+  buttonEn: text("button_en"),
+  titleTr: text("title_tr"),
+  bodyTr: text("body_tr"),
+  buttonTr: text("button_tr"),
+  link: text("link"),
+  imageUrl: text("image_url"),
+  audience: text("audience").notNull(),           // all | free | premium
+  testOnly: boolean("test_only").notNull().default(false),
+  minAppVersion: text("min_app_version"),
+  startsAt: timestamp("starts_at", { withTimezone: true }).notNull(),
+  endsAt: timestamp("ends_at", { withTimezone: true }),
+  active: boolean("active").notNull().default(true),
+  shownCount: integer("shown_count").notNull().default(0),
+  tappedCount: integer("tapped_count").notNull().default(0),
+});

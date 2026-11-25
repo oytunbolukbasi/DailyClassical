@@ -24,7 +24,7 @@ const AUDIENCE = "dailyclassical-admin";
 const SESSION_DAYS = 90;
 const RENEW_AFTER_S = 86_400;
 const secret = new TextEncoder().encode(env.JWT_SECRET);
-const TZ = "Europe/Istanbul";
+export const TZ = "Europe/Istanbul";
 /**
  * Lifetime sales RevenueCat counted before its webhook reached us (none of them is in
  * revenuecat_events). 22 Nov 2026: RevenueCat showed 6 lifetime sales, the webhook had 4.
@@ -41,7 +41,7 @@ async function noStore(c: Context, next: () => Promise<void>) {
 
 const isAdmin = (email: string) => env.ADMIN_EMAILS.includes(email.trim().toLowerCase());
 
-async function sessionEmail(c: Context): Promise<string | null> {
+export async function sessionEmail(c: Context): Promise<string | null> {
   const token = getCookie(c, COOKIE);
   if (!token) return null;
   try {
@@ -439,12 +439,7 @@ async function dashboardView(email: string, linkFilter: LinkFilter) {
   const pctTile = (label: string, ratio: number | null, note: string) =>
     html`<div class="tile"><div class="k">${label}</div><div class="v">${ratio === null ? "—" : `%${fmt.format(Math.round(ratio * 1000) / 10)}`}</div><div class="m">${note}</div></div>`;
   return html`
-    <header class="top">
-      <a class="wordmark" href="/admin" lang="en"><span class="icon" aria-hidden="true">d</span><span>DailyClassical</span></a>
-      <form method="post" action="/admin/logout">
-        <button class="out" title="Çıkış · ${email}" aria-label="Çıkış (${email})">${raw(DOOR_ICON)}</button>
-      </form>
-    </header>
+    ${headerView(email, "panel")}
 
     <section>
       <h2>Kullanıcılar</h2>
@@ -664,12 +659,25 @@ function codeView(email: string, error?: string) {
   </main>`;
 }
 
+/** The page header: wordmark, the two sections, sign-out. */
+export function headerView(email: string, current: "panel" | "messages") {
+  const tab = (href: string, key: typeof current, label: string) =>
+    html`<a href="${href}" class="${key === current ? "on" : ""}" ${key === current ? raw('aria-current="page"') : ""}>${label}</a>`;
+  return html`<header class="top">
+      <a class="wordmark" href="/admin" lang="en"><span class="icon" aria-hidden="true">d</span><span>DailyClassical</span></a>
+      <nav class="tabs">${tab("/admin", "panel", "Panel")}${tab("/admin/messages", "messages", "Mesajlar")}</nav>
+      <form method="post" action="/admin/logout">
+        <button class="out" title="Çıkış · ${email}" aria-label="Çıkış (${email})">${raw(DOOR_ICON)}</button>
+      </form>
+    </header>`;
+}
+
 function closedView() {
   return html`<main class="narrow"><a class="wordmark" href="/admin" lang="en" style="margin-bottom:28px"><span class="icon" aria-hidden="true">d</span><span>DailyClassical</span></a><h1>Yönetim kapalı</h1>
     <p class="m">Sunucuda ADMIN_EMAILS tanımlı değil.</p></main>`;
 }
 
-function page(title: string, body: HtmlEscapedString | Promise<HtmlEscapedString>) {
+export function page(title: string, body: HtmlEscapedString | Promise<HtmlEscapedString>) {
   return html`<!doctype html><html lang="tr"><head><meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
@@ -693,6 +701,7 @@ h2 .m{font:13px -apple-system,system-ui,sans-serif}
 .small{font-size:13px;margin:10px 0 0}
 a{color:var(--accent)}
 .top{display:flex;justify-content:space-between;align-items:center;gap:16px}.wordmark{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font:500 18px Literata,Georgia,serif;letter-spacing:-.01em}.wordmark .icon{width:28px;height:28px;border-radius:6.16px;background:#F5F2EC;box-shadow:inset 0 0 0 1px rgba(30,27,23,.12);display:flex;align-items:center;justify-content:center;font:500 22px/1 Literata,Georgia,serif;color:#1E1B17;padding-bottom:2px;flex:none}button.out{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:0;background:transparent;color:var(--ink2);cursor:pointer}button.out:hover{background:var(--surface);color:var(--ink);box-shadow:0 0 0 .5px var(--rule)}
+.tabs{display:flex;gap:4px;margin-right:auto;margin-left:12px;background:var(--surface);border-radius:20px;padding:3px;box-shadow:0 0 0 .5px var(--rule)}.tabs a{padding:6px 14px;border-radius:17px;text-decoration:none;color:var(--ink2);font-size:14px;font-weight:500}.tabs a.on{background:var(--accent);color:var(--onaccent)}.tabs a:not(.on):hover{color:var(--ink)}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:10px}
 .tile,.card{background:var(--surface);border-radius:16px;box-shadow:0 0 0 .5px var(--rule);padding:16px 18px}
 .tile{padding:13px 14px;min-width:0}

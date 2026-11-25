@@ -31,6 +31,15 @@ const schema = z.object({
   APPLE_TEAM_ID: z.string().optional(),
   APPLE_KEY_ID: z.string().optional(),
   APPLE_PRIVATE_KEY: z.string().optional().transform((v) => v?.replace(/\\n/g, "\n").trim() || undefined),
+  /**
+   * Push notifications (lib/apns.ts): an APNs auth key from Apple Developer › Keys. APNS_PRIVATE_KEY
+   * is the .p8 file's contents (pasted as is, or with \n). The team is APPLE_TEAM_ID. The key is
+   * Production-only, so pushes reach TestFlight and App Store builds; sandbox tokens are skipped
+   * unless APNS_SANDBOX=1 (for a key that has both environments). Unset = pushes are not sent.
+   */
+  APNS_KEY_ID: z.string().optional().transform((v) => v?.trim() || undefined),
+  APNS_PRIVATE_KEY: z.string().optional().transform((v) => v?.trim() || undefined),
+  APNS_SANDBOX: z.string().optional().transform((v) => v === "1" || v === "true"),
   /** App Store page, opened by the update prompts. */
   APP_STORE_URL: z.string().url().optional(),
   /**

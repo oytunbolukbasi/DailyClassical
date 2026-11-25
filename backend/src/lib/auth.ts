@@ -53,3 +53,20 @@ export const requireUser: MiddlewareHandler<AuthVars> = async (c, next) => {
   c.set("userId", userId);
   await next();
 };
+
+/**
+ * The signed-in account when the request carries a valid session token, else null (no error):
+ * for endpoints that work with or without an account, like push device registration.
+ */
+export async function optionalUserId(authorization: string | undefined): Promise<string | null> {
+  const token = authorization?.replace(/^Bearer\s+/i, "");
+  if (!token) return null;
+  try {
+    const { payload } = await jwtVerify(token, secret);
+    if (!payload.sub) return null;
+    const [user] = await db.select({ passwordChangedAt: users.passwordChangedAt }).from(users).where(eq(users.id, payload.sub));
+    return user && !issuedBeforePasswordChange(payload.iat, user.passwordChangedAt) ? payload.sub : null;
+  } catch {
+    return null;
+  }
+}
