@@ -55,6 +55,11 @@ struct DailyClassicalApp: App {
                     // Keep the next days' reminders in step with the schedule (at most hourly).
                     Task { await ReminderScheduler.refresh(language: language.code) }
                 }
+                // Push registration (Core/Services/PushNotifications.swift): only with permission.
+                .task(id: "\(language.code)|\(entitlements.isPremium)|\(session.userID ?? "-")|\(scenePhase == .active)") {
+                    guard scenePhase == .active else { return }
+                    await PushNotifications.shared.update(language: language.code, premium: entitlements.isPremium)
+                }
                 // Crash and hang reports from MetricKit, for the admin page (Core/Services/Diagnostics.swift).
                 .task { Diagnostics.shared.start() }
         }

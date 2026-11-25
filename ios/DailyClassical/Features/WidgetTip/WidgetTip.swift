@@ -84,7 +84,7 @@ private struct WidgetTipHost: ViewModifier {
     /// Today on top, no piece, sheet, rating card or welcome flow in the way.
     private var canShow: Bool {
         scenePhase == .active && hasCompletedOnboarding && router.tab == .today && router.todayPath.isEmpty
-            && router.sheet == nil && !router.showRatePrompt && router.widgetTip == nil
+            && router.sheet == nil && !router.showRatePrompt && router.widgetTip == nil && router.inAppMessage == nil
     }
 
     private func close(done: Bool) {

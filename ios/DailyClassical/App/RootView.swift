@@ -40,13 +40,14 @@ struct RootView: View {
         }
         .toast($router.toast)
         .onGlossaryTap { router.present(.glossaryTerm($0)) }
-        // Widget taps: dailyclassical://piece/<id> opens that piece on the Today tab.
-        .onOpenURL { url in
-            guard url.scheme == "dailyclassical", url.host() == "piece", let id = url.pathComponents.dropFirst().first else { return }
-            router.sheet = nil
-            router.tab = .today
-            router.todayPath = NavigationPath([PieceRoute(id: id)])
+        // dailyclassical:// links from the widget, pushes, in-app messages and test invites.
+        .onOpenURL { open($0) }
+        .onChange(of: DeepLinks.shared.pending, initial: true) {
+            guard let url = DeepLinks.shared.pending else { return }
+            DeepLinks.shared.pending = nil
+            open(url)
         }
+        .inAppMessages()
         // Step 1 is a card over the live Today screen, step 2 the reminder (Features/Onboarding).
         .onboarding(isComplete: $hasCompletedOnboarding)
         .updateCheck()
@@ -55,6 +56,37 @@ struct RootView: View {
         #if DEBUG
         .task { await ScreenshotScene.apply(to: router) }
         #endif
+    }
+
+    @Environment(\.openURL) private var openURL
+
+    /// dailyclassical://piece/<id> (widget, pushes), ://premium, ://today, ://test-device/<invite>;
+    /// https links from pushes and in-app messages open in Safari.
+    private func open(_ url: URL) {
+        if url.scheme == "https" { openURL(url); return }
+        guard url.scheme == "dailyclassical" else { return }
+        let arg = url.pathComponents.dropFirst().first
+        switch url.host() {
+        case "piece":
+            guard let arg else { return }
+            router.sheet = nil
+            router.tab = .today
+            router.todayPath = NavigationPath([PieceRoute(id: arg)])
+        case "premium":
+            router.sheet = .paywall
+        case "today":
+            router.sheet = nil
+            router.tab = .today
+            router.todayPath = NavigationPath()
+        case "test-device":
+            guard let arg else { return }
+            Task {
+                let ok = await PushNotifications.shared.verifyTestDevice(invite: arg)
+                router.toast = ok ? "testDevice.verified" : "testDevice.failed"
+            }
+        default:
+            break
+        }
     }
 }
 

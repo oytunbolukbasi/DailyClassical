@@ -39,6 +39,7 @@ enum ReminderScheduler {
     static func schedule(at time: DateComponents, language: String) async -> Bool {
         let center = UNUserNotificationCenter.current()
         guard (try? await center.requestAuthorization(options: [.alert, .sound])) == true else { return false }
+        await PushNotifications.shared.permissionGranted()
         UserDefaults.standard.set(time.hour, forKey: "reminderHour")
         UserDefaults.standard.set(time.minute, forKey: "reminderMinute")
         await plan(language: language)

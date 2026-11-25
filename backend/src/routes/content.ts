@@ -1,4 +1,4 @@
-import { Hono } from "hono";
+import { type Context, Hono, type Next } from "hono";
 import { HTTPException } from "hono/http-exception";
 import { z } from "zod";
 import { getPiece, listComposers, listGlossary, listPublishedPieces, pieceIdForDay, scheduleUntil, widgetDays } from "../content/repository.js";
@@ -11,12 +11,15 @@ const TTL = 60_000;
 
 export const content = new Hono();
 
-// Content changes rarely; let clients and any CDN cache briefly.
-content.use("*", async (c, next) => {
+// Content changes rarely; let clients and any CDN cache briefly. Only these paths: a "*" here
+// also ran for every other /v1 route (this app is mounted at /v1 first), so account answers
+// (/v1/me, /v1/favourites) and in-app messages were marked public and cached for five minutes.
+const cacheContent = async (c: Context, next: Next) => {
   await next();
   if (c.res.status === 200) c.header("Cache-Control", "public, max-age=300, stale-while-revalidate=86400");
   c.header("Vary", "Accept-Language");
-});
+};
+for (const path of ["/today", "/pieces", "/pieces/:id", "/schedule", "/widget", "/glossary", "/composers"]) content.use(path, cacheContent);
 
 const day = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 

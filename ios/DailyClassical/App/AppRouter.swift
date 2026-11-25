@@ -41,6 +41,8 @@ final class AppRouter {
     /// The widget tip (Features/WidgetTip): shown by WidgetTipPolicy, or opened from Settings.
     var widgetTip: WidgetTipSource?
     enum WidgetTipSource: Equatable { case automatic, settings }
+    /// An in-app message from /admin/messages (Features/Messages).
+    var inAppMessage: InAppMessage?
     /// Piece to save once the guest finishes signing in from the heart.
     var pendingFavourite: String?
     /// True while Library › Glossary is on screen (set by GlossaryListScreen).

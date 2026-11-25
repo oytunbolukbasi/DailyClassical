@@ -52,10 +52,24 @@ final class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCent
         return true
     }
 
-    /// Settings › Test sends notifications while the app is open: show those as banners too. The
-    /// daily reminder arrives while the app is closed and needs nothing here.
+    /// Settings › Test sends notifications while the app is open, and pushes from /admin/messages
+    /// may arrive while it is: show those as banners too. The daily reminder arrives while the app
+    /// is closed and needs nothing here.
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification)
         async -> UNNotificationPresentationOptions {
-        notification.request.identifier.hasPrefix("test-") ? [.banner, .list, .sound] : []
+        let remote = notification.request.trigger is UNPushNotificationTrigger
+        return remote || notification.request.identifier.hasPrefix("test-") ? [.banner, .list, .sound] : []
+    }
+
+    /// A tapped push opens its link (PushNotifications); a tapped reminder just opens the app.
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
+        let content = response.notification.request.content
+        guard response.notification.request.trigger is UNPushNotificationTrigger,
+              response.actionIdentifier == UNNotificationDefaultActionIdentifier else { return }
+        PushNotifications.shared.opened(userInfo: content.userInfo)
+    }
+
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        PushNotifications.shared.didRegister(deviceToken: deviceToken)
     }
 }

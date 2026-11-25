@@ -25,7 +25,8 @@ final class Analytics {
         queue = (defaults.data(forKey: queueKey)).flatMap { try? JSONDecoder().decode([Event].self, from: $0) } ?? []
     }
 
-    private var installId: String {
+    /// Random per install; also identifies the install for pushes and test devices (PushNotifications).
+    var installId: String {
         if let id = defaults.string(forKey: "analytics.installId") { return id }
         let id = UUID().uuidString.lowercased()
         defaults.set(id, forKey: "analytics.installId")

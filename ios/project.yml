@@ -105,6 +105,27 @@ targets:
       - package: RevenueCat
       - package: Facebook
         product: FacebookCore
+      - target: NotificationService
+        embed: true
+  # Images in pushes from /admin/messages (payload key `image`; backend lib/apns.ts).
+  NotificationService:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: NotificationService
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: co.dailyclassical.app.NotificationService
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: DailyClassical
+        SWIFT_DEFAULT_ACTOR_ISOLATION: nonisolated
+        SKIP_INSTALL: YES
+    info:
+      path: NotificationService/Info.plist
+      properties:
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.usernotifications.service
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).NotificationService
   # Home Screen widgets (small / medium / large). Fetches its own feed (GET /v1/widget) so pieces
   # published after the app shipped appear; falls back to its cached feed, then to the bundled
   # fixtures and artwork, so it always works offline. The language comes from the shared App Group.
