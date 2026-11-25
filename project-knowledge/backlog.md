@@ -26,7 +26,7 @@ Kaydırma düzeltmeleri (Kitaplık/Ayarlar üst esneme b39ea16, Ayarlar alt sayf
 
 - TestFlight'ta push ve in-app mesaj Oytun'un cihazında denendi, sorunsuz.
 - App Privacy (25 Kasım, yayında): User ID'ye "Developer's Advertising or Marketing" eklendi; Device ID ve Product Interaction kimliğe bağlı. Takip yok. Gizlilik metni sitede OneSignal'la güncel.
-- Sürüm sayfası: build 13; Yenilikler (TR) "Ara sıra DailyClassical'dan yeni eserler ve Premium hakkında haberler: bildirim ya da uygulama içinde kısa bir mesaj olarak. Ayrıca besteci sayfasında küçük bir düzeltme." / What's New (EN) "Now and then, news from DailyClassical about new pieces and Premium, as a notification or a short message in the app. Plus a small fix on the composer page." İnceleme notunun ilk paragrafı OneSignal'ı ve iznin yalnız hatırlatma akışında istendiğini anlatıyor; demo hesabı ve video bağlantısı aynı.
+- Sürüm sayfası: build 13; Yenilikler (TR) "Küçük düzenlemeler ve iyileştirmeler." / What's New (EN) "Small refinements and improvements." (Oytun'un isteği). İnceleme notunun ilk paragrafı OneSignal'ı ve iznin yalnız hatırlatma akışında istendiğini anlatıyor; demo hesabı ve video bağlantısı aynı.
 - Gönderim Oytun'da (Add for Review). Onaydan sonra: OneSignal'da ertesi gün Premium mesajı (Journey) ve Black Friday kurgusu.
 
 ## 1.4 notları
