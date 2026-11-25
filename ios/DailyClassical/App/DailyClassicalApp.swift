@@ -57,17 +57,6 @@ struct DailyClassicalApp: App {
                 }
                 // Crash and hang reports from MetricKit, for the admin page (Core/Services/Diagnostics.swift).
                 .task { Diagnostics.shared.start() }
-                // OneSignal targeting (Core/Services/PushMessaging.swift; off without an App ID).
-                .task(id: session.userID) { PushMessaging.identify(userID: session.userID) }
-                .onChange(of: language.code, initial: true) { PushMessaging.setLanguage(language.code) }
-                .onChange(of: entitlements.isPremium, initial: true) { pushTags() }
-                .onChange(of: scenePhase) { if scenePhase == .active { pushTags() } }
         }
-    }
-
-    /// The reminder can be switched off in Settings; the tags are refreshed whenever the app comes forward.
-    private func pushTags() {
-        PushMessaging.update(premium: entitlements.isPremium, plan: entitlements.activePlan?.rawValue,
-                             reminderOn: ReminderScheduler.savedTime != nil)
     }
 }

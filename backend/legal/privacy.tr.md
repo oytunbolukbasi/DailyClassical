@@ -1,6 +1,6 @@
 # Gizlilik Politikası
 
-Son güncelleme: 25 Kasım 2026
+Son güncelleme: 13 Kasım 2026
 
 DailyClassical (“biz”), her gün bir klasik eseri bir dinleme rehberiyle sunan bir uygulamadır. Bu politika, uygulamanın ve sunucumuzun hangi bilgileri neden işlediğini ve sizin hangi seçeneklere sahip olduğunuzu açıklar.
 
@@ -9,7 +9,7 @@ DailyClassical (“biz”), her gün bir klasik eseri bir dinleme rehberiyle sun
 - DailyClassical’ı hesap açmadan kullanabilirsiniz. Bu durumda sunucularımızda, size bağlanmayan anonim kullanım sayıları ve çökme raporları dışında sizinle ilgili hiçbir bilgi saklamayız.
 - Hesap açarsanız e-posta adresinizi, şifrenizin korunmuş bir biçimini, dilinizi ve favorilerinizi saklarız.
 - Satın almaları Apple yönetir. Ödeme bilgilerinizi hiçbir zaman görmeyiz.
-- Uygulamada reklam ve takip yoktur. Üçüncü taraf kodu: kendi reklam kampanyalarımızı reklam tanımlayıcısı olmadan ölçen, sınırlı moddaki Meta SDK (bkz. Reklam ölçümü) ve bildirimlerimizi ve uygulama içi mesajlarımızı ileten OneSignal (bkz. Bildirimler ve mesajlar). Verilerinizi asla satmayız.
+- Uygulamada reklam ve takip yoktur: tek üçüncü taraf kodu, kendi reklam kampanyalarımızı reklam tanımlayıcısı olmadan ölçen, sınırlı moddaki Meta SDK’dır (bkz. Reklam ölçümü). Verilerinizi asla satmayız.
 
 ## İşlediğimiz bilgiler
 
@@ -40,16 +40,14 @@ E-posta adresinizi doğrulamak ya da şifrenizi sıfırlamak için size kısa bi
 
 **Satın almalar.** Premium, Apple’ın App Store’u üzerinden satın alınır. Ödemeyi Apple işler; biz hiçbir ödeme ya da kart bilgisi almayız. Etkin bir satın almanız olup olmadığını kontrol etmek için RevenueCat’i kullanırız: RevenueCat, satın almalarınızın App Store makbuzunu ve uygulama kurulumuna ait bir tanımlayıcıyı (giriş yaptıysanız DailyClassical hesap kimliğinizi) alır; böylece Premium doğrulanabilir ve geri yüklenebilir.
 
-**Günlük hatırlatıcı.** Hatırlatıcı, cihazınızda planlanan yerel bir bildirimdir.
-
-**Bildirimler ve mesajlar.** Ara sıra gönderdiğimiz anlık bildirimler (örneğin yeni eserler ya da Premium hakkında) ve uygulama içinde gösterilen mesajlar için OneSignal’ı kullanırız. OneSignal; cihazınızın bildirim anahtarını (yalnızca bildirimlere izin verdiyseniz), uygulama kurulumuna ait bir tanımlayıcıyı, cihaz modelinizi ve iOS sürümünüzü, uygulamanın dilini ve sürümünü, uygulamayı en son ne zaman açtığınızı ve bizim eklediğimiz birkaç etiketi alır: Premium olup olmadığınız ve hangi paket, günlük hatırlatıcının açık olup olmadığı. Giriş yaptıysanız, mesajın her cihazınıza ulaşabilmesi için DailyClassical hesap kimliğinizi de alır; e-posta adresinizi hiçbir zaman almaz. Bildirimleri istediğiniz zaman iOS Ayarlar’dan kapatabilirsiniz. OneSignal’ın bu bilgileri nasıl işlediği kendi Gizlilik Politikası’nda (onesignal.com/privacy_policy) anlatılır.
+**Günlük hatırlatıcı.** Hatırlatıcı, cihazınızda planlanan yerel bir bildirimdir. Bildirim sunucusu kullanmayız.
 
 **Ana ekran widget’ı.** Widget günün eserini gösterir. Dil ayarınızı cihazınızdaki uygulamadan okur ve günün eserini, uygulama gibi, sunucumuzdan indirir.
 
 ## Yapmadıklarımız
 
 - Uygulamada reklam göstermeyiz.
-- Üçüncü taraf analitik yazılımı kullanmayız; sizi başka uygulama ve sitelerde takip etmeyiz. Meta SDK yalnızca reklamlarımızı ölçmek için sınırlı modda çalışır (bkz. Reklam ölçümü); OneSignal yalnızca kendi mesajlarımızı iletmek için kullanılır.
+- Üçüncü taraf analitik yazılımı kullanmayız; sizi başka uygulama ve sitelerde takip etmeyiz. Meta SDK yalnızca reklamlarımızı ölçmek için sınırlı modda çalışır (bkz. Reklam ölçümü).
 - Bilgilerinizi satmayız ve başkalarının pazarlaması için kimseyle paylaşmayız.
 
 ## Bilgilerinizi neden kullanıyoruz
@@ -64,7 +62,6 @@ DailyClassical’ı çalıştırmak için, verileri yalnızca bizim adımıza i�
 - **Neon** veritabanımızı barındırır (Amerika Birleşik Devletleri, AWS us-east-2).
 - **Resend** e-postalarımızı iletir (doğrulama kodları, şifre sıfırlama).
 - **RevenueCat** uygulama içi satın almaları ve abonelik durumunu yönetir (Amerika Birleşik Devletleri).
-- **OneSignal** anlık bildirimleri ve uygulama içi mesajları iletir (Amerika Birleşik Devletleri).
 
 Bu sağlayıcılar Amerika Birleşik Devletleri’nde olduğundan bilgileriniz yurt dışında işlenebilir. Verileri sektör standardı güvenlik önlemleri ve sözleşmesel güvencelerle koruyan sağlayıcıları seçiyoruz.
 

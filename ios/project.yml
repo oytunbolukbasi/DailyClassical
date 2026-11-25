@@ -33,10 +33,6 @@ packages:
   Facebook:
     url: https://github.com/facebook/facebook-ios-sdk.git
     from: 18.1.1
-  # Push and in-app messages from OneSignal (Core/Services/PushMessaging.swift). Off without ONESIGNAL_APP_ID.
-  OneSignal:
-    url: https://github.com/OneSignal/OneSignal-XCFramework.git
-    from: 5.8.1
 targets:
   DailyClassical:
     type: application
@@ -68,16 +64,11 @@ targets:
         # RevenueCat's *public* Apple SDK key (appl_…), safe to ship in the app. Empty = purchases go
         # straight through StoreKit 2 (local StoreKit configuration file); see EntitlementStore.
         REVENUECAT_API_KEY: appl_oyvZmpSeMAqWXZgCzcMxRyRiQDo
-        # OneSignal App ID (public; Core/Services/PushMessaging.swift). Empty = OneSignal is off.
-        ONESIGNAL_APP_ID: 3c1c3968-9b54-427d-b41a-26be24c65289
     info:
       path: DailyClassical/Info.plist
       properties:
         API_BASE_URL: $(API_BASE_URL)
         REVENUECAT_API_KEY: $(REVENUECAT_API_KEY)
-        ONESIGNAL_APP_ID: $(ONESIGNAL_APP_ID)
-        # OneSignal: silent pushes (content-available) for in-app message updates.
-        UIBackgroundModes: [remote-notification]
         # HTTPS only (exempt): no export-compliance question on every upload.
         ITSAppUsesNonExemptEncryption: false
         CFBundleLocalizations: [en, tr]
@@ -114,34 +105,6 @@ targets:
       - package: RevenueCat
       - package: Facebook
         product: FacebookCore
-      - package: OneSignal
-        product: OneSignalFramework
-      - package: OneSignal
-        product: OneSignalInAppMessages
-      - target: OneSignalNotificationServiceExtension
-        embed: true
-  # Images and delivery confirmation for OneSignal pushes (OneSignalExtension).
-  OneSignalNotificationServiceExtension:
-    type: app-extension
-    platform: iOS
-    sources:
-      - path: OneSignalNotificationServiceExtension
-    settings:
-      base:
-        PRODUCT_BUNDLE_IDENTIFIER: co.dailyclassical.app.OneSignalNotificationServiceExtension
-        GENERATE_INFOPLIST_FILE: YES
-        INFOPLIST_KEY_CFBundleDisplayName: DailyClassical
-        SWIFT_DEFAULT_ACTOR_ISOLATION: nonisolated
-        SKIP_INSTALL: YES
-    info:
-      path: OneSignalNotificationServiceExtension/Info.plist
-      properties:
-        NSExtension:
-          NSExtensionPointIdentifier: com.apple.usernotifications.service
-          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).NotificationService
-    dependencies:
-      - package: OneSignal
-        product: OneSignalExtension
   # Home Screen widgets (small / medium / large). Fetches its own feed (GET /v1/widget) so pieces
   # published after the app shipped appear; falls back to its cached feed, then to the bundled
   # fixtures and artwork, so it always works offline. The language comes from the shared App Group.

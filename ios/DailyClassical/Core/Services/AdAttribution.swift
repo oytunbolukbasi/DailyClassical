@@ -49,7 +49,6 @@ final class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCent
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         AdAttribution.start(application, options: launchOptions)
         UNUserNotificationCenter.current().delegate = self
-        PushMessaging.start(launchOptions: launchOptions)  // after the delegate, which OneSignal wraps
         return true
     }
 
