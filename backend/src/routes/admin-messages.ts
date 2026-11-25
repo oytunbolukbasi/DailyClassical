@@ -335,7 +335,6 @@ async function messagesView(email: string, ok?: string, err?: string) {
                 <div class="ntitle" id="p-title">Başlık</div><div class="nbody" id="p-body">Metin</div></div>
               <img id="p-image" alt="" hidden>
             </div>
-            <p class="small m">Bir dili boş bırakırsanız o dildeki cihazlara gönderilmez.</p>
             <div class="testsend">
               <button type="button" class="secondary" data-test="/admin/messages/push/test">Test cihazlarına şimdi gönder</button>
               <span class="m small">${fmt.format(devices!.test)} cihaz</span>
@@ -343,17 +342,15 @@ async function messagesView(email: string, ok?: string, err?: string) {
           </aside>
         </div>
         <div class="row">
-          <label class="grow">Link <span class="m">(isteğe bağlı)</span><input name="link" list="links" placeholder="dailyclassical://premium"></label>
-          <label class="grow">Görsel <span class="m">(isteğe bağlı, https)</span><input name="image" data-p="image" placeholder="https://www.dailyclassical.co/images/…jpg"></label>
+          <label class="grow">Deeplink <input name="link" list="links" placeholder="dailyclassical://premium"></label>
+          <label class="grow">Görsel <input name="image" data-p="image" placeholder="https://www.dailyclassical.co/images/…jpg"></label>
         </div>
-        <div class="row">
+        <div class="foot">
           <label>Kime <select name="audience">${(Object.keys(AUDIENCES) as Audience[]).map((a) => html`<option value="${a}">${AUDIENCES[a]}</option>`)}</select></label>
-          <label class="check"><input type="radio" name="when" value="now" checked> Hemen</label>
-          <label class="check"><input type="radio" name="when" value="later"> Zamanla</label>
-          <input type="datetime-local" name="send_at" value="${now}" aria-label="Gönderim zamanı (İstanbul)">
-          <span class="m small">İstanbul saati</span>
+          <label>Ne zaman <select name="when" data-when><option value="now">Hemen</option><option value="later">Zamanla</option></select></label>
+          <label class="when-at">Saat <input type="datetime-local" name="send_at" value="${now}"></label>
+          <button class="primary end" data-confirm="Bu push seçilen kitledeki gerçek kullanıcılara gidecek. Emin misiniz?">Kullanıcılara gönder</button>
         </div>
-        <button class="primary" data-confirm="Bu push seçilen kitledeki gerçek kullanıcılara gidecek. Emin misiniz?">Kullanıcılara gönder</button>
       </form>
       ${linkHelp}
     </section>
@@ -376,7 +373,7 @@ async function messagesView(email: string, ok?: string, err?: string) {
     </section>
 
     <section id="test-devices">
-      <h2>Test cihazları <span class="m">e-postayla davet; bağlantıyı iPhone'da açınca doğrulanır</span></h2>
+      <h2>Test cihazları</h2>
       <form class="card compose invite" method="post" action="/admin/messages/test-devices">
         <div class="row">
           <label class="grow">E-posta <input type="email" name="email" required placeholder="ad@ornek.com"></label>
@@ -397,7 +394,7 @@ async function messagesView(email: string, ok?: string, err?: string) {
     </section>
 
     <section id="inapp">
-      <h2>Yeni uygulama içi mesaj <span class="m">uygulama açılınca bir kez gösterilen kart</span></h2>
+      <h2>Yeni uygulama içi mesaj</h2>
       <form class="card compose" method="post" action="/admin/messages/inapp">
         <div class="cols">
           <fieldset>
@@ -421,7 +418,6 @@ async function messagesView(email: string, ok?: string, err?: string) {
               <div class="iambtn" id="q-button" hidden>Buton</div>
               <div class="iamclose">Kapat</div>
             </div>
-            <p class="small m">Uygulamada tasarım sistemimizle gösterilir; bu yaklaşık bir önizleme.</p>
             <div class="testsend">
               <button type="button" class="secondary" data-test="/admin/messages/inapp/test">Test cihazlarında göster</button>
               <span class="m small">${fmt.format(devices!.test)} cihaz</span>
@@ -429,19 +425,16 @@ async function messagesView(email: string, ok?: string, err?: string) {
           </aside>
         </div>
         <div class="row">
-          <label class="grow">Link <span class="m">(butona basınca)</span><input name="link" list="links" placeholder="dailyclassical://premium"></label>
-          <label class="grow">Görsel <span class="m">(isteğe bağlı, https)</span><input name="image" data-q="image"></label>
+          <label class="grow">Deeplink <input name="link" list="links" placeholder="dailyclassical://premium"></label>
+          <label class="grow">Görsel <input name="image" data-q="image" placeholder="https://www.dailyclassical.co/images/…jpg"></label>
         </div>
-        <div class="row">
+        <div class="foot">
           <label>Kime <select name="audience">${(Object.keys(AUDIENCES) as Audience[]).map((a) => html`<option value="${a}">${AUDIENCES[a]}</option>`)}</select></label>
-          <label>En düşük sürüm <input name="min_version" placeholder="1.4" size="6"></label>
-        </div>
-        <div class="row">
+          <label>En düşük sürüm <input name="min_version" placeholder="1.4" size="5"></label>
           <label>Başlangıç <input type="datetime-local" name="starts_at" value="${toLocal(new Date())}"></label>
-          <label>Bitiş <span class="m">(isteğe bağlı)</span><input type="datetime-local" name="ends_at"></label>
-          <span class="m small">İstanbul saati</span>
+          <label>Bitiş <input type="datetime-local" name="ends_at"></label>
+          <button class="primary end" data-confirm="Bu kart seçilen kitledeki gerçek kullanıcılara gösterilecek. Emin misiniz?">Kullanıcılar için yayınla</button>
         </div>
-        <button class="primary" data-confirm="Bu kart seçilen kitledeki gerçek kullanıcılara gösterilecek. Emin misiniz?">Kullanıcılar için yayınla</button>
       </form>
     </section>
 
@@ -513,6 +506,16 @@ const CSS = `
 .link{border:0;background:none;color:var(--accent);padding:0;font-size:14px}
 td .link{min-height:0;height:auto;line-height:inherit}
 .secondary{height:40px;padding:0 18px;border-radius:20px;border:0;background:var(--today);color:var(--accent);font-weight:600;box-shadow:inset 0 0 0 1px var(--accent)}
+.compose .foot{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;padding-top:14px;border-top:.5px solid var(--rule)}
+.compose .foot label{flex:0 1 auto}
+.compose .foot input,.compose .foot select{height:40px;padding-top:0;padding-bottom:0}
+.compose .foot input[type=datetime-local]{width:auto}
+.compose select{-webkit-appearance:none;appearance:none;padding-right:32px;cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%237A736B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 12px center}
+.compose .foot .primary.end{margin:0 0 0 auto;height:40px;align-self:flex-end}
+.compose .when-at{display:none}
+.compose:has(select[data-when] option[value=later]:checked) .when-at{display:flex}
 .testsend{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px}
 .invite{padding:14px 18px}.invite .row{align-items:flex-end}.invite .primary{align-self:flex-end;margin:0;height:40px;padding:0 20px}
 `;
@@ -570,6 +573,13 @@ if (flash) {
   history.replaceState(null, "", u.pathname + u.search + u.hash);
 }
 document.querySelectorAll("[data-confirm]").forEach((b) => b.addEventListener("click", (e) => { if (!confirm(b.dataset.confirm)) e.preventDefault(); }));
-const later = document.querySelector('input[name="when"][value="later"]');
-document.querySelector('input[name="send_at"]')?.addEventListener("focus", () => { if (later) later.checked = true; });
+// "Zamanla" shows the time field (CSS) and renames the send button.
+const whenSelect = document.querySelector("select[data-when]");
+whenSelect?.addEventListener("change", () => {
+  const send = whenSelect.form.querySelector(".primary.end");
+  send.textContent = whenSelect.value === "later" ? "Zamanla" : "Kullanıcılara gönder";
+  send.dataset.confirm = whenSelect.value === "later"
+    ? "Bu push seçilen saatte gerçek kullanıcılara gidecek. Emin misiniz?"
+    : "Bu push seçilen kitledeki gerçek kullanıcılara gidecek. Emin misiniz?";
+});
 `;
