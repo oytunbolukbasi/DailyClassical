@@ -24,6 +24,8 @@ Kaydırma düzeltmeleri (Kitaplık/Ayarlar üst esneme b39ea16, Ayarlar alt sayf
 
 ## Sonraki sürüm (1.4)
 
+- **Besteci sayfası (25 Kasım, Oytun):** alttaki bölüm başlığı büyük harfe çevrilmiyor: "DailyClassical’da" / "In DailyClassical" (Türkçe büyük harfte "DAİLYCLASSİCAL’DA" oluyordu). `SectionLabel(…, keepsCase: true)`.
+
 - **Üst esneme kapatıldı (kodda, 19 Kasım):** Kitaplık ve Ayarlar'da üstten çekince başlığın üstünde açılan boşluk (Oytun'un ekran kaydı; iOS'un esnemesi, başlık listenin içinde olduğu için "yenileme" gibi görünüyordu). `DesignSystem/Components/TopBounce.swift` › `.topBounceDisabled()`; alttaki esneme duruyor. Simülatörde video kaydıyla doğrulandı.
 
 ## Sonraki sürüm planı (1.2.2 / 1.3)

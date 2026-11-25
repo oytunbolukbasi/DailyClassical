@@ -4,10 +4,14 @@ import SwiftUI
 struct SectionLabel: View {
     let text: Text
     var color: Color = Palette.ink2
+    /// Keeps the text's own case: a label that names the app ("DailyClassical’da") must not become
+    /// "DAİLYCLASSİCAL’DA" (Turkish upper-casing dots the i).
+    var keepsCase = false
 
-    init(_ key: LocalizedStringKey, color: Color = Palette.ink2) {
+    init(_ key: LocalizedStringKey, color: Color = Palette.ink2, keepsCase: Bool = false) {
         text = Text(key)
         self.color = color
+        self.keepsCase = keepsCase
     }
 
     init(verbatim: String, color: Color = Palette.ink2) {
@@ -18,8 +22,8 @@ struct SectionLabel: View {
     var body: some View {
         text
             .font(Typography.sectionLabel)
-            .tracking(1.2)
-            .textCase(.uppercase)
+            .tracking(keepsCase ? 0.2 : 1.2)
+            .textCase(keepsCase ? nil : .uppercase)
             .foregroundStyle(color)
             .accessibilityAddTraits(.isHeader)
     }

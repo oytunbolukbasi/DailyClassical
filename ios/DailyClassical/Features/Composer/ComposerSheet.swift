@@ -201,7 +201,7 @@ struct ComposerSheet: View {
 
     private var inDailyClassical: some View {
         VStack(alignment: .leading, spacing: 10) {
-            SectionLabel("composer.section.inApp")
+            SectionLabel("composer.section.inApp", keepsCase: true)
             ForEach(pieces) { piece in
                 Button { open(piece) } label: { row(piece) }.buttonStyle(.plain)
             }
