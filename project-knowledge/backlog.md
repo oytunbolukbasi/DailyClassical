@@ -22,7 +22,7 @@ Son güncelleme: 18 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 
 Kaydırma düzeltmeleri (Kitaplık/Ayarlar üst esneme b39ea16, Ayarlar alt sayfa dönüş sıçraması 57c6187), günlük bildirimde tablonun kaybolması (planlar sırayla, her planda yeni kimlik; 0993b20) ve 7'den fazla bölüm için kapsül + bölüm listesi sayfası (64ce8d9). Build 10 ve 11 kullanılmadı. **Sonuç:** Mozart Requiem (14 bölüm) kullanıcıların çoğu 1.3.1'e geçince takvime girebilir (App Store Connect › Analytics'te sürüm dağılımına bak; eski sürümde 14 bölüm seçiciye sığmaz).
 
-## 1.4 (13): incelemeye hazır (25 Kasım 2026)
+## 1.4 (13): incelemede (25 Kasım 2026, Oytun gönderdi)
 
 - TestFlight'ta push ve in-app mesaj Oytun'un cihazında denendi, sorunsuz.
 - App Privacy (25 Kasım, yayında): User ID'ye "Developer's Advertising or Marketing" eklendi; Device ID ve Product Interaction kimliğe bağlı. Takip yok. Gizlilik metni sitede OneSignal'la güncel.
