@@ -22,7 +22,14 @@ Son güncelleme: 18 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 
 Kaydırma düzeltmeleri (Kitaplık/Ayarlar üst esneme b39ea16, Ayarlar alt sayfa dönüş sıçraması 57c6187), günlük bildirimde tablonun kaybolması (planlar sırayla, her planda yeni kimlik; 0993b20) ve 7'den fazla bölüm için kapsül + bölüm listesi sayfası (64ce8d9). Build 10 ve 11 kullanılmadı. **Sonuç:** Mozart Requiem (14 bölüm) kullanıcıların çoğu 1.3.1'e geçince takvime girebilir (App Store Connect › Analytics'te sürüm dağılımına bak; eski sürümde 14 bölüm seçiciye sığmaz).
 
-## Sonraki sürüm (1.4)
+## 1.4 (13): incelemeye hazır (25 Kasım 2026)
+
+- TestFlight'ta push ve in-app mesaj Oytun'un cihazında denendi, sorunsuz.
+- App Privacy (25 Kasım, yayında): User ID'ye "Developer's Advertising or Marketing" eklendi; Device ID ve Product Interaction kimliğe bağlı. Takip yok. Gizlilik metni sitede OneSignal'la güncel.
+- Sürüm sayfası: build 13; Yenilikler (TR) "Ara sıra DailyClassical'dan yeni eserler ve Premium hakkında haberler: bildirim ya da uygulama içinde kısa bir mesaj olarak. Ayrıca besteci sayfasında küçük bir düzeltme." / What's New (EN) "Now and then, news from DailyClassical about new pieces and Premium, as a notification or a short message in the app. Plus a small fix on the composer page." İnceleme notunun ilk paragrafı OneSignal'ı ve iznin yalnız hatırlatma akışında istendiğini anlatıyor; demo hesabı ve video bağlantısı aynı.
+- Gönderim Oytun'da (Add for Review). Onaydan sonra: OneSignal'da ertesi gün Premium mesajı (Journey) ve Black Friday kurgusu.
+
+## 1.4 notları
 
 - **OneSignal (25 Kasım, Oytun'un kararı):** kampanya planlamak ve uygulama içi iletişim için (push + in-app mesaj). Black Friday'de ödeme ekranında rozet gösteremediğimiz için fiyat indirimi yapılmadı; OneSignal'ın in-app mesajları bu tür duyuruları güncelleme gerekmeden gösterebilecek.
   - **Kod (başladı):** SDK (OneSignal-XCFramework), `Core/Services/PushMessaging.swift`; `ONESIGNAL_APP_ID` boşsa tamamen kapalı. Kullanıcı hesabı varsa `login(userID)`; etiketler: `premium`, `plan`, `reminder`, `test` (TestFlight/Debug); dil uygulamanın dili. İzin istemi OneSignal'dan değil, mevcut hatırlatma akışından (çift istem yok). Görselli push için Notification Service Extension.
