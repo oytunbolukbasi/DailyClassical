@@ -1,6 +1,6 @@
 # Gizlilik Politikası
 
-Son güncelleme: 13 Kasım 2026
+Son güncelleme: 25 Kasım 2026
 
 DailyClassical (“biz”), her gün bir klasik eseri bir dinleme rehberiyle sunan bir uygulamadır. Bu politika, uygulamanın ve sunucumuzun hangi bilgileri neden işlediğini ve sizin hangi seçeneklere sahip olduğunuzu açıklar.
 
@@ -40,7 +40,9 @@ E-posta adresinizi doğrulamak ya da şifrenizi sıfırlamak için size kısa bi
 
 **Satın almalar.** Premium, Apple’ın App Store’u üzerinden satın alınır. Ödemeyi Apple işler; biz hiçbir ödeme ya da kart bilgisi almayız. Etkin bir satın almanız olup olmadığını kontrol etmek için RevenueCat’i kullanırız: RevenueCat, satın almalarınızın App Store makbuzunu ve uygulama kurulumuna ait bir tanımlayıcıyı (giriş yaptıysanız DailyClassical hesap kimliğinizi) alır; böylece Premium doğrulanabilir ve geri yüklenebilir.
 
-**Günlük hatırlatıcı.** Hatırlatıcı, cihazınızda planlanan yerel bir bildirimdir. Bildirim sunucusu kullanmayız.
+**Günlük hatırlatıcı.** Hatırlatıcı, cihazınızda planlanan yerel bir bildirimdir.
+
+**Bildirimler ve mesajlar.** Ara sıra bir anlık bildirim gönderir (örneğin yeni eserler ya da Premium hakkında) ya da uygulamanın içinde kısa bir mesaj gösteririz. İkisi de kendi sunucumuzdan gelir; başka bir şirket işin içinde değildir. Bildirimlere izin verdiyseniz uygulama, Apple’ın cihazınıza verdiği bildirim anahtarını; uygulamanın rastgele kurulum tanımlayıcısı, uygulama diliniz, Premium olup olmadığınız ve uygulama sürümüyle birlikte, giriş yaptıysanız da DailyClassical hesap kimliğinizle birlikte sunucumuza gönderir; böylece size kendi dilinizde ve her cihazınızda ulaşabiliriz. Uygulama içi mesajlar için uygulama sunucumuza aynı tanımlayıcı, dil, Premium durumu ve sürümle sorar. Bir bildirimi açan ya da bir mesaja dokunan kişi sayısını sayarız, kim olduğunu değil. Bildirimleri istediğiniz zaman iOS Ayarlar’dan kapatabilirsiniz; Apple anahtarın artık geçersiz olduğunu bildirir ve onu sileriz.
 
 **Ana ekran widget’ı.** Widget günün eserini gösterir. Dil ayarınızı cihazınızdaki uygulamadan okur ve günün eserini, uygulama gibi, sunucumuzdan indirir.
 
@@ -52,7 +54,7 @@ E-posta adresinizi doğrulamak ya da şifrenizi sıfırlamak için size kısa bi
 
 ## Bilgilerinizi neden kullanıyoruz
 
-Hesap bilgilerinizi istediğiniz hizmeti sunmak için kullanırız: girişinizi yapmak, favorilerinizi cihazlar arasında korumak ve Premium’a erişiminizi sağlamak. Anonim kullanım sayılarını hangi eserlerin okunduğunu anlamak ve kataloğu planlamak için, çökme ve performans raporlarını hataları düzeltmek için; teknik istek verilerini ve kötüye kullanım sayaçlarını ise hizmeti erişilebilir ve güvenli tutmaktaki meşru menfaatimiz nedeniyle kullanırız. Kanunun bilgi saklamamızı ya da paylaşmamızı gerektirdiği durumlarda bunu yalnızca o ölçüde yaparız.
+Hesap bilgilerinizi istediğiniz hizmeti sunmak için kullanırız: girişinizi yapmak, favorilerinizi cihazlar arasında korumak ve Premium’a erişiminizi sağlamak. Bildirim anahtarını ve etiketlerini yalnızca kendi bildirim ve mesajlarımızı göndermek için kullanırız. Anonim kullanım sayılarını hangi eserlerin okunduğunu anlamak ve kataloğu planlamak için, çökme ve performans raporlarını hataları düzeltmek için; teknik istek verilerini ve kötüye kullanım sayaçlarını ise hizmeti erişilebilir ve güvenli tutmaktaki meşru menfaatimiz nedeniyle kullanırız. Kanunun bilgi saklamamızı ya da paylaşmamızı gerektirdiği durumlarda bunu yalnızca o ölçüde yaparız.
 
 ## Hizmet sağlayıcılar
 
@@ -71,7 +73,7 @@ Yalnızca hesabınız için gereken e-postaları göndeririz: e-posta doğrulama
 
 ## Bilgileri ne kadar süre saklıyoruz
 
-Hesap bilgilerinizi hesabınız olduğu sürece saklarız. Hesabınızı istediğiniz zaman uygulamadan silebilirsiniz (Ayarlar › Hesap › Hesabı sil). Bu durumda e-posta adresiniz, şifre özetiniz ve favorileriniz veritabanımızdan hemen silinir. Kopyalar kısa bir süre şifreli veritabanı yedeklerinde kalabilir; ardından üzerine yazılır.
+Hesap bilgilerinizi hesabınız olduğu sürece saklarız. Hesabınızı istediğiniz zaman uygulamadan silebilirsiniz (Ayarlar › Hesap › Hesabı sil). Bu durumda e-posta adresiniz, şifre özetiniz ve favorileriniz veritabanımızdan hemen silinir; cihazlarınızın bildirim anahtarları da artık bir hesaba bağlı olmaz. Bildirim anahtarları, Apple geçersiz olduklarını bildirdiği anda (örneğin bildirimleri kapattığınızda ya da uygulamayı sildiğinizde) silinir. Kopyalar kısa bir süre şifreli veritabanı yedeklerinde kalabilir; ardından üzerine yazılır.
 
 ## Haklarınız
 

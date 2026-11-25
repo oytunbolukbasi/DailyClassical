@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Last updated: 13 November 2026
+Last updated: 25 November 2026
 
 DailyClassical (“we”, “us”) is an app that offers one classical work a day with a listening guide. This policy explains what information the app and our server handle, why, and the choices you have.
 
@@ -40,7 +40,9 @@ To confirm your email address or reset your password we send you a short code or
 
 **Purchases.** Premium is bought through Apple’s App Store. Apple processes the payment; we receive no payment or card details. We use RevenueCat to check whether you have an active purchase: it receives the App Store receipt for your purchases and an identifier for the app install (your DailyClassical account id when you are signed in), so Premium can be confirmed and restored.
 
-**Daily reminder.** The reminder is a local notification scheduled on your device. We do not use a push notification server.
+**Daily reminder.** The reminder is a local notification scheduled on your device.
+
+**Notifications and messages.** Now and then we send a push notification (for example about new pieces or Premium) or show a short message inside the app. Both come from our own server; no other company is involved. If you allowed notifications, the app sends our server the push token Apple gives your device, together with the app’s random install identifier, your app language, whether you have Premium and the app version, and, if you are signed in, your DailyClassical account id, so we can reach you in your language on each of your devices. To show in-app messages the app asks our server with the same identifier, language, Premium state and version. We count how many people open a notification or tap a message, not who. You can turn notifications off at any time in iOS Settings; Apple then tells us the token is no longer valid and we delete it.
 
 **Home Screen widget.** The widget shows the day’s piece. It reads your language setting from the app on your device and downloads the day’s piece from our server, like the app does.
 
@@ -52,7 +54,7 @@ To confirm your email address or reset your password we send you a short code or
 
 ## Why we use your information
 
-We use account information to provide the service you asked for: signing you in, keeping your favourites across devices and giving you access to Premium. We use anonymous usage counts to understand which pieces people read and to plan the catalogue, crash and performance reports to fix faults, and technical request data and abuse counters because we have a legitimate interest in keeping the service available and secure. Where the law requires us to keep or disclose information, we do so only to that extent.
+We use account information to provide the service you asked for: signing you in, keeping your favourites across devices and giving you access to Premium. We use the push token and its labels only to send our own notifications and messages. We use anonymous usage counts to understand which pieces people read and to plan the catalogue, crash and performance reports to fix faults, and technical request data and abuse counters because we have a legitimate interest in keeping the service available and secure. Where the law requires us to keep or disclose information, we do so only to that extent.
 
 ## Service providers
 
@@ -71,7 +73,7 @@ We only send emails you need for your account: email confirmation codes, passwor
 
 ## How long we keep information
 
-We keep your account information for as long as you have an account. You can delete your account at any time in the app (Settings › Account › Delete account). Your email address, password hash and favourites are then deleted from our database immediately. Copies may remain in encrypted database backups for a short time, after which they are overwritten.
+We keep your account information for as long as you have an account. You can delete your account at any time in the app (Settings › Account › Delete account). Your email address, password hash and favourites are then deleted from our database immediately, and your devices’ push tokens are no longer linked to an account. Push tokens are deleted as soon as Apple reports them invalid (for example after you turn notifications off or delete the app). Copies may remain in encrypted database backups for a short time, after which they are overwritten.
 
 ## Your rights
 
