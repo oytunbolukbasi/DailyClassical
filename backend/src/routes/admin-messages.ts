@@ -70,7 +70,7 @@ async function requireAdmin(c: Context): Promise<string | null> {
 adminMessages.get("/admin/messages", async (c) => {
   const email = await requireAdmin(c);
   if (!email) return c.redirect("/admin", 303);
-  return c.html(page("Mesajlar", await messagesView(email, c.req.query("ok"), c.req.query("err"))));
+  return c.html(page("Engage", await messagesView(email, c.req.query("ok"), c.req.query("err"))));
 });
 
 type PushForm = { titleTr: string | null; bodyTr: string | null; titleEn: string | null; bodyEn: string | null; link: string | null; image: string | null; audience: Audience };
@@ -105,13 +105,17 @@ adminMessages.post("/admin/messages/push", async (c) => {
   return c.redirect(`/admin/messages?ok=${encodeURIComponent(ok)}#history`, 303);
 });
 
-/** "Test cihazlarına şimdi gönder": right away to the verified test devices, no scheduling. */
+/**
+ * "Test cihazlarına şimdi gönder": right away to the verified test devices, no scheduling. Called
+ * from the page with fetch, so the form keeps what was typed; answers { ok } or { error }. The
+ * send is kept (test_only, for the open count) but not listed with the campaigns.
+ */
 adminMessages.post("/admin/messages/push/test", async (c) => {
   const email = await requireAdmin(c);
-  if (!email) return c.redirect("/admin", 303);
+  if (!email) return c.json({ error: "Oturum kapanmış; sayfayı yenileyip yeniden girin." }, 401);
   const p = readPush(await c.req.parseBody());
-  if (typeof p === "string") return c.redirect(`/admin/messages?err=${encodeURIComponent(p)}#push`, 303);
-  if (!apnsConfigured()) return c.redirect(`/admin/messages?err=${encodeURIComponent("APNs anahtarı sunucuda tanımlı değil; push gönderilemez.")}#push`, 303);
+  if (typeof p === "string") return c.json({ error: p }, 400);
+  if (!apnsConfigured()) return c.json({ error: "APNs anahtarı sunucuda tanımlı değil; push gönderilemez." }, 400);
   const [row] = await sql<{ id: string }[]>`
     insert into push_campaigns (created_by, title_en, body_en, title_tr, body_tr, link, image_url, audience, test_only, send_at, status)
     values (${email}, ${p.titleEn}, ${p.bodyEn}, ${p.titleTr}, ${p.bodyTr}, ${p.link}, ${p.image}, ${p.audience}, true, now(), 'sending')
@@ -119,10 +123,9 @@ adminMessages.post("/admin/messages/push/test", async (c) => {
   const r = await sendCampaign({ id: row!.id, title_en: p.titleEn, body_en: p.bodyEn, title_tr: p.titleTr, body_tr: p.bodyTr,
     link: p.link, image_url: p.image, audience: p.audience, test_only: true });
   await sql`update push_campaigns set status = 'sent', sent_at = now(), sent_count = ${r.sent}, failed_count = ${r.failed} where id = ${row!.id}`;
-  const msg = r.sent + r.failed === 0
-    ? "Gönderilecek test cihazı yok: davet edilen cihaz doğrulanmış ve bildirime izin vermiş olmalı."
-    : `${r.sent} test cihazına gönderildi${r.failed ? `, ${r.failed} hata` : ""}.`;
-  return c.redirect(`/admin/messages?${r.sent ? "ok" : "err"}=${encodeURIComponent(msg)}#push`, 303);
+  if (r.sent + r.failed === 0) return c.json({ error: "Gönderilecek test cihazı yok: davet edilen cihaz doğrulanmış ve bildirime izin vermiş olmalı." }, 400);
+  if (r.sent === 0) return c.json({ error: `${r.failed} test cihazına gönderilemedi.` }, 502);
+  return c.json({ ok: `${r.sent} test cihazına gönderildi${r.failed ? `, ${r.failed} hata` : ""}.` });
 });
 
 // ---- Test devices ----
@@ -186,10 +189,12 @@ adminMessages.post("/admin/messages/push/:id/cancel", async (c) => {
   return c.redirect(`/admin/messages?ok=${encodeURIComponent("Zamanlanmış push iptal edildi.")}#history`, 303);
 });
 
-adminMessages.post("/admin/messages/inapp", async (c) => {
-  const email = await requireAdmin(c);
-  if (!email) return c.redirect("/admin", 303);
-  const f = await c.req.parseBody();
+type InAppForm = {
+  titleTr: string | null; bodyTr: string | null; buttonTr: string | null; titleEn: string | null; bodyEn: string | null; buttonEn: string | null;
+  link: string | null; image: string | null; audience: Audience; minVersion: string | null; startsAt: Date; endsAt: Date | null;
+};
+
+function readInApp(f: Record<string, unknown>): InAppForm | string {
   const t = {
     titleTr: text(f.title_tr, 80), bodyTr: text(f.body_tr, 400), buttonTr: text(f.button_tr, 30),
     titleEn: text(f.title_en, 80), bodyEn: text(f.body_en, 400), buttonEn: text(f.button_en, 30),
@@ -200,19 +205,45 @@ adminMessages.post("/admin/messages/inapp", async (c) => {
   const endsAt = fromLocal(String(f.ends_at ?? ""));
   const minVersion = text(f.min_version, 20);
   const tr = !!(t.titleTr && t.bodyTr), en = !!(t.titleEn && t.bodyEn);
-  const err = !tr && !en ? "Bir dilde başlık ve metin gerekli."
+  return !tr && !en ? "Bir dilde başlık ve metin gerekli."
     : link === undefined ? "Link dailyclassical:// ya da https:// ile başlamalı."
     : image === undefined ? "Görsel adresi https:// ile başlamalı."
     : minVersion && !/^\d+(\.\d+){0,2}$/.test(minVersion) ? "En düşük sürüm 1.4 gibi yazılmalı."
-    : endsAt && endsAt <= startsAt ? "Bitiş başlangıçtan sonra olmalı." : null;
-  if (err) return c.redirect(`/admin/messages?err=${encodeURIComponent(err)}#inapp`, 303);
+    : endsAt && endsAt <= startsAt ? "Bitiş başlangıçtan sonra olmalı."
+    : { ...t, link, image, audience: audienceOf(f.audience), minVersion, startsAt, endsAt };
+}
+
+async function saveInApp(email: string, m: InAppForm, test: boolean) {
   await sql`
     insert into in_app_messages (created_by, title_en, body_en, button_en, title_tr, body_tr, button_tr, link, image_url,
                                  audience, test_only, min_app_version, starts_at, ends_at)
-    values (${email}, ${t.titleEn}, ${t.bodyEn}, ${t.buttonEn}, ${t.titleTr}, ${t.bodyTr}, ${t.buttonTr}, ${link ?? null}, ${image ?? null},
-            ${audienceOf(f.audience)}, ${f.test_only === "1"}, ${minVersion}, ${startsAt.toISOString()}::timestamptz,
-            ${endsAt ? endsAt.toISOString() : null}::timestamptz)`;
+    values (${email}, ${m.titleEn}, ${m.bodyEn}, ${m.buttonEn}, ${m.titleTr}, ${m.bodyTr}, ${m.buttonTr}, ${m.link}, ${m.image},
+            ${m.audience}, ${test}, ${m.minVersion}, ${m.startsAt.toISOString()}::timestamptz,
+            ${m.endsAt ? m.endsAt.toISOString() : null}::timestamptz)`;
+}
+
+adminMessages.post("/admin/messages/inapp", async (c) => {
+  const email = await requireAdmin(c);
+  if (!email) return c.redirect("/admin", 303);
+  const m = readInApp(await c.req.parseBody());
+  if (typeof m === "string") return c.redirect(`/admin/messages?err=${encodeURIComponent(m)}#inapp`, 303);
+  await saveInApp(email, m, false);
   return c.redirect(`/admin/messages?ok=${encodeURIComponent("Uygulama içi mesaj kaydedildi.")}#inapp-list`, 303);
+});
+
+/**
+ * "Test cihazlarında göster": the card goes live now for the verified test devices only, for a
+ * day; the previous test card is switched off. The app shows it the next time it comes forward.
+ * Called with fetch like the push test; not listed with the messages.
+ */
+adminMessages.post("/admin/messages/inapp/test", async (c) => {
+  const email = await requireAdmin(c);
+  if (!email) return c.json({ error: "Oturum kapanmış; sayfayı yenileyip yeniden girin." }, 401);
+  const m = readInApp(await c.req.parseBody());
+  if (typeof m === "string") return c.json({ error: m }, 400);
+  await sql`update in_app_messages set active = false where test_only and active`;
+  await saveInApp(email, { ...m, minVersion: null, startsAt: new Date(Date.now() - 60_000), endsAt: new Date(Date.now() + 86_400_000) }, true);
+  return c.json({ ok: "Test kartı hazır: uygulamayı arka plana alıp yeniden açın." });
 });
 
 adminMessages.post("/admin/messages/inapp/:id/toggle", async (c) => {
@@ -237,11 +268,11 @@ async function messagesView(email: string, ok?: string, err?: string) {
   const campaigns = await sql<Campaign[]>`
     select id, created_at::text, created_by, title_en, body_en, title_tr, body_tr, link, image_url, audience, test_only,
            send_at::text, status, sent_count, failed_count, opened_count
-    from push_campaigns order by send_at desc limit 50`;
+    from push_campaigns where not test_only order by send_at desc limit 50`;
   const messages = await sql<Message[]>`
     select id, created_at::text, title_en, body_en, button_en, title_tr, body_tr, button_tr, link, image_url, audience, test_only,
            min_app_version, starts_at::text, ends_at::text, active, shown_count, tapped_count
-    from in_app_messages order by created_at desc limit 50`;
+    from in_app_messages where not test_only order by created_at desc limit 50`;
   const testDevices = await sql<{ id: string; email: string; invited_at: string; expires_at: string; verified_at: string | null; device: string | null; app_version: string | null; has_token: boolean }[]>`
     select t.id, t.email, t.invited_at::text, t.expires_at::text, t.verified_at::text, t.device, t.app_version,
       exists (select 1 from push_devices d where d.token = t.push_token or (t.install_id is not null and d.install_id = t.install_id)) as has_token
@@ -306,7 +337,7 @@ async function messagesView(email: string, ok?: string, err?: string) {
             </div>
             <p class="small m">Bir dili boş bırakırsanız o dildeki cihazlara gönderilmez.</p>
             <div class="testsend">
-              <button class="secondary" formaction="/admin/messages/push/test">Test cihazlarına şimdi gönder</button>
+              <button type="button" class="secondary" data-test="/admin/messages/push/test">Test cihazlarına şimdi gönder</button>
               <span class="m small">${fmt.format(devices!.test)} cihaz</span>
             </div>
           </aside>
@@ -391,6 +422,10 @@ async function messagesView(email: string, ok?: string, err?: string) {
               <div class="iamclose">Kapat</div>
             </div>
             <p class="small m">Uygulamada tasarım sistemimizle gösterilir; bu yaklaşık bir önizleme.</p>
+            <div class="testsend">
+              <button type="button" class="secondary" data-test="/admin/messages/inapp/test">Test cihazlarında göster</button>
+              <span class="m small">${fmt.format(devices!.test)} cihaz</span>
+            </div>
           </aside>
         </div>
         <div class="row">
@@ -400,14 +435,13 @@ async function messagesView(email: string, ok?: string, err?: string) {
         <div class="row">
           <label>Kime <select name="audience">${(Object.keys(AUDIENCES) as Audience[]).map((a) => html`<option value="${a}">${AUDIENCES[a]}</option>`)}</select></label>
           <label>En düşük sürüm <input name="min_version" placeholder="1.4" size="6"></label>
-          <label class="check"><input type="checkbox" name="test_only" value="1" checked> Yalnız test cihazlarında</label>
         </div>
         <div class="row">
           <label>Başlangıç <input type="datetime-local" name="starts_at" value="${toLocal(new Date())}"></label>
           <label>Bitiş <span class="m">(isteğe bağlı)</span><input type="datetime-local" name="ends_at"></label>
           <span class="m small">İstanbul saati</span>
         </div>
-        <button class="primary">Mesajı kaydet</button>
+        <button class="primary" data-confirm="Bu kart seçilen kitledeki gerçek kullanıcılara gösterilecek. Emin misiniz?">Kullanıcılar için yayınla</button>
       </form>
     </section>
 
@@ -499,6 +533,32 @@ for (const [prefix, form] of [["p", document.querySelector('form[action$="/push"
   fields.forEach((el) => el.addEventListener("input", update));
   update();
 }
+/** A toast like the one after a form post. */
+function toast(message, bad) {
+  document.querySelector(".flash")?.remove();
+  const el = document.createElement("div");
+  el.className = "flash " + (bad ? "bad" : "ok");
+  el.setAttribute("role", "status");
+  el.textContent = message;
+  const x = document.createElement("button");
+  x.type = "button"; x.className = "x"; x.setAttribute("aria-label", "Kapat"); x.textContent = "×";
+  el.appendChild(x);
+  document.body.appendChild(el);
+  const hide = () => { el.classList.add("out"); setTimeout(() => el.remove(), 300); };
+  x.addEventListener("click", hide);
+  if (!bad) setTimeout(hide, 5000);
+}
+// Test sends post the form with fetch: the page and what was typed stay as they are.
+document.querySelectorAll("[data-test]").forEach((b) => b.addEventListener("click", async () => {
+  const label = b.textContent;
+  b.disabled = true; b.textContent = "Gönderiliyor…";
+  try {
+    const r = await fetch(b.dataset.test, { method: "POST", body: new FormData(b.form), credentials: "same-origin" });
+    const j = await r.json().catch(() => ({ error: "Beklenmeyen bir hata oluştu." }));
+    toast(j.ok ?? j.error, !j.ok);
+  } catch { toast("Sunucuya ulaşılamadı.", true); }
+  b.disabled = false; b.textContent = label;
+}));
 // The result of the last action: a toast that goes after a few seconds (errors stay until closed);
 // the ok/err query is dropped so a reload doesn't show it again.
 const flash = document.querySelector(".flash");

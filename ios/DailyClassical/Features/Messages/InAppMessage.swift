@@ -3,7 +3,7 @@ import SwiftUI
 /// In-app messages from /admin/messages (backend routes/push.ts › GET /v1/messages): a card over
 /// the app with an optional image, a title, a text and an optional button that opens a link.
 /// Each message is shown once on this device. Checked when the app comes forward (at most every
-/// minute), shown on Today when nothing else is on screen.
+/// 15 seconds), shown when nothing else is on screen.
 struct InAppMessage: Decodable, Identifiable, Equatable {
     let id: String
     let title: String
@@ -19,7 +19,7 @@ enum InAppMessages {
 
     static func next(language: String, premium: Bool) async -> InAppMessage? {
         let defaults = UserDefaults.standard
-        if let last = defaults.object(forKey: checkedKey) as? Date, Date.now.timeIntervalSince(last) < 60 { return nil }
+        if let last = defaults.object(forKey: checkedKey) as? Date, Date.now.timeIntervalSince(last) < 15 { return nil }
         defaults.set(Date.now, forKey: checkedKey)
         var url = APIClient.shared.baseURL.appending(path: "v1/messages")
         url.append(queryItems: [

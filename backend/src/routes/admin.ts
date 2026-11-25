@@ -665,7 +665,7 @@ export function headerView(email: string, current: "panel" | "messages") {
     html`<a href="${href}" class="${key === current ? "on" : ""}" ${key === current ? raw('aria-current="page"') : ""}>${label}</a>`;
   return html`<header class="top">
       <a class="wordmark" href="/admin" lang="en"><span class="icon" aria-hidden="true">d</span><span>DailyClassical</span></a>
-      <nav class="tabs">${tab("/admin", "panel", "Panel")}${tab("/admin/messages", "messages", "Mesajlar")}</nav>
+      <nav class="tabs">${tab("/admin", "panel", "Panel")}${tab("/admin/messages", "messages", "Engage")}</nav>
       <form method="post" action="/admin/logout">
         <button class="out" title="Çıkış · ${email}" aria-label="Çıkış (${email})">${raw(DOOR_ICON)}</button>
       </form>

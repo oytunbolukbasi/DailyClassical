@@ -1,3 +1,4 @@
+import ImageIO
 import UniformTypeIdentifiers
 import UserNotifications
 
@@ -36,17 +37,39 @@ final class NotificationService: UNNotificationServiceExtension, @unchecked Send
     }
 
     /// The downloaded file under a name with the right extension, which the attachment needs.
+    /// Attachments take JPEG, PNG and GIF; anything else iOS can decode (WebP, HEIC…) is
+    /// re-encoded as JPEG first.
     private static func attachment(from file: URL, response: URLResponse?, url: URL) -> UNNotificationAttachment? {
         let type = response?.mimeType.flatMap { UTType(mimeType: $0) } ?? UTType(filenameExtension: url.pathExtension)
-        guard let type, type.conforms(to: .image), let ext = type.preferredFilenameExtension else { return nil }
+        guard let type, type.conforms(to: .image) else { return nil }
         let dir = FileManager.default.temporaryDirectory.appending(path: UUID().uuidString, directoryHint: .isDirectory)
-        let dest = dir.appending(path: "image.\(ext)")
         do {
             try FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
-            try FileManager.default.moveItem(at: file, to: dest)
+            let dest: URL
+            if [UTType.jpeg, .png, .gif].contains(where: { type.conforms(to: $0) }), let ext = type.preferredFilenameExtension {
+                dest = dir.appending(path: "image.\(ext)")
+                try FileManager.default.moveItem(at: file, to: dest)
+            } else {
+                dest = dir.appending(path: "image.jpg")
+                guard jpeg(from: file, to: dest) else { return nil }
+            }
             return try UNNotificationAttachment(identifier: "image", url: dest)
         } catch {
             return nil
         }
+    }
+
+    /// Decodes any image ImageIO reads and writes it as JPEG, at most 2000 px on the long side.
+    private static func jpeg(from source: URL, to dest: URL) -> Bool {
+        guard let src = CGImageSourceCreateWithURL(source as CFURL, nil) else { return false }
+        let options: [CFString: Any] = [
+            kCGImageSourceCreateThumbnailFromImageAlways: true,
+            kCGImageSourceCreateThumbnailWithTransform: true,
+            kCGImageSourceThumbnailMaxPixelSize: 2000,
+        ]
+        guard let image = CGImageSourceCreateThumbnailAtIndex(src, 0, options as CFDictionary),
+              let out = CGImageDestinationCreateWithURL(dest as CFURL, UTType.jpeg.identifier as CFString, 1, nil) else { return false }
+        CGImageDestinationAddImage(out, image, [kCGImageDestinationLossyCompressionQuality: 0.85] as CFDictionary)
+        return CGImageDestinationFinalize(out)
     }
 }
