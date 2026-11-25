@@ -502,3 +502,24 @@ export const inAppMessages = pgTable("in_app_messages", {
   shownCount: integer("shown_count").notNull().default(0),
   tappedCount: integer("tapped_count").notNull().default(0),
 });
+
+/**
+ * Test devices for pushes and in-app messages: an admin invites an email address
+ * (/admin/messages); the link, opened on the iPhone, hands `invite` to the app
+ * (dailyclassical://test-device/<invite>), which sends it back with its install id and push
+ * token (POST /v1/push/test-device). Only the invite's hash is stored. "Test cihazlarına gönder"
+ * and test-only in-app messages reach the verified ones.
+ */
+export const pushTestDevices = pgTable("push_test_devices", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  email: text("email").notNull(),
+  inviteHash: text("invite_hash").notNull().unique(),
+  invitedBy: text("invited_by").notNull(),
+  invitedAt: timestamp("invited_at", { withTimezone: true }).notNull().defaultNow(),
+  expiresAt: timestamp("expires_at", { withTimezone: true }).notNull(),
+  verifiedAt: timestamp("verified_at", { withTimezone: true }),
+  installId: uuid("install_id"),
+  pushToken: text("push_token"),
+  device: text("device"),
+  appVersion: text("app_version"),
+});

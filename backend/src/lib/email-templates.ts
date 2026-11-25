@@ -262,3 +262,25 @@ export function adminCodeEmail(code: string, minutes = 10): EmailContent {
     text: `${heading}\n\n${body}\n\n${code}\n\n${caption}\n\n${ignore}`,
   };
 }
+
+/**
+ * Invitation to make an iPhone a test device for pushes and in-app messages (/admin/messages).
+ * Turkish only, like the admin page. The link opens a page that hands the invite to the app.
+ */
+export function testDeviceInviteEmail(link: string, days: number): EmailContent {
+  const heading = "Test cihazı daveti";
+  const body = "Bu iPhone'u DailyClassical bildirimleri ve uygulama içi mesajları için test cihazı yapmak üzere bağlantıyı iPhone'unuzda açın; DailyClassical açılıp cihazı doğrular. Bildirim izni sorulursa izin verin.";
+  const caption = `Bağlantı ${days} gün geçerli ve bir cihaz için kullanılır.`;
+  const ignore = "Bu daveti beklemiyorsanız e-postayı yok sayın.";
+  return {
+    subject: "DailyClassical · test cihazı daveti",
+    html: layout("tr", {
+      heading,
+      preheader: body,
+      paragraphs: [escapeHtml(body), escapeHtml(caption)],
+      action: { label: "iPhone'da aç", url: link },
+      footnote: escapeHtml(ignore),
+    }),
+    text: `${heading}\n\n${body}\n\n${link}\n\n${caption}\n\n${ignore}`,
+  };
+}

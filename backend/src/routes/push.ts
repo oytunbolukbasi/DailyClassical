@@ -2,6 +2,7 @@ import { Hono } from "hono";
 import { z } from "zod";
 import { sql } from "../db/client.js";
 import { optionalUserId } from "../lib/auth.js";
+import { hashResetToken } from "../lib/reset-token.js";
 import { enforceRateLimit } from "../lib/rate-limit.js";
 
 /**
@@ -13,6 +14,7 @@ import { enforceRateLimit } from "../lib/rate-limit.js";
  * POST /v1/push/opened    a push was tapped (counts per campaign).
  * GET  /v1/messages       in-app messages to show now, in the reader's language.
  * POST /v1/messages/:id/event   shown | tapped (counts per message).
+ * POST /v1/push/test-device       verifies this device from an emailed invite (see below).
  */
 export const push = new Hono();
 
@@ -75,7 +77,8 @@ const query = z.object({
   locale,
   premium: z.enum(["0", "1"]).transform((p) => p === "1"),
   appVersion: version,
-  test: z.enum(["0", "1"]).optional().transform((t) => t === "1"),
+  /** The app's install id: test-only messages reach verified test devices (push_test_devices). */
+  installId: z.uuid().optional(),
 });
 
 push.get("/messages", async (c) => {
@@ -83,11 +86,12 @@ push.get("/messages", async (c) => {
   const parsed = query.safeParse(c.req.query());
   if (!parsed.success) return c.json({ error: "invalid_request" }, 400);
   const q = parsed.data;
+  const isTest = q.installId ? await isTestInstall(q.installId) : false;
   const rows = await sql<MessageRow[]>`
     select id, title_en, body_en, button_en, title_tr, body_tr, button_tr, link, image_url, min_app_version, ends_at
     from in_app_messages
     where active and starts_at <= now() and (ends_at is null or ends_at > now())
-      and (not test_only or ${q.test})
+      and (not test_only or ${isTest})
       and (audience = 'all' or (audience = 'premium') = ${q.premium})
     order by starts_at desc
     limit 5`;
@@ -106,6 +110,41 @@ push.get("/messages", async (c) => {
     .filter((m) => m.title && m.body);
   c.header("Cache-Control", "no-store");
   return c.json({ messages });
+});
+
+async function isTestInstall(installId: string): Promise<boolean> {
+  const [row] = await sql`select 1 from push_test_devices where verified_at is not null and install_id = ${installId} limit 1`;
+  return !!row;
+}
+
+/**
+ * POST /v1/push/test-device: the app opened an invite link (dailyclassical://test-device/<invite>).
+ * Marks this install (and its push token, if it has one) as a test device. An invite works for
+ * one device; the same device may open it again.
+ */
+const verify = z.object({
+  invite: z.string().min(20).max(100),
+  installId: z.uuid(),
+  pushToken: z.string().regex(/^[0-9a-f]{64,200}$/i).transform((t) => t.toLowerCase()).optional(),
+  device: z.string().max(40).optional(),
+  appVersion: version.optional(),
+});
+
+push.post("/push/test-device", async (c) => {
+  await enforceRateLimit(c, "push");
+  const parsed = verify.safeParse(await c.req.json().catch(() => null));
+  if (!parsed.success) return c.json({ error: "invalid_request" }, 400);
+  const v = parsed.data;
+  const [row] = await sql<{ id: string; email: string; expires_at: Date | string; verified_at: Date | string | null; install_id: string | null }[]>`
+    select id, email, expires_at, verified_at, install_id from push_test_devices where invite_hash = ${hashResetToken(v.invite)}`;
+  if (!row) return c.json({ error: "invite_not_found" }, 404);
+  if (row.verified_at && row.install_id !== v.installId) return c.json({ error: "invite_used" }, 409);
+  if (!row.verified_at && new Date(row.expires_at) < new Date()) return c.json({ error: "invite_expired" }, 410);
+  await sql`
+    update push_test_devices set verified_at = coalesce(verified_at, now()), install_id = ${v.installId},
+      push_token = coalesce(${v.pushToken ?? null}, push_token), device = ${v.device ?? null}, app_version = ${v.appVersion ?? null}
+    where id = ${row.id}`;
+  return c.json({ ok: true, email: row.email });
 });
 
 push.post("/messages/:id/event", async (c) => {

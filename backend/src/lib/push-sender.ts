@@ -18,10 +18,17 @@ const PARALLEL = 20;
 
 /** The devices a campaign goes to, in the environments we can send to. */
 export async function recipients(c: Pick<CampaignRow, "audience" | "test_only">): Promise<Device[]> {
+  // Test sends go to the verified test devices (push_test_devices), whatever their Premium state.
+  if (c.test_only) {
+    return sql<Device[]>`
+      select d.token, d.environment, d.locale from push_devices d
+      where d.environment = any(${apnsEnvironments()})
+        and exists (select 1 from push_test_devices t where t.verified_at is not null
+                    and (t.push_token = d.token or (t.install_id is not null and t.install_id = d.install_id)))`;
+  }
   return sql<Device[]>`
     select token, environment, locale from push_devices
     where environment = any(${apnsEnvironments()})
-      and (${!c.test_only} or is_test)
       and (${c.audience} = 'all' or (${c.audience} = 'premium') = is_premium)`;
 }
 
