@@ -1,6 +1,6 @@
 # Privacy Policy
 
-Last updated: 13 November 2026
+Last updated: 25 November 2026
 
 DailyClassical (“we”, “us”) is an app that offers one classical work a day with a listening guide. This policy explains what information the app and our server handle, why, and the choices you have.
 
@@ -9,7 +9,7 @@ DailyClassical (“we”, “us”) is an app that offers one classical work a d
 - You can use DailyClassical without an account. In that case we store nothing about you on our servers apart from anonymous usage counts and crash reports that are not linked to you.
 - If you create an account, we store your email address, a protected form of your password, your language and your favourites.
 - Purchases are handled by Apple. We never see your payment details.
-- There are no ads in the app and no tracking: the only third-party code is Meta’s SDK, in a limited mode that measures our own ad campaigns without the advertising identifier (see Ad measurement). We never sell your data.
+- There are no ads in the app and no tracking. Third-party code: Meta’s SDK, in a limited mode that measures our own ad campaigns without the advertising identifier (see Ad measurement), and OneSignal, which delivers our notifications and in-app messages (see Notifications and messages). We never sell your data.
 
 ## Information we handle
 
@@ -40,14 +40,16 @@ To confirm your email address or reset your password we send you a short code or
 
 **Purchases.** Premium is bought through Apple’s App Store. Apple processes the payment; we receive no payment or card details. We use RevenueCat to check whether you have an active purchase: it receives the App Store receipt for your purchases and an identifier for the app install (your DailyClassical account id when you are signed in), so Premium can be confirmed and restored.
 
-**Daily reminder.** The reminder is a local notification scheduled on your device. We do not use a push notification server.
+**Daily reminder.** The reminder is a local notification scheduled on your device.
+
+**Notifications and messages.** We use OneSignal to send occasional push notifications (for example news about new pieces or Premium) and messages shown inside the app. OneSignal receives a push token from your device (only if you allowed notifications), an identifier for the app install, your device model and iOS version, the app language and version, when you last opened the app, and a few labels we set: whether you have Premium and which plan, and whether the daily reminder is on. If you are signed in, it also receives your DailyClassical account id, so a message reaches you on each of your devices; it never receives your email address. You can turn notifications off at any time in iOS Settings. OneSignal’s handling of this information is described in its Privacy Policy (onesignal.com/privacy_policy).
 
 **Home Screen widget.** The widget shows the day’s piece. It reads your language setting from the app on your device and downloads the day’s piece from our server, like the app does.
 
 ## What we do not do
 
 - We do not show advertising in the app.
-- We do not use third-party analytics software, and we do not track you across other apps or websites. The Meta SDK runs only in its limited mode to measure our ads (see Ad measurement).
+- We do not use third-party analytics software, and we do not track you across other apps or websites. The Meta SDK runs only in its limited mode to measure our ads (see Ad measurement); OneSignal is used only to deliver our own messages.
 - We do not sell your information or share it with anyone for their marketing.
 
 ## Why we use your information
@@ -62,6 +64,7 @@ We rely on a few companies that process data on our behalf, only to run DailyCla
 - **Neon** hosts our database (United States, AWS us-east-2).
 - **Resend** delivers our emails (verification codes, password resets).
 - **RevenueCat** manages in-app purchases and subscription status (United States).
+- **OneSignal** delivers push notifications and in-app messages (United States).
 
 Because these providers are in the United States, your information may be processed outside your country. We choose providers that protect data with industry-standard security and contractual safeguards.
 

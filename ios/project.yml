@@ -11,8 +11,8 @@ settings:
     SWIFT_STRICT_CONCURRENCY: complete
     SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
     SWIFT_APPROACHABLE_CONCURRENCY: YES
-    MARKETING_VERSION: "1.3.1"
-    CURRENT_PROJECT_VERSION: "12"
+    MARKETING_VERSION: "1.4"
+    CURRENT_PROJECT_VERSION: "13"
     DEVELOPMENT_TEAM: 3NX95JSKNY
     CODE_SIGN_STYLE: Automatic
     LOCALIZATION_PREFERS_STRING_CATALOGS: YES
@@ -69,7 +69,7 @@ targets:
         # straight through StoreKit 2 (local StoreKit configuration file); see EntitlementStore.
         REVENUECAT_API_KEY: appl_oyvZmpSeMAqWXZgCzcMxRyRiQDo
         # OneSignal App ID (public; Core/Services/PushMessaging.swift). Empty = OneSignal is off.
-        ONESIGNAL_APP_ID: ""
+        ONESIGNAL_APP_ID: 3c1c3968-9b54-427d-b41a-26be24c65289
     info:
       path: DailyClassical/Info.plist
       properties:
