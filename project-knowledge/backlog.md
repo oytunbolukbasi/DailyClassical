@@ -22,12 +22,26 @@ Son güncelleme: 18 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 
 Kaydırma düzeltmeleri (Kitaplık/Ayarlar üst esneme b39ea16, Ayarlar alt sayfa dönüş sıçraması 57c6187), günlük bildirimde tablonun kaybolması (planlar sırayla, her planda yeni kimlik; 0993b20) ve 7'den fazla bölüm için kapsül + bölüm listesi sayfası (64ce8d9). Build 10 ve 11 kullanılmadı. **Sonuç:** Mozart Requiem (14 bölüm) kullanıcıların çoğu 1.3.1'e geçince takvime girebilir (App Store Connect › Analytics'te sürüm dağılımına bak; eski sürümde 14 bölüm seçiciye sığmaz).
 
-## 1.4 (13): incelemede (25 Kasım 2026, Oytun gönderdi)
+## 1.4: kendi push ve uygulama içi mesaj sistemimiz (plan, 25 Kasım 2026)
 
-- TestFlight'ta push ve in-app mesaj Oytun'un cihazında denendi, sorunsuz.
-- App Privacy (25 Kasım, yayında): User ID'ye "Developer's Advertising or Marketing" eklendi; Device ID ve Product Interaction kimliğe bağlı. Takip yok. Gizlilik metni sitede OneSignal'la güncel.
-- Sürüm sayfası: build 13; Yenilikler (TR) "Küçük düzenlemeler ve iyileştirmeler." / What's New (EN) "Small refinements and improvements." (Oytun'un isteği). İnceleme notunun ilk paragrafı OneSignal'ı ve iznin yalnız hatırlatma akışında istendiğini anlatıyor; demo hesabı ve video bağlantısı aynı.
-- Gönderim Oytun'da (Add for Review). Onaydan sonra: OneSignal'da ertesi gün Premium mesajı (Journey) ve Black Friday kurgusu.
+**Karar (Oytun, 25 Kasım):** OneSignal'ın ücretsiz katmanı push'u 1k aboneyle sınırladı. 1.4 (13) incelemeden geri çekildi, OneSignal uygulamadan çıkarıldı (2305f0a); OneSignal'lı bir sürüm yayımlanmadı. Yerine çok basit, kendi sistemimiz: amaç e-ticaret gibi sık push değil; ara sıra duyuru, kampanya, ertesi gün Premium mesajı. Sürüm numarası 1.4 kalır (build 14+).
+
+- **App Privacy (App Store Connect):** 25 Kasım'da OneSignal için güncellenen cevaplar duruyor (User ID + Developer's Advertising; Device ID ve Product Interaction kimliğe bağlı). Kendi sistemimiz de cihaz anahtarını hesap ve Premium bilgisiyle tuttuğu için büyük ölçüde geçerli; 1.4'ü göndermeden önce tekrar bakılacak. Gizlilik metni ve PrivacyInfo 13 Kasım haline döndü; 1.4'le "Bildirimler ve mesajlar" bölümü (kendi sunucumuz) eklenecek.
+- **APNs:** "DailyClassical Push OneSignal" anahtarı (yalnız Production) bizim sunucuda da kullanılır; .p8 Oytun'da. Railway'e Oytun girer: `APNS_KEY_ID`, `APNS_PRIVATE_KEY` (.p8 içeriği), takım `APPLE_TEAM_ID`'den. Production-only olduğu için push yalnız TestFlight/App Store build'lerine gider; Xcode build'lerinin sandbox anahtarları kaydedilir ama atlanır. OneSignal'daki uygulama Oytun'ca silinebilir.
+
+**Backend [Claude, başladı]**
+- Tablolar: `push_devices` (APNs anahtarı, ortam, kurulum ve varsa hesap, dil, Premium, sürüm, test), `push_campaigns` (TR/EN başlık+metin, link, görsel, hedef kitle, test, zaman, durum, gönderilen/başarısız/açılan sayıları), `in_app_messages` (TR/EN başlık, metin, buton; link, görsel, hedef, başlangıç/bitiş, en düşük sürüm, aktif; gösterim/tıklama sayıları).
+- API: `POST /v1/push/devices` (kayıt/güncelleme), `POST /v1/push/opened`, `GET /v1/messages` (etkin uygulama içi mesajlar, dile göre), `POST /v1/messages/:id/event` (shown/tapped).
+- Gönderici: `lib/apns.ts` (HTTP/2, ES256 JWT, 410/BadDeviceToken'da anahtarı siler); zamanlanmış kampanyaları dakikada bir alan döngü (çift gönderim yok: durum `scheduled → sending` tek UPDATE ile).
+- Panel: `/admin/messages`: push formu (TR/EN, link, görsel, kitle: herkes / Premium olmayan / Premium; "yalnız test cihazları"; hemen ya da saatli), geçmiş ve sayılar, zamanlananı iptal; uygulama içi mesaj formu ve listesi (aç/kapat).
+- Linkler: `dailyclassical://piece/<id>` (var), `dailyclassical://premium` (ödeme ekranı, uygulamaya eklenecek), https linkleri Safari'de.
+
+**iOS [sonra]**
+- İzin yine yalnız hatırlatma akışında. İzin varsa `registerForRemoteNotifications`, anahtar `/v1/push/devices`'a (dil, Premium, sürüm, test, oturum varsa hesap); dil/Premium/oturum değişince tekrar.
+- Kendi Notification Service Extension'ımız: `image` alanındaki görseli ekler (hatırlatmalardaki ekleme mantığı).
+- Bildirime dokununca `link` açılır, `/v1/push/opened`.
+- Uygulama içi mesaj: açılışta `/v1/messages`, her mesaj bir kez, tasarım sistemimizle yerel kart (görsel, başlık, metin, buton); gösterim/tıklama olayı.
+- Ertesi gün mesajı: ilk açılışta Premium değilse ertesi güne yerel bildirim "DailyClassical Premium ile daha iyi"; izin yoksa ertesi açılışta aynı mesaj kart olarak. Metin onayı Oytun'da.
 
 ## 1.4 notları
 
