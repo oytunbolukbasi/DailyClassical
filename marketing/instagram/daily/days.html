@@ -2,7 +2,8 @@
 <meta charset="utf-8">
 <!-- Animated 9:16 stories for 23–27 Nov 2026, one per scheduled piece. ?d=E|V|M|D|B picks the day.
      A story is a run of beats (label, headline, line) over a slowly moving painting, an optional special scene,
-     and the Today's-piece end card. Rendered by render-frames.mjs; text stays out of IG's top 250 / bottom 340 px. -->
+     and the Today's-piece end card. Optional per-day timing: duration, endAt (end card), fade (text fade, s),
+     moonRise (s); defaults are the shared 16 / 12.8 / .45 / 9 timeline. Rendered by render-frames.mjs; text stays out of IG's top 250 / bottom 340 px. -->
 <style>
 @font-face { font-family: Lit; src: url('../../../ios/DailyClassical/Resources/Fonts/Literata-Regular.ttf'); font-weight: 400; }
 @font-face { font-family: Lit; src: url('../../../ios/DailyClassical/Resources/Fonts/Literata-Medium.ttf'); font-weight: 500; }
@@ -35,11 +36,11 @@ const D = {
                [6.8, 'II · Largo', 'A goatherd asleep.', 'And a dog barking: Vivaldi even marked the part.'],
                [9.8, 'III · Danza pastorale', 'A country dance.', 'Nymphs and shepherds, to a bagpipe. Watteau’s musician on the right plays one.']] },
   M: { bg1: ['img/friedrich.jpg', '55% 50%'], credit1: 'Caspar David Friedrich, Two Men Contemplating the Moon, c. 1825–30. The Met',
-       end: 'Beethoven<br>“Moonlight” Sonata', moon: true,
+       end: 'Beethoven<br>“Moonlight” Sonata', moon: true, duration: 23, endAt: 19.5, fade: .7, moonRise: 18,
        beats: [[0.3, 'Beethoven · 1801', 'He never called it “Moonlight”.', 'His title: Sonata quasi una fantasia, a sonata in the manner of a fantasy.'],
-               [3.6, 'The 1820s', 'A critic hears moonlight on water.', 'Ludwig Rellstab’s image stuck. By the late 1830s publishers were using the name.'],
-               [6.8, 'Senza sordino', 'Hold the pedal down.', 'Very delicately, Beethoven writes, and let the notes keep ringing.'],
-               [9.8, 'Its fame wore on him.', 'He had written better things.', 'Or so he is said to have told his pupil Carl Czerny.']] },
+               [5.1, 'The 1820s', 'A critic hears moonlight on water.', 'Ludwig Rellstab’s image stuck. By the late 1830s publishers were using the name.'],
+               [9.9, 'Senza sordino', 'Hold the pedal down.', 'Very delicately, Beethoven writes, and let the notes keep ringing.'],
+               [14.7, 'Its fame wore on him.', 'He had written better things.', 'Or so he is said to have told his pupil Carl Czerny.']] },
   D: { bg1: ['img/c-dvorak.jpg', '50% 25%', 'grayscale(1) brightness(.55)'], bg2: ['img/slavicek.jpg', '40% 50%'], crossAt: 9.6,
        credit1: 'Antonín Dvořák, 1882. Photographer unknown', credit2: 'Antonín Slavíček, Birch Mood, 1897. National Gallery Prague',
        end: 'Dvořák<br>Cello Concerto',
@@ -53,12 +54,13 @@ const D = {
                [9.6, 'C major', 'It never changes key…', '…until a few seconds before the end. Ravel called it an experiment. It became his most famous piece.']] },
 };
 const d = D[new URLSearchParams(location.search).get('d') || 'E'];
-window.DURATION = 16;
-const END_AT = 12.8;
+window.DURATION = d.duration ?? 16;
+const END_AT = d.endAt ?? 12.8;
+const FADE = d.fade ?? .45;
 const clamp = (x) => Math.max(0, Math.min(1, x));
 const ease = (x) => { x = clamp(x); return x < .5 ? 2*x*x : 1 - Math.pow(-2*x + 2, 2) / 2; };
-const win = (t, a, b, f = .45) => ease((t - a) / f) * (b == null ? 1 : 1 - ease((t - b) / f));
-const rise = (t, a) => (1 - ease((t - a) / .6)) * 40;
+const win = (t, a, b, f = FADE) => ease((t - a) / f) * (b == null ? 1 : 1 - ease((t - b) / f));
+const rise = (t, a) => (1 - ease((t - a) / (FADE + .15))) * 40;
 const bgCss = (b) => `background-image:url(${b[0]});background-size:cover;background-position:${b[1]};${b[2] ? `filter:${b[2]};` : ''}`;
 
 document.getElementById('root').innerHTML = `
@@ -107,7 +109,7 @@ window.render = (t) => {
   $('bg1').style.transform = `scale(${z}) translateX(${-t * 3}px)`;
   if ($('bg2')) { const g = ease((t - d.crossAt) / 1.2); $('bg2').style.opacity = g; $('bg2').style.transform = `scale(${z})`; $('bg1').style.opacity = 1 - g * .9;
     $('cr').textContent = t < d.crossAt ? d.credit1 : d.credit2; }
-  if ($('moon')) { const m = ease(t / 9); $('moon').style.top = `${560 - 260 * m}px`; $('moon').style.opacity = .25 + .6 * m; }
+  if ($('moon')) { const m = ease(t / (d.moonRise ?? 9)); $('moon').style.top = `${560 - 260 * m}px`; $('moon').style.opacity = .25 + .6 * m; }
   // beats
   let k = -1; d.beats.forEach((b, i) => { if (t >= b[0]) k = i; });
   const inSpecial = d.special && t >= d.specialAt[0] - .2 && t < d.specialAt[1] + .2;
@@ -115,7 +117,7 @@ window.render = (t) => {
     const b = d.beats[k];
     let next = d.beats[k + 1] ? d.beats[k + 1][0] : END_AT;
     if (d.special && b[0] < d.specialAt[0] && next > d.specialAt[0]) next = d.specialAt[0];
-    const o = win(t, b[0], next - .5);
+    const o = win(t, b[0], next - (FADE + .05));
     $('b0').textContent = b[1]; $('b1').textContent = b[2]; $('b2').textContent = b[3];
     ['b0', 'b1', 'b2'].forEach((id, j) => { $(id).style.opacity = o; $(id).style.transform = `translateY(${rise(t, b[0] + j * .15)}px)`; });
   } else ['b0', 'b1', 'b2'].forEach((id) => { $(id).style.opacity = 0; });
