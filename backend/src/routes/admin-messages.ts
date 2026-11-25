@@ -267,7 +267,7 @@ async function messagesView(email: string, ok?: string, err?: string) {
   return html`
     ${headerView(email, "messages")}
     <style>${raw(CSS)}</style>
-    ${ok ? html`<p class="flash ok">${ok}</p>` : ""}${err ? html`<p class="flash bad">${err}</p>` : ""}
+    ${ok || err ? html`<div class="flash ${err ? "bad" : "ok"}" role="status" aria-live="polite">${err ?? ok}<button type="button" class="x" aria-label="Kapat">×</button></div>` : ""}
 
     <section>
       <h2>Bildirim alan cihazlar <span class="m">bildirime izin vermiş, 1.4 ve sonrası</span></h2>
@@ -435,9 +435,14 @@ async function messagesView(email: string, ok?: string, err?: string) {
 }
 
 const CSS = `
-.flash{margin:16px 0 0;padding:12px 16px;border-radius:12px;font-size:14px}
-.flash.ok{background:var(--today);color:var(--ink)}
-.flash.bad{background:rgba(179,38,30,.1);color:var(--danger)}
+.flash{position:fixed;top:16px;right:16px;z-index:50;max-width:min(440px,calc(100% - 32px));margin:0;display:flex;align-items:center;gap:12px;
+  padding:12px 10px 12px 18px;border-radius:22px;font-size:14px;line-height:1.35;background:var(--ink);color:var(--bg);
+  box-shadow:0 10px 30px rgba(0,0,0,.22);animation:flash-in .25s ease-out;transition:opacity .3s,transform .3s}
+.flash.bad{background:var(--danger);color:#fff}
+.flash.out{opacity:0;transform:translateY(-8px)}
+.flash .x{border:0;background:none;color:inherit;opacity:.7;font-size:20px;line-height:1;width:28px;height:28px;cursor:pointer;flex:none}
+@keyframes flash-in{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@media (max-width:560px){.flash{left:16px;right:16px;max-width:none}}
 .compose{display:flex;flex-direction:column;gap:14px;padding:18px}
 .compose .cols{display:grid;grid-template-columns:1fr 1fr minmax(260px,320px);gap:16px}
 @media (max-width:900px){.compose .cols{grid-template-columns:1fr}}
@@ -493,6 +498,16 @@ for (const [prefix, form] of [["p", document.querySelector('form[action$="/push"
   });
   fields.forEach((el) => el.addEventListener("input", update));
   update();
+}
+// The result of the last action: a toast that goes after a few seconds (errors stay until closed);
+// the ok/err query is dropped so a reload doesn't show it again.
+const flash = document.querySelector(".flash");
+if (flash) {
+  const hide = () => { flash.classList.add("out"); setTimeout(() => flash.remove(), 300); };
+  flash.querySelector(".x").addEventListener("click", hide);
+  if (!flash.classList.contains("bad")) setTimeout(hide, 5000);
+  const u = new URL(location.href); u.searchParams.delete("ok"); u.searchParams.delete("err");
+  history.replaceState(null, "", u.pathname + u.search + u.hash);
 }
 document.querySelectorAll("[data-confirm]").forEach((b) => b.addEventListener("click", (e) => { if (!confirm(b.dataset.confirm)) e.preventDefault(); }));
 const later = document.querySelector('input[name="when"][value="later"]');
