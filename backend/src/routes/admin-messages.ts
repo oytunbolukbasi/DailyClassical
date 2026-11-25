@@ -305,15 +305,15 @@ async function messagesView(email: string, ok?: string, err?: string) {
               <img id="p-image" alt="" hidden>
             </div>
             <p class="small m">Bir dili boş bırakırsanız o dildeki cihazlara gönderilmez.</p>
+            <div class="testsend">
+              <button class="secondary" formaction="/admin/messages/push/test">Test cihazlarına şimdi gönder</button>
+              <span class="m small">${fmt.format(devices!.test)} cihaz</span>
+            </div>
           </aside>
         </div>
         <div class="row">
           <label class="grow">Link <span class="m">(isteğe bağlı)</span><input name="link" list="links" placeholder="dailyclassical://premium"></label>
           <label class="grow">Görsel <span class="m">(isteğe bağlı, https)</span><input name="image" data-p="image" placeholder="https://www.dailyclassical.co/images/…jpg"></label>
-        </div>
-        <div class="row test">
-          <button class="secondary" formaction="/admin/messages/push/test">Test cihazlarına şimdi gönder</button>
-          <span class="m small">${fmt.format(devices!.test)} doğrulanmış test cihazı · planlanmaz, kayda "test" olarak geçer</span>
         </div>
         <div class="row">
           <label>Kime <select name="audience">${(Object.keys(AUDIENCES) as Audience[]).map((a) => html`<option value="${a}">${AUDIENCES[a]}</option>`)}</select></label>
@@ -472,9 +472,10 @@ const CSS = `
 .lang{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;color:var(--ink2);box-shadow:inset 0 0 0 .5px var(--rule);border-radius:4px;padding:0 4px;margin-right:4px;vertical-align:1px}
 .pill{display:inline-block;margin-top:4px;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--today);color:var(--accent)}
 .link{border:0;background:none;color:var(--accent);padding:0;font-size:14px}
+td .link{min-height:0;height:auto;line-height:inherit}
 .secondary{height:40px;padding:0 18px;border-radius:20px;border:0;background:var(--today);color:var(--accent);font-weight:600;box-shadow:inset 0 0 0 1px var(--accent)}
-.compose .row.test{padding:12px 14px;border-radius:12px;background:var(--today);align-items:center}
-.invite{padding:14px 18px}.invite .row{align-items:flex-end}.invite .primary{margin:0;height:42px;padding:0 20px}
+.testsend{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px}
+.invite{padding:14px 18px}.invite .row{align-items:flex-end}.invite .primary{align-self:flex-end;margin:0;height:40px;padding:0 20px}
 `;
 
 /** Live preview of the Turkish text as it is typed. */
