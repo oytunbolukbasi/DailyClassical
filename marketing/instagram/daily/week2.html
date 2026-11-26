@@ -1,0 +1,173 @@
+<!doctype html>
+<meta charset="utf-8">
+<!-- Week of 28 Nov – 4 Dec 2026: "listening stop" look. Same palette and Literata as the first week, but the
+     painting hangs in a frame instead of filling the screen, and each piece gets one or two stops from the app's
+     listening guide, shown as a timestamp on a movement timeline (the app's own idea). Stories keep week 1's
+     full-screen painting (the framed inset read too small on a phone); `sbg` / `ssize` override the story's focus and size.
+     ?k=post|story & d=<day key>. Story: 25.5 s, four beats at 0.3 / 5.7 / 11.1 / 16.5 s, 1 s fades, end card at 21.9 s.
+     Post 1080×1350; story 1080×1920 (text clear of IG's top 250 / bottom 340 px). Rendered by render-frames.mjs. -->
+<style>
+@font-face { font-family: Lit; src: url('../../../ios/DailyClassical/Resources/Fonts/Literata-Regular.ttf'); font-weight: 400; }
+@font-face { font-family: Lit; src: url('../../../ios/DailyClassical/Resources/Fonts/Literata-Medium.ttf'); font-weight: 500; }
+@font-face { font-family: Lit; src: url('../../../ios/DailyClassical/Resources/Fonts/Literata-Italic.ttf'); font-weight: 400; font-style: italic; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { overflow: hidden; background: #111010; }
+body { font-family: Lit, serif; color: #F0EBE3; -webkit-font-smoothing: antialiased; }
+.sans { font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', sans-serif; }
+.abs { position: absolute; }
+.label { letter-spacing: .16em; text-transform: uppercase; font-weight: 600; color: #D4AE84; }
+.big { font-weight: 500; letter-spacing: -.015em; line-height: 1.06; text-wrap: balance; }
+.body { line-height: 1.36; color: #E6DFD5; text-wrap: pretty; }
+.mark { color: #B3ABA1; }
+.credit { color: #8A837B; }
+.frame { overflow: hidden; background: #1C1A18; box-shadow: 0 0 0 1px rgba(240,235,227,.14), 0 30px 80px rgba(0,0,0,.55); }
+.frame .img { position: absolute; inset: -4%; background-repeat: no-repeat; background-size: cover; will-change: transform; }
+.pill { display: inline-block; padding: 18px 34px; border-radius: 999px; background: #D4AE84; color: #1E1B17; font-size: 32px; font-weight: 600; }
+/* The listening stop: movement, time, and where it sits in the movement. */
+.stop { display: flex; align-items: center; gap: 22px; }
+.stop .t { font-variant-numeric: tabular-nums; font-weight: 600; color: #D4AE84; white-space: nowrap; }
+.track { position: relative; height: 4px; border-radius: 2px; background: rgba(240,235,227,.16); flex: 1; }
+.track .fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 2px; background: #D4AE84; }
+.track .dot { position: absolute; top: 50%; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: #F0EBE3; box-shadow: 0 0 0 6px rgba(212,174,132,.25); }
+</style>
+<body><div id="root"></div>
+<script>
+// Each day: painting [file, focus], credit, end card, the post, and four story beats. A beat may carry a stop:
+// [movement, time, movement length] → drawn as a timeline; the dot runs to the time while the beat is up.
+const D = {
+  J: { img: ['img/robert-obelisk.jpg', '50% 40%'], sbg: '80% 50%', credit: 'Hubert Robert, The Obelisk, 1787. Art Institute of Chicago',
+       end: 'Mozart<br>Symphony No. 41, “Jupiter”',
+       post: { label: 'Mozart · Symphony No. 41 · 1788', head: 'Five tunes at once.',
+               stop: ['IV', '10:45', '11:30'], line: 'In the coda of his last symphony, five themes heard one by one enter together, layer on layer.' },
+       beats: [[0.3, 'Mozart · Summer 1788', 'His last symphony.', 'The third he wrote that summer, after Nos. 39 and 40. No one knows if he ever heard it played.'],
+               [5.7, 'The nickname', '“Jupiter” is not his.', 'It was probably coined in London, by the concert manager Johann Peter Salomon.'],
+               [11.1, 'Listen for', 'Four long notes.', 'C, D, F, E, quiet in the violins. Everything around them races.', ['IV', '0:00', '11:30']],
+               [16.5, 'Listen for', 'Then five tunes at once.', 'Each theme of the finale, heard alone before, now layered and played together.', ['IV', '10:45', '11:30']]] },
+  C: { img: ['img/kasprzycki.jpg', '50% 50%'], credit: 'Wincenty Kasprzycki, View of Morysinek, 1834. National Museum in Warsaw',
+       end: 'Chopin<br>Piano Concerto No. 1',
+       post: { label: 'Chopin · Piano Concerto No. 1 · 1830', head: 'A reverie in the moonlight.',
+               stop: ['II', '0:57', '12:35'], line: 'Chopin called the slow movement “a kind of reverie in the moonlight on a beautiful spring evening”.' },
+       beats: [[0.3, 'Chopin · Warsaw, 1830', 'Written at twenty.', 'In fact his second piano concerto. It is called No. 1 only because it was published first.'],
+               [5.7, '11 October 1830', 'A farewell concert.', 'He played it at the National Theatre in Warsaw. Three weeks later he left Poland, and never returned.'],
+               [11.1, 'Listen for', 'The piano crashes in.', 'After more than four minutes of orchestra alone: loud chords and octaves, then the proud first tune.', ['I', '4:37', '23:24']],
+               [16.5, 'Listen for', 'Then a moonlit song.', 'A slow, singing melody over muted strings, decorated with trills like an opera aria.', ['II', '0:57', '12:35']]] },
+  B7: { img: ['img/bruegel.jpg', '50% 50%'], credit: 'Pieter Bruegel the Elder, The Peasant Dance, c. 1568. Kunsthistorisches\u00a0Museum,\u00a0Vienna',
+       end: 'Beethoven<br>Symphony No. 7',
+       post: { label: 'Beethoven · Symphony No. 7 · 1812', head: 'Played again on the spot.',
+               stop: ['II', '0:05', '8:09'], line: 'A quiet walk in the low strings, long, short-short, long, long. The first audience wanted it again.' },
+       beats: [[0.3, 'Beethoven · Vienna, 1813', 'For wounded soldiers.', 'First played on 8 December 1813 at a charity concert, with Beethoven conducting.'],
+               [5.7, 'Richard Wagner', '“The apotheosis of the dance.”', 'Each of the four movements is driven by one rhythm, repeated with tremendous energy.'],
+               [11.1, 'Listen for', 'One note, over and over.', 'Flutes and violins toss a single E back and forth, more than sixty times, until it becomes a dance.', ['I', '3:00', '13:36']],
+               [16.5, 'Listen for', 'Then a slow walk.', 'Long, short-short, long, long, very quiet in the low strings. The audience demanded it again.', ['II', '0:05', '8:09']]] },
+  S: { img: ['img/ceruti.jpg', '50% 22%'], credit: 'Giacomo Ceruti, Portrait of a Cello Player, c. 1740. Kunsthistorisches\u00a0Museum,\u00a0Vienna',
+       end: 'Bach<br>Cello Suite No. 1',
+       post: { label: 'Bach · Cello Suite No. 1 · c. 1717–23', head: 'One cello, many voices.',
+               stop: ['I', '0:00', '2:50'], line: 'Each bar is one chord, spread as a wave of notes. The lowest notes make a slow bass line of their own.' },
+       beats: [[0.3, 'Bach · Köthen, c. 1717–23', 'No copy in his own hand.', 'The main source is a copy made by his second wife, Anna Magdalena Bach.'],
+               [5.7, 'Pablo Casals', 'Found by a boy of 13.', 'Casals found an edition in a Barcelona shop, and later made the first complete recording.'],
+               [11.1, 'Listen for', 'A wave of notes.', 'Rising from the cello’s low G and falling back, the same shape in every bar.', ['I', '0:00', '2:50']],
+               [16.5, 'Listen for', 'One low note, a slow climb.', 'A low D keeps sounding while the line above it creeps upwards, to broad, ringing chords.', ['I', '2:00', '2:50']]] },
+  T: { img: ['img/courbet.jpg', '50% 50%'], credit: 'Gustave Courbet, Panoramic View of the Alps, Les Dents du Midi, 1877. The\u00a0Cleveland\u00a0Museum\u00a0of\u00a0Art',
+       end: 'Tchaikovsky<br>Violin Concerto',
+       post: { label: 'Tchaikovsky · Violin Concerto · 1878', head: 'The violinist said no.',
+               stop: ['I', '1:10', '19:23'], line: 'Leopold Auer, its first dedicatee, would not play it. Here the solo violin sings its sweet main tune.' },
+       beats: [[0.3, 'Tchaikovsky · Clarens, 1878', 'Written by a lake.', 'On Lake Geneva, where he went to recover after his marriage collapsed. It took about a month.'],
+               [5.7, 'Leopold Auer', 'The violinist said no.', 'Auer would not play it. Adolph Brodsky gave the premiere in Vienna in 1881, and got the dedication.'],
+               [11.1, 'Listen for', 'A sweet, lilting tune.', 'After a few searching phrases alone, the solo violin sings the main theme.', ['I', '1:10', '19:23']],
+               [16.5, 'Listen for', 'The trill that goes on.', 'The cadenza ends on a trill, and it keeps going while a flute quietly brings back the tune.', ['I', '13:50', '19:23']]] },
+  L: { img: ['img/hokusai.jpg', '25% 50%'], credit: 'Katsushika Hokusai, Under the Wave off Kanagawa (The Great Wave), c. 1830–32. The\u00a0Metropolitan\u00a0Museum\u00a0of\u00a0Art,\u00a0New\u00a0York',
+       end: 'Debussy<br>La mer',
+       post: { label: 'Debussy · La mer · 1905', head: 'He wanted this wave on the cover.',
+               stop: ['III', '6:30', '7:54'], line: 'He owned a print of Hokusai’s Great Wave. Late in the storm, the brass ring out the noon chorale.' },
+       beats: [[0.3, 'Debussy · 1903–05', 'Far from the sea.', 'He began it in Burgundy, and said he preferred the seas of paintings and books to the real one.'],
+               [5.7, 'Paris, 15 October 1905', 'A disappointment.', 'One critic could not hear, see or smell the sea. It became a success in 1908, with Debussy conducting.'],
+               [11.1, 'Listen for', 'A short call.', 'Cor anglais and muted trumpet, playing together near the start. Remember it.', ['I', '0:50', '8:39']],
+               [16.5, 'Listen for', 'The call returns.', 'In the storm of the last sketch, the muted trumpet plays the same call again.', ['III', '0:40', '7:54']]] },
+  M21: { img: ['img/fragonard.jpg', '50% 75%'], ssize: 'auto 2600px', sbg: '50% 100%', credit: 'Jean-Honoré Fragonard, The Swing, 1767–68. The Wallace Collection, London',
+       end: 'Mozart<br>Piano Concerto No. 21',
+       post: { label: 'Mozart · Piano Concerto No. 21 · 1785', head: 'He called it “Andante”.',
+               stop: ['II', '1:30', '7:15'], line: 'The 1967 Swedish film Elvira Madigan made it famous. Here the piano takes up the long, dreaming song.' },
+       beats: [[0.3, 'Mozart · Vienna, March 1785', 'Finished one day, played the next.', 'He finished it on 9 March and played it on 10 March, at a concert of his own in the Burgtheater.'],
+               [5.7, 'The cadenzas', 'His own are lost.', 'Mozart’s cadenzas for this concerto do not survive, so every pianist has to supply them.'],
+               [11.1, 'Listen for', 'A march on tiptoe.', 'The strings alone, very quiet, all playing the same notes. Trumpets and drums soon take over.', ['I', '0:00', '13:54']],
+               [16.5, 'Listen for', 'Then the famous song.', 'In the slow movement, the piano takes the long, dreaming melody over a soft pulse in threes.', ['II', '1:30', '7:15']]] },
+};
+const q = new URLSearchParams(location.search);
+const kind = q.get('k') || 'post';
+const d = D[q.get('d') || 'J'];
+const W = 1080, H = kind === 'post' ? 1350 : 1920;
+document.documentElement.style.width = document.body.style.width = W + 'px';
+document.documentElement.style.height = document.body.style.height = H + 'px';
+const secs = (s) => { const [m, x] = s.split(':').map(Number); return m * 60 + x; };
+const stopHtml = (s, size, id = '') => `<div class="stop sans" style="font-size:${size}px">
+    <span class="t">${s[0]} · <span id="${id}time">${s[1]}</span></span>
+    <div class="track"><div class="fill" id="${id}fill" style="width:${100 * secs(s[1]) / secs(s[2])}%"></div>
+      <div class="dot" id="${id}dot" style="left:${100 * secs(s[1]) / secs(s[2])}%"></div></div>
+    <span class="t" style="color:#8A837B;font-weight:500">${s[2]}</span></div>`;
+
+if (kind === 'post') {
+  const p = d.post;
+  document.getElementById('root').innerHTML = `
+    <div class="abs" style="left:80px;right:80px;top:64px;display:flex;justify-content:space-between;align-items:baseline">
+      <div class="mark" style="font-size:26px">DailyClassical</div><div class="label sans" style="font-size:22px">Listen for</div></div>
+    <div class="abs frame" style="left:80px;right:80px;top:140px;height:640px"><div class="img" style="background-image:url(${d.img[0]});background-position:${d.img[1]}"></div></div>
+    <div class="abs credit sans" style="left:80px;right:80px;top:798px;font-size:21px">${d.credit}</div>
+    <div class="abs" style="left:80px;right:80px;top:878px">
+      <div class="label sans" style="font-size:25px">${p.label}</div>
+      <div class="big" style="font-size:92px;margin-top:20px">${p.head}</div>
+      <div style="margin-top:34px">${stopHtml(p.stop, 30)}</div>
+      <div class="body" style="font-size:36px;margin-top:26px">${p.line}</div>
+    </div>`;
+  window.DURATION = 0;
+} else {
+  document.getElementById('root').innerHTML = `
+    <div class="bg" id="img" style="position:absolute;inset:0;background-image:url(${d.img[0]});background-size:${d.ssize ?? 'cover'};background-position:${d.sbg ?? d.img[1]};will-change:transform"></div>
+    <div class="abs" style="inset:0;background:linear-gradient(180deg,rgba(17,16,16,.4) 0%,rgba(17,16,16,.1) 28%,rgba(17,16,16,.88) 58%,#111010 100%)"></div>
+    <div class="abs mark" style="left:90px;top:270px;font-size:32px">DailyClassical</div>
+    <div class="abs" id="beat" style="left:90px;right:90px;bottom:480px">
+      <div class="label sans" id="b0" style="font-size:30px"></div>
+      <div class="big" id="b1" style="font-size:96px;margin-top:28px"></div>
+      <div class="body" id="b2" style="font-size:46px;line-height:1.34;margin-top:32px"></div>
+      <div id="b3" style="margin-top:38px"></div>
+    </div>
+    <div class="abs credit sans" style="left:90px;right:90px;bottom:380px;font-size:24px">${d.credit}</div>
+    <div class="abs" id="end" style="inset:0;background:#111010;opacity:0">
+      <div class="abs" style="left:90px;right:90px;top:560px">
+        <div class="label sans" style="font-size:30px">Today’s piece</div>
+        <div class="big" style="font-size:92px;margin-top:30px">${d.end}</div>
+        <div class="body" style="font-size:46px;margin-top:34px">With a minute-by-minute listening guide and a painting, in DailyClassical.</div>
+        <div style="margin-top:60px"><span class="pill sans">Today’s piece is free</span></div>
+      </div>
+      <div class="abs mark" style="left:90px;bottom:380px;font-size:32px">DailyClassical</div>
+    </div>`;
+  window.DURATION = 25.5;
+}
+const $ = (id) => document.getElementById(id);
+const END_AT = 21.9, FADE = 1.0;
+const clamp = (x) => Math.max(0, Math.min(1, x));
+const ease = (x) => { x = clamp(x); return x < .5 ? 2*x*x : 1 - Math.pow(-2*x + 2, 2) / 2; };
+const win = (t, a, b) => ease((t - a) / FADE) * (b == null ? 1 : 1 - ease((t - b) / FADE));
+const rise = (t, a) => (1 - ease((t - a) / (FADE + .15))) * 40;
+const fmt = (s) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, '0')}`;
+
+window.render = (t) => {
+  if (kind === 'post') return;
+  $('img').style.transform = `scale(${1.06 + .08 * t / window.DURATION}) translateX(${-t * 3}px)`;  // as in week 1 (days.html)
+  let k = -1; d.beats.forEach((b, i) => { if (t >= b[0]) k = i; });
+  if (k >= 0) {
+    const b = d.beats[k], next = d.beats[k + 1] ? d.beats[k + 1][0] : END_AT;
+    const o = win(t, b[0], next - (FADE + .05));
+    $('b0').textContent = b[1]; $('b1').textContent = b[2]; $('b2').textContent = b[3];
+    if ($('b3').dataset.k !== String(k)) { $('b3').innerHTML = b[4] ? stopHtml(b[4], 32, 's') : ''; $('b3').dataset.k = String(k); }
+    if (b[4]) {  // the dot runs from the previous stop (or 0:00) to this one while the beat comes in
+      const prev = d.beats.slice(0, k).reverse().find((x) => x[4] && x[4][0] === b[4][0]);
+      const from = prev ? secs(prev[4][1]) : 0, to = secs(b[4][1]), len = secs(b[4][2]);
+      const now = from + (to - from) * ease((t - b[0] - .3) / 2.2);
+      $('stime').textContent = fmt(now); $('sfill').style.width = `${100 * now / len}%`; $('sdot').style.left = `${100 * now / len}%`;
+    }
+    ['b0', 'b1', 'b2', 'b3'].forEach((id, j) => { $(id).style.opacity = o; $(id).style.transform = `translateY(${rise(t, b[0] + j * .15)}px)`; });
+  }
+  $('end').style.opacity = ease((t - END_AT) / 1.0);
+};
+render(Number(q.get('t') ?? 0));  // ?t= for a still of the story at that second
+</script>

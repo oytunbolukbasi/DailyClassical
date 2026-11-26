@@ -22,3 +22,17 @@ Story'ler 9:16 biçiminde, 13–16 saniye ve sessiz; istersen paylaşırken Inst
 **Reel kuralı (Oytun, 22 Kasım):** Reel'ler en az 30 saniye. Sessiz üretilir, müziği Instagram'da Oytun ekler. Metin Reels arayüzünün dışında kalır: üstte 250, altta 420, sağda 150 px boş.
 
 İçerik planının tamamı: https://claude.ai/artifact/9gZEtHFv6tYdDACESs7scH
+
+## 28 Kasım – 4 Aralık 2026
+
+| Tarih | Eser | Dosya | Story | O günün postu |
+| --- | --- | --- | --- | --- |
+| Cmt 28 Kas | Mozart · Symphony No. 41, "Jupiter" | `2026-11-28 Cmt - Mozart Symphony 41 Jupiter` | Son senfonisi, 'Jupiter' adı onun değil; dört uzun nota ve beş tema birden | "Five tunes at once." |
+| Paz 29 Kas | Chopin · Piano Concerto No. 1 | `2026-11-29 Paz - Chopin Piano Concerto 1` | Yirmi yaşında yazdı, Varşova'ya veda konseri; piyanonun girişi ve ay ışığında romans | "A reverie in the moonlight." |
+| Pzt 30 Kas | Beethoven · Symphony No. 7 | `2026-11-30 Pzt - Beethoven Symphony 7` | Yaralı askerler yararına ilk konser, Wagner'in "dansın apotheosisi"; altmış kez tekrarlanan tek nota ve yavaş yürüyüş | "Played again on the spot." |
+| Sal 1 Ara | Bach · Cello Suite No. 1 | `2026-12-01 Sal - Bach Cello Suite 1` | Bach'ın el yazısı yok, Casals 13 yaşında buldu; Prélude'ün nota dalgası ve tek bas notası üstünde tırmanış | "One cello, many voices." |
+| Çar 2 Ara | Tchaikovsky · Violin Concerto | `2026-12-02 Car - Tchaikovsky Violin Concerto` | Cenevre Gölü kıyısında bir ayda yazıldı, Auer çalmadı; tatlı ana tema ve kadansın sonundaki tril | "The violinist said no." |
+| Per 3 Ara | Debussy · La mer | `2026-12-03 Per - Debussy La Mer` | Denizden uzakta yazıldı, prömiyer hayal kırıklığı; kısa çağrı ve fırtınada geri dönüşü | "He wanted this wave on the cover." |
+| Cum 4 Ara | Mozart · Piano Concerto No. 21 | `2026-12-04 Cum - Mozart Piano Concerto 21` | Bir gün bitti, ertesi gün çalındı; kadansları kayıp; parmak ucunda marş ve ünlü Andante | "He called it “Andante”." |
+
+Bu haftanın görünümü: postlarda çerçeveli tablo + dinleme durağı (uygulamadaki rehberden zaman ve bölüm çizgisi); story'lerde tablo yine tam ekran, metinlerin ikisi "Listen for" durağı, zaman çizgisindeki nokta durağa kayar. Story'ler ~25,5 sn (geçişler 1 sn). Şablon: `marketing/instagram/daily/week2.html`, postlar `daily/out/`, başlıklar `daily/out/captions-2026-11-28.md`.
