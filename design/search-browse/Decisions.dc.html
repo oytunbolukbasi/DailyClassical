@@ -2,7 +2,7 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
-<title>Oytun için kararlar</title>
+<title>Kararlar</title>
 <script src="./support.js"></script>
 <link rel="stylesheet" href="./dc.css">
 </head>
@@ -12,41 +12,46 @@
 <style>
 body{margin:0}
 @font-face{font-family:Literata;font-weight:400;src:url(/_blob/a2b79de3bbd556cdd11d217c91d81dc0)}
+@font-face{font-family:Literata;font-weight:400;font-style:italic;src:url(/_blob/fd72da16ddda9331164c876aa2c4733d)}
 @font-face{font-family:Literata;font-weight:500;src:url(/_blob/bd3f03be5cca724c12eeb435e9626e02)}
-.q{font:500 20px/1.3 var(--serif)}
-.r{font:400 16px/1.5 var(--sans);color:var(--ink2);margin-top:5px}
-.r b{font-weight:600;color:var(--accent)}
-.d{padding:16px 0;border-top:1px solid var(--rule)}
+@font-face{font-family:Literata;font-weight:600;src:url(/_blob/447ddca32e7d6cc1eb48f4b7ab63d7cd)}
+.i-chev{-webkit-mask-image:url(/_blob/9e62ffe1e4aeb73c55662ac38056a19b);mask-image:url(/_blob/9e62ffe1e4aeb73c55662ac38056a19b)}
+.i-close{-webkit-mask-image:url(/_blob/f80b44985607f50ce7988a8d4fbf84d2);mask-image:url(/_blob/f80b44985607f50ce7988a8d4fbf84d2)}
+.i-book{-webkit-mask-image:url(/_blob/d358997074b88524e3dcb3afaf6577ff);mask-image:url(/_blob/d358997074b88524e3dcb3afaf6577ff)}
+.i-lock{-webkit-mask-image:url(/_blob/75d00bc3ce33aa8949ab0b7b8b2fb890);mask-image:url(/_blob/75d00bc3ce33aa8949ab0b7b8b2fb890)}
+.i-search{-webkit-mask-image:url(/_blob/607ec60fedf48517d412727ac501d6fc);mask-image:url(/_blob/607ec60fedf48517d412727ac501d6fc)}
+.i-lib{-webkit-mask-image:url(/_blob/5786a4da4c63241ece8b5b9c6f86a32b);mask-image:url(/_blob/5786a4da4c63241ece8b5b9c6f86a32b)}
+.i-set{-webkit-mask-image:url(/_blob/0eacb534b4b21c90f4a5e704c2ae520f);mask-image:url(/_blob/0eacb534b4b21c90f4a5e704c2ae520f)}
+.i-today{-webkit-mask-image:url(/_blob/f488dce9f8301ce55979ce0d08ea8bf9);mask-image:url(/_blob/f488dce9f8301ce55979ce0d08ea8bf9)}
 </style>
 </helmet>
-<div class="dc" style="width: 1400px; height: 1480px; padding: 56px 64px">
-<h1 class="t-large">Oytun için kararlar</h1>
-<p class="t-sec" style="margin-top: 8px; font-size: 17px; max-width: 1100px">Kısa cevap: arama alanını yukarı taşımaya gerek yok. Cam arama çubuğu ve TabView’a bağlı .searchable olduğu gibi kalıyor; değişen yalnızca Ara ekranının boşken gösterdiği içerik. Aşağıdaki her maddede önerim yazılı; numarayla cevaplayabilirsin.</p>
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 64px; margin-top: 30px">
+<div class="dc" style="width: 1400px; height: 760px; padding: 56px 64px">
+<h1 class="t-large">Kararlar</h1>
+<p class="t-sec" style="margin-top: 8px; font-size: 17px">Oytun’un 28 Kasım cevaplarıyla kesinleşenler. Kanvastaki her pano bu kararları gösteriyor.</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 64px; margin-top: 26px; font: 400 16px/1.5 var(--sans); color: var(--ink2)">
 <div>
-<p class="t-label acc" style="padding-bottom: 12px">Ara sekmesi</p>
-<div class="d"><p class="q">1. Yerleşim</p><p class="r"><b>Öneri: A, alt alta üç levha.</b> Üç eşit kutu için en dengeli olanı: boş hücre kalmıyor, görseller büyük, Dönemler şeridi zaman çizgisi gibi okunuyor, 874 pt’de kaydırmadan sığıyor. B (iki kare + geniş) referanstaki görünüme en yakını ama Türler tek kalıyor. C (küçük raf) son aramaları hep gösteriyor ama görseller küçülüyor.</p></div>
-<div class="d"><p class="q">2. Ücretsiz kullanıcı</p><p class="r">Bugün ücretsiz kullanıcı Ara’ya girince paywall kendiliğinden açılıyor. <b>Öneri: gezinme herkese açık, yazarak arama Premium.</b> Kutular ve listeler Kitaplık gibi davranır (geçmiş eserde kilit, dokununca paywall). Ücretsiz kullanıcı alana dokununca bugünkü “Arama Premium’a dahil” ekranı çıkar; sekmeye girişteki otomatik paywall kalkar. Diğer seçenek: her şey bugünkü gibi kilitli kalsın.</p></div>
-<div class="d"><p class="q">3. Sayfa başlığı</p><p class="r">Bugün Ara ekranında başlık yok. <b>Öneri: “Keşfet” / “Discover”</b>, Kitaplık başlığıyla aynı yerde ve boyda. Sekmenin adı “Ara” olarak kalır (zaten yalnızca ikon görünüyor). Diğer seçenekler: “Ara” ya da başlıksız.</p></div>
-<div class="d"><p class="q">4. Alan odaklanınca ve yazarken</p><p class="r"><b>Öneri:</b> alana dokununca kutular kaybolur, bugünkü Son aramalar listesi gelir; yazınca bugünkü sonuçlar. Hiçbiri değişmiyor. Simülatörde doğrulanacak tek şey odağın SearchScreen’den okunması; okunamazsa kutular ilk harfe kadar kalır, Son aramalar altlarında durur.</p></div>
-<div class="d"><p class="q">5. Alt sayfalarda arama alanı</p><p class="r">Sistem, Ara sekmesindeyken alttaki alanı itilen sayfalarda da gösteriyor. <b>Öneri: öyle kalsın;</b> orada yazmaya başlanınca köke dönüp sonuçlar gösterilir. Eser sayfasında bugünkü davranış (sekme çubuğu gizli) aynen sürer.</p></div>
-<div class="d"><p class="q">6. Besteciler kartı</p><p class="r"><b>Öneri: sabit dört portre</b> (Bach, Mozart, Beethoven, Çaykovski). Diğer seçenek: günün bestecisi daha geniş bir şeritle başta.</p></div>
-<div class="d"><p class="q">7. Dönem kolajları</p><p class="r"><b>Öneri: elle, bir kez seçilmiş dörder tablo</b> (pano 2’deki liste). Kural: o dönemin bestecisine ait bir eserin tablosu ve tablo da o dönemde yapılmış. Rönesans’ta yalnızca üç eser var; biri 1814 tarihli Ingres (Sistine Şapeli’ni gösterdiği için kullandım). İstersen onun yerine başka dönemlerin eserlerinden gerçek bir Rönesans tablosu alınabilir (Giorgione, Bruegel). Seçimlere bakıp değiştirmek istediklerini söyle.</p></div>
+<p style="padding: 12px 0; border-top: 1px solid var(--rule)"><b style="color: var(--ink)">1. Yerleşim:</b> alt alta üç levha.</p>
+<p style="padding: 12px 0; border-top: 1px solid var(--rule)"><b style="color: var(--ink)">2. Ücretsiz kullanıcı:</b> gezinme açık, yazarak arama Premium; alana dokununca “Arama Premium’a dahil” ekranı; sekmeye girişteki otomatik paywall kalkıyor.</p>
+<p style="padding: 12px 0; border-top: 1px solid var(--rule)"><b style="color: var(--ink)">3. Başlık:</b> “Keşfet” / “Discover”; sekme adı “Ara” / “Search” kalıyor.</p>
+<p style="padding: 12px 0; border-top: 1px solid var(--rule)"><b style="color: var(--ink)">4. Odak:</b> alana dokununca kutular gizlenir, Son aramalar gelir; yazınca sonuçlar.</p>
+<p style="padding: 12px 0; border-top: 1px solid var(--rule)"><b style="color: var(--ink)">5. Alt sayfalar:</b> cam arama alanı görünür kalır; orada yazınca köke dönülüp sonuçlar gösterilir.</p>
+<p style="padding: 12px 0; border-top: 1px solid var(--rule)"><b style="color: var(--ink)">6. Besteciler kartı:</b> sabit dört portre (Bach, Mozart, Beethoven, Çaykovski).</p>
+<p style="padding: 12px 0; border-top: 1px solid var(--rule)"><b style="color: var(--ink)">7. Dönem kolajları:</b> elle seçilmiş tablolar; Rönesans’ta Ingres yerine gerçek bir Rönesans tablosu.</p>
 </div>
 <div>
-<p class="t-label acc" style="padding-bottom: 12px">Türler, listeler, içerik</p>
-<div class="d"><p class="q">8. Türler nasıl görselleşsin?</p><p class="r"><b>Öneri: 1, tablolardaki müzik.</b> Katalogda çalan insanları gösteren tablolar var (Menzel, Danhauser, Mercier, Longhi, Zoffany, Lerolle); üç kart tek dille konuşur. Senfoni ve orkestra eserleri için birebir tablo yok, o ikisi çağrışımla seçildi; keman konçertosu için Böcklin karanlık kalabilir. 2 (sahne planları) en açıklayıcı ve dosyasız ama ikinci bir görsel dil. 3 (yalnız yazı) en sade. Karma da olur: kartta 1, liste satırlarında 3.</p></div>
-<div class="d"><p class="q">9. Henüz yayımlanmamış içerik</p><p class="r">Kitaplık’ta bugün 20 eser var, her gün bir tane ekleniyor. <b>Öneri:</b> 52 bestecinin ve 6 dönemin hepsi baştan görünür (biyografiler hazır; eseri olmayan dönemde tek satır not). Türler ilk eseri yayımlanınca listeye girer. Bütün sayılar yayımlanan eserleri sayar. Diğer seçenek: eseri olmayan besteci ve dönemleri de gizlemek (bugün 12 besteci, 5 dönem kalır).</p></div>
-<div class="d"><p class="q">10. Sıralamalar</p><p class="r"><b>Öneri:</b> Besteciler A–Z (soyadına göre), ikinci seçenek “Döneme göre” (dönem başlıkları altında doğum yılına göre). Dönem ve tür sayfalarında günün eseri başta, sonra yazılış yılına göre; Kitaplık’taki gibi “en yeni eklenen başta” değil, çünkü bu sayfalar tarihe bakıyor.</p></div>
-<div class="d"><p class="q">11. Kilit gösterimi</p><p class="r"><b>Öneri: Kitaplık’la birebir aynı.</b> Kartlarda ve bölüm sayfalarında rozet yok; kilit yalnızca kilitli eserin satırında, ok yerine. Doğum günü armağanı satırları burada da “Bugün açık” olur.</p></div>
-<div class="d"><p class="q">12. Dönem tarihleri ve cümleleri</p><p class="r">Pano 4’teki tarihler ve tek cümlelik tanımlar genel, güvenli ifadeler. <b>Emin olmadığım yer:</b> Romantik / Geç Romantik sınırı (1870) bizim kendi ayrımımız; tarihler “y.” ile yazılı. Metinleri senin ve içerik tarafının onayına bırakıyorum.</p></div>
-<div class="d"><p class="q">13. Kitaplık’taki filtreler</p><p class="r"><b>Öneri: dokunulmasın.</b> Tür / Besteci / Dönem filtreleri Kitaplık’ta kalır; Keşfet aynı veriye görselli ve açıklamalı bir giriş. İleride istenirse dönem sayfasından “Kitaplık’ta göster” eklenebilir.</p></div>
-<div class="d"><p class="q">14. Gereken yeni veri ve kod</p><p class="r"><b>Veri:</b> yeni content/eras.yaml (tarih aralığı, en/tr tek cümle, dört kolaj eseri); tür görselleri için eser listesi (seçenek 1); kolaj tablolarına focal_x; yeni çeviri metinleri. <b>Sunucu:</b> yeni uç nokta gerekmiyor; dönem/tür verisi sözlük gibi paketlenip sunulur, kolajlar mevcut küçük görselleri kullanır. <b>Uygulama:</b> SearchScreen’in boş durumu, üç liste ve iki sayfa, AppRouter’a searchPath, ücretsiz kullanıcı akışı (madde 2). RootView’daki arama kurulumu değişmez.</p></div>
+<p style="padding: 12px 0; border-top: 1px solid var(--rule)"><b style="color: var(--ink)">8. Türler:</b> tablolardaki müzik; her türe elle seçilmiş bir tablo.</p>
+<p style="padding: 12px 0; border-top: 1px solid var(--rule)"><b style="color: var(--ink)">9. Görünürlük:</b> 52 besteci ve 6 dönem baştan görünür; türler ilk yayımlanan eserleriyle; sayılar yayımlanan eserler.</p>
+<p style="padding: 12px 0; border-top: 1px solid var(--rule)"><b style="color: var(--ink)">10. Sıralama:</b> besteciler soyadına göre A–Z, ayrıca “Döneme göre”; dönem ve tür sayfalarında günün eseri başta, sonra yazılış yılı.</p>
+<p style="padding: 12px 0; border-top: 1px solid var(--rule)"><b style="color: var(--ink)">11. Kilit:</b> Kitaplık’la aynı; kartlarda rozet yok, kilit yalnız kilitli eserin satırında; doğum günü armağanı “Bugün açık”.</p>
+<p style="padding: 12px 0; border-top: 1px solid var(--rule)"><b style="color: var(--ink)">12. Dönem tarihleri ve cümleleri:</b> koddan önce kaynaklardan doğrulanacak.</p>
+<p style="padding: 12px 0; border-top: 1px solid var(--rule)"><b style="color: var(--ink)">13. Kitaplık köprüsü:</b> dönem ve tür sayfalarının sonunda “Kitaplık’ta göster”; Kitaplık’ta besteci filtresi seçiliyken o bestecinin sayfasına küçük bağlantı.</p>
 </div>
 </div>
+<p class="t-label acc" style="padding: 30px 0 10px">Açık</p>
+<p style="font: 400 16px/1.5 var(--sans); color: var(--ink2); max-width: 1100px"><b style="color: var(--ink)">7.</b> Rönesans tablosu seçildi: Giorgione, <i>Fırtına</i> (y. 1506–08), Vivaldi’nin “Yaz”ının tablosu; onayını bekliyor. <b style="color: var(--ink)">8.</b> Keman konçertoları için Böcklin’in tablosu (ölümün keman çaldığı otoportre) karanlık; katalogda başka solo kemancı yok, gözden geçirilecek. <b style="color: var(--ink)">12.</b> Tarih ve cümle doğrulaması.</p>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1400,"height":1480}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1400,"height":760}}'>
 class Component extends DCLogic {
 renderVals() { return {}; }
 }

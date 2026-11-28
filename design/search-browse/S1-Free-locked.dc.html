@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Ücretsiz kullanıcı arama alanına dokununca</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./dc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+@font-face{font-family:Literata;font-weight:400;src:url(/_blob/a2b79de3bbd556cdd11d217c91d81dc0)}
+@font-face{font-family:Literata;font-weight:400;font-style:italic;src:url(/_blob/fd72da16ddda9331164c876aa2c4733d)}
+@font-face{font-family:Literata;font-weight:500;src:url(/_blob/bd3f03be5cca724c12eeb435e9626e02)}
+@font-face{font-family:Literata;font-weight:600;src:url(/_blob/447ddca32e7d6cc1eb48f4b7ab63d7cd)}
+.i-chev{-webkit-mask-image:url(/_blob/9e62ffe1e4aeb73c55662ac38056a19b);mask-image:url(/_blob/9e62ffe1e4aeb73c55662ac38056a19b)}
+.i-close{-webkit-mask-image:url(/_blob/f80b44985607f50ce7988a8d4fbf84d2);mask-image:url(/_blob/f80b44985607f50ce7988a8d4fbf84d2)}
+.i-book{-webkit-mask-image:url(/_blob/d358997074b88524e3dcb3afaf6577ff);mask-image:url(/_blob/d358997074b88524e3dcb3afaf6577ff)}
+.i-lock{-webkit-mask-image:url(/_blob/75d00bc3ce33aa8949ab0b7b8b2fb890);mask-image:url(/_blob/75d00bc3ce33aa8949ab0b7b8b2fb890)}
+.i-search{-webkit-mask-image:url(/_blob/607ec60fedf48517d412727ac501d6fc);mask-image:url(/_blob/607ec60fedf48517d412727ac501d6fc)}
+.i-lib{-webkit-mask-image:url(/_blob/5786a4da4c63241ece8b5b9c6f86a32b);mask-image:url(/_blob/5786a4da4c63241ece8b5b9c6f86a32b)}
+.i-set{-webkit-mask-image:url(/_blob/0eacb534b4b21c90f4a5e704c2ae520f);mask-image:url(/_blob/0eacb534b4b21c90f4a5e704c2ae520f)}
+.i-today{-webkit-mask-image:url(/_blob/f488dce9f8301ce55979ce0d08ea8bf9);mask-image:url(/_blob/f488dce9f8301ce55979ce0d08ea8bf9)}
+</style>
+</helmet>
+<div class="dc phone">
+<div class="col" style="position: absolute; left: 0; right: 0; top: 62px; bottom: 390px; padding: 0 48px; align-items: center; justify-content: center; text-align: center">
+<span class="ic acc i-lock" aria-hidden="true" style="width: 36px; height: 36px; margin-bottom: 18px"></span>
+<h1 class="t-24" style="line-height: 1.2">Arama Premium’a dahil</h1>
+<p style="font: 400 15px/1.5 var(--sans); color: var(--ink2); margin-top: 12px">Kitaplıktaki her eseri, besteciyi ve terimi bir anda bulun.</p>
+<a href="#" style="margin-top: 26px; min-height: 44px; padding: 0 22px; border-radius: 999px; background: var(--accent); color: var(--ontint); font: 600 15px/1 var(--sans); display: inline-flex; align-items: center">Premium’u gör</a>
+</div>
+<div class="sfield glass cap" style="left: 19px; right: 77px; bottom: 328px"><span class="ic s20 i-search" aria-hidden="true"></span><span class="caret" style="margin-left: 0"></span>Eser, besteci, terim</div>
+<div class="sback glass" style="left: auto; right: 19px; bottom: 328px"><span class="ic s20 i-close" role="img" aria-label="Aramayı kapat"></span></div>
+<div class="kbd">iOS klavyesi</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":402,"height":874}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

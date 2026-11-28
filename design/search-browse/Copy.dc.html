@@ -15,9 +15,9 @@ body{margin:0}
 @font-face{font-family:Literata;font-weight:500;src:url(/_blob/bd3f03be5cca724c12eeb435e9626e02)}
 </style>
 </helmet>
-<div class="dc board" style="width: 1400px; height: 1260px">
-<h1 class="t-large">Copy · EN and TR</h1>
-<p class="note-t" style="margin-top: 8px; max-width: 1000px">Names follow what the app already says: the Library filter is “Form” / “Tür” (“All forms” / “Tüm türler”), and era names are the existing <b>era.*</b> strings. Turkish dates use “y.” as the piece pages do. Marked items are the ones I am not sure of.</p>
+<div class="dc board" style="width: 1400px; height: 1310px">
+<h1 class="t-large">Copy · EN and TR <span class="rec" style="margin-left: 10px">Doğrulanacak · to be verified</span></h1>
+<p class="note-t" style="margin-top: 8px; max-width: 1000px">Names follow what the app already says: the Library filter is “Form” / “Tür” (“All forms” / “Tüm türler”), and era names are the existing <b>era.*</b> strings. Turkish dates use “y.” as the piece pages do. Era dates and the one-line descriptions will be checked against sources before coding.</p>
 <div class="tbl" style="grid-template-columns: 200px 1fr 1fr; margin-top: 26px">
 <span class="h">Where</span><span class="h">English</span><span class="h">Türkçe</span>
 <span>Page title</span><span class="s">Discover</span><span class="s">Keşfet</span>
@@ -26,6 +26,7 @@ body{margin:0}
 <span>Composer sort</span><span>A–Z · By era</span><span>A–Z · Döneme göre</span>
 <span>Counts</span><span>1 piece · 9 pieces · 3 composers · sorted by year</span><span>1 eser · 9 eser · 3 besteci · yazılış yılına göre</span>
 <span>Forms list footer</span><span>We add one piece a day. String quartets, chamber music and choral works appear here with their first piece.</span><span>Her gün bir eser ekliyoruz. Yaylı dörtlüler, oda müziği ve koro eserleri ilk eserleriyle burada görünecek.</span>
+<span>Bridge to Library</span><span>Show in Library · Mozart’s page</span><span>Kitaplık’ta göster · Mozart’ın sayfası</span>
 <span>Era with no piece yet</span><span>No pieces from this era yet. We add one a day.</span><span>Bu dönemden henüz eser yok. Her gün bir eser ekliyoruz.</span>
 </div>
 <div class="tbl" style="grid-template-columns: 200px 1fr 1fr; margin-top: 34px">
@@ -37,10 +38,10 @@ body{margin:0}
 <span><span class="s">Late Romantic era</span><br>c. 1870–1910 <span class="unsure">(boundary)</span><br>Geç Romantik dönem</span><span>Larger orchestras, longer works and national voices, from Russia and Bohemia to the North.</span><span>Daha büyük orkestralar, daha uzun eserler ve Rusya’dan Bohemya’ya, Kuzey’e uzanan ulusal sesler.</span>
 <span><span class="s">20th century</span><br>1900 onwards<br>20. yüzyıl · 1900’den sonra</span><span>No single style. New rhythms and harmonies; folk music and jazz enter the concert hall.</span><span>Tek bir üslup yok. Yeni ritimler ve armoniler; halk müziği ve caz konser salonuna girer.</span>
 </div>
-<p class="note-t" style="margin-top: 22px; max-width: 1100px"><span class="unsure">Not sure:</span> splitting Romantic and Late Romantic at 1870 is the app’s own convention (the catalogue sorts by composer: Brahms is Romantic, Bruckner, born earlier, is Late Romantic), and Rachmaninoff’s 1940 <i>Symphonic Dances</i> sits in Late Romantic. The dates are therefore printed with “c.” and describe the era, not every piece in it. The sentences avoid names and firsts on purpose; each is a general statement found in any standard music history.</p>
+<p class="note-t" style="margin-top: 22px; max-width: 1100px"><span class="unsure">To verify:</span> splitting Romantic and Late Romantic at 1870 is the app’s own convention (the catalogue sorts by composer: Brahms is Romantic, Bruckner, born earlier, is Late Romantic), and Rachmaninoff’s 1940 <i>Symphonic Dances</i> sits in Late Romantic. The dates are therefore printed with “c.” and describe the era, not every piece in it. The sentences avoid names and firsts on purpose; each is a general statement found in any standard music history.</p>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1400,"height":1260}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1400,"height":1310}}'>
 class Component extends DCLogic {
 renderVals() { return {}; }
 }
