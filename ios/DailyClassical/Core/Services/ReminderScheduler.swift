@@ -39,7 +39,7 @@ enum ReminderScheduler {
     static func schedule(at time: DateComponents, language: String) async -> Bool {
         let center = UNUserNotificationCenter.current()
         guard (try? await center.requestAuthorization(options: [.alert, .sound])) == true else { return false }
-        await PushNotifications.shared.permissionGranted()
+        PushNotifications.shared.permissionGranted()
         UserDefaults.standard.set(time.hour, forKey: "reminderHour")
         UserDefaults.standard.set(time.minute, forKey: "reminderMinute")
         await plan(language: language)
@@ -78,7 +78,12 @@ enum ReminderScheduler {
         let previous = planning
         let task = Task {
             await previous?.value
+            // A plan downloads up to 14 paintings. Opened for a moment and closed again, the app was
+            // suspended mid-plan: the download in flight failed and that day was planned without its
+            // painting. Ask iOS for the time to finish.
+            let background = UIApplication.shared.beginBackgroundTask(withName: "reminder-plan")
             await buildPlan(language: language)
+            if background != .invalid { UIApplication.shared.endBackgroundTask(background) }
         }
         planning = task
         await task.value
@@ -96,24 +101,35 @@ enum ReminderScheduler {
         let pieces = await upcoming(from: start, language: language)
         let composers = await composerList(language: language)
 
-        await removePending()
-        let center = UNUserNotificationCenter.current()
-        // Each plan's identifiers are new, so a removed request's attachment (which iOS deletes
-        // asynchronously) can never be confused with its replacement's.
-        let run = UUID().uuidString.prefix(8)
+        // Everything (paintings included) is ready before the old plan goes: the swap is quick,
+        // and a failed download never replaces a reminder that had its picture.
+        var requests: [(content: UNMutableNotificationContent, when: DateComponents, key: String)] = []
+        var missingPicture = false
         for offset in 0..<daysAhead {
             guard let date = calendar.date(byAdding: .day, value: offset, to: start) else { continue }
             let key = APIClient.day(date)
             let piece = offset < namedDays ? pieces[key]?.piece : nil
             let birthdays = Birthdays.celebrated(on: date, in: composers, simulated: nil)
             let content = await notification(piece: piece, birthdays: birthdays, on: date, language: language, premium: premium)
+            if piece != nil, content.attachments.isEmpty { missingPicture = true }
             var when = calendar.dateComponents([.year, .month, .day], from: date)
             when.hour = hour
             when.minute = minute
-            let trigger = UNCalendarNotificationTrigger(dateMatching: when, repeats: false)
-            try? await center.add(UNNotificationRequest(identifier: "\(prefix)-\(key)-\(run)", content: content, trigger: trigger))
+            requests.append((content, when, key))
         }
-        UserDefaults.standard.set(Date.now, forKey: plannedKey)
+
+        await removePending()
+        let center = UNUserNotificationCenter.current()
+        // Each plan's identifiers are new, so a removed request's attachment (which iOS deletes
+        // asynchronously) can never be confused with its replacement's.
+        let run = UUID().uuidString.prefix(8)
+        for r in requests {
+            let trigger = UNCalendarNotificationTrigger(dateMatching: r.when, repeats: false)
+            try? await center.add(UNNotificationRequest(identifier: "\(prefix)-\(r.key)-\(run)", content: r.content, trigger: trigger))
+        }
+        // A day still without its painting (offline, say): plan again at the next launch instead
+        // of an hour later.
+        UserDefaults.standard.set(missingPicture ? Date.distantPast : Date.now, forKey: plannedKey)
         UserDefaults.standard.set(language, forKey: plannedLanguageKey)
     }
 
@@ -246,8 +262,10 @@ enum ReminderScheduler {
 
     // MARK: Painting attachment
 
+    /// In Application Support, not Caches: iOS empties Caches when space runs low, and the next
+    /// plan then had to download every painting again.
     private static var imageCache: URL {
-        FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0].appending(path: "reminder", directoryHint: .isDirectory)
+        FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0].appending(path: "reminder", directoryHint: .isDirectory)
     }
 
     /// The painting as a JPEG attachment: the widget JPEG from the server (cached by its `?v=`), or
