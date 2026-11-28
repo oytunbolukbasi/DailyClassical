@@ -55,7 +55,7 @@
   facts:
     born: { en: "27 January 1756, Salzburg", tr: "27 Ocak 1756, Salzburg" }
     died: { en: "5 December 1791, Vienna", tr: "5 Aralık 1791, Viyana" }
-    symphonies: { en: "41 numbered", tr: "41 numaralı" }
+    symphonies: { en: "41 numbered (more than 50 in all)", tr: "41 numaralı (toplamda 50’yi aşkın)" }
     best_known_for: { en: "Operas, piano concertos, *Requiem*", tr: "Operaları, piyano konçertoları, *Requiem*" }
   bio:
     en: |-
@@ -1895,7 +1895,7 @@
   facts:
     born: { en: "25 October 1838, Paris", tr: "25 Ekim 1838, Paris" }
     died: { en: "3 June 1875, Bougival, near Paris", tr: "3 Haziran 1875, Bougival, Paris yakınları" }
-    symphonies: { en: "One, the Symphony in C, and the symphony *Roma*", tr: "Bir, Do Majör Senfoni; bir de *Roma* senfonisi" }
+    symphonies: { en: "Two: the Symphony in C and *Roma*", tr: "İki: Do Majör Senfoni ve *Roma*" }
     best_known_for: { en: "*Carmen*, *L'Arlésienne*, *The Pearl Fishers*", tr: "*Carmen*, *L'Arlésienne*, *İnci Avcıları*" }
   bio:
     en: |-
