@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Copy, EN and TR</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./dc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+@font-face{font-family:Literata;font-weight:400;src:url(/_blob/a2b79de3bbd556cdd11d217c91d81dc0)}
+@font-face{font-family:Literata;font-weight:500;src:url(/_blob/bd3f03be5cca724c12eeb435e9626e02)}
+</style>
+</helmet>
+<div class="dc board" style="width: 1400px; height: 1260px">
+<h1 class="t-large">Copy · EN and TR</h1>
+<p class="note-t" style="margin-top: 8px; max-width: 1000px">Names follow what the app already says: the Library filter is “Form” / “Tür” (“All forms” / “Tüm türler”), and era names are the existing <b>era.*</b> strings. Turkish dates use “y.” as the piece pages do. Marked items are the ones I am not sure of.</p>
+<div class="tbl" style="grid-template-columns: 200px 1fr 1fr; margin-top: 26px">
+<span class="h">Where</span><span class="h">English</span><span class="h">Türkçe</span>
+<span>Page title</span><span class="s">Discover</span><span class="s">Keşfet</span>
+<span>Cards</span><span class="s">Composers · Eras · Forms</span><span class="s">Besteciler · Dönemler · Türler</span>
+<span>Card lines</span><span>52 composers, Tallis to Shostakovich · Renaissance to the 20th century · Symphonies, concertos, chamber music</span><span>52 besteci, Tallis’ten Şostakoviç’e · Rönesans’tan 20. yüzyıla · Senfoniler, konçertolar, oda müziği</span>
+<span>Composer sort</span><span>A–Z · By era</span><span>A–Z · Döneme göre</span>
+<span>Counts</span><span>1 piece · 9 pieces · 3 composers · sorted by year</span><span>1 eser · 9 eser · 3 besteci · yazılış yılına göre</span>
+<span>Forms list footer</span><span>We add one piece a day. String quartets, chamber music and choral works appear here with their first piece.</span><span>Her gün bir eser ekliyoruz. Yaylı dörtlüler, oda müziği ve koro eserleri ilk eserleriyle burada görünecek.</span>
+<span>Era with no piece yet</span><span>No pieces from this era yet. We add one a day.</span><span>Bu dönemden henüz eser yok. Her gün bir eser ekliyoruz.</span>
+</div>
+<div class="tbl" style="grid-template-columns: 200px 1fr 1fr; margin-top: 34px">
+<span class="h">Era · dates</span><span class="h">One line, English</span><span class="h">Tek cümle, Türkçe</span>
+<span><span class="s">Renaissance</span><br>c. 1400–1600<br>Rönesans · y. 1400–1600</span><span>Music for voices, woven from many independent lines, most of it written for the church.</span><span>Birbirinden bağımsız seslerin örüldüğü vokal müzik; çoğu kilise için yazıldı.</span>
+<span><span class="s">Baroque era</span><br>c. 1600–1750<br>Barok dönem</span><span>Ornate melody over a steady bass. The age of the concerto, the suite and the fugue.</span><span>Kesintisiz bir basın üzerinde süslü ezgiler. Konçertonun, süitin ve fügün çağı.</span>
+<span><span class="s">Classical era</span><br>c. 1750–1820<br>Klasik dönem</span><span>Clarity, balance and themes you can sing. The symphony, the string quartet and the piano sonata take their lasting shape.</span><span>Açıklık, denge ve akılda kalan temalar. Senfoni, yaylı dörtlü ve piyano sonatı kalıcı biçimini alır.</span>
+<span><span class="s">Romantic era</span><br>c. 1820–1870 <span class="unsure">(boundary)</span><br>Romantik dönem</span><span>Feeling comes first. Music tells stories, paints landscapes and becomes more personal.</span><span>Önce duygu gelir. Müzik hikâye anlatır, manzara çizer, daha kişisel bir dile bürünür.</span>
+<span><span class="s">Late Romantic era</span><br>c. 1870–1910 <span class="unsure">(boundary)</span><br>Geç Romantik dönem</span><span>Larger orchestras, longer works and national voices, from Russia and Bohemia to the North.</span><span>Daha büyük orkestralar, daha uzun eserler ve Rusya’dan Bohemya’ya, Kuzey’e uzanan ulusal sesler.</span>
+<span><span class="s">20th century</span><br>1900 onwards<br>20. yüzyıl · 1900’den sonra</span><span>No single style. New rhythms and harmonies; folk music and jazz enter the concert hall.</span><span>Tek bir üslup yok. Yeni ritimler ve armoniler; halk müziği ve caz konser salonuna girer.</span>
+</div>
+<p class="note-t" style="margin-top: 22px; max-width: 1100px"><span class="unsure">Not sure:</span> splitting Romantic and Late Romantic at 1870 is the app’s own convention (the catalogue sorts by composer: Brahms is Romantic, Bruckner, born earlier, is Late Romantic), and Rachmaninoff’s 1940 <i>Symphonic Dances</i> sits in Late Romantic. The dates are therefore printed with “c.” and describe the era, not every piece in it. The sentences avoid names and firsts on purpose; each is a general statement found in any standard music history.</p>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1400,"height":1260}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

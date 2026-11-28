@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Composers card</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./dc.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+@font-face{font-family:Literata;font-weight:400;src:url(/_blob/a2b79de3bbd556cdd11d217c91d81dc0)}
+@font-face{font-family:Literata;font-weight:500;src:url(/_blob/bd3f03be5cca724c12eeb435e9626e02)}
+.i-chev{-webkit-mask-image:url(/_blob/9e62ffe1e4aeb73c55662ac38056a19b);mask-image:url(/_blob/9e62ffe1e4aeb73c55662ac38056a19b)}
+</style>
+</helmet>
+<div class="dc board" style="width: 880px; height: 640px">
+<h1 class="t-24">Composers · portraits</h1>
+<p class="note-t" style="margin-top: 6px; max-width: 720px">The plate is a strip of portraits, each cover-cropped at its own <b>focal_y</b> (already in composers.yaml), so faces stay in frame. No filter, no text on the image.</p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 354px)); gap: 60px; margin-top: 32px">
+<div>
+<p class="t-label" style="padding-bottom: 14px">A · Four fixed portraits <span class="rec" style="margin-left: 6px">Recommended</span></p>
+<div class="pl">
+<span class="plate" style="height: 124px"><img src="/_blob/655fddddb45de69a62189f60d404942f" alt="" style="object-position: 50% 20%"><img src="/_blob/637475374e8a8b17dcf112b061da974f" alt="" style="object-position: 50% 30%"><img src="/_blob/a7a46a6170d26db4cfc0c204ae39d21d" alt="" style="object-position: 50% 20%"><img src="/_blob/b12ad870b68f18186c86b31c85e99738" alt="" style="object-position: 50% 18%"></span>
+<span class="plab"><span><span class="n">Composers</span><span class="m">52 composers, Tallis to Shostakovich</span></span><span class="ic chev i-chev" aria-hidden="true"></span></span>
+</div>
+<p class="note-t" style="margin-top: 22px">Bach, Mozart, Beethoven, Tchaikovsky, in birth order. The same four every day: the card is a door, not news. They are also the four portraits people recognise without a caption.</p>
+</div>
+<div>
+<p class="t-label" style="padding-bottom: 14px">B · Today’s composer leads</p>
+<div class="pl">
+<span class="plate" style="height: 124px"><img src="/_blob/637475374e8a8b17dcf112b061da974f" alt="" style="object-position: 50% 26%; flex-grow: 2.2"><img src="/_blob/655fddddb45de69a62189f60d404942f" alt="" style="object-position: 50% 20%"><img src="/_blob/a7a46a6170d26db4cfc0c204ae39d21d" alt="" style="object-position: 50% 20%"><img src="/_blob/b12ad870b68f18186c86b31c85e99738" alt="" style="object-position: 50% 18%"></span>
+<span class="plab"><span><span class="n">Composers</span><span class="m">52 composers, Tallis to Shostakovich</span></span><span class="ic chev i-chev" aria-hidden="true"></span></span>
+</div>
+<p class="note-t" style="margin-top: 22px">The composer of today’s piece takes a wider first strip (Mozart on 28 November); the other three are fixed. Livelier, but the card changes daily and four composers have no portrait (Tallis, Pachelbel, Rodrigo, Barber), so those days fall back to A.</p>
+</div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":880,"height":640}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
