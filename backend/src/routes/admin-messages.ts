@@ -41,6 +41,17 @@ type Message = {
 };
 
 const fmt = new Intl.NumberFormat("tr-TR");
+/** "1.10" after "1.4"; anything that isn't a version ("?") last. */
+export function compareVersions(a: string, b: string): number {
+  const parse = (v: string) => (/^\d+(\.\d+)*$/.test(v) ? v.split(".").map(Number) : null);
+  const x = parse(a), y = parse(b);
+  if (!x || !y) return x ? 1 : y ? -1 : 0;
+  for (let i = 0; i < Math.max(x.length, y.length); i++) {
+    const d = (x[i] ?? 0) - (y[i] ?? 0);
+    if (d) return d;
+  }
+  return 0;
+}
 const when = (t: string | Date) => new Intl.DateTimeFormat("tr-TR", { timeZone: TZ, day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }).format(new Date(t));
 /** A datetime-local value is Istanbul time (UTC+3 all year since 2016). */
 const fromLocal = (v: string) => (/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(v) ? new Date(`${v}:00+03:00`) : null);
@@ -265,6 +276,24 @@ async function messagesView(email: string, ok?: string, err?: string) {
       (select count(*) from push_test_devices where verified_at is not null)::int as test,
       count(*) filter (where environment = 'sandbox')::int as sandbox
     from push_devices`;
+  // Readers per app version: each install's latest version from the anonymous usage counts
+  // (routes/events.ts), by when it was last active; test builds left out. Push-reachable
+  // devices per version beside it. An estimate: an install that never opened the app since
+  // updating still counts under its old version.
+  const versions = await sql<{ version: string; d7: number; d30: number; push: number }[]>`
+    with v as (
+      select coalesce(app_version, '?') as version,
+        count(*) filter (where last_seen >= current_date - 6)::int as d7,
+        count(*) filter (where last_seen >= current_date - 29)::int as d30
+      from app_installs where not is_test group by 1
+    ), p as (
+      select coalesce(app_version, '?') as version, count(*)::int as push
+      from push_devices where not is_test and environment = any(${apnsEnvironments()}) group by 1
+    )
+    select coalesce(v.version, p.version) as version, coalesce(v.d7, 0) as d7, coalesce(v.d30, 0) as d30, coalesce(p.push, 0) as push
+    from v full join p on p.version = v.version
+    where coalesce(v.d30, 0) > 0 or coalesce(p.push, 0) > 0`;
+  versions.sort((a, b) => compareVersions(b.version, a.version));
   const campaigns = await sql<Campaign[]>`
     select id, created_at::text, created_by, title_en, body_en, title_tr, body_tr, link, image_url, audience, test_only,
            send_at::text, status, sent_count, failed_count, opened_count
@@ -311,6 +340,20 @@ async function messagesView(email: string, ok?: string, err?: string) {
       </div>
       ${!apnsConfigured() ? html`<p class="note">APNs anahtarı sunucuda tanımlı değil (APNS_KEY_ID, APNS_PRIVATE_KEY): push'lar kaydedilir ama gönderilmez.</p>` : ""}
       ${devices!.sandbox ? html`<p class="small m">${fmt.format(devices!.sandbox)} cihaz Xcode build'i (sandbox); anahtarımız yalnız Production olduğu için bunlara push gitmez.</p>` : ""}
+    </section>
+
+    <section id="versions">
+      <h2>Sürümler <span class="m">son 30 günde açılan kurulumlar, en son açıldığı sürüme göre (tahmini)</span></h2>
+      ${versions.length === 0 ? html`<p class="m">Henüz veri yok.</p>` : html`
+      <div class="scroll"><table>
+        <thead><tr><th>Sürüm</th><th class="n">Son 7 gün</th><th class="n">Son 30 gün</th><th class="n">Pay</th><th class="n">Bildirim alan</th></tr></thead>
+        <tbody>${versions.map((v) => html`<tr>
+          <td>${v.version}</td>
+          <td class="n">${fmt.format(v.d7)}</td>
+          <td class="n">${fmt.format(v.d30)}</td>
+          <td class="n">${pct(v.d30, versions.reduce((a, x) => a + x.d30, 0))}</td>
+          <td class="n">${fmt.format(v.push)}</td>
+        </tr>`)}</tbody></table></div>`}
     </section>
 
     <section id="push">
