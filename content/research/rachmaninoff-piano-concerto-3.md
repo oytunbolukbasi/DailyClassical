@@ -94,3 +94,40 @@ Reference: Ashkenazy / Previn / LSO, Spotify `3LTVA25MzhU8ZR4evxxGMR` (tracks 7�
 | I Allegro ma non tanto | 18:44 | 0:00, 1:05, 2:00, 2:50, 3:20, 5:30, 6:15–9:30, 9:45–12:30, 12:30–14:00, 14:00, 16:30, Last minute | Start of the cadenza (≈ 9:45), the wind solos (≈ 12:30–14:00) and the recapitulation (≈ 16:30): could each be a minute out |
 | II Intermezzo: Adagio | 12:08 | 0:00, 1:10, 2:15, 4:00–6:00, 8:30, 10:00, 11:00, Last 30 seconds | Piano entry (≈ 2:15) and the waltz episode (≈ 8:30) |
 | III Finale: Alla breve | 14:58 | 0:00, 1:20, 3:30–7:30, 7:30–9:00, 9:00, 10:30, 12:00–13:30, 13:30, Last 20 seconds | Boundaries of the E-flat digression (≈ 3:30–7:30) and the D major apotheosis (≈ 13:30) |
+
+---
+
+## 6. New reference recording (2026-11-28, batch 2026-11c, group C): Yuja Wang / Dudamel / Simón Bolívar Symphony Orchestra (DG, live 2013)
+
+Product owner's choice. Ashkenazy / Previn moves to the top of `also_recommended` (Argerich / Chailly stays as the second). Drafts: `content/drafts/{en,tr}/rachmaninoff-piano-concerto-3.md`; re-time rows in `content/research/rachmaninoff-piano-concerto-3.shared.md`.
+
+| Field | Value in the guide | Verified value | Source | Status |
+| --- | --- | --- | --- | --- |
+| Spotify album | https://open.spotify.com/album/1oRI5tMJtYyl5FHIKmZbFY | "Rachmaninoff: Piano Concerto No. 3 … / Prokofiev: Piano Concerto No. 2 … (Live)", tracks 1–3 credited "Sergei Rachmaninoff, Yuja Wang, Simón Bolívar Symphony Orchestra of Venezuela, Gustavo Dudamel"; album page "2013", "℗ 2013 Deutsche Grammophon GmbH, Berlin" | embed and album page, read 2026-11-28 | OK |
+| Label / cat. no. | Deutsche Grammophon, 479 1304 (CD, with Prokofiev 2) | MusicWeb (Dan Morgan, March 2014): "DEUTSCHE GRAMMOPHON 4791304"; DG product page UPC 00028947913047 | https://musicweb-international.com/classrev/2014/Mar14/Rachmaninov_PC3_4791304_DMp.htm ; https://www.deutschegrammophon.com/en/catalogue/products/rachman-prokofiev-concertos-y-wang-9780 | OK |
+| Recorded / venue | February 2013 (live), Sala Simón Bolívar, Centro de Acción Social por la Música, Caracas | MusicWeb: "rec. live, Sala Simón Bolívar, Centro de Acción Social por la Música, Caracas, Venezuela, February 2013"; Presto Music (search excerpt): "Recorded: 2013-02-16" | as above; https://www.prestomusic.com/classical/products/8037538--rachmaninov-prokofiev-piano-concertos | OK (day SECONDARY, kept in a yaml comment only) |
+| release_year / year | 2013 / 2013 | ℗ 2013; MPR "New Classical Tracks" 27 Nov 2013; DG page dates the product 3 Feb 2014 (international/reissue date) | https://www.yourclassical.org/story/2013/11/27/new-classical-tracks-yuja-wang-and-gustavo-dudamel-conspire-on-russian-project | OK |
+| Same concert as Prokofiev 2; orchestra = El Sistema's flagship; first recording of the orchestra with a soloist | DG product text (German): "internationales Aushängeschild des … Netzwerks von Musikschulen und Jugendorchestern in Venezuela namens El Sistema, präsentiert zum ersten Mal eine Aufnahme mit einer Solistin … In einem Konzert spielt sie … das Zweite Klavierkonzert von Prokofjew sowie Rachmaninows Drittes" | DG page | OK |
+| Cadenza | Shorter (original) cadenza | Hi-Fi+ review of Wang's 2023 DG set: "As with her earlier version, Wang chooses Rachmaninov's shorter cadenza"; New York Classical Review (Carnegie 2023) and The Classic Review also report the shorter one in her performances (search excerpts) | https://hifiplus.com/articles/music-review-rachmaninov-the-four-piano-concertos-rhapsody-on-a-theme-of-paganini/ | OK (the 2013 choice is stated by Hi-Fi+ by comparison; consistent with the 15:50 first movement) |
+| Applause kept at the end | MusicWeb: "the audience's roar of approval at the close"; Gramophone: performances "greeted with storms of applause" (search excerpt) | as above | OK (length of the applause unknown) |
+| Cuts | Not stated in any source read; the guide's text makes no claim about this recording | – | UNVERIFIED |
+
+Reception, for the record: Gramophone positive (search excerpt); MusicWeb (Dan Morgan) and Classics Today ("an inconsistent summit meeting") mixed; Enjoy the Music critical of rushed climaxes.
+
+### Durations and playability (embed, album 1oRI5tMJtYyl5FHIKmZbFY, read 2026-11-28 from Turkey)
+
+| Track | Movement | ms | Time | isPlayable |
+| --- | --- | --- | --- | --- |
+| 1 | I. Allegro ma non tanto – Live | 950 280 | 15:50 | true |
+| 2 | II. Intermezzo (Adagio) – Live | 638 293 | 10:38 | true |
+| 3 | III. Finale (Alla breve) – Live | 857 173 | 14:17 | true |
+| | Total | 2 445 746 | 40:46 → `duration_min: 41` | |
+
+Tracks 4–7 (Prokofiev) not used.
+
+### How the stops were moved (not heard)
+
+- I: Ashkenazy probably plays the long *ossia* cadenza (section 1 above), Wang the short one. Everything outside the cadenza's main part was scaled by 0.875 (Wang's quicker tempos); the short cadenza's main part was taken as ≈ 1:50 (Ashkenazy's long one ≈ 2:45). Check: 0.875 × (9:45 + 1:30 + 4:44) + 1:50 ≈ 15:50. New: 0:00, 0:55, 1:45, 2:30, 2:55, 4:50, 5:30–8:20, 8:30–10:20, 10:20–11:40, 11:40, 13:50, Last minute. The cadenza stop now says "light and quick at first … the shorter version"; the movement summary no longer calls the cadenza "long" and "thunderous".
+- II: scaled by 10:38 / 12:08 = 0.877: 0:00, 1:00, 2:00, 3:30–5:15, 7:25, 8:45, 9:40, Last 30 seconds.
+- III: the track ends with applause of unknown length (taken as ≈ 25 s); music scaled by ≈ 0.926: 0:00, 1:15, 3:15–7:00, 7:00–8:20, 8:20, 9:45, 11:05–12:30, 12:30, and the last stop changed from "Last 20 seconds" to "≈ 13:35" ("… then applause").
+- Recording-specific text rewritten: "In this recording" (movement I), the cadenza stop and the movement I summary, EN and TR. Nothing else changed.

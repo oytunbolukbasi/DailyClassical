@@ -39,7 +39,7 @@ order:
   - tchaikovsky-violin-concerto
   - debussy-la-mer
   - mozart-piano-concerto-21
-  - rimsky-korsakov-scheherazade
+  - mahler-symphony-6                   # 5 Dec, the user's choice (Scheherazade moved to the end)
   - sibelius-finlandia                  # 6 Dec, Finnish Independence Day
   # Days 28–34 (7–13 Dec)
   - brahms-symphony-1
@@ -65,3 +65,5 @@ order:
   - handel-music-for-the-royal-fireworks  # 25 Dec, Christmas Day
   - schubert-piano-quintet-trout
   - mozart-clarinet-concerto
+  # Day 49 (28 Dec): moved here from 5 Dec
+  - rimsky-korsakov-scheherazade

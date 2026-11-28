@@ -9,23 +9,35 @@ title: Re minör 3. Piyano Konçertosu
 catalogue: Op. 30
 key: Re minör
 year: 1909
-duration_min: 46
+duration_min: 41
 movement_count: 3
 hook: Rahmaninov'un "kendi kendini yazdı" dediği bir melodiyle başlar ve yazılmış en zor konçertolardan birine dönüşür.
 reference_recording:
   soloists:
-    - { name: Vladimir Ashkenazy, role: piano }
-  conductor: André Previn
-  orchestra: London Symphony Orchestra
-  label: Decca
-  catalogue_number: "SXL 6555 (LP); also in the set SXLF 6565-7"
-  recorded: "March 1971"
-  # Venue from DG/Decca metadata for the other sessions of the set only (see research note).
-  venue: Kingsway Hall, London
-  release_year: 1972
-  year: 1971
-  spotify_url: https://open.spotify.com/album/3LTVA25MzhU8ZR4evxxGMR
+    - { name: Yuja Wang, role: piano }
+  conductor: Gustavo Dudamel
+  orchestra: Simón Bolívar Symphony Orchestra of Venezuela
+  label: Deutsche Grammophon
+  catalogue_number: "479 1304 (CD, with Prokofiev's Piano Concerto No. 2)"
+  # Day (16 February) from Presto Music only (see research note).
+  recorded: "February 2013 (live)"
+  venue: Sala Simón Bolívar, Centro de Acción Social por la Música, Caracas
+  release_year: 2013
+  year: 2013
+  spotify_url: https://open.spotify.com/album/1oRI5tMJtYyl5FHIKmZbFY
 also_recommended:
+  - soloists:
+      - { name: Vladimir Ashkenazy, role: piano }
+    conductor: André Previn
+    orchestra: London Symphony Orchestra
+    label: Decca
+    catalogue_number: "SXL 6555 (LP); also in the set SXLF 6565-7"
+    recorded: "March 1971"
+    # Venue from DG/Decca metadata for the other sessions of the set only (see research note).
+    venue: Kingsway Hall, London
+    release_year: 1972
+    year: 1971
+    spotify_url: https://open.spotify.com/album/3LTVA25MzhU8ZR4evxxGMR
   - soloists:
       - { name: Martha Argerich, role: piano }
     conductor: Riccardo Chailly
@@ -58,13 +70,13 @@ painting:
 
 | | Tempo | Ton | Ölçü | Süre |
 | --- | --- | --- | --- | --- |
-| I | Allegro ma non tanto | Re minör | 4/4 | 18:44 |
-| II | Intermezzo: Adagio | Çeşitli tonlar | 3/4 | 12:08 |
-| III | Finale: Alla breve | Re minör – Re majör | 2/2 | 14:58 |
+| I | Allegro ma non tanto | Re minör | 4/4 | 15:50 |
+| II | Intermezzo: Adagio | Çeşitli tonlar | 3/4 | 10:38 |
+| III | Finale: Alla breve | Re minör – Re majör | 2/2 | 14:17 |
 
 ### I. Allegro ma non tanto
 
-**Özet.** Orkestradaki iki ölçülük sessiz bir nabızdan sonra piyano, çıplak oktavlarla uzun, sade bir melodi çalar. Her şey bu melodiden doğar. Bölüm [[sonata form|sonat formundadır]], ama ağırlık merkezi uzun solo kadanstır: kadans gümbürdeyen bir doruğa yükselir, ardından dört üflemeli çalgı açılış temasını hatırlatırken sessizleşir.
+**Özet.** Orkestradaki iki ölçülük sessiz bir nabızdan sonra piyano, çıplak oktavlarla uzun, sade bir melodi çalar. Her şey bu melodiden doğar. Bölüm [[sonata form|sonat formundadır]], ama ağırlık merkezi solo kadanstır: kadans bir doruğa yükselir, ardından dört üflemeli çalgı açılış temasını hatırlatırken sessizleşir.
 
 **Ana fikirler**
 
@@ -76,16 +88,16 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Orkestrada yumuşak, nabız gibi atan bir vuruş; piyano oktavlarla sade, sessiz bir melodiyle girer | 1. tema. Rahmaninov onun "kendi kendini yazdığını" söylerdi |
-| ≈ 1:05 | Melodiyi orkestra alır; piyano çevresine hızlı, hareketli figürler örer | 1. tema orkestrada |
-| ≈ 2:00 | Piyano hızlanır ve huzursuzlaşır | Geçiş |
-| ≈ 2:50 | Kısa, sessiz karşılıklar: orkestrada kuru akorlar, piyanodan hafif yanıtlar | 2. temaya hazırlık |
-| ≈ 3:20 | Piyano tempoda daha serbest, sıcak, özlem dolu bir melodi söyler | 2. tema, Si bemol majörde |
-| ≈ 5:30 | Piyano sessizce açılış melodisini hatırlar | [[exposition|Serimin]] sonu |
-| ≈ 6:15–9:30 | Piyanoda elleri iç içe geçen hızlı, döven notalar; müzik ağır akorlarla güçlenir ve kararır | [[development|Gelişme bölümü]], Do minörde |
-| ≈ 9:45–12:30 | Orkestra susar; piyano tek başına uzun bir soloyu gümbürdeyen bir doruğa taşır | [[cadenza|Kadans]] |
-| ≈ 12:30–14:00 | Flüt, obua, klarnet ve korno sırayla açılış melodisini usulca çalar; piyano dalgalanır | Kadansın sessiz ikinci kısmı |
-| ≈ 14:00 | Piyano tek başına, çok yumuşak, ikinci tema üzerine dalıp gider | 2. tema, Mi bemol majörde |
-| ≈ 16:30 | Piyano açılış melodisini orkestrayla birlikte yeniden çalar | [[recapitulation|Yeniden serim]] |
+| ≈ 0:55 | Melodiyi orkestra alır; piyano çevresine hızlı, hareketli figürler örer | 1. tema orkestrada |
+| ≈ 1:45 | Piyano hızlanır ve huzursuzlaşır | Geçiş |
+| ≈ 2:30 | Kısa, sessiz karşılıklar: orkestrada kuru akorlar, piyanodan hafif yanıtlar | 2. temaya hazırlık |
+| ≈ 2:55 | Piyano tempoda daha serbest, sıcak, özlem dolu bir melodi söyler | 2. tema, Si bemol majörde |
+| ≈ 4:50 | Piyano sessizce açılış melodisini hatırlar | [[exposition|Serimin]] sonu |
+| ≈ 5:30–8:20 | Piyanoda elleri iç içe geçen hızlı, döven notalar; müzik ağır akorlarla güçlenir ve kararır | [[development|Gelişme bölümü]], Do minörde |
+| ≈ 8:30–10:20 | Orkestra susar; piyano tek başına, önce hafif ve hızlı, gür bir doruğa tırmanır | [[cadenza|Kadans]], kısa versiyonuyla |
+| ≈ 10:20–11:40 | Flüt, obua, klarnet ve korno sırayla açılış melodisini usulca çalar; piyano dalgalanır | Kadansın sessiz ikinci kısmı |
+| ≈ 11:40 | Piyano tek başına, çok yumuşak, ikinci tema üzerine dalıp gider | 2. tema, Mi bemol majörde |
+| ≈ 13:50 | Piyano açılış melodisini orkestrayla birlikte yeniden çalar | [[recapitulation|Yeniden serim]] |
 | Son dakika | Sessiz, dalgalanan bir kapanış, ardından birkaç hızlı nota | [[coda|Koda]] |
 
 **Dikkat edilecekler**
@@ -93,7 +105,7 @@ painting:
 1. Açılış melodisini kendinize söyleyin. Küçük adımlarla ilerler ve dar bir aralıkta kalır, bir ilahi gibi. Onu üç bölümün hepsinde arayın.
 2. Kadansın sessiz ikinci kısmında dört üflemeli solisti sayın: flüt, obua, klarnet, korno.
 
-**Bu kayıtta.** Ashkenazy, Rahmaninov'un dört konçertosunu Previn ve Londra Senfoni Orkestrası'yla Decca için kaydetti; bu Üçüncü, Mart 1971'de kaydedildi ve ilk kez 1972'de yayımlandı. Rahmaninov birinci bölümün kadansı için iki ayrı versiyon yazdı; piyanistler ikisinden birini seçer. Spotify albümünde Üçüncü, 7–9 numaralı parçalardır.
+**Bu kayıtta.** Yuja Wang konçertoyu Şubat 2013'te Karakas'ta, Prokofyev'in İkinci Konçertosu ile aynı konserde, canlı çalıyor. Orkestra, Venezuela'nın müzik okulları ve gençlik orkestralarından oluşan El Sistema ağının amiral gemisi olan Venezuela Simón Bolívar Senfoni Orkestrası; şef Gustavo Dudamel. Bu, orkestranın bir solistle yaptığı ilk kayıttı. Rahmaninov birinci bölümün kadansı için iki ayrı versiyon yazdı; Wang daha kısa ve daha hafif olanı seçiyor (≈ 8:30) ve tempoları hızlı, bu yüzden bölüm 16 dakikanın altında kalıyor. Finalin sonunda dinleyicilerin alkışı kayıtta bırakılmış.
 
 ### II. Intermezzo: Adagio
 
@@ -109,12 +121,12 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Yaylılar yumuşakça çalar; bir obua uzun, hüzünlü bir melodi söyler | Tema |
-| ≈ 1:10 | Melodiyi bütün yaylılar alır, daha zengin ve daha güçlü | Orkestranın varyasyonları |
-| ≈ 2:15 | Piyano ani bir patlamayla girer, ardından ezginin kendi versiyonunu çalar | Piyanonun ilk varyasyonu |
-| ≈ 4:00–6:00 | Piyano ezgiyi dolgun akorlara yayar; müzik tutkulu bir doruğa kabarır | Varyasyonlar büyüyor |
-| ≈ 8:30 | Daha hafif ve daha hızlı: vals gibi bir salınım; piyano ışıldarken klarnet ve fagotta birinci bölümün açılış melodisi | Vals ara bölümü, I. bölümün temasıyla |
-| ≈ 10:00 | Piyano ve orkestra için geniş, romantik bir doruk | Son varyasyon |
-| ≈ 11:00 | Orkestra açılıştaki hüzünlü melodiye döner | Açılış hatırlanıyor |
+| ≈ 1:00 | Melodiyi bütün yaylılar alır, daha zengin ve daha güçlü | Orkestranın varyasyonları |
+| ≈ 2:00 | Piyano ani bir patlamayla girer, ardından ezginin kendi versiyonunu çalar | Piyanonun ilk varyasyonu |
+| ≈ 3:30–5:15 | Piyano ezgiyi dolgun akorlara yayar; müzik tutkulu bir doruğa kabarır | Varyasyonlar büyüyor |
+| ≈ 7:25 | Daha hafif ve daha hızlı: vals gibi bir salınım; piyano ışıldarken klarnet ve fagotta birinci bölümün açılış melodisi | Vals ara bölümü, I. bölümün temasıyla |
+| ≈ 8:45 | Piyano ve orkestra için geniş, romantik bir doruk | Son varyasyon |
+| ≈ 9:40 | Orkestra açılıştaki hüzünlü melodiye döner | Açılış hatırlanıyor |
 | Son 30 saniye | Piyano sert bir akor ve koşu patlamasıyla araya girer ve hiç durmadan devam eder | Finale geçiş (*attacca*) |
 
 **Dikkat edilecekler**
@@ -136,14 +148,14 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Piyanoda hızlı, döven akorlar ve ileri atılan bir ritim | 1. tema, Re minörde |
-| ≈ 1:20 | Piyanoda gözü pek akorlar; ağır, salınan akorlarla yükselen daha geniş bir ezgi | 2. tema |
-| ≈ 3:30–7:30 | Uzun, daha hafif bir sapma: oyunbaz, hızlı ve yeni fikirlerle dolu, çoğunlukla sessiz | Orta kısım, Mi bemol majörde |
-| ≈ 7:30–9:00 | Daha yavaş ve daha düşsel: birinci bölümün iki teması geri gelir | I. bölümün temaları hatırlanıyor |
-| ≈ 9:00 | Finalin açılışındaki döven ritim yeniden | 1. tema dönüyor |
-| ≈ 10:30 | Ağır akorlarla ilerleyen geniş ezgi yeniden | 2. tema dönüyor |
-| ≈ 12:00–13:30 | Orkestranın ileri sürdüğü piyano, uzun, pırıltılı bir tırmanışta inip çıkar | Son tırmanış |
-| ≈ 13:30 | Bütün orkestra geniş ezgiyi Re majörde, ağır ve görkemli biçimde çalar; piyano akorlarla gürler | Bir zafer ilahisi olarak 2. tema |
-| Son 20 saniye | Bir akor seli ve son bir dört notalık ritim | Son; aynı kısa ritim İkinci Konçerto'yu da bitirir |
+| ≈ 1:15 | Piyanoda gözü pek akorlar; ağır, salınan akorlarla yükselen daha geniş bir ezgi | 2. tema |
+| ≈ 3:15–7:00 | Uzun, daha hafif bir sapma: oyunbaz, hızlı ve yeni fikirlerle dolu, çoğunlukla sessiz | Orta kısım, Mi bemol majörde |
+| ≈ 7:00–8:20 | Daha yavaş ve daha düşsel: birinci bölümün iki teması geri gelir | I. bölümün temaları hatırlanıyor |
+| ≈ 8:20 | Finalin açılışındaki döven ritim yeniden | 1. tema dönüyor |
+| ≈ 9:45 | Ağır akorlarla ilerleyen geniş ezgi yeniden | 2. tema dönüyor |
+| ≈ 11:05–12:30 | Orkestranın ileri sürdüğü piyano, uzun, pırıltılı bir tırmanışta inip çıkar | Son tırmanış |
+| ≈ 12:30 | Bütün orkestra geniş ezgiyi Re majörde, ağır ve görkemli biçimde çalar; piyano akorlarla gürler | Bir zafer ilahisi olarak 2. tema |
+| ≈ 13:35 | Bir akor seli ve son bir dört notalık ritim, ardından alkış | Son; aynı kısa ritim İkinci Konçerto'yu da bitirir |
 
 **Dikkat edilecekler**
 

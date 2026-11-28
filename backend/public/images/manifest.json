@@ -151,6 +151,31 @@
         "hash": "3cfdfc80ec"
       }
     },
+    "composers/boccherini": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/LBoccherini.jpg",
+      "color": "#6c5c49",
+      "hero": {
+        "path": "composers/boccherini-hero.heic",
+        "width": 863,
+        "height": 1280,
+        "bytes": 108260,
+        "hash": "58f376a890"
+      },
+      "thumb": {
+        "path": "composers/boccherini-thumb.heic",
+        "width": 300,
+        "height": 445,
+        "bytes": 22566,
+        "hash": "bf5aca1b48"
+      },
+      "full": {
+        "path": "composers/boccherini-full.heic",
+        "width": 863,
+        "height": 1280,
+        "bytes": 115179,
+        "hash": "6b9fa5251d"
+      }
+    },
     "composers/borodin": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Alexandre_Borodine_-_d%27apr%C3%A8s_le_tableau_de_A._Levinstein_-_btv1b8415940h.jpg",
       "color": "#967072",
@@ -965,6 +990,31 @@
         "hash": "2f6c007e79"
       }
     },
+    "composers/salieri": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Antonio_Salieri_painted_by_Joseph_Willibrord_M%C3%A4hler.jpg",
+      "color": "#36271e",
+      "hero": {
+        "path": "composers/salieri-hero.heic",
+        "width": 1800,
+        "height": 2330,
+        "bytes": 456867,
+        "hash": "8431617218"
+      },
+      "thumb": {
+        "path": "composers/salieri-thumb.heic",
+        "width": 300,
+        "height": 388,
+        "bytes": 12100,
+        "hash": "de5bc3cfe7"
+      },
+      "full": {
+        "path": "composers/salieri-full.heic",
+        "width": 2737,
+        "height": 3543,
+        "bytes": 1580181,
+        "hash": "7f70ff6ad9"
+      }
+    },
     "composers/schubert": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Franz_Schubert_by_Wilhelm_August_Rieder_1875_larger_version.png",
       "color": "#5e4137",
@@ -1436,6 +1486,31 @@
         "height": 4000,
         "bytes": 1900483,
         "hash": "57faa4c1cf"
+      }
+    },
+    "paintings/bach-keyboard-partita-6": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Cornelis_Troost_-_Familiegroep_bij_een_clavecimbel.jpg",
+      "color": "#584d42",
+      "hero": {
+        "path": "paintings/bach-keyboard-partita-6-hero.heic",
+        "width": 1800,
+        "height": 2066,
+        "bytes": 997916,
+        "hash": "ab56b52ad5"
+      },
+      "thumb": {
+        "path": "paintings/bach-keyboard-partita-6-thumb.heic",
+        "width": 300,
+        "height": 344,
+        "bytes": 23960,
+        "hash": "71af082d59"
+      },
+      "full": {
+        "path": "paintings/bach-keyboard-partita-6-full.heic",
+        "width": 2220,
+        "height": 2548,
+        "bytes": 1693915,
+        "hash": "c5a1d633d9"
       }
     },
     "paintings/bach-orchestral-suite-2": {
@@ -2236,6 +2311,31 @@
         "height": 2696,
         "bytes": 1108969,
         "hash": "a81b06faed"
+      }
+    },
+    "paintings/boccherini-musica-notturna": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Francisco_de_Goya_y_Lucientes_-_El_guitarrista_ciego.jpg",
+      "color": "#716e56",
+      "hero": {
+        "path": "paintings/boccherini-musica-notturna-hero.heic",
+        "width": 2157,
+        "height": 1800,
+        "bytes": 1370258,
+        "hash": "3b7fe4329e"
+      },
+      "thumb": {
+        "path": "paintings/boccherini-musica-notturna-thumb.heic",
+        "width": 360,
+        "height": 300,
+        "bytes": 20497,
+        "hash": "4184680704"
+      },
+      "full": {
+        "path": "paintings/boccherini-musica-notturna-full.heic",
+        "width": 3051,
+        "height": 2546,
+        "bytes": 3744271,
+        "hash": "03350e74b8"
       }
     },
     "paintings/borodin-polovtsian-dances": {
@@ -3138,6 +3238,31 @@
         "hash": "428fcfa087"
       }
     },
+    "paintings/elgar-symphony-2": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/David_Dalhoff_Neal_-_Interior_of_St._Mark%27s,_Venice_-_1887.232_-_Art_Institute_of_Chicago.jpg",
+      "color": "#493624",
+      "hero": {
+        "path": "paintings/elgar-symphony-2-hero.heic",
+        "width": 1792,
+        "height": 2246,
+        "bytes": 486417,
+        "hash": "3d375ea382"
+      },
+      "thumb": {
+        "path": "paintings/elgar-symphony-2-thumb.heic",
+        "width": 300,
+        "height": 376,
+        "bytes": 20993,
+        "hash": "b9ff1a6178"
+      },
+      "full": {
+        "path": "paintings/elgar-symphony-2-full.heic",
+        "width": 1792,
+        "height": 2246,
+        "bytes": 532810,
+        "hash": "d98f7e5d27"
+      }
+    },
     "paintings/elgar-violin-concerto": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/John_Everett_Millais_-_Sisters,_1868.jpg",
       "color": "#7f7462",
@@ -3361,6 +3486,31 @@
         "height": 2860,
         "bytes": 1927707,
         "hash": "c84189d76a"
+      }
+    },
+    "paintings/handel-dixit-dominus": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/A_view_of_Piazza_del_Popolo,_Rome_(by_Gaspar_van_Wittel).jpg",
+      "color": "#948d82",
+      "hero": {
+        "path": "paintings/handel-dixit-dominus-hero.heic",
+        "width": 3576,
+        "height": 1800,
+        "bytes": 1809457,
+        "hash": "34cc86259a"
+      },
+      "thumb": {
+        "path": "paintings/handel-dixit-dominus-thumb.heic",
+        "width": 596,
+        "height": 300,
+        "bytes": 27844,
+        "hash": "3e39981078"
+      },
+      "full": {
+        "path": "paintings/handel-dixit-dominus-full.heic",
+        "width": 4000,
+        "height": 2013,
+        "bytes": 2378807,
+        "hash": "a4d46d2506"
       }
     },
     "paintings/handel-music-for-the-royal-fireworks": {
@@ -3863,6 +4013,31 @@
         "hash": "a0f004e2a8"
       }
     },
+    "paintings/mahler-symphony-6": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Fernidand_Hodler_-_The_Woodcutter_-_Google_Art_Project.jpg",
+      "color": "#b6b1a5",
+      "hero": {
+        "path": "paintings/mahler-symphony-6-hero.heic",
+        "width": 1800,
+        "height": 2347,
+        "bytes": 728646,
+        "hash": "7389c00504"
+      },
+      "thumb": {
+        "path": "paintings/mahler-symphony-6-thumb.heic",
+        "width": 300,
+        "height": 391,
+        "bytes": 23328,
+        "hash": "1a9c552a9c"
+      },
+      "full": {
+        "path": "paintings/mahler-symphony-6-full.heic",
+        "width": 3067,
+        "height": 4000,
+        "bytes": 1811107,
+        "hash": "0ba5f2825e"
+      }
+    },
     "paintings/mahler-symphony-9": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Egon_Schiele_-_Small_Tree_in_Late_Autumn_-_Google_Art_Project.jpg",
       "color": "#a8a094",
@@ -4211,6 +4386,31 @@
         "height": 2595,
         "bytes": 2379539,
         "hash": "3ed947ac70"
+      }
+    },
+    "paintings/mozart-oboe-concerto": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Instruments_de_musique_-_Anne_Vallayer-Coster_-_Mus%C3%A9e_du_Louvre_Peintures_INV_8260.jpg",
+      "color": "#514a44",
+      "hero": {
+        "path": "paintings/mozart-oboe-concerto-hero.heic",
+        "width": 2424,
+        "height": 1800,
+        "bytes": 639543,
+        "hash": "7159c82360"
+      },
+      "thumb": {
+        "path": "paintings/mozart-oboe-concerto-thumb.heic",
+        "width": 404,
+        "height": 300,
+        "bytes": 31013,
+        "hash": "7398d6b525"
+      },
+      "full": {
+        "path": "paintings/mozart-oboe-concerto-full.heic",
+        "width": 2853,
+        "height": 2119,
+        "bytes": 969550,
+        "hash": "5c91f23289"
       }
     },
     "paintings/mozart-piano-concerto-20": {
@@ -4688,6 +4888,31 @@
         "hash": "dd6b867c80"
       }
     },
+    "paintings/rachmaninoff-piano-concerto-4": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Stella%2C_1919-20%2C_Brooklyn_Bridge%2C_oil_on_canvas%2C_215.3_x_194.6_cm%2C_Yale_University_Art_Gallery.jpg",
+      "color": "#515658",
+      "hero": {
+        "path": "paintings/rachmaninoff-piano-concerto-4-hero.heic",
+        "width": 1800,
+        "height": 1990,
+        "bytes": 733296,
+        "hash": "be3cbf54db"
+      },
+      "thumb": {
+        "path": "paintings/rachmaninoff-piano-concerto-4-thumb.heic",
+        "width": 300,
+        "height": 332,
+        "bytes": 23690,
+        "hash": "a36bc1fdfb"
+      },
+      "full": {
+        "path": "paintings/rachmaninoff-piano-concerto-4-full.heic",
+        "width": 2713,
+        "height": 3000,
+        "bytes": 2103542,
+        "hash": "08f83bc165"
+      }
+    },
     "paintings/rachmaninoff-symphonic-dances": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Edvard_Munch_-_The_Dance_of_Life_-_NG.M.00941_-_National_Museum_of_Art%2C_Architecture_and_Design.jpg",
       "color": "#655f52",
@@ -5086,6 +5311,31 @@
         "height": 2622,
         "bytes": 1244745,
         "hash": "c482f8270d"
+      }
+    },
+    "paintings/salieri-requiem": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Caspar_David_Friedrich_-_The_Cemetery_-_Google_Art_Project.jpg",
+      "color": "#4a4447",
+      "hero": {
+        "path": "paintings/salieri-requiem-hero.heic",
+        "width": 1800,
+        "height": 2369,
+        "bytes": 474454,
+        "hash": "5b71481dbf"
+      },
+      "thumb": {
+        "path": "paintings/salieri-requiem-thumb.heic",
+        "width": 300,
+        "height": 395,
+        "bytes": 17541,
+        "hash": "9863166d09"
+      },
+      "full": {
+        "path": "paintings/salieri-requiem-full.heic",
+        "width": 3040,
+        "height": 4000,
+        "bytes": 1216596,
+        "hash": "f19ff96a39"
       }
     },
     "paintings/schubert-arpeggione-sonata": {
@@ -5886,6 +6136,31 @@
         "height": 4000,
         "bytes": 2463691,
         "hash": "ffc0d6266b"
+      }
+    },
+    "paintings/tchaikovsky-piano-concerto-2": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/G._Caillebotte_-_Jeune_homme_au_piano.jpg",
+      "color": "#686765",
+      "hero": {
+        "path": "paintings/tchaikovsky-piano-concerto-2-hero.heic",
+        "width": 2162,
+        "height": 1446,
+        "bytes": 508982,
+        "hash": "80d993bf93"
+      },
+      "thumb": {
+        "path": "paintings/tchaikovsky-piano-concerto-2-thumb.heic",
+        "width": 449,
+        "height": 300,
+        "bytes": 27522,
+        "hash": "06ec3df361"
+      },
+      "full": {
+        "path": "paintings/tchaikovsky-piano-concerto-2-full.heic",
+        "width": 2162,
+        "height": 1446,
+        "bytes": 539175,
+        "hash": "72c4668c06"
       }
     },
     "paintings/tchaikovsky-romeo-and-juliet": {

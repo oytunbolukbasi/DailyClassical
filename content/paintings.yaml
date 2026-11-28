@@ -3384,3 +3384,162 @@ erkin-violin-concerto:
   thumb: { width: 424, height: 300, bytes: 21703 }
   full: { width: 4000, height: 2827, bytes: 2673073 }
   placeholder_color: "#909684"
+
+mahler-symphony-6:
+  # Google Art Project scan of the Musée d'Orsay canvas (GAP metadata: alternate_object_id RF 2005 5, museum id 134807,
+  # "Bought in 2005"). Commons licence {{PD-Art-two-auto|1918}} (Hodler died 1918). Portrait format (3495 × 4558,
+  # ≈ 0.77:1): the axe and the man's raised arms are in the upper half, the tree trunk on the left; a centred crop keeps both.
+  # Not to be confused with the other versions on Commons (Ohara Museum, Kunstmuseum Luzern, private collections).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Fernidand_Hodler_-_The_Woodcutter_-_Google_Art_Project.jpg
+  source_url: https://www.musee-orsay.fr/fr/oeuvres/le-bucheron-134807
+  commons_page: https://commons.wikimedia.org/wiki/File:Fernidand_Hodler_-_The_Woodcutter_-_Google_Art_Project.jpg
+  width: 3495
+  height: 4558
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Ferdinand Hodler, The Woodcutter (Le Bûcheron), 1910. Musée d'Orsay, Paris (RF 2005 5). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2347, bytes: 728646 }
+  thumb: { width: 300, height: 391, bytes: 23328 }
+  full: { width: 3067, height: 4000, bytes: 1811107 }
+  placeholder_color: "#b6b1a5"
+
+mozart-oboe-concerto:
+  # Gallery photo by User:Shonagon (2021-09-16), cropped to the canvas. Signed and dated 1770 (Joconde: "ME VALLAYER 1770");
+  # the artist's reception piece at the Académie royale (with INV 8259, Attributes of the Arts).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Instruments_de_musique_-_Anne_Vallayer-Coster_-_Mus%C3%A9e_du_Louvre_Peintures_INV_8260.jpg
+  source_url: https://pop.culture.gouv.fr/notice/joconde/000PE002804
+  commons_page: https://commons.wikimedia.org/wiki/File:Instruments_de_musique_-_Anne_Vallayer-Coster_-_Mus%C3%A9e_du_Louvre_Peintures_INV_8260.jpg
+  width: 2853
+  height: 2119
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Anne Vallayer-Coster, Attributes of Music (Instruments de musique), 1770. Musée du Louvre, Paris (INV 8260). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2424, height: 1800, bytes: 639543 }
+  thumb: { width: 404, height: 300, bytes: 31013 }
+  full: { width: 2853, height: 2119, bytes: 969550 }
+  placeholder_color: "#514a44"
+
+rachmaninoff-piano-concerto-4:
+  # Yale University Art Gallery image (2713 × 3000), cropped to the canvas. Joseph Stella died in 1946;
+  # the painting was reproduced in Broom, vol. 1 no. 1 (November 1921), so it is also PD in the US.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Joseph_Stella%2C_1919-20%2C_Brooklyn_Bridge%2C_oil_on_canvas%2C_215.3_x_194.6_cm%2C_Yale_University_Art_Gallery.jpg
+  source_url: https://artgallery.yale.edu/collections/objects/44306
+  commons_page: https://commons.wikimedia.org/wiki/File:Joseph_Stella%2C_1919-20%2C_Brooklyn_Bridge%2C_oil_on_canvas%2C_215.3_x_194.6_cm%2C_Yale_University_Art_Gallery.jpg
+  width: 2713
+  height: 3000
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Joseph Stella, Brooklyn Bridge, 1919–20. Yale University Art Gallery, New Haven, Gift of Collection Société Anonyme (1941.690). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 1990, bytes: 733296 }
+  thumb: { width: 300, height: 332, bytes: 23690 }
+  full: { width: 2713, height: 3000, bytes: 2103542 }
+  placeholder_color: "#515658"
+
+tchaikovsky-piano-concerto-2:
+  # Reproduction scanned from print (slightly saturated); the best open file found. Sitter: the painter's brother
+  # Martial Caillebotte, pianist and composer, at the family home on rue de Miromesnil, Paris (Artizon Museum).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/G._Caillebotte_-_Jeune_homme_au_piano.jpg
+  source_url: https://artizon.museum/en/collection/art/24964
+  commons_page: https://commons.wikimedia.org/wiki/File:G._Caillebotte_-_Jeune_homme_au_piano.jpg
+  width: 2162
+  height: 1446
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Gustave Caillebotte, Young Man Playing the Piano, 1876. Artizon Museum, Ishibashi Foundation, Tokyo. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2162, height: 1446, bytes: 508982 }
+  thumb: { width: 449, height: 300, bytes: 27522 }
+  full: { width: 2162, height: 1446, bytes: 539175 }
+  placeholder_color: "#686765"
+
+elgar-symphony-2:
+  # Museum photo (CC0) that includes the gilt frame. Master in the originals cache is CROPPED to the canvas
+  # (elgar-symphony-2.source.jpg cropped to 1792 × 2246 at offset 411,377, with scratchpad crop.swift).
+  # Do not pass --refresh for this id.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/David_Dalhoff_Neal_-_Interior_of_St._Mark%27s,_Venice_-_1887.232_-_Art_Institute_of_Chicago.jpg
+  source_url: https://www.artic.edu/artworks/9
+  commons_page: https://commons.wikimedia.org/wiki/File:David_Dalhoff_Neal_-_Interior_of_St._Mark%27s,_Venice_-_1887.232_-_Art_Institute_of_Chicago.jpg
+  width: 1792
+  height: 2246
+  medium: Oil on canvas
+  license: Public domain (CC0, Art Institute of Chicago)
+  credit_line: David Dalhoff Neal, Interior of St. Mark's, Venice, 1869. Art Institute of Chicago, Nickerson Collection (1887.232). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1792, height: 2246, bytes: 486417 }
+  thumb: { width: 300, height: 376, bytes: 20993 }
+  full: { width: 1792, height: 2246, bytes: 532810 }
+  placeholder_color: "#493624"
+
+handel-dixit-dominus:
+  # Photo of the painting from the 2019 Van Wittel exhibition (Kunsthal KAdE, Amersfoort), via Commons.
+  # A colour-"remastered" upload also exists (…(by Gaspar van Wittel)FXD.jpg); this one is the unaltered file.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/A_view_of_Piazza_del_Popolo,_Rome_(by_Gaspar_van_Wittel).jpg
+  source_url: https://www.gallerieditalia.com/it/napoli/
+  commons_page: https://commons.wikimedia.org/wiki/File:A_view_of_Piazza_del_Popolo,_Rome_(by_Gaspar_van_Wittel).jpg
+  width: 4889
+  height: 2461
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Gaspar van Wittel (Vanvitelli), A View of Piazza del Popolo, Rome, 1718. Intesa Sanpaolo collection, Gallerie d'Italia – Palazzo Zevallos Stigliano, Naples. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 3576, height: 1800, bytes: 1809457 }
+  thumb: { width: 596, height: 300, bytes: 27844 }
+  full: { width: 4000, height: 2013, bytes: 2378807 }
+  placeholder_color: "#948d82"
+
+bach-keyboard-partita-6:
+  # Rijksmuseum's own scan via Commons. The Rijksmuseum Twenthe upload (…BR2085…) has false colours (blue negative-like).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Cornelis_Troost_-_Familiegroep_bij_een_clavecimbel.jpg
+  source_url: https://www.rijksmuseum.nl/en/collection/SK-A-3453
+  commons_page: https://commons.wikimedia.org/wiki/File:Cornelis_Troost_-_Familiegroep_bij_een_clavecimbel.jpg
+  width: 2220
+  height: 2548
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Cornelis Troost, Family Group at a Harpsichord, 1739. Rijksmuseum, Amsterdam (SK-A-3453), on loan to Rijksmuseum Twenthe, Enschede. Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2066, bytes: 997916 }
+  thumb: { width: 300, height: 344, bytes: 23960 }
+  full: { width: 2220, height: 2548, bytes: 1693915 }
+  placeholder_color: "#584d42"
+
+boccherini-musica-notturna:
+  # Goya is already in the catalogue three times (Witches' Sabbath, The Snowstorm, The Dance on the Banks of the
+  # Manzanares); kept as first choice because the subject is the quintet's own: a blind street singer with a guitar
+  # in Madrid, 1778. Prado object page blocks scripted fetches (403); source_url is the one on the Commons file page.
+  # Catalogue: Fundación Goya en Aragón no. 36 (tapestry cartoon, antechamber of the Prince and Princess of Asturias, El Pardo).
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Francisco_de_Goya_y_Lucientes_-_El_guitarrista_ciego.jpg
+  source_url: http://www.museodelprado.es/en/the-collection/online-gallery/on-line-gallery/obra/the-blind-guitarrist/
+  commons_page: https://commons.wikimedia.org/wiki/File:Francisco_de_Goya_y_Lucientes_-_El_guitarrista_ciego.jpg
+  width: 3051
+  height: 2546
+  medium: Oil on canvas
+  license: Public domain (PD-Art)
+  credit_line: Francisco de Goya, The Blind Guitarist (El ciego de la guitarra), 1778. Museo Nacional del Prado, Madrid (P000778). Image via Wikimedia Commons, public domain.
+  rights_status: public_domain
+  hero: { width: 2157, height: 1800, bytes: 1370258 }
+  thumb: { width: 360, height: 300, bytes: 20497 }
+  full: { width: 3051, height: 2546, bytes: 3744271 }
+  placeholder_color: "#716e56"
+
+salieri-requiem:
+  # Google Art Project file (asset AAEiq0o-GntQFQ), PD-art-two-auto. Friedrich is already used three times
+  # (schubert-symphony-8, beethoven-piano-sonata-14, schubert-string-quintet): chosen as the clearly best match
+  # (begun 1825, the year of the Requiem's first performance; a graveyard gate under the instruments of the Passion).
+  # Unfinished canvas: check that the hero crop keeps the gate and the grave mound in frame.
+  image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Caspar_David_Friedrich_-_The_Cemetery_-_Google_Art_Project.jpg
+  source_url: https://skd-online-collection.skd.museum/Details/Index/241960
+  commons_page: https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_The_Cemetery_-_Google_Art_Project.jpg
+  width: 3926
+  height: 5166
+  medium: Oil on canvas
+  license: Public domain (PD-Art; artist d. 1840)
+  credit_line: Caspar David Friedrich, The Cemetery Entrance (Der Friedhof), c. 1825. Galerie Neue Meister, Staatliche Kunstsammlungen Dresden (Gal.-Nr. 2197 B). Image via Wikimedia Commons (Google Art Project), public domain.
+  rights_status: public_domain
+  hero: { width: 1800, height: 2369, bytes: 474454 }
+  thumb: { width: 300, height: 395, bytes: 17541 }
+  full: { width: 3040, height: 4000, bytes: 1216596 }
+  placeholder_color: "#4a4447"

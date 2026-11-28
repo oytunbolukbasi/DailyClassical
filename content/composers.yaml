@@ -2729,3 +2729,112 @@
     thumb: { width: 300, height: 450, bytes: 13554 }
     full: { width: 1417, height: 2125, bytes: 370485 }
     placeholder_color: "#444b48"
+
+- id: boccherini
+  match: Luigi Boccherini
+  sort_name: Boccherini, Luigi
+  born: 1743
+  birthday: "02-19"
+  birthday_basis: null
+  birthday_note:
+    en: "Boccherini was a famous cellist. In his *Night Music of the Streets of Madrid* he asks both cellists to lay their instruments across their knees and strum them with their nails, like guitars."
+    tr: "Boccherini ünlü bir çellistti. *Madrid Sokaklarının Gece Müziği*’nde iki çellistten de çalgılarını dizlerine yatırıp telleri tırnaklarıyla, gitar gibi tıngırdatmalarını ister."
+  birthday_line:
+    en: "Born on this day in 1743, in Lucca."
+    tr: "1743’te bugün Lucca’da doğdu."
+  died: 1805
+  era: classical
+  names:
+    en: { name: Luigi Boccherini, short: Boccherini }
+    tr: { name: Luigi Boccherini, short: Boccherini, short_genitive: Boccherini’nin }
+  nationality: { en: Italian, tr: İtalyan }
+  facts:
+    born: { en: "19 February 1743, Lucca", tr: "19 Şubat 1743, Lucca" }
+    died: { en: "28 May 1805, Madrid", tr: "28 Mayıs 1805, Madrid" }
+    symphonies: { en: "About 30", tr: "Yaklaşık 30" }
+    best_known_for: { en: "The Minuet from the String Quintet Op. 11 No. 5, *Musica notturna delle strade di Madrid*, the *Fandango* Guitar Quintet, cello concertos", tr: "Op. 11 No. 5 Yaylı Beşli’den Menuet, *Musica notturna delle strade di Madrid*, *Fandango* Gitarlı Beşli, çello konçertoları" }
+  bio:
+    en: |-
+      Boccherini was born in 1743 in Lucca, in Tuscany, into a family of musicians: his father Leopoldo played the cello and the double bass, and his brother Giovanni Gastone became a dancer and a poet who wrote librettos for Salieri and Haydn. Luigi learnt the cello from his father, studied in Rome as a boy, and at fourteen went with his father to Vienna, where both played in the orchestra of the court theatre. He grew into a celebrated virtuoso, admired for playing high violin parts on the cello at their original pitch.
+
+      In 1767 he travelled to Paris with the violinist Filippo Manfredi; his music was printed there and the pair played at the Concert Spirituel. In 1768 they went on to Madrid, and from 1770 Boccherini served the Infante Don Luis, younger brother of King Charles III, as cellist and composer. When Don Luis married a woman of lower rank in 1776 and had to live away from the court, Boccherini followed his household to Arenas de San Pedro, in the mountains of Ávila. There he wrote steadily, above all string quartets and quintets for two violins, viola and two cellos, a combination he made his own; he wrote more than a hundred of them. *Musica notturna delle strade di Madrid*, a portrait of the capital at night, dates from 1780.
+
+      Don Luis died in 1785, and Boccherini settled in Madrid. From 1786 he was composer to Frederick William of Prussia, who became king that year, with a yearly pension, and sent him new works from Spain; later patrons included the Countess-Duchess of Benavente-Osuna and Lucien Bonaparte, the French ambassador. His last years were hard: he lost his second wife and several of his daughters. He died in Madrid on 28 May 1805, and in 1927 his remains were taken back to Lucca. His best-known piece is the minuet from his String Quintet Op. 11 No. 5; his works are numbered after Yves Gérard's 1969 catalogue, hence the "G." numbers.
+    tr: |-
+      Boccherini 1743’te Toskana’daki Lucca’da, müzisyen bir ailede doğdu: babası Leopoldo çello ve kontrbas çalıyordu, kardeşi Giovanni Gastone ise dansçı ve Salieri ile Haydn için libretto yazan bir şair oldu. Luigi çelloyu babasından öğrendi, çocukken Roma’da okudu ve on dört yaşında babasıyla birlikte Viyana’ya gitti; ikisi de saray tiyatrosunun orkestrasında çaldı. Zamanla ünlü bir virtüöz oldu; kemanın tiz partilerini çelloda, özgün perdelerinde çalabilmesiyle hayranlık uyandırdı.
+
+      1767’de kemancı Filippo Manfredi ile Paris’e gitti; eserleri orada basıldı, ikili Concert Spirituel’de çaldı. 1768’de Madrid’e geçtiler ve Boccherini 1770’ten itibaren Kral III. Carlos’un küçük kardeşi Infante Don Luis’in hizmetine çellist ve besteci olarak girdi. Don Luis 1776’da kendisinden aşağı soydan bir kadınla evlenip saraydan uzak yaşamak zorunda kalınca Boccherini de onun maiyetiyle birlikte Ávila dağlarındaki Arenas de San Pedro’ya gitti. Orada durmadan yazdı; en çok da yaylı dörtlüler ve iki keman, viyola ve iki çello için beşliler. Bu çalgı birleşimini kendine mal etti ve yüzü aşkın beşli yazdı. Başkenti geceleyin anlatan *Musica notturna delle strade di Madrid* 1780 tarihlidir.
+
+      Don Luis 1785’te öldü ve Boccherini Madrid’e yerleşti. 1786’dan itibaren, aynı yıl kral olan Prusyalı Friedrich Wilhelm’in yıllık maaşlı bestecisiydi ve ona İspanya’dan yeni eserler gönderdi; sonraki hamileri arasında Benavente-Osuna Kontes-Düşesi ve Fransız büyükelçisi Lucien Bonaparte vardı. Son yılları zor geçti: ikinci eşini ve kızlarından birkaçını kaybetti. 28 Mayıs 1805’te Madrid’de öldü; naaşı 1927’de Lucca’ya götürüldü. En tanınmış eseri Op. 11 No. 5 Yaylı Beşli’sindeki menuettir; eserleri Yves Gérard’ın 1969 tarihli kataloğuna göre numaralanır, "G." numaraları buradan gelir.
+  portrait:
+    # Unknown Italian painter, c. 1764–67, National Gallery of Victoria, Melbourne (1210-5), oil on canvas,
+    # 133.8 × 90.7 cm; Everard Studley Miller Bequest, 1961. The NGV lists it under "Italy" without an artist;
+    # earlier attributions: Pompeo Batoni, Lorenzo Tiepolo, Sebastiano Ceccarini, Pietro Longhi (NGV essay).
+    # Boccherini seated, playing the cello. The Commons file is small (863 × 1280) but is the only life portrait
+    # in colour; the colour-adjusted copy File:LBoccheriniFXD.jpg has the same size.
+    artist: { en: "Unknown Italian painter", tr: "Bilinmeyen İtalyan ressam" }
+    title: { en: Luigi Boccherini, tr: Luigi Boccherini }
+    year: "c. 1764–67"
+    collection: { en: "National Gallery of Victoria, Melbourne", tr: "Victoria Ulusal Galerisi, Melbourne" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/LBoccherini.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:LBoccherini.jpg
+    width: 863
+    height: 1280
+    license: Public domain (PD-Art; painting c. 1764–67)
+    focal_y: 0.05
+    hero: { width: 863, height: 1280, bytes: 108260 }
+    thumb: { width: 300, height: 445, bytes: 22566 }
+    full: { width: 863, height: 1280, bytes: 115179 }
+    placeholder_color: "#6c5c49"
+
+- id: salieri
+  match: Antonio Salieri
+  sort_name: Salieri, Antonio
+  born: 1750
+  birthday: "08-18"
+  birthday_basis: null
+  birthday_note:
+    en: "All but the wealthiest of Salieri’s pupils had their lessons free, as Gassmann had once paid for the orphaned Salieri’s education. Among them were Beethoven, Schubert and the young Liszt."
+    tr: "Salieri, en varlıklıları dışında bütün öğrencilerine ücretsiz ders verdi; tıpkı Gassmann’ın bir zamanlar öksüz Salieri’nin eğitimini üstlenmesi gibi. Öğrencileri arasında Beethoven, Schubert ve genç Liszt vardı."
+  birthday_line:
+    en: "Born on this day in 1750, in Legnago."
+    tr: "1750’de bugün Legnago’da doğdu."
+  died: 1825
+  era: classical
+  names:
+    en: { name: Antonio Salieri, short: Salieri }
+    tr: { name: Antonio Salieri, short: Salieri, short_genitive: Salieri’nin }
+  nationality: { en: Italian, tr: İtalyan }
+  facts:
+    born: { en: "18 August 1750, Legnago", tr: "18 Ağustos 1750, Legnago" }
+    died: { en: "7 May 1825, Vienna", tr: "7 Mayıs 1825, Viyana" }
+    symphonies: { en: "Two, both in D major: *Il giorno onomastico* (1775) and *La Veneziana*", tr: "İki, ikisi de Re majör: *Il giorno onomastico* (1775) ve *La Veneziana*" }
+    best_known_for: { en: "Operas (*Les Danaïdes*, *Tarare*, *Axur, re d’Ormus*), the *Requiem* in C minor, teaching Beethoven, Schubert and Liszt", tr: "Operaları (*Les Danaïdes*, *Tarare*, *Axur, re d’Ormus*), Do minör *Requiem*, Beethoven’e, Schubert’e ve Liszt’e hocalığı" }
+  bio:
+    en: |-
+      Salieri was born in 1750 in Legnago, a small town in the Republic of Venice, and had his first music lessons from his older brother Francesco. By 1764 he had lost both parents, and a Venetian nobleman, Giovanni Mocenigo, took him in. In Venice the composer Florian Leopold Gassmann noticed him and in June 1766 took him to Vienna, where he directed and paid for the boy's education. The poet Pietro Metastasio taught him Italian verse and declamation, and Christoph Willibald Gluck became his friend and adviser. In 1774, after Gassmann's death, Salieri took over his post as court composer and director of the Italian opera; he married Therese Helferstorfer, with whom he had eight children.
+
+      Opera made his name across Europe. *Les Danaïdes* (Paris, 1784) was first presented as a work of Gluck's; *Tarare* (1787), to a libretto by Beaumarchais, became in Italian *Axur, re d'Ormus*, staged in Vienna in 1788 with words by Lorenzo Da Ponte. That year he became Hofkapellmeister, in charge of the music of the imperial chapel, a post he kept until 1824, longer than any holder before or since. He was also a devoted teacher: all but his wealthiest pupils were taught for nothing. Among them were Beethoven, who dedicated his first violin sonatas, Op. 12, to him, Schubert, the young Liszt, Johann Nepomuk Hummel and Mozart's younger son, Franz Xaver.
+
+      In 1804 he wrote a *Requiem* in C minor for his own funeral. Within three years he lost his only son and then his wife; in 1815 he wrote his 26 variations for orchestra on *La Folia*. In November 1823 he attempted suicide and spent the last year and a half of his life in medical care, suffering from dementia. He died in Vienna on 7 May 1825, and his *Requiem* was first heard at his memorial Mass that June. By then a rumour was spreading that he had poisoned Mozart; there is no evidence for it, but Pushkin's play *Mozart and Salieri* (1831) and Peter Shaffer's *Amadeus* (1979) made it the best-known story about him.
+    tr: |-
+      Salieri 1750’de Venedik Cumhuriyeti’ne bağlı küçük bir kasaba olan Legnago’da doğdu; ilk müzik derslerini ağabeyi Francesco’dan aldı. 1764’e gelindiğinde annesini de babasını da yitirmişti; Venedikli bir soylu, Giovanni Mocenigo, onu yanına aldı. Venedik’te besteci Florian Leopold Gassmann çocuğun dikkatini çekti ve Haziran 1766’da onu Viyana’ya götürdü; eğitimini hem yönetti hem de karşıladı. Şair Pietro Metastasio ona İtalyan şiirini ve sözü doğru vurgulamayı öğretti, Christoph Willibald Gluck dostu ve danışmanı oldu. 1774’te, Gassmann’ın ölümünden sonra onun saray bestecisi ve İtalyan operası yöneticisi görevini devraldı; sekiz çocukları olacağı Therese Helferstorfer’le evlendi.
+
+      Avrupa çapındaki ününü opera getirdi. *Les Danaïdes* (Paris, 1784) ilk önce bir Gluck eseri olarak sunuldu; Beaumarchais’nin librettosuyla yazdığı *Tarare* (1787), Lorenzo Da Ponte’nin sözleriyle İtalyanca *Axur, re d’Ormus* olarak 1788’de Viyana’da sahnelendi. Aynı yıl imparatorluk kilisesinin müziğinden sorumlu Hofkapellmeister oldu ve bu görevi 1824’e kadar, ondan önce ya da sonra hiç kimsenin kalmadığı kadar uzun süre sürdürdü. Aynı zamanda adanmış bir öğretmendi: en varlıklıları dışında bütün öğrencilerine ücretsiz ders verdi. Öğrencileri arasında ilk keman sonatlarını (Op. 12) ona adayan Beethoven, Schubert, genç Liszt, Johann Nepomuk Hummel ve Mozart’ın küçük oğlu Franz Xaver vardı.
+
+      1804’te kendi cenazesi için Do minör bir *Requiem* yazdı. Üç yıl içinde önce tek oğlunu, sonra karısını kaybetti; 1815’te orkestra için *La Folia* üzerine 26 çeşitlemesini yazdı. Kasım 1823’te intihara kalkıştı ve ömrünün son bir buçuk yılını bunama içinde, tıbbi bakım altında geçirdi. 7 Mayıs 1825’te Viyana’da öldü; *Requiem*’i ilk kez o haziran, anma ayininde duyuldu. O sıralarda Mozart’ı zehirlediğine dair bir söylenti yayılıyordu; hiçbir kanıtı yoktur, ama Puşkin’in *Mozart ve Salieri* oyunu (1831) ve Peter Shaffer’ın *Amadeus*’u (1979) onu Salieri hakkında en çok bilinen öykü yaptı.
+  portrait:
+    artist: Joseph Willibrord Mähler
+    title: { en: Portrait of Antonio Salieri, tr: Antonio Salieri’nin Portresi }
+    year: "c. 1815"
+    collection: { en: "Gesellschaft der Musikfreunde, Vienna", tr: "Gesellschaft der Musikfreunde, Viyana" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Antonio_Salieri_painted_by_Joseph_Willibrord_M%C3%A4hler.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Antonio_Salieri_painted_by_Joseph_Willibrord_M%C3%A4hler.jpg
+    width: 2737
+    height: 3543
+    license: Public domain (PD-Art, PD-old-auto-expired; Mähler d. 1860)
+    focal_y: 0.3
+    hero: { width: 1800, height: 2330, bytes: 456867 }
+    thumb: { width: 300, height: 388, bytes: 12100 }
+    full: { width: 2737, height: 3543, bytes: 1580181 }
+    placeholder_color: "#36271e"

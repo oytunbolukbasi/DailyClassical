@@ -8,23 +8,35 @@ title: Piano Concerto No. 3 in D minor
 catalogue: Op. 30
 key: D minor
 year: 1909
-duration_min: 46
+duration_min: 41
 movement_count: 3
 hook: It begins with a melody that, Rachmaninoff said, wrote itself, and grows into one of the hardest concertos ever written.
 reference_recording:
   soloists:
-    - { name: Vladimir Ashkenazy, role: piano }
-  conductor: André Previn
-  orchestra: London Symphony Orchestra
-  label: Decca
-  catalogue_number: "SXL 6555 (LP); also in the set SXLF 6565-7"
-  recorded: "March 1971"
-  # Venue from DG/Decca metadata for the other sessions of the set only (see research note).
-  venue: Kingsway Hall, London
-  release_year: 1972
-  year: 1971
-  spotify_url: https://open.spotify.com/album/3LTVA25MzhU8ZR4evxxGMR
+    - { name: Yuja Wang, role: piano }
+  conductor: Gustavo Dudamel
+  orchestra: Simón Bolívar Symphony Orchestra of Venezuela
+  label: Deutsche Grammophon
+  catalogue_number: "479 1304 (CD, with Prokofiev's Piano Concerto No. 2)"
+  # Day (16 February) from Presto Music only (see research note).
+  recorded: "February 2013 (live)"
+  venue: Sala Simón Bolívar, Centro de Acción Social por la Música, Caracas
+  release_year: 2013
+  year: 2013
+  spotify_url: https://open.spotify.com/album/1oRI5tMJtYyl5FHIKmZbFY
 also_recommended:
+  - soloists:
+      - { name: Vladimir Ashkenazy, role: piano }
+    conductor: André Previn
+    orchestra: London Symphony Orchestra
+    label: Decca
+    catalogue_number: "SXL 6555 (LP); also in the set SXLF 6565-7"
+    recorded: "March 1971"
+    # Venue from DG/Decca metadata for the other sessions of the set only (see research note).
+    venue: Kingsway Hall, London
+    release_year: 1972
+    year: 1971
+    spotify_url: https://open.spotify.com/album/3LTVA25MzhU8ZR4evxxGMR
   - soloists:
       - { name: Martha Argerich, role: piano }
     conductor: Riccardo Chailly
@@ -57,13 +69,13 @@ painting:
 
 | | Tempo | Key | Metre | Duration |
 | --- | --- | --- | --- | --- |
-| I | Allegro ma non tanto | D minor | 4/4 | 18:44 |
-| II | Intermezzo: Adagio | Several keys | 3/4 | 12:08 |
-| III | Finale: Alla breve | D minor – D major | 2/2 | 14:58 |
+| I | Allegro ma non tanto | D minor | 4/4 | 15:50 |
+| II | Intermezzo: Adagio | Several keys | 3/4 | 10:38 |
+| III | Finale: Alla breve | D minor – D major | 2/2 | 14:17 |
 
 ### I. Allegro ma non tanto
 
-**Summary.** After two bars of quiet pulsing in the orchestra, the piano plays a long, plain melody in bare octaves. Everything grows from it. The movement is in [[sonata form]], but its centre of gravity is the long solo cadenza, which builds to a thunderous climax and then turns quiet as four wind players recall the opening theme.
+**Summary.** After two bars of quiet pulsing in the orchestra, the piano plays a long, plain melody in bare octaves. Everything grows from it. The movement is in [[sonata form]], but its centre of gravity is the solo cadenza, which builds to a climax and then turns quiet as four wind players recall the opening theme.
 
 **Main ideas**
 
@@ -75,16 +87,16 @@ painting:
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | A soft, pulsing beat in the orchestra; the piano enters with a plain, quiet melody in octaves | Theme 1. Rachmaninoff said it "wrote itself" |
-| ≈ 1:05 | The orchestra takes the melody; the piano weaves fast, busy figures around it | Theme 1 in the orchestra |
-| ≈ 2:00 | The piano speeds up and becomes restless | The transition |
-| ≈ 2:50 | Short, quiet exchanges: crisp chords in the orchestra, light replies from the piano | The lead-in to Theme 2 |
-| ≈ 3:20 | The piano sings a warm, longing melody, freer in tempo | Theme 2, in B-flat major |
-| ≈ 5:30 | Quietly, the piano recalls the opening melody | The end of the [[exposition]] |
-| ≈ 6:15–9:30 | Quick, pounding notes in the piano, hands overlapping; the music gets louder and darker, with heavy chords | The [[development]], in C minor |
-| ≈ 9:45–12:30 | The orchestra stops; the piano alone builds a long solo to a thunderous climax | The [[cadenza]] |
-| ≈ 12:30–14:00 | Flute, oboe, clarinet and horn each play the opening melody softly, while the piano ripples | The cadenza's quiet second part |
-| ≈ 14:00 | The piano alone, very softly, dreams on the second theme | Theme 2, in E-flat major |
-| ≈ 16:30 | The piano plays the opening melody again, with the orchestra | The [[recapitulation]] |
+| ≈ 0:55 | The orchestra takes the melody; the piano weaves fast, busy figures around it | Theme 1 in the orchestra |
+| ≈ 1:45 | The piano speeds up and becomes restless | The transition |
+| ≈ 2:30 | Short, quiet exchanges: crisp chords in the orchestra, light replies from the piano | The lead-in to Theme 2 |
+| ≈ 2:55 | The piano sings a warm, longing melody, freer in tempo | Theme 2, in B-flat major |
+| ≈ 4:50 | Quietly, the piano recalls the opening melody | The end of the [[exposition]] |
+| ≈ 5:30–8:20 | Quick, pounding notes in the piano, hands overlapping; the music gets louder and darker, with heavy chords | The [[development]], in C minor |
+| ≈ 8:30–10:20 | The orchestra stops; the piano alone, light and quick at first, builds to a loud climax | The [[cadenza]], in its shorter version |
+| ≈ 10:20–11:40 | Flute, oboe, clarinet and horn each play the opening melody softly, while the piano ripples | The cadenza's quiet second part |
+| ≈ 11:40 | The piano alone, very softly, dreams on the second theme | Theme 2, in E-flat major |
+| ≈ 13:50 | The piano plays the opening melody again, with the orchestra | The [[recapitulation]] |
 | Last minute | A quiet, rippling close, then a few quick notes | The [[coda]] |
 
 **Things to notice**
@@ -92,7 +104,7 @@ painting:
 1. Sing the opening melody to yourself. It moves by small steps and stays in a narrow range, like a chant. Listen for it in all three movements.
 2. In the cadenza's quiet second part, count the four wind soloists: flute, oboe, clarinet, horn.
 
-**In this recording.** Ashkenazy recorded all four Rachmaninoff concertos with Previn and the London Symphony Orchestra for Decca; this Third was recorded in March 1971 and first issued in 1972. Rachmaninoff wrote two versions of the first-movement cadenza; pianists choose one or the other. On the Spotify album the Third is tracks 7–9.
+**In this recording.** Yuja Wang plays the concerto live in Caracas in February 2013, in the same concert as Prokofiev's Second, with the Simón Bolívar Symphony Orchestra of Venezuela, the flagship orchestra of the country's El Sistema network of music schools and youth orchestras, conducted by Gustavo Dudamel. It was the orchestra's first recording with a soloist. Rachmaninoff wrote two versions of the first-movement cadenza; Wang chooses the shorter, lighter one (≈ 8:30), and her tempos are quick, so the movement lasts under 16 minutes. The audience's applause is kept at the end of the finale.
 
 ### II. Intermezzo: Adagio
 
@@ -108,12 +120,12 @@ painting:
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | The strings play softly; an oboe sings a long, sad melody | The theme |
-| ≈ 1:10 | The full strings take the melody, richer and louder | The orchestra's variations |
-| ≈ 2:15 | The piano enters with a sudden outburst, then plays its own version of the tune | The piano's first variation |
-| ≈ 4:00–6:00 | The piano spreads the tune into rich chords; the music swells to a passionate climax | The variations grow |
-| ≈ 8:30 | Lighter and quicker: a waltz-like lilt, with the first movement's opening melody in clarinet and bassoon while the piano sparkles | The waltz episode, with the theme from movement I |
-| ≈ 10:00 | A broad, romantic climax for piano and orchestra | The last variation |
-| ≈ 11:00 | The orchestra returns to the sad opening melody | The opening recalled |
+| ≈ 1:00 | The full strings take the melody, richer and louder | The orchestra's variations |
+| ≈ 2:00 | The piano enters with a sudden outburst, then plays its own version of the tune | The piano's first variation |
+| ≈ 3:30–5:15 | The piano spreads the tune into rich chords; the music swells to a passionate climax | The variations grow |
+| ≈ 7:25 | Lighter and quicker: a waltz-like lilt, with the first movement's opening melody in clarinet and bassoon while the piano sparkles | The waltz episode, with the theme from movement I |
+| ≈ 8:45 | A broad, romantic climax for piano and orchestra | The last variation |
+| ≈ 9:40 | The orchestra returns to the sad opening melody | The opening recalled |
 | Last 30 seconds | The piano breaks in with a violent burst of chords and runs, and goes straight on | The link to the finale (*attacca*) |
 
 **Things to notice**
@@ -135,14 +147,14 @@ painting:
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | Fast, hammering chords and a driving rhythm in the piano | Theme 1, in D minor |
-| ≈ 1:20 | Bold chords in the piano; a broader tune that rises through heavy, swinging chords | Theme 2 |
-| ≈ 3:30–7:30 | A long, lighter detour: playful, quick and full of new ideas, mostly quiet | The middle section, in E-flat major |
-| ≈ 7:30–9:00 | Slower and dreamier: the first movement's two themes come back | Themes of movement I recalled |
-| ≈ 9:00 | The hammering rhythm of the finale's opening again | Theme 1 returns |
-| ≈ 10:30 | The broad tune in heavy chords again | Theme 2 returns |
-| ≈ 12:00–13:30 | The piano races up and down in a long, glittering build-up, with the orchestra driving it on | The final climb |
-| ≈ 13:30 | The whole orchestra plays the broad tune, slow and grand, in D major; the piano crashes out chords | Theme 2 as a hymn of triumph |
-| Last 20 seconds | A rush of chords and a final four-note rhythm | The ending; the same short rhythm ends his Second Concerto |
+| ≈ 1:15 | Bold chords in the piano; a broader tune that rises through heavy, swinging chords | Theme 2 |
+| ≈ 3:15–7:00 | A long, lighter detour: playful, quick and full of new ideas, mostly quiet | The middle section, in E-flat major |
+| ≈ 7:00–8:20 | Slower and dreamier: the first movement's two themes come back | Themes of movement I recalled |
+| ≈ 8:20 | The hammering rhythm of the finale's opening again | Theme 1 returns |
+| ≈ 9:45 | The broad tune in heavy chords again | Theme 2 returns |
+| ≈ 11:05–12:30 | The piano races up and down in a long, glittering build-up, with the orchestra driving it on | The final climb |
+| ≈ 12:30 | The whole orchestra plays the broad tune, slow and grand, in D major; the piano crashes out chords | Theme 2 as a hymn of triumph |
+| ≈ 13:35 | A rush of chords and a final four-note rhythm, then applause | The ending; the same short rhythm ends his Second Concerto |
 
 **Things to notice**
 

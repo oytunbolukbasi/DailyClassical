@@ -14,17 +14,28 @@ movement_count: 3
 hook: Mozart'ın son konçertosu; ölümünden birkaç hafta önce bir dostunun klarneti için yazıldı.
 reference_recording:
   soloists:
-    - { name: Thea King, role: basset clarinet }
-  conductor: Jeffrey Tate
-  orchestra: English Chamber Orchestra
-  label: Hyperion
-  catalogue_number: "CDA66199"
-  recorded: "25–26 March 1985"
-  venue: St Barnabas's Church, North Finchley, London
-  release_year: 1986
-  year: 1986
-  spotify_url: https://open.spotify.com/album/3UemBU0csyQmjZNyiU7c8R
+    - { name: Alfred Prinz, role: clarinet }
+  conductor: Karl Böhm
+  orchestra: Wiener Philharmoniker
+  label: Deutsche Grammophon
+  catalogue_number: "413 552-2 (CD, with the Flute and Harp Concerto)"
+  recorded: "7 September 1972"
+  venue: Musikverein (Großer Saal), Vienna
+  release_year: 1974
+  year: 1972
+  spotify_url: https://open.spotify.com/album/4OKpa6vVWkqHQu8SeuJHip
 also_recommended:
+  - soloists:
+      - { name: Thea King, role: basset clarinet }
+    conductor: Jeffrey Tate
+    orchestra: English Chamber Orchestra
+    label: Hyperion
+    catalogue_number: "CDA66199"
+    recorded: "25–26 March 1985"
+    venue: St Barnabas's Church, North Finchley, London
+    release_year: 1986
+    year: 1986
+    spotify_url: https://open.spotify.com/album/3UemBU0csyQmjZNyiU7c8R
   - soloists:
       - { name: Sabine Meyer, role: basset clarinet }
     conductor: Claudio Abbado
@@ -56,9 +67,9 @@ painting:
 
 | | Tempo | Ton | Ölçü | Süre |
 | --- | --- | --- | --- | --- |
-| I | Allegro | La majör | 4/4 | 13:26 |
-| II | Adagio | Re majör | 3/4 | 7:52 |
-| III | Rondo: Allegro | La majör | 6/8 | 9:27 |
+| I | Allegro | La majör | 4/4 | 13:02 |
+| II | Adagio | Re majör | 3/4 | 8:09 |
+| III | Rondo: Allegro | La majör | 6/8 | 9:31 |
 
 ### I. Allegro
 
@@ -75,17 +86,17 @@ painting:
 | Zaman | Ne duyuyorsunuz | Ne oluyor |
 | --- | --- | --- |
 | ≈ 0:00 | Yaylılar sakin, sıcak bir ezgi çalar; bütün orkestra onları izler | 1. tema, orkestranın serimi. Henüz solist yok |
-| ≈ 2:05 | Klarnet açılış ezgisiyle girer | Solo serim başlıyor |
-| ≈ 2:45 | Klarnetin en tizinden en pes notalarına dek inen koşular | Klarnet genişliğini gösteriyor; basset klarnetin ek pes notaları da dahil |
-| ≈ 3:45 | Klarnet daha sessiz, daha hüzünlü bir ezgi çalar; armoni bulutlanır, sonra açılır | 2. tema, yeni tonda |
-| ≈ 5:00 | Orkestra tek başına, gür ve kendinden emin | Solo serimi bir [[tutti|tutti]] kapatıyor |
-| ≈ 5:45 | Klarnet minör bir tonda geri gelir; yumuşak bir eşlik üzerinde sıçramalar ve bozuk akorlar | [[development|Gelişme bölümü]] |
-| ≈ 9:25 | Sıcak açılış ezgisi ana tonda geri döner | [[recapitulation|Yeniden serim]] |
+| ≈ 2:00 | Klarnet açılış ezgisiyle girer | Solo serim başlıyor |
+| ≈ 2:40 | Klarnetin en tizinden en pes notalarına dek inen koşular | Klarnet genişliğini gösteriyor. Burada çalınan sıradan klarnette Mozart'ın en pes notalarından bazıları yukarı taşınmış |
+| ≈ 3:40 | Klarnet daha sessiz, daha hüzünlü bir ezgi çalar; armoni bulutlanır, sonra açılır | 2. tema, yeni tonda |
+| ≈ 4:50 | Orkestra tek başına, gür ve kendinden emin | Solo serimi bir [[tutti|tutti]] kapatıyor |
+| ≈ 5:35 | Klarnet minör bir tonda geri gelir; yumuşak bir eşlik üzerinde sıçramalar ve bozuk akorlar | [[development|Gelişme bölümü]] |
+| ≈ 9:10 | Sıcak açılış ezgisi ana tonda geri döner | [[recapitulation|Yeniden serim]] |
 | Sona doğru | Bölümü orkestra tek başına toparlar | Kapanış tuttisi. Mozart büyük bir solo [[cadenza|kadans]] için yer bırakmamış |
 
 **Dikkat edilecekler**
 
-1. Klarnetin pes notalarına kulak verin. En pes olanlarını sıradan bir klarnet çalamaz; Thea King, Mozart'ın yazdığı çalgı olan basset klarneti çalıyor.
+1. Klarnetin koyu, tahtamsı pes notalarına kulak verin. Alfred Prinz sıradan bir La klarneti çalıyor, bu yüzden solo partisini bu çalgı için alışılmış biçimiyle çalıyor: Mozart'ın, yazdığı basset klarnet için çizdiği çizgi birkaç yerde daha da aşağı iniyordu.
 2. Klarnet tizden pese sıçradığında, iki ayrı sesten gelen bir soru ve bir cevap gibi duyulabilir.
 
 ### II. Adagio
@@ -103,9 +114,9 @@ painting:
 | --- | --- | --- |
 | ≈ 0:00 | Klarnet sessiz yaylıların üzerinde yavaş, sade bir melodi söyler | Ana tema |
 | ≈ 0:40 | Orkestra aynı melodiyi çalar, daha dolgun ve daha sıcak | Orkestra temayı tekrarlıyor |
-| ≈ 2:35 | Klarnetin çizgisi serbestleşir; sıçramalar genişler, hızlı süslemeler belirir | Orta kısım |
-| ≈ 4:40 | Müzik duraklar; klarnet birkaç serbest notayla tek başına geri yol alır | Ana temaya kısa bir bağlantı |
-| ≈ 4:50 | Açılış melodisi klarnette, çok sessizce geri döner | Ana temanın dönüşü |
+| ≈ 2:40 | Klarnetin çizgisi serbestleşir; sıçramalar genişler, hızlı süslemeler belirir | Orta kısım |
+| ≈ 4:50 | Müzik duraklar; klarnet birkaç serbest notayla tek başına geri yol alır | Ana temaya kısa bir bağlantı |
+| ≈ 5:00 | Açılış melodisi klarnette, çok sessizce geri döner | Ana temanın dönüşü |
 | Sona doğru | Klarnet ve orkestra birlikte yumuşakça kapanır | [[coda|Koda]] |
 
 **Dikkat edilecekler**
@@ -138,7 +149,7 @@ painting:
 
 1. Müziğin oyunbazlıktan ciddiyete ve geri ne kadar çabuk döndüğüne dikkat edin. Karanlık ara bölüm yalnızca bir dakika kadar sürer.
 
-**Bu kayıtta.** Thea King basset klarnet çalıyor; solo partisinin Mozart'ın pes notalarını geri getiren, Alan Hacker'ın yeniden kurduğu bir versiyonunu kullanıyor.
+**Bu kayıtta.** 1955'ten 1983'e dek Viyana Filarmoni'nin solo klarnetçisi olan Alfred Prinz, kendi orkestrası ve Karl Böhm ile, 1972'de Viyana'daki Musikverein'da yapılmış bir stüdyo kaydında sıradan bir La klarneti çalıyor. Solo partisini bir basset klarnet uyarlamasıyla değil, en pes pasajları yukarı taşınmış alışılmış biçimiyle çalıyor.
 
 ### Bağlayan ipler
 

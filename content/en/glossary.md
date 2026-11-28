@@ -8,6 +8,7 @@ Definition: one or two sentences, written for the pop-over.
 | Alborada | A Spanish morning song, a dance to greet the sunrise | Spanish for "dawn song": a lively folk piece played or sung at daybreak, typical of Galicia and Asturias in northern Spain, often for bagpipe or pipe and drum. |
 | Alla turca | In the "Turkish" style, imitating Janissary bands | Italian for "in the Turkish manner": music that imitates, often only distantly, the Ottoman Janissary bands (mehter), with a march rhythm, loud unison tunes, repeated figures and the sound of drums and cymbals. It was a European fashion of the 18th century, not real Ottoman music. |
 | Allemande | A moderate German dance in four, often first in a suite | A dance of German origin in a moderate four beats, usually the first dance of a Baroque suite, with a flowing line of quick notes. |
+| Aria | A solo song in an opera, oratorio or cantata | A song for one singer with orchestra in an opera, oratorio or cantata, where the action pauses and a character expresses a feeling at length. |
 | Arpeggio | The notes of a chord played one after another | The notes of a chord played one after another instead of together. |
 | Attacca | Go straight on into the next movement, without a pause | Italian for "attack": the next movement begins at once, with no break, so the two are heard as one continuous piece. |
 | Bariolage | Rapid rocking across strings, often with an open string | A string-playing effect in which the bow moves quickly back and forth across two or more strings, alternating a changing note with a repeated one, often an open string, so that the line seems to shimmer. |
@@ -20,6 +21,7 @@ Definition: one or two sentences, written for the pop-over.
 | Cadenza | A free solo passage while the orchestra waits | A short solo passage where the rest of the orchestra stops and one player or singer is free to linger. |
 | Canon | One melody chasing itself, like a round | One instrument plays a melody and another follows a moment later with the same melody, like a round. |
 | Cantabile | Smooth and expressive, in a singing style | "In a singing style": played smoothly and expressively, like a voice. |
+| Cantus firmus | An existing melody held in long notes under new music | Latin for "fixed song": a melody that already exists, often a plainchant, sung or played in long, even notes while the other voices weave new counterpoint around it. |
 | Chaconne | Variations over a short, repeating pattern of chords | A piece built on a short pattern of chords, often four or eight bars long, repeated again and again while the music above it keeps changing. Bach's for solo violin is the best known. |
 | Chorale | Slow, hymn-like music in solemn chords | Slow, hymn-like music that moves in solemn chords. |
 | Chromatic scale | A scale that moves by every semitone, the smallest step | A scale that climbs or falls through all twelve notes of the octave, each a semitone (the smallest step on the piano) from the next, so that it seems to slide rather than step. |
@@ -28,8 +30,10 @@ Definition: one or two sentences, written for the pop-over.
 | Concert overture | An overture written as a stand-alone concert piece | A one-movement orchestral piece called an overture but written for the concert hall, not to open an opera or a play. It may paint a mood or a scene, as Mendelssohn's *The Hebrides* does, or celebrate an occasion. |
 | Concerto grosso | A small group of soloists set against the full band | A Baroque concerto in which a small group of soloists, the concertino (in Corelli two violins and a cello), alternates and combines with the full string orchestra, the ripieno. |
 | Continuo | The bass line and chords that underpin Baroque music | The accompaniment that runs under almost all Baroque music: a bass line played by a cello, bassoon or double bass, with a harpsichord, organ or lute filling in the chords. |
+| Cor anglais | A lower oboe with a dark, plaintive tone | A woodwind instrument of the oboe family, pitched a fifth lower than the oboe, with a bulb-shaped bell that gives it a darker, more melancholy sound. Despite its name (also English horn) it is neither English nor a horn. |
 | Counterpoint | Two or more independent melodies combined at once | The art of combining two or more independent melodies so that they sound together as one texture, each keeping its own shape. |
 | Courante | A lively "running" dance in three | A "running" dance in three beats. The Italian corrente is quick and light; the French courante is more stately. |
+| Cowbells | Clanking tin chimes worn by cattle in the Alps | Bells of the kind hung round the necks of cattle in Alpine pastures, shaken rather than struck. Mahler uses them in his Sixth and Seventh Symphonies to suggest high mountain meadows far from the world, often played offstage. |
 | Crescendo | Getting gradually louder | Getting gradually louder. |
 | Cyclic form | Themes that come back across a work's movements | A way of building a work in several movements so that themes from one movement return, often transformed, in the others. |
 | Development | The middle of sonata form, where the themes are worked | The middle stage of sonata form, where the themes are broken up, combined and pushed through different keys. |
@@ -54,6 +58,7 @@ Definition: one or two sentences, written for the pop-over.
 | Gigue | A fast jig in skipping groups of three | A fast dance descended from the British jig, in a skipping rhythm of three-note groups. It usually ends a Baroque suite. |
 | Glissando | A continuous slide from one note to another | A continuous slide from one note to another. |
 | Ground bass | A short bass line repeated under changing music | A short bass line repeated over and over, while the music above it changes with each repeat. |
+| Hammer | A huge, dull blow on wood in Mahler's Sixth | A percussion instrument Mahler devised for the finale of his Sixth Symphony: a heavy hammer or mallet brought down on a wooden box or block, giving a short, mighty crash that thuds rather than rings. |
 | Harmonics | High, glassy notes made by lightly touching a string | High, glassy, almost flute-like notes, made on a string instrument by touching the string lightly at certain points instead of pressing it down. |
 | Hemiola | Two bars of three beats regrouped into three pairs | A rhythmic shift in which two bars of three beats are accented as if they were three groups of two, so they sound like one long bar of three slow beats. The beat seems to stumble or stretch. |
 | Homophony | All voices moving together in the same rhythm | Music in which all the voices move together in the same rhythm, as a chain of chords, so that words sung by a choir come through clearly. The opposite of polyphony. |
@@ -91,6 +96,7 @@ Definition: one or two sentences, written for the pop-over.
 | Pedal note | One note held in the bass under changing harmony | A single note held or repeated, usually in the bass, while the harmony changes above it. |
 | Pentatonic scale | A five-note scale heard in folk music worldwide | A scale of five notes instead of the usual seven, with no semitone steps between them. It gives melodies an open, folk-like sound found in music all over the world. |
 | Perpetuum mobile | "Perpetual motion": fast, even notes without a break | A fast piece or movement in which one line runs on in rapid, even notes from start to finish, with hardly a pause. |
+| Piano trio | A chamber group of piano, violin and cello | A group of three players, piano, violin and cello, and the name for music written for them. |
 | Pizzicato | Plucking the strings instead of using the bow | Plucking the strings of a string instrument with the finger instead of using the bow. |
 | Plainchant | Ancient unaccompanied church melody, in free rhythm | The ancient melody of the Western Church, sung without accompaniment in a free, speech-like rhythm by one voice or many in unison. Also called plainsong or Gregorian chant. |
 | Polka | A lively Bohemian couple dance in two beats | A lively dance for couples in two beats, with a little hop, that began in Bohemia around 1830 and swept the ballrooms of Europe. Czech composers such as Smetana and Dvořák brought it into concert music. |
@@ -103,6 +109,7 @@ Definition: one or two sentences, written for the pop-over.
 | Recapitulation | The return of the opening themes near the end of sonata form | The last stage of sonata form, where the opening themes return. |
 | Recitative | Music that follows the free rhythm of speech | Music that imitates the rhythm of speech, free and unmeasured. |
 | Requiem | The Catholic Mass for the dead, and music for it | The Mass for the dead in the Catholic Church, named after its first words, "Requiem aeternam" ("eternal rest"). Unlike the ordinary Mass it leaves out the joyful Gloria and the Credo, and adds texts such as the Dies irae. |
+| Responsory | A chant in which the choir answers verses with a refrain | A form of chant in which a soloist or a small group sings verses and the choir answers with a recurring refrain. The Libera me, sung beside the coffin after the Requiem Mass, is one. |
 | Rhapsody | A free, one-movement piece of contrasting episodes | A single-movement work that moves freely from one mood and tempo to the next, often sounding improvised, instead of following a set form. |
 | Rigaudon | A lively old French dance in two beats | A quick, cheerful dance in duple time from southern France, popular at the French court in the late seventeenth and early eighteenth centuries, with short, bouncing phrases. |
 | Ritornello | The returning refrain of a Baroque concerto | In a Baroque concerto, the passage the whole ensemble plays at the start and brings back, often shortened or in new keys, between the soloist's episodes. |

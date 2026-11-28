@@ -13,17 +13,28 @@ movement_count: 3
 hook: Mozart's last concerto, written for a friend's clarinet weeks before he died.
 reference_recording:
   soloists:
-    - { name: Thea King, role: basset clarinet }
-  conductor: Jeffrey Tate
-  orchestra: English Chamber Orchestra
-  label: Hyperion
-  catalogue_number: "CDA66199"
-  recorded: "25–26 March 1985"
-  venue: St Barnabas's Church, North Finchley, London
-  release_year: 1986
-  year: 1986
-  spotify_url: https://open.spotify.com/album/3UemBU0csyQmjZNyiU7c8R
+    - { name: Alfred Prinz, role: clarinet }
+  conductor: Karl Böhm
+  orchestra: Wiener Philharmoniker
+  label: Deutsche Grammophon
+  catalogue_number: "413 552-2 (CD, with the Flute and Harp Concerto)"
+  recorded: "7 September 1972"
+  venue: Musikverein (Großer Saal), Vienna
+  release_year: 1974
+  year: 1972
+  spotify_url: https://open.spotify.com/album/4OKpa6vVWkqHQu8SeuJHip
 also_recommended:
+  - soloists:
+      - { name: Thea King, role: basset clarinet }
+    conductor: Jeffrey Tate
+    orchestra: English Chamber Orchestra
+    label: Hyperion
+    catalogue_number: "CDA66199"
+    recorded: "25–26 March 1985"
+    venue: St Barnabas's Church, North Finchley, London
+    release_year: 1986
+    year: 1986
+    spotify_url: https://open.spotify.com/album/3UemBU0csyQmjZNyiU7c8R
   - soloists:
       - { name: Sabine Meyer, role: basset clarinet }
     conductor: Claudio Abbado
@@ -55,9 +66,9 @@ painting:
 
 | | Tempo | Key | Metre | Duration |
 | --- | --- | --- | --- | --- |
-| I | Allegro | A major | 4/4 | 13:26 |
-| II | Adagio | D major | 3/4 | 7:52 |
-| III | Rondo: Allegro | A major | 6/8 | 9:27 |
+| I | Allegro | A major | 4/4 | 13:02 |
+| II | Adagio | D major | 3/4 | 8:09 |
+| III | Rondo: Allegro | A major | 6/8 | 9:31 |
 
 ### I. Allegro
 
@@ -74,17 +85,17 @@ painting:
 | Time | What you hear | What is happening |
 | --- | --- | --- |
 | ≈ 0:00 | The strings play a calm, warm tune; the whole orchestra follows | Theme 1, the orchestra's exposition. No soloist yet |
-| ≈ 2:05 | The clarinet enters with the opening tune | The solo exposition begins |
-| ≈ 2:45 | Running notes that sweep from the top of the clarinet to its deepest notes | The clarinet shows its range, including the extra low notes of the basset clarinet |
-| ≈ 3:45 | The clarinet plays a quieter, more wistful tune; the harmony clouds over, then clears | Theme 2, in the new key |
-| ≈ 5:00 | The orchestra alone, loud and confident | A [[tutti]] closes the solo exposition |
-| ≈ 5:45 | The clarinet returns in a minor key, with leaps and broken chords over a soft accompaniment | The [[development]] |
-| ≈ 9:25 | The warm opening tune returns in the home key | The [[recapitulation]] |
+| ≈ 2:00 | The clarinet enters with the opening tune | The solo exposition begins |
+| ≈ 2:40 | Running notes that sweep from the top of the clarinet to its deepest notes | The clarinet shows its range. On the ordinary clarinet played here, some of Mozart's lowest notes are moved up |
+| ≈ 3:40 | The clarinet plays a quieter, more wistful tune; the harmony clouds over, then clears | Theme 2, in the new key |
+| ≈ 4:50 | The orchestra alone, loud and confident | A [[tutti]] closes the solo exposition |
+| ≈ 5:35 | The clarinet returns in a minor key, with leaps and broken chords over a soft accompaniment | The [[development]] |
+| ≈ 9:10 | The warm opening tune returns in the home key | The [[recapitulation]] |
 | Near the end | The orchestra alone rounds off the movement | The closing tutti. Mozart left no place for a big solo [[cadenza]] |
 
 **Things to notice**
 
-1. Listen for the clarinet's low notes. Ordinary clarinets cannot play the lowest of them; Thea King plays a basset clarinet, the instrument Mozart wrote for.
+1. Listen for the clarinet's low notes, dark and woody. Alfred Prinz plays an ordinary clarinet in A, so he uses the solo part in its traditional form for that instrument: in a few places Mozart's line went lower still, on the basset clarinet he wrote for.
 2. When the clarinet leaps from high to low, it can sound like a question and an answer from two different voices.
 
 ### II. Adagio
@@ -102,9 +113,9 @@ painting:
 | --- | --- | --- |
 | ≈ 0:00 | The clarinet sings a slow, simple melody over quiet strings | The main theme |
 | ≈ 0:40 | The orchestra plays the same melody, fuller and warmer | The orchestra repeats the theme |
-| ≈ 2:35 | The clarinet's line becomes freer, with wider leaps and quick decorations | The middle section |
-| ≈ 4:40 | The music pauses; the clarinet leads back alone with a few free notes | A short link back to the main theme |
-| ≈ 4:50 | The opening melody returns in the clarinet, very quietly | The return of the main theme |
+| ≈ 2:40 | The clarinet's line becomes freer, with wider leaps and quick decorations | The middle section |
+| ≈ 4:50 | The music pauses; the clarinet leads back alone with a few free notes | A short link back to the main theme |
+| ≈ 5:00 | The opening melody returns in the clarinet, very quietly | The return of the main theme |
 | Near the end | Clarinet and orchestra close softly together | The [[coda]] |
 
 **Things to notice**
@@ -137,7 +148,7 @@ painting:
 
 1. Notice how quickly the music can turn from playful to serious and back. The dark episode lasts only a minute or so.
 
-**In this recording.** Thea King plays a basset clarinet in a version of the solo part that restores Mozart's low notes, based on Alan Hacker's reconstruction.
+**In this recording.** Alfred Prinz, principal clarinet of the Vienna Philharmonic from 1955 to 1983, plays an ordinary clarinet in A with his own orchestra and Karl Böhm, in a 1972 studio recording made in the Musikverein, Vienna. He plays the solo part in its traditional form, with the lowest passages moved up, not a basset clarinet reconstruction.
 
 ### Threads
 

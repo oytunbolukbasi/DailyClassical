@@ -123,3 +123,36 @@ Ready-to-paste rows for `content/research/retime-needed.md` are in `mozart-clari
 1. Re-time every stop against Spotify 3UemBU0csyQmjZNyiU7c8R, tracks 1–3.
 2. Confirm by ear: no cadenza at the end of I; whether King adds a lead-in in II (≈ 4:40) and in III.
 3. Recording date and venue of the Meyer/Abbado alternative.
+
+---
+
+## New reference recording (2026-11-28, batch 2026-11c, group C): Alfred Prinz / Wiener Philharmoniker / Karl Böhm (DG, 1972)
+
+Product owner's choice. Thea King / Tate moves to the top of `also_recommended` (Sabine Meyer / Abbado stays as the second). Drafts: `content/drafts/{en,tr}/mozart-clarinet-concerto.md`; re-time rows in `content/research/mozart-clarinet-concerto.shared.md`.
+
+| Field | Value in the guide | Verified value | Source | Status |
+| --- | --- | --- | --- | --- |
+| Spotify album | https://open.spotify.com/album/4OKpa6vVWkqHQu8SeuJHip | "Mozart: Clarinet Concerto K. 622; Flute & Harp Concerto K. 299", tracks 1–3 credited "Wolfgang Amadeus Mozart, Alfred Prinz, Vienna Philharmonic, Karl Böhm"; album page "compilation · 1984", "℗ This Compilation ℗ 1984", "© 2021 Deutsche Grammophon GmbH, Berlin" | embed and album page, read 2026-11-28 | OK |
+| Soloist / instrument | Alfred Prinz, clarinet (an ordinary clarinet in A, not a basset clarinet) | Spotify credits "Alfred Prinz"; Discogs CD 413 552-2 "Concerto For Clarinet And Orchestra In A Major K. 622"; no basset clarinet in any credit. That he plays the traditional text with the low passages moved up follows from the instrument (an A clarinet cannot reach the basset notes) | https://api.discogs.com/releases/14212774 | OK (instrument stated by the product owner; consistent with all credits) |
+| Prinz, principal clarinet of the Vienna Philharmonic 1955–1983 | en.wikipedia "Alfred Prinz" (citing the Vienna Philharmonic's obituary, 20 Oct 2014); de.wikipedia ("Von 1955 bis 1983 war er Soloklarinettist der Wiener Philharmoniker") | https://en.wikipedia.org/wiki/Alfred_Prinz ; https://de.wikipedia.org/wiki/Alfred_Prinz | OK |
+| Label / cat. no. | Deutsche Grammophon, 413 552-2 (CD, with the Flute and Harp Concerto) | Discogs 14212774: DG 413 552-2, "℗ 1974 (KV 622) / 1976 (KV 299)"; DG product page for the coupling (UPC 00028948620159, dated 1984) | Discogs; https://www.deutschegrammophon.com/en/catalogue/products/mozart-konzerte-f-klar-fl-u-harfe-boehm-9641 | OK. The original 1974 LP number was not confirmed, so the CD of the Spotify coupling is given |
+| Recorded / venue | 7 September 1972, Musikverein (Großer Saal), Vienna; studio | DG product page track data for K. 622 I–III: recordingDate 1972-09-07, recordingLocation "Grosser Saal, Musikverein, Wien", recordingSetting "Studio", firstReleaseYear 1974 (K. 299: 1975-05-27) | DG page (embedded JSON) | OK |
+| release_year / year | 1974 / 1972 | firstReleaseYear 1974; ℗ 1974 (Discogs) | as above | OK |
+
+### Durations and playability (embed, album 4OKpa6vVWkqHQu8SeuJHip, read 2026-11-28 from Turkey)
+
+| Mvt | Track | ms | Guide | isPlayable |
+| --- | --- | --- | --- | --- |
+| I Allegro | 1 | 781 880 | 13:02 | true |
+| II Adagio | 2 | 488 986 | 8:09 | true |
+| III Rondo. Allegro | 3 | 571 173 | 9:31 | true |
+| Total | | 1 842 039 | 30.7 min → `duration_min: 31` (unchanged) | |
+
+Tracks 4–6 (Flute and Harp Concerto, Schulz, Zabaleta) not used.
+
+### What changed in the guide (EN and TR)
+
+- `reference_recording` → Prinz / Böhm; King / Tate first in `also_recommended`.
+- Movements table durations.
+- Stops moved proportionally (I ×0.970: 2:05→2:00, 2:45→2:40, 3:45→3:40, 5:00→4:50, 5:45→5:35, 9:25→9:10; II ×1.036: 0:40 unchanged, 2:35→2:40, 4:40→4:50, 4:50→5:00; III ×1.007: all stops within 5 s of the old ones, left unchanged).
+- Basset-dependent sentences rewritten: the ≈ 2:40 stop ("including the extra low notes of the basset clarinet" → on the ordinary clarinet played here some of Mozart's lowest notes are moved up); "Things to notice" 1 in movement I (Thea King's basset clarinet → Prinz's A clarinet and the traditional solo text); "In this recording" (movement III). The big picture's history of Stadler's basset clarinet and the printed version is not recording-specific and stays as it was.
