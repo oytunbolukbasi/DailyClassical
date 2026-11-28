@@ -22,6 +22,11 @@ Son güncelleme: 18 Kasım 2026. **[Claude]** kod ve içerik tarafı, **[Oytun]*
 
 Kaydırma düzeltmeleri (Kitaplık/Ayarlar üst esneme b39ea16, Ayarlar alt sayfa dönüş sıçraması 57c6187), günlük bildirimde tablonun kaybolması (planlar sırayla, her planda yeni kimlik; 0993b20) ve 7'den fazla bölüm için kapsül + bölüm listesi sayfası (64ce8d9). Build 10 ve 11 kullanılmadı. **Sonuç:** Mozart Requiem (14 bölüm) kullanıcıların çoğu 1.3.1'e geçince takvime girebilir (App Store Connect › Analytics'te sürüm dağılımına bak; eski sürümde 14 bölüm seçiciye sığmaz).
 
+## Sonraki sürüm (1.5)
+
+- **Arama sekmesi: Besteciler / Dönemler / Türler (Oytun, 28 Kasım).** Search'e dokununca üç görselli kutu; yazarak arama ve sonuç listesi aynen kalır, native cam arama çubuğu (TabView'a bağlı `.searchable`, alttaki arama alanı) bozulmadan; olmazsa arama yukarı taşınabilir. Besteciler: portreler; Dönemler: ilgili tablolardan kolaj; Türler: görselleştirme önerileri bekleniyor. Önce tasarım (Fable canvas'ı, `design/search-browse/`), onaydan sonra kod.
+- **Hatırlatma görseli (28 Kasım, kodda, cfeac78):** görseller eskiler silinmeden önce hazırlanıyor, plan arka plan süresi istiyor, görselsiz gün kalırsa bir sonraki açılışta yeniden plan, önbellek Application Support'ta. Sebep: kısa açılışta uygulama askıya alınınca indirme yarıda kalıyordu (doğrulama için Ayarlar › Test'teki bekleyen listede ✗).
+
 ## 1.4 (14): kendi push ve uygulama içi mesaj sistemimiz (25 Kasım 2026, incelemede: Oytun gönderdi)
 
 **Durum (25 Kasım akşam):** backend ve /admin/messages (sekme adı Engage) canlıda; Railway'de APNS_KEY_ID/APNS_PRIVATE_KEY tanımlı. Oytun'un iPhone'u davetle test cihazı; Ad Hoc 1.4 (14) ile P1–P4 geçti (ön plan, arka plan, kilit ekranı, tamamen kapalı; webp görsel, deeplink ile eser), iki gerçek gönderi de cihaza ulaştı. Uygulama içi kart simülatörde (webp görsel, Premium deeplink) doğrulandı. Gizlilik metni "Bildirimler ve mesajlar" (kendi sunucumuz) ile güncel, PrivacyInfo App Privacy cevaplarıyla aynı. 1.4 (14) App Store Connect'e yüklendi; sürüm sayfasında inceleme notu güncel, What's New "Küçük düzenlemeler ve iyileştirmeler." Gönderim Oytun'da. Test listesi: project-knowledge/push-test-plan.md. Ertesi gün Premium mesajı (yerel bildirim) henüz yok, metin onayı bekliyor; Black Friday kurgusu onaydan sonra Engage'den.
