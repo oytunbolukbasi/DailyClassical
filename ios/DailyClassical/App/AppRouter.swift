@@ -34,6 +34,15 @@ final class AppRouter {
     /// Navigation stacks of the Today and Library tabs, so any screen can push a piece.
     var todayPath = NavigationPath()
     var libraryPath = NavigationPath()
+    /// Keşfet's pages (Features/Search/Browse.swift) and pieces opened from them.
+    var searchPath = NavigationPath()
+    /// Keşfet's "Show in Library": the Library sets these filters and clears the request.
+    var libraryFilter: LibraryFilter?
+    struct LibraryFilter: Equatable {
+        var form: PieceForm? = nil
+        var era: Era? = nil
+        var composer: String? = nil
+    }
     var sheet: Sheet?
     var toast: LocalizedStringResource?
     /// The App Store rating card (Features/Rating). Set by RatePromptPolicy, or Settings › Test.

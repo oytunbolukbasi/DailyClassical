@@ -1,25 +1,66 @@
 import SwiftUI
 
-/// Search tab (SPEC §4.12). Premium: grouped results (Pieces / Composers / Glossary) with the
-/// match in accent. Free users see the tab, and opening it presents the paywall.
+/// Search tab (SPEC §4.12). Before the field is used it shows Keşfet (Features/Search/Browse.swift):
+/// Composers, Eras and Forms, open to everyone. Focusing the field shows recent searches, typing
+/// the grouped results (Pieces / Composers / Glossary) with the match in accent: Premium. Free
+/// users who focus the field see "Search is part of Premium"; the tab no longer opens the paywall.
 struct SearchScreen: View {
+    @Environment(AppRouter.self) private var router
+
+    var body: some View {
+        @Bindable var router = router
+        NavigationStack(path: $router.searchPath) {
+            SearchContent()
+                .background(Palette.background)
+                // Pushed pages show "‹ Discover" as their back button; the title itself is drawn
+                // in Literata in the content (BrowseHome), like the Library's.
+                .navigationTitle(Text("browse.title"))
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar(removing: .title)
+                .navigationDestination(for: BrowseRoute.self) { route in
+                    switch route {
+                    case .composers: BrowseComposersPage()
+                    case .eras: BrowseErasPage()
+                    case .era(let era): BrowseEraPage(era: era)
+                    case .forms: BrowseFormsPage()
+                    case .form(let form): BrowseFormPage(form: form)
+                    }
+                }
+                .navigationDestination(for: PieceRoute.self) { PieceScreen(id: $0.id) }
+        }
+        // The glass field stays at the bottom on pushed pages: typing there goes back to the
+        // results at the root.
+        .onChange(of: router.searchQuery) { _, query in
+            if !query.isEmpty, !router.searchPath.isEmpty { router.searchPath = NavigationPath() }
+        }
+    }
+}
+
+/// Keşfet while the field is empty (recent searches under the plates, Premium), then the results.
+/// Selecting the tab focuses the field and raises the keyboard, and iOS takes the focus back if
+/// the app lets go of it (the keyboard went down and up again): Keşfet stays until the first
+/// letter, and a scroll lowers the keyboard.
+private struct SearchContent: View {
+    @Environment(AppRouter.self) private var router
     @Environment(EntitlementStore.self) private var entitlements
 
     var body: some View {
-        NavigationStack {
-            Group {
-                if entitlements.isPremium {
-                    PremiumSearchView()
-                } else {
-                    LockedSearchView()
+        if router.searchQuery.isEmpty {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 30) {
+                    BrowseHome()
+                    if entitlements.isPremium { RecentSearchesSection() }
                 }
+                .padding(.horizontal, Spacing.pageGutter)
+                .padding(.top, 12)
+                .padding(.bottom, 40)
             }
+            .scrollDismissesKeyboard(.immediately)
             .background(Palette.background)
-            .navigationTitle(Text("tab.search"))
-            .navigationBarTitleDisplayMode(.inline)
-            // The design draws no title on Search (SPEC §4.12); the bar keeps its height, so the
-            // results still start 22 below it.
-            .toolbar(removing: .title)
+        } else if entitlements.isPremium {
+            PremiumSearchView()
+        } else {
+            LockedSearchView()
         }
     }
 }
@@ -46,10 +87,6 @@ private struct LockedSearchView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Palette.background)
-        // Brief: "Search tab: visible to free users, opens the paywall on tap".
-        .onAppear {
-            if router.tab == .search, router.sheet == nil { router.present(.paywall) }
-        }
     }
 }
 
@@ -195,6 +232,53 @@ private struct PremiumSearchView: View {
         guard !q.isEmpty else { return }
         recents = RecentSearches.adding(q, to: recents, locale: locale)
         RecentSearches.save(recents)
+    }
+}
+
+/// Recent searches right under Keşfet's three plates: a tap puts the search back in the field.
+private struct RecentSearchesSection: View {
+    @Environment(AppRouter.self) private var router
+    @State private var recents = RecentSearches.load()
+
+    var body: some View {
+        content
+            // Keşfet comes back each time the field is cleared: pick up the search just made.
+            .onAppear { recents = RecentSearches.load() }
+    }
+
+    @ViewBuilder private var content: some View {
+        if !recents.isEmpty {
+            VStack(alignment: .leading, spacing: 8) {
+                HStack(alignment: .firstTextBaseline) {
+                    SectionLabel("search.recent")
+                    Spacer()
+                    Button("search.recent.clear") {
+                        withAnimation { recents = []; RecentSearches.save([]) }
+                    }
+                    .font(Typography.meta13)
+                    .foregroundStyle(Palette.accent)
+                    .buttonStyle(.plain)
+                    .frame(minHeight: 44)
+                }
+                VStack(spacing: 0) {
+                    ForEach(recents, id: \.self) { recent in
+                        Button { router.searchQuery = recent } label: {
+                            HStack(spacing: 12) {
+                                Icon("search", size: 16).foregroundStyle(Palette.ink3)
+                                Text(verbatim: recent)
+                                    .font(Typography.body17)
+                                    .foregroundStyle(Palette.ink)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                            }
+                            .padding(.vertical, 12)
+                            .contentShape(.rect)
+                        }
+                        .buttonStyle(.plain)
+                        .hairlineTop()
+                    }
+                }
+            }
+        }
     }
 }
 

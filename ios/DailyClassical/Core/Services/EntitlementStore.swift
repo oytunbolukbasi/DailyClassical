@@ -193,6 +193,18 @@ final class EntitlementStore {
         }
     }
 
+    /// After an App Store offer code was redeemed in the app (StoreKit's redemption sheet): the
+    /// purchase reaches StoreKit, then RevenueCat; fetch fresh customer info rather than waiting.
+    /// Not `restore()`, which may ask for the Apple ID password.
+    func refreshAfterRedemption() async {
+        if usesRevenueCat {
+            _ = try? await Purchases.shared.syncPurchases()
+            if let info = try? await Purchases.shared.customerInfo(fetchPolicy: .fetchCurrent) { apply(info) }
+        } else {
+            await refresh()
+        }
+    }
+
     // MARK: Account
 
     /// Ties purchases to the signed-in DailyClassical account (nil = signed out). RevenueCat only;

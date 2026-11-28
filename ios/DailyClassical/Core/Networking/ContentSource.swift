@@ -15,9 +15,23 @@ struct ContentSource: Sendable {
 
     static let api = ContentSource(
         today: { try await APIClient.shared.today(language: $0).piece },
-        pieces: { try await APIClient.shared.pieces(day: $1, language: $0) },
+        pieces: { language, day in
+            let published = try await APIClient.shared.pieces(day: day, language: language)
+            // Settings › Test › whole catalogue: the API lists published pieces only, so the
+            // unscheduled ones come from the bundled fixtures (without a publish date).
+            guard ContentSource.showsWholeCatalogue,
+                  let bundled = try? Fixtures.load([PieceSummary].self, "pieces", language) else { return published }
+            let known = Set(published.map(\.id))
+            return published + bundled.filter { !known.contains($0.id) }.map { var p = $0; p.publishDate = nil; return p }
+        },
         schedule: { try await APIClient.shared.schedule(until: $1, language: $0) },
-        piece: { try await APIClient.shared.piece(id: $0, language: $1) },
+        piece: { id, language in
+            do { return try await APIClient.shared.piece(id: id, language: language) } catch {
+                // An unpublished piece shown by the whole-catalogue test setting.
+                if ContentSource.showsWholeCatalogue, let p = try? Fixtures.load(Piece.self, "piece-\(id)", language) { return p }
+                throw error
+            }
+        },
         glossary: { try await APIClient.shared.glossary(language: $0) },
         composers: { try await APIClient.shared.composers(language: $0) }
     )
@@ -55,8 +69,9 @@ struct ContentSource: Sendable {
 
     static var `default`: ContentSource { isAPI ? .api : .bundled }
 
-    /// Settings › Test: the Library lists unscheduled pieces too (bundled content only), so new
-    /// pieces can be read on a device before they are scheduled. Never in App Store builds.
+    /// Settings › Test: the Library and Keşfet list unscheduled pieces too (from the bundled
+    /// fixtures when reading the API), so new pieces can be read on a device before they are
+    /// scheduled. Never in App Store builds.
     nonisolated static var showsWholeCatalogue: Bool {
         TestBuild.isActive && UserDefaults.standard.bool(forKey: "debugShowAllPieces")
     }

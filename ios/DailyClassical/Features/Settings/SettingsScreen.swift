@@ -21,6 +21,7 @@ struct SettingsScreen: View {
     @AppStorage("debugShowAllPieces") private var debugShowAllPieces = false
 
     @State private var restoring = false
+    @State private var redeemingCode = false
     @State private var showManageSubscription = false
 
     var body: some View {
@@ -88,6 +89,13 @@ struct SettingsScreen: View {
                     }
                     .disabled(restoring)
                     .settingsRow()
+                    // App Store offer codes (e.g. a discounted lifetime for a campaign).
+                    Button { redeemingCode = true } label: {
+                        Text("settings.redeemCode").foregroundStyle(Palette.accent)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .contentShape(.rect)
+                    }
+                    .settingsRow()
                 } header: {
                     SettingsHeader("settings.section.premium")
                 }
@@ -112,6 +120,13 @@ struct SettingsScreen: View {
             // detail, SwiftUI hides the bar only after the pop has finished, so the list arrived
             // 35 pt low and then jumped up. Pinned to zero, it arrives where it rests.
             .contentMargins(.top, 0, for: .scrollContent)
+            .offerCodeRedemption(isPresented: $redeemingCode) { result in
+                guard case .success = result else { return }
+                Task {
+                    await entitlements.refreshAfterRedemption()
+                    if entitlements.isPremium { router.toast = "settings.redeemCode.done" }
+                }
+            }
             // The Literata title lives in the list; the bar title only feeds the back button.
             .navigationTitle(Text("settings.title"))
             .toolbar(.hidden, for: .navigationBar)

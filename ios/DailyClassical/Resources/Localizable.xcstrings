@@ -1903,6 +1903,268 @@
         }
       }
     },
+    "browse.composers": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Composers"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Besteciler"
+          }
+        }
+      }
+    },
+    "browse.composers.meta": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "From Tallis to Barber"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tallis’ten Barber’a"
+          }
+        }
+      }
+    },
+    "browse.count.pieces %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld piece"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld pieces"
+                }
+              }
+            }
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld eser"
+          }
+        }
+      }
+    },
+    "browse.era.empty": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No pieces from this era yet. We add one a day."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu dönemden henüz eser yok. Her gün bir eser ekliyoruz."
+          }
+        }
+      }
+    },
+    "browse.eras": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eras"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dönemler"
+          }
+        }
+      }
+    },
+    "browse.eras.meta": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "From the Renaissance to the 20th century"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rönesans’tan 20. yüzyıla"
+          }
+        }
+      }
+    },
+    "browse.form.meta %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld piece · by year written"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld pieces · by year written"
+                }
+              }
+            }
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld eser · yazılış yılına göre"
+          }
+        }
+      }
+    },
+    "browse.forms": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Forms"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Türler"
+          }
+        }
+      }
+    },
+    "browse.forms.footer": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "We add one piece a day. Other forms appear here with their first piece."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Her gün bir eser ekliyoruz. Diğer türler ilk eserleriyle burada görünecek."
+          }
+        }
+      }
+    },
+    "browse.forms.meta": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Symphonies, concertos, chamber music"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Senfoniler, konçertolar, oda müziği"
+          }
+        }
+      }
+    },
+    "browse.showInLibrary": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show in Library"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kitaplık’ta göster"
+          }
+        }
+      }
+    },
+    "browse.sort.az": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A–Z"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A–Z"
+          }
+        }
+      }
+    },
+    "browse.sort.era": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "By era"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Döneme göre"
+          }
+        }
+      }
+    },
+    "browse.title": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Discover"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keşfet"
+          }
+        }
+      }
+    },
     "common.close.accessibilityLabel": {
       "extractionState": "manual",
       "localizations": {
@@ -2180,6 +2442,125 @@
         }
       }
     },
+    "era.dates.baroque": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "c. 1600–1750"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "y. 1600–1750"
+          }
+        }
+      }
+    },
+    "era.dates.classical": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "c. 1750–1820"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "y. 1750–1820"
+          }
+        }
+      }
+    },
+    "era.dates.late_romantic": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "c. 1850–1910"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "y. 1850–1910"
+          }
+        }
+      }
+    },
+    "era.dates.modern": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1900 onwards"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1900’den sonra"
+          }
+        }
+      }
+    },
+    "era.dates.other": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
+          }
+        }
+      }
+    },
+    "era.dates.renaissance": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "c. 1400–1600"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "y. 1400–1600"
+          }
+        }
+      }
+    },
+    "era.dates.romantic": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "c. 1820–1900"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "y. 1820–1900"
+          }
+        }
+      }
+    },
     "era.late_romantic": {
       "extractionState": "manual",
       "localizations": {
@@ -2193,6 +2574,125 @@
           "stringUnit": {
             "state": "translated",
             "value": "Geç Romantik dönem"
+          }
+        }
+      }
+    },
+    "era.line.baroque": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ornate melody over a steady bass. The age of the concerto, the suite and the fugue."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kesintisiz bir basın üzerinde süslü ezgiler. Konçertonun, süitin ve fügün çağı."
+          }
+        }
+      }
+    },
+    "era.line.classical": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clarity, balance and themes you can sing. The symphony, the string quartet and the piano sonata take their lasting shape."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Açıklık, denge ve akılda kalan temalar. Senfoni, yaylı dörtlü ve piyano sonatı kalıcı biçimini alır."
+          }
+        }
+      }
+    },
+    "era.line.late_romantic": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Larger orchestras, longer works, national styles and new colours of sound."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daha büyük orkestralar, daha uzun eserler, ulusal üsluplar ve yeni ses renkleri."
+          }
+        }
+      }
+    },
+    "era.line.modern": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No single style. New rhythms and harmonies; folk music and jazz enter the concert hall."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tek bir üslup yok. Yeni ritimler ve armoniler; halk müziği ve caz konser salonuna girer."
+          }
+        }
+      }
+    },
+    "era.line.other": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
+          }
+        }
+      }
+    },
+    "era.line.renaissance": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Music for voices, woven from many independent lines, much of it written for the church."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Birbirinden bağımsız seslerin örüldüğü vokal müzik; önemli bir kısmı kilise için yazıldı."
+          }
+        }
+      }
+    },
+    "era.line.romantic": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Feeling comes first. Music tells stories, paints landscapes and becomes more personal."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Önce duygu gelir. Müzik hikâye anlatır, manzara çizer, daha kişisel bir dile bürünür."
           }
         }
       }
@@ -2840,6 +3340,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "Kapat"
+          }
+        }
+      }
+    },
+    "library.composerPage %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "About %@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ hakkında"
           }
         }
       }
@@ -3891,6 +4408,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "Gizlilik"
+          }
+        }
+      }
+    },
+    "paywall.redeemCode": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Redeem a code"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kod kullan"
           }
         }
       }
@@ -5214,6 +5748,40 @@
           "stringUnit": {
             "state": "translated",
             "value": "Aylık"
+          }
+        }
+      }
+    },
+    "settings.redeemCode": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Redeem a code"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kod kullan"
+          }
+        }
+      }
+    },
+    "settings.redeemCode.done": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Code redeemed: Premium is on"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kod kullanıldı: Premium açık"
           }
         }
       }

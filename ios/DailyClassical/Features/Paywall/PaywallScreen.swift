@@ -12,6 +12,7 @@ struct PaywallScreen: View {
     @State private var plan: EntitlementStore.Plan = .monthly
     @State private var purchasing = false
     @State private var restoring = false
+    @State private var redeemingCode = false
     @State private var message: LocalizedStringKey?
     @ScaledMetric(relativeTo: .subheadline) private var restoreSize: CGFloat = 14
 
@@ -131,14 +132,27 @@ struct PaywallScreen: View {
                 .fixedSize(horizontal: false, vertical: true)
             }
 
-            Button {
-                Task { await restore() }
-            } label: {
-                Text("paywall.restore").font(.system(size: restoreSize))
+            HStack(spacing: 20) {
+                Button {
+                    Task { await restore() }
+                } label: {
+                    Text("paywall.restore").font(.system(size: restoreSize))
+                }
+                // App Store offer codes (e.g. a discounted lifetime for a campaign).
+                Button { redeemingCode = true } label: {
+                    Text("paywall.redeemCode").font(.system(size: restoreSize))
+                }
             }
             .buttonStyle(.dcTextLink)
             .padding(.vertical, -13)  // 44 pt hit target without the extra layout height
             .disabled(purchasing || restoring)
+            .offerCodeRedemption(isPresented: $redeemingCode) { result in
+                guard case .success = result else { return }
+                Task {
+                    await entitlements.refreshAfterRedemption()
+                    if entitlements.isPremium { dismiss() }
+                }
+            }
 
             HStack(spacing: 14) {
                 Link(destination: AppLinks.terms(locale)) { Text("paywall.terms") }

@@ -60,7 +60,8 @@ struct RootView: View {
 
     @Environment(\.openURL) private var openURL
 
-    /// dailyclassical://piece/<id> (widget, pushes), ://premium, ://today, ://test-device/<invite>;
+    /// dailyclassical://piece/<id> (widget, pushes), ://premium, ://today, ://discover, ://composers,
+    /// ://eras, ://forms (Keşfet), ://test-device/<invite>;
     /// https links from pushes and in-app messages open in Safari.
     private func open(_ url: URL) {
         if url.scheme == "https" { openURL(url); return }
@@ -74,6 +75,19 @@ struct RootView: View {
             router.todayPath = NavigationPath([PieceRoute(id: arg)])
         case "premium":
             router.sheet = .paywall
+        // Keşfet (1.5): the Search tab at its root, or one of its pages.
+        case "discover", "composers", "eras", "forms":
+            router.sheet = nil
+            router.searchQuery = ""
+            var path = NavigationPath()
+            switch url.host() {
+            case "composers": path.append(BrowseRoute.composers)
+            case "eras": path.append(BrowseRoute.eras)
+            case "forms": path.append(BrowseRoute.forms)
+            default: break
+            }
+            router.searchPath = path
+            router.tab = .search
         case "today":
             router.sheet = nil
             router.tab = .today

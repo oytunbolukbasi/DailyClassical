@@ -42,6 +42,18 @@ struct LibraryScreen: View {
             .toolbar(.hidden, for: .navigationBar)
             .topBounceDisabled()  // DesignSystem/Components/TopBounce.swift
             .navigationDestination(for: PieceRoute.self) { PieceScreen(id: $0.id) }
+            // Keşfet's "Show in Library" (Features/Search/Browse.swift).
+            .onChange(of: router.libraryFilter, initial: true) { _, request in
+                guard let request else { return }
+                router.libraryPath = NavigationPath()
+                withAnimation {
+                    segment = .all
+                    formFilter = request.form
+                    eraFilter = request.era
+                    composerFilter = request.composer
+                }
+                router.libraryFilter = nil
+            }
             .navigationDestination(for: GlossaryListRoute.self) { _ in GlossaryListScreen() }
         }
     }
@@ -71,7 +83,30 @@ struct LibraryScreen: View {
             .padding(.trailing, Spacing.pageGutter)
             if segment == .all {
                 filterChips
+                composerPageLink
             }
+        }
+    }
+
+    /// With a composer filter set: a link to that composer's page (the bridge back to Keşfet's
+    /// composer pages, design/search-browse).
+    @ViewBuilder private var composerPageLink: some View {
+        if let id = composerFilter, let ref = availableComposers.first(where: { $0.id == id }) {
+            Button { router.present(.composer(ref)) } label: {
+                HStack(spacing: 6) {
+                    Text("library.composerPage \(ref.shortName)")
+                        .font(Typography.meta13.weight(.semibold))
+                        .foregroundStyle(Palette.accent)
+                    Image("chevron-forward-small").renderingMode(.template).resizable().scaledToFit()
+                        .frame(width: 6, height: 11)
+                        .foregroundStyle(Palette.accent)
+                        .accessibilityHidden(true)
+                }
+                .frame(minHeight: 32)
+                .contentShape(.rect)
+            }
+            .buttonStyle(.plain)
+            .accessibilityHint(Text("common.composerLink.accessibilityHint"))
         }
     }
 
