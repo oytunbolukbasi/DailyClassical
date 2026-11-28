@@ -237,6 +237,7 @@ Rejected: File:Sergei_Rachmaninoff_LOC_33968.jpg (2500 × 3824, PD-Bain) is date
 - Born c. 1505 (estimates 1500–1520), probably Kent. Died in Greenwich on 20 or 23 November 1585 (Wikipedia lead and Wikidata: 23 November); the card says "November 1585".
 - Dover Priory 1531; St Mary-at-Hill 1536–38; Waltham Abbey to March 1540; Canterbury 1540–42; Chapel Royal from c. 1543; served Henry VIII, Edward VI, Mary I, Elizabeth I. Married Joan c. 1552; Greenwich. 1575 printing monopoly with Byrd; *Cantiones sacrae* 1575. Byrd's elegy *Ye Sacred Muses*.
 - Portrait: none. "No contemporaneous portrait of Tallis survives; the one painted by Gerard Vandergucht dates from 150 years after the composer's death" (Wikipedia). `portrait: null`.
+- Portrait added 2026-11-28 (product owner's decision): the 18th-century engraving by Niccolò Haym after Gerard Vandergucht, as reproduced in *The Musical Times* (1 December 1913). https://commons.wikimedia.org/wiki/File:Thomas_Tallis_001.jpg — 1964 × 2533, Public domain. The master in content/images/.originals/composers/tallis.jpg is cropped to the top 1560 px (the oval plate; the lower part holds a signature and his printed name). Captioned as "an imagined likeness", 18th century.
 - Era: the enum has no `renaissance` value; see `content/research/tallis-spem-in-alium.shared.md` §4.
 
 ## Smetana (added 2026-10-10)

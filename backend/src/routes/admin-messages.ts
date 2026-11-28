@@ -70,6 +70,15 @@ const imageOf = (v: unknown) => {
   const s = text(v, 500);
   return s && /^https:\/\/\S+$/.test(s) ? s : s ? undefined : null;
 };
+/** App screens a push or card can open (the app's dailyclassical:// links, RootView.open). */
+const APP_LINKS: [string, string][] = [
+  ["dailyclassical://premium", "Premium ekranı"],
+  ["dailyclassical://today", "Bugün"],
+  ["dailyclassical://discover", "Keşfet (1.5+)"],
+  ["dailyclassical://composers", "Keşfet › Besteciler (1.5+)"],
+  ["dailyclassical://eras", "Keşfet › Dönemler (1.5+)"],
+  ["dailyclassical://forms", "Keşfet › Türler (1.5+)"],
+];
 const audienceOf = (v: unknown): Audience => (v === "free" || v === "premium" ? v : "all");
 
 async function requireAdmin(c: Context): Promise<string | null> {
@@ -89,7 +98,7 @@ type PushForm = { titleTr: string | null; bodyTr: string | null; titleEn: string
 /** The push form, checked; a Turkish error message when something is missing or malformed. */
 function readPush(f: Record<string, unknown>): PushForm | string {
   const t = { titleTr: text(f.title_tr, 100), bodyTr: text(f.body_tr, 300), titleEn: text(f.title_en, 100), bodyEn: text(f.body_en, 300) };
-  const link = linkOf(f.link);
+  const link = linkOf(f.link === "__custom" ? f.link_custom : f.link);
   const image = imageOf(f.image);
   const tr = !!(t.titleTr && t.bodyTr), en = !!(t.titleEn && t.bodyEn);
   return !tr && !en ? "Bir dilde başlık ve metin gerekli."
@@ -210,7 +219,7 @@ function readInApp(f: Record<string, unknown>): InAppForm | string {
     titleTr: text(f.title_tr, 80), bodyTr: text(f.body_tr, 400), buttonTr: text(f.button_tr, 30),
     titleEn: text(f.title_en, 80), bodyEn: text(f.body_en, 400), buttonEn: text(f.button_en, 30),
   };
-  const link = linkOf(f.link);
+  const link = linkOf(f.link === "__custom" ? f.link_custom : f.link);
   const image = imageOf(f.image);
   const startsAt = fromLocal(String(f.starts_at ?? "")) ?? new Date();
   const endsAt = fromLocal(String(f.ends_at ?? ""));
@@ -318,11 +327,20 @@ async function messagesView(email: string, ok?: string, err?: string) {
   const both = (tr: string | null, en: string | null) =>
     html`${tr ? html`<div><span class="lang">TR</span> ${tr}</div>` : ""}${en ? html`<div><span class="lang">EN</span> ${en}</div>` : ""}`;
   const audienceCell = (a: Audience, test: boolean) => html`${AUDIENCES[a]}${test ? html`<div class="pill">yalnız test</div>` : ""}`;
-  const linkHelp = html`<datalist id="links">
-      <option value="dailyclassical://premium">Premium ekranı</option>
-      <option value="dailyclassical://today">Bugün</option>
-      ${pieces.map((p) => html`<option value="dailyclassical://piece/${p.id}">${p.composer ?? ""} · ${p.title ?? p.id}</option>`)}
-    </datalist>`;
+  /** Where a tap leads: an app screen, a piece, or a web page (then the field below). */
+  const linkPicker = () => html`<label class="grow">Deeplink
+            <select name="link" data-link>
+              <option value="">Yok (uygulama açılır)</option>
+              <optgroup label="Uygulama">
+                ${APP_LINKS.map(([v, l]) => html`<option value="${v}">${l}</option>`)}
+              </optgroup>
+              <optgroup label="Eser">
+                ${pieces.map((p) => html`<option value="dailyclassical://piece/${p.id}">${p.composer ?? ""} · ${p.title ?? p.id}</option>`)}
+              </optgroup>
+              <option value="__custom">Web bağlantısı (https)…</option>
+            </select>
+          </label>
+          <label class="grow link-custom">Web adresi <input name="link_custom" placeholder="https://www.dailyclassical.co/…"></label>`;
 
   return html`
     ${headerView(email, "messages")}
@@ -385,7 +403,7 @@ async function messagesView(email: string, ok?: string, err?: string) {
           </aside>
         </div>
         <div class="row">
-          <label class="grow">Deeplink <input name="link" list="links" placeholder="dailyclassical://premium"></label>
+          ${linkPicker()}
           <label class="grow">Görsel <input name="image" data-p="image" placeholder="https://www.dailyclassical.co/images/…jpg"></label>
         </div>
         <div class="foot">
@@ -395,7 +413,6 @@ async function messagesView(email: string, ok?: string, err?: string) {
           <button class="primary end" data-confirm="Bu push seçilen kitledeki gerçek kullanıcılara gidecek. Emin misiniz?">Kullanıcılara gönder</button>
         </div>
       </form>
-      ${linkHelp}
     </section>
 
     <section id="history">
@@ -468,7 +485,7 @@ async function messagesView(email: string, ok?: string, err?: string) {
           </aside>
         </div>
         <div class="row">
-          <label class="grow">Deeplink <input name="link" list="links" placeholder="dailyclassical://premium"></label>
+          ${linkPicker()}
           <label class="grow">Görsel <input name="image" data-q="image" placeholder="https://www.dailyclassical.co/images/…jpg"></label>
         </div>
         <div class="foot">
@@ -558,6 +575,8 @@ td .link{min-height:0;height:auto;line-height:inherit}
   background-repeat:no-repeat;background-position:right 12px center}
 .compose .foot .primary.end{margin:0 0 0 auto;height:40px;align-self:flex-end}
 .compose .when-at{display:none}
+.compose .link-custom{display:none}
+.compose .row:has(select[data-link] option[value=__custom]:checked) .link-custom{display:flex}
 .compose:has(select[data-when] option[value=later]:checked) .when-at{display:flex}
 .testsend{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px}
 .invite{padding:14px 18px}.invite .row{align-items:flex-end}.invite .primary{align-self:flex-end;margin:0;height:40px;padding:0 20px}

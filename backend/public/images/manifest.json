@@ -1120,6 +1120,31 @@
         "hash": "205e3fac3c"
       }
     },
+    "composers/tallis": {
+      "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Tallis_001.jpg",
+      "color": "#5e5e5e",
+      "hero": {
+        "path": "composers/tallis-hero.heic",
+        "width": 1964,
+        "height": 1560,
+        "bytes": 882974,
+        "hash": "d4ea6dba76"
+      },
+      "thumb": {
+        "path": "composers/tallis-thumb.heic",
+        "width": 378,
+        "height": 300,
+        "bytes": 46110,
+        "hash": "9f5831ecc0"
+      },
+      "full": {
+        "path": "composers/tallis-full.heic",
+        "width": 1964,
+        "height": 1560,
+        "bytes": 939009,
+        "hash": "9f0fb2745b"
+      }
+    },
     "composers/tchaikovsky": {
       "source": "https://commons.wikimedia.org/wiki/Special:FilePath/Portr%C3%A4t_des_Komponisten_Pjotr_I._Tschaikowski_(1840-1893).jpg",
       "color": "#252623",

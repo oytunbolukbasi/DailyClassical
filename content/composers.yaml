@@ -1326,7 +1326,24 @@
       Yaklaşık 1543'ten itibaren hükümdarın kendi korosu olan Chapel Royal'in üyesiydi ve sırasıyla dört Tudor hükümdarına hizmet etti: VIII. Henry, VI. Edward, I. Mary ve I. Elizabeth. Resmî din Katoliklik ile Protestanlık arasında gidip gelirken o bir dönem için Latince, ardından gelen dönem için İngilizce müzik yazdı ve çevresindeki dinsel çatışmalardan uzak durmayı başarmış görünüyor. 1552 dolaylarında evlendi ve Greenwich'te yaşadı.
 
       1575'te Elizabeth, Tallis'e ve eski öğrencisi William Byrd'e çok sesli müzik basma tekelini verdi; ikisi birlikte Latince motetlerden oluşan *Cantiones sacrae* derlemesini yayımladı. Tallis Kasım 1585'te Greenwich'te öldü; Byrd onun için bir ağıt yazdı. Hayattayken yapılmış hiçbir portresi günümüze ulaşmadı. Kısa İngilizce ilahilerden *Spem in alium*'un kırk sesine kadar müziği bugün de kiliselerde ve konser salonlarında söyleniyor.
-  portrait: null
+  portrait:
+    # No portrait from life survives. This 18th-century engraving (Niccolò Haym after Gerard Vandergucht)
+    # was made some 150 years after his death; the caption says so. Master cropped to the oval plate
+    # (the reproduction's lower part holds his signature and name). See composers-sources.md.
+    artist: { en: "Niccolò Haym, after Gerard Vandergucht", tr: "Niccolò Haym, Gerard Vandergucht'tan" }
+    title: { en: "Thomas Tallis, an imagined likeness", tr: "Thomas Tallis, hayalî bir portre" }
+    year: "18th century"
+    collection: { en: "Engraving, reproduced in The Musical Times, 1913", tr: "Gravür, The Musical Times'ta yayımlanmış, 1913" }
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Thomas_Tallis_001.jpg
+    source_url: https://commons.wikimedia.org/wiki/File:Thomas_Tallis_001.jpg
+    width: 1964
+    height: 1560
+    license: Public domain (18th-century engraving; 1913 reproduction, PD-old)
+    focal_y: 0.35
+    hero: { width: 1964, height: 1560, bytes: 882974 }
+    thumb: { width: 378, height: 300, bytes: 46110 }
+    full: { width: 1964, height: 1560, bytes: 939009 }
+    placeholder_color: "#5e5e5e"
 
 - id: smetana
   match: Bedřich Smetana
